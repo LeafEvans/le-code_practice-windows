@@ -1,1 +1,2 @@
-print("你好，世界！")
+a = 1 + 2.0
+print("You are", a, "\n")

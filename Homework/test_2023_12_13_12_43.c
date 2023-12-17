@@ -1,4 +1,8 @@
 // 杨式矩阵
+// 1 2 3 
+// 4 5 6
+// 7 8 9
+
 #include <stdio.h>
 
 struct Point {
@@ -22,7 +26,6 @@ struct Point findNum(int arr[3][3], int row, int col, int k) {
       return p;
     }
   }
-
   return p;
 }
 
