@@ -10,6 +10,5 @@ int main(void) {
     scanf("%s", str[i]);
     sscanf(str, "%d/%d", &arr[0][i], &arr[1][i]);
   }
-
-  
+ 
 }
