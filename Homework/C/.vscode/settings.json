@@ -3,7 +3,8 @@
         "stdio.h": "c",
         "ctype.h": "c",
         "assert.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "stdlib.h": "c"
     },
     "editor.fontFamily": "'JetBrains Mono', '阿里巴巴普惠体 3.0', monospace",
     "C_Cpp.clang_format_fallbackStyle": "Google",

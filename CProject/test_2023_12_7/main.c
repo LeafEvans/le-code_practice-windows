@@ -38,7 +38,9 @@ int main(void) {
 		break;
 	  case SORT: sortContact(&con);
 		break;
-	  case EXIT: break;
+	  case EXIT:
+		destroyContact(&con);
+		break;
 	  default: printf("选择错误\n");
 		break;
 	}
