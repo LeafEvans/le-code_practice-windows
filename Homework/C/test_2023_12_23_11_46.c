@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-void getMemory(char **p) { *p = (char *)malloc(100); }
+void getMemory(char **p, int num) { *p = (char *)malloc(num); }
 
 void test(void) {
   char *str = NULL;
-  getMemory(&str);
-  strcpy(str, "hello world");
+  getMemory(&str, 100);
+  strcpy(str, "hello");
   printf(str);
   free(str);
   str = NULL;
