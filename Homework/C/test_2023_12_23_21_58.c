@@ -13,7 +13,8 @@ int main(void) {
     perror("fopen");
     return 1;
   }
-  fwrite(&s, sizeof(Stu), 1, pf);
+  fread(&s, sizeof(Stu), 1, pf);
+  printf("%s %d %f\n", s.arr, s.age, s.score);
   fclose(pf);
   pf = NULL;
   return 0;
