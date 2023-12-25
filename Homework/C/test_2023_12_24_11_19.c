@@ -24,9 +24,9 @@ int main(void) {
   FILE *fb = fopen("b.txt", "r");
   FILE *fc = fopen("c.txt", "w");
 
-  fgets(a, 10, fa);
+  fgets(a, 10000, fa);
   a[strlen(a)] = '\0';
-  fgets(b, 10, fb);
+  fgets(b, 10000, fb);
   b[strlen(b)] = '\0';
 
   strcat(c, a);

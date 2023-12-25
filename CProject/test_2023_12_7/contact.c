@@ -18,9 +18,28 @@ int initContact(Contact *pc) {
 	return 1;
   }
   pc->capacity = DEFAULT_SZ;
+  loadContact(pc);
   return 0;
 }
 
+void loadContact(Contact *pc) {
+  FILE *pfRead = fopen("contact.txt", "rb");
+
+  if (pfRead == NULL) {
+	perror("loadContact");
+	return;
+  }
+
+  PeoInfo temp = {0};
+
+  while (fread(&temp, sizeof(PeoInfo), 1, pfRead)) {
+	checkCapacity(pc);
+	pc->data[pc->count] = temp;
+	pc->count++;
+  }
+  fclose(pfRead);
+  pfRead = NULL;
+}
 // 静态版本
 // void addContact(Contact *pc) {
 //  assert(pc);
@@ -51,7 +70,8 @@ int initContact(Contact *pc) {
 
 void checkCapacity(Contact *pc) {
   if (pc->count == pc->capacity) {
-	PeoInfo *ptr = (PeoInfo *)realloc(pc->data, (pc->capacity + INC_SZ) * sizeof(PeoInfo));
+	PeoInfo *ptr =
+		(PeoInfo *)realloc(pc->data, (pc->capacity + INC_SZ) * sizeof(PeoInfo));
 	if (ptr == NULL) {
 	  printf("addContact::%s\n", strerror(errno));
 	  return;
@@ -91,14 +111,13 @@ void addContact(Contact *pc) {
 void showContact(Contact *pc) {
   assert(pc);
 
-  printf("%-20s\t%-5s\t%-5s\t%-12s\t%-30s\n", "名字", "年龄", "性别", "电话", "地址");
+  printf("%-20s\t%-5s\t%-5s\t%-12s\t%-30s\n", "名字", "年龄", "性别", "电话",
+		 "地址");
 
   for (int i = 0; i < pc->count; ++i) {
 	printf("%-20s\t%-5d\t%-5s\t%-12s\t%-30s\n", pc->data[i].name,
-		   pc->data[i].age, pc->data[i].sex,
-		   pc->data[i].tel, pc->data[i].addr);
+		   pc->data[i].age, pc->data[i].sex, pc->data[i].tel, pc->data[i].addr);
   }
-
 }
 
 static int findByName(const Contact *pc, const char *name) {
@@ -154,10 +173,11 @@ void searchContact(Contact *pc) {
 	return;
   }
 
-  printf("%-20s\t%-5s\t%-5s\t%-12s\t%-30s\n", "名字", "年龄", "性别", "电话", "地址");
+  printf("%-20s\t%-5s\t%-5s\t%-12s\t%-30s\n", "名字", "年龄", "性别", "电话",
+		 "地址");
   printf("%-20s\t%-5d\t%-5s\t%-12s\t%-30s\n", pc->data[pos].name,
-		 pc->data[pos].age, pc->data[pos].sex,
-		 pc->data[pos].tel, pc->data[pos].addr);
+		 pc->data[pos].age, pc->data[pos].sex, pc->data[pos].tel,
+		 pc->data[pos].addr);
 }
 
 void modifyContact(Contact *pc) {
@@ -209,4 +229,20 @@ void destroyContact(Contact *pc) {
   assert(pc);
   free(pc->data);
   pc->data = NULL;
+}
+
+void saveContact(const Contact *pc) {
+  assert(pc);
+  FILE *pfWrite = fopen("contact.txt", "wb");
+  if (pfWrite == NULL) {
+	perror("saveContact");
+	return;
+  }
+
+  for (int i = 0; i < pc->count; ++i) {
+	fwrite(pc->data + i, sizeof(PeoInfo), 1, pfWrite);
+  }
+
+  fclose(pfWrite);
+  pfWrite = NULL;
 }

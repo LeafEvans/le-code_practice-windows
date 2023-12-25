@@ -13,6 +13,10 @@
 #define MAX_TEL 12
 #define MAX_ADDR 30
 
+enum Option {
+  EXIT, ADD, DEL, SEARCH, MODIFY, SHOW, SORT
+};
+
 typedef struct PeoInfo {
   char name[MAX_NAME];
   int age;
@@ -42,3 +46,5 @@ void modifyContact(Contact *pc);
 void sortContact(Contact *pc);
 void checkCapacity(Contact *pc);
 void destroyContact(Contact *pc);
+void saveContact(const Contact *pc);
+void loadContact(Contact *pc);
