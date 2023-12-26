@@ -40,4 +40,42 @@ time split_time(long total_seconds) {
   return t;
 }
 
-int main(void) { return 0; }
+typedef enum Piece { KING, QUEEN, BISHOP, PAWN, KNIGHT, ROOK, SPACE } Piece;
+
+typedef enum Color { WHITE, BLACK } Color;
+
+typedef struct Square {
+  Piece piece;
+  Color color;
+} Square;
+
+void initBoard(Square (*ptr)[8][8]) {
+  for (int i = 0; i < 8; ++i) {
+    for (int j = 0; j < 8; ++j) {
+      if ((i == 0 || i == 7) && (j == 0 || j == 7))
+        (*ptr)[i][j].piece = ROOK;
+      else if (i == 1 || i == 6)
+        (*ptr)[i][j].piece = PAWN;
+      else if ((i == 0 || i == 7) && (j == 1 || j == 6))
+        (*ptr)[i][j].piece = KNIGHT;
+      else if ((i == 0 || i == 7) && (j == 2 || j == 5))
+        (*ptr)[i][j].piece = BISHOP;
+      else
+        (*ptr)[i][j].piece = SPACE;
+      if ((i + j) % 2 == 0)
+        (*ptr)[i][j].color = BLACK;
+      else
+        (*ptr)[i][j].color = WHITE;
+    }
+  }
+  (*ptr)[0][3].piece = QUEEN;
+  (*ptr)[7][3].piece = QUEEN;
+  (*ptr)[0][4].piece = KING;
+  (*ptr)[7][4].piece = KING;
+}
+
+int main(void) {
+  Square board[8][8];
+  initBoard(&board);
+  return 0;
+}
