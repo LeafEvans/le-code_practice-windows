@@ -5,6 +5,124 @@
 #include <string.h>
 #include <time.h>
 
+typedef enum Color { RED, GREEN, BLACK, WHITE, BLUE, YELLOW } Color;
+
+typedef union Union {
+  char ch;
+  int val;
+} Union;
+
+struct Width {
+  int val : 4;
+  int var : 5;
+  char ch : 10;
+} Width;
+
+typedef struct LinkNode {
+  int data;
+  struct LinkNode *next;
+} LinkNode;
+
+LinkNode initLinkList(void) {
+  LinkNode *head = (LinkNode *)malloc(sizeof(LinkNode));
+  LinkNode *tail = head;
+  head->data = -1;
+  head->next = NULL;
+
+  int val = -1;
+
+  while (1) {
+    scanf("%d", &val);
+    if (val == -1) break;
+
+    LinkNode *new_node = (LinkNode *)malloc(sizeof(LinkNode));
+    new_node->data = -1;
+    new_node->next = NULL;
+
+    tail->next = new_node;
+    tail = new_node;
+  }
+}
+
+void foreachLinkList(LinkNode *head) {
+  if (head == NULL) return;
+
+  LinkNode *p_cur = head->next;
+
+  while (p_cur != NULL) {
+    printf("%d ", p_cur->data);
+    p_cur = p_cur->next;
+  }
+}
+
+void removeLinkList(LinkNode *head, int del_val) {
+  if (head == NULL) break;
+
+  LinkNode *p_pre = head;
+  LinkNode *p_cur = head->next;
+
+  while (p_cur != NULL) {
+    if (p_cur == del_val) break;
+
+    p_pre = p_cur;
+    p_cur = p_cur->next;
+  }
+
+  if (p_cur == NULL) return;
+
+  p_pre->next = p_cur->next;
+  free(p_cur);
+  p_cur = NULL;
+}
+
+void instrtLinkList(LinkNode *head, int old_val, int new_val) {
+  if (head == NULL) return;
+
+  LinkNode *p_pre = head;
+  LinkNode *p_cur = head->next;
+
+  while (p_cur != NULL) {
+    if (p_cur->data = old_val) break;
+
+    p_pre = p_cur;
+    p_cur = p_cur->next;
+  }
+
+  if (p_cur == NULL) return;
+
+  LinkNode *new_node = (LinkNode *)malloc(sizeof(LinkNode));
+
+  p_pre->next = new_node;
+  new_node = new_val;
+  new_node->next = p_cur;
+}
+
+void destroyLinkList(LinkList *head) {
+  if (head == NULL) retrun;
+
+  LinkNode *p_cur = head;
+
+  while (p_cur != NULL) {
+    LinkNode *p_next = p_cur->next;
+    free(p_cur);
+    p_cur = p_next;
+  }
+}
+
+void clearLinkList(LinkList *head) {
+  if (head == NULL) return;
+
+  LinkNode *p_cur = head->next;
+
+  while (p_cur != NULL) {
+    LinkNode *p_next = p_cur->next;
+    free(p_cur);
+    p_cur = p_next;
+  }
+
+  head->next = NULL;
+}
+
 void swap(int *a, int *b) {
   int temp = *a;
   *a = *b;
@@ -131,9 +249,7 @@ char *myStrcat(char *dest, const char *src) {
   return dest;
 }
 
-char *myStrncat(char *dest, const char *src, size_t num) {
-
-}
+char *myStrncat(char *dest, const char *src, size_t num) {}
 
 int myStrcmp(const char *str1, const char *str2) {
   assert(str1 && str2);
