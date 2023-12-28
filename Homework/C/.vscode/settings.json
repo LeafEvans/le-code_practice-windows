@@ -6,7 +6,8 @@
         "string.h": "c",
         "stdlib.h": "c",
         "errno.h": "c",
-        "cstdlib": "c"
+        "cstdlib": "c",
+        "cstdio": "c"
     },
     "editor.fontFamily": "'JetBrains Mono', '阿里巴巴普惠体 3.0', monospace",
     "C_Cpp.clang_format_fallbackStyle": "Google",

@@ -1,0 +1,10 @@
+file:C:\Code\CodePractice\Homework\C\test_2023_12_28_11_00.c line=10 date:Dec 28 2023 time:11:15:23 i=0
+file:C:\Code\CodePractice\Homework\C\test_2023_12_28_11_00.c line=10 date:Dec 28 2023 time:11:15:23 i=1
+file:C:\Code\CodePractice\Homework\C\test_2023_12_28_11_00.c line=10 date:Dec 28 2023 time:11:15:23 i=2
+file:C:\Code\CodePractice\Homework\C\test_2023_12_28_11_00.c line=10 date:Dec 28 2023 time:11:15:23 i=3
+file:C:\Code\CodePractice\Homework\C\test_2023_12_28_11_00.c line=10 date:Dec 28 2023 time:11:15:23 i=4
+file:C:\Code\CodePractice\Homework\C\test_2023_12_28_11_00.c line=10 date:Dec 28 2023 time:11:15:23 i=5
+file:C:\Code\CodePractice\Homework\C\test_2023_12_28_11_00.c line=10 date:Dec 28 2023 time:11:15:23 i=6
+file:C:\Code\CodePractice\Homework\C\test_2023_12_28_11_00.c line=10 date:Dec 28 2023 time:11:15:23 i=7
+file:C:\Code\CodePractice\Homework\C\test_2023_12_28_11_00.c line=10 date:Dec 28 2023 time:11:15:23 i=8
+file:C:\Code\CodePractice\Homework\C\test_2023_12_28_11_00.c line=10 date:Dec 28 2023 time:11:15:23 i=9
