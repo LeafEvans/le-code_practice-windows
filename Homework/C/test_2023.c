@@ -15,7 +15,7 @@ typedef union Union {
 struct Width {
   int val : 4;
   int var : 5;
-  char ch : 10;
+  char ch : 3;
 } Width;
 
 typedef struct LinkNode {
@@ -56,7 +56,7 @@ void foreachLinkList(LinkNode *head) {
 }
 
 void removeLinkList(LinkNode *head, int del_val) {
-  if (head == NULL) break;
+  if (head == NULL) return;
 
   LinkNode *p_pre = head;
   LinkNode *p_cur = head->next;
@@ -97,8 +97,8 @@ void instrtLinkList(LinkNode *head, int old_val, int new_val) {
   new_node->next = p_cur;
 }
 
-void destroyLinkList(LinkList *head) {
-  if (head == NULL) retrun;
+void destroyLinkList(LinkNode *head) {
+  if (head == NULL) return;
 
   LinkNode *p_cur = head;
 
@@ -109,7 +109,7 @@ void destroyLinkList(LinkList *head) {
   }
 }
 
-void clearLinkList(LinkList *head) {
+void clearLinkList(LinkNode *head) {
   if (head == NULL) return;
 
   LinkNode *p_cur = head->next;
@@ -158,10 +158,13 @@ int bubbleSort(int arr[], int len) {
 }
 
 void selectionSort(int arr[], int len) {
-  for (int i = 0; i < len - 1; ++i) {
+  int i = 0;
+  int j = 0;
+
+  for (i = 0; i < len - 1; ++i) {
     int min = i;
 
-    for (int j = 0; j < len; ++j) {
+    for (j = 0; j < len; ++j) {
       if (arr[j] < arr[min]) min = j;
     }
     swap(&arr[min], &arr[j]);
@@ -224,7 +227,7 @@ char *myStrcpy(char *dest, const char *src) {
 }
 
 char *myStrncpy(char *dest, const char *src, size_t num) {
-  sizt_t i = 0;
+  size_t i = 0;
 
   for (i = 0; i < num && src[i] != '\0'; ++i) {
     dest[i] = src[i];
