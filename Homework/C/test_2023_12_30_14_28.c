@@ -130,14 +130,15 @@ void insertionSortList(Node *head) {
   sorted->next = NULL;
 
   while (curr) {
-    Node **ptr = &(sorted);
+    Node **ptr = &sorted;
     while (*ptr && (*ptr)->data < curr->data) {
       ptr = &((*ptr)->next);
     }
-    Node *next = curr->next;
+
+    Node *temp = curr->next;
     curr->next = *ptr;
     *ptr = curr;
-    curr = next;
+    curr = temp;
   }
 }
 
