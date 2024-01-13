@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "stdio.h": "c",
-        "limits.h": "c",
-        "stdlib.h": "c"
-    },
-    "cmake.configureOnOpen": false
-}
