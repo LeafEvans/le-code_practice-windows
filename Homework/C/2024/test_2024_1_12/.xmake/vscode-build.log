@@ -1,3 +1,0 @@
-[ 25%]: cache compiling.debug src\main.c
-[ 50%]: linking.debug test_2024_1_12.exe
-[100%]: build ok, spent 1.563s
