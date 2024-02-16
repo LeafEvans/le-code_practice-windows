@@ -12,6 +12,8 @@
         "xmake run test_2024_1_13",
         [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\targetpath.lua default]],
         [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\target_rundir.lua default]],
-        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\target_runenvs.lua default]]
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\target_runenvs.lua default]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\explorer.lua]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\config.lua]]
     }
 }

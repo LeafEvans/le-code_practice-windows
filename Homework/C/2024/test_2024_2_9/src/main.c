@@ -224,3 +224,26 @@ int main(void) {
   return 0;
 } */
 
+void replaceSpace(char *str, int length) {
+  char *cur = str;      // 当前字符串遍历的位置
+  int space_count = 0;  // 计算空格的数量
+  while (*cur) {
+    if (*cur == ' ') {
+      space_count++;
+    }
+    cur++;
+  }                                     // 计算数量用的循环
+  int end1 = length - 1;                // 原来字符串的结尾
+  int end2 = length + space_count - 1;  // 新的字符串的结尾
+
+  while (end1 != end2) {  // 当两个末尾不相等的时候，执行循环
+    if (str[end1] != ' ') {
+      str[end2--] = str[end1--];  // 如果不是空格，就正常减减
+    } else {
+      end1--;  // 如果是空格就原始的减
+      str[end2--] = '0';  // 在原始的基础上改，但因为是在更后面的改，所以不影响
+      str[end2--] = '2';
+      str[end2--] = '%';
+    }  // 添加完毕
+  }
+}
