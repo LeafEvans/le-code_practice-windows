@@ -1,0 +1,21 @@
+{
+    cmdlines = {
+        "__macro_begin__",
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\targetpath.lua default]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\target_rundir.lua default]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\target_runenvs.lua default]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\explorer.lua]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\config.lua]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\explorer.lua]],
+        "xmake f -p windows -a x64 -m debug",
+        "xmake r -d",
+        "xmake ",
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\targetpath.lua default]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\target_rundir.lua default]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\target_runenvs.lua default]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\explorer.lua]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\config.lua]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\explorer.lua]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.2.9\assets\config.lua]]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    tool_target_test_2024_2_17_windows_x64_cc = {
+        toolchain_info = {
+            arch = "x64",
+            plat = "windows",
+            name = "clang",
+            cachekey = "clang_arch_x64_plat_windows"
+        },
+        program = "clang",
+        toolname = "clang"
+    },
+    tool_target_test_2024_2_17_windows_x64_cxx = {
+        toolchain_info = {
+            arch = "x64",
+            plat = "windows",
+            name = "clang",
+            cachekey = "clang_arch_x64_plat_windows"
+        },
+        program = "clang",
+        toolname = "clang"
+    }
+}

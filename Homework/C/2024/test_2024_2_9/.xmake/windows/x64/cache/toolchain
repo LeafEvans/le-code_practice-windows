@@ -1,0 +1,42 @@
+{
+    tool_target_test_2024_2_9_windows_x64_ld = {
+        toolchain_info = {
+            name = "clang",
+            plat = "windows",
+            arch = "x64",
+            cachekey = "clang_arch_x64_plat_windows"
+        },
+        program = "clang++",
+        toolname = "clangxx"
+    },
+    tool_target_test_2024_2_9_windows_x64_cc = {
+        toolchain_info = {
+            name = "clang",
+            plat = "windows",
+            arch = "x64",
+            cachekey = "clang_arch_x64_plat_windows"
+        },
+        program = "clang",
+        toolname = "clang"
+    },
+    tool_target_test_2024_2_9_windows_x64_cxx = {
+        toolchain_info = {
+            name = "clang",
+            plat = "windows",
+            arch = "x64",
+            cachekey = "clang_arch_x64_plat_windows"
+        },
+        program = "clang",
+        toolname = "clang"
+    },
+    tool_target_test_2024_2_9_windows_x64_sh = {
+        toolchain_info = {
+            name = "clang",
+            plat = "windows",
+            arch = "x64",
+            cachekey = "clang_arch_x64_plat_windows"
+        },
+        program = "clang++",
+        toolname = "clangxx"
+    }
+}
