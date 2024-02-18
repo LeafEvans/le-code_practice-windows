@@ -1,7 +1,12 @@
-﻿#include <iostream>
+﻿#define _CRT_SECURE_NO_WARNINGS
+
+#include <cstdbool>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <iostream>
 
 using namespace std;
-
 
 // #include <iostream>
 //
@@ -199,4 +204,118 @@ using namespace std;
 //   return 0;
 // }
 
+// class Teacher {
+//  public:
+//   char name[32];
+//
+//   void set_age(int age) {
+//     // 设置 _age 属性
+//     if (age > 200 || age < 0) {
+//       // 阈值判断，函数形参的合法性检查
+//       cout << "age error" << endl;
+//       return;
+//     }
+//     cout << "void set_age(int age)" << endl;
+//     _age = age;  // 在类的内部访问 private 成员
+//   }
+//
+//   int get_age(void) { return _age; }
+//
+//  private:
+//   int _age;
+//   char _sex;
+// };
+//
+// int main(int argc, char** argv) {
+//   Teacher t;
+//   strcpy(t.name, "list");
+//   cout << t.name << endl;
+//   return EXIT_SUCCESS;
+// }
+
+// class Box {
+//  public:
+//   Box(void) {
+//     _length = 10;
+//     _width = 10;
+//     _height = 10;
+//   }
+
+//  int get_length(void) { return _length; }
+//  int get_width(void) { return _width; }
+//  int get_height(void) { return _height; }
+
+// private:
+//  int _length;
+//  int _width;
+//  int _height;
+//};
+
+// class Box {
+//  public:
+//   Box(int length, int width, int height)
+//       : _length(length), _width(width), _height(height), p(_length) {
+//     // 等价于：
+//     // _length = length;
+//     // _width = width;
+//     // _height height;
+//     // 但是不能 p = _length;
+//     // 因为引用在定义的时候就要初始化，而是对引用的对象进行赋值
+//     cout << "Box(int length, int width, int height);" << endl;
+//   }
+//
+//   int get_length(void) { return _length; }
+//   int get_width(void) { return _width; }
+//   int get_height(void) { return _height; }
+//
+//  private:
+//   int _length;
+//   int _width;
+//   int _height;
+//   int& p;
+// };
+//
+// class Test {
+//  public:
+//   Test(int num) : _num(num){};
+//
+//  private:
+//   const int _num;
+// };
+//
+// int main(void) {
+//   // 实例化一个对象
+//   Box box(10, 200, 30);
+//
+//   cout << box.get_length() << endl;
+//   cout << box.get_width() << endl;
+//   cout << box.get_height() << endl;
+//   return EXIT_SUCCESS;
+// }
+
+// int main(int argc, char **argv) {
+//   Box c();
+//   // 不是实例化一个对象，而是声明一个函数，返回值为 Box
+//   // 函数的名字叫做 c，函数的形参列表为空
+//   return EXIT_SUCCESS;
+// }
+
+// class A {
+//  public:
+//   int x;
+//   A(int a) { x = a; }
+//   // 没有实现无参的构造函数
+// };
+//
+// class B {
+//  public:
+//   B(int num) : _a(num) { cout << "B(int num);" << endl; }
+//   // 使用初始化成员列表就可以使用有参构造函数
+//   // 就可以避免使用无参构造函数
+//  private:
+//   A _a;
+//   // 在初始化的时候，没有无参的构造函数
+//   // 即无法调用 A::A()
+//   // 无法在 B 中实例化一个对象
+// };
 
