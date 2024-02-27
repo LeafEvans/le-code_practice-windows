@@ -1,0 +1,7 @@
+{
+    errdata = "src\\main.cpp:216:13: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]\
+  216 |   char *p = \"LeafEvans\";\
+      |             ^\
+1 warning generated.\
+"
+}

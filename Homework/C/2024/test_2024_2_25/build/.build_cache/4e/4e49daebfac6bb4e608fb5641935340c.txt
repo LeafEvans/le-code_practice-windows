@@ -1,0 +1,7 @@
+{
+    errdata = "src\\main.c:4:18: warning: magnitude of floating-point constant too large for type 'double'; maximum is 1.7976931348623157E+308 [-Wliteral-range]\
+    4 |   printf(\"%e\\n\", 3.4e800 * 100.0f);\
+      |                  ^\
+1 warning generated.\
+"
+}

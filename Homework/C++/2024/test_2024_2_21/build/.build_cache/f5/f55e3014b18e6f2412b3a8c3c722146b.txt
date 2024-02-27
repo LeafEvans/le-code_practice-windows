@@ -1,0 +1,10 @@
+{
+    errdata = "src\\main.cpp:281:12: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]\
+  281 |   string s1();\
+      |            ^~\
+src\\main.cpp:281:12: note: remove parentheses to declare a variable\
+  281 |   string s1();\
+      |            ^~\
+1 warning generated.\
+"
+}
