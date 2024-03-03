@@ -1,0 +1,7 @@
+{
+    errdata = "src\\main.c:122:12: warning: more '%' conversions than data arguments [-Wformat-insufficient-args]\
+  122 |   printf(\"%s, what's your weight in pounds?\\n\");\
+      |           ~^\
+1 warning generated.\
+"
+}

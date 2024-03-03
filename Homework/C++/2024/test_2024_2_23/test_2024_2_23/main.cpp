@@ -188,9 +188,39 @@
 //   return 0;
 // }
 
+// #include <iostream>
+// #include <string>
+//
+// int main(void) {
+//   return 0;
+// }
+
+// #define _CRT_SECURE_NO_WARNINGS
+//
+// #include <cstring>
+// #include <iostream>
+//
+// using namespace std;
+//
+// int main(void) {
+//   const char *sep = "@.";
+//   char email[] = "leafevans@foxmail.com";
+//   char cp[30] = {0};
+//   strcpy(cp, email);
+//
+//   char *ret = NULL;
+//   for (ret = strtok(cp, sep); ret != NULL; ret = strtok(NULL, sep)) {
+//     cout << ret << endl;
+//   }
+//
+//   return 0;
+// }
+
 #include <iostream>
-#include <string>
+
+using namespace std;
 
 int main(void) {
+  ;
   return 0;
 }

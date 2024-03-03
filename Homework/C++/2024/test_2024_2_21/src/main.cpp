@@ -41,7 +41,6 @@ int main(int argc, char** argv) {
 
   return 0;
 } */
-
 /* class Box {
  public:
   int length;
@@ -67,7 +66,6 @@ int main(void) {
 
   return 0;
 } */
-
 /* class ABC {
  public:
   ABC(int a, int b, int c) { cout << "ABC(int a, int b, int c);" << endl; }
@@ -93,7 +91,6 @@ int main(void) {
   MyD myD;
   return 0;
 } */
-
 /* int main(void) {
   // 调用构造函数：Test(int a, int b);
   Test t1(10, 20);
@@ -114,7 +111,6 @@ int main(void) {
 
   return 0;
 } */
-
 /* void func(void) {
   Test *t1 = new Test(10, 20);
   t1->sum[0] = 100;
@@ -140,7 +136,6 @@ int main(void) {
   cout << "Hello World!" << endl;
   return 0;
 } */
-
 /* class Test {
  public:
   int* sum;
@@ -178,9 +173,7 @@ int main(void) {
     delete[] sum;
   }
 }; */
-
 /* void func(const Test& t) {} */
-
 /* int main(void) {
   // 调用构造函数：Test(int a, int b) : x(a), y(b);
   Test t1(10, 20);
@@ -200,13 +193,11 @@ int main(void) {
 
   return 0;
 } */
-
 /* int main(void) {
   Test t1(10, 20);
   func(t1);
   return 0;
 } */
-
 /* #include <iostream>
 
 using namespace std;
@@ -261,7 +252,6 @@ int main(void) {
 
   return 0;
 }  */
-
 /* int main(void) {
   string s;
   s = "Hello World!";  // char *
@@ -271,12 +261,10 @@ int main(void) {
   cout << s << endl;
   return 0;
 } */
-
 /* #include <iostream>
 #include <string>
 
 using namespace std; */
-
 /*
 int main(void) {
   string s1("123"), s2("abc");
@@ -287,7 +275,6 @@ int main(void) {
   cout << s1 << endl;
   return 0;
 } */
-
 /* int main(void) {
   string s = "123abc";
 
@@ -296,19 +283,16 @@ int main(void) {
 
   return 0;
 } */
-
 /* #include <iostream>
 #include <string>
 
 using namespace std; */
-
 /* int main(void) {
   string s1 = "hello";
   string s2 = "Hello";
   cout << s1.compare(1, 2, s2, 1, 2) << endl;
   return 0;
 } */
-
 /* int main(void) {
   string s1("faf43fdad");
   string s2 = s1.substr(1, 2);
@@ -316,7 +300,6 @@ using namespace std; */
   cout << s2 << endl;
   return 0;
 } */
-
 /* #include <iostream>
 #include <string>
 
@@ -364,8 +347,7 @@ int main(void) {
 
   return 0;
 } */
-
-#include <iostream>
+/* #include <iostream>
 #include <string>
 
 using namespace std;
@@ -375,11 +357,266 @@ int main(void) {
   s1.replace(1, 2, 5, '0');
   cout << s1 << endl;
   return 0;
-}
-
+} */
 /* int main(void) {
   string s1("Real Steel");
   int pos = s1.find_first_not_of("aRel");
   cout << pos << endl;
   return 0;
 } */
+/* int main(void) {
+  string s1("Real Steel");
+  s1.replace(1, 3, 4, '0');
+  int n = s1.find("0000");
+  if (n != string::npos) {
+    s1.replace(n, 4, "kkk");
+  }
+  cout << s1 << endl;
+  return 0;
+} */
+/* int main(void) {
+  string s1("Real Steel");
+
+  // 删除子串 (1, 3)，此后 s1 = "R Steel"
+  s1.erase(1, 3);
+
+  // 删除下标 5 及其后面的所以字符，此后 s1 = "R Ste"
+  s1.erase(5);
+  cout << s1 << endl;
+
+  return 0;
+}
+ */
+/* class Test {
+ public:
+  Test(int x, int y, int z) {
+    this->x = x;
+    this->y = y;
+    this->z = z;
+  }
+
+  int x;
+  int y;
+  int z;
+};
+
+int main(void) {
+  string s1("Code Force");
+  s1.erase(5);
+  cout << s1 << endl;
+  return 0;
+} */
+/* int main(void) {
+  string s("Real Steel Code");
+  int pos = s.find("Steel");
+  if (pos != string::npos) {
+    s.erase(pos, sizeof("Steel"));
+  }
+  cout << s << endl;
+  return 0;
+} */
+/* #include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(void) {
+  string s("Fira Code");
+  s.assign(4, 'K');
+  cout << s << endl;
+  return 0;
+} */
+/* #include <iostream>
+#include <string>
+
+class Person {
+ public:
+  void print() {
+    std::cout << "name: " << _name << std::endl;
+    std::cout << "age: " << _age << std::endl;
+  }
+  void set_age(int age) { _age = age; }
+  int get_age() { return _age; }
+  void set_name(std::string name) { _name = name; }
+  std::string get_name() { return _name; }
+
+ protected:
+  std::string _name;
+  int _age;
+};
+
+// 继承后父类的 Person 的成员（成员函数 + 变量）都会变成子类的一部分，
+// 这里体现出了 Student 和 Teacher 复用了 Person 的成员
+
+// Student 派生类
+class Student : public Person {
+ protected:
+  // std::string _stuid;  // 学号
+};
+
+// Teacher 派生类
+class Teacher : public Person {
+ protected:
+  // std::string _jobid;  // 工号
+};
+
+int main() {
+  Student s;
+  Teacher t;
+  s.set_age(10);
+  std::cout << s.get_age() << std::endl;
+  s.set_name("lisi");
+  std::cout << s.get_name() << std::endl;
+  s.print();
+  std::cout << sizeof(Person) << std::endl;
+  std::cout << sizeof(Student) << std::endl;
+  std::cout << sizeof(Teacher) << std::endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+class Test {
+ public:
+  int b;
+  static int a;
+};
+
+int Test::a = 18;
+
+// 基类
+class A {
+ public:
+  int x;
+
+ protected:
+  int y;
+
+ private:
+  int z;
+};
+
+// 派生类
+class B : private A {
+  void func() {
+    x = 100;
+    // 基类中的 protected 成员在派生类中能被访问到
+    y = 100;
+    // 基类中的 private 成员在派生类内、外均不能访问到
+  }
+};
+
+class C : private A {};
+
+class D : protected A {};
+
+int main() {
+  cout << "Hello World!" << endl;
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+class A {
+ public:
+  A() { cout << "A()" << endl; }
+  ~A() { cout << "~A()" << endl; }
+
+  A(int a, int b) : y(a), x(b) {
+    cout << "A(int a, int b) : y(a), x(b)" << endl;
+  }
+
+  int get_x() { return x; }
+  int get_y() { return y; }
+
+ private:
+  int x;
+
+ protected:
+  int y;
+};
+
+class B : public A {
+ public:
+  B() { cout << "B()" << endl; }
+
+  // 在派生类中指定调用基类中某个构造函数
+  B(int a, int b, int c) : A(a, b), p(c) {
+    cout << "B(int a, int b) : A(a, b)" << endl;
+  }
+  ~B() { cout << "~B()" << endl; }
+
+  int p;
+};
+
+int main() {
+  B b(10, 20, 012);
+
+  cout << b.get_x() << endl;
+  cout << b.get_y() << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+// 父类
+class A {
+ public:
+  A() : a_x(10), a_y(10) {}
+  int a_x;
+  int a_y;
+};
+
+// 子类
+class B : public A {
+ public:
+  // 此处的 a_x 是子类中的
+  B() : b_x(20), a_x(20) {
+    // 在子类内部访问父类中同名的成员变量
+    A::a_x = 30;
+  }
+  int b_x;
+  // 和父类中的成员变量名字冲突了
+  int a_x;
+};
+
+int main() {
+  cout << sizeof(A) << endl;  // 8 个字节
+  cout << sizeof(B) << endl;  // 16 个字节
+  // 子类继承了父类中同名的属性
+
+  B b;
+  // b.a_x: 子类中的成员变量
+  // cout << b.B::a_x << endl;
+  cout << b.a_x << endl;
+
+  // 通过子类对象访问基类中的同名成员变量
+  // 应输出 30
+  cout << b.A::a_x << endl;
+
+  return 0;
+} */
+#include <iostream>
+
+using namespace std;
+
+class A {
+ public:
+  void func() { cout << "A::func()" << endl; }
+};
+
+class B : public A {
+ public:
+  void func() { cout << "B::func()" << endl; }
+};
+
+int main() {
+  B b;
+  b.func();
+  return 0;
+}

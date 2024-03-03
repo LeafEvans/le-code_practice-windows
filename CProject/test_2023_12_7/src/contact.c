@@ -23,7 +23,9 @@ int initContact(Contact *pc) {
 }
 
 void loadContact(Contact *pc) {
-  FILE *pfRead = fopen("C:\\Code\\CodePractice\\CProject\\test_2023_12_7\\data\\contact.txt", "rb");
+  FILE *pfRead = fopen(
+      "C:\\Code\\CodePractice\\CProject\\test_2023_12_7\\data\\contact.txt",
+      "rb");
 
   if (pfRead == NULL) {
     perror("loadContact");
@@ -233,8 +235,9 @@ void destroyContact(Contact *pc) {
 
 void saveContact(const Contact *pc) {
   assert(pc);
-  FILE *pfWrite =
-      fopen("C:\\Code\\CodePractice\\CProject\\test_2023_12_7\\data\\contact.txt", "wb");
+  FILE *pfWrite = fopen(
+      "C:\\Code\\CodePractice\\CProject\\test_2023_12_7\\data\\contact.txt",
+      "wb");
   if (pfWrite == NULL) {
     perror("saveContact");
     return;

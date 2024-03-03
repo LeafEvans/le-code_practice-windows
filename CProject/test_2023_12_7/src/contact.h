@@ -15,6 +15,8 @@
 
 enum Option { EXIT, ADD, DEL, SEARCH, MODIFY, SHOW, SORT };
 
+
+// 人的信息
 typedef struct PeoInfo {
   char name[MAX_NAME];
   int age;

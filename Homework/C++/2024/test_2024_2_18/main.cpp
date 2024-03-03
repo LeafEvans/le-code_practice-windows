@@ -71,26 +71,46 @@
 //	return EXIT_SUCCESS;
 // }
 
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
-#include <iostream>
-
+/*#include <iostream>
 
 using namespace std;
 
-class Teacher {
- public:
-  char name[20];
+int main(void) {
+  cout << "Hello World!" << endl;
+  return 0;
+}*/
 
- private:
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Person {
+ public:
+  void print() {
+    cout << "name: " << _name << endl;
+    cout << "age: " << _age << endl;
+  }
+ protected:
+  string _name;
   int _age;
-  char _sex;
 };
 
-int main(void) {
-  Teacher t;
-  strcpy(t.name, "list");
-  cout << t.name << endl;
+class Student : public Person {
+ public:
+  void set_age(int age) { _age = age; }
+  int get_age() { return _age; }
+  
+ protected:
+  int _stuid; 	
+};
+
+class Teacher : public Person {
+ protected:
+  int _jobid;
+};
+
+int main() {
+  
   return 0;
 }
