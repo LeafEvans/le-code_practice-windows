@@ -1,0 +1,8 @@
+{
+    errdata = "src\\main.c:741:19: warning: format specifies type 'int' but the argument has type 'float' [-Wformat]\
+  741 |     printf(\"%3d\", value);\
+      |             ~~~   ^~~~~\
+      |             %3f\
+1 warning generated.\
+"
+}

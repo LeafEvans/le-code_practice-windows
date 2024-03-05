@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /* int main(int argc, char** argv) {
   float salary;
   printf("\aEnter your desired monthly salary:");
@@ -578,3 +576,732 @@ int main() {
   return 0;
 }
  */
+/* #include <ctype.h>
+int main() {
+  long num;
+  long sum = 0L;
+  int status;
+
+  printf("Please enter an integer to be summed ");
+  printf("(q to quit): ");
+  status = scanf("%ld", &num);
+  while (status == 1) {
+    sum = sum + num;
+    printf("Please enter next integer (q to quit): ");
+    status = scanf("%ld", &num);
+  }
+  while (isalpha(getchar()))
+    ;
+  char ch = 0;
+  scanf("%c", &ch);
+  printf("%c\n", ch);
+  printf("Those integers sum to %ld.\n", sum);
+
+  return 0;
+} */
+/* int main() {
+  int index = 1;
+  while (index < 5)
+    printf("Good morning!\n");
+  return 0;
+} */
+/* #include <math.h>
+#include <stdio.h>
+int main() {
+  const double ANSWER = 3.14159;
+  double response;
+
+  printf("What is the value of pi?\n");
+  scanf("%lf", &response);
+  while (fabs(response - ANSWER) > 0.0001) {
+    printf("Try again!\n");
+    scanf("%lf", &response);
+  }
+  printf("Close enough!\n");
+
+  return 0;
+} */
+/* int main() {
+  int num;
+
+  printf("    n n cubed\n");
+  for (num = 1; num <= 6; num++) {
+    printf("%5d %5d\n", num, num * num * num);
+  }
+
+  return 0;
+} */
+/* int main() {
+  int x = 0;
+  x = (249, 500);
+  printf("%d\n", x);
+  return 0;
+} */
+/* int main() {
+  int t_ct;
+  double time, power_of_2;
+  int limit;
+
+  printf("Enter the number of terms you want: ");
+  scanf("%d", &limit);
+  for (time = 0, power_of_2 = 1, t_ct = 1; t_ct <= limit;
+       t_ct++, power_of_2 *= 2.0) {
+    time += 1.0 / power_of_2;
+    printf("time = %f when terms = %d.\n", time, t_ct);
+  }
+
+  return 0;
+} */
+/* int main() {
+  const int secret_code = 13;
+  int code_entered;
+
+  do {
+    printf("To enter the triskaidekaphobia therapy club,\n");
+    printf("please enter the secret code number: ");
+    scanf("%d", &code_entered);
+  } while (code_entered != secret_code);
+  printf("Congratulations! You are cured!\n");
+
+  return 0;
+} */
+/* #define ROWS 6
+#define CHARS 10
+int main() {
+  int row;
+  char ch;
+
+  for (row = 0; row < ROWS; ++row) {
+    for (ch = 'A'; ch < ('A' + CHARS); ch++) {
+      printf("%c", ch);
+    }
+    printf("\n");
+  }
+
+  return 0;
+} */
+/* int main() {
+  const int ROWS = 6;
+  const int CHARS = 6;
+  int row;
+  char ch;
+
+  for (row = 0; row < ROWS; row++) {
+    for (ch = ('A' + row); ch < ('A' + CHARS); ++ch) {
+      printf("%c", ch);
+    }
+    putchar('\n');
+  }
+
+  return 0;
+} */
+/* #define SIZE 10
+#define PAR 72
+int main() {
+  int index, score[SIZE];
+  int sum = 0;
+  float average;
+
+  printf("Enter %d golf scores:\n", SIZE);
+  for (index = 0; index < SIZE; index++) {
+    scanf("%d", &score[index]);
+  }
+  printf("The scores read in are as follows:\n");
+  for (index = 0; index < SIZE; ++index) {
+    printf("%5d", score[index]);
+    sum += score[index];
+  }
+  printf("\n");
+  average = (float)sum / SIZE;
+  printf("Sum of scores = %d, average = %.2f\n", sum, average);
+  printf("That's a handicap of %.0f.\n", average - PAR);
+
+  return 0;
+} */
+/* double power(double, int);
+int main() {
+  double n;
+  int p;
+  scanf("%lf %d", &n, &p);
+  printf("%lf", power(n, p));
+  return 0;
+}
+double power(double n, int p) {
+  double pow = 1.0;
+  for (int i = 1; i <= p; ++i) {
+    pow *= n;
+  }
+  return pow;
+} */
+/* int main() {
+  float value = 0.0f;
+  for (value = 36.0f; value > 0; value /= 2) {
+    printf("%3d", value);
+  }
+  return 0;
+} */
+/* int main() {
+  for (int i = 0; i < 4; ++i) {
+    for (int j = 0; j < 8; ++j) {
+      printf("$");
+    }
+    printf("\n");
+  }
+  return 0;
+} */
+/* int main() {
+  char alpha[27] = "abcdefghijklmnopqrstuvwxyz";
+  for (int i = 0; i < 26; ++i) {
+    printf("%c", alpha[i]);
+  }
+  putchar('\n');
+  return 0;
+} */
+/* int main() {
+  for (int i = 0; i < 5; ++i) {
+    for (int j = 0; j <= i; ++j) {
+      printf("$");
+    }
+    printf("\n");
+  }
+  return 0;
+} */
+/* int main() {
+  char lets[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  for (int i = 0; i < 5; ++i) {
+    for (int j = 0; j < 4 - i; ++j) {
+      printf(" ");
+    }
+    for (int j = 0; j <= i; ++j) {
+      printf("%c", lets[j]);
+    }
+    for (int j = i - 1; j >= 0; --j) {
+      printf("%c", lets[j]);
+    }
+    printf("\n");
+  }
+  return 0;
+} */
+/* int main() {
+  int low, high;
+  printf("输入上限和下限：\n");
+  scanf("%d %d", &low, &high);
+  for (int i = low; i <= high; ++i) {
+    printf("%d\t%d\t%d\n", i, i * i, i * i * i);
+  }
+  return 0;
+} */
+/* int main() {
+  char str[20];
+  scanf("%s", str);
+  int len = strlen(str);
+  for (int i = len - 1; i >= 0; --i) {
+    printf("%c", str[i]);
+  }
+  putchar('\n');
+  return 0;
+}
+ */
+/* double func(double n1, double n2) { return (n1 - n2) / (n1 * n2); }
+int main() {
+  float n1 = 0.0f;
+  float n2 = 0.0f;
+  while (scanf("%f %f", &n1, &n2) == 2) {
+    printf("%f\n", func(n1, n2));
+  }
+  return 0;
+} */
+/* int main() {
+  int low, high;
+  while (scanf("%d %d", &low, &high) == 2) {
+    if (low >= high) {
+      break;
+    }
+    long long sum = 0;  // 使用 long long 类型来避免整数溢出
+    for (int i = low; i <= high; ++i) {
+      sum += (long long)i * i;  // 将 i 先转换为 long long 类型再进行运算
+    }
+    printf("%lld\n", sum);  // 输出长整型数据
+  }
+  return 0;
+} */
+/* int main() {
+  int arr[8];
+  for (int i = 0; i < 8; ++i) {
+    scanf("%d", &arr[i]);
+  }
+  for (int i = 7; i >= 0; --i) {
+    printf("%d ", arr[i]);
+  }
+  return 0;
+} */
+/* int main() {
+  long double sum1 = 0.0;
+  long double sum2 = 0.0;
+
+  for (int i = 1; i <= 99; ++i) {  // 对于sum1, 我们从1累加到99（包括99）
+    sum1 += 1.0 / (long double)i;  // 使用 long double 类型进行计算
+  }
+
+  printf("Sum1: %Lf\n", sum1);
+
+  long double pow = 1.0;
+
+  for (int i = 1; i < 100;
+       ++i) {  // 对于sum2, 我们仍从1累加到99，但pow在循环中改变
+    sum2 += pow / (long double)i;
+    pow *= -1.0;  // 将-1改为-1.0，确保乘法后为浮点数
+  }
+
+  printf("Sum2: %Lf\n", sum2);
+
+  return 0;
+} */
+/* int main() {
+  int arr[8];
+  for (int i = 0; i < 8; ++i) {
+    arr[i] = pow(2, i);
+  }
+  int i = 0;
+  do {
+    printf("%d ", arr[i]);
+    ++i;
+  } while (i < 8);
+  return 0;
+} */
+/* int main() {
+  double arr1[8], arr2[8];
+  for (int i = 0; i < 8; ++i) {
+    scanf("%lf", &arr1[i]);
+    arr2[i] = (i > 0) ? arr1[i] + arr2[i - 1] : arr1[i];
+  }
+  for (int i = 0; i < 8; ++i) {
+    printf("%lf ", arr2[i]);
+  }
+  printf("\n");
+  return 0;
+} */
+/* int main() {
+  char str[256] = {0};
+  fgets(str, 256, stdin);
+  int len = strlen(str);
+  str[len - 1] = '\0';
+  for (int i = len - 1; i >= 0; --i) {
+    putchar(str[i]);
+  }
+  return 0;
+} */
+/* int main() {
+  double a = 100.0;
+  double b = 100.0;
+  int year = 0;
+  while (a >= b) {
+    a += 10;
+    b += b * 0.05;
+    ++year;
+  }
+  printf("%d\n", year);
+  printf("%lf %lf\n", a, b);
+  return 0;
+} */
+/* int main() {
+  double money = 1e6;
+  int year = 0;
+  while(money > 0.0) {
+    money = money * 0.08 - 10;
+    ++year;
+  }
+  printf("%d\n", year);
+  return 0;
+} */
+/* int main() {
+  const int MAX = 150;
+  int friends = 5;
+  for (int i = 1;; ++i) {
+    friends -= i;
+    friends *= 2;
+    if (friends > MAX) break;
+    printf("第 %d 周的朋友数量为 %d。\n", i, friends);
+  }
+  return 0;
+} */
+/* #define SPACE ' '
+int main() {
+  char ch;
+  while ((ch = getchar()) != '\n') {
+    if (ch == SPACE) {
+      putchar(ch);
+    } else {
+      putchar(ch + 1);
+    }
+  }
+  putchar(ch);
+  return 0;
+} */
+/* int main() {
+  unsigned long num;
+  unsigned long div;
+  bool isPrime;
+
+  printf("Please enter an integer for analysis; ");
+  printf("Enter q to quit.\n");
+  while (scanf("%lu", &num) == 1) {
+    for (div = 2, isPrime = true; (div * div) <= num; ++div) {
+      if (num % div == 0) {
+        if (div * div != num) {
+          printf("%lu is divisiable by %lu and %lu.\n", num, div, num / div);
+        } else {
+          printf("%lu is divisible by %lu.\n", num, div);
+        }
+        isPrime = false;
+      }
+    }
+    if (isPrime) {
+      printf("%lu is prime.\n", num);
+    }
+    printf("Please enter another integer for analysis; ");
+    printf("Enter q to quit.\n");
+  }
+  printf("Bye.\n");
+
+  return 0;
+} */
+/* #define PERIOD '.'
+int main() {
+  char ch;
+  int charcount = 0;
+
+  while ((ch = getchar()) not_eq PERIOD) {
+    if (ch not_eq '"' and ch not_eq '\'') charcount++;
+  }
+  printf("There are %d non-quote characters.\n", charcount);
+
+  return 0;
+} */
+/* #include <stdio.h>
+int main() {
+  char ch;
+  int a_ct, e_ct, i_ct, o_ct, u_ct;
+
+  a_ct = e_ct = i_ct = o_ct = u_ct = 0;
+  printf("Enter some text; enter # to quit.\n");
+  while ((ch = getchar()) != '#') {
+    switch (ch) {
+      case 'a':
+      case 'A':
+        a_ct++;
+        break;
+    }
+  }
+}
+ */
+/* #include <stdio.h>
+int main() {
+  char ch;
+
+  while ((ch = getchar()) != '#') {
+    if (ch == '\n') {
+      continue;
+    }
+    printf("Step 1\n");
+    if (ch == 'c') {
+      continue;
+    } else if (ch == 'b') {
+      break;
+    } else if (ch == 'h') {
+      goto laststep;
+    }
+    printf("Step 2\n");
+  laststep:
+    printf("Step 3\n");
+  }
+  printf("Done\n");
+  return 0;
+} */
+/* #include <stdio.h>
+int main() {
+  char ch;
+  while ((ch = getchar()) != '#') {
+    if (ch != '\n') {
+      printf("Step 1\n");
+      if (ch != 'c') {
+        if (ch == 'b') {
+          break;
+        } else if (ch == 'h') {
+          printf("Step 3\n");
+        } else {
+          printf("Step 2\n");
+          printf("Step 3\n");
+        }
+      }
+    }
+  }
+} */
+/* #include <stdio.h>
+int main() {
+  int a_t = 0;
+  int b_t = 0;
+  int c_t = 0;
+  char ch = 0;
+  while ((ch = getchar()) != '#') {
+    if (ch == ' ') {
+      ++a_t;
+    } else if (ch == '\n') {
+      ++b_t;
+    } else {
+      ++c_t;
+    }
+  }
+  printf("%d %d %d\n", a_t, b_t, c_t);
+  return 0;
+} */
+/* #include <stdio.h>
+#include <string.h>
+int main() {
+  int i = 0;
+  char ch = 0;
+  char str[160] = {0};
+  for (i = 0; (ch = getchar()) != '#'; ++i) {
+    if (ch != '#') str[i] = ch;
+  }
+  str[i] = '\0';
+  for (int i = 0; i < strlen(str); ++i) {
+    if (str[i] != '\n') {
+      printf("%c-%d\t", str[i], str[i]);
+    } else {
+      printf("\\n-%d\t", str[i]);
+    }
+    if ((i + 1) % 8 == 0) {
+      putchar('\n');
+    }
+  }
+  return 0;
+} */
+/* #include <stdbool.h>
+#include <stdio.h>
+
+int main() {
+  int num = 0;
+  int a_sum = 0;
+  int b_sum = 0;
+  int a_count = 0;
+  int b_count = 0;
+  while (true) {
+    scanf("%d", &num);
+    if (num == 0) break;
+    if (num % 2 == 0) {
+      a_count++;
+      a_sum += num;
+    } else {
+      b_count++;
+      b_sum += num;
+    }
+  }
+  if (a_count == 0 || b_count == 0) return 1;
+  printf("%d %lf %d %lf\n", a_count, (double)a_sum / a_count, b_count,
+         (double)b_sum / b_count);
+  return 0;
+} */
+/* int main() {
+  int i = 0;
+  char ch;
+  char str[100];
+  while ((ch = getchar()) != '#') {
+    if (ch == '.') {
+      str[i] = '!';
+      ++i;
+    } else if (ch == '!') {
+      str[i] = ch;
+      str[i + 1] = ch;
+      i += 2;
+    } else {
+      str[i] = ch;
+      ++i;
+    }
+  }
+  str[i] = '#';
+  for (i = 0; str[i] != '#'; ++i) {
+    putchar(str[i]);
+  }
+  return 0;
+} */
+/* #include <stdio.h>
+int main() {
+  int i = 0;
+  char ch;
+  char str[100];
+  while ((ch = getchar()) != '#') {
+    switch (ch) {
+      case '.':
+        str[i] = '!';
+        ++i;
+        break;
+      case '!':
+        str[i] = ch;
+        str[i + 1] = ch;
+        i += 2;
+        break;
+      default:
+        str[i] = ch;
+        ++i;
+        break;
+    }
+  }
+  str[i] = '#';
+  for (i = 0; str[i] != '#'; ++i) {
+    putchar(str[i]);
+  }
+  return 0;
+} */
+/* #include <stdio.h>
+#define BASEPAY 10
+#define BASEHRS 40
+#define OVERTIME 1.5
+#define AMT1 300
+#define AMT2 150
+#define RATE1 0.15
+#define RATE2 0.20
+#define RATE3 0.25
+int main() {
+  double hours;
+  double gross;
+  double net;
+  double taxes;
+
+  printf("Enter the number of hours worked this week: ");
+  scanf("%lf", &hours);
+  if (hours <= BASEHRS) {
+    gross = hours * BASEPAY;
+  } else {
+    gross = BASEHRS * BASEPAY + (hours - BASEHRS) * BASEPAY * OVERTIME;
+  }
+  if (gross <= AMT1) {
+    taxes = gross * RATE1;
+  } else if (gross <= AMT1 + AMT2) {
+    taxes = AMT1 * RATE1 + (gross - AMT1) * RATE2;
+  } else {
+    taxes = AMT1 * RATE1 + AMT2 * RATE2 + (gross - AMT1 - AMT2) * RATE3;
+  }
+  net = gross - taxes;
+  printf("gross: $%.2f; taxes: $%.2f; net: $%.2f\n", gross, taxes, net);
+
+  return 0;
+} */
+/* #include <stdio.h>
+int isPrime(int num) {
+  for (int div = 2; div * div <= num; ++div) {
+    if (num % div == 0) return 0;
+  }
+  return 1;
+}
+int main() {
+  int num;
+  scanf("%d", &num);
+  for (int i = 2; i <= num; ++i) {
+    if (isPrime(i)) printf("%d ", i);
+  }
+  return 0;
+} */
+/* #include <stdio.h>
+int main() {
+  int num;
+  float tax;
+  char ch;
+  while (scanf("%c %d", &ch, &num) == 2) {
+    switch (ch) {
+      case 'a':
+        if (num < 17850) {
+          tax = num * 0.15;
+        } else {
+          tax = 17850 * 0.15 + (num - 17850) * 0.28;
+        }
+        break;
+      case 'b':
+        if (num < 23900) {
+          tax = num * 0.15;
+        } else {
+          tax = 23900 * 0.15 + (num - 23900) * 0.28;
+        }
+        break;
+      case 'c':
+        if (num < 29750) {
+          tax = num * 0.15;
+        } else {
+          tax = 29750 * 0.15 + (num - 29750) * 0.28;
+        }
+        break;
+      case 'd':
+        if (num < 14875) {
+          tax = num * 0.15;
+        } else {
+          tax = 14875 * 0.15 + (num - 14875) * 0.28;
+        }
+        break;
+    }
+    printf("%d %f\n", num, tax);
+    while (getchar() != '\n') continue;
+  }
+  return 0;
+}
+ */
+/* #include <stdio.h>
+
+double calculateInitialCost(int weight, double value) {
+  double sum = weight * value;
+  if (sum > 100) {
+    sum -= sum * 0.05;
+  }
+  return sum;
+}
+
+double calculateAdditionalCost(int weight, double sum) {
+  if (weight <= 5) {
+    sum += 6.5;
+  } else if (weight > 5 && weight <= 20) {
+    sum += 14;
+  } else {
+    sum += 14 + (weight - 20) * 0.5;
+  }
+  return sum;
+}
+
+int main() {
+  char option;
+  double weight = 0.0;
+  double temp;
+3
+  // Read the option
+  scanf(" %c", &option);
+
+  // Read weights until user input ends
+  while (scanf("%lf", &temp) == 1) {
+    weight += temp;
+  }
+
+  printf("Total weight: %lf\n", weight);
+
+  switch (option) {
+    case 'a':
+      printf(
+          "Initial Cost: %lf, Total Cost: %lf\n",
+          calculateInitialCost(weight, 2.05),
+          calculateAdditionalCost(weight, calculateInitialCost(weight, 2.05)));
+      break;
+    case 'b':
+      printf(
+          "Initial Cost: %lf, Total Cost: %lf\n",
+          calculateInitialCost(weight, 1.15),
+          calculateAdditionalCost(weight, calculateInitialCost(weight, 1.15)));
+      break;
+    case 'c':
+      printf(
+          "Initial Cost: %lf, Total Cost: %lf\n",
+          calculateInitialCost(weight, 1.09),
+          calculateAdditionalCost(weight, calculateInitialCost(weight, 1.09)));
+      break;
+    default:
+      printf("Invalid option\n");
+  }
+
+  return 0;
+} */

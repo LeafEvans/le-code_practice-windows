@@ -601,7 +601,7 @@ int main() {
 
   return 0;
 } */
-#include <iostream>
+/* #include <iostream>
 
 using namespace std;
 
@@ -618,5 +618,117 @@ class B : public A {
 int main() {
   B b;
   b.func();
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+class A {
+ public:
+  void func() { cout << "A::func()" << endl; }
+};
+
+class B : public A {
+ public:
+  // 和基类中的成员函数名字相同，参数也相同，隐藏
+  void func() { cout << "B::func()" << endl; }
+  void func(int x) { cout << "B::func(int x)" << endl; }
+};
+
+int main() {
+  B b;
+  b.func();
+  b.A::func();
+  // 实现下面这个有参的函数，
+  // 即使父类中有形参不一样但同名的函数，
+  // 也不可以 b.func() 这样调用父类
+  b.func(10);
+  return 0;
+} */
+/* #include <iostream>
+using namespace std;
+// 间接基类
+class A {
+ public:
+  int a_x;
+};
+// 直接基类
+class B : public A {
+ public:
+  int b_x;
+};
+// 直接基类
+class C : public A {
+ public:
+  int c_x;
+};
+class D : public B, public C {
+ public:
+  // 继承自 B 类
+  // int a_x;
+  // int b_x;
+
+  // 继承自 C 类
+  // int a_x;
+  // int c_x;
+  int d_x;
+};
+int main() {
+  cout << sizeof(D) << endl;  // 输出 20 个字节代表两份的继承了
+  D d;
+  // 这是一种访问方式，
+  d.B::a_x = 100;
+  d.C::a_x = 200;
+  cout << d.B::a_x << endl;
+  cout << d.C::a_x << endl;
+  return 0;
+} */
+/* #include <iostream>
+#include <string>
+
+using namespace std;
+class Animal {
+ public:
+  string name;
+  int age;
+};
+class Chordata : virtual public Animal {};
+class Bird : virtual public Animal {};
+class Bat : public Chordata, public Bird {};
+int main() {
+  cout << sizeof(Bat) << endl;
+  cout << sizeof(Animal) << endl;
+  Bat bat;
+  bat.name = "Jacy";
+  cout << bat.name << endl;
+  return 0;
+} */
+#include <iostream>
+using namespace std;
+class A {
+ public:
+  static int num;  // 声明
+  static int func(int a) { return num; };
+};
+int A::num = 100;  // 定义
+class B : public A {
+ public:
+ // 当派生类中有与基类同名的变量
+ // 就会隐藏原来的
+  static int num;
+};
+int B::num = 1000;
+int main() {
+  A a;
+  a.num = 200;
+  a.func(10);
+
+  B b;
+  b.num = 300;
+  // 派生类能继承并且共享静态成员变量
+  // 静态成员函数类似
+  cout << A::num << endl;
+  cout << B::num << endl;
   return 0;
 }

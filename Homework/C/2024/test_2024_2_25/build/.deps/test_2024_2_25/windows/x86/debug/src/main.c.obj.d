@@ -1,18 +1,33 @@
 {
+    depfiles_cl_json = "{\
+    \"Version\": \"1.2\",\
+    \"Data\": {\
+        \"Source\": \"c:\\\\code\\\\codepractice\\\\homework\\\\c\\\\2024\\\\test_2024_2_25\\\\src\\\\main.c\",\
+        \"ProvidedModule\": \"\",\
+        \"Includes\": [\
+            \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\stdio.h\",\
+            \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\corecrt.h\",\
+            \"c:\\\\program files (x86)\\\\microsoft visual studio\\\\2022\\\\buildtools\\\\vc\\\\tools\\\\msvc\\\\14.38.33130\\\\include\\\\vcruntime.h\",\
+            \"c:\\\\program files (x86)\\\\microsoft visual studio\\\\2022\\\\buildtools\\\\vc\\\\tools\\\\msvc\\\\14.38.33130\\\\include\\\\sal.h\",\
+            \"c:\\\\program files (x86)\\\\microsoft visual studio\\\\2022\\\\buildtools\\\\vc\\\\tools\\\\msvc\\\\14.38.33130\\\\include\\\\concurrencysal.h\",\
+            \"c:\\\\program files (x86)\\\\microsoft visual studio\\\\2022\\\\buildtools\\\\vc\\\\tools\\\\msvc\\\\14.38.33130\\\\include\\\\vadefs.h\",\
+            \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\corecrt_wstdio.h\",\
+            \"c:\\\\program files (x86)\\\\windows kits\\\\10\\\\include\\\\10.0.22621.0\\\\ucrt\\\\corecrt_stdio_config.h\"\
+        ]\
+    }\
+}",
     files = {
         [[src\main.c]]
     },
     values = {
-        "clang",
+        [[C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.38.33130\bin\HostX86\x86\cl.exe]],
         {
-            "-Qunused-arguments",
-            "-m32",
-            "-g",
-            "-O0",
-            "-fexceptions",
-            "-fcxx-exceptions"
+            "-nologo",
+            "-Zi",
+            "-FS",
+            [[-Fdbuild\windows\x86\debug\compile.test_2024_2_25.pdb]],
+            "-Od",
+            "/EHsc"
         }
-    },
-    depfiles_gcc = "build\\.objs\\test_2024_2_25\\windows\\x86\\debug\\src\\__cpp_main.c.c:   src/main.c\
-"
+    }
 }
