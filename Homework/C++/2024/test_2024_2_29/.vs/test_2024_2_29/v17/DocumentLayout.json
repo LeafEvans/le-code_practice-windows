@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Code\\CodePractice\\Homework\\C\u002B\u002B\\2024\\test_2024_2_29\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6DB2D73B-0EB9-46C9-B290-25BD17FFC646}|test_2024_2_29\\test_2024_2_29.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.39.33519\\INCLUDE\\IOSTREAM||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+      "AbsoluteMoniker": "D:0:0:{6DB2D73B-0EB9-46C9-B290-25BD17FFC646}|test_2024_2_29\\test_2024_2_29.vcxproj|C:\\Code\\CodePractice\\Homework\\C\u002B\u002B\\2024\\test_2024_2_29\\test_2024_2_29\\array.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DB2D73B-0EB9-46C9-B290-25BD17FFC646}|test_2024_2_29\\test_2024_2_29.vcxproj|solutionrelative:test_2024_2_29\\array.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\iostream||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6DB2D73B-0EB9-46C9-B290-25BD17FFC646}|test_2024_2_29\\test_2024_2_29.vcxproj|C:\\Code\\CodePractice\\Homework\\C\u002B\u002B\\2024\\test_2024_2_29\\test_2024_2_29\\array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6DB2D73B-0EB9-46C9-B290-25BD17FFC646}|test_2024_2_29\\test_2024_2_29.vcxproj|solutionrelative:test_2024_2_29\\array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DB2D73B-0EB9-46C9-B290-25BD17FFC646}|test_2024_2_29\\test_2024_2_29.vcxproj|C:\\Code\\CodePractice\\Homework\\C\u002B\u002B\\2024\\test_2024_2_29\\test_2024_2_29\\array.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6DB2D73B-0EB9-46C9-B290-25BD17FFC646}|test_2024_2_29\\test_2024_2_29.vcxproj|solutionrelative:test_2024_2_29\\array.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,11 +21,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "array.cpp",
               "DocumentMoniker": "C:\\Code\\CodePractice\\Homework\\C\u002B\u002B\\2024\\test_2024_2_29\\test_2024_2_29\\array.cpp",
               "RelativeDocumentMoniker": "test_2024_2_29\\array.cpp",
@@ -39,7 +39,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "iostream",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\iostream",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\iostream",
@@ -52,7 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "array.h",
               "DocumentMoniker": "C:\\Code\\CodePractice\\Homework\\C\u002B\u002B\\2024\\test_2024_2_29\\test_2024_2_29\\array.h",
               "RelativeDocumentMoniker": "test_2024_2_29\\array.h",
@@ -60,8 +60,7 @@
               "RelativeToolTip": "test_2024_2_29\\array.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-03T12:22:56.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-03T12:22:56.465Z"
             }
           ]
         }

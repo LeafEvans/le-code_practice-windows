@@ -48,7 +48,6 @@
 //   std::cout << std::endl;
 //   return 0;
 // }
-
 // #include <iostream>
 //
 // using namespace std;
@@ -57,7 +56,6 @@
 //   cout << "Hello World!" << endl;
 //   return 0;
 // }
-
 // #include <iostream>
 //
 // using namespace std;
@@ -105,7 +103,6 @@
 //
 //   return 0;
 // }
-
 // #include <iostream>
 //
 // using namespace std;
@@ -139,7 +136,6 @@
 //
 //   return 0;
 // }
-
 // #include <iostream>
 //
 // using namespace std;
@@ -166,7 +162,6 @@
 //   cout << p->sheep_num() << endl;
 //   return 0;
 // }
-
 // class Math {
 //  public:
 //   static void sin() {}
@@ -187,14 +182,12 @@
 //   Math::sin();
 //   return 0;
 // }
-
 // #include <iostream>
 // #include <string>
 //
 // int main(void) {
 //   return 0;
 // }
-
 // #define _CRT_SECURE_NO_WARNINGS
 //
 // #include <cstring>
@@ -215,12 +208,29 @@
 //
 //   return 0;
 // }
+// #include <iostream>
+// #include <string>
+//
+// using namespace std;
+//
+// class A {
+// public:
+//  string name;
+//  int age;
+//};
+//
+// class B : virtual public A {};
+//
+// class C : virtual public A {};
+//
+// class D : public B, public C {};
+//
+// int main() {
+//  D d1, d2;
+//  d1.B::name = "s";
+//  d1.C::name = "w";
+//  cout << d1.C::name << endl;
+//  cout << d1.B::name << endl;
+//  return 0;
+//}
 
-#include <iostream>
-
-using namespace std;
-
-int main(void) {
-  ;
-  return 0;
-}
