@@ -1488,38 +1488,6 @@ int main() {
 
   return 0;
 } */
-#include <iostream>
-
-using namespace std;
-#define PI 3.14
-#define DEFAULT_RADIUS 10
-
-class Circle {
- public:
-  Circle(double radius = DEFAULT_RADIUS) : _radius(radius) {}
-
-  void set_radius(double radius) { _radius = radius; }
-
-  double get_area() { return _radius * _radius * PI; }
-  double get_radius() { return _radius; }
-  double get_perimeter() { return 2 * PI * _radius; }
-
- private:
-  double _radius;
-};
-
-int main() {
-  Circle a(5);
-  Circle b;
-
-  double sum_perimeter = a.get_perimeter() + b.get_perimeter();
-  double sum_area = a.get_area() + b.get_area();
-
-  cout << sum_perimeter << endl;
-  cout << sum_area << endl;
-
-  return 0;
-}
 /* #include <iostream>
 
 using namespace std;
@@ -1543,3 +1511,42 @@ int main() {
   return 0;
 }
  */
+/* #include <iostream>
+
+using namespace std;
+
+class Animal {
+ public:
+  void voice() { cout << "Animal is voicing." << endl; }
+  virtual void eat() { cout << "Animal is eating." << endl; }
+};
+
+class Dog : public Animal {
+ public:
+  void voice() { cout << "Dog is voicing." << endl; }
+  void eat() { cout << "Dog is eating." << endl; }
+  void eat(const char* food) {
+    cout << "Dog is eating " << food << "." << endl;
+  }
+};
+
+class Cat : public Animal {
+ public:
+  void voice() { cout << "Cat is voicing." << endl; }
+  void eat() { cout << "Cat is eating." << endl; }
+  void eat(const char* food) {
+    cout << "Cat is eating " << food << "." << endl;
+  }
+};
+
+void eat(Animal& animal) { animal.eat(); }
+
+int main() {
+  Dog dog;
+  Cat cat;
+  dog.voice();
+  dog.Animal::voice();
+  eat(dog);
+  eat(cat);
+  return 0;
+} */

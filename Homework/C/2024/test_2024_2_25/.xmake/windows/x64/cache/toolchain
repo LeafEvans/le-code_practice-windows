@@ -1,42 +1,50 @@
 {
-    tool_target_test_2024_2_25_windows_x64_cc = {
-        toolname = "clang",
-        program = "clang",
+    tool_target_test_2024_2_25_windows_x86_ld = {
+        toolname = "gxx",
         toolchain_info = {
-            arch = "x64",
-            name = "clang",
             plat = "windows",
-            cachekey = "clang_arch_x64_plat_windows"
+            name = "mingw",
+            arch = "x86",
+            cachekey = "mingw_arch_x86_plat_windows"
+        },
+        program = [[C:\msys64\mingw32\bin\i686-w64-mingw32-g++]]
+    },
+    mingw_arch_x86_plat_windows = {
+        mingw = [[C:\msys64\mingw32]],
+        plat = "windows",
+        __global = true,
+        bindir = [[C:\msys64\mingw32\bin]],
+        cross = "i686-w64-mingw32-",
+        arch = "x86"
+    },
+    tool_target_test_2024_2_25_windows_x86_cc = {
+        toolname = "gcc",
+        program = [[C:\msys64\mingw32\bin\i686-w64-mingw32-gcc]],
+        toolchain_info = {
+            plat = "windows",
+            name = "mingw",
+            cachekey = "mingw_arch_x86_plat_windows",
+            arch = "x86"
         }
     },
-    tool_target_test_2024_2_25_windows_x64_sh = {
-        toolname = "clangxx",
-        program = "clang++",
+    tool_target_test_2024_2_25_windows_x86_cxx = {
+        toolname = "gxx",
+        program = [[C:\msys64\mingw32\bin\i686-w64-mingw32-g++]],
         toolchain_info = {
-            arch = "x64",
-            name = "clang",
             plat = "windows",
-            cachekey = "clang_arch_x64_plat_windows"
+            name = "mingw",
+            cachekey = "mingw_arch_x86_plat_windows",
+            arch = "x86"
         }
     },
-    tool_target_test_2024_2_25_windows_x64_cxx = {
-        toolname = "clang",
-        program = "clang",
+    tool_target_test_2024_2_25_windows_x86_sh = {
+        toolname = "gxx",
         toolchain_info = {
-            arch = "x64",
-            name = "clang",
             plat = "windows",
-            cachekey = "clang_arch_x64_plat_windows"
-        }
-    },
-    tool_target_test_2024_2_25_windows_x64_ld = {
-        toolname = "clangxx",
-        program = "clang++",
-        toolchain_info = {
-            arch = "x64",
-            name = "clang",
-            plat = "windows",
-            cachekey = "clang_arch_x64_plat_windows"
-        }
+            name = "mingw",
+            arch = "x86",
+            cachekey = "mingw_arch_x86_plat_windows"
+        },
+        program = [[C:\msys64\mingw32\bin\i686-w64-mingw32-g++]]
     }
 }

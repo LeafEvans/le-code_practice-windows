@@ -4,8 +4,9 @@
     },
     options = {
         mode = "debug",
+        plat = "windows",
         arch = "x64",
-        plat = "windows"
+        toolchain = "clang"
     },
     recheck = false
 }

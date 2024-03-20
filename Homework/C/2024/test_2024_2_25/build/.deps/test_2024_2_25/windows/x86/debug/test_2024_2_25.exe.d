@@ -1,13 +1,8 @@
 {
     values = {
-        [[C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.38.33130\bin\HostX86\x86\link.exe]],
+        [[C:\msys64\mingw32\bin\i686-w64-mingw32-g++]],
         {
-            "-nologo",
-            "-dynamicbase",
-            "-nxcompat",
-            "-machine:x86",
-            "-debug",
-            [[-pdb:build\windows\x86\debug\test_2024_2_25.pdb]]
+            "-g"
         }
     },
     files = {

@@ -1,26 +1,18 @@
-import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
 
-# 创建 DataFrame
-data = {
-    "Salesperson": ["Alice", "Bob", "Charlie", "Alice", "Bob", "Charlie"],
-    "SaleAmount": [100, 200, 150, 50, 250, 300],
-    "SaleDate": [
-        "2020-01-01",
-        "2020-01-02",
-        "2020-01-03",
-        "2020-02-01",
-        "2020-02-02",
-        "2020-02-03",
-    ],
-}
-df = pd.DataFrame(data)
+def dmove(t, Point, p, r, b):
+    x, y, z = Point
+    return [p * (y - x), x * (r - z), x * y - b * z]
 
-# 将 SaleDate 列转换为日期类型，并提取月份
-df["SaleMonth"] = pd.to_datetime(df["SaleDate"]).dt.month
+t = np.arange(0, 50, 0.001)
 
-# 使用 pivot_table 方法生成透视表
-pivot_table = df.pivot_table(
-    index="Salesperson", columns="SaleMonth", values="SaleAmount", aggfunc="sum"
-)
+P1 = solve_ivp(dmove, y0=(0.0, 1.0, 0.0), t_eval=t, t_span=[0, 50], args=(10.0, 28.0, 3.0))
+P2 = solve_ivp(dmove, y0=(0.0, 1.01, 0.0), t_eval=t, t_span=[0, 50], args=(10.0, 28.0, 3.0))
 
-print(pivot_table)
+fig = plt.figure()
+ax = fig.add_subplot(111, projection="3d")
+ax.plot(P1.y[0], P1.y[1], P1.y[2])
+ax.plot(P2.y[0], P2.y[1], P2.y[2])
+plt.show()
