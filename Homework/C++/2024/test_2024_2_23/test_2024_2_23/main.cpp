@@ -233,4 +233,47 @@
 //  cout << d1.B::name << endl;
 //  return 0;
 //}
+// #include <iostream>
+//
+// using namespace std;
+//
+// class Base {
+// public:
+//  virtual void func() { cout << "Base func()" << endl; }
+//  virtual void func2() { cout << "Base func2()" << endl; }
+//};
+//
+// class Derived : public Base {
+// public:
+//  // 虚函数的重写
+//  void func() { cout << "Derived func()" << endl; }
+//};
+//
+// class Derived1 : public Base {
+// public:
+//  // 虚函数的重写
+//  void func() { cout << "Derived1 func()" << endl; }
+//};
+//
+// int main() {
+//  Derived d;
+//  d.func();
+//  Base *p = &d;
+//  p->func();
+//  Derived1 d2;
+//  p = &d2;
+//  p->func();
+//  return 0;
+//}
+#include <iostream>
 
+using namespace std;
+
+class A {
+ public:
+  virtual void func1() {}
+  virtual void func2() {}
+  void func3() {}
+};
+
+int main() { return 0; }

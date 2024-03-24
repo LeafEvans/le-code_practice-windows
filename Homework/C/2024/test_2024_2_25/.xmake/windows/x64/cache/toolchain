@@ -1,50 +1,42 @@
 {
-    tool_target_test_2024_2_25_windows_x86_ld = {
-        toolname = "gxx",
-        toolchain_info = {
-            plat = "windows",
-            name = "mingw",
-            arch = "x86",
-            cachekey = "mingw_arch_x86_plat_windows"
-        },
-        program = [[C:\msys64\mingw32\bin\i686-w64-mingw32-g++]]
-    },
-    mingw_arch_x86_plat_windows = {
-        mingw = [[C:\msys64\mingw32]],
-        plat = "windows",
-        __global = true,
-        bindir = [[C:\msys64\mingw32\bin]],
-        cross = "i686-w64-mingw32-",
-        arch = "x86"
-    },
     tool_target_test_2024_2_25_windows_x86_cc = {
-        toolname = "gcc",
-        program = [[C:\msys64\mingw32\bin\i686-w64-mingw32-gcc]],
+        program = "clang",
         toolchain_info = {
+            name = "clang",
+            cachekey = "clang_arch_x86_plat_windows",
             plat = "windows",
-            name = "mingw",
-            cachekey = "mingw_arch_x86_plat_windows",
             arch = "x86"
-        }
-    },
-    tool_target_test_2024_2_25_windows_x86_cxx = {
-        toolname = "gxx",
-        program = [[C:\msys64\mingw32\bin\i686-w64-mingw32-g++]],
-        toolchain_info = {
-            plat = "windows",
-            name = "mingw",
-            cachekey = "mingw_arch_x86_plat_windows",
-            arch = "x86"
-        }
+        },
+        toolname = "clang"
     },
     tool_target_test_2024_2_25_windows_x86_sh = {
-        toolname = "gxx",
+        program = "clang++",
         toolchain_info = {
-            plat = "windows",
-            name = "mingw",
             arch = "x86",
-            cachekey = "mingw_arch_x86_plat_windows"
+            cachekey = "clang_arch_x86_plat_windows",
+            plat = "windows",
+            name = "clang"
         },
-        program = [[C:\msys64\mingw32\bin\i686-w64-mingw32-g++]]
+        toolname = "clangxx"
+    },
+    tool_target_test_2024_2_25_windows_x86_ld = {
+        program = "clang++",
+        toolchain_info = {
+            arch = "x86",
+            cachekey = "clang_arch_x86_plat_windows",
+            plat = "windows",
+            name = "clang"
+        },
+        toolname = "clangxx"
+    },
+    tool_target_test_2024_2_25_windows_x86_cxx = {
+        program = "clang",
+        toolchain_info = {
+            name = "clang",
+            cachekey = "clang_arch_x86_plat_windows",
+            plat = "windows",
+            arch = "x86"
+        },
+        toolname = "clang"
     }
 }

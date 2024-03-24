@@ -53,6 +53,8 @@
         "xmake f -p windows -a x64 -m debug --toolchain=clang",
         "xmake ",
         [[xmake lua "C:\\\\Program Files\\\\xmake\\\\modules\\\\private\\\\utils\\\\statistics.lua"]],
-        [[xmake lua "C:\\\\Program Files\\\\xmake\\\\actions\\\\build\\\\cleaner.lua"]]
+        [[xmake lua "C:\\\\Program Files\\\\xmake\\\\actions\\\\build\\\\cleaner.lua"]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.0\assets\explorer.lua]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.0\assets\config.lua]]
     }
 }

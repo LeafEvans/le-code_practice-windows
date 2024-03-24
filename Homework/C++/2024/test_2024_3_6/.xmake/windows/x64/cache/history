@@ -41,6 +41,10 @@
         "xmake ",
         [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.0\assets\default_target.lua]],
         "xmake run test_2024_3_6",
-        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.0\assets\explorer.lua]]
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.0\assets\explorer.lua]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.0\assets\explorer.lua]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.0\assets\config.lua]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.0\assets\explorer.lua]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.0\assets\config.lua]]
     }
 }

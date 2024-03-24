@@ -1314,7 +1314,7 @@ int main() {
   }
   return 0;
 } */
-#include <stdio.h>
+/* #include <stdio.h>
 
 void up_and_down(int);
 
@@ -1329,4 +1329,205 @@ void up_and_down(int n) {
     up_and_down(n + 1);
   }
   printf("LEVEL %d: n location %p\n", n, &n);
+} */
+/* #include <stdio.h>
+#define MONTHS 12
+int main() {
+  int days[MONTHS] = {31, 28, [4] = 31, 30, 31, [1] = 29};
+  int i;
+  for (i = 0; i < MONTHS; ++i) {
+    printf("%2d  %d\n", i + 1, days[i]);
+  }
+  return 0;
+} */
+/* #include <stdio.h>
+#define SIZE 4
+int main() {
+  int value1 = 44;
+  int arr[SIZE];
+  int value2 = 88;
+  int i;
+
+  printf("value1 = %d, value2 = %d\n", value1, value2);
+  for (i = -1; i <= SIZE; ++i) {
+    arr[i] = 2 * i + 1;
+  }
+
+  for (i = -1; i < 7; ++i) {
+    printf("%2d %d\n", i, arr[i]);
+  }
+  printf("value1 = %d, value2 = %d\n", value1, value2);
+  printf("address of arr[-1]: %p\n", &arr[-1]);
+  printf("address of arr[4]: %p\n", &arr[4]);
+  printf("address of value1: %p\n", &value1);
+  printf("address of value2: %p\n", &value2);
+
+  return 0;
+} */
+/* #define SIZE 4
+int main() {
+  short dates[SIZE];
+  short* pti;
+  short index;
+  double bills[SIZE];
+  double* ptf;
+  pti = dates;
+  ptf = bills;
+  printf("%23s %10s\n", "short", "double");
+  for (index = 0; index < SIZE; ++index) {
+    printf("pointers + %d: %10p %10p\n", index, pti + index, ptf + index);
+  }
+  return 0;
+} */
+/* #include <stdio.h>
+#define MONTHS 12
+
+int main() {
+  int days[MONTHS] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  int index;
+
+  for (index = 0; index < MONTHS; ++index) {
+    printf("Month %2d has %d days.\n", index + 1, *(days + index));
+  }
+
+  return 0;
+} */
+/* #include <stdio.h>
+#define SIZE 10
+int sump(int *, int *);
+int main() {
+  int marbles[SIZE] = {20, 10, 5, 39, 4, 16, 19, 26, 31, 20};
+  long answer;
+
+  answer = sump(marbles, marbles + SIZE);
+  printf("The total number of marbles is %ld.\n", answer);
+
+  return 0;
+}
+
+int sump(int *start, int *end) {
+  int total = 0;
+
+  while (start < end) {
+    total += *start++;
+  }
+
+  return total;
+} */
+/* #include <stdio.h>
+#define SIZE 5
+void show_array(const double[], int);
+void mult_array(double[], int, double);
+int main() {
+  double dip[SIZE] = {20.0, 17.66, 8.2, 15.3, 22.22};
+  printf("The original dip array:\n");
+  show_array(dip, SIZE);
+  mult_array(dip, SIZE, 2.5);
+  printf("The dip array calling mult_array():\n");
+  show_array(dip, SIZE);
+
+  return 0;
+}
+
+void show_array(const double ar[], int n) {
+  int i;
+
+  for (i = 0; i < n; ++i) {
+    printf("%8.3f ", ar[i]);
+  }
+  putchar('\n');
+}
+
+void mult_array(double ar[], int n, double mult) {
+  int i;
+
+  for (i = 0; i < n; ++i) {
+    ar[i] *= mult;
+  }
+} */
+/* #include <stdio.h>
+#define ROWS 3
+#define COLS 4
+int sum2d(int, int, int ar[*][*]);
+int main() {
+  int rs = 3;
+  int cs = 10;
+  int junk[ROWS][COLS] = {{2, 4, 6, 8}, {3, 5, 7, 9}, {12, 10, 8, 6}};
+
+  int morejunk[ROWS - 1][COLS + 2] = {{20, 30, 40, 50, 60, 70},
+                                      {5, 6, 7, 8, 9, 10}};
+
+  int varr[rs][cs];
+
+  for (int i = 0; i < rs; ++i) {
+    for (int j = 0; j < cs; ++j) {
+      varr[i][j] = i * j + j;
+    }
+  }
+
+  printf("3x4 array\n");
+  printf("Sum of all elements = %d\n", sum2d(ROWS, COLS, junk));
+
+  printf("2x6 array\n");
+  printf("Sum of all elements = %d\n", sum2d(ROWS - 1, COLS + 2, morejunk));
+
+  printf("3x10 VLA\n");
+  printf("Sum of all elements = %d\n", sum2d(rs, cs, varr));
+
+  return 0;
+}
+
+int sum2d(int rows, int cols, int ar[rows][cols]) {
+  int tot = 0;
+
+  for (int r = 0; r < rows; ++r) {
+    for (int c = 0; c < cols; ++c) {
+      tot += ar[r][c];
+    }
+  }
+
+  return tot;
+}
+ */
+#include <stdio.h>
+#define COLS 4
+int sum2d(const int ar[][COLS], int rows);
+int sum(const int ar[], int n);
+int main() {
+  int total1, total2, total3;
+  int *pt1;
+  int(*pt2)[COLS];
+
+  pt1 = (int[2]){10, 20};
+  pt2 = (int[2][COLS]){{1, 2, 3, -9}, {4, 5, 6, -8}};
+  total1 = sum(pt1, 2);
+  total2 = sum2d(pt2, 2);
+  total3 = sum((int[]){4, 4, 4, 5, 5, 5}, 6);
+  printf("total1 = %d\n", total1);
+  printf("total2 = %d\n", total2);
+  printf("total3 = %d\n", total3);
+
+  return 0;
+}
+
+int sum(const int ar[], int n) {
+  int total = 0;
+
+  for (int i = 0; i < n; ++i) {
+    total += ar[i];
+  }
+
+  return total;
+}
+
+int sum2d(const int ar[][COLS], int rows) {
+  int tot = 0;
+
+  for (int r = 0; r < rows; ++r) {
+    for (int c = 0; c < COLS; ++c) {
+      tot += ar[r][c];
+    }
+  }
+
+  return tot;
 }

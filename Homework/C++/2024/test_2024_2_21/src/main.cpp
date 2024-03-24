@@ -1550,3 +1550,52 @@ int main() {
   eat(cat);
   return 0;
 } */
+/* #include <iostream>
+
+using namespace std;
+
+class Pupil {
+ public:
+  // 必须使用参数
+  Pupil(const char name[], unsigned int math_score, unsigned int c_score)
+      : _math_score(math_score), _c_score(c_score) {
+    ++_num;
+    _math_total_score += math_score;
+    _c_total_score += c_score;
+  }
+
+  void showBase() {
+    cout << "名字为：" << _name << endl;
+    cout << "数学成绩为：" << _math_score << endl;
+    cout << "语文成绩为：" << _c_score << endl;
+  }
+
+  static void showStatic() {
+    cout << "数学总成绩为：" << _math_total_score << endl;
+    cout << "语文总成绩为：" << _c_total_score << endl;
+    cout << "学生人数为：" << _num << endl;
+  }
+
+ private:
+  char _name[19];
+  unsigned int _math_score;
+  unsigned int _c_score;
+  static unsigned int _num;
+  static unsigned int _math_total_score;
+  static unsigned int _c_total_score;
+};
+
+unsigned int Pupil::_num = 0;
+unsigned int Pupil::_math_total_score = 0;
+unsigned int Pupil::_c_total_score = 0;
+
+int main() {
+  Pupil Jacy("Jacy", 60, 80);
+  Pupil Judy("Judy", 100, 100);
+  Pupil Alice("Alice", 50, 60);
+  Alice.showBase();
+  Pupil Jack("Jack", 75, 90);
+  Pupil Cathy("Cathy", 30, 20);
+  Pupil::showStatic();
+  return 0;
+} */
