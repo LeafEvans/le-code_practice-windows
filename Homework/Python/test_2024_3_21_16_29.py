@@ -2,9 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 初始条件函数 U(x, 0)
+
+
 def initial_condition(x, p):
     u0 = np.sin(2 * (x - p) ** 2)
     return u0
+
 
 # 输入参数
 velocity = 1.0  # 平流方程参数，系统速度
@@ -29,7 +32,8 @@ for _ in range(n_steps):
 
     # 计算 u(j + 1)
     for i in range(1, n_nodes + 1):
-        u_next[i] = u_curr[i] - (velocity * dt / dx) * (u_curr[i] - u_curr[i - 1])
+        u_next[i] = u_curr[i] - (velocity * dt / dx) * \
+            (u_curr[i] - u_curr[i - 1])
 
     # 更新边界条件
     u_next[0] = u_next[n_nodes]
@@ -45,7 +49,8 @@ for _ in range(n_steps):
     plt.xlabel("x")
     plt.ylabel("U(x)")
     plt.legend(loc=(0.05, 0.05))
-    plt.title(f"Advection equation with finite difference method, t = {start_time + dt:.1f}")
+    plt.title(f"Advection equation with finite difference method, t = {
+              start_time + dt:.1f}")
     plt.text(0.05, 0.9, "ypucans-xupt", color="gainsboro")
     plt.pause(0.001)
 

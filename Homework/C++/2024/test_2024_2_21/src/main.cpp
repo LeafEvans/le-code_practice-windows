@@ -9,7 +9,6 @@
               << std::endl;
   }
 };
-
 int main(int argc, char** argv) {
   // 在堆上申请以一个 int 类型大小的空间（4 bytes）；
   // 并且将申请的堆空间的内容初始化为 10
@@ -1599,3 +1598,13 @@ int main() {
   Pupil::showStatic();
   return 0;
 } */
+int main() {
+  int x;
+  if (x >= 0 && x < 360) {
+    // 具体实现
+  } else if (x >= 360 && x < 600) {
+    // 具体实现
+  } else if (x >= 600) {
+    // 具体实现
+  }
+}

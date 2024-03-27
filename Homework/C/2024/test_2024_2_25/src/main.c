@@ -1489,7 +1489,7 @@ int sum2d(int rows, int cols, int ar[rows][cols]) {
   return tot;
 }
  */
-#include <stdio.h>
+/* #include <stdio.h>
 #define COLS 4
 int sum2d(const int ar[][COLS], int rows);
 int sum(const int ar[], int n);
@@ -1530,4 +1530,276 @@ int sum2d(const int ar[][COLS], int rows) {
   }
 
   return tot;
+} */
+/*
+void copy_arr(double[], double[], int);
+void copy_ptr(double *, double *, int);
+void copy_ptrs(double *, double *, double *);
+
+int main() {
+  double source[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+  double target1[5];
+  double target2[5];
+  double target3[5];
+  copy_arr(target1, source, 5);
+  copy_ptr(target2, source, 5);
+  copy_ptrs(target3, source, source + 5);
+  return 0;
 }
+
+void copy_arr(double target[], double source[], int n) {
+  for (int i = 0; i < n; ++i) {
+    target[i] = source[i];
+  }
+}
+
+void copy_ptr(double *target, double *source, int n) {
+  for (int i = 0; i < n; ++i) {
+    *(target + i) = *(source + i);
+  }
+}
+
+void copy_ptrs(double *target, double *source, double *end) {
+  while (source != end) {
+    *source++ = *target++;
+  }
+} */
+/* #include <limits.h>
+#include <stdio.h>
+
+int max(int arr[], int n) {
+  int max = INT_MIN;
+  for (int i = 0; i < n; ++i) {
+    if (arr[i] > max) max = arr[i];
+  }
+
+  return max;
+}
+
+int main() {
+  int arr[10] = {1, 23, 423, 32, 32, 3, 232, 3, 32, 3};
+  printf("%d\n", max(arr, sizeof(arr) / sizeof(int)));
+  return 0;
+} */
+/* int min(double arr[], int n) {
+  int index_min = 0;
+  for (int i = 0; i < n; ++i) {
+    if (arr[index_min] > arr[i]) index_min = i;
+  }
+  return index_min;
+}
+int main() {
+  double arr[10]={3,1,-2,3,4,5,6,7,8,9};
+  printf("%d\n", min(arr, sizeof(arr)/sizeof(double)));
+  return 0;
+} */
+/* #include <float.h>
+#include <stdio.h>
+
+
+double difference(double arr[], int n);
+
+int main() {
+  double arr[] = {1.1, 2.2, 3.3, 4.4, 5.5};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  double diff = difference(arr, n);
+  printf("Difference: %.2f\n", diff);
+  return 0;
+}
+
+double difference(double arr[], int n) {
+  double max = DBL_MIN;
+  double min = DBL_MAX;
+
+  for (int i = 0; i < n; ++i) {
+    if (arr[i] > max) max = arr[i];
+    if (arr[i] < min) min = arr[i];
+  }
+
+  return max - min;
+}
+ */
+/* #include <stdio.h>
+void inverse_arr(double arr[], int n) {
+  for (int i = 0; i < n / 2; ++i) {
+    double temp = arr[i];
+    arr[i] = arr[n - i - 1];
+    arr[n - i - 1] = temp;
+  }
+}
+int main() {
+  double arr[] = {1.1, 2.2, 3.3, 4.4, 5.5};
+  int n = sizeof(arr) / sizeof(arr[0]);
+
+  printf("Original array: ");
+  for (int i = 0; i < n; ++i) {
+    printf("%.1f ", arr[i]);
+  }
+  printf("\n");
+
+  inverse_arr(arr, n);
+
+  printf("Inversed array: ");
+  for (int i = 0; i < n; ++i) {
+    printf("%.1f ", arr[i]);
+  }
+  printf("\n");
+
+  return 0;
+} */
+/* int main() {
+  double arr[2][5] = {{12, 2, 3, 35, 5}, {5, 90, 34, 2, 12}};
+  double arr_new[2][5];
+  for (int i = 0; i < 2; ++i) {
+    copy_arr(arr_new[i], arr[i], 5);
+  }
+  for (int i = 0; i < 2; ++i) {
+    for (int j = 0; j < 5; ++j) {
+      printf("%lf ", arr_new[i][j]);
+    }
+    printf("\n");
+  }
+  return 0;
+} */
+/* #include <stdio.h>
+void copy_arr(double target[], double source[], int n) {
+  for (int i = 0; i < n; ++i) {
+    target[i] = source[i];
+  }
+}
+int main() {
+  double arr1[7] = {9, 2, 3, 4, 1, 2, 3};
+  double arr2[3];
+
+  copy_arr(arr2, arr1 + 2, 3);
+  for (int i = 0; i < 3; ++i) {
+    printf("%f ", arr2[i]);
+  }
+  printf("\n");
+  return 0;
+} */
+/* #include <stdio.h>
+void copy_arr(int, int, double[*][*], double[*][*]);
+void show_arr(int, int, double[*][*]);
+int main() {
+  double arr1[3][5] = {{1, 2, 3, 4, 5}, {2, 3, 4, 5, 6}, {3, 4, 5, 6, 7}};
+  double arr2[3][5];
+
+  copy_arr(3, 5, arr2, arr1);
+  show_arr(3, 5, arr2);
+
+  return 0;
+}
+
+void copy_arr(int row, int col, double des[row][col], double src[row][col]) {
+  for (int i = 0; i < row; ++i) {
+    for (int j = 0; j < col; ++j) {
+      des[i][j] = src[i][j];
+    }
+  }
+}
+
+void show_arr(int row, int col, double arr[row][col]) {
+  for (int i = 0; i < row; ++i) {
+    for (int j = 0; j < col; ++j) {
+      printf("%lf ", arr[i][j]);
+    }
+    printf("\n");
+  }
+} */
+/* #include <stdio.h>
+void add_arr(int *arr1, int *arr2, int *arr3, int n) {
+  for (int i = 0; i < n; ++i) {
+    arr3[i] = arr1[i] + arr2[i];
+  }
+}
+int main() {
+  int arr1[4] = {2, 4, 5, 8};
+  int arr2[4] = {1, 0, 4, 6};
+  int arr3[4];
+  add_arr(arr1, arr2, arr3, 4);
+  for (int i = 0; i < 4; ++i) printf("%d ", arr3[i]);
+  return 0;
+} */
+/* #include <stdio.h>
+
+void pow_2(int arr[][5], int row) {
+  for (int i = 0; i < row; ++i) {
+    for (int j = 0; j < 5; ++j) {
+      arr[i][j] *= 2;
+    }
+  }
+}
+
+void show(int arr[][5], int row) {
+  for (int i = 0; i < row; ++i) {
+    for (int j = 0; j < 5; ++j) {
+      printf("%2d ", arr[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+int main() {
+  int arr[3][5] = {{1, 2, 3, 4, 5}, {2, 3, 4, 5, 6}, {3, 4, 5, 6, 7}};
+  show(arr, 3);
+  pow_2(arr, 3);
+  show(arr, 3);
+  return 0;
+} */
+/* #include <float.h>
+#include <stdio.h>
+
+void get_data(int row, int col, double arr[row][col]) {
+  for (int i = 0; i < row; ++i) {
+    for (int j = 0; j < col; ++j) {
+      scanf("%lf", &arr[i][j]);
+    }
+  }
+}
+double average(double arr[], int n) {
+  double total = 0;
+  for (int i = 0; i < n; ++i) {
+    total += arr[i];
+  }
+  return total / n;
+}
+double average_total(int row, int col, double arr[row][col]) {
+  double total = 0;
+  for (int i = 0; i < row; ++i) {
+    for (int j = 0; j < col; ++j) {
+      total += arr[i][j];
+    }
+  }
+  return total / (row * 5);
+}
+double max(int row, int col, double arr[row][col]) {
+  double max = DBL_MIN;
+  for (int i = 0; i < row; ++i) {
+    for (int j = 0; j < col; ++j) {
+      if (max < arr[i][j]) max = arr[i][j];
+    }
+  }
+  return max;
+}
+void show_arr(int row, int col, double arr[row][col]) {
+  for (int i = 0; i < row; ++i) {
+    for (int j = 0; j < col; ++j) {
+      printf("%lf ", arr[i][j]);
+    }
+    printf("\n");
+  }
+}
+int main() {
+  double arr[3][5];
+  get_data(3, 5, arr);
+  show_arr(3, 5, arr);
+  for (int i = 0; i < 3; ++i) {
+    printf("%lf ", average(arr[i], 5));
+  }
+  printf("\n");
+  printf("%lf\n", average_total(3, 5, arr));
+  printf("%lf\n", max(3, 5, arr));
+  return 0;
+} */
+
