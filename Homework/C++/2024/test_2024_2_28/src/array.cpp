@@ -1,4 +1,4 @@
-#include "array.hpp"
+#include "../include/array.hpp"
 
 #include <cstring>
 #include <iostream>
@@ -9,7 +9,7 @@ using namespace std;
 int Array::INVALID_INDEX = 999999;
 
 Array::Array(void)
-    : _data(new int[DefaultLength]), _length(DefaultLength), _item_num(0) {
+    : _data(new int[DEFAULT_LENGTH]), _length(DEFAULT_LENGTH), _item_num(0) {
   // 不带参数的构造函数，用一些初始值来构造
   cout << "Array::Array(void)" << endl;
 }
@@ -40,7 +40,7 @@ u32_t Array::length(void) const { return _length; }
 
 u32_t Array::item_num(void) const { return _item_num; }
 
-int Array::get_data(u32_t index){
+int Array::get_data(u32_t index) {
   if (index >= _length) {
     // 非法下标，给出提示语句，返回定义的非法坐标值
     cout << "Index out of range!" << endl;

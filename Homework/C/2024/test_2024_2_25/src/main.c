@@ -1802,4 +1802,613 @@ int main() {
   printf("%lf\n", max(3, 5, arr));
   return 0;
 } */
+/* #include <stdio.h>
+#define MSG "I am a symbolic string constant."
+#define MAXLENGTH 81
+
+int main() {
+  char words[MAXLENGTH] = "I am a string in an array.";
+  const char* pt1 = "Something is pointing at me.";
+  puts("Hero are some strings:");
+  puts(MSG);
+  puts(words);
+  puts(pt1);
+  words[8] = 'p';
+  puts(words);
+
+  return 0;
+} */
+/* #include <stdio.h>
+
+int main() {
+  printf("%s, %p, %c\n", "We", "are", *"space farers");
+  return 0;
+} */
+/* #define MSG "I'm special"
+
+#include <stdio.h>
+
+int main() {
+  char ar[] = MSG;
+  const char *pt = MSG;
+
+  printf("address of \"I'm special\": %p \n", "I'm special");
+  printf("            address ar: %p\n", ar);
+  printf("            address pt: %p\n", pt);
+  printf("        address of MSG: %p\n", MSG);
+  printf("address of \"I'm special\": %p \n","I'm special");
+
+  return 0;
+} */
+/* #include <stdio.h>
+
+int main() {
+  char *p1 = "Klingon";
+  p1[0] = 'F';
+  printf("Klingon");
+  printf(": Beware the %ss!\n", "Klingon");
+  return 0;
+} */
+/* #include <stdio.h>
+#define SLEN 40
+#define LIM 5
+int main() {
+  const char *mytalents[LIM] = {
+      "Adding numbers swiftly", "Multiplying accurately", "Stashing data",
+      "Following instructions to the letter", "Understanding the C language"};
+
+  char yourtalents[LIM][SLEN] = {"Walking in straight line", "Sleeping",
+                                 "Watching television", "Mailing letters",
+                                 "Reading email"};
+
+  puts("Let's compare talents.");
+  printf("%-36s  %-25s\n", "My Talents", "Your Talents");
+  for (int i = 0; i < LIM; ++i) {
+    printf("%-36s  %-25s\n", mytalents[i], yourtalents[i]);
+  }
+  printf("\nsizeof mytalents: %zd, sizeof yourtalents: %zd\n",
+         sizeof(mytalents), sizeof(yourtalents));
+
+  return 0;
+} */
+/* #include <stdio.h>
+#define STLEN 5
+int main() {
+  char words[STLEN];
+
+  puts("Enter a string, please.");
+  gets(words);
+  printf("Your string twice:\n");
+  printf("%s\n", words);
+  puts(words);
+  puts("Done.");
+
+  return 0;
+} */
+/* #include <stdio.h>
+#define STLEN 14
+int main() {
+  char words[STLEN];
+
+  puts("Enter a string, please.");
+  fgets(words, STLEN, stdin);
+  printf("Your string twice (puts(), then fputs()):\n");
+  puts(words);
+  fputs(words, stdout);
+  puts("Enter another string, please.");
+  fgets(words, STLEN, stdin);
+  printf("Your string twice (puts(), then fputs()):\n");
+  puts(words);
+  fputs(words, stdout);
+  puts("Done.");
+
+  return 0;
+} */
+/* #include <stdio.h>
+#define STLEN 10
+int main() {
+  char words[STLEN];
+
+  puts("Enter strings (empty line to quit):");
+  while (fgets(words, STLEN, stdin) != NULL && words[0] != '\n') {
+    fputs(words, stdout);
+  }
+  puts("Done.");
+  return 0;
+} */
+/* #include <stdio.h>
+#define STLEN 10
+int main() {
+  char words[STLEN];  // 存储字符串的数组
+  int i;              // 循环变量
+
+  puts("Enter strings (empty line to quit):");  // 提示语句
+  // 如果到达文件末尾或者输入的第一个字符为 '\0'
+  while (fgets(words, STLEN, stdin) != NULL && words[0] != '\n') {
+    i = 0;
+    // 如果不是换行符或者结束字符，循环变量就加 1
+    while (words[i] != '\n' && words[i] != '\0') {
+      // 搞到字符串末尾
+      ++i;
+    }
+    // 如果最后一个字符是换行符，就替换为空字符
+    // 换行符说明输入的字符串存的下去
+    if (words[i] == '\n') {
+      words[i] = '\0';
+    } else {
+      // 如果不是，说明输入的字符存不下去
+      // 把还在缓冲区的全部清除
+      while (getchar() != '\n') {
+        continue;
+      }
+    }
+    // 输出
+    puts(words);
+  }
+  puts("done");
+  return 0;
+} */
+/* #include <stdio.h>
+
+int main() {
+  char str[21] = {0};
+  gets_s(str, 21);
+  puts(str);
+  return 0;
+} */
+/* #include <stdio.h>
+char *s_gets(char *st, int n) {
+  // 数组
+  char *ret_val;
+  int i = 0;
+
+  // 输入字符串
+  ret_val = fgets(st, n, stdin);
+
+  // 如果不为空指针
+  if (ret_val) {
+    // 如果不为换行符或者空字符
+    while (st[i] != '\n' && st[i] != '\0') {
+      ++i;  // 字符下标加 1
+    }
+    // 如果是换行符，就改为 0
+    if (st[i] == '\n') {
+      st[i] = '\0';
+    } else {
+      // 不是，说明超了
+      // 清空缓冲区
+      while (getchar() != '\n') {
+        continue;
+      }
+    }
+  }
+  return ret_val;
+} */
+/* #include <stdio.h>
+int main() {
+  char name1[11], name2[11];
+  int count;
+
+  printf("Please enter 2 names\n");
+  count = scanf("%5s %10s", name1, name2);
+  printf("I read the %d names %s and %s.\n", count, name1, name2);
+
+  return 0;
+} */
+/* #include <stdio.h>
+int main() {
+  char side_a[] = "Side A";
+  char dont[] = {'W', 'O', 'W', '!'};
+  char side_b[] = "Side B";
+
+  puts(dont);
+
+  return 0;
+} */
+/* #include <stdio.h>
+void put1(const char *string) {
+  while (*string != '\0') {
+    putchar(*string++);
+  }
+} */
+/* #include <stdio.h>
+
+void put1(const char *);
+int put2(const char *);
+
+int main() {
+  put1("If I'd as much money");
+  put2(" as I could spend,\n");
+  printf("I count %d characters.\n",
+         put2("I never would cry old chairs to mend."));
+  return 0;
+}
+
+void put1(const char *string) {
+  while (*string) {
+    putchar(*string++);
+  }
+}
+
+int put2(const char *string) {
+  int count = 0;
+  while (*string) {
+    putchar(*string++);
+    ++count;
+  }
+  putchar('\n');
+
+  return count;
+} */
+/* #include <stdio.h>
+#include <string.h>
+void fit(char *, unsigned int);
+
+int main() {
+  char mesg[] = "Thing should be as simple as possible but not simpler.";
+
+  puts(mesg);
+  fit(mesg, 38);
+  puts(mesg);
+  puts("Let's look at some more of the string.");
+  puts(mesg + 39);
+
+  return 0;
+}
+
+void fit(char *string, unsigned int size) {
+  if (strlen(string) > size) {
+    string[size] = '\0';
+  }
+} */
+/* int main() {
+  char flower[SIZE];
+  char addon[] = "s small like old shoes.";
+  puts("What is your favorite flowers?");
+  if (s_gets(flower, SIZE)) {
+    strcat(flower, addon);
+    puts(flower);
+    puts(addon);
+  } else {
+    puts("End of file encountered!");
+  }
+  puts("bye");
+
+  return 0;
+} */
+/* #include <stdio.h>
+#include <string.h>
+#define SIZE 30
+#define BUGSIZE 13
+char *s_gets(char *, int);
+
+int main() {
+  // 花的数组
+  char flower[SIZE];
+  // 插件的意思
+  char addon[] = "s small like old shoes.";
+  // 蛾子数组
+  char bug[BUGSIZE];
+  // 可用的长度
+  int available;
+  // 最喜欢啥花
+  puts("What is your favourite flower?");
+  s_gets(flower, SIZE);
+  // 如果小于指定的大小
+  // 使用 strlen
+  if ((strlen(addon) + strlen(flower) + 1) <= SIZE) {
+    // 拼接
+    strcat(flower, addon);
+  }
+  // 输出花朵
+  puts(flower);
+  // 你最喜欢的蛾子是什么
+  puts("What is your favorite bug?");
+  s_gets(bug, BUGSIZE);
+  // 还要放空字符，所有 -1
+  available = BUGSIZE - strlen(bug) - 1;
+  // 可用的就这么多
+  // 输入
+  strncat(bug, addon, available);
+  puts(bug);
+
+  return 0;
+} */
+/* #include <stdio.h>
+#include <string.h>
+
+#define ANSWER "Grant"
+#define SIZE 40
+
+char *s_gets(char *, int);
+
+int main() {
+  char try[SIZE];
+
+  puts("Who is buried in Grant's tomb?");
+  s_gets(try, SIZE);
+  while (strcmp(try, ANSWER) != 0) {
+    puts("No, that's wrong. Try again.");
+    s_gets(try, SIZE);
+  }
+  puts("That's right!");
+
+  return 0;
+} */
+/* int main() {
+  char input[LIM][SIZE];
+  int ct = 0;
+
+  printf("Enter up to %d lines (type quit to quit):\n", LIM);
+  while (ct < LIM && s_gets(input[ct], SIZE) != NULL &&
+         strcmp(input[ct], STOP) != 0) {
+    ++ct;
+  }
+  printf("%d strings entered\n", ct);
+
+  return 0;
+} */
+/* #include <stdio.h>
+#include <string.h>
+#define LITESIZE 6
+
+int main() {
+  const char *list[LITESIZE] = {"astronmy",  "astounding", "astrophysics",
+                                "ostracize", "asterism",   "astrophobia"};
+  int count = 0;
+
+  for (int i = 0; i < LITESIZE; ++i) {
+    if (!strncmp(list[i], "astro", 5)) {
+      printf("Found: %s\n", list[i]);
+      ++count;
+    }
+  }
+  printf("The list contained %d words beginning with astro.\n", count);
+
+  return 0;
+} */
+/* #include <stdio.h>
+#include <string.h>
+#define WORDS "beast"
+#define SIZE 40
+
+int main() {
+  const char * orig = WORDS;
+  char copy[SIZE] = "Be the best that you can be.";
+  char *ps;
+
+  puts(orig);
+  puts(copy);
+  ps = (strcpy(copy + 7, orig));
+  puts(copy);
+  puts(ps);
+  puts(copy + 13);
+
+  return 0;
+} */
+/* int main() {
+  char qwords[LIM][SIZE];
+  char temp[SIZE];
+
+  int i = 0;
+  while (i < LIM && s_gets(temp, SIZE)) {
+    if (temp[0] != 'q') {
+      printf("%s doesn't begin with q!\n", temp);
+    } else {
+      strcpy(qwords[i], temp);
+      ++i;
+    }
+  }
+  puts("Here are the words accepted:");
+  for (i = 0; i < LIM; ++i) {
+    puts(qwords[i]);
+  }
+
+  return 0;
+} */
+/* #include <stdio.h>
+#include <string.h>
+#define MAX 20
+char *s_gets(char *, int);
+
+int main() {
+  char first[MAX];
+  char last[MAX];
+  char formal[2 * MAX + 10];
+  double prize;
+
+  puts("Enter your first name:");
+  s_gets(first, MAX);
+  puts("Enter your last name:");
+  s_gets(last, MAX);
+  puts("Enter your prize money:");
+  scanf("%lf", &prize);
+  sprintf(formal, "%s, %-19s: $%6.2f\n", last, first, prize);
+  puts(formal);
+  return 0;
+}
+
+char *s_gets(char *st, int n) {
+  char *ret_val;
+  int i = 0;
+
+  ret_val = fgets(st, n, stdin);
+  if (ret_val) {
+    while (st[i] != '\n' && st[i] != '\0') {
+      ++i;
+    }
+    if (st[i] == '\n') {
+      st[i] = '\0';
+    } else {
+      while (getchar() != '\n') {
+        continue;
+      }
+    }
+  }
+  return ret_val;
+} */
+/* #include <stdio.h>
+#include <string.h>
+
+int main() {
+  char str1[20] = "Hello World!";
+  char str2[20] = "d";
+  printf("%lld\n", strpbrk(str1, str2) - str1);
+  return 0;
+} */
+/* #include <stdio.h>
+#include <string.h>
+
+int main() {
+  char line[80];
+  char *find;
+
+  fgets(line, 80, stdin);
+  *strchr(line, '\n') = '\0';
+  printf("%s\n", line);
+  return 0;
+} */
+/* #include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
+#define LIMIT 81
+void ToUpper(char *);
+int PunctCount(const char *);
+
+int main() {
+  char line[LIMIT];
+  char *find;
+
+  puts("Please enter a line:");
+  fgets(line, LIMIT, stdin);
+  find = strchr(line, '\n');
+  if (find) *find = '\0';
+  ToUpper(line);
+  puts(line);
+  printf("That line has %d punctuation characters.\n", PunctCount(line));
+
+  return 0;
+}
+
+void ToUpper(char *str) {
+  while (*str) {
+    *str = toupper(*str);
+    ++str;
+  }
+}
+
+int PunctCount(const char *str) {
+  int ct = 0;
+  while (*str) {
+    if (ispunct(*str)) {
+      ++ct;
+    }
+    ++str;
+  }
+
+  return ct;
+} */
+/* #include <stdio.h>
+
+int main(int argc, char *argv[]) {
+  int count;
+
+  printf("The command line has %d arguments:\n", argc - 1);
+  for (count = 1; count < argc; ++count) {
+    printf("%d: %s\n", count, argv[count]);
+  }
+  putchar('\n');
+
+  return 0;
+} */
+/* #include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char* argv[]) {
+  int i, times;
+
+  if (argc < 2 || (times = atoi(argv[1])) < 1) {
+    printf("Usage: %s positive-number\n", argv[0]);
+  } else {
+    for (i = 0; i < times; ++i) {
+      puts("Hello, good looking!");
+    }
+  }
+  return 0;
+} */
+/* #include <stdio.h>
+#include <stdlib.h>
+#define LIM 30                  // 大小
+char *s_gets(char *st, int n);  // 函数原型
+
+int main() {
+  char number[LIM];  // 数组
+  char *end;         // 结束位置
+  long value;        // 对应数值
+
+  puts("Enter a number (empty line to quit):");
+  while (s_gets(number, LIM) && number[0] != '\0') {
+    value = strtol(number, &end, 10);
+    printf("base 10 input, base 10 output: %ld, stopped at %s (%d)\n", value,
+           end, *end);  // 值，字符串结束地址，地址存的值
+    value = strtol(number, &end, 16);
+    printf("base 16 input, base 10 output: %0lx, stopped at %s (%d)\n", value,
+           end, *end);
+    puts("Next number:");
+  }
+  puts("Bye!\n");
+
+  return 0;
+}
+
+char *s_gets(char *st, int n) {
+  char *ret_val;
+  int i = 0;
+
+  ret_val = fgets(st, n, stdin);
+  if (ret_val) {
+    while (st[i] != '\n' && st[i] != '\0') {
+      ++i;
+    }
+    if (st[i] == '\n') {
+      st[i] = '\0';
+    } else {
+      while (getchar() != '\n') {
+        continue;
+      }
+    }
+  }
+  return ret_val;
+} */
+/* #include <stdio.h>
+#include <string.h>
+char *s_gets(char *st, int n) {
+  char *ret_val;
+
+  ret_val = fgets(st, n, stdin);
+  if (ret_val) {
+    char *find = strchr(ret_val, '\n');
+    if (*find == '\n') {
+      *find = '\0';
+    } else {
+      while (getchar() != '\n') {
+        continue;
+      }
+    }
+  }
+  return ret_val;
+} */
+/* #include <ctype.h>
+#include <string.h>
+
+const char *func(char *str) {
+  while (!isspace(*str)) {
+    if (!*str) {
+      return NULL;
+    }
+    ++str;
+  }
+  return str;
+} */
 

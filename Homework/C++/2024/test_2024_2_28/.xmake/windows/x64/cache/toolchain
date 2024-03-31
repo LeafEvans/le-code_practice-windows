@@ -1,42 +1,42 @@
 {
-    tool_target_test_2024_2_28_windows_x64_ld = {
-        toolname = "clangxx",
-        program = "clang++",
+    tool_target_test_2024_2_28_windows_x86_ld = {
+        toolname = "gxx",
         toolchain_info = {
+            cachekey = "gcc_arch_x86_plat_windows",
             plat = "windows",
-            name = "clang",
-            cachekey = "clang_arch_x64_plat_windows",
-            arch = "x64"
-        }
+            arch = "x86",
+            name = "gcc"
+        },
+        program = "g++"
     },
-    tool_target_test_2024_2_28_windows_x64_cc = {
-        toolname = "clang",
-        program = "clang",
+    tool_target_test_2024_2_28_windows_x86_sh = {
+        toolname = "gxx",
         toolchain_info = {
+            cachekey = "gcc_arch_x86_plat_windows",
             plat = "windows",
-            name = "clang",
-            cachekey = "clang_arch_x64_plat_windows",
-            arch = "x64"
-        }
+            arch = "x86",
+            name = "gcc"
+        },
+        program = "g++"
     },
-    tool_target_test_2024_2_28_windows_x64_cxx = {
-        toolname = "clang",
-        program = "clang",
+    tool_target_test_2024_2_28_windows_x86_cxx = {
+        toolname = "gcc",
         toolchain_info = {
+            cachekey = "gcc_arch_x86_plat_windows",
             plat = "windows",
-            name = "clang",
-            cachekey = "clang_arch_x64_plat_windows",
-            arch = "x64"
-        }
+            arch = "x86",
+            name = "gcc"
+        },
+        program = "gcc"
     },
-    tool_target_test_2024_2_28_windows_x64_sh = {
-        toolname = "clangxx",
-        program = "clang++",
+    tool_target_test_2024_2_28_windows_x86_cc = {
+        toolname = "gcc",
         toolchain_info = {
+            cachekey = "gcc_arch_x86_plat_windows",
             plat = "windows",
-            name = "clang",
-            cachekey = "clang_arch_x64_plat_windows",
-            arch = "x64"
-        }
+            arch = "x86",
+            name = "gcc"
+        },
+        program = "gcc"
     }
 }

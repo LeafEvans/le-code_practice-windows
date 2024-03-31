@@ -1598,7 +1598,7 @@ int main() {
   Pupil::showStatic();
   return 0;
 } */
-int main() {
+/* int main() {
   int x;
   if (x >= 0 && x < 360) {
     // 具体实现
@@ -1607,4 +1607,92 @@ int main() {
   } else if (x >= 600) {
     // 具体实现
   }
+}
+ */
+/* #include <iostream>
+
+using namespace std;
+
+// 抽象类
+class Hero {
+ public:
+  virtual void back() = 0;    // 纯虚函数
+  virtual void attack() = 0;  // 纯虚函数
+};
+
+class LiBai : public Hero {
+ public:
+  void back() { cout << "LiBai::back()" << endl; }  // 重写
+  void attack() { cout << "LiBai::attack()" << endl; }
+};
+
+class CaoCao : public Hero {
+ public:
+  void back() { cout << "CaoCao::back()" << endl; }  // 重写
+  void attack() { cout << "CaoCao::attack()" << endl; }
+};
+
+int main() {
+  LiBai h1;
+  CaoCao h2;
+  Hero *p;
+
+  p = &h1;
+  p->back();
+
+  p = &h2;
+  p->back();
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+int main() {
+  int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  for (int i = 0; i < 10; ++i) {
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+  return 0;
+} */
+#include <cmath>
+#include <iostream>
+
+
+using namespace std;
+
+class Shape {
+ public:
+  virtual double getPermiter() const = 0;
+  virtual double getArea() const = 0;
+};
+
+class Trangle : public Shape {
+ public:
+  Trangle(double a = 10, double b = 10, double c = 10) : _a(a), _b(b), _c(c) {}
+
+  double getPermiter() const { return _a + _b + _c; }
+  double getArea() const {
+    double p = 0.5 * (_a + _b + _c);
+    return sqrt(p * (p - _a) * (p - _b) * (p - _c));
+  }
+
+ private:
+  double _a;
+  double _b;
+  double _c;
+
+  double _permiter;
+  double _area;
+};
+
+class Circle : public Shape {
+  
+}
+
+int main() {
+  Trangle trangle;
+
 }
