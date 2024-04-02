@@ -1,3 +1,5 @@
-[ 25%]: cache compiling.debug src\main.cpp
-[ 50%]: linking.debug test_2024_2_21.exe
-[100%]: build ok, spent 2.203s
+[ 25%]: compiling.debug src\main.cpp
+error: main.cpp
+src\main.cpp(1839): error C3892: “t”: 不能给常量赋值
+
+  > in src\main.cpp

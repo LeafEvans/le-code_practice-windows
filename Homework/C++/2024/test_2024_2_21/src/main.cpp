@@ -1657,9 +1657,33 @@ int main() {
   cout << endl;
   return 0;
 } */
-#include <cmath>
-#include <iostream>
+/* #include <iostream>
 
+using namespace std;
+
+int main() {
+  int num = 0;     // 要输入的数字
+  int count1 = 0;  // 偶数个数
+  int count2 = 0;  // 奇数个数
+
+  cout << "请输入一系列整数(输入0或负数表示结束):" << endl;
+  do {
+    cin >> num;
+    // 如果整除2（即为偶数），则偶数数量++
+    // 否则反之
+    if (num % 2 == 0) {
+      ++count1;
+    } else {
+      ++count2;
+    }
+  } while (num != 0);  // 不等于 0 时，循环继续
+  cout << "奇数个数为：" << count1 << endl;
+  cout << "偶数个数为：" << count2 << endl;
+
+  return 0;
+} */
+/* #include <cmath>
+#include <iostream>
 
 using namespace std;
 
@@ -1689,10 +1713,134 @@ class Trangle : public Shape {
 };
 
 class Circle : public Shape {
-  
-}
+ public:
+  Circle() : _r(10) {}
+  double getPermiter() const;
+  double getArea() const;
+
+ private:
+  double _r;
+  static double pi;
+};
+
+double Circle::pi = 3.1415926;
+double Circle::getPermiter() const { return 2 * pi * _r; }
+double Circle::getArea() const { return pi * _r * _r; }
 
 int main() {
   Trangle trangle;
+  cout << trangle.getPermiter() << endl;
+  cout << trangle.getArea() << endl;
 
-}
+  Circle circle;
+  cout << circle.getPermiter() << endl;
+  cout << circle.getArea() << endl;
+
+  // 用数组来保存一个三角形和一个圆
+  Shape *shapes[2] = {&trangle, &circle};
+
+  // 打印这两个的周长和面积
+  for (int i = 0; i < 2; ++i) {
+    cout << shapes[i]->getArea() << endl;
+    cout << shapes[i]->getPermiter() << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+class A {
+ public:
+  A() { cout << "A::A()" << endl; }
+  virtual ~A() { cout << "A::~A()" << endl; }
+};
+
+class B : public A {
+ public:
+  int *p;
+  B() {
+    p = new int[4];
+    cout << "B::B()" << endl;
+  }
+  ~B() {
+    delete[] p;
+    cout << "B::~B()" << endl;
+  }
+};
+
+int main() {
+  // 基类指针指向派生类对象
+  // 构造一个派生类对象
+  A *p = new B();
+  // 通过基类指针，释放一个派生类对象
+  delete p;
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+int main() {
+  int x = 100;
+  // *p 是只读的，不能通过指针 p 不能改变它指向的内存空间的内存
+  const int *p1 = &x;
+  int const *p2 = &x;  // 等效于 const int *p2 = &x;
+  // p3 这个指针一旦初始化后就不能再指向别的内存空间了
+  const int *const p3 = &x;  // p3 是只读的，*p3 也是只读的
+  int const *const p4 = &x;
+  cout << *p4 << endl;
+
+  return 0;
+} */
+/* class A {
+ public:
+  const int x;
+  A(int x) : x(x) {}
+}; */
+/* class B {
+ public:
+  int x;
+
+ public:
+  // error C3490: 由于正在通过常量对象访问“x”，因此无法对其进行修改
+  void f() const { this->x++; }
+}; */
+/* class B {
+ public:
+  int x;
+  B();
+
+  int getX() const;
+}; */
+/* #include <iostream>
+
+using namespace std;
+
+class C {
+ public:
+  int y;
+  int getX() const { return x; }
+  C() : x(100), y(1000) {}
+
+ private:
+  int x;
+};
+
+int main() {
+  const C c;
+  cout << c.y << endl;
+  cout << c.getX() << endl;
+  return 0;
+} */
+/* #include <iostream>
+using namespace std;
+// error C3892: “t”: 不能给常量赋值
+void func(const int& t) { ++t; }
+int main() {
+  int x = 0;
+  func(x);
+  cout << x << endl;
+  return 0;
+} */
