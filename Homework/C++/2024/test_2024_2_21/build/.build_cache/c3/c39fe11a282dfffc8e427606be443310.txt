@@ -1,0 +1,7 @@
+{
+    errdata = "src\\main.cpp:1636:18: warning: array designators are a C99 extension [-Wc99-designator]\
+ 1636 |   int arr[30] = {[10] = 1};\
+      |                  ^~~~\
+1 warning generated.\
+"
+}

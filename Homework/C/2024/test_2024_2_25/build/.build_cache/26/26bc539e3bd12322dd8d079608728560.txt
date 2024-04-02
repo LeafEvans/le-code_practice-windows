@@ -1,0 +1,7 @@
+{
+    errdata = "src\\main.c:2383:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]\
+ 2383 | }\
+      | ^\
+1 warning generated.\
+"
+}

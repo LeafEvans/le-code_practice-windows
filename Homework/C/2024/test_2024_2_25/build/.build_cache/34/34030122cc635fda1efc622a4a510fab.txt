@@ -1,0 +1,10 @@
+{
+    errdata = "src\\main.c:1360:39: warning: array index -1 is before the beginning of the array [-Warray-bounds]\
+ 1360 |   printf(\"address of arr[-1]: %p\\n\", &arr[-1]);\
+      |                                       ^   ~~\
+src\\main.c:1347:3: note: array 'arr' declared here\
+ 1347 |   int arr[4];\
+      |   ^\
+1 warning generated.\
+"
+}
