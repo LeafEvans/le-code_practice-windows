@@ -1,20 +1,62 @@
 {
-    find_program_msvc_arch_x64_plat_windows_checktoolcxx = {
-        ["cl.exe"] = [[C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe]]
+    find_program_gcc_arch_x64_plat_windows_checktoolcxx = {
+        gcc = "gcc"
     },
-    find_programver = {
-        ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe"] = false
-    },
-    find_program = {
-        ["cl.exe"] = [[C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe]],
-        ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe"] = [[C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\cl.exe]]
-    },
-    find_program_msvc_arch_x64_plat_windows_checktoolld = {
-        ["link.exe"] = [[C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.39.33519\bin\HostX64\x64\link.exe]]
+    find_program_gcc_arch_x64_plat_windows_checktoolld = {
+        ["g++"] = "g++"
     },
     ["lib.detect.has_flags"] = {
-        ["windows_x64_C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe__cxx_cxflags_-nologo_-FS -Fd"] = true,
-        ["windows_x64_C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe__cxx__-nologo_-Od"] = true,
-        ["windows_x64_C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe__cxx_cxflags_-nologo_cl_sourceDependencies"] = true
+        ["windows_x64_gcc_13.2.0_cxx__-m64_-O0"] = true,
+        ["windows_x64_gcc_13.2.0_cxx_cxflags_-m64_-MMD -MF"] = true,
+        ["windows_x64_gcc_13.2.0_cxx_cxflags_-m64_-fvisibility-inlines-hidden"] = true,
+        ["windows_x64_gcc_13.2.0_cxx_cxflags_-m64_-fdiagnostics-color=always"] = true
+    },
+    find_program_gcc_arch_x64_plat_windows_checktoolcc = {
+        gcc = "gcc"
+    },
+    ["detect.tools.gcc.has_cflags"] = {
+        ["gcc_13.2.0"] = {
+            ["--version"] = true,
+            ["--param"] = true,
+            ["-Xpreprocessor"] = true,
+            ["-print-libgcc-file-name"] = true,
+            ["-dumpversion"] = true,
+            ["-pipe"] = true,
+            ["-print-multi-directory"] = true,
+            ["-print-multi-os-directory"] = true,
+            ["-Xlinker"] = true,
+            ["--target-help"] = true,
+            ["-E"] = true,
+            ["-B"] = true,
+            ["-v"] = true,
+            ["-print-sysroot-headers-suffix"] = true,
+            ["-dumpspecs"] = true,
+            ["-pass-exit-codes"] = true,
+            ["-c"] = true,
+            ["--help"] = true,
+            ["-print-search-dirs"] = true,
+            ["-time"] = true,
+            ["-shared"] = true,
+            ["-Xassembler"] = true,
+            ["-dumpmachine"] = true,
+            ["-pie"] = true,
+            ["-no-canonical-prefixes"] = true,
+            ["-o"] = true,
+            ["-print-multiarch"] = true,
+            ["-save-temps"] = true,
+            ["-S"] = true,
+            ["-x"] = true,
+            ["-print-multi-lib"] = true,
+            ["-print-sysroot"] = true
+        }
+    },
+    find_program = {
+        gcc = "gcc"
+    },
+    find_programver = {
+        gcc = "13.2.0"
+    },
+    find_program_gcc_arch_x64_plat_windows_checktoolsh = {
+        ["g++"] = "g++"
     }
 }

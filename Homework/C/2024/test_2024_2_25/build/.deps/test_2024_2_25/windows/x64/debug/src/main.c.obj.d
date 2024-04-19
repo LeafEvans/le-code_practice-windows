@@ -1,9 +1,4 @@
 {
-    depfiles_gcc = "build\\.objs\\test_2024_2_25\\windows\\x64\\debug\\src\\__cpp_main.c.c:   src/main.c\
-",
-    files = {
-        [[src\main.c]]
-    },
     values = {
         "clang",
         {
@@ -14,5 +9,10 @@
             "-fexceptions",
             "-fcxx-exceptions"
         }
-    }
+    },
+    files = {
+        [[src\main.c]]
+    },
+    depfiles_gcc = "build\\.objs\\test_2024_2_25\\windows\\x64\\debug\\src\\__cpp_main.c.c:   src/main.c\
+"
 }

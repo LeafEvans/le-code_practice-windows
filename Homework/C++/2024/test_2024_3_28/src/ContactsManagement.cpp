@@ -22,7 +22,7 @@ ContactsManagement::ContactsManagement(unsigned int num) {
   _num = num;                    // 输入指定的通讯录人数
   _size = num * 2;               // 通讯录大小为通讯录人数的两倍
   _records = new Record[_size];  // 存储通讯录的指针赋值
-  set_data(0, _num);             // 输入这些人的数据
+  setData(0, _num);             // 输入这些人的数据
 }
 
 // 析构函数
@@ -46,7 +46,7 @@ ContactsManagement::ContactsManagement(ContactsManagement& other) {
 }
 
 // 添加成员
-void ContactsManagement::add_new_contact() {
+void ContactsManagement::addNewContact() {
   // 要增加的数量
   unsigned int add_num = 0;
   cout << "输入要增加的数量:>";
@@ -72,12 +72,12 @@ void ContactsManagement::add_new_contact() {
   }
 
   // 设置通讯录的数据
-  set_data(_num, new_num);
+  setData(_num, new_num);
   _num = new_num;  // 更改已有的数值
 }
 
 // 输出全部通讯录成员
-void ContactsManagement::show_all_contacts() const {
+void ContactsManagement::showAllContacts() const {
   if (_num == 0) {
     // 如果没有成员
     // 输出下列语句
@@ -86,12 +86,12 @@ void ContactsManagement::show_all_contacts() const {
   }
   for (int i = 0; i < _num; ++i) {
     // 输出
-    get_data(_records[i]);
+    getData(_records[i]);
   }
 }
 
 // 查找通讯录成员
-void ContactsManagement::search_contact() const {
+void ContactsManagement::searchContact() const {
   int choice = 0;
   while (true) {
     cout << "输入查找方式:>" << endl;
@@ -106,16 +106,16 @@ void ContactsManagement::search_contact() const {
   }
   switch (choice) {
     case 1:
-      search_name();
+      searchName();
       break;
     case 2:
-      search_relation();
+      searchRelation();
       break;
   }
 }
 
 // 以名字查找
-void ContactsManagement::search_name() const {
+void ContactsManagement::searchName() const {
   if (_num == 0) {
     // 如果没有成员
     // 输出下列语句
@@ -129,8 +129,8 @@ void ContactsManagement::search_name() const {
   cin >> name;
 
   for (int i = 0; i < _num; ++i) {
-    if (strcmp(name, _records[i].get_name()) == 0) {
-      get_data(_records[i]);
+    if (strcmp(name, _records[i].getName()) == 0) {
+      getData(_records[i]);
       flag = true;  // 找到了
     }
   }
@@ -141,7 +141,7 @@ void ContactsManagement::search_name() const {
 }
 
 // 以关系查找
-void ContactsManagement::search_relation() const {
+void ContactsManagement::searchRelation() const {
   if (_num == 0) {
     // 如果没有成员
     // 输出下列语句
@@ -154,8 +154,8 @@ void ContactsManagement::search_relation() const {
   cin >> relation;
 
   for (int i = 0; i < _num; ++i) {
-    if (strcmp(relation, _records[i].get_relation()) == 0) {
-      get_data(_records[i]);
+    if (strcmp(relation, _records[i].getRelation()) == 0) {
+      getData(_records[i]);
       flag = true;  // 找到了
     }
   }
@@ -166,7 +166,7 @@ void ContactsManagement::search_relation() const {
 }
 
 // 输入数据的函数，为私有的
-void ContactsManagement::set_data(unsigned int start, unsigned int end) {
+void ContactsManagement::setData(unsigned int start, unsigned int end) {
   char name[50];
   char relation[50];
   char tele[50];
@@ -178,15 +178,15 @@ void ContactsManagement::set_data(unsigned int start, unsigned int end) {
     cin >> relation;
     cout << "输入第" << i + 1 << "个用户电话:>" << endl;
     cin >> tele;
-    _records[i].set_name(name);          // 输入名字
-    _records[i].set_relation(relation);  // 输入关系
-    _records[i].set_tele(tele);          // 输入电话
+    _records[i].setName(name);          // 输入名字
+    _records[i].setRelation(relation);  // 输入关系
+    _records[i].setTele(tele);          // 输入电话
   }
 }
 
 // 输出数据的函数，为私有的只读函数
-void ContactsManagement::get_data(const Record& record) const {
-  cout << "姓名：" << record.get_name() << "\t    \t"
-       << "关系：" << record.get_relation() << "\t    \t"
-       << "电话：" << record.get_tele() << endl;
+void ContactsManagement::getData(const Record& record) const {
+  cout << "姓名：" << record.getName() << "\t    \t"
+       << "关系：" << record.getRelation() << "\t    \t"
+       << "电话：" << record.getTele() << endl;
 }

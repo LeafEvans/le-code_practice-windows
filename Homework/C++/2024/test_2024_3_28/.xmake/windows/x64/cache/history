@@ -1,7 +1,5 @@
 {
     cmdlines = {
-        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.3\assets\default_target.lua]],
-        "xmake ",
         "xmake run test_2024_3_28",
         "xmake f -p windows -a x64 -m debug --toolchain=clang",
         "xmake ",
@@ -63,6 +61,8 @@
         "xmake ",
         "xmake run test_2024_3_28",
         "xmake ",
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.3\assets\explorer.lua]],
+        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.3\assets\config.lua]],
         [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.3\assets\explorer.lua]],
         [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.3\assets\config.lua]]
     }

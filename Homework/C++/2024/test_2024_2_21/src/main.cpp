@@ -1844,3 +1844,152 @@ int main() {
   cout << x << endl;
   return 0;
 } */
+/* #include <iostream>
+using namespace std;
+int main() {
+  // 定义三个变量
+  // num：西瓜数量
+  // day：卖完的天数
+  // bnum：在整数除法下的一半
+  int num, day, bnum;
+  cout << "请输入西瓜总数：";
+  cin >> num;
+  // 当西瓜总数大于 0 时，循环继续
+  while (num > 0) {
+    // 计算当前的一半
+    bnum = num / 2;
+    // 减去一半和多的两颗
+    num -= bnum + 2;
+    // 如果卖的小于 3 颗，便可能出现这种情况
+    if (num < 0) {
+      // 此时卖完剩下的
+      // 因为不可能小于 0，因此设置为 0
+      num = 0;
+    }
+    // 天数增加
+    ++day;
+    // 输出剩下的
+    cout << "第" << day << "天剩下：" << num << "个" << endl;
+  }
+  cout << "需要" << day << "天卖完。" << endl;
+  return 0;
+} */
+/* #include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  string str = "Hello World!";
+  cout << str.rfind("Wor") << endl;
+  cout << str.find("Wor") << endl;
+  cout << str.find_first_of("eld") << endl;
+  cout << str.find_last_of("Wo") << endl;
+  cout << str.find_last_not_of("He") << endl;
+  cout << str.find_first_not_of("He") << endl;
+  return 0;
+} */
+/* #include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  try {
+    vector<int> arr(3, 10);
+    for (int i = 0; i < 3; ++i) {
+      cout << arr.at(i) << endl;
+    }
+    arr.at(3) = 100;
+  } catch (...) {
+    cout << "Hello" << endl;
+  }
+  return 0;
+} */
+/* int func1(int a, int b) {
+  if (b) {
+    return a / b;
+  } else {
+    // 抛出异常
+    throw "division 0";
+  }
+} */
+/* #include <cstring>
+#include <iostream>
+
+using namespace std;
+
+bool func2(const char *str) {
+  if (!str) {
+    throw "NULL pointor";
+  }
+
+  int len = strlen(str);
+  // 协议：##name=zhangsan;age=18#
+  if (!(str[0] == '#' && str[1] == '#')) {
+    // 帧头错误
+    throw "frame header error";
+  }
+  if (!(str[len - 1] == '#' && str[len - 2] == '#')) {
+    // 帧尾错误
+    throw "frame tail error";
+  }
+
+  return true;
+}
+
+int main() {
+  try {
+    func2("##Hello World!");
+  } catch (const char *msg) {
+    // 可以判断是哪个错误
+    cout << msg << endl;
+  }
+  return 0;
+} */
+/* #include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  try {
+    vector<int> arr(3, 10);
+    for (int i = 0; i < 3; ++i) {
+      cout << arr.at(i) << endl;
+    }
+    arr.at(3) = 100;
+  } catch (out_of_range &err) {
+    cout << err.what() << endl;
+  }
+} */
+#include <cstring>
+#include <exception>
+
+class FHeaderErr : public std::exception {
+ public:
+  const char *what() const throw() { return "frame header error"; }
+};
+
+class FTailErr : public std::exception {
+ public:
+  const char *what() const throw() { return "frame tail error"; }
+};
+
+bool func(const char *str) {
+  if (!str) {
+    throw "NULL pointor";
+  }
+
+  int len = strlen(str);
+  if (!(str[0] == '#' && str[1] == '#')) {
+    FHeaderErr err;
+    throw(err);
+  }
+  if (!(str[len - 1] == '#' && str[len - 2] == '#')) {
+    FTailErr err;
+    throw(err);
+  }
+
+  return true;
+}

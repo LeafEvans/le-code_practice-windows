@@ -2411,5 +2411,382 @@ const char *func(char *str) {
   }
   return str;
 } */
+/* #include <stdio.h>
 
+int main() {
+  printf("Hello World!\n");
 
+  return 0;
+} */
+/* #include <ctype.h>
+#include <stdio.h>
+
+void func(char *dest, int n) {
+  char ch;
+  while (n) {
+    ch = getchar();
+    if (isspace(ch)) {
+      return;
+    }
+    *dest = ch;
+    --n;
+    ++dest;
+  }
+}
+
+int main() {
+  char arr[10];
+  func(arr, 10);
+  for (int i = 0; i < 10; ++i) {
+    putchar(arr[i]);
+  }
+  putchar('\n');
+  return 0;
+} */
+/* #include <stdio.h>
+#include <string.h>
+void func(char *arr, int n) {
+  scanf("%s", arr);
+  while (getchar() != '\n') {
+    continue;
+  }
+  // 计算字符串大小，超过就截断
+  if (strlen(arr) > n) {
+    arr[n] = '\0';
+  }
+}
+int main() {
+  char arr[10];
+  func(arr, 5);
+  printf("%s", arr);
+  return 0;
+} */
+/* #include <stdio.h>
+
+char *func(char *str, char ch) {
+  while (*str != ch && *str != '\0') {
+    str++;
+  }
+
+  if (*str == '\0') {
+    return NULL;
+  }
+
+  return str;
+}
+
+int main() {
+  char ch = 0;
+  char arr[12] = {0};
+
+  scanf("%11s", arr);
+  while (getchar() != '\n') {
+    continue;
+  }
+  ch = getchar();
+  char *p = func(arr, ch);
+  if (p != NULL) {
+    printf("%c %zd\n", *p, p - arr + 1);
+  } else {
+    printf("Character not found\n");
+  }
+
+  return 0;
+}
+ */
+/* #include <stdbool.h>
+#include <stdio.h>
+
+bool is_within(const char *str, char ch) {
+  while (*str != ch && *str) {
+    ++str;
+  }
+
+  if (!*str) {
+    return false;
+  }
+
+  return true;
+}
+
+int main() {
+  char arr[50] = {0};
+  char ch = 0;
+
+  while (true) {
+    scanf("%s", arr);
+
+    while (getchar() != '\n') {
+      continue;
+    }
+
+    ch = getchar();
+    if (is_within(arr, ch)) {
+      printf("true\n");
+    } else {
+      printf("false\n");
+    }
+  }
+
+  return 0;
+} */
+/* #include <stdio.h>
+
+char *myStrncpy(char *dest, const char *src, size_t n) {
+  while (n--) {
+    *(dest + n) = *(src + n);
+  }
+  return dest;
+} */
+/* #include <string.h>
+char *string_in(char *str1, const char *str2) {
+
+  int len = strlen(str2);
+  while (*str1) {
+    if (!strncmp(str1, str2, len)) {
+      return str1;
+    }
+    ++str1;
+  }
+  return NULL;
+} */
+/* #include <stdio.h>
+void inverse(char *str) {
+  char *ptr = str;
+  while (*ptr) {
+    ++ptr;
+  }
+  --ptr;
+  while (ptr > str) {
+    char temp = *ptr;
+    *ptr = *str;
+    *str = temp;
+    ++str;
+    --ptr;
+  }
+}
+int main() {
+  char str[] = "Hello, World!";
+  printf("Original string: %s\n", str);
+
+  inverse(str);
+  printf("Reversed string: %s\n", str);
+
+  return 0;
+} */
+/* #include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
+void deleteSpace(char *str) {
+  char *write_ptr = str;
+  char *read_ptr = str;
+
+  while (*read_ptr) {
+    if (!isspace(*read_ptr)) {
+      *write_ptr = *read_ptr;
+      ++write_ptr;
+    }
+    ++read_ptr;
+  }
+  *write_ptr = '\0';
+} */
+/* #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_STRINGS 10
+#define MAX_LENGTH 100
+
+void printSourceStrings(char strings[][MAX_LENGTH], int count) {
+  printf("Source String List:\n");
+  for (int i = 0; i < count; ++i) {
+    printf("%s\n", strings[i]);
+  }
+  printf("\n");
+}
+
+int compareStrings(const void *a, const void *b) {
+  return strcmp((const char *)a, (const char *)b);
+}
+
+void printSortedASCII(char strings[][MAX_LENGTH], int count) {
+  qsort(strings, count, sizeof(strings[0]), compareStrings);
+
+  printf("Sorted ASCII Order:\n");
+  for (int i = 0; i < count; ++i) {
+    printf("%s\n", strings[i]);
+  }
+  printf("\n");
+}
+
+int compareLength(const void *a, const void *b) {
+  return strlen(*(const char **)a) - strlen(*(const char **)b);
+}
+
+void printSortedLength(char strings[][MAX_LENGTH], int count) {
+  char *temp[MAX_STRINGS];
+  for (int i = 0; i < count; ++i) {
+    temp[i] = strings[i];
+  }
+
+  qsort(temp, count, sizeof(temp[0]), compareLength);
+
+  printf("Sorted Length Order:\n");
+  for (int i = 0; i < count; ++i) {
+    printf("%s\n", temp[i]);
+  }
+  printf("\n");
+}
+
+void printSortedWordLength(char strings[][MAX_LENGTH], int count) {
+  char *temp[MAX_STRINGS];
+  for (int i = 0; i < count; ++i) {
+    temp[i] = strings[i];
+  }
+
+  qsort(temp, count, sizeof(temp[0]), compareStrings);
+
+  printf("Sorted Word Length Order:\n");
+  for (int i = 0; i < count; ++i) {
+    char *firstWord = strtok(temp[i], " ");
+    printf("%s\n", firstWord);
+  }
+  printf("\n");
+}
+
+int main() {
+  char strings[MAX_STRINGS][MAX_LENGTH];
+  int count = 0;
+
+  printf("Enter up to 10 strings (or press Ctrl+D to stop):\n");
+
+  while (count < MAX_STRINGS &&
+         fgets(strings[count], MAX_LENGTH, stdin) != NULL) {
+    strings[count][strcspn(strings[count], "\n")] = '\0';  // 移除换行符
+    count++;
+  }
+
+  int choice;
+  do {
+    printf("Menu:\n");
+    printf("1. Print Source String List\n");
+    printf("2. Print Strings in ASCII Order\n");
+    printf("3. Print Strings in Length Order\n");
+    printf("4. Print Strings in Word Length Order\n");
+    printf("5. Quit\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    switch (choice) {
+      case 1:
+        printSourceStrings(strings, count);
+        break;
+      case 2:
+        printSortedASCII(strings, count);
+        break;
+      case 3:
+        printSortedLength(strings, count);
+        break;
+      case 4:
+        printSortedWordLength(strings, count);
+        break;
+      case 5:
+        printf("Exiting...\n");
+        break;
+      default:
+        printf("Invalid choice! Please try again.\n");
+        break;
+    }
+
+    while (getchar() != '\n')
+      ;  // 清空输入缓冲区
+
+  } while (choice != 5);
+
+  return 0;
+} */
+/* #include <ctype.h>
+#include <stdio.h>
+
+int main() {
+  unsigned int num_punct = 0;
+  unsigned int num_alpha = 0;
+  unsigned int num_lower = 0;
+  unsigned int num_upper = 0;
+  unsigned int num_digit = 0;
+  unsigned int num_word = 0;
+  int in_word = 0;
+  char ch = 0;
+
+  while ((ch = getchar()) != EOF) {
+    if (isspace(ch)) {
+      in_word = 0;
+    } else {
+      if (!in_word) {
+        ++num_word;
+        in_word = 1;
+      }
+
+      if (isdigit(ch)) {
+        ++num_digit;
+      } else if (isalpha(ch)) {
+        ++num_alpha;
+        if (isupper(ch)) {
+          ++num_upper;
+        } else {
+          ++num_lower;
+        }
+      } else if (ispunct(ch)) {
+        ++num_punct;
+      }
+    }
+  }
+
+  printf("%u %u %u %u %u\n", num_word, num_upper, num_lower, num_punct,
+         num_digit);
+
+  return 0;
+} */
+/* #include <stdio.h>
+
+int main() {
+  printf("Hello World!\n");
+  return 0;
+} */
+/* #include <ctype.h>
+#include <limits.h>
+#include <stdio.h>
+
+int myAtoi(char *str) {
+  int result = 0;
+  int sign = 1;
+  while (isspace(*str)) {
+    ++str;
+  }
+
+  if (*str == '+' || *str == '-') {
+    if (*str == '-') {
+      sign = -1;
+    }
+    ++str;
+  }
+
+  while (isdigit(*str)) {
+    int digit = *str - '0';
+
+    if (result == INT_MAX || (result > INT_MAX / 10 && digit > INT_MAX % 10)) {
+      return (sign == 1) ? INT_MAX : INT_MIN;
+    }
+    result = result * 10 + digit;
+  }
+
+  return result * sign;
+} */
+
+#include <stdio.h>
+
+int main() {
+  int *p = NULL;
+  return 0;
+}

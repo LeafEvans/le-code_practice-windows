@@ -1,0 +1,11 @@
+[
+{
+  "directory": "c:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_4_11",
+  "arguments": ["clang.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c++17", "-fexceptions", "-fcxx-exceptions", "-o", "build\\.objs\\test_2024_4_11\\windows\\x64\\debug\\src\\main.cpp.obj", "src\\main.cpp"],
+  "file": "src\\main.cpp"
+},
+{
+  "directory": "c:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_4_11",
+  "arguments": ["clang.exe", "-c", "-Qunused-arguments", "-m64", "-g", "-O0", "-std=c99", "-fexceptions", "-fcxx-exceptions", "-o", "build\\.objs\\test_2024_4_11\\windows\\x64\\debug\\src\\example.c.obj", "src\\example.c"],
+  "file": "src\\example.c"
+}]

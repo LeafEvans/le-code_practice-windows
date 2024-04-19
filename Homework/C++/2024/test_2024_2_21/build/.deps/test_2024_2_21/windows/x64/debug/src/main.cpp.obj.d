@@ -1,18 +1,16 @@
 {
-    files = {
-        [[src\main.cpp]]
-    },
+    depfiles_gcc = "main.o: src\\main.cpp\
+",
     values = {
-        "clang",
+        "gcc",
         {
-            "-Qunused-arguments",
             "-m64",
             "-g",
             "-O0",
-            "-fexceptions",
-            "-fcxx-exceptions"
+            "-fexceptions"
         }
     },
-    depfiles_gcc = "build\\.objs\\test_2024_2_21\\windows\\x64\\debug\\src\\__cpp_main.cpp.cpp:   src/main.cpp\
-"
+    files = {
+        [[src\main.cpp]]
+    }
 }

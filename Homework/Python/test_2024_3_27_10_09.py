@@ -276,4 +276,4 @@ if __name__ == "__main__":
         pygame.display.flip()
         game.cells.next_iter()
 
-plt.show()
+    plt.show()

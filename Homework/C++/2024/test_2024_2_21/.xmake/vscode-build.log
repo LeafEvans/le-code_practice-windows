@@ -1,5 +1,0 @@
-[ 25%]: compiling.debug src\main.cpp
-error: main.cpp
-src\main.cpp(1839): error C3892: “t”: 不能给常量赋值
-
-  > in src\main.cpp

@@ -11,9 +11,9 @@ class ContactsManagement {
   ~ContactsManagement();
 
   // 公共成员函数
-  void add_new_contact();
-  void show_all_contacts() const;
-  void search_contact() const;
+  void addNewContact();
+  void showAllContacts() const;
+  void searchContact() const;
 
  private:
   // 私有成员变量
@@ -22,8 +22,8 @@ class ContactsManagement {
   unsigned int _size;
 
   // 公有成员函数
-  void set_data(unsigned int, unsigned int);
-  void get_data(const Record&) const;
-  void search_name() const;
-  void search_relation() const;
+  void setData(unsigned int, unsigned int);
+  void getData(const Record&) const;
+  void searchName() const;
+  void searchRelation() const;
 };
