@@ -364,48 +364,147 @@
 //  test01();
 //  return 0;
 //}
+// #include <iostream>
+//
+// using namespace std;
+//
+//// 模板函数不行
+// template <class T>
+// int myAdd(T a, T b) {
+//   return a + b;
+// }
+//
+//// 普通函数可以进行自动类型转换
+// int myAdd(int a, char c) { return a + c; }
+//
+// void test02() {
+//   int a = 10;
+//   int b = 20;
+//   char c1 = 'a';
+//   char c2 = 'b';
+//
+//   // 优先执行下面的那个函数
+//   // 因为优先使用普通的
+//   myAdd(a, c1);
+//   // 执行上面的那个函数
+//   myAdd(a, b);
+//
+//   // 调用下面的
+//   // 因为模板不会对类型进行自动类型转换
+//   myAdd(c1, b);
+// }
+//
+// template <typename T>
+// void print(T a) {
+//   cout << a << endl;
+// }
+//
+// template <typename T>
+// void print(T a, T b) {
+//   cout << a << endl;
+//   cout << b << endl;
+// }
+//
+// int main() {
+//   test02();
+//   return 0;
+// }
+// using namespace std;
+// #d efine MAX(T) \
+//  T max_##T(T x, T y) { return x > y ? x : y; }
+//
+//// int max_int(int x, int y) { return x > y ? x : y; }
+// MAX(int)
+//// double max_double(double x, double y) { ... }
+// MAX(double)
+//// string max_string(string x, string y) { ... }
+// MAX(string)
+//
+// #define Max(T) max_##T
+//
+// int main() {
+//   int nx = 10, ny = 20;
+//   cout << Max(int)(nx, ny) << endl;
+//   double dx = 12.3, dy = 45.6;
+//   cout << Max(double)(dx, dy) << endl;
+//   string sx = "world", sy = "hello";
+//   cout << Max(string)(sx, sy) << endl;
+//
+//   char cx[256] = "world", cy[256] = "hello";
+//   cout << Max(string)(cx, cy);
+//   return 0;
+// }
+// #include <iomanip>
+// #include <iostream>
+// using namespace std;
+// int main() {
+//  cout << "你好，C++" << endl;
+//  cout << "2023116204陈靖盈" << endl;
+//  int b, sum1 = 0, n, i;
+//  int a[50];
+//  double c, d, sum3 = 0.0, sum4 = 0.0, sum2 = 0.0;
+//  srand(time(NULL));
+//  cout << "请输入一维数组元素的个数（n<=50）：";
+//  cin >> n;
+//  for (i = 0; i < n; i++) {
+//    a[i] = 1 + rand() % 100;
+//    cout << setw(5) << a[i];
+//    cout << endl;
+//  }
+//  for (i = 0; i < n; i++) {
+//    if (a[i] % 2 == 0) {
+//      sum1++;
+//      sum2 = sum2 + a[i];
+//    } else {
+//      sum3++;
+//      sum4 = sum4 + a[i];
+//    }
+//  }
+//  c = sum2 / sum1;
+//  d = sum4 / sum3;
+//  cout << "偶数个数为" << setw(4) << sum1 << "个,其平均数为" << c << endl;
+//  cout << "奇数个数为" << setw(4) << sum3 << "个,其平均数为" << d << endl;
+//  return 0;
+//}
 #include <iostream>
 
 using namespace std;
 
-// 模板函数不行
 template <class T>
-int myAdd(T a, T b) {
-  return a + b;
+void my_swap(T &a, T &b) {
+  const T temp = a;
+  a = b;
+  b = temp;
 }
 
-// 普通函数可以进行自动类型转换
-int myAdd(int a, char c) { return a + c; }
-
-void test02() {
-  int a = 10;
-  int b = 20;
-  char c1 = 'a';
-  char c2 = 'b';
-
-  // 优先执行下面的那个函数
-  // 因为优先使用普通的
-  myAdd(a, c1);
-  // 执行上面的那个函数
-  myAdd(a, b);
-
-  // 调用下面的
-  // 因为模板不会对类型进行自动类型转换
-  myAdd(c1, b);
+template <class T>
+void bubble_sort(T *arr, const int len) {
+  for (int i = 0; i < len - 1; ++i) {
+    for (int j = 0; j < len - 1 - i; ++j) {
+      if (arr[j] > arr[j + 1]) {
+        my_swap(arr[j], arr[j + 1]);
+      }
+    }
+  }
 }
 
-template <typename T>
-void print(T a) {
-  cout << a << endl;
-}
-
-template <typename T>
-void print(T a, T b) {
-  cout << a << endl;
-  cout << b << endl;
+template <class T>
+void print_arr(const T* arr, const int len) {
+  for (int i = 0; i < len; ++i) {
+    cout << arr[i] << " ";
+  }
 }
 
 int main() {
-  test02();
+  constexpr int sa = 10;
+  cout << sa << '\n';
+  int arr2[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  cout << "Hello World!\n";
+  int arr1[10] = {231, 23, 3321, 23, 32, 11, 23, 231, 32, 23};
+  print_arr(arr1, sizeof(arr1) / sizeof(int));
+  cout << "\n";
+  bubble_sort(arr1, sizeof(arr1) / sizeof(int));
+  print_arr(arr1, sizeof(arr1) / sizeof(int));
+  cout << "\n";
   return 0;
 }

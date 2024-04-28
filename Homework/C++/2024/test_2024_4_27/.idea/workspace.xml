@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="test_2024_4_27" targetName="test_2024_4_27" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug-Clang" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="Clang" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
+      <configuration PROFILE_NAME="RelWithDebInfo" ENABLED="true" CONFIG_NAME="RelWithDebInfo" />
+      <configuration PROFILE_NAME="MinSizeRel" ENABLED="true" CONFIG_NAME="MinSizeRel" />
+      <configuration PROFILE_NAME="Default" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="00764074-f6cf-4052-8889-5436432cb5a2" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/test_2024_4_27.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-clang/.cmake/api/v1/reply/cmakeFiles-v1-6a893a5147ec2accf733.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/.cmake/api/v1/query/cache-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/.cmake/api/v1/reply/cache-v2-05c6113f179a61bcb5d9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/.cmake/api/v1/reply/codemodel-v2-3d294b6ee42c5fb7b7fa.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/.cmake/api/v1/reply/target-test_2024_4_27-Debug-32a65d98563090eb40fc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/.cmake/api/v1/reply/toolchains-v1-60c11ca97ca24d353a7d.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/ShowIncludes/foo.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/ShowIncludes/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/ShowIncludes/main.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/clion-Debug-Visual Studio-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/rules.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/embed.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/intermediate.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/manifest.rc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/manifest.res" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/vc140.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/build.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/test_2024_4_27.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/test_2024_4_27.ilk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug-visual-studio/test_2024_4_27.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_4_27/.idea/test_2024_4_27.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java/test_2024_4_23/test_2024_4_23.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Jupter Notebook/test_2024_4_27/pythonProject/.idea/pythonProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../PythonProject/test_2024_4_23/.idea/test_2024_4_23.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../C++Project/test_2024_2_29/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../C++Project/test_2024_2_29/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/.vs/test_2024_1_29/FileContentIndex/4c66011e-92b8-4142-973a-0d93996facac.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/ipch/AutoPCH/e45c2828781a79b9/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/ipch/AutoPCH/e45c2828781a79b9/MAIN.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/test_2024_1_29.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/test_2024_1_29.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/x64/Debug/test_2024_1_29.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/x64/Debug/test_2024_1_29.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/x64/Debug/test_2024_1_29.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CProject/test_2024_1_29/x64/Debug/test_2024_1_29.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_21/.xmake/vscode-build.log" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_2_21/.xmake/vscode-build.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_21/.xmake/windows/x64/cache/config" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_2_21/.xmake/windows/x64/cache/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_21/.xmake/windows/x64/cache/detect" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_2_21/.xmake/windows/x64/cache/detect" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_21/.xmake/windows/x64/cache/history" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_2_21/.xmake/windows/x64/cache/history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_21/.xmake/windows/x64/cache/toolchain" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_2_21/.xmake/windows/x64/cache/toolchain" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_21/.xmake/windows/x64/xmake.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_2_21/.xmake/windows/x64/xmake.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_21/build/.deps/test_2024_2_21/windows/x64/debug/src/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_2_21/build/.deps/test_2024_2_21/windows/x64/debug/src/main.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_21/build/.deps/test_2024_2_21/windows/x64/debug/test_2024_2_21.exe.d" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_2_21/build/.deps/test_2024_2_21/windows/x64/debug/test_2024_2_21.exe.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_21/build/windows/x64/debug/test_2024_2_21.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_2_21/build/windows/x64/debug/test_2024_2_21.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_21/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_2_21/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/.vs/test_2024_4_17/FileContentIndex/63787c97-4c62-4ab0-8912-f4e1fd701dc1.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/.vs/test_2024_4_17/FileContentIndex/80461fd6-2433-4f2a-89bb-a31f7de27c7a.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/.vs/test_2024_4_17/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_17/.vs/test_2024_4_17/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/.vs/test_2024_4_17/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_17/.vs/test_2024_4_17/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/.vs/test_2024_4_17/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_17/.vs/test_2024_4_17/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/.vs/test_2024_4_17/v17/ipch/AutoPCH/c5a824dfef7e3f91/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_17/.vs/test_2024_4_17/v17/ipch/AutoPCH/c5a824dfef7e3f91/MAIN.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/test_2024_4_17/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_17/test_2024_4_17/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/test_2024_4_17/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_17/test_2024_4_17/x64/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/test_2024_4_17/x64/Debug/test_2024_4_17.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_17/test_2024_4_17/x64/Debug/test_2024_4_17.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/test_2024_4_17/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_17/test_2024_4_17/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/test_2024_4_17/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_17/test_2024_4_17/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/x64/Debug/test_2024_4_17.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_17/x64/Debug/test_2024_4_17.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_17/x64/Debug/test_2024_4_17.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_17/x64/Debug/test_2024_4_17.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_19.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_19/Untitled2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_19/gmon.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_19/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_19/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_19/test_2024_4_19.dev" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_19/test_2024_4_19.dev" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_4_19/test_2024_4_19.layout" beforeDir="false" afterPath="$PROJECT_DIR$/../test_2024_4_19/test_2024_4_19.layout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/.xmake/vscode-build.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/.xmake/vscode-build.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/config" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/detect" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/detect" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/history" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/toolchain" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/toolchain" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/build/.deps/test_2024_2_25/windows/x64/debug/test_2024_2_25.exe.d" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/build/.deps/test_2024_2_25/windows/x64/debug/test_2024_2_25.exe.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/build/.objs/test_2024_2_25/windows/x64/debug/src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/build/.objs/test_2024_2_25/windows/x64/debug/src/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/build/windows/x64/debug/compile.test_2024_2_25.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/build/windows/x64/debug/compile.test_2024_2_25.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C/2024/test_2024_2_25/src/main.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Clang" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/main.cpp" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="PerforceDirect.Settings">
+    <option name="CHARSET" value="none" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="1.1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2ffxLnH8J3DmgMIc1kWbVd7YoCA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "CMake 应用程序.test_2024_4_27.executor": "Run",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.advertisement.text.has.clang-format": "true",
+    "cf.advertisement.text.overridden": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C/C++",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_2024_4_27" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="test_2024_4_27" TARGET_NAME="test_2024_4_27" CONFIG_NAME="Debug-Clang" RUN_TARGET_PROJECT_NAME="test_2024_4_27" RUN_TARGET_NAME="test_2024_4_27">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="00764074-f6cf-4052-8889-5436432cb5a2" name="更改" comment="" />
+      <created>1714205880665</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714205880665</updated>
+      <workItem from="1714205884136" duration="901000" />
+      <workItem from="1714206803922" duration="85000" />
+      <workItem from="1714206900283" duration="13493000" />
+      <workItem from="1714224358162" duration="404000" />
+      <workItem from="1714290667450" duration="18631000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>141</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

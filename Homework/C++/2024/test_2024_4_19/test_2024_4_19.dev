@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=5
 CompilerSettings=0000000100000000100000000
-UnitCount=2
+UnitCount=3
 
 [VersionInfo]
 Major=1
@@ -61,7 +61,18 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=Untitled2
+FileName=Person.h
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+CompileCpp=1
+
+[Unit3]
+FileName=Person.cpp
+CompileCpp=1
 Folder=
 Compile=1
 Link=1

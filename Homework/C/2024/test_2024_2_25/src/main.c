@@ -2783,10 +2783,293 @@ int myAtoi(char *str) {
 
   return result * sign;
 } */
-
-#include <stdio.h>
+/* #include <stdio.h>
 
 int main() {
   int *p = NULL;
+  return 0;
+}
+ */
+/* #define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+static unsigned long next = 1;
+
+unsigned int rand0() {
+  next = next * 1103515245 + 12345;
+  return (unsigned int)(next / 65536) % 32768;
+}
+
+void srand0(unsigned int seed) { next = seed; }
+
+int main() {
+  int count;
+  unsigned seed;
+
+  printf("Please enter your choice for seed.\n");
+  while (scanf("%u", &seed) == 1) {
+    srand0(seed);
+    for (count = 0; count < 5; ++count) {
+      printf("%d\n", rand0());
+    }
+    printf("Please enter next seed (q to quit):\n");
+  }
+  printf("Done.\n");
+
+  return 0;
+} */
+/* #define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#include "../inc/diceroll.h"
+
+int main() {
+  // 次数和点数
+  int dice, roll;
+  // 几个面
+  int sides;
+  // 几个状态
+  int status;
+
+  // 生成种子
+  srand((unsigned int)time(NULL));
+  // 打印提示语句
+  printf("Enter the number of sides per die, 0 to stop.\n");
+  // 如果输入的相符并且面数大于 1，循环继续
+  while (scanf("%d", &sides) == 1 && sides > 0) {
+    // 几次
+    printf("How many dice?\n");
+    // 如果状态不符
+    if ((status = scanf("%d", &dice)) != 1) {
+      // 如果文件末尾，退出
+      if (status == EOF) {
+        break;
+      } else {
+        // 否则提示语句，再循环一次
+        printf("You should have entered an integer.");
+        printf(" Let's begin again.\n");
+        while (getchar() != '\n') {
+          continue;
+        }
+        printf("How many sides? Enter 0 to stop.\n");
+        continue;
+      }
+    }
+    // 求点数
+    roll = roll_n_dice(dice, sides);
+    printf("You have rolled a %d using %d %d-sides dice.\n", roll, dice, sides);
+    printf("How many sides? Enter 0 to stop.\n");
+  }
+  // 调用几次
+  printf("The rollem() function was called %d times.\n", roll_count);
+
+  // 再见！
+  printf("GOOD FORTUNE TO YOU!\n");
+
+  return 0;
+} */
+/* #define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  // 指针
+  double* ptd;
+  // 空间大小
+  int max;
+  // 数量
+  int number;
+  int i = 0;
+
+  puts("What is the maxinum number of type double entries?");
+  if (scanf("%d", &max) != 1) {
+    puts("Number not correctly entered -- bye.");
+    exit(EXIT_FAILURE);
+  }
+  ptd = (double*)malloc(max * sizeof(double));
+  if (ptd == NULL) {
+    puts("Memory allocation failed. Goodbye.");
+    exit(EXIT_FAILURE);
+  }
+
+  puts("Enter the values (q to quit):");
+  while (i < max && scanf("%lf", &ptd[i]) == 1) ++i;
+  printf("Here are your %d entries:\n", number = i);
+  for (i = 0; i < number; ++i) {
+    printf("%7.2f ", ptd[i]);
+    if (i % 7 == 6) putchar('\n');
+  }
+  if (i % 7 != 0) putchar('\n');
+  puts("Done.");
+  free(ptd);
+
+  return EXIT_SUCCESS;
+} */
+/* #define _CRT_SECURE_NO_WARNINGS
+#include <stdlib.h>
+
+int main() {
+  int n = 5;
+  int m = 6;
+  int ar2[n][m];
+  int(*p2)[6];
+  int(*p3)[m];
+  p2 = (int(*)[6])malloc(n * 6 * sizeof(int));
+  p3 = (int(*)[m])malloc(n * m * sizeof(int));
+  ar2[1][2] = p2[1][2] = 12;
+  return EXIT_SUCCESS;
+} */
+/* #define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int static_store = 30;
+const char * pcg = "String Literal";
+int main() {
+  int auto_store = 40;
+  char auto_string [] = "Auto char Array";
+  int *pi;
+  char *pcl;
+
+  pi = (int *) malloc(sizeof(int));
+  *pi = 35;
+  pcl = (char *) malloc(strlen("Dynamic String") + 1);
+  strcpy(pcl, "Dynamic String");
+
+} */
+/* void ofmouth(int a1[const], int a2[restrict], int n);
+double stick(double ar[static 20]); */
+/* #define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+void critic(int *ptr);
+int main() {
+  int units;
+
+  printf("How many pounds to a firkin of butter!\n");
+  scanf("%d", &units);
+  while (units != 56) {
+    critic(&units);
+  }
+  printf("You must have looked it up!\n");
+
+  return 0;
+}
+void critic(int *ptr) {
+  printf("No luck, my friend. Try again.\n");
+  scanf("%d", ptr);
+} */
+/* #define _CRT_SECURE_NO_WARNINGS
+#include <stdbool.h>
+#include <stdio.h>
+
+#include "../inc/pe12-2a.h"
+
+
+int main() {
+  int mode;
+  double distance;
+  double fuel;
+
+  printf("Enter 0 for metric mode, 1 for US mode: ");
+  while (true) {
+    set_mode(&mode);
+    if (mode == -1) break;
+    get_info(mode, &distance, &fuel);
+    show_info(mode, distance, fuel);
+    printf("Enter 0 for metric mode, 1 for US mode");
+    printf(" (-1 to quit): ");
+  }
+  printf("Done.\n");
+  return 0;
+} */
+/* #include <stdio.h>
+
+void func() {
+  static int count = 0;
+  ++count;
+  printf("%d ", count);
+}
+
+int main() {
+  for (int i = 0; i < 10; ++i) {
+    func();
+  }
+  putchar('\n');
+  return 0;
+} */
+/* #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void swap(int *a, int *b) {
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+void bubbleSort(int *arr, int len) {
+  for (int i = 0; i < len - 1; ++i) {
+    for (int j = 0; j < len - 1 - i; ++j) {
+      if (arr[j] < arr[j + 1]) swap(&arr[j], &arr[j + 1]);
+    }
+  }
+}
+
+int main() {
+  srand((unsigned int)time(NULL));
+  int arr[100];
+  for (int i = 0; i < 100; ++i) {
+    arr[i] = rand() % 10 + 1;
+  }
+  bubbleSort(arr, sizeof(arr) / sizeof(int));
+  for (int i = 0; i < 100; ++i) {
+    printf("%2d ", arr[i]);
+    if (i % 10 == 9) putchar('\n');
+  }
+  putchar('\n');
+  return 0;
+}
+ */
+/* #define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+#include "../inc/diceroll.h"
+
+int main() {
+  int sets;
+  int dice;
+  int sides;
+
+  printf("Enter the number of sets; enter q to stop: ");
+
+  while (scanf("%d", &sets) == 1) {
+    printf("How many sides and how many dice? ");
+    scanf("%d %d", &dice, &sides);
+    printf("Here are %d sets of %d %d-sides throws.\n", sets, dice, sides);
+    for (int i = 1; i <= sets; ++i) {
+      printf("%  d", roll_n_dice(dice, sides));
+      if (i % 15 == 0) putchar('\n');
+    }
+    putchar('\n');
+    printf("How many sets? Enter q to stop: ");
+  }
+  return 0;
+} */
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <windows.h>
+
+int main() {
+  srand((unsigned int)time(NULL));
+  while (1) {
+    for (int i = 0; i < 10; ++i) {
+      printf(" %2d", rand() % 100 + 1);
+    }
+    printf("\n");
+    system("pause");
+  }
   return 0;
 }

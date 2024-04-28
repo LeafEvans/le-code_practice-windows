@@ -1,42 +1,42 @@
 {
-    tool_target_test_2024_2_21_windows_x64_sh = {
-        program = "g++",
-        toolchain_info = {
-            plat = "windows",
-            cachekey = "gcc_arch_x64_plat_windows",
-            arch = "x64",
-            name = "gcc"
-        },
-        toolname = "gxx"
-    },
     tool_target_test_2024_2_21_windows_x64_cxx = {
-        toolname = "gcc",
+        program = "clang",
+        toolname = "clang",
+        toolchain_info = {
+            cachekey = "clang_arch_x64_plat_windows",
+            plat = "windows",
+            name = "clang",
+            arch = "x64"
+        }
+    },
+    tool_target_test_2024_2_21_windows_x64_sh = {
+        program = "clang++",
+        toolname = "clangxx",
         toolchain_info = {
             plat = "windows",
-            cachekey = "gcc_arch_x64_plat_windows",
-            arch = "x64",
-            name = "gcc"
-        },
-        program = "gcc"
+            cachekey = "clang_arch_x64_plat_windows",
+            name = "clang",
+            arch = "x64"
+        }
     },
     tool_target_test_2024_2_21_windows_x64_cc = {
-        toolname = "gcc",
+        program = "clang",
+        toolname = "clang",
         toolchain_info = {
+            cachekey = "clang_arch_x64_plat_windows",
             plat = "windows",
-            cachekey = "gcc_arch_x64_plat_windows",
-            arch = "x64",
-            name = "gcc"
-        },
-        program = "gcc"
+            name = "clang",
+            arch = "x64"
+        }
     },
     tool_target_test_2024_2_21_windows_x64_ld = {
-        program = "g++",
+        program = "clang++",
+        toolname = "clangxx",
         toolchain_info = {
             plat = "windows",
-            cachekey = "gcc_arch_x64_plat_windows",
-            arch = "x64",
-            name = "gcc"
-        },
-        toolname = "gxx"
+            cachekey = "clang_arch_x64_plat_windows",
+            name = "clang",
+            arch = "x64"
+        }
     }
 }

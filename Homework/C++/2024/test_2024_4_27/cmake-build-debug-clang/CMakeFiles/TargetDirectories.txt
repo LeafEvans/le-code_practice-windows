@@ -1,0 +1,3 @@
+C:/Code/CodePractice/Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/test_2024_4_27.dir
+C:/Code/CodePractice/Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/edit_cache.dir
+C:/Code/CodePractice/Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/rebuild_cache.dir

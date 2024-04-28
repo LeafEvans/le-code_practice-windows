@@ -1963,7 +1963,7 @@ int main() {
     cout << err.what() << endl;
   }
 } */
-#include <cstring>
+/* #include <cstring>
 #include <exception>
 
 class FHeaderErr : public std::exception {
@@ -1992,4 +1992,949 @@ bool func(const char *str) {
   }
 
   return true;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+template <class T>
+class Person {
+ public:
+  Person(T id, T age) : m_id(id), m_age(age) {}
+  void show() { cout << "ID: " << m_id << " Age: " << m_age << endl; }
+  T m_id;
+  T m_age;
+};
+
+void test() {
+  // 函数模板在调用的时候，可以自动推导类型
+  // 类模板必须显式指定类型
+  Person<int> person(10, 20);
+  person.show();
+}
+
+int main() {
+  test();
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+template <class T>
+void printArray(T *arr, int len) {
+  for (int i = 0; i < len; ++i) {
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+}
+
+template <class T>
+void bubbleSort(T *arr, int len) {
+  for (int i = 0; i < len - 1; ++i) {
+    for (int j = 0; j < len - 1 - i; ++j) {
+      if (arr[j] < arr[j + 1]) {
+        T temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+}
+
+int main() {
+  int arr[] = {2, 6, 1, 8, 9, 2};
+  int len = sizeof(arr) / sizeof(int);
+  printArray(arr, len);
+  bubbleSort(arr, len);
+  printArray(arr, len);
+
+  char ch_arr[] = {'a', 'c', 'b', 'p', 't'};
+  len = sizeof(ch_arr) / sizeof(char);
+  printArray(ch_arr, len);
+  bubbleSort(ch_arr, len);
+  printArray(ch_arr, len);
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+template <class T>
+class Person {
+ public:
+  Person() : m_age(0) {}
+  T m_age;
+};
+
+// 原因：类去定义对象
+// 这个对象需要编译分配内存
+// 所有需要指定内存
+class SubPerson : public Person<int> {};
+
+int main() {} */
+/* #include <iostream>
+
+using namespace std;
+
+template <class T>
+class Animal {
+ public:
+  void cry() { cout << age << "岁动物在叫！" << endl; }
+  T age;
+};
+
+template <class T>
+class Cat : public Animal<T> {};
+
+int main() {
+  Cat<int> cat;
+  return 0;
+} */
+/* #include <iostream>
+using namespace std;
+
+template <class T>
+class Person {
+ public:
+  friend ostream& operator<<(ostream& os, Person<T>& person);
+  Person(T age, T id);
+  void show();
+
+ private:
+  T _age;
+  T _id;
+}; */
+/* #include <iostream>
+using namespace std;
+
+#define Max(x, y) (x > y ? x : y)
+
+int main() {
+  int nx = 10, ny = 20;
+  cout << Max(nx, ny) << endl;
+
+  double dx = 12.3, dy = 45.6;
+  cout << Max(dx, dy) << endl;
+
+  string sx = "world", sy = "hello";
+  cout << Max(sx, sy) << endl;
+
+  char cx[256] = "hello", cy[256] = "world";
+  cout << Max(cx, cy) << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+using namespace std;
+
+#define MAX(T) \
+  T max_##T(T x, T y) { return x > y ? x : y; }
+
+MAX(int)
+
+MAX(double)
+
+MAX(string)
+
+int main() {
+  int nx = 20, ny = 10;
+  cout << max_int(nx, ny) << endl;
+
+  double da = 1.14, db = 200.2;
+  cout << max_double(da, db) << endl;
+
+  string s1 = "dad", s2 = "mom";
+  cout << max_string(s1, s2) << endl;
+
+  return 0;
+} */
+/* #include <cfloat>
+#include <iostream>
+
+#define DEFAULT_LENGTH 10
+
+using namespace std;
+
+class ActScoring {
+ public:
+  // 构造函数
+  ActScoring(const int length = DEFAULT_LENGTH)
+      : _scores(new double[length]), _size(DEFAULT_LENGTH) {}
+
+  // 析构函数
+  ~ActScoring() {
+    // 指针没被置为空指针
+    if (_scores) {
+      delete[] _scores;
+      _scores = nullptr;
+    }
+  }
+
+  // 设置评委数量
+  void setSize(const int length) {
+    delete[] _scores;
+    _scores = new double[length];
+    _size = length;
+  }
+
+  // 写入成绩
+  void readScores() {
+    for (int i = 0; i < _size; ++i) {
+      cin >> _scores[i];
+    }
+  }
+
+  // 活得平均成绩
+  double getAverageScore() const {
+    double max = DBL_MIN;
+    double min = DBL_MAX;
+    double total = .0;
+    double average = .0;
+
+    for (int i = 0; i < _size; ++i) {
+      if (_scores[i] > max) {
+        max = _scores[i];
+      }
+      if (_scores[i] < min) {
+        min = _scores[i];
+      }
+      total += _scores[i];
+    }
+    average = (total - min - max) / (_size - 2);
+    return average;
+  }
+
+ private:
+  double *_scores;
+  int _size;
+};
+
+int main() {
+  ActScoring art_pieces[5];  // 五个作品
+
+  double average_scores[5];  // 平均分数数组
+
+  for (int i = 0; i < 5; ++i) {
+    // 设置五个作品的评委数量
+    art_pieces[i].setSize(5);
+  }
+
+  for (int i = 0; i < 5; ++i) {
+    cout << "输入第 " << i + 1 << " 个作品每个评委的分数：\n";
+    art_pieces[i].readScores();
+    average_scores[i] = art_pieces[i].getAverageScore();
+  }
+
+  cout << "平均分分别为：\n";
+  for (const double average_score : average_scores) {
+    cout << average_score << " ";
+  }
+
+  cout << '\n';
+
+  return 0;
+} */
+/* #include <cfloat>
+#include <iostream>
+
+#define DEFAULT_LENGTH 10
+
+using namespace std;
+
+class ActScoring {
+ public:
+  // 构造函数
+  ActScoring(const int length = DEFAULT_LENGTH)
+      : _scores(new double[length]), _size(DEFAULT_LENGTH) {}
+
+  // 析构函数
+  ~ActScoring() {
+    // 指针没被置为空指针
+    if (_scores) {
+      delete[] _scores;
+      _scores = nullptr;
+    }
+  }
+
+  // 设置评委数量
+  void setSize(const int length) {
+    delete[] _scores;
+    _scores = new double[length];
+    _size = length;
+  }
+
+  // 写入成绩
+  void readScores() {
+    for (int i = 0; i < _size; ++i) {
+      cin >> _scores[i];
+    }
+  }
+
+  // 活得平均成绩
+  double getAverageScore() const {
+    double max = DBL_MIN;
+    double min = DBL_MAX;
+    double total = .0;
+    double average = .0;
+
+    for (int i = 0; i < _size; ++i) {
+      if (_scores[i] > max) {
+        max = _scores[i];
+      }
+      if (_scores[i] < min) {
+        min = _scores[i];
+      }
+      total += _scores[i];
+    }
+    average = (total - min - max) / (_size - 2);
+    return average;
+  }
+
+ private:
+  double *_scores;
+  int _size;
+};
+
+int main() {
+  ActScoring art_pieces[5];  // 五个作品
+
+  double average_scores[5];  // 平均分数数组
+
+  double max_score = DBL_MIN;
+
+  int max_score_index = -1;
+
+  for (int i = 0; i < 5; ++i) {
+    // 设置五个作品的评委数量
+    art_pieces[i].setSize(5);
+  }
+
+  for (int i = 0; i < 5; ++i) {
+    cout << "输入第 " << i + 1 << " 个作品每个评委的分数：\n";
+    art_pieces[i].readScores();
+    average_scores[i] = art_pieces[i].getAverageScore();
+    if (average_scores[i] > max_score) {
+      max_score = average_scores[i];
+      max_score_index = i;
+    }
+  }
+
+  cout << "平均分分别为：\n";
+  for (const double average_score : average_scores) {
+    cout << average_score << " ";
+  }
+  cout << '\n';
+
+  cout << "分数最高的作品编号为：" << max_score_index + 1 << '\n';
+
+  return 0;
+} */
+/* #include <windows.h>
+
+#include <iostream>
+
+using namespace std;
+
+// 默认大小为 10
+#define DEFAULT_CAPACITY 10
+
+// 书籍类
+class Book {
+ public:
+  // 构造函数
+  // 初始化成员
+  Book(string name, string author, string publishing_company, string isbn,
+       string form)
+      : _name(name),
+        _author(author),
+        _publishing_company(publishing_company),
+        _form(form) {}
+
+  // 默认构造函数
+  Book() {}
+
+  // 获得各个参数
+  string getName() const { return _name; }
+  string getAuthor() const { return _author; }
+  string getPublishingCompany() const { return _publishing_company; }
+  string getISBN() const { return _isbn; }
+  string getForm() const { return _form; }
+
+  // 设置各个参数
+  void setName(string name) { _name = name; }
+  void setAuthor(string author) { _author = author; }
+  void setPublishingCompany(string publishing_company) {
+    _publishing_company = publishing_company;
+  }
+  void setISBN(string isbn) { _isbn = isbn; }
+  void setForm(string form) { _form = form; }
+
+ private:
+  string _name;                // 书名
+  string _author;              // 作者
+  string _publishing_company;  // 出版社
+  string _isbn;                // ISBN
+  string _form;                // 类别
+};
+
+class Librarianship {
+ public:
+  // 默认构造一个大小固定的图书管理系统
+  Librarianship(const int capacity = DEFAULT_CAPACITY)
+      : _num(0), _capacity(capacity), _books(new Book[capacity]) {}
+
+  void menu() {
+    int option;
+
+    do {
+      int add_num;
+      int search_option;
+      string name, author, isbn, publishing_company, form;
+      showMenu();
+      cout << "输入你的选择：";
+      cin >> option;
+      system("cls");
+      switch (option) {
+        case 1:
+          cout << "输入添加书籍的数量：";
+          cin >> add_num;
+          addBooks(add_num);
+          break;
+        case 2:
+          cout << "1. 书名\n";
+          cout << "2. 作者\n";
+          cout << "3. 出版社\n";
+          cout << "4. ISBN\n";
+          cout << "输入要查询方式：\n";
+          cin >> search_option;
+          system("cls");
+          switch (search_option) {
+            case 1:
+              cout << "输入书名：\n";
+              cin >> name;
+              searchByName(name);
+              break;
+            case 2:
+              cout << "输入作者：\n";
+              cin >> author;
+              searchByAuthor(author);
+              break;
+            case 3:
+              cout << "输入出版社：\n";
+              cin >> publishing_company;
+              searchByPublishingCompany(publishing_company);
+              break;
+            case 4:
+              cout << "输入 ISBN：\n";
+              cin >> isbn;
+              searchByPublishingCompany(publishing_company);
+              break;
+          }
+          break;
+        case 3:
+          cout << "输入类别：\n";
+          cin >> form;
+          classifyByForm(form);
+          break;
+        case 4:
+          cout << "输入指定的 ISBN：\n";
+          cin >> isbn;
+          eraseByISBN(isbn);
+          break;
+        case 5:
+          break;
+        default:
+          cout << "输入错误，请重新输入。\n";
+          break;
+      }
+      system("pause");
+      system("cls");
+    } while (option != 5);
+  }
+
+ private:
+  int _num;       // 书的数量
+  int _capacity;  // 管理系统的大小
+  Book *_books;   // 存放书的数组
+
+  void interact(int option) {
+
+  }
+
+  // 展示菜单
+  void showMenu() {
+    cout << "***=== 图书管理系统 ===***\n";
+    cout << "       1. 添加书籍\n";
+    cout << "       2. 查询书籍\n";
+    cout << "       3. 分类书籍\n";
+    cout << "       4. 删除书籍\n";
+    cout << "       5. 退出系统\n";
+  }
+
+  // 添加书籍
+  void addBooks(const int add_num) {
+    // 添加书籍的数量大于剩余的数量，进行扩容操作
+    if (add_num > _capacity - _num) {
+      expandCapacity();
+    }
+    // 从最新的地方增加
+    for (int i = _num; i < _num + add_num; ++i) {
+      // 输入相应的信息
+      cout << "输入第 " << i + 1 << " 本书的信息：";
+      importBookInf(_books[i]);
+      system("cls");
+    }
+    // 更新书的数量
+    _num += add_num;
+  }
+
+  // 以书名查找
+  void searchByName(const string name) const {
+    cout << "以书名查找。\n";
+    bool flag = false;  // 是否找到
+    // 查找书籍
+    for (int i = 0; i < _num; ++i) {
+      if (_books[i].getName() == name) {
+        // 输出书的信息
+        exportBookInf(_books[i]);
+        flag = true;  // 找到了
+      }
+    }
+
+    if (!flag) {
+      cout << "抱歉，没有找到指定书籍。\n";
+    }
+  }
+
+  // 以作者查找
+  void searchByAuthor(const string author) const {
+    cout << "以作者查找。\n";
+    bool flag = false;  // 是否找到
+    // 查找书籍
+    for (int i = 0; i < _num; ++i) {
+      if (_books[i].getAuthor() == author) {
+        // 输出书的信息
+        exportBookInf(_books[i]);
+        flag = true;  // 找到了
+      }
+    }
+  }
+
+  // 以出版社查找
+  void searchByPublishingCompany(const string publishing_company) const {
+    cout << "以出版社查找。\n";
+    bool flag = false;  // 是否找到
+    // 查找书籍
+    for (int i = 0; i < _num; ++i) {
+      if (_books[i].getPublishingCompany() == publishing_company) {
+        // 输出书的信息
+        exportBookInf(_books[i]);
+        flag = true;  // 找到了
+      }
+    }
+
+    if (!flag) {
+      cout << "抱歉，没有找到指定书籍。\n";
+    }
+  }
+
+  // 以 ISBN 查找
+  void searchByISBN(const string isbn) const {
+    cout << "以 ISBN 查找。\n";
+    bool flag = false;  // 是否找到
+    // 查找书籍
+    for (int i = 0; i < _num; ++i) {
+      if (_books[i].getISBN() == isbn) {
+        // 输出书的信息
+        exportBookInf(_books[i]);
+        flag = true;  // 找到了
+      }
+    }
+
+    if (!flag) {
+      cout << "抱歉，没有找到指定书籍。\n";
+    }
+  }
+
+  // 分类别输出
+  void classifyByForm(const string form) {
+    bool flag = false;
+    for (int i = 0; i < _num; ++i) {
+      if (_books[i].getForm() == form) {
+        exportBookInf(_books[i]);
+        flag = true;
+      }
+    }
+
+    if (!flag) {
+      cout << "抱歉，没有该类别的书籍。\n";
+    }
+  }
+
+  // 删除书籍
+  void eraseByISBN(const string isbn) {
+    bool flag = false;
+    // 读指针
+    int write_index = 0;
+    // 写指针
+    int read_index = 0;
+
+    while (read_index < _num) {
+      // 如果读到了指定的数据
+      if (_books[read_index].getISBN() == isbn) {
+        flag = true;
+        // 读指针指向下一个元素
+        ++read_index;
+        // 数量减少
+        --_num;
+        // 跳过写入这个元素
+        continue;
+      }
+
+      // 将数据写入
+      _books[write_index] = _books[read_index];
+      ++write_index;
+      ++read_index;
+    }
+
+    if (!flag) {
+      cout << "抱歉，没有找到指定书籍。\n";
+    }
+  }
+
+  // 扩容函数，为私有
+  // 扩大为原来的两倍
+  void expandCapacity() {
+    // 新的存放地点
+    Book *new_books = new Book[_capacity * 2];
+    // 拷贝过去
+    for (int i = 0; i < _capacity; ++i) {
+      new_books[i] = _books[i];
+    }
+    // 删除原来的
+    delete[] _books;
+    // 指向新的
+    _books = new_books;
+    // 置为空指针
+    new_books = nullptr;
+    // 大小增大
+    _capacity *= 2;
+  }
+
+  // 输入书的信息的函数
+  void importBookInf(Book &book) {
+    string name, author, publishing_company, isbn, form;
+    cout << "\n书名：";
+    cin >> name;
+    cout << "作者：";
+    cin >> author;
+    cout << "出版社：";
+    cin >> publishing_company;
+    cout << "ISBN：";
+    cin >> isbn;
+    cout << "类别：";
+    cin >> form;
+    book.setName(name);
+    book.setAuthor(author);
+    book.setPublishingCompany(publishing_company);
+    book.setISBN(isbn);
+    book.setForm(form);
+  }
+
+  // 输出书籍信息
+  void exportBookInf(const Book &book) const {
+    cout << "书名：" << book.getName() << '\n';
+    cout << "作者：" << book.getAuthor() << '\n';
+    cout << "出版社：" << book.getPublishingCompany() << '\n';
+    cout << "ISBN：" << book.getISBN() << '\n';
+    cout << "类别：" << book.getForm() << '\n';
+    cout << '\n';
+  }
+};
+
+int main() {
+  Librarianship librarianship;
+  librarianship.menu();
+  return 0;
+}
+ */
+/* #include <iostream>
+
+using namespace std;
+
+// 每个学生的成绩
+class Score {
+ public:
+  Score(const string name, const double score) : _name(name), _score(score) {}
+
+  Score() {}
+
+  string getName() const { return _name; }
+  double getScore() const { return _score; }
+
+  void setName(string name) { _name = name; }
+  void setScore(double score) { _score = score; }
+
+ private:
+  string _name;   // 学生名字
+  double _score;  // 学生成绩
+};
+
+class Management {
+ public:
+  Management(int num) : _scores(new Score[num]), _num(num) {}
+
+  Management() {}
+
+  void setNum(int num) {
+    _scores = new Score[num];
+    _num = num;
+  }
+
+  void importInf() {
+    string name;
+    double score;
+    double total_score = .0;
+    for (int i = 0; i < _num; ++i) {
+      cout << "输入第 " << i + 1 << " 个同学的试卷信息：\n";
+      cout << "姓名：";
+      cin >> name;
+      cout << "成绩：";
+      cin >> score;
+      _scores[i].setName(name);
+      _scores[i].setScore(score);
+      total_score += score;
+    }
+    _average_score = total_score / _num;  // 计算平均成绩
+  }
+
+  void exportRankInf() {
+    int excellent_num = 0;
+    int good_num = 0;
+    int medium_num = 0;
+    int pass_num = 0;
+    int fail_num = 0;
+
+    analyzeScore(excellent_num, medium_num, good_num, pass_num, fail_num);
+
+    cout << "优秀人数为：" << excellent_num << "；比例为：" << _excellent_rate
+         << '\n';
+    cout << "良好人数为：" << good_num << "；比例为：" << _good_rate << '\n';
+    cout << "中人数为：" << medium_num << "；比例为：" << _medium_rate << '\n';
+    cout << "合格人数为：" << pass_num << "；比例为：" << _pass_rate << '\n';
+    cout << "不合格人数为：" << fail_num << "；比例为：" << _fail_rate << '\n';
+  }
+
+  void analyzeScore(int &excellent_num, int &medium_num, int &good_num,
+                    int &pass_num, int &fail_num) {
+    for (int i = 0; i < _num; ++i) {
+      if (_scores[i].getScore() >= _average_score + 10) {
+        ++excellent_num;
+      } else if (_scores[i].getScore() >= _average_score &&
+                 _scores[i].getScore() < _average_score + 10) {
+        ++good_num;
+      } else if (_scores[i].getScore() >= _average_score - 10 &&
+                 _scores[i].getScore() < _average_score) {
+        ++medium_num;
+      } else if (_scores[i].getScore() >= _average_score - 20 &&
+                 _scores[i].getScore() < _average_score - 10) {
+        ++pass_num;
+      } else {
+        ++fail_num;
+      }
+    }
+
+    _excellent_rate = (double)excellent_num / _num;
+    _good_rate = (double)good_num / _num;
+    _medium_rate = (double)medium_num / _num;
+    _pass_rate = (double)pass_num / _num;
+    _fail_rate = (double)fail_num / _num;
+  }
+
+  void analyzeProblem() {
+    if (_excellent_rate >= 0.5) {
+      _problem = "优";
+    } else if (_good_rate >= 0.4 && _good_rate <= 0.6) {
+      _problem = "适中";
+    } else if (_pass_rate >= 0.4 && _pass_rate <= 0.6) {
+      _problem = "较难";
+    } else if (_fail_rate >= 0.3) {
+      _problem = "难";
+    }
+  }
+
+  void exportProblemInf() { cout << "试卷难度为：" << _problem << '\n'; }
+  string getProblem() const { return _problem; }
+  double getAverageScore() const { return _average_score; }
+  int getNum() const { return _num; }
+  double getExcellentRate() const { return _excellent_rate; }
+  double getGoodRate() const { return _good_rate; }
+  double getMediumRate() const { return _medium_rate; }
+  double getPassRate() const { return _pass_rate; }
+  double getFailRate() const { return _fail_rate; }
+
+ private:
+  string _problem;        // 试卷难度
+  double _average_score;  // 平均成绩
+  int _num;               // 学生人数
+  Score *_scores;         // 成绩数组
+  // 各个比例
+  double _excellent_rate;
+  double _good_rate;
+  double _medium_rate;
+  double _pass_rate;
+  double _fail_rate;
+};
+
+class AnalysisReport {
+ public:
+  static void analyzeProblemTrend(Management *managements, int num) {
+    bool smooth_flag = true;
+    bool rising_flag = true;
+    bool falling_flag = true;
+    int *problems = new int[num];
+    for (int i = 0; i < num; ++i) {
+      if (managements[i].getProblem() == "难") {
+        problems[i] = 4;
+      } else if (managements[i].getProblem() == "较难") {
+        problems[i] = 3;
+      } else if (managements[i].getProblem() == "适中") {
+        problems[i] = 2;
+      } else if (managements[i].getProblem() == "易") {
+        problems[i] = 1;
+      }
+    }
+    for (int i = 1; i < num; ++i) {
+      if (problems[i] > problems[i - 1]) {
+        smooth_flag = false;
+        falling_flag = false;
+      } else if (problems[i] < problems[i - 1]) {
+        smooth_flag = false;
+        rising_flag = false;
+      }
+    }
+
+    cout << "难度变化状态为：";
+    if (smooth_flag) {
+      cout << "相当\n";
+    } else if (rising_flag) {
+      cout << "上升\n";
+    } else if (falling_flag) {
+      cout << "下降\n";
+    }
+  }
+
+  static void analyzeAverageScoreTrend(Management *managements, int num) {
+    bool smooth_flag = true;
+    bool rising_flag = true;
+    bool falling_flag = true;
+    int *problem = new int[num];
+    for (int i = 1; i < num; ++i) {
+      if (managements[i].getAverageScore() >
+          managements[i - 1].getAverageScore()) {
+        smooth_flag = false;
+        falling_flag = false;
+      } else if (managements[i].getAverageScore() <
+                 managements[i - 1].getAverageScore()) {
+        smooth_flag = false;
+        rising_flag = false;
+      }
+    }
+
+    cout << "平均成绩变化状态为：";
+    if (smooth_flag) {
+      cout << "相当\n";
+    } else if (rising_flag) {
+      cout << "上升\n";
+    } else if (falling_flag) {
+      cout << "下降\n";
+    }
+  }
+
+  static void analyzeExcellentRate(Management *managements, int num) {
+    bool smooth_flag = true;
+    bool rising_flag = true;
+    bool falling_flag = true;
+    int *problem = new int[num];
+    for (int i = 1; i < num; ++i) {
+      if (managements[i].getExcellentRate() >
+          managements[i - 1].getExcellentRate()) {
+        smooth_flag = false;
+        falling_flag = false;
+      } else if (managements[i].getExcellentRate() <
+                 managements[i - 1].getExcellentRate()) {
+        smooth_flag = false;
+        rising_flag = false;
+      }
+    }
+
+    cout << "优档变化状态为：";
+    if (smooth_flag) {
+      cout << "相当\n";
+    } else if (rising_flag) {
+      cout << "上升\n";
+    } else if (falling_flag) {
+      cout << "下降\n";
+    }
+  }
+
+  static void analyzeFailRate(Management *managements, int num) {
+    bool smooth_flag = true;
+    bool rising_flag = true;
+    bool falling_flag = true;
+    int *problem = new int[num];
+    for (int i = 1; i < num; ++i) {
+      if (managements[i].getFailRate() > managements[i - 1].getFailRate()) {
+        smooth_flag = false;
+        falling_flag = false;
+      } else if (managements[i].getFailRate() <
+                 managements[i - 1].getFailRate()) {
+        smooth_flag = false;
+        rising_flag = false;
+      }
+    }
+
+    cout << "不合格档变化状态为：";
+    if (smooth_flag) {
+      cout << "相当\n";
+    } else if (rising_flag) {
+      cout << "上升\n";
+    } else if (falling_flag) {
+      cout << "下降\n";
+    }
+  }
+};
+
+int main() {
+  Management managements[4];
+  for (int i = 0; i < 4; ++i) {
+    cout << "输入第 " << i + 1 << " 场考试的信息：\n";
+    managements[i].importInf();
+  }
+  for (int i = 0; i < 4; ++i) {
+    cout << "输出第 " << i + 1 << " 场考试的信息：\n";
+
+    managements[i].exportRankInf();
+    managements[i].exportProblemInf();
+  }
+  AnalysisReport::analyzeProblemTrend(managements, 4);
+  AnalysisReport::analyzeAverageScoreTrend(managements, 4);
+  AnalysisReport::analyzeExcellentRate(managements, 4);
+  AnalysisReport::analyzeFailRate(managements, 4);
+  return 0;
+} */
+/* #include <iostream>
+
+int main() {
+  int a = 0;
+  std::cout << "Hello World!\n";
+  return 0;
+} */
+
+#include <iostream>
+
+int main() {
+  int a = 0;
+  return 0;
 }

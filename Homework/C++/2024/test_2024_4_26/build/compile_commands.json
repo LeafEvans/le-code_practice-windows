@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Code/CodePractice/Homework/C++/2024/test_2024_4_26/build",
+  "command": "C:\\msys64\\clang32\\bin\\clang++.exe   -g -o CMakeFiles\\test_2024_4_26.dir\\main.cpp.obj -c C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_4_26\\main.cpp",
+  "file": "C:/Code/CodePractice/Homework/C++/2024/test_2024_4_26/main.cpp",
+  "output": "CMakeFiles/test_2024_4_26.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Code/CodePractice/Homework/C++/2024/test_2024_4_26/build",
+  "command": "C:\\msys64\\clang32\\bin\\clang++.exe   -g -o CMakeFiles\\test_2024_4_26.dir\\test.cpp.obj -c C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_4_26\\test.cpp",
+  "file": "C:/Code/CodePractice/Homework/C++/2024/test_2024_4_26/test.cpp",
+  "output": "CMakeFiles/test_2024_4_26.dir/test.cpp.obj"
+}
+]

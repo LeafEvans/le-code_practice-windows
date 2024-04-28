@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a30e04fe-c8ba-49fe-b2a4-98004b5c1a80" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_27/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_27/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_27/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_27/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_27/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_27/.idea/test_2024_4_27.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_27/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_2024_4_23.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../PythonProject/test_2024_4_23/.idea/test_2024_4_23.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../C++Project/test_2024_2_29/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C++Project/test_2024_2_29/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/FileContentIndex/4c66011e-92b8-4142-973a-0d93996facac.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/ipch/AutoPCH/e45c2828781a79b9/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/ipch/AutoPCH/e45c2828781a79b9/MAIN.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/test_2024_1_29.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/test_2024_1_29.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/x64/Debug/test_2024_1_29.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/x64/Debug/test_2024_1_29.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/x64/Debug/test_2024_1_29.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/x64/Debug/test_2024_1_29.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/.xmake/vscode-build.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/.xmake/vscode-build.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/.xmake/windows/x64/cache/config" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/.xmake/windows/x64/cache/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/.xmake/windows/x64/cache/detect" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/.xmake/windows/x64/cache/detect" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/.xmake/windows/x64/cache/history" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/.xmake/windows/x64/cache/history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/.xmake/windows/x64/cache/toolchain" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/.xmake/windows/x64/cache/toolchain" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/.xmake/windows/x64/xmake.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/.xmake/windows/x64/xmake.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/build/.deps/test_2024_2_21/windows/x64/debug/src/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/build/.deps/test_2024_2_21/windows/x64/debug/src/main.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/build/.deps/test_2024_2_21/windows/x64/debug/test_2024_2_21.exe.d" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/build/.deps/test_2024_2_21/windows/x64/debug/test_2024_2_21.exe.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/build/windows/x64/debug/test_2024_2_21.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/build/windows/x64/debug/test_2024_2_21.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_2_21/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/.vs/test_2024_4_17/FileContentIndex/63787c97-4c62-4ab0-8912-f4e1fd701dc1.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/.vs/test_2024_4_17/FileContentIndex/80461fd6-2433-4f2a-89bb-a31f7de27c7a.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/ipch/AutoPCH/c5a824dfef7e3f91/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/ipch/AutoPCH/c5a824dfef7e3f91/MAIN.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/test_2024_4_17/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/test_2024_4_17/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/test_2024_4_17.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/test_2024_4_17.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/vc143.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/vc143.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/x64/Debug/test_2024_4_17.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/x64/Debug/test_2024_4_17.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/x64/Debug/test_2024_4_17.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_17/x64/Debug/test_2024_4_17.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_19.layout" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_19/Untitled2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_19/gmon.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_19/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_19/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_19/test_2024_4_19.dev" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_19/test_2024_4_19.dev" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/2024/test_2024_4_19/test_2024_4_19.layout" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/2024/test_2024_4_19/test_2024_4_19.layout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/.xmake/vscode-build.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/.xmake/vscode-build.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/config" beforeDir="false" afterPath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/detect" beforeDir="false" afterPath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/detect" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/history" beforeDir="false" afterPath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/toolchain" beforeDir="false" afterPath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/.xmake/windows/x64/cache/toolchain" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/build/.deps/test_2024_2_25/windows/x64/debug/test_2024_2_25.exe.d" beforeDir="false" afterPath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/build/.deps/test_2024_2_25/windows/x64/debug/test_2024_2_25.exe.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/build/.objs/test_2024_2_25/windows/x64/debug/src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/build/.objs/test_2024_2_25/windows/x64/debug/src/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/build/windows/x64/debug/compile.test_2024_2_25.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/build/windows/x64/debug/compile.test_2024_2_25.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../C/2024/test_2024_2_25/src/main.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Main.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2fUcMuzoouBoAB7H54tsxi9RkIO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Code/CodePractice/Homework/Java/test_2024_4_23/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.Main.executor&quot;: &quot;Debug&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="test_2024_4_23" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="a30e04fe-c8ba-49fe-b2a4-98004b5c1a80" name="更改" comment="" />
+      <created>1713859057380</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713859057380</updated>
+      <workItem from="1713859059141" duration="282000" />
+      <workItem from="1713866912149" duration="213000" />
+      <workItem from="1713880596957" duration="404000" />
+      <workItem from="1713881024889" duration="36000" />
+      <workItem from="1713881093765" duration="129000" />
+      <workItem from="1713881499103" duration="54000" />
+      <workItem from="1713881588466" duration="79000" />
+      <workItem from="1713928327480" duration="608000" />
+      <workItem from="1713929325170" duration="357000" />
+      <workItem from="1714030468392" duration="157000" />
+      <workItem from="1714198635483" duration="85000" />
+      <workItem from="1714202989396" duration="52000" />
+      <workItem from="1714206942057" duration="98000" />
+      <workItem from="1714207112143" duration="280000" />
+      <workItem from="1714210375005" duration="50000" />
+      <workItem from="1714212388717" duration="94000" />
+      <workItem from="1714221208481" duration="95000" />
+      <workItem from="1714223931082" duration="23000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
