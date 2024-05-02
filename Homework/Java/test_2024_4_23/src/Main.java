@@ -3,10 +3,9 @@ public class Main {
         System.out.println("Hello World!");
         int[] Array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int[] Array2 = new int[10];
-        for (int i : Array) {
-            if (i % 2 == 0) {
-                System.out.println(i);
-            }
+        for (int i = 0; i < 10; i++) {
+            Array2[i] = i;
+            System.out.printf("%d ", Array2[i]);
         }
     }
 }

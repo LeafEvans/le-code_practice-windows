@@ -5,72 +5,357 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a35e609a-d774-4165-8f99-cb56ca063e47" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/test_2024_4_27.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Homework/Java/test_2024_4_23/test_2024_4_23.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../PythonProject/test_2024_4_23/.idea/test_2024_4_23.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../C++Project/test_2024_2_29/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../C++Project/test_2024_2_29/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/FileContentIndex/4c66011e-92b8-4142-973a-0d93996facac.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/ipch/AutoPCH/e45c2828781a79b9/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/.vs/test_2024_1_29/v17/ipch/AutoPCH/e45c2828781a79b9/MAIN.ipch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/test_2024_1_29.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/test_2024_1_29.tlog/test_2024_1_29.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/vc143.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/test_2024_1_29/x64/Debug/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/x64/Debug/test_2024_1_29.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/x64/Debug/test_2024_1_29.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/x64/Debug/test_2024_1_29.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CProject/test_2024_1_29/x64/Debug/test_2024_1_29.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.clang-format" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/.xmake/vscode-build.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/.xmake/vscode-build.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/.xmake/windows/x64/cache/config" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/.xmake/windows/x64/cache/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/.xmake/windows/x64/cache/detect" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/.xmake/windows/x64/cache/detect" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/.xmake/windows/x64/cache/history" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/.xmake/windows/x64/cache/history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/.xmake/windows/x64/cache/toolchain" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/.xmake/windows/x64/cache/toolchain" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/.xmake/windows/x64/xmake.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/.xmake/windows/x64/xmake.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/build/.deps/test_2024_2_21/windows/x64/debug/src/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/build/.deps/test_2024_2_21/windows/x64/debug/src/main.cpp.obj.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/build/.deps/test_2024_2_21/windows/x64/debug/test_2024_2_21.exe.d" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/build/.deps/test_2024_2_21/windows/x64/debug/test_2024_2_21.exe.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/build/.objs/test_2024_2_21/windows/x64/debug/src/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/build/.objs/test_2024_2_21/windows/x64/debug/src/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/build/windows/x64/debug/test_2024_2_21.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/build/windows/x64/debug/test_2024_2_21.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_2_21/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/.vs/test_2024_4_17/FileContentIndex/63787c97-4c62-4ab0-8912-f4e1fd701dc1.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/.vs/test_2024_4_17/FileContentIndex/80461fd6-2433-4f2a-89bb-a31f7de27c7a.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/DocumentLayout.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/ipch/AutoPCH/c5a824dfef7e3f91/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/.vs/test_2024_4_17/v17/ipch/AutoPCH/c5a824dfef7e3f91/MAIN.ipch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/test_2024_4_17/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/test_2024_4_17/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/main.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/test_2024_4_17.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/test_2024_4_17.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/vc143.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/vc143.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/test_2024_4_17/x64/Debug/vc143.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/x64/Debug/test_2024_4_17.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/x64/Debug/test_2024_4_17.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/x64/Debug/test_2024_4_17.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_17/x64/Debug/test_2024_4_17.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/Untitled2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/gmon.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/Makefile.win" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/Makefile.win" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/test_2024_4_19.dev" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/test_2024_4_19.dev" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/test_2024_4_19.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/test_2024_4_19.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/test_2024_4_19.layout" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_19/test_2024_4_19.layout" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/.xmake/vscode-build.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/.xmake/vscode-build.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/.xmake/windows/x64/cache/config" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/.xmake/windows/x64/cache/config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/.xmake/windows/x64/cache/detect" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/.xmake/windows/x64/cache/detect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/.xmake/windows/x64/cache/history" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/.xmake/windows/x64/cache/history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/.xmake/windows/x64/cache/toolchain" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/.xmake/windows/x64/cache/toolchain" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/build/.deps/test_2024_2_25/windows/x64/debug/test_2024_2_25.exe.d" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/build/.deps/test_2024_2_25/windows/x64/debug/test_2024_2_25.exe.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/build/.objs/test_2024_2_25/windows/x64/debug/src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/build/.objs/test_2024_2_25/windows/x64/debug/src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/build/windows/x64/debug/compile.test_2024_2_25.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/build/windows/x64/debug/compile.test_2024_2_25.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/build/windows/x64/debug/test_2024_2_25.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C/2024/test_2024_2_25/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/.cache/clangd/index/main.cpp.B4A07468F4C5C93D.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/.cache/clangd/index/main.cpp.EB0F59DD93DDADFF.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/.cache/clangd/index/test.cpp.51B278397D4E5547.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/.cache/clangd/index/test.h.395D83AF05AACD04.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/.vscode/c_cpp_properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/query/client-vscode/query.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/cache-v2-20c0a4a1ee4035efd3a6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/cmakeFiles-v1-f639cd3ad53cd8cb2756.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/codemodel-v2-10474a5206d3553b6a2c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/index-2024-04-28T12-39-33-0162.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-Continuous-Debug-cf03795cec8cf1d33622.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ContinuousBuild-Debug-8c197916d5a196460a70.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ContinuousConfigure-Debug-5878313f94209419cf56.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ContinuousCoverage-Debug-014248b7f5cc85c06d84.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ContinuousMemCheck-Debug-42cd2c562848850710f0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ContinuousStart-Debug-0be790493f30a7f8328a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ContinuousSubmit-Debug-47443a2d325a180bd9c3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ContinuousTest-Debug-b4ad8b056fc8b549ac6e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ContinuousUpdate-Debug-425115cf175af89a21d4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-Experimental-Debug-5290bc076cd2d600449b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ExperimentalBuild-Debug-a3d2f82de9e911e3105e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ExperimentalConfigure-Debug-129e7f8244d240ef7b0a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ExperimentalCoverage-Debug-4c127654617865f623ab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ExperimentalMemCheck-Debug-afda3dd70f2091cd6d8a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ExperimentalStart-Debug-060fadf57e93ff956dee.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ExperimentalSubmit-Debug-256184777f5dce9a6dc7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ExperimentalTest-Debug-9b5a332d5bbd606e1154.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-ExperimentalUpdate-Debug-cd17e68d94c51653532a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-Nightly-Debug-8dd20071dc1840f4a657.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-NightlyBuild-Debug-a805b907e72c7603d5af.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-NightlyConfigure-Debug-82faf67b49b0283d29a2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-NightlyCoverage-Debug-f4dd596154ca43a53f17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-NightlyMemCheck-Debug-f5546854fee7443f4e90.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-NightlyMemoryCheck-Debug-069d28ec4b91fdcc3dd0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-NightlyStart-Debug-25a2575162593527d92c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-NightlySubmit-Debug-2c5f1b197a61e5d2f7d8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-NightlyTest-Debug-e10ecd01260bfb23e81a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-NightlyUpdate-Debug-aefebc1d49de86a4fc61.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/target-test_2024_4_26-Debug-5f17fab6b0d5f6ba6de9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/.cmake/api/v1/reply/toolchains-v1-3a597dba8177dc025349.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/3.28.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/3.28.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/3.28.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/3.28.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/3.28.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/3.28.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/3.28.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/3.28.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/3.28.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/3.28.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Continuous.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Continuous.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Continuous.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Continuous.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Continuous.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Continuous.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousBuild.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousBuild.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousBuild.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousBuild.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousBuild.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousBuild.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousConfigure.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousConfigure.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousConfigure.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousConfigure.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousConfigure.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousConfigure.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousCoverage.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousCoverage.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousCoverage.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousCoverage.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousCoverage.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousCoverage.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousMemCheck.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousMemCheck.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousMemCheck.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousMemCheck.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousMemCheck.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousMemCheck.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousStart.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousStart.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousStart.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousStart.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousStart.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousStart.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousSubmit.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousSubmit.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousSubmit.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousSubmit.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousSubmit.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousSubmit.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousTest.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousTest.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousTest.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousTest.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousTest.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousTest.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousUpdate.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousUpdate.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousUpdate.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousUpdate.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ContinuousUpdate.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Experimental.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Experimental.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Experimental.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Experimental.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Experimental.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Experimental.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalBuild.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalBuild.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalBuild.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalBuild.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalBuild.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalBuild.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalConfigure.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalConfigure.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalConfigure.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalConfigure.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalConfigure.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalConfigure.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalCoverage.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalCoverage.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalCoverage.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalCoverage.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalCoverage.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalCoverage.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalMemCheck.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalMemCheck.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalMemCheck.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalMemCheck.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalMemCheck.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalMemCheck.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalStart.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalStart.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalStart.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalStart.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalStart.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalStart.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalSubmit.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalSubmit.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalSubmit.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalSubmit.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalSubmit.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalSubmit.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalTest.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalTest.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalTest.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalTest.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalTest.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalTest.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalUpdate.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalUpdate.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalUpdate.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalUpdate.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalUpdate.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/ExperimentalUpdate.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Nightly.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Nightly.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Nightly.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Nightly.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Nightly.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/Nightly.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyBuild.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyBuild.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyBuild.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyBuild.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyBuild.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyBuild.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyConfigure.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyConfigure.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyConfigure.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyConfigure.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyConfigure.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyConfigure.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyCoverage.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyCoverage.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyCoverage.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyCoverage.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyCoverage.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyCoverage.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyMemCheck.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyMemCheck.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyMemCheck.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyMemCheck.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyMemCheck.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyMemCheck.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyMemoryCheck.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyMemoryCheck.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyMemoryCheck.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyMemoryCheck.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyMemoryCheck.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyMemoryCheck.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyStart.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyStart.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyStart.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyStart.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyStart.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyStart.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlySubmit.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlySubmit.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlySubmit.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlySubmit.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlySubmit.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlySubmit.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyTest.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyTest.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyTest.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyTest.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyTest.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyTest.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyUpdate.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyUpdate.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyUpdate.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyUpdate.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyUpdate.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/NightlyUpdate.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/linkLibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/main.cpp.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/test.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CMakeFiles/test_2024_4_26.dir/test.cpp.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CPackConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CPackSourceConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/DartConfiguration.tcl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/Testing/20240427-1103/Test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/Testing/20240428-1013/Test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/Testing/TAG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/Testing/Temporary/LastTest_20240427-1103.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/Testing/Temporary/LastTest_20240428-1013.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/compile_commands.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/build/test_2024_4_26.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_26/test.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.cmake/api/v1/reply/codemodel-v2-bd3e467a1bed3089ce9b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.cmake/api/v1/reply/index-2024-04-28T07-57-21-0912.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.cmake/api/v1/reply/index-2024-04-28T12-12-08-0346.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.cmake/api/v1/reply/target-test_2024_4_27-Debug-b5b2f3bfd42a51b4a5bd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/clion-Debug-Clang-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/clion-Debug-Clang-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/test_2024_4_27.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/test_2024_4_27.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.cmake/api/v1/reply/codemodel-v2-d67e2c44d9c9ff6294bf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.cmake/api/v1/reply/index-2024-04-28T10-13-11-0505.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.cmake/api/v1/reply/target-test_2024_4_27-Debug-aa781bfbacbbcdd5416d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/test_2024_4_27.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/test_2024_4_27.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.cmake/api/v1/reply/cmakeFiles-v1-95b2657203e75cdc62e8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.cmake/api/v1/reply/index-2024-04-27T13-27-47-0133.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.cmake/api/v1/reply/index-2024-04-27T13-29-37-0683.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/clion-Debug-Visual Studio-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/clion-Debug-Visual Studio-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/test_2024_4_27.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/test_2024_4_27.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/test_2024_4_27.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/test_2024_4_27.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/test_2024_4_27.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/test_2024_4_27.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-default/.cmake/api/v1/reply/codemodel-v2-411cd8aa0cafbfba3edd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-default/.cmake/api/v1/reply/index-2024-04-28T12-12-08-0029.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-default/.cmake/api/v1/reply/target-test_2024_4_27-9321494ccc366ceb7801.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-default/CMakeFiles/clion-Default-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-default/CMakeFiles/clion-Default-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-default/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-default/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/.cmake/api/v1/reply/codemodel-v2-b09463963c31a1fb1005.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/.cmake/api/v1/reply/index-2024-04-28T12-12-08-0070.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/.cmake/api/v1/reply/target-test_2024_4_27-MinSizeRel-536e1c806c64fa19f134.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/CMakeFiles/clion-MinSizeRel-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/CMakeFiles/clion-MinSizeRel-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-release/.cmake/api/v1/reply/codemodel-v2-0c7981bdd4b3be31f32a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-release/.cmake/api/v1/reply/index-2024-04-28T12-12-08-0139.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-release/.cmake/api/v1/reply/target-test_2024_4_27-Release-90ca926d33377710af47.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-release/CMakeFiles/clion-Release-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-release/CMakeFiles/clion-Release-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-release/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-release/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-release/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/.cmake/api/v1/reply/codemodel-v2-e46a5def98d46278897d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/.cmake/api/v1/reply/index-2024-04-28T12-12-08-0049.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/.cmake/api/v1/reply/target-test_2024_4_27-RelWithDebInfo-bf45b2a42325ff9bb6a9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/CMakeFiles/clion-RelWithDebInfo-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/CMakeFiles/clion-RelWithDebInfo-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/C++/2024/test_2024_4_27/test.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/Java/test_2024_4_23/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/Java/test_2024_4_23/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/Java/test_2024_4_23/out/production/test_2024_4_23/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/Java/test_2024_4_23/out/production/test_2024_4_23/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/Java/test_2024_4_23/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Homework/Java/test_2024_4_23/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/Qt/test_2024_5_2/test_2024_5_2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/Qt/test_2024_5_2/test_2024_5_2/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/Qt/test_2024_5_2/test_2024_5_2/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/Qt/test_2024_5_2/test_2024_5_2/mainwindow.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/Qt/test_2024_5_2/test_2024_5_2/mainwindow.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/Qt/test_2024_5_2/test_2024_5_2/mainwindow.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Homework/Qt/test_2024_5_2/test_2024_5_2/test_2024_5_2_zh_CN.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../test_2024_3_16/test_2024_3_16.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../test_2024_3_16/test_2024_3_16.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_2024_4_27.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/test_2024_4_27.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,28 +372,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="notebook://C:/Code/CodePractice/Jupter Notebook/test_2024_4_27/pythonProject/test_2024_4_27.ipynb" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" root2="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2fgWbtb3p09A0FSadwbtmeIxMom" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Jupyter Settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -126,10 +414,24 @@
       <option name="presentableId" value="Default" />
       <updated>1714223275276</updated>
       <workItem from="1714223276665" duration="607000" />
+      <workItem from="1714543361772" duration="225000" />
+      <workItem from="1714635452555" duration="84000" />
+      <workItem from="1714635557465" duration="47000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
+          <url>notebook://C:/Code/CodePractice/Jupter Notebook/test_2024_4_27/pythonProject/test_2024_4_27.ipynb</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,0 +1,6 @@
+# ninja log v5
+8	217	7362606868330508	test_2024_5_1_autogen/timestamp	625b0aba477d781d
+8	217	7362606868330508	test_2024_5_1_autogen/mocs_compilation.cpp	625b0aba477d781d
+8	217	7362606868330508	C:/Code/CodePractice/Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/test_2024_5_1_autogen/timestamp	625b0aba477d781d
+8	217	7362606868330508	C:/Code/CodePractice/Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/test_2024_5_1_autogen/mocs_compilation.cpp	625b0aba477d781d
+217	261	7362606869494429	CMakeFiles/test_2024_5_1.dir/test_2024_5_1_autogen/mocs_compilation.cpp.obj	5558b9a966e44ed7

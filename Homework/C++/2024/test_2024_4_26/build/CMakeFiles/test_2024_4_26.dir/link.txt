@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\test_2024_4_26.dir/objects.a
-C:\msys64\clang32\bin\llvm-ar.exe qc CMakeFiles\test_2024_4_26.dir/objects.a @CMakeFiles\test_2024_4_26.dir\objects1.rsp
-C:\msys64\clang32\bin\clang++.exe -g -Wl,--whole-archive CMakeFiles\test_2024_4_26.dir/objects.a -Wl,--no-whole-archive -o test_2024_4_26.exe -Wl,--out-implib,libtest_2024_4_26.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\test_2024_4_26.dir\linkLibs.rsp

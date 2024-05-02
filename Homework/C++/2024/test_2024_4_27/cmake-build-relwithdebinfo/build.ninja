@@ -55,12 +55,6 @@ build CMakeFiles/test_2024_4_27.dir/main.cpp.obj: CXX_COMPILER__test_2024_4_27_u
   OBJECT_DIR = CMakeFiles\test_2024_4_27.dir
   OBJECT_FILE_DIR = CMakeFiles\test_2024_4_27.dir
 
-build CMakeFiles/test_2024_4_27.dir/test.cpp.obj: CXX_COMPILER__test_2024_4_27_unscanned_RelWithDebInfo C$:/Code/CodePractice/Homework/C++/2024/test_2024_4_27/test.cpp || cmake_object_order_depends_target_test_2024_4_27
-  DEP_FILE = CMakeFiles\test_2024_4_27.dir\test.cpp.obj.d
-  FLAGS = -O2 -g -DNDEBUG -std=gnu++11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\test_2024_4_27.dir
-  OBJECT_FILE_DIR = CMakeFiles\test_2024_4_27.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target test_2024_4_27
@@ -69,7 +63,7 @@ build CMakeFiles/test_2024_4_27.dir/test.cpp.obj: CXX_COMPILER__test_2024_4_27_u
 #############################################
 # Link the executable test_2024_4_27.exe
 
-build test_2024_4_27.exe: CXX_EXECUTABLE_LINKER__test_2024_4_27_RelWithDebInfo CMakeFiles/test_2024_4_27.dir/main.cpp.obj CMakeFiles/test_2024_4_27.dir/test.cpp.obj
+build test_2024_4_27.exe: CXX_EXECUTABLE_LINKER__test_2024_4_27_RelWithDebInfo CMakeFiles/test_2024_4_27.dir/main.cpp.obj
   FLAGS = -O2 -g -DNDEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\test_2024_4_27.dir

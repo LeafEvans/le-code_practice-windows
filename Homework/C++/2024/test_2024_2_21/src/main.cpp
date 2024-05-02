@@ -2931,10 +2931,71 @@ int main() {
   std::cout << "Hello World!\n";
   return 0;
 } */
+/* #include <iostream>
 
-#include <iostream>
+template <class T>
+class A {
+ public:
+  int a;
+};
 
 int main() {
+  for (int i = 0; i < 10; ++i) {
+    std::cout << i << ' ';
+  }
   int a = 0;
   return 0;
+} */
+#include <iostream>
+
+using namespace std;
+
+int insert(int arr[], int len, int x) {
+  int index = 0;  // 指定元素的索引
+
+  // 寻找插入的位置，即第一个要插入的数小的数
+  while (index < len && x < arr[index]) {
+    ++index;
+  }
+
+  // 将后一个数据用前一个覆盖
+  for (int i = len - 1; i >= index; --i) {
+    arr[i + 1] = arr[i];
+  }
+  arr[index] = x;
+
+  // 因为数组下标使从零开始的，索引加一
+  return index + 1;
+}
+
+int main() {
+  int arr[100] = {0};  // 一个超级大的数组，并初始化为 0
+  int n = 0;           // 实际数组长度
+  int p = 0;           // 指定坐标索引
+  int count = 0;       // 计数器，记录插入的第几个数
+  int num = 0;         // 要插入的数
+
+  cout << "请输入原降序数列的数据个数（<20):";
+  cin >> n;
+  cout << "请输入" << n << "个数（降序）:\n";
+  for (int i = 0; i < n; ++i) {
+    cin >> arr[i];
+  }
+
+  // 死循环，题中未给插入多少个数
+  while (true) {
+    // 开始计数
+    ++count;
+    cout << "*************************************\n";
+    cout << "请输入欲插入的第" << count << "个数：";
+    cin >> num;
+    p = insert(arr, n, num);
+    cout << "插入在第" << p << "个位置\n";
+    cout << "插入第" << count << "个数后的数据序列为：\n";
+    for (int i = 0; i <= n; i++) {
+      cout << arr[i] << " ";
+    }
+    cout << '\n';
+    ++n;
+  }
 }
