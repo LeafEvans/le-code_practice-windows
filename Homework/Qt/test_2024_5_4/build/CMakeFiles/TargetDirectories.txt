@@ -1,0 +1,9 @@
+C:/Code/CodePractice/Homework/Qt/test_2024_5_4/build/CMakeFiles/test_2024_5_4.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_4/build/CMakeFiles/edit_cache.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_4/build/CMakeFiles/rebuild_cache.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_4/build/CMakeFiles/list_install_components.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_4/build/CMakeFiles/install.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_4/build/CMakeFiles/install/local.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_4/build/CMakeFiles/install/strip.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_4/build/CMakeFiles/test_2024_5_4_autogen_timestamp_deps.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_4/build/CMakeFiles/test_2024_5_4_autogen.dir

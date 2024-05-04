@@ -1,10 +1,9 @@
 #include <iostream>
 #include <conio.h>
 
-
 using namespace std;
 
-int main(int argc, char** argv) {
-  cout << "hello world!" << endl;
-  return 0;
+int main() {
+	cout << "Hello World!\n";
+	return 0;
 }

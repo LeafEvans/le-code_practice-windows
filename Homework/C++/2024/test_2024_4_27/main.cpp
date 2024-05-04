@@ -1200,8 +1200,6 @@ int main() {
 //  Node *m_tail;  // 链表尾
 //  friend ostream &operator<<(ostream &os, List<int> &list);
 //};
-//// 以上代码为模拟容器
-//// 以下代码为普通用户
 // ostream &operator<<(ostream &os, List<int> &list) {
 //   for (List<int>::Node *node = list.m_head; node; node = node->m_next) {
 //     os << node->m_data << ' ';
@@ -1443,7 +1441,7 @@ class List {
     Node *m_head;
     Node *m_tail;
 };*/
-#include <iostream>
+/*#include <iostream>
 
 using namespace std;
 
@@ -1962,6 +1960,392 @@ int main() {
     cout << *cit << ' ';
   }
   cout << '\n' << "----------------------------------\n";
+
+  return 0;
+}*/
+#include <iostream>
+
+template<class T>
+class List {
+ public:
+  class Node {
+   public:
+    Node(Node *prev, const T &data, Node *next)
+        : m_prev(prev), m_data(data), m_next(next) {}
+    Node *m_prev;
+    T m_data;
+    Node *m_next;
+  };
+
+  class Iterator {
+   public:
+    Iterator(Node *start, Node *cur, Node *end)
+        : m_start(start), m_cur(cur), m_end(end) {}
+
+    T &operator*() {
+      if (!m_cur) {
+        throw std::underflow_error("Null Node");
+      }
+      return m_cur->m_data;
+    }
+
+    Iterator &operator++() {
+      if (!m_cur) {
+        m_cur = m_start;
+      } else {
+        m_cur = m_cur->m_next;
+      }
+      return *this;
+    }
+
+    Iterator &operator--() {
+      if (!m_cur) {
+        m_cur = m_end;
+      } else {
+        m_cur = m_cur->m_prev;
+      }
+      return *this;
+    }
+
+    bool operator==(const Iterator &other) const {
+      return m_start == other.m_start
+          && m_cur == other.m_cur
+          && m_end == other.m_end;
+    }
+
+    bool operator!=(const Iterator &other) const {
+      return !(m_start == other.m_start
+          && m_cur == other.m_cur
+          && m_end == other.m_end);
+    }
+
+   private:
+    Node *m_start;
+    Node *m_cur;
+    Node *m_end;
+    friend class List;
+  };
+
+  class ConstantIterator {
+   public:
+    ConstantIterator(Node *start, Node *cur, Node *end)
+        : m_it(start, cur, end) {}
+
+    const T &operator*() {
+      return *m_it;
+    }
+
+    const ConstantIterator &operator++() {
+      ++m_it;
+      return *this;
+    }
+
+    const ConstantIterator &operator--() {
+      --m_it;
+      return *this;
+    }
+
+    bool operator==(const ConstantIterator &other) const {
+      return m_it == other.m_it;
+    }
+
+    bool operator!=(const ConstantIterator &other) const {
+      return m_it != other.m_it;
+    }
+
+   private:
+    Iterator m_it;
+  };
+
+  class ReverseIterator {
+   public:
+    ReverseIterator(Node *start, Node *cur, Node *end)
+        : m_start(start), m_cur(cur), m_end(end) {}
+
+    T &operator*() {
+      if (!m_cur) {
+        throw std::underflow_error("Null Node");
+      }
+      return m_cur->m_data;
+    }
+
+    ReverseIterator &operator++() {
+      if (!m_cur) {
+        m_cur = m_start;
+      } else {
+        m_cur = m_cur->m_prev;
+      }
+      return *this;
+    }
+
+    ReverseIterator &operator--() {
+      if (!m_cur) {
+        m_cur = m_end;
+      } else {
+        m_cur = m_cur->m_next;
+      }
+      return *this;
+    }
+
+    bool operator==(const ReverseIterator &other) const {
+      return m_start == other.m_start
+          && m_cur == other.m_cur
+          && m_end == other.m_end;
+    }
+
+    bool operator!=(const ReverseIterator &other) const {
+      return !(m_start == other.m_start
+          && m_cur == other.m_cur
+          && m_end == other.m_end);
+    }
+
+   private:
+    Node *m_start;
+    Node *m_cur;
+    Node *m_end;
+    friend class List;
+  };
+
+  class ConstantReverseIterator {
+   public:
+    ConstantReverseIterator(Node *start,
+                            Node *cur,
+                            Node *end)
+        : m_rit(start, cur, end) {}
+
+    const T &operator*() {
+      return *m_rit;
+    }
+
+    ConstantReverseIterator &operator++() {
+      ++m_rit;
+      return *this;
+    }
+
+    ConstantReverseIterator &operator--() {
+      --m_rit;
+      return *this;
+    }
+
+    bool operator==(const ConstantReverseIterator &other) const {
+      return m_rit == other.m_rit;
+    }
+
+    bool operator!=(const ConstantReverseIterator &other) const {
+      return m_rit != other.m_rit;
+    }
+
+   private:
+    ReverseIterator m_rit;
+  };
+
+  List() : m_head(nullptr), m_tail(nullptr) {}
+
+  List(const List &other) {
+    for (Node *node = other.m_head; node; node = node->m_next) {
+      push_back(node->m_data);
+    }
+  }
+
+  ~List() {
+    clear();
+  }
+
+  bool empty() const {
+    return m_head == nullptr && m_tail == nullptr;
+  }
+
+  void push_front(const T &data) {
+    m_head = new Node(nullptr, data, m_head);
+    if (m_head->m_next) {
+      m_head->m_next->m_prev = m_head;
+    } else {
+      m_tail = m_head;
+    }
+  }
+
+  void pop_front() {
+    if (empty()) {
+      return;
+    }
+    Node *new_head = m_head->m_next;
+    delete m_head;
+    if (new_head) {
+      new_head->m_prev = nullptr;
+    } else {
+      m_tail = nullptr;
+    }
+    m_head = new_head;
+  }
+
+  T &front() {
+    if (m_head) {
+      throw std::underflow_error("Null Node");
+    }
+    return m_head->m_data;
+  }
+
+  const T &front() const {
+    return const_cast<List *>(this)->front();
+  }
+
+  void push_back(const T &data) {
+    m_tail = new Node(m_tail, data, nullptr);
+    if (m_tail->m_prev) {
+      m_tail->m_prev->m_next = m_tail;
+    } else {
+      m_head = m_tail;
+    }
+  }
+
+  void pop_back() {
+    if (empty()) {
+      return;
+    }
+    Node *new_tail = m_tail->m_prev;
+    if (new_tail) {
+      new_tail->m_next = nullptr;
+    } else {
+      m_head = nullptr;
+    }
+    m_tail = new_tail;
+  }
+
+  T &back() {
+    if (m_tail) {
+      throw std::underflow_error("Null Node");
+    }
+    return m_tail->m_data;
+  }
+
+  const T &back() const {
+    return const_cast<List *>(this)->back();
+  }
+
+  void clear() {
+    while (!empty()) {
+      pop_back();
+    }
+  }
+
+  size_t size() const {
+    size_t count = 0;
+    for (const Node *node = m_head; node; m_head = m_head->m_next) {
+      ++count;
+    }
+    return count;
+  }
+
+  Iterator begin() {
+    return Iterator(m_head, m_head, m_tail);
+  }
+
+  Iterator end() {
+    return Iterator(m_head, nullptr, m_tail);
+  }
+
+  ConstantIterator begin() const {
+    return ConstantIterator(m_head, m_head, m_tail);
+  }
+
+  ConstantIterator end() const {
+    return ConstantIterator(m_head, nullptr, m_tail);
+  }
+
+  ReverseIterator rbegin() {
+    return ReverseIterator(m_tail, m_tail, m_head);
+  }
+
+  ReverseIterator rend() {
+    return ReverseIterator(m_tail, nullptr, m_head);
+  }
+
+  ConstantReverseIterator rbegin() const {
+    return ConstantReverseIterator(m_tail, m_tail, m_head);
+  }
+
+  ConstantReverseIterator rend() const {
+    return ConstantReverseIterator(m_tail, nullptr, m_head);
+  }
+
+  void insert(const Iterator &loc, const T &data) {
+    if (loc == end()) {
+      push_back(data);
+      return;
+    }
+    Node *node = new Node(loc.m_cur->m_prev, data, loc.m_cur);
+    if (node->m_prev) {
+      node->m_prev->m_next = node;
+    } else {
+      m_head = node;
+    }
+    loc.m_cur->m_prev = node;
+  }
+
+  void erase(const Iterator &loc) {
+    if (loc == end()) {
+      return;
+    }
+    Node *node = loc.m_cur;
+    if (node->m_prev) {
+      node->m_prev->m_next = node->m_next;
+    } else {
+      m_head = node->m_next;
+    }
+    if (node->m_next) {
+      node->m_next->m_prev = node->m_prev;
+    } else {
+      m_tail = node->m_prev;
+    }
+    delete node;
+  }
+
+ private :
+  Node *m_head;
+  Node *m_tail;
+};
+
+void print(const List<int> &list) {
+  for (const int elem : list) {
+    std::cout << elem << ' ';
+  }
+  std::cout << '\n' << "-----------------------------------------------\n";
+}
+
+void rprint(const List<int> &list) {
+  for (List<int>::ConstantReverseIterator crit = list.rbegin();
+       crit != list.rend();
+       ++crit) {
+    std::cout << *crit << ' ';
+  }
+  std::cout << '\n' << "-----------------------------------------------\n";
+}
+
+int main() {
+  List<int> list;
+
+  for (int i = 0; i < 5; ++i) {
+    list.push_back(i + 100);
+  }
+  for (int i = 0; i < 5; ++i) {
+    list.push_front(i + 1000);
+  }
+  print(list);
+  rprint(list);
+
+  list.pop_back();
+  list.push_front(43);
+  print(list);
+  rprint(list);
+
+  List<int>::Iterator it = list.begin();
+  list.insert(++it, 14);
+  print(list);
+  rprint(list);
+
+  list.clear();
+  print(list);
+  rprint(list);
 
   return 0;
 }
