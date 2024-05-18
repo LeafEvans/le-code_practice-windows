@@ -1015,211 +1015,6 @@ int main() {
   Func<Integer>();
   return 0;
 }*/
-// #include <iostream>
-// #include <exception>
-// using namespace std;
-///**
-// * @brief 链表类
-// */
-// template<typename T>
-// class List {
-// public:
-//  /**
-//   * @brief 缺省构造函数
-//   */
-//  List() : m_head(nullptr), m_tail(nullptr) {}
-//  /**
-//   * @brief 拷贝构造函数
-//   * @param other
-//   */
-//  List(const List &other) : m_head(nullptr), m_tail(nullptr) {
-//    for (Node *node = other.m_head; node; node = node->next) {
-//      // 从头节点取数据
-//      // 压到新链表的尾部
-//      pushBack(node->m_data);
-//    }
-//  }
-//  /**
-//   * @brief 析构函数
-//   */
-//  ~List() {
-//    clear();
-//  }
-//  /**
-//   * @brief 链表判空
-//   */
-//  bool empty() {
-//    return m_head == nullptr && m_tail == nullptr;
-//  }
-//  /**
-//   * @brief 添加头节点
-//   * @param data
-//   */
-//  void pushFront(const T &data) {
-//    // 先创造一个新节点，它的 prev 为空，以原来的尾节点为 next
-//    // 将 m_head 指向这个新节点
-//    m_head = new Node(nullptr, data, m_head);
-//    if (m_head->m_next) {
-//      // m_head 的下一个节点如果存在
-//      // 它的下一个节点的前节点为 m_head
-//      m_head->m_next->m_prev = m_head;
-//    } else {
-//      // m_head 没有下一个节点
-//      // 链表只有一个节点，代表尾指针也指向头指针指向的节点
-//      m_tail = m_head;
-//    }
-//  }
-//  /**
-//   * @brief 删除头节点
-//   */
-//  void popFront() {
-//    // 如果当前链表为空链表则直接跳出函数
-//    if (empty()) {
-//      return;
-//    }
-//    // 将新的节点备份
-//    Node *temp = m_head->m_next;
-//    // 删出旧的节点
-//    delete m_head;
-//    if (temp) {
-//      // 如果头节点存在下一个节点，也即是链表不止一个元素
-//      // 将新链表的头节点的前指针置为空
-//      temp->m_prev = nullptr;
-//    } else {
-//      // 否则，删除完后，链表一个节点都没有了
-//      // 尾节点也为空
-//      m_tail = nullptr;
-//    }
-//    // 赋值个头节点新的值
-//    m_head = temp;
-//  }
-//  /**
-//   * @brief 返回头节点的数据
-//   * @return 头节点的数据
-//   */
-//  T &front() {
-//    if (empty()) {
-//      // 抛出异常
-//      throw underflow_error("Null Node");
-//    }
-//    return m_head->m_data;
-//  }
-//  /**
-//   * @brief 常函数，常链表才可调用
-//   * @return
-//   */
-//  T const &front() const {
-//    // 将类内的非 const 版本的 front() 函数转化为 const 版本的使用
-//    return const_cast<List*>(this)->front();
-//  }
-//  /**
-//   * @brief 添加尾节点的数据
-//   * @param data
-//   */
-//  void pushBack(T const &data) {
-//    m_tail = new Node(m_tail, data, nullptr);
-//    if (m_tail->m_prev) {
-//      m_tail->m_prev->m_next = m_tail;
-//    } else {
-//      m_head = nullptr;
-//    }
-//  }
-//  /**
-//   * @brief 删除尾节点的数据
-//   */
-//  void popBack() {
-//    if (empty()) {
-//      return;
-//    }
-//    Node *temp = m_tail->m_prev;
-//    delete m_tail;
-//    if (temp) {
-//      temp->m_next = nullptr;
-//    } else {
-//      m_head = nullptr;
-//    }
-//    m_tail = temp;
-//  }
-//  /**
-//   * @brief 获取尾节点数据
-//   * @return 尾节点
-//   */
-//  T &back() {
-//    if (empty()) {
-//      throw underflow_error("Null Node");
-//    }
-//
-//    return m_tail->m_data;
-//  }
-//  /**
-//   * @brief 常函数，常链表可访问
-//   * @return 尾节点
-//   */
-//  T const &back() const {
-//    // 将之前的改成常属性
-//    return const_cast<List *>(this)->back();
-//  }
-//  /**
-//   * @brief 清空链表
-//   */
-//  void clear() {
-//    // 链表不为空
-//    while (!empty()) {
-//      // 直接调用之前实现的删除头节点的函数
-//      popFront();
-//    }
-//  }
-//  /**
-//   * @brief 获取链表大小
-//   * @return 链表节点个数
-//   */
-//  size_t size() {
-//    size_t count = 0;  // 计数器
-//    // 从头节点开始
-//    // 判断这个节点是否存在
-//    // 指向下一个节点
-//    // 计数器增加
-//    for (Node *node = m_head; node; node = node->m_next) {
-//      ++count;
-//    }
-//    // 返回计数器
-//    return count;
-//  }
-// private:
-//  /**
-//   * @brief 节点类
-//   */
-//  class Node {
-//   public:
-//    Node(Node *prev, const T &data, Node *next) : m_prev(prev), m_data(data),
-//    m_next(next) {} Node *m_prev;  // 前指针 T m_data;      // 节点数据 Node
-//    *m_next;  // 后指针
-//  };
-//
-//  Node *m_head;  // 链表头
-//  Node *m_tail;  // 链表尾
-//  friend ostream &operator<<(ostream &os, List<int> &list);
-//};
-// ostream &operator<<(ostream &os, List<int> &list) {
-//   for (List<int>::Node *node = list.m_head; node; node = node->m_next) {
-//     os << node->m_data << ' ';
-//   }
-//   return os;
-// }
-// int main() {
-//   List<int> list;
-//   for (int i = 0; i < 5; ++i) {
-//     list.pushFront(10 + i);
-//   }
-//   for (int i = 0; i < 5; ++i) {
-//     list.pushBack(100 + i);
-//   }
-//   cout << list << endl;
-//   list.popFront();
-//   list.popBack();
-//   cout << list << endl;
-//   return 0;
-// }
 /*
 #include <exception>
 #include <iostream>
@@ -1963,7 +1758,7 @@ int main() {
 
   return 0;
 }*/
-#include <iostream>
+/*#include <iostream>
 
 template<class T>
 class List {
@@ -2346,6 +2141,867 @@ int main() {
   list.clear();
   print(list);
   rprint(list);
+
+  return 0;
+}*/
+/*
+#include <iostream>
+
+using namespace std;
+
+template<class T>
+void print(T *arr, size_t len) {
+  for (size_t i = 0; i < len; ++i) {
+    cout << arr[i] << ' ';
+  }
+  cout << '\n';
+}
+
+int main() {
+  int arr[10] = {1, 2, 3, 4, 5,
+                 6, 7, 8, 9, 10};
+  print(arr, 10);
+  return 0;
+}*/
+/*
+#include <iostream>
+
+using namespace std;
+
+template<class T>
+void insertionSort(T *arr, size_t len) {
+  size_t i, j;
+  T key;
+  for (i = 1; i < len; ++i) {
+    key = arr[i];
+    for (j = i - 1; j >= 0 && arr[j] > key; --j) {
+      arr[j + 1] = arr[j];
+    }
+    arr[j + 1] = key;
+  }
+}
+
+template<class T>
+void printArray(T *arr, size_t len) {
+  for (size_t i = 0; i < len; ++i) {
+    cout << arr[i] << ' ';
+  }
+  cout << '\n';
+}
+
+int main() {
+  int arr[10] = {1, 23, 434, 545, 34,
+                 2, 45, 21332, 323, 232};
+  printArray(arr, 10);
+  insertionSort(arr, 10);
+  printArray(arr, 10);
+  return 0;
+}*/
+/*
+#include <iostream>
+
+using namespace std;
+
+class Time {
+ public:
+  Time(size_t hour,
+       size_t minute,
+       size_t second) : m_hour(hour),
+                        m_minute(minute),
+                        m_second(second) {}
+
+  Time operator+(const Time &other) {
+    size_t hour = m_hour + other.m_hour;
+    size_t minute = m_minute + other.m_minute;
+    size_t second = m_second + other.m_second;
+
+    if (second >= 60) {
+      second -= 60;
+      ++minute;
+    }
+
+    if (minute >= 60) {
+      minute -= 60;
+      ++hour;
+    }
+
+    return Time(hour, minute, second);
+  }
+
+  Time operator-(const Time &other) {
+    size_t hour = m_hour - other.m_hour;
+    size_t minute = m_minute - other.m_minute;
+    size_t second = m_second - other.m_second;
+
+    if (second < 0) {
+      second += 60;
+      --minute;
+    }
+
+    if (minute < 0) {
+      minute += 60;
+      --hour;
+    }
+
+    if (hour < 0) {
+      throw "Invalid Data";
+    }
+
+    return Time(hour, minute, second);
+  }
+
+  friend ostream &operator<<(ostream &os, const Time &time) {
+
+    os << time.m_hour << ':' << time.m_minute << ':' << time.m_second;
+    return os;
+  }
+
+  friend istream &operator>>(istream &is, Time &time) {
+    is >> time.m_hour >> time.m_minute >> time.m_second;
+    return is;
+  }
+
+ private:
+  size_t m_hour;
+  size_t m_minute;
+  size_t m_second;
+};
+
+int main() {
+  Time time1(10, 20, 30);
+  Time time2(20, 30, 40);
+  cout << time1 << ' ' << time2 << endl;
+  cin >> time1;
+  cout << time1 << endl;
+  cout << time1 + time2 << endl;
+  cout << time1 - time2 << endl;
+
+  return 0;
+}*/
+/*
+#include <iostream>
+#include <cstdio>
+
+using namespace std;
+
+class Matrix {
+ public:
+  Matrix(size_t row, size_t col) : m_matrix(new double[row * col]), m_row(row), m_col(col) {
+    for (size_t i = 0; i < m_row; ++i) {
+      for (size_t j = 0; j < m_col; ++j) {
+        *(m_matrix + i * m_col + j) = 0;
+      }
+    }
+  }
+
+  bool operator==(const Matrix &other) {
+    if (m_row != other.m_row || m_col != other.m_col) {
+      throw "InValid Data";
+    }
+
+    bool flag = true;
+
+    for (size_t i = 0; i < m_row; ++i) {
+      for (size_t j = 0; j < m_col; ++j) {
+        if (*(m_matrix + i * m_col + j) != *(other.m_matrix + i * m_col + j)) {
+          flag = false;
+        }
+      }
+    }
+
+    return flag;
+  }
+
+  Matrix operator+(const Matrix &other) {
+    if (m_row != other.m_row || m_col != other.m_col) {
+      throw "InValid Data";
+    }
+
+    Matrix matrix(m_row, m_col);
+    for (size_t i = 0; i < m_row; ++i) {
+      for (size_t j = 0; j < m_col; ++j) {
+        *(matrix.m_matrix + i * m_col + j) =
+            *(m_matrix + i * m_col + j)
+                + *(other.m_matrix + i * m_col + j);
+      }
+    }
+
+    return matrix;
+  }
+
+  Matrix operator-(const Matrix &other) {
+    if (m_row != other.m_row || m_col != other.m_col) {
+      throw "InValid Data";
+    }
+
+    Matrix matrix(m_row, m_col);
+    for (size_t i = 0; i < m_row; ++i) {
+      for (size_t j = 0; j < m_col; ++j) {
+        *(matrix.m_matrix + i * m_col + j) =
+            *(m_matrix + i * m_col + j)
+                - *(other.m_matrix + i * m_col + j);
+      }
+    }
+
+    return matrix;
+  }
+
+ private:
+  double *m_matrix;
+  size_t m_row;
+  size_t m_col;
+
+  friend ostream &operator<<(ostream &os, const Matrix &other) {
+    for (size_t i = 0; i < other.m_row; ++i) {
+      for (size_t j = 0; j < other.m_col; ++j) {
+        cout << *(other.m_matrix + i * other.m_col + j) << ' ';
+      }
+      cout << '\n';
+    }
+    return os;
+  }
+
+  friend istream &operator>>(istream &is, Matrix &other) {
+    for (size_t i = 0; i < other.m_row; ++i) {
+      cout << i << ": ";
+      for (size_t j = 0; j < other.m_col; ++j) {
+        cin >> *(other.m_matrix + i * other.m_col + j);
+      }
+    }
+    return is;
+  }
+};
+
+int main() {
+  Matrix matrix1(3, 3);
+  Matrix matrix2(3, 3);
+  cin >> matrix1;
+  cin >> matrix2;
+  cout << matrix1 + matrix2;
+  cout << matrix1 - matrix2;
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+#include <cstdio>
+
+using namespace std;
+
+class Student {
+ public:
+  Student(const string &name = "") : m_name(name) {
+    cout << "缺省构造了:" << m_name << '(' << this << ')' << endl;
+  }
+
+  Student(const Student &other) : m_name(other.m_name) {
+    cout << "用:" << other.m_name << '(' << &other << ')'
+         << "拷贝构造了:" << m_name << '(' << this << ')' << endl;
+  }
+
+  ~Student() {
+    cout << "析构了:" << m_name << '(' << this << ')' << endl;
+  }
+
+ private:
+  string m_name;
+};
+
+int main() {
+  vector<Student> vs(10);
+  vs.reserve(10);
+  vs.push_back(Student("张三"));
+  vs.push_back(Student("李四"));
+  getchar();
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+class Student {
+ public:
+  Student(const string &name = " ", int age = 0)
+      : m_name(name), m_age(age) {}
+
+  bool operator==(const Student &other) const {
+    return m_name == other.m_name && m_age == other.m_age;
+  }
+
+  bool operator<(const Student &other) const {
+    // 如果要降序排序，则改为 m_age > other.m_age
+    return m_age < other.m_age;
+  }
+
+  bool operator>(const Student &other) const {
+    return m_age > other.m_age;
+  }
+
+  friend ostream &operator<<(ostream &os, const Student &other) {
+    return os << other.m_name << ": " << other.m_age;
+  }
+
+ private:
+  string m_name;
+  int m_age;
+};
+
+void print(const string &str, vector<Student> &v) {
+  cout << str << endl;
+  typedef vector<Student>::iterator IT;
+
+  for (IT it = v.begin(); it != v.end(); it++) {
+    cout << *it << ' ';
+  }
+
+  cout << endl << "--------------------------------" << endl;
+}
+
+class CMP {
+ public:
+  bool operator()(const Student &a, const Student &b) {
+    return a > b;
+  }
+};
+
+int main() {
+  vector<Student> vs(10);
+
+  vs.push_back(Student("曹操", 22));
+  vs.push_back(Student("刘备", 20));
+  vs.push_back(Student("孙权", 18));
+  vs.push_back(Student("马超", 10));
+  vs.push_back(Student("司马懿", 20));
+  print("添加节点后: ", vs);
+
+  vs.insert(vs.begin() + 4, Student("关羽", 21));
+  print("在迭代器指向的位置，添加节点后: ", vs);
+
+  vs.erase(vs.begin());
+  print("删除迭代器指向的节点后: ", vs);
+
+  typedef vector<Student>::iterator IT;
+  IT it = vs.begin();
+  *it = Student("诸葛亮", 11);
+  print("更改迭代器指向的节点后: ", vs);
+
+  IT fit = find(vs.begin(),
+                vs.end(),
+                Student("刘备", 20));
+  if (fit != vs.end()) {
+    vs.erase(fit);
+  }
+  print("找到刘备并删除后: ", vs);
+
+  sort(vs.begin(), vs.end());
+  print("升序排序后: ", vs);
+
+  CMP cmp;
+  sort(vs.begin(), vs.end(), cmp);
+  print("降序排序后: ", vs);
+
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  vector<vector<int>> vi = {{1, 2, 3}, {6, 5, 4}};
+
+  vi.push_back({7, 8, 9});
+
+  sort(vi[1].begin(), vi[1].end());
+
+  vi[2].erase(find(vi[2].begin(), vi[2].end(), 9));
+
+  for (const vector<int> _vi : vi) {
+    for (const int i : _vi) {
+      cout << i << ' ';
+    }
+    cout << '\n';
+  }
+
+  cout << "Row: " << vi.size() << ", Col: " << vi[0].size() << endl;
+
+  if (!vi.empty()) {
+    cout << "不为空！" << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+  vector<vector<int>> vi = {{1, 2, 3}, {6, 5, 4}};
+  cout << "Array: \n";
+  for (int i = 0; i < vi.size(); ++i) {
+    for (int j = 0; j < vi[i].size(); ++j) {
+      cout << vi[i][j] << ' ';
+    }
+    cout << '\n';
+  }
+
+  cout << "Capacity: " << vi.capacity() << endl;
+  cout << "Size: " << vi.size() << endl;
+
+  vi.reserve(3);
+  vi.insert(vi.end(), {7, 8, 9});
+
+  cout << "Array(new): \n";
+  for (int i = 0; i < vi.size(); ++i) {
+    for (int j = 0; j < vi[i].size(); ++j) {
+      cout << vi[i][j] << ' ';
+    }
+    cout << '\n';
+  }
+
+  cout << "Capacity: " << vi.capacity() << endl;
+  cout << "Size: " << vi.size() << endl;
+
+  cout << "Find: " << *find(vi[1].begin(), vi[1].end(), 5);
+
+  return 0;
+}*/
+/*#include <iostream>
+#include <deque>
+#include <algorithm>
+
+using namespace std;
+
+class Student {
+ public:
+  Student(const string &name = " ",
+          int age = 0) : m_name(name), m_age(age) {}
+
+  friend ostream &operator<<(ostream &os, const Student &other) {
+    return os << other.m_name << ": " << other.m_age;
+  }
+
+  bool operator==(const Student &other) const {
+    return m_name == other.m_name && m_age == other.m_age;
+  }
+
+  bool operator<(const Student &other) const {
+    return m_age < other.m_age;
+  }
+
+ private:
+  string m_name;
+  int m_age;
+};
+
+void print(const string &str, deque<Student> &d) {
+  cout << str << '\n';
+  typedef deque<Student>::iterator IT;
+  for (IT it = d.begin(); it != d.end(); ++it) {
+    cout << *it << ' ';
+  }
+  cout << endl << "---------------------------\n";
+}
+
+int main() {
+  deque<Student> ds;
+  ds.push_front(Student("张飞", 20));
+  ds.push_front(Student("赵云", 18));
+  ds.push_front(Student("马超", 19));
+  ds.push_back(Student("关羽", 24));
+  ds.push_back(Student("黄忠", 44));
+  print("添加节点后: ", ds);
+
+  typedef deque<Student>::iterator IT;
+
+  ds.insert(ds.begin(), Student("刘备", 24));
+  print("在迭代器指定的位置添加节点后: ", ds);
+
+  ds.erase(ds.begin());
+  print("删除迭代器指向的节点后: ", ds);
+
+  IT it = ds.begin();
+
+  *it = Student("吕布", 34);
+  print("更改迭代器指向的节点后: ", ds);
+
+  IT fit = find(ds.begin(), ds.end(), Student("黄忠", 44));
+  if (fit != ds.end()) {
+    ds.erase(fit);
+  }
+  print("找到黄忠并删除后: ", ds);
+
+  sort(ds.begin(), ds.end());
+  print("排序后: ", ds);
+
+
+
+  return 0;
+}*/
+/*#include <deque>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  vector<vector<int>> vi = {{1, 2, 3}, {2, 3, 4}};
+  for (const vector<int> row : vi) {
+    for (const int element : row) {
+      cout << element << ' ';
+    }
+    cout << '\n';
+  }
+  return 0;
+}*/
+/*
+#include <iostream>
+#include <algorithm>
+#include <deque>
+
+using namespace std;
+
+int main() {
+  deque<int> di = {1, 2, 3};
+  di.insert(find(di.begin(), di.end(), 2), 4);
+  sort(di.rbegin(), di.rend());
+  di.erase(di.begin());
+  di.push_back(0);
+  di.push_front(-1);
+  for (const int element : di) {
+    cout << element << ' ';
+  }
+
+  cout << '\n';
+  return 0;
+}*/
+/*
+#include <list>
+#include <iostream>
+
+using namespace std;
+
+void print(const string &str, list<int> &l) {
+  cout << str << endl;
+  typedef list<int>::iterator IT;
+  for (IT it = l.begin(); it != l.end(); ++it) {
+    cout << *it << ' ';
+  }
+  cout << "\n--------------------\n";
+}
+
+template<class T>
+class CMP {
+ public:
+  bool operator()(const T &a, const T &b) {
+    return a > b;
+  }
+};
+
+int main() {
+  list<int> ls;
+  for (int i = 0; i < 5; ++i) {
+    ls.push_front(10 + i);
+  }
+  for (int i = 0; i < 5; ++i) {
+    ls.push_back(10 - i);
+  }
+
+  print("添加结点后：", ls);
+  ls.unique();
+  print("唯一化后：", ls);
+
+  ls.sort();  // 链表类的自带排序
+  print("升序排序后：", ls);
+
+  CMP<int> cmp;
+  ls.sort(cmp);
+  print("降序排序后：", ls);
+
+  list<int> lst;
+  lst.push_back(1000);
+  lst.push_back(2000);
+  lst.push_back(3000);
+  lst.push_back(4000);
+
+  // ls.splice(ls.begin(), lst);
+  // ls.splice(ls.begin(), lst, lst.begin());
+  ls.splice(ls.begin(), lst, ++lst.begin(), --lst.end());
+  print("ls：", ls);
+  print("lst：", lst);
+  return 0;
+}*/
+/*
+#include <stack>
+#include <vector>
+#include <deque>
+#include <list>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  stack<int, list<int>> s;
+  s.push(1);
+  s.push(2);
+  s.push(3);
+  s.push(4);
+  s.push(5);
+  s.push(6);
+  while (!s.empty()) {
+    cout << s.top() << ' ';
+    s.pop();
+  }
+  return 0;
+}*/
+/*
+#include <queue>
+#include <list>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  queue<int, list<int>> s;
+  s.push(1);
+  s.push(2);
+  s.push(3);
+  s.push(4);
+  s.push(5);
+  s.push(6);
+  while (!s.empty()) {
+    cout << s.front() << ' ';
+    s.pop();
+  }
+  cout << '\n';
+  return 0;
+}*/
+/*
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+class Candidate {
+ public:
+  Candidate(string name = "") : m_name(name), m_vote(0) {}
+  string m_name;
+  int m_vote;
+};
+
+void print(map<char, Candidate> &m) {
+  typedef map<char, Candidate>::iterator IT;
+  for (IT it = m.begin(); it != m.end(); ++it) {
+    cout << '(' << (*it).first << ')'
+         << (*it).second.m_name << ' ';
+  }
+  cout << '\n';
+}
+
+int main() {
+  map<char, Candidate> m;  // 键的类型为字符，值的类型是类型
+  m.insert(pair<char, Candidate>('A', Candidate("张飞")));
+  m.insert(make_pair('B', Candidate("关羽")));
+  m['C'] = Candidate("赵云");  // 因为 'C' 不存在，因此会新创建一个，使用这个方法创建最简单
+  m['D'] = Candidate("马超");
+  m['E'] = Candidate("黄忠");
+
+  print(m);
+  typedef map<char, Candidate>::iterator IT;
+  for (int i = 0; i < 10; ++i) {
+    print(m);
+    char ch;
+    cin >> ch;
+    m.find(ch);
+    IT fit = m.find(ch);
+    if (fit == m.end()) {
+
+    }
+  }
+  return 0;
+}*/
+/*#include <iostream>
+#include <set>
+
+using namespace std;
+
+int main() {
+  typedef set<int>::iterator IT;
+  typedef set<int>::reverse_iterator RIT;
+  set<int> s1;
+  s1.insert(3);
+  s1.insert(1);
+  s1.insert(7);
+  s1.insert(5);
+
+  set<int> s2(s1);
+  set<int> s3;
+
+  s3 = s2;
+
+  IT it = s3.begin();
+  s3.erase(it);  // 删去 set 中的最小值
+  it = --s3.end();  // 不能使用反向迭代器进行删除
+  it = s3.erase(it);
+  cout << s3.erase(5) << '\n';
+  for (it = s3.begin(); it != s3.end(); ++it) {
+    cout << *it << ' ';
+  }
+  cout << '\n';
+  cout << s3.erase(100) << '\n';
+  return 0;
+}*/
+/*#include <iostream>
+#include <ctime>
+#include <cstdlib>
+#include <set>
+#include <queue>
+
+using namespace std;
+
+int main() {
+  srand(time(nullptr));
+
+  priority_queue<int, vector<int>, less<int>> pq;
+
+  for (int i = 0; i < 10; ++i) {
+    pq.push(rand());
+  }
+
+  while (!pq.empty()) {
+    cout << pq.top() << ' ';
+    pq.pop();
+  }
+  cout << '\n';
+
+  return 0;
+}*/
+/*#include <iostream>
+#include <set>
+
+using namespace std;
+
+int main() {
+  set<int, less<int>> s1;  // 升序排列
+  set<int, greater<int>> s2;  // 降序排列
+
+  s1.insert(1);
+  s1.insert(5);
+  s1.insert(3);
+
+  s2.insert(1);
+  s2.insert(5);
+  s2.insert(3);
+
+  typedef set<int>::iterator IT;
+
+  cout << "s1: ";
+  for (IT it = s1.begin(); it != s1.end(); ++it) {
+    cout << *it << ' ';
+  }
+  cout << '\n';
+
+  cout << "s2: ";
+  for (IT it = s2.begin(); it != s2.end(); ++it) {
+    cout << *it << ' ';
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int fun1(int x, int y) {
+  return x + y;
+}
+
+int fun2(int x, int y) {
+  return x - y;
+}
+
+int fun3(int x, int y) {
+  return x * y;
+}
+
+int fun4(int x, int y) {
+  return x / y;
+}
+
+int func(int x, int y, int fun(int, int)) {
+  return fun(x, y);
+}
+
+int main() {
+  cout << func(4, 2, fun4);
+  return 0;
+}*/
+/*#include <iostream>
+#include <set>
+
+using namespace std;
+
+class CStudent {
+ public:
+  CStudent(int iID, string strName)
+      : m_iID(iID), m_strName(strName) {}
+  int m_iID;
+  string m_strName;
+};
+
+// 伪函数类
+class StuFunctor {
+ public:
+  bool operator()(const CStudent &left, const CStudent &right) const {
+    return left.m_iID > right.m_iID;
+  }
+};
+
+int main() {
+  set<CStudent, StuFunctor> stu;
+
+  stu.insert(CStudent(10, "xiaoming"));
+  stu.insert(CStudent(8, "xiaowang"));
+  stu.insert(CStudent(6, "xiaoma"));
+  stu.insert(CStudent(12, "xiaozhou"));
+
+  typedef set<CStudent, StuFunctor>::iterator IT;;
+
+  for (IT it = stu.begin(); it != stu.end(); ++it) {
+    cout << it->m_iID << ' ';
+  }
+  cout << '\n';
+
+  return 0;
+}*/
+#include <iostream>
+#include <set>
+
+using namespace std;
+
+int main() {
+  set<int, less<int>> s1;
+  set<int>::iterator it;
+
+  s1.insert(1);
+  s1.insert(5);
+  s1.insert(3);
+  s1.insert(6);
+  s1.insert(8);
+  s1.insert(7);
+  s1.insert(10); 
+
+  cout << s1.count(1) << endl;
+
+  it = s1.lower_bound(6);
+  cout << ">= 6: " << *it << endl;
+
+  it = s1.upper_bound(6);
+  cout << "> 6: " << *it << endl;
 
   return 0;
 }

@@ -1,0 +1,10 @@
+^C:\CODE\CODEPRACTICE\HOMEWORK\C\2024\TEST_2024_5_5\BUILD\CMAKEFILES\C7B02ADED8C9DCE4D5FF81213AE38167\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Code/CodePractice/Homework/C/2024/test_2024_5_5 -BC:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build/test_2024_5_5.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

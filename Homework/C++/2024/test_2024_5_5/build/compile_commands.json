@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build",
+  "command": "C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi /FoCMakeFiles\\test_2024_5_5.dir\\main.cpp.obj /FdCMakeFiles\\test_2024_5_5.dir/ /FS -c C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\main.cpp",
+  "file": "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/main.cpp",
+  "output": "CMakeFiles/test_2024_5_5.dir/main.cpp.obj"
+}
+]

@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\test_2024_5_4.dir/objects.a
-C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\test_2024_5_4.dir/objects.a @CMakeFiles\test_2024_5_4.dir\objects1.rsp
-C:\Qt\Tools\mingw1310_64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\test_2024_5_4.dir/objects.a -Wl,--no-whole-archive -o test_2024_5_4.exe -Wl,--out-implib,libtest_2024_5_4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\test_2024_5_4.dir\linkLibs.rsp

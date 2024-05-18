@@ -1,0 +1,10 @@
+^C:\CODE\CODEPRACTICE\HOMEWORK\C\2024\TEST_2024_5_5\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Code/CodePractice/Homework/C/2024/test_2024_5_5 -BC:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build --check-stamp-file C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

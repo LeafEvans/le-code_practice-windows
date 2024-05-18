@@ -1,0 +1,9 @@
+C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build/CMakeFiles/Experimental.dir
+C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build/CMakeFiles/Nightly.dir
+C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build/CMakeFiles/Continuous.dir
+C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build/CMakeFiles/NightlyMemoryCheck.dir
+C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir
+C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build/CMakeFiles/PACKAGE.dir
+C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build/CMakeFiles/RUN_TESTS.dir
+C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build/CMakeFiles/ALL_BUILD.dir
+C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build/CMakeFiles/ZERO_CHECK.dir
