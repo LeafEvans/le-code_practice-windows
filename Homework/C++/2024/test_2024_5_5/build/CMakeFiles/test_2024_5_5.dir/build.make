@@ -72,15 +72,15 @@ CMakeFiles/test_2024_5_5.dir/main.cpp.obj: CMakeFiles/test_2024_5_5.dir/flags.ma
 CMakeFiles/test_2024_5_5.dir/main.cpp.obj: C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/main.cpp
 CMakeFiles/test_2024_5_5.dir/main.cpp.obj: CMakeFiles/test_2024_5_5.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_2024_5_5.dir/main.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\test_2024_5_5.dir\main.cpp.obj.d --working-dir=C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\build --filter-prefix="注意: 包含文件:  " -- C:\PROGRA~2\MICROS~3\2022\BUILDT~1\VC\Tools\MSVC\1439~1.335\bin\Hostx86\x86\cl.exe  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\test_2024_5_5.dir\main.cpp.obj /FdCMakeFiles\test_2024_5_5.dir/ /FS -c C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\main.cpp
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\test_2024_5_5.dir\main.cpp.obj.d --working-dir=C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\build --filter-prefix="注意: 包含文件:  " -- C:\PROGRA~2\MICROS~3\2022\BUILDT~1\VC\Tools\MSVC\1439~1.335\bin\Hostx86\x64\cl.exe  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\test_2024_5_5.dir\main.cpp.obj /FdCMakeFiles\test_2024_5_5.dir/ /FS -c C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\main.cpp
 
 CMakeFiles/test_2024_5_5.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_2024_5_5.dir/main.cpp.i"
-	C:\PROGRA~2\MICROS~3\2022\BUILDT~1\VC\Tools\MSVC\1439~1.335\bin\Hostx86\x86\cl.exe > CMakeFiles\test_2024_5_5.dir\main.cpp.i  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\main.cpp
+	C:\PROGRA~2\MICROS~3\2022\BUILDT~1\VC\Tools\MSVC\1439~1.335\bin\Hostx86\x64\cl.exe > CMakeFiles\test_2024_5_5.dir\main.cpp.i  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\main.cpp
 
 CMakeFiles/test_2024_5_5.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_2024_5_5.dir/main.cpp.s"
-	C:\PROGRA~2\MICROS~3\2022\BUILDT~1\VC\Tools\MSVC\1439~1.335\bin\Hostx86\x86\cl.exe  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\test_2024_5_5.dir\main.cpp.s /c C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\main.cpp
+	C:\PROGRA~2\MICROS~3\2022\BUILDT~1\VC\Tools\MSVC\1439~1.335\bin\Hostx86\x64\cl.exe  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\test_2024_5_5.dir\main.cpp.s /c C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\main.cpp
 
 # Object files for target test_2024_5_5
 test_2024_5_5_OBJECTS = \

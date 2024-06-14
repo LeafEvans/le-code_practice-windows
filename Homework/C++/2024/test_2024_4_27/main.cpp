@@ -2978,30 +2978,118 @@ int main() {
 
   return 0;
 }*/
-#include <iostream>
-#include <set>
+/*#include <iostream>
 
 using namespace std;
 
+const int SIZE = 101;
+
 int main() {
-  set<int, less<int>> s1;
-  set<int>::iterator it;
+  int n, m, q;
 
-  s1.insert(1);
-  s1.insert(5);
-  s1.insert(3);
-  s1.insert(6);
-  s1.insert(8);
-  s1.insert(7);
-  s1.insert(10); 
+  scanf("%d%d%d", &n, &m, &q);
 
-  cout << s1.count(1) << endl;
+  int arr[SIZE][SIZE] = {0}, sum[SIZE][SIZE] = {0};
 
-  it = s1.lower_bound(6);
-  cout << ">= 6: " << *it << endl;
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      scanf("%d", &arr[i][j]);
+      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+    }
+  }
 
-  it = s1.upper_bound(6);
-  cout << "> 6: " << *it << endl;
+  while (q--) {
+    int x1, y1, x2, y2;
+    scanf("%d%d%d%d", &x1, &y1, &x2, &y2);
+    printf("%d\n", sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] +
+        sum[x1 - 1][y1 - 1]);
+  }
 
   return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 1010;
+
+int n, m, q;
+int arr[SIZE][SIZE], diff[SIZE][SIZE];
+
+void insert(int x1, int y1, int x2, int y2, int value) {
+  diff[x1][y1] += value;
+  diff[x2 + 1][y1] -= value;
+  diff[x1][y2 + 1] -= value;
+  diff[x2 + 1][y2 + 1] += value;
 }
+
+int main() {
+  scanf("%d%d%d", &n, &m, &q);
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      scanf("%d", &arr[i][j]);
+      insert(i, j, i, j, arr[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, value;
+    scanf("%d%d%d%d%d", &x1, &y1, &x2, &y2, &value);
+    insert(x1, y1, x2, y2, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      diff[i][j] += diff[i - 1][j] + diff[i][j - 1] - diff[i - 1][j - 1];
+      printf("%d ", diff[i][j]);
+    }
+    putchar('\n');
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 1010;
+
+int arr[SIZE][SIZE], diff[SIZE][SIZE];
+
+int n, m, q;
+
+void insert(int x1, int y1, int x2, int y2, int value) {
+  diff[x1][y1] += value;
+  diff[x2 + 1][y1] -= value;
+  diff[x1][y2 + 1] -= value;
+  diff[x2 + 1][y2 + 1] += value;
+}
+
+int main() {
+  scanf("%d%d%d", &n, &m, &q);
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      scanf("%d", &arr[i][j]);
+      insert(i, j, i, j, arr[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, value;
+    scanf("%d%d%d%d%d", &x1, &y1, &x2, &y2, &value);
+    insert(x1, y1, x2, y2, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      diff[i][j] += diff[i][j - 1] + diff[i - 1][j] - diff[i - 1][j - 1];
+      printf("%d ", diff[i][j]);
+    }
+    putchar('\n');
+  }
+
+  return 0;
+}*/
+

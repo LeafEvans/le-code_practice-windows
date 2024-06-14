@@ -17,13 +17,13 @@ events:
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.39.33519/bin/Hostx86/x86/cl.exe 
+      Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.39.33519/bin/Hostx86/x64/cl.exe 
       Build flags: 
       Id flags:  
       
       The output was:
       0
-      用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.39.33523 版
+      用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.39.33523 版
       版权所有(C) Microsoft Corporation。保留所有权利。
       
       CMakeCCompilerId.c
@@ -63,13 +63,13 @@ events:
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.39.33519/bin/Hostx86/x86/cl.exe 
+      Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.39.33519/bin/Hostx86/x64/cl.exe 
       Build flags: 
       Id flags:  
       
       The output was:
       0
-      用于 x86 的 Microsoft (R) C/C++ 优化编译器 19.39.33523 版
+      用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.39.33523 版
       版权所有(C) Microsoft Corporation。保留所有权利。
       
       CMakeCXXCompilerId.cpp
@@ -109,41 +109,41 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-vmkt4z"
-      binary: "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-vmkt4z"
+      source: "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-0whwwe"
+      binary: "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-0whwwe"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
-      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-vmkt4z'
+        Change Dir: 'C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-0whwwe'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_83ac8/fast
-        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_83ac8.dir\\build.make CMakeFiles/cmTC_83ac8.dir/build
-        mingw32-make[1]: Entering directory 'C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-vmkt4z'
-        Building C object CMakeFiles/cmTC_83ac8.dir/CMakeCCompilerABI.c.obj
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_83ac8.dir\\CMakeCCompilerABI.c.obj.d --working-dir=C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmkt4z --filter-prefix="注意: 包含文件:  " -- C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_83ac8.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_83ac8.dir/ /FS -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_df639/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_df639.dir\\build.make CMakeFiles/cmTC_df639.dir/build
+        mingw32-make[1]: Entering directory 'C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-0whwwe'
+        Building C object CMakeFiles/cmTC_df639.dir/CMakeCCompilerABI.c.obj
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_df639.dir\\CMakeCCompilerABI.c.obj.d --working-dir=C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0whwwe --filter-prefix="注意: 包含文件:  " -- C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_df639.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_df639.dir/ /FS -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
         CMakeCCompilerABI.c
-        Linking C executable cmTC_83ac8.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_83ac8.dir\\link.txt --verbose=1
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_83ac8.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\mt.exe --manifests -- C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_83ac8.dir\\objects1.rsp  /out:cmTC_83ac8.exe /implib:cmTC_83ac8.lib /pdb:C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmkt4z\\cmTC_83ac8.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+        Linking C executable cmTC_df639.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_df639.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_df639.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\mt.exe --manifests -- C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x64\\link.exe /nologo @CMakeFiles\\cmTC_df639.dir\\objects1.rsp  /out:cmTC_df639.exe /implib:cmTC_df639.lib /pdb:C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0whwwe\\cmTC_df639.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
         Visual Studio Incremental Link with embedded manifests
-        Create CMakeFiles\\cmTC_83ac8.dir/manifest.rc
-        Create empty: CMakeFiles\\cmTC_83ac8.dir/embed.manifest
+        Create CMakeFiles\\cmTC_df639.dir/manifest.rc
+        Create empty: CMakeFiles\\cmTC_df639.dir/embed.manifest
         RC Pass 1:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_83ac8.dir/manifest.res CMakeFiles\\cmTC_83ac8.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_df639.dir/manifest.res CMakeFiles\\cmTC_df639.dir/manifest.rc
         LINK Pass 1:
-        C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_83ac8.dir\\objects1.rsp /out:cmTC_83ac8.exe /implib:cmTC_83ac8.lib /pdb:C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmkt4z\\cmTC_83ac8.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_83ac8.dir/intermediate.manifest CMakeFiles\\cmTC_83ac8.dir/manifest.res
+        C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x64\\link.exe /nologo @CMakeFiles\\cmTC_df639.dir\\objects1.rsp /out:cmTC_df639.exe /implib:cmTC_df639.lib /pdb:C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0whwwe\\cmTC_df639.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_df639.dir/intermediate.manifest CMakeFiles\\cmTC_df639.dir/manifest.res
         MT:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\mt.exe /nologo /manifest CMakeFiles\\cmTC_83ac8.dir/intermediate.manifest /out:CMakeFiles\\cmTC_83ac8.dir/embed.manifest /notify_update
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\mt.exe /nologo /manifest CMakeFiles\\cmTC_df639.dir/intermediate.manifest /out:CMakeFiles\\cmTC_df639.dir/embed.manifest /notify_update
         RC Pass 2:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_83ac8.dir/manifest.res CMakeFiles\\cmTC_83ac8.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_df639.dir/manifest.res CMakeFiles\\cmTC_df639.dir/manifest.rc
         FINAL LINK:
-        C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_83ac8.dir\\objects1.rsp /out:cmTC_83ac8.exe /implib:cmTC_83ac8.lib /pdb:C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vmkt4z\\cmTC_83ac8.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_83ac8.dir/intermediate.manifest CMakeFiles\\cmTC_83ac8.dir/manifest.res
-        mingw32-make[1]: Leaving directory 'C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-vmkt4z'
+        C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x64\\link.exe /nologo @CMakeFiles\\cmTC_df639.dir\\objects1.rsp /out:cmTC_df639.exe /implib:cmTC_df639.lib /pdb:C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0whwwe\\cmTC_df639.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_df639.dir/intermediate.manifest CMakeFiles\\cmTC_df639.dir/manifest.res
+        mingw32-make[1]: Leaving directory 'C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-0whwwe'
         
       exitCode: 0
   -
@@ -155,41 +155,41 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-jx9nmx"
-      binary: "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-jx9nmx"
+      source: "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-p83v9a"
+      binary: "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-p83v9a"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
-      CMAKE_EXE_LINKER_FLAGS: "/machine:X86"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-jx9nmx'
+        Change Dir: 'C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-p83v9a'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b3073/fast
-        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b3073.dir\\build.make CMakeFiles/cmTC_b3073.dir/build
-        mingw32-make[1]: Entering directory 'C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-jx9nmx'
-        Building CXX object CMakeFiles/cmTC_b3073.dir/CMakeCXXCompilerABI.cpp.obj
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_b3073.dir\\CMakeCXXCompilerABI.cpp.obj.d --working-dir=C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jx9nmx --filter-prefix="注意: 包含文件:  " -- C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_b3073.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_b3073.dir/ /FS -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_c60e7/fast
+        C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c60e7.dir\\build.make CMakeFiles/cmTC_c60e7.dir/build
+        mingw32-make[1]: Entering directory 'C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-p83v9a'
+        Building CXX object CMakeFiles/cmTC_c60e7.dir/CMakeCXXCompilerABI.cpp.obj
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\\cmTC_c60e7.dir\\CMakeCXXCompilerABI.cpp.obj.d --working-dir=C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p83v9a --filter-prefix="注意: 包含文件:  " -- C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_c60e7.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_c60e7.dir/ /FS -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
         CMakeCXXCompilerABI.cpp
-        Linking CXX executable cmTC_b3073.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b3073.dir\\link.txt --verbose=1
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_b3073.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\mt.exe --manifests -- C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_b3073.dir\\objects1.rsp  /out:cmTC_b3073.exe /implib:cmTC_b3073.lib /pdb:C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jx9nmx\\cmTC_b3073.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+        Linking CXX executable cmTC_c60e7.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_c60e7.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_c60e7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\mt.exe --manifests -- C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x64\\link.exe /nologo @CMakeFiles\\cmTC_c60e7.dir\\objects1.rsp  /out:cmTC_c60e7.exe /implib:cmTC_c60e7.lib /pdb:C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p83v9a\\cmTC_c60e7.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
         Visual Studio Incremental Link with embedded manifests
-        Create CMakeFiles\\cmTC_b3073.dir/manifest.rc
-        Create empty: CMakeFiles\\cmTC_b3073.dir/embed.manifest
+        Create CMakeFiles\\cmTC_c60e7.dir/manifest.rc
+        Create empty: CMakeFiles\\cmTC_c60e7.dir/embed.manifest
         RC Pass 1:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_b3073.dir/manifest.res CMakeFiles\\cmTC_b3073.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_c60e7.dir/manifest.res CMakeFiles\\cmTC_c60e7.dir/manifest.rc
         LINK Pass 1:
-        C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_b3073.dir\\objects1.rsp /out:cmTC_b3073.exe /implib:cmTC_b3073.lib /pdb:C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jx9nmx\\cmTC_b3073.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_b3073.dir/intermediate.manifest CMakeFiles\\cmTC_b3073.dir/manifest.res
+        C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x64\\link.exe /nologo @CMakeFiles\\cmTC_c60e7.dir\\objects1.rsp /out:cmTC_c60e7.exe /implib:cmTC_c60e7.lib /pdb:C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p83v9a\\cmTC_c60e7.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_c60e7.dir/intermediate.manifest CMakeFiles\\cmTC_c60e7.dir/manifest.res
         MT:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\mt.exe /nologo /manifest CMakeFiles\\cmTC_b3073.dir/intermediate.manifest /out:CMakeFiles\\cmTC_b3073.dir/embed.manifest /notify_update
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\mt.exe /nologo /manifest CMakeFiles\\cmTC_c60e7.dir/intermediate.manifest /out:CMakeFiles\\cmTC_c60e7.dir/embed.manifest /notify_update
         RC Pass 2:
-        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_b3073.dir/manifest.res CMakeFiles\\cmTC_b3073.dir/manifest.rc
+        C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x86\\rc.exe /fo CMakeFiles\\cmTC_c60e7.dir/manifest.res CMakeFiles\\cmTC_c60e7.dir/manifest.rc
         FINAL LINK:
-        C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\link.exe /nologo @CMakeFiles\\cmTC_b3073.dir\\objects1.rsp /out:cmTC_b3073.exe /implib:cmTC_b3073.lib /pdb:C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jx9nmx\\cmTC_b3073.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_b3073.dir/intermediate.manifest CMakeFiles\\cmTC_b3073.dir/manifest.res
-        mingw32-make[1]: Leaving directory 'C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-jx9nmx'
+        C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x64\\link.exe /nologo @CMakeFiles\\cmTC_c60e7.dir\\objects1.rsp /out:cmTC_c60e7.exe /implib:cmTC_c60e7.lib /pdb:C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p83v9a\\cmTC_c60e7.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_c60e7.dir/intermediate.manifest CMakeFiles\\cmTC_c60e7.dir/manifest.res
+        mingw32-make[1]: Leaving directory 'C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeScratch/TryCompile-p83v9a'
         
       exitCode: 0
 ...

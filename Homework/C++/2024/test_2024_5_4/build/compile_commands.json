@@ -1,8 +1,0 @@
-[
-{
-  "directory": "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_4/build",
-  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe   -g -o CMakeFiles\\test_2024_5_4.dir\\main.cpp.obj -c C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_4\\main.cpp",
-  "file": "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_4/main.cpp",
-  "output": "CMakeFiles/test_2024_5_4.dir/main.cpp.obj"
-}
-]

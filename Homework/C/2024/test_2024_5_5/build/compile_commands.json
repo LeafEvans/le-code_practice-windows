@@ -1,7 +1,7 @@
 [
 {
   "directory": "C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build",
-  "command": "C:\\msys64\\clang64\\bin\\clang.exe   -g -o CMakeFiles\\test_2024_5_5.dir\\main.c.obj -c C:\\Code\\CodePractice\\Homework\\C\\2024\\test_2024_5_5\\main.c",
+  "command": "C:\\msys64\\mingw64\\bin\\cc.exe   -g -o CMakeFiles\\test_2024_5_5.dir\\main.c.obj -c C:\\Code\\CodePractice\\Homework\\C\\2024\\test_2024_5_5\\main.c",
   "file": "C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/main.c",
   "output": "CMakeFiles/test_2024_5_5.dir/main.c.obj"
 }
