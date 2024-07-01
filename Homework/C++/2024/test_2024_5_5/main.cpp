@@ -3393,3 +3393,522 @@ int main() {
   test07();
   return 0;
 } */
+/* #include <iostream>
+
+using namespace std;
+
+namespace name_a {
+int x;
+void func(void) { cout << "name_a" << endl; }
+}  // namespace name_a
+
+namespace name_b {
+int x;
+void func(void) { cout << "name_b" << endl; }
+}  // namespace name_b
+
+int main() {
+  name_a::x = 100;
+  name_b::x = 1000;
+  cout << name_a::x << endl;
+  cout << name_b::x << endl;
+  name_a::func();
+  name_b::func();
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+namespace A {
+int a = 10;
+namespace B {
+int a = 20;
+}  // namespace B
+}  // namespace A
+
+void test(void) {
+  cout << "A::a = " << A::a << endl;
+  cout << "A::B::a = " << A::B::a << endl;
+}
+
+int main(void) {
+  test();
+  return 0;
+}
+ */
+/* #include "test.hpp"
+
+int main() {
+  MySpace::func1();
+  MySpace::func2(10);
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+namespace student_info_handle {
+int a = 10;
+void func() { cout << "student_info_handle" << endl; }
+}  // namespace student_info_handle
+
+int main() {
+  namespace stuInfoH = student_info_handle;
+  stuInfoH::func();
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) {
+  int a = 10;
+  cout << &a << endl;
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+int main() {
+  int a = 10;
+  int& aRef = a;
+  aRef = 20;
+  cout << "a: " << a << endl;
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+struct test {
+  int &a;
+  int &b;
+};
+
+int main() {
+  cout << sizeof(struct test) << endl;
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+inline int func(int a) { return ++a; }
+
+int main() { return 0; } */
+/* #include <iostream>
+
+using namespace std;
+
+void testFunc(int a = 10, int b = 20) { cout << "a + b = " << a + b << endl; }
+
+int main() {
+  testFunc();
+  testFunc(100);
+  testFunc(100, 200);
+  return EXIT_SUCCESS;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+class CAnimal {
+ public:
+ char name[32];
+ int age;
+ void cry(const char *voice) {
+  cout << name << voice << endl;
+ }
+};
+
+int main() {
+  CAnimal cat;
+  cat.age = 1;
+  cout << cat.age << endl;
+  cat.cry("miao miao");
+  return 0;
+} */
+/* #include <cstdio>
+#include <iostream>
+
+using namespace std;
+
+class Box {
+ public:
+  bool set_length(int length);
+  bool set_width(int width);
+  bool set_height(int height);
+
+  int get_length(void);
+  int get_width(void);
+  int get_height(void);
+
+  int get_area(void);
+  int get_volumn(void);
+
+ private:
+  int _length;
+  int _width;
+  int _height;
+  int _area;
+  int _volume;
+};
+
+
+bool Box::set_length(int length) {
+  if (length <= 0 || length > 100) {
+    cout << "length error" << endl;
+    return false;
+  }
+
+  _length = length;
+
+  return true;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+class Box {
+ public:
+  Box() {
+    _length = 10;
+    _width = 10;
+    _height = 10;
+  }
+
+  int get_length() { return _length; }
+  int get_width() { return _width; }
+  int get_height() { return _height; }
+
+ private:
+  int _length;
+  int _width;
+  int _height;
+};
+
+int main() {
+  Box box;
+  cout << box.get_height() << endl;
+  cout << box.get_length() << endl;
+  cout << box.get_width() << endl;
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+class Box {
+ public:
+  Box(int length, int width, int height)
+      : _length(length), _width(width), _height(height) {}
+
+  int get_lenght() { return _length; }
+
+ private:
+  int _length;
+  int _width;
+  int _height;
+};
+
+int main() {
+  Box b(10, 10, 10);
+  cout << b.get_lenght() << endl;
+  return 0;
+} */
+/* #include <cstdlib>
+#include <cstring>
+#include <iostream>
+
+using namespace std;
+
+class Animal {
+ public:
+  char *name;
+  int age;
+
+  Animal() {
+    name = (char *)malloc(32);
+    cout << "Animal()" << endl;
+  }
+
+  Animal(const char *name1) {
+    int len = strlen(name1);
+    name1 = (char *)malloc(len + 1);
+    strcpy(name, name1);
+  }
+
+  ~Animal() {
+    if (name) {
+      free(name);
+    }
+    cout << "~Animal()" << endl;
+  }
+};
+
+int main() {
+  Animal animal;
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+class Box {
+ public:
+  int length;
+  int width;
+  int height;
+
+  Box() { cout << "Box()" << endl; }
+
+  Box(int x, int y, int z) : length(x), width(y), height(z) {
+    std::cout << "Box(int x, int y, int z) : length(x), width(y), height(z)"
+              << std::endl;
+  }
+};
+
+int main() {
+  int *p1 = new int(10);
+  delete p1;
+
+  int *p2 = new int[4];
+  delete[] p2;
+
+  Box *p3 = new Box;
+  delete p3;
+
+  Box *p4 = new Box[4];
+
+  Box *p5 = new Box(10, 10, 10);
+  delete p5;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+class Test {
+ public:
+  int *sum;
+  int x;
+  int y;
+
+  Test(void) {
+    cout << "Test(void);" << endl;
+    x = 0;
+    y = 0;
+    sum = new int[4];
+  }
+
+  Test(int a, int b) : x(a), y(b) {
+    cout << "Test(int a, int b);" << endl;
+    sum = new int[4];
+  }
+
+  Test(const Test &t) {
+    x = t.x;
+    y = t.y;
+    sum = new int[4];
+
+    for (int i = 0; i < 4; ++i) {
+      sum[i] = t.sum[i];
+    }
+  }
+
+  ~Test() {
+    cout << "~Test();" << endl;
+    delete[] sum;
+  }
+};
+
+int main(void) {
+  Test *t1 = new Test(1, 2);
+  t1->sum[1] = 10;
+  cout << t1->sum[1] << endl;
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+class ABC {
+ public:
+  int x, y, z;
+  ABC(int x, int y, int z) {
+    this->x = x;
+    this->y = y;
+    this->z = z;
+  }
+};
+
+int main() {
+  ABC a(1, 2, 3);
+  ABC b(1, 2, 3);
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+class Sheep {
+ public:
+  char name[32];
+  int age;
+  Sheep() {
+    cout << "Sheep();" << endl;
+    ++count;
+  }
+
+  ~Sheep() { --count; }
+  static int sheep_num() { return count; }
+
+ private:
+  static int count;
+};
+
+int Sheep::count = 0;
+
+int main() {
+  Sheep s1;
+  cout << Sheep::sheep_num() << endl;
+  cout << s1.sheep_num() << endl;
+  return 0;
+} */
+/* #include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  string s1("12345", 2, 4);
+  string s2(3, 'O');
+  cout << s1 << s2 << endl;
+  cout << s1 + s2 << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  string s;
+  s = "Hello World";
+  s = 'A';
+  cout << s << endl;
+  return 0;
+} */
+/* #include <string>
+
+using namespace std;
+
+int main() {
+  string s("abc", 3);
+
+} */
+/* #include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class MyClass {
+ public:
+  MyClass() { cout << "Default constructor" << endl; }
+
+  MyClass(const MyClass& other) { cout << "Copy constructor" << endl; }
+
+  MyClass(MyClass&& other) noexcept { cout << "Move constructor" << endl; }
+};
+
+int main() {
+  MyClass a;
+  MyClass b = std::move(a);  // 将调用移动构造函数
+  return 0;
+} */
+/* #include <cstring>  // std::strlen, std::strcpy
+#include <iostream>
+#include <utility>  // std::move
+
+class MyString {
+ public:
+  // 默认构造函数
+  MyString() : data_(nullptr), size_(0) {
+    std::cout << "Default constructor" << std::endl;
+  }
+
+  // 带参数的构造函数
+  MyString(const char* str) {
+    std::cout << "Parameterized constructor" << std::endl;
+    size_ = std::strlen(str);
+    data_ = new char[size_ + 1];
+    std::strcpy(data_, str);
+  }
+
+  // 拷贝构造函数
+  MyString(const MyString& other) {
+    std::cout << "Copy constructor" << std::endl;
+    size_ = other.size_;
+    data_ = new char[size_ + 1];
+    std::strcpy(data_, other.data_);
+  }
+
+  // 移动构造函数
+  MyString(MyString&& other) noexcept : data_(other.data_), size_(other.size_) {
+    std::cout << "Move constructor" << std::endl;
+    other.data_ = nullptr;
+    other.size_ = 0;
+  }
+
+  // 拷贝赋值运算符
+  MyString& operator=(const MyString& other) {
+    std::cout << "Copy assignment operator" << std::endl;
+    if (this == &other) {
+      return *this;
+    }
+    delete[] data_;
+    size_ = other.size_;
+    data_ = new char[size_ + 1];
+    std::strcpy(data_, other.data_);
+    return *this;
+  }
+
+  // 移动赋值运算符
+  MyString& operator=(MyString&& other) noexcept {
+    std::cout << "Move assignment operator" << std::endl;
+    if (this == &other) {
+      return *this;
+    }
+    delete[] data_;
+    data_ = other.data_;
+    size_ = other.size_;
+    other.data_ = nullptr;
+    other.size_ = 0;
+    return *this;
+  }
+
+  // 析构函数
+  ~MyString() {
+    std::cout << "Destructor" << std::endl;
+    delete[] data_;
+  }
+
+  // 打印字符串
+  void print() const {
+    if (data_) {
+      std::cout << data_ << std::endl;
+    } else {
+      std::cout << "Empty" << std::endl;
+    }
+  }
+
+ private:
+  char* data_;
+  std::size_t size_;
+}; */
+

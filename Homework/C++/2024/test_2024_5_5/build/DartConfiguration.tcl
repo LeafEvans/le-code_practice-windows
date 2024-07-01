@@ -63,8 +63,8 @@ UpdateOptions:
 UpdateType: 
 
 # Compiler info
-Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.39.33519/bin/Hostx86/x64/cl.exe
-CompilerVersion: 19.39.33523.0
+Compiler: C:/msys64/clang64/bin/clang++.exe
+CompilerVersion: 17.0.6
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
@@ -81,7 +81,7 @@ MemoryCheckCommandOptions:
 MemoryCheckSuppressionFile: 
 
 # Coverage
-CoverageCommand: C:/msys64/mingw64/bin/gcov.exe
+CoverageCommand: C:/msys64/clang64/bin/gcov.exe
 CoverageExtraFlags: -l
 
 # Testing options

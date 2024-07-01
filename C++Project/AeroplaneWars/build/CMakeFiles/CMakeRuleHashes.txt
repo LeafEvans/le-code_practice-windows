@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+c1739b4cf3850857ab0592ca9eb2ed85 AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp
+99265dffe45faad812e308de10ade861 AeroplaneWars_autogen/timestamp
+0dead6c90d7294f0115ff5249a8d4aaa CMakeFiles/AeroplaneWars_autogen
+0dead6c90d7294f0115ff5249a8d4aaa CMakeFiles/AeroplaneWars_autogen_timestamp_deps

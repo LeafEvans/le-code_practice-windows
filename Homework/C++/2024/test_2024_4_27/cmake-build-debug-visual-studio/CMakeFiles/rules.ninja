@@ -18,6 +18,15 @@ msvc_deps_prefix = 注意: 包含文件:
 
 
 #############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__test_2024_4_27_unscanned_Debug
+  deps = msvc
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~2\MICROS~3\2022\BUILDT~1\VC\Tools\MSVC\1439~1.335\bin\Hostx64\x64\cl.exe  /nologo $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  description = Building C object $out
+
+
+#############################################
 # Rule for compiling CXX files.
 
 rule CXX_COMPILER__test_2024_4_27_unscanned_Debug

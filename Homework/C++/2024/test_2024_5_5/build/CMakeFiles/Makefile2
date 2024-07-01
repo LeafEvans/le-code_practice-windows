@@ -836,12 +836,12 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 CMakeFiles/test_2024_5_5.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_2024_5_5.dir\build.make CMakeFiles/test_2024_5_5.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_2024_5_5.dir\build.make CMakeFiles/test_2024_5_5.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\build\CMakeFiles --progress-num=1,2 "Built target test_2024_5_5"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\build\CMakeFiles --progress-num=1,2,3 "Built target test_2024_5_5"
 .PHONY : CMakeFiles/test_2024_5_5.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_2024_5_5.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\build\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\build\CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/test_2024_5_5.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\build\CMakeFiles 0
 .PHONY : CMakeFiles/test_2024_5_5.dir/rule

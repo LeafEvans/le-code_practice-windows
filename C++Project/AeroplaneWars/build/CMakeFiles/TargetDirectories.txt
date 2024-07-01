@@ -1,0 +1,9 @@
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/CMakeFiles/AeroplaneWars.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/CMakeFiles/edit_cache.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/CMakeFiles/rebuild_cache.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/CMakeFiles/list_install_components.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/CMakeFiles/install.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/CMakeFiles/install/local.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/CMakeFiles/install/strip.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/CMakeFiles/AeroplaneWars_autogen_timestamp_deps.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/CMakeFiles/AeroplaneWars_autogen.dir

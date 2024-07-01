@@ -3092,4 +3092,831 @@ int main() {
 
   return 0;
 }*/
+/*#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  string s1(3,'a');
+  string s2;
+  cout << s1 << endl;
+  s2.assign("as", 3);
+  cout << s2 << endl;
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+  string s1("hello"), s2("hello world");
+  int n = s1.compare(s2);
+  n = s1.compare(1, 2, s2, 0, 3);
+  n = s1.compare(0, 2, s2);
+  n = s1.compare("Hello");
+  n = s1.compare(1, 2, "Hello");
+  n = s1.compare(1, 2, "Hello", 1, 2);
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+  string s1 = "this is ok";
+  string s2 = s1.substr(1, 2);
+  s2 = s1.substr(3);
+  cout << s2 << endl;
+  return 0;
+}*/
+/*#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  string s1("Hello World");
+  cout << s1.find_first_of('e') << endl;
+  cout << s1.find_last_of("W") << endl;
+  cout << s1.find_first_not_of("o") << endl;
+  cout << s1.find_last_not_of('r') << endl;
+  cout << s1.rfind("ello") << endl;
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+  string s1("Real Steel");
+  s1.replace(1, 3, "123456", 2, 4);
+
+  string s2("Harry Potter");
+  s2.replace(2, 3, 5, '0');
+
+  int n = s2.find("00000");
+  s2.replace(n, 5, "XXX");
+  cout << s2 << endl;
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+  string s1("Real Steel");
+  s1.erase(1, 3);
+  cout << s1 << endl;
+  s1.erase(5);
+  cout << s1 << endl;
+  return 0;
+}*/
+/*#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  string s1("Hello World"), s2("Hello World", 1, 3);
+  string s3 = s1.substr(1, 2);
+  s3 += s2;
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+class A {
+ public:
+  A() { cout << "A()" << endl; }
+  ~A() { cout << "~A()" << endl; }
+
+  A(int a, int b) : x(a), y(b) {}
+
+  int get_x() {
+    return x;
+  }
+  int get_y() { return y; }
+ private:
+  int x;
+
+ protected:
+  int y;
+};
+
+class B : public A {
+ public:
+  B() {
+    cout << "B()" << endl;
+  }
+  B(int a, int b) : A(a, b) {
+    cout << "B(int a, int b) : A(a, b)" << endl;
+  }
+  ~B() {
+    cout << "~B()" << endl;
+  }
+};
+
+int main() {
+  B b(10, 20);
+
+  cout << b.get_x() << endl;
+  cout << b.get_y() << endl;
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+class A {
+ public:
+  void func() { cout << "A::func()" << endl; }
+};
+
+class B : public A {
+ public:
+  // 和基类中的成员函数名字相同，参数也相同，隐藏
+  void func() { cout << "B::func()" << endl; }
+  void func(int x) { cout << "B::func(int x)" << endl; }
+};
+
+int main() {
+  B b;
+  b.func();
+  b.A::func();
+  // 实现下面这个有参的函数，
+  // 即使父类中有形参不一样但同名的函数，
+  // 也不可以 b.func() 这样调用父类
+  b.func(10);
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+class A {
+ public:
+  int a_x;
+};
+
+class B : public A {
+ public:
+  int b_x;
+};
+
+class C : public A {
+ public:
+  int c_x;
+};
+
+class D : public B, public C {
+ public:
+  int d_x;
+};
+
+int main() {
+  cout << sizeof(D) << endl;
+  D d;
+  d.B::a_x = 100;
+  d.C::a_x = 200;
+  cout << d.B::a_x << endl;
+  cout << d.C::a_x << endl;
+  return 0;
+}*/
+/*#include <iostream>
+using namespace std;
+class A {
+ public:
+  static int num;  // 声明
+  static int func(int a) { return num; };
+};
+int A::num = 100;  // 定义
+class B : public A {
+ public:
+  // 当派生类中有与基类同名的变量
+  // 就会隐藏原来的
+  static int num;
+};
+int B::num = 1000;
+int main() {
+  A a;
+  a.num = 200;
+  a.func(10);
+
+  B b;
+  b.num = 300;
+  // 派生类能继承并且共享静态成员变量
+  // 静态成员函数类似
+  cout << A::num << endl;
+  cout << B::num << endl;
+  return 0;
+}*/
+/*#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int func() {
+  int x = 10;
+  return x;
+}
+
+class Test {
+ public:
+  int data;
+  char *ptr;
+
+  Test() : data(0), ptr(new char[10]) {
+    cout << "Test()" << endl;
+  }
+
+  Test(const Test &t) {
+    data = t.data;
+    if (strlen(t.ptr)) {
+      ptr = new char[strlen(t.ptr)];
+      strcpy(ptr, t.ptr);
+    } else {
+      ptr = new char[10];
+    }
+  }
+  Test(int data, const char *src) {
+    this->data = data;
+    if (src && strlen(src)) {
+      this->ptr = new char[strlen(src) + 1];
+      strcpy(this->ptr, src);
+    }
+  }
+
+  ~Test() {
+    if (ptr) {
+      delete[] ptr;
+    }
+  }
+
+  Test operator+(const Test &t) {
+    Test val;
+    val.data = data + t.data;
+    val.ptr = new char[strlen(ptr) + strlen(t.ptr) + 1];
+    memset(val.ptr, 0, strlen(ptr) + strlen(t.ptr) + 1);
+    strcat(val.ptr, ptr);
+    strcat(val.ptr, t.ptr);
+    return val;
+  }
+
+  Test &operator=(const Test &t) {
+    delete[] ptr;
+    ptr = new char[strlen(t.ptr) + 1];
+    data = t.data;
+    strcpy(ptr, t.ptr);
+    return *this;
+  }
+
+  Test &operator++() {
+    ++data;
+    return *this;
+  }
+
+  Test operator++(int) {
+    Test temp = *this;
+    ++data;
+    return temp;
+  }
+
+  friend ostream &operator<<(ostream &os, const Test &t) {
+    return os << t.data << endl << t.ptr << endl;
+  }
+};*/
+/*#include <iostream>
+
+using namespace std;
+
+class Hero {
+ public:
+  virtual void huicheng() { cout << "Hero::huicheng()" << endl; }
+
+  void func() { cout << "Hero::func()" << endl; }
+};
+
+class Libai : public Hero {
+ public:
+  // 隐藏基类中的 func2 函数
+  void func() { cout << "Libai::func()" << endl; }
+  // 对基类中虚函数的重写（override）
+  void huicheng() { cout << "Libai::huicheng()" << endl; }
+};
+
+class Caocao : public Hero {
+ public:
+  void func() { cout << "Caocao::func()" << endl; }
+  void huicheng() { cout << "Caocao::huicheng()" << endl; }
+};
+
+class Houyi : public Hero {};
+
+// 使用基类没有重写的 huicheng() 函数
+void goback(Hero &h) {
+  h.huicheng();
+  h.func();
+}
+
+int main() {
+  Libai libai;
+  Caocao caocao;
+  Houyi houyi;
+
+  // libai 回城
+  // 因为是虚函数，所以打印的是派生类对象
+  goback(libai);
+  goback(caocao);
+  goback(houyi);
+
+  return 0;
+}*/
+/*#include <iostream>
+#include "test.h"
+
+using namespace std;
+
+class Hero {
+ public:
+  virtual void back() = 0;  // 纯虚函数
+};
+
+class LiBai : public Hero {
+ public:
+  void back() { cout << "LiBai::back()" << endl; }  // 重写
+};
+
+class CaoCao : public Hero {
+ public:
+  void back() { cout << "CaoCao::back()" << endl; }  // 重写
+};
+
+int main() {
+  LiBai h1;
+  CaoCao h2;
+  Hero *p;
+
+  p = &h1;
+  p->back();
+
+  p = &h2;
+  p->back();
+
+  return 0;
+}*/
+/*#include "test.h"
+
+int main() {
+  test();
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  try {
+    vector<int> arr(3, 10);
+    for (int i = 0; i < 3; ++i) {
+      cout << arr.at(i) << endl;
+    }
+    arr.at(3) = 100;
+  } catch (...) {
+    cout << "Hello" << endl;
+  }
+  return 0;
+}*/
+/*#include <iostream>
+#include <exception>
+using namespace std;
+
+int func(int a, int b) {
+  if (b) {
+    return a / b;
+  } else {
+    // 如果除数为 0，则打印调试语句
+    cout << "division 0" << endl;
+    // 抛出异常
+    throw "error, hello world";
+  }
+}
+
+int main() {
+  try {
+    func(10, 0);
+  } catch (const char *msg) {
+    cout << msg << endl;
+  }
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  try {
+    vector<int> arr(3, 10);
+    for (int i = 0; i < 3; ++i) {
+      cout << arr.at(i) << endl;
+    }
+    arr.at(3) = 100;
+  } catch (out_of_range &err) {
+    cout << err.what() << endl;
+  }
+}*/
+/*#include <cstring>
+#include <exception>
+
+class FHeaderErr : public std::exception {
+ public:
+  const char *what() const throw() {
+    return "frame header error";
+  }
+};
+
+class FTailErr : public std::exception {
+ public:
+  const char *what() const throw() {
+    return "frame tail error";
+  }
+};
+
+bool func(const char *str) {
+  if (!str) {
+    throw "null pointer";
+  }
+
+  int len = strlen(str);
+
+  if (!(str[0] == '#' && str[1] == '#')) {
+    FHeaderErr err;
+    throw(err);
+  }
+
+  if (!(str[len - 1] == '#' && str[len - 2] == '#')) {
+    FTailErr err;
+    throw(err);
+  }
+
+  return true;
+}*/
+/*#include <exception>
+
+using namespace std;
+
+class Err : public exception {
+ public:
+  const char *what() throw() {}
+};*/
+/*
+template<class T>
+class CMath {
+ public:
+  CMath(const T &t1, const T &t2)
+      : m_t1(t1), m_t2(t2) {}
+  T add();
+
+ private:
+  T m_t1;
+  T m_t2;
+};
+
+template<class T>
+T CMath<T>::add() {
+  return m_t2 + m_t1;
+}*/
+/*
+#include <iostream>
+
+using namespace std;
+
+template <class T>
+class A {
+ public:
+  static void print() {
+    cout << "&m_i" << &m_i <<',' << " &m_t: " << &m_t << endl;
+  }
+  static int m_i;
+  static T m_t;
+};
+
+template <class T>
+int A<T>::m_i;
+
+template <class T>
+T A<T>::m_t;
+
+int main() {
+  A<int> x, y, z;
+  x.print();
+  y.print();
+  z.print();
+  A<int>::print();
+
+  cout << "=== === === ===\n";
+
+  A<double> u, v, w;
+  u.print();
+  v.print();
+  w.print();
+  A<double>::print();
+  return 0;
+}*/
+/*
+#include <iostream>
+
+using namespace std;
+
+template<class T>
+class Array {
+ public:
+  T &operator[](size_t i) {
+    return m_arr[i];
+  }
+ private:
+  T m_arr[10];
+};
+
+int main() {
+  Array<Array<int>> array;
+  for (int i = 0; i < 10; ++i) {
+    for (int j = 0; j < 10; ++j) {
+      array[i][j] = i + j;
+    }
+  }
+  for (int i = 0; i < 10; ++i) {
+    for (int j = 0; j < 10; ++j) {
+      cout << array[i][j] << ' ';
+    }
+    cout << '\n';
+  }
+  return 0;
+}*/
+/*
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+template<class T>
+class Array {
+ public:
+  T &operator[](size_t i) {
+    return m_arr[i];
+  }
+ private:
+  T m_arr[10];
+};
+
+int main() {
+  Array<Array<int>> array;
+  for (int i = 0; i < 10; ++i) {
+    for (int j = 0; j < 10; ++j) {
+      array[i][j] = i + j;
+    }
+  }
+  for (int i = 0; i < 10; ++i) {
+    for (int j = 0; j < 10; ++j) {
+      cout << setw(4) << left << array[i][j];
+    }
+    cout << '\n';
+  }
+  return 0;
+}*/
+/*#include <cstring>
+template<class T>
+class CMath {
+ public:
+  CMath(const T &t1, const T &t2) : m_t1(t1), m_t2(t2) {}
+  T add() { return m_t1 + m_t2; }
+ private:
+  T m_t1;
+  T m_t2;
+};
+
+template<>
+char *const CMath<char *const>::add() {
+  return strcat(m_t1, m_t2);
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+template<class T = short, class U = int>
+class CMath {
+ public:
+  static void foo() {
+    cout << "1:CMath<T, D>::foo" << endl;
+  }
+};
+
+// 局部特化
+// 只特化一部分类型参数
+template<class T>
+class CMath<short, T> {
+ public:
+  static void foo() {
+    cout << "2:CMath<T, short>::foo" << endl;
+  }
+};
+
+// 将原本两个不同的变量变成一个变量
+template<class T>
+class CMath<T, T> {
+ public:
+  static void foo() {
+    cout << "3:CMath<T, T>::foo" << endl;
+  }
+};
+
+int main() {
+  CMath<int, double>::foo();  // 1
+  CMath<int, short>::foo();  // 2
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+template<class T = int, class U =short>
+class CMath {
+ public:
+  void foo() {
+
+  }
+};
+
+template<class T>
+class CMath<short, T> {
+ public:
+  void foo() {
+
+  }
+};
+
+template<>
+class CMath<short, int> {
+ public:
+  void foo() {
+
+  }
+};
+
+template<class T, size_t S = 20>
+class Array {
+ public:
+  T &operator[](size_t i) {
+    return m_arr[i];
+  }
+  size_t size() { return S; }
+
+ private:
+  T m_arr[S];
+};
+
+int main() {
+  Array<int, 20> a;
+
+  for (int i = 0; i < a.size(); ++i) {
+    a[i] = i + 1;
+  }
+}*/
+/*
+template<class T>
+class Array {
+ public:
+  T &operator[](int i) {
+    return m_arr[i];
+  }
+
+ private:
+  T m_arr[10];
+};
+
+template<class T>
+class Sum {
+ public:
+  Sum(Array<T> &s) : m_s(s) {}
+  T add() {
+    T t = 0;
+    for (int i = 0; i < 10; ++i) {
+      t += m_s[i];
+    }
+    return t;
+  }
+ private:
+  Array<T> m_s;
+};*/
+/*#include <iostream>
+using namespace std;
+template<class T>
+class CMath {
+ public:
+  template<class D>
+  void foo();
+};
+
+template<class T>
+template<class D>
+void CMath<T>::foo() {
+  cout << "CMath<T>::foo<D>()" << endl;
+}*/
+/*#include <iostream>
+using namespace std;
+
+template<class X>
+class A {
+ public:
+  template<class Y>
+  class B {
+   public:
+    template<class Z>
+    class C;
+  };
+};
+
+template<class X>
+template<class Y>
+template<class Z>
+class A<X>::B<Y>::C {
+ public:
+  template<class D>
+  void foo() {
+    cout << "foo()" << endl;
+  }
+};
+
+int main() {
+  A<int>::B<double>::C<char> c;
+  c.foo<int>();
+  return 0;
+}*/
+/*
+#include <iostream>
+
+using namespace std;
+
+template <class T, size_t S = 15>
+class Array {
+ public:
+  T &operator[](size_t i) {
+    return m_arr[i];
+  }
+
+ private:
+  T m_arr[S];
+};
+
+template<class T, template<class, size_t S = 15> class D, size_t S = 15>
+class Sum{
+ public:
+  Sum(D<T, S> d):m_s(d) {}
+
+  T add() {
+    T t = 0;
+    for (int i = 0; i < S; ++i) {
+      t += m_s[i];
+    }
+    return t;
+  }
+
+ private:
+  D<T> m_s;
+};*/
+/*
+#include <iostream>
+
+using namespace std;
+
+class A {
+ public:
+  class B {
+   public:
+    void foo() {
+      cout << "A::B::foo()" << endl;
+    }
+  };
+};
+
+template<class T>
+void Func() {
+  typename T::B b;
+  b.foo();
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+template<class D>
+void foo() {
+  D d;
+  d.template func<int>();
+}*/
+
 

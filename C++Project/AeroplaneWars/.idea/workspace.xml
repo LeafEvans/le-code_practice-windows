@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="AeroplaneWars" targetName="AeroplaneWars" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d4c0e24d-09fc-4ac9-a57c-8fdc1ee7da15" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/QtSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Map.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Map.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainScene.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainScene.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/test.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/test.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework/Qt/test_2024_6_30/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework/Qt/test_2024_6_30/.idea/test_2024_6_30.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework/Qt/test_2024_6_30/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework/Qt/test_2024_6_30/mainwindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AeroplaneWars.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainscene.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainwindow.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainwindow.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainwindow.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource.qrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_29/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_29/.vscode/compile_commands.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_29/.xmake/windows/x64/cache/detect" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_29/.xmake/windows/x64/cache/toolchain" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_29/src/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_2024_2_29/xmake.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_19/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_19/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_19/test_2024_4_19.layout" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_19/test_2024_4_19.layout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.cmake/api/v1/reply/cmakeFiles-v1-7c6d6ba8680d5a2522ef.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.cmake/api/v1/reply/codemodel-v2-5b2f25eb9e6b4cd6314b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.cmake/api/v1/reply/index-2024-06-06T13-50-07-0874.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.cmake/api/v1/reply/target-test_2024_4_27-Debug-e384059c1f89fbe94679.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/clion-Debug-Clang-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/clion-Debug-Clang-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/test_2024_4_27.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-clang/test_2024_4_27.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.cmake/api/v1/reply/cmakeFiles-v1-1c8976c5c016a90b8181.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.cmake/api/v1/reply/codemodel-v2-d231ba6e5f0b132cda22.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.cmake/api/v1/reply/index-2024-06-06T13-50-07-0849.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.cmake/api/v1/reply/target-test_2024_4_27-Debug-8a59f8bcf7c924749981.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/CMakeFiles/clion-Debug-MinGW-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/CMakeFiles/clion-Debug-MinGW-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/test_2024_4_27.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-mingw/test_2024_4_27.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.cmake/api/v1/reply/cmakeFiles-v1-b9eeb2bf882753f32925.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.cmake/api/v1/reply/codemodel-v2-3d294b6ee42c5fb7b7fa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.cmake/api/v1/reply/index-2024-06-06T13-50-07-0124.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.cmake/api/v1/reply/target-test_2024_4_27-Debug-32a65d98563090eb40fc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/clion-Debug-Visual Studio-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/clion-Debug-Visual Studio-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/CMakeFiles/test_2024_4_27.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/test_2024_4_27.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/test_2024_4_27.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/test_2024_4_27.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/test_2024_4_27.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/test_2024_4_27.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/test_2024_4_27.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-default/.cmake/api/v1/reply/cmakeFiles-v1-3442311a7c919be0e514.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-default/.cmake/api/v1/reply/codemodel-v2-05809989ba5150ef612a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-default/.cmake/api/v1/reply/index-2024-06-06T13-50-07-0852.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-default/.cmake/api/v1/reply/target-test_2024_4_27-328bfb4818f82955ba70.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-default/CMakeFiles/clion-Default-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-default/CMakeFiles/clion-Default-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-default/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-default/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-default/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-default/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/.cmake/api/v1/reply/cmakeFiles-v1-56da6d4b37ae8d598910.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/.cmake/api/v1/reply/codemodel-v2-d8fb195b0a96a0ea03f4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/.cmake/api/v1/reply/index-2024-06-06T13-50-08-0080.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/.cmake/api/v1/reply/target-test_2024_4_27-MinSizeRel-532cee99dcb80011e6f1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/CMakeFiles/clion-MinSizeRel-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/CMakeFiles/clion-MinSizeRel-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-minsizerel/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-release/.cmake/api/v1/reply/cmakeFiles-v1-c6c09909b8bfe6640e05.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-release/.cmake/api/v1/reply/codemodel-v2-3a1b86fe08e6e61d090f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-release/.cmake/api/v1/reply/index-2024-06-06T13-50-08-0037.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-release/.cmake/api/v1/reply/target-test_2024_4_27-Release-202c77e81125e11d10d9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-release/CMakeFiles/clion-Release-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-release/CMakeFiles/clion-Release-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-release/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-release/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-release/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-release/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/.cmake/api/v1/reply/cmakeFiles-v1-e896b647a72f2bf32255.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/.cmake/api/v1/reply/codemodel-v2-1f362460a483bcba628e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/.cmake/api/v1/reply/index-2024-06-06T13-50-08-0050.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/.cmake/api/v1/reply/target-test_2024_4_27-RelWithDebInfo-ca1e7e67b7fceb05e24b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/CMakeFiles/clion-RelWithDebInfo-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/CMakeFiles/clion-RelWithDebInfo-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/cmake-build-relwithdebinfo/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_4_27/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/.cache/clangd/index/main.cpp.D54D390FE538D30E.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/.cmake/api/v1/reply/cache-v2-a1a31a2328a3d88d60fc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/.cmake/api/v1/reply/cache-v2-aecc0a9caf89350df30d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/.cmake/api/v1/reply/cmakeFiles-v1-27453dd2ca650824f47c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/.cmake/api/v1/reply/cmakeFiles-v1-7168835954f04b947596.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/.cmake/api/v1/reply/codemodel-v2-40453d3c9b30f5025762.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/.cmake/api/v1/reply/codemodel-v2-495d9d9b75e06642155f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/.cmake/api/v1/reply/index-2024-05-26T12-50-41-0602.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/.cmake/api/v1/reply/index-2024-06-14T05-02-25-0944.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/.cmake/api/v1/reply/target-test_2024_5_5-Debug-1bef675161307edb5a95.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/.cmake/api/v1/reply/target-test_2024_5_5-Debug-46d2e393e31998349cc6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/.cmake/api/v1/reply/toolchains-v1-369cbca7661f53bf5191.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/.cmake/api/v1/reply/toolchains-v1-e51cbfaa56c0264d150d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CompilerIdC/CMakeCCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CompilerIdCXX/CMakeCXXCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CompilerIdCXX/CMakeCXXCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/3.28.2/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/ShowIncludes/foo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/ShowIncludes/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/ShowIncludes/main.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/embed.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/intermediate.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/main.cpp.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/main.cpp.obj.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/manifest.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/manifest.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CMakeFiles/test_2024_5_5.dir/vc140.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CPackConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CPackConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CPackSourceConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/CPackSourceConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/DartConfiguration.tcl" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/DartConfiguration.tcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/Testing/TAG" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/Testing/TAG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/compile_commands.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/compile_commands.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/test_2024_5_5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/test_2024_5_5.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/test_2024_5_5.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/test_2024_5_5.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/build/test_2024_5_5.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/C++/2024/test_2024_5_5/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/AeroplaneWars/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/AeroplaneWars/AeroplaneWars.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/AeroplaneWars/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/AeroplaneWars/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/AeroplaneWars/mainscene.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/AeroplaneWars/mainscene.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/AeroplaneWars/mainscene.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/AeroplaneWars/mainwindow.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/AeroplaneWars/mainwindow.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/AeroplaneWars/mainwindow.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/.clang-format" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/.idea/QtSettings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/.idea/test_2024_5_1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/.cmake/api/v1/query/client-vscode/query.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/.cmake/api/v1/reply/cache-v2-5fcdf3c1ae7e420d419a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/.cmake/api/v1/reply/cmakeFiles-v1-36882b865101fe13116c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/.cmake/api/v1/reply/codemodel-v2-e181f784f61bd5a94aef.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/.cmake/api/v1/reply/index-2024-05-05T08-31-32-0036.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/.cmake/api/v1/reply/target-test_2024_5_1-Debug-4dc357780f01fd720dd2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/.cmake/api/v1/reply/target-test_2024_5_1_autogen-Debug-d4a2e1432300c7528b65.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/.cmake/api/v1/reply/target-test_2024_5_1_autogen_timestamp_deps-Debug-1dca48d848f2e1d93569.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/.cmake/api/v1/reply/toolchains-v1-f9f0cdee554ca778d098.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/.qt/QtDeploySupport.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/.qt/QtDeployTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/3.28.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/3.28.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/3.28.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/3.28.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/3.28.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/3.28.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/3.28.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/3.28.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/3.28.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/3.28.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1.dir/includes_CXX.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1.dir/linkLibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen.dir/AutogenInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen_timestamp_deps.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen_timestamp_deps.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen_timestamp_deps.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen_timestamp_deps.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen_timestamp_deps.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/CMakeFiles/test_2024_5_1_autogen_timestamp_deps.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/build/compile_commands.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/reply/cache-v2-2fb83e9b739cdcbaac31.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/reply/cmakeFiles-v1-cd768b8056942d3b55b1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/reply/codemodel-v2-8e8008aca73649ee72e2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/reply/index-2024-05-01T00-17-38-0583.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/reply/target-test_2024_5_1-Debug-b0de1e2a3ef72871a027.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/reply/target-test_2024_5_1_autogen-Debug-6f1351825823721bcd51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/reply/target-test_2024_5_1_autogen_timestamp_deps-Debug-36483e4264bbcc69b385.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.cmake/api/v1/reply/toolchains-v1-24e8b4e970eacdd4e559.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.qt/QtDeploySupport.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/.qt/QtDeployTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/3.28.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/3.28.1/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/clean_additional.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/clion-Debug-Clang-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/d/b51140f57a99a669c6d1e853b474a3524ef6e461ec80533fb276c953b7b2aadf.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/test_2024_5_1.dir/CXX.dd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/test_2024_5_1.dir/CXXDependInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/test_2024_5_1.dir/CXXModules.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/test_2024_5_1.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/test_2024_5_1.dir/main.cpp.obj.ddi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/test_2024_5_1.dir/main.cpp.obj.ddi.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/test_2024_5_1.dir/main.cpp.obj.modmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/test_2024_5_1.dir/test_2024_5_1_autogen/mocs_compilation.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/test_2024_5_1_autogen.dir/AutogenInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/test_2024_5_1_autogen.dir/AutogenUsed.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/CMakeFiles/test_2024_5_1_autogen.dir/ParseCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/Qt6Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/Qt6Gui.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/Qt6Widgets.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/plugins/platforms/qwindows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/test_2024_5_1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/test_2024_5_1_autogen/deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/test_2024_5_1_autogen/moc_predefs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/test_2024_5_1_autogen/mocs_compilation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-clang/test_2024_5_1_autogen/timestamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/reply/cache-v2-cdb8920500e902db1205.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/reply/cmakeFiles-v1-2a901b5e8e55c13d5e47.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/reply/codemodel-v2-c4b0cc856295d616ca4e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/reply/index-2024-05-01T09-58-29-0109.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/reply/target-test_2024_5_1-Debug-bfe4a58dafe9fb2cb1b7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/reply/target-test_2024_5_1_autogen-Debug-4bb1c03f41764e923753.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/reply/target-test_2024_5_1_autogen_timestamp_deps-Debug-b0dcf54e98354f12e94d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.cmake/api/v1/reply/toolchains-v1-140f48578653d0255cbc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.qt/QtDeploySupport.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/.qt/QtDeployTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/3.28.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/3.28.1/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/clean_additional.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/clion-Debug-MinGW-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/d/ac04d6bd40e13c03e447e701236335e7232afd9a0337067ddd05567b83e080fa.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/test_2024_5_1.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/test_2024_5_1.dir/test_2024_5_1_autogen/mocs_compilation.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/test_2024_5_1_autogen.dir/AutogenInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/test_2024_5_1_autogen.dir/AutogenUsed.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/CMakeFiles/test_2024_5_1_autogen.dir/ParseCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/Qt6Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/Qt6Gui.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/Qt6Widgets.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/plugins/platforms/qwindows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/test_2024_5_1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/test_2024_5_1_autogen/deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/test_2024_5_1_autogen/moc_predefs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/test_2024_5_1_autogen/mocs_compilation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-mingw/test_2024_5_1_autogen/timestamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/reply/cache-v2-7c12c7fb994f9bcfd996.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/reply/cmakeFiles-v1-bf41178c7e87dd90b20b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/reply/codemodel-v2-ece069d7f8b372037c44.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/reply/index-2024-05-01T09-57-36-0955.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/reply/target-test_2024_5_1-Debug-45230a7205663b37299e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/reply/target-test_2024_5_1_autogen-Debug-eb7900ab1faa784edc0d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/reply/target-test_2024_5_1_autogen_timestamp_deps-Debug-5d45a5ae84ecce43351d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.cmake/api/v1/reply/toolchains-v1-60c11ca97ca24d353a7d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.qt/QtDeploySupport.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/.qt/QtDeployTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/ShowIncludes/foo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/ShowIncludes/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/ShowIncludes/main.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/clean_additional.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/clion-Debug-Visual Studio-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/d/26cdab00e30ccf34516804d3cbd1a5c26c684171948c0045bd78871dea611b7e.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/test_2024_5_1.dir/CXXDependInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/test_2024_5_1.dir/main.cpp.obj.ddi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/test_2024_5_1.dir/test_2024_5_1_autogen/mocs_compilation.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/test_2024_5_1.dir/vc140.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/test_2024_5_1_autogen.dir/AutogenInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/test_2024_5_1_autogen.dir/AutogenUsed.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/CMakeFiles/test_2024_5_1_autogen.dir/ParseCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/test_2024_5_1_autogen/deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/test_2024_5_1_autogen/mocs_compilation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug-visual-studio/test_2024_5_1_autogen/timestamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/reply/cache-v2-b9787975c25518fdf4ed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-b4fb60841f4df8731ace.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-969206b4370888ab1795.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-01T00-08-25-0987.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/reply/target-test_2024_5_1-Debug-16d27c5eeddadebc470f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/reply/target-test_2024_5_1_autogen-Debug-c20785e1ccbf126178ec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/reply/target-test_2024_5_1_autogen_timestamp_deps-Debug-35228825b1c1fd95cebd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-140f48578653d0255cbc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.qt/QtDeploySupport.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/.qt/QtDeployTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/clean_additional.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/d/c0dd827bea57b29b56fdbc428b6bc555a4f1f81e46bfe2cffac05126ed79ac24.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/test_2024_5_1.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/test_2024_5_1.dir/test_2024_5_1_autogen/mocs_compilation.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/test_2024_5_1_autogen.dir/AutogenInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/test_2024_5_1_autogen.dir/AutogenUsed.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/test_2024_5_1_autogen.dir/ParseCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/Qt6Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/Qt6Gui.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/Qt6Widgets.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/plugins/platforms/qwindows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/test_2024_5_1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/test_2024_5_1_autogen/deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/test_2024_5_1_autogen/moc_predefs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/test_2024_5_1_autogen/mocs_compilation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-debug/test_2024_5_1_autogen/timestamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/reply/cache-v2-747d5d3c8bb3a0554fe3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/reply/cmakeFiles-v1-75650bcb9334a192e918.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/reply/codemodel-v2-a7321ddec6a03340a22f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/reply/directory-.-Release-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/reply/index-2024-05-01T00-25-08-0180.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/reply/target-test_2024_5_1-Release-dac29a8fc7d037240ebb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/reply/target-test_2024_5_1_autogen-Release-826164de7fbb754e5033.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/reply/target-test_2024_5_1_autogen_timestamp_deps-Release-92017bae2106247a19a3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.cmake/api/v1/reply/toolchains-v1-24e8b4e970eacdd4e559.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.qt/QtDeploySupport.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/.qt/QtDeployTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/3.28.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/3.28.1/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/3.28.1/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/clean_additional.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/clion-Release-Clang-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/d/3f5c401efebd000f7aa97789d4ab48c415843b60a577cdfbb8c0901f9a73809b.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/test_2024_5_1.dir/CXX.dd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/test_2024_5_1.dir/CXXDependInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/test_2024_5_1.dir/CXXModules.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/test_2024_5_1.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/test_2024_5_1.dir/main.cpp.obj.ddi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/test_2024_5_1.dir/main.cpp.obj.ddi.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/test_2024_5_1.dir/main.cpp.obj.modmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/test_2024_5_1.dir/test_2024_5_1_autogen/mocs_compilation.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/test_2024_5_1_autogen.dir/AutogenInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/test_2024_5_1_autogen.dir/AutogenUsed.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/CMakeFiles/test_2024_5_1_autogen.dir/ParseCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/Qt6Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/Qt6Gui.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/Qt6Widgets.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/plugins/platforms/qwindows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/test_2024_5_1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/test_2024_5_1_autogen/deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/test_2024_5_1_autogen/moc_predefs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/test_2024_5_1_autogen/mocs_compilation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/cmake-build-release-clang/test_2024_5_1_autogen/timestamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_1/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/.cache/clangd/index/main.cpp.78E1D6ACE602DBF9.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/.cache/clangd/index/mainwindow.cpp.91BBA44003D8345F.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/.cache/clangd/index/mainwindow.h.F19895DCCF95B8F8.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/Qt/test_2024_6_30/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cache/clangd/index/moc_mainwindow.cpp.BDC274EA4E9B6E45.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cache/clangd/index/mocs_compilation.cpp.993CF8AA685AE00B.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cache/clangd/index/ui_mainwindow.h.F8C8EDF7A1260B89.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cmake/api/v1/query/client-vscode/query.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cmake/api/v1/reply/cache-v2-dcbd96c658a0de7dd838.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cmake/api/v1/reply/cmakeFiles-v1-72e4a94cc24a04168270.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cmake/api/v1/reply/codemodel-v2-c1b045a88b3f6a1f8040.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cmake/api/v1/reply/directory-.-Debug-ddb300772b0c0d2db973.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cmake/api/v1/reply/index-2024-05-10T05-36-52-0968.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cmake/api/v1/reply/target-test_2024_5_9-Debug-80436f6dc937079149d7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cmake/api/v1/reply/target-test_2024_5_9_autogen-Debug-67c2b545c680930a78b5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cmake/api/v1/reply/target-test_2024_5_9_autogen_timestamp_deps-Debug-0e7cb7311169007f6f55.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.cmake/api/v1/reply/toolchains-v1-273dad3b23786f3f9318.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.qt/QtDeploySupport.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/.qt/QtDeployTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/3.28.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/3.28.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/3.28.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/3.28.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/3.28.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/includes_CXX.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/linkLibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/main.cpp.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/mainwindow.cpp.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9.dir/test_2024_5_9_autogen/mocs_compilation.cpp.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen.dir/AutogenInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen.dir/AutogenUsed.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen.dir/ParseCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen_timestamp_deps.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen_timestamp_deps.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen_timestamp_deps.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen_timestamp_deps.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen_timestamp_deps.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/CMakeFiles/test_2024_5_9_autogen_timestamp_deps.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/compile_commands.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/test_2024_5_9_autogen/EWIEGA46WW/moc_mainwindow.cpp.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/test_2024_5_9_autogen/deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/test_2024_5_9_autogen/moc_predefs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/test_2024_5_9_autogen/mocs_compilation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/build/test_2024_5_9_autogen/timestamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/Qt/test_2024_6_30/mainwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/Qt/test_2024_6_30/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Qt/test_2024_5_9/mainwindow.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework/Rust/test_2024_5_12/target/.rustc_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework/Rust/test_2024_5_12/target/.rustc_info.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/mainscene.cpp" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake 应用程序.AeroplaneWars.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.advertisement.text.overridden": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AeroplaneWars" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AeroplaneWars" TARGET_NAME="AeroplaneWars" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AeroplaneWars" RUN_TARGET_NAME="AeroplaneWars">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="d4c0e24d-09fc-4ac9-a57c-8fdc1ee7da15" name="更改" comment="" />
+      <created>1719771035038</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719771035038</updated>
+      <workItem from="1719771037065" duration="656000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+</project>

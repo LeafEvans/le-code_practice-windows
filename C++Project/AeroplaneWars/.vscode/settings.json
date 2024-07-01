@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "qpixmap": "cpp",
+        "qrect": "cpp",
+        "type_traits": "cpp",
+        "qicon": "cpp",
+        "ctime": "cpp",
+        "qwidget": "cpp",
+        "qtimer": "cpp",
+        "cstdlib": "cpp",
+        "qmediaplayer": "cpp",
+        "qaudiooutput": "cpp"
+    }
+}

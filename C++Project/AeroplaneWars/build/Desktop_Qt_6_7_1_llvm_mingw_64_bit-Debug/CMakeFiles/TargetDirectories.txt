@@ -1,0 +1,9 @@
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/Desktop_Qt_6_7_1_llvm_mingw_64_bit-Debug/CMakeFiles/AeroplaneWars.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/Desktop_Qt_6_7_1_llvm_mingw_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/Desktop_Qt_6_7_1_llvm_mingw_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/Desktop_Qt_6_7_1_llvm_mingw_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/Desktop_Qt_6_7_1_llvm_mingw_64_bit-Debug/CMakeFiles/install.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/Desktop_Qt_6_7_1_llvm_mingw_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/Desktop_Qt_6_7_1_llvm_mingw_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/Desktop_Qt_6_7_1_llvm_mingw_64_bit-Debug/CMakeFiles/AeroplaneWars_autogen_timestamp_deps.dir
+C:/Code/CodePractice/C++Project/AeroplaneWars/build/Desktop_Qt_6_7_1_llvm_mingw_64_bit-Debug/CMakeFiles/AeroplaneWars_autogen.dir

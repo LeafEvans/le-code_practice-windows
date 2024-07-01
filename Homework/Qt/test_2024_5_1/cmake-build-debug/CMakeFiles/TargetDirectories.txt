@@ -1,5 +1,0 @@
-C:/Code/CodePractice/Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/test_2024_5_1.dir
-C:/Code/CodePractice/Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Code/CodePractice/Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Code/CodePractice/Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/test_2024_5_1_autogen_timestamp_deps.dir
-C:/Code/CodePractice/Homework/Qt/test_2024_5_1/cmake-build-debug/CMakeFiles/test_2024_5_1_autogen.dir
