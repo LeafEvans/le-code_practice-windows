@@ -13,6 +13,8 @@
         "xiosbase": "cpp",
         "xstring": "cpp",
         "iosfwd": "cpp",
-        "fstream": "cpp"
-    }
+        "fstream": "cpp",
+        "initializer_list": "cpp"
+    },
+    "git.ignoreLimitWarning": true
 }

@@ -18,13 +18,10 @@
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeCXXInformation.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/Clang.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/GNU.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-Clang-CXX.cmake",
-		"C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-Clang.cmake",
+		"C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake",
 		"C:/Code/CodePractice/C++Project/AeroplaneWars/build/CMakeFiles/3.28.2/CMakeRCCompiler.cmake",
 		"C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeRCInformation.cmake",
@@ -403,9 +400,12 @@
 		"C:/Qt/6.7.1/llvm-mingw_64/include/QtGui",
 		"C:/Qt/6.7.1/llvm-mingw_64/include/QtMultimedia",
 		"C:/Qt/6.7.1/llvm-mingw_64/include/QtNetwork",
-		"C:/Qt/Tools/llvm-mingw1706_64/include/c++/v1",
-		"C:/Qt/Tools/llvm-mingw1706_64/lib/clang/17/include",
-		"C:/Qt/Tools/llvm-mingw1706_64/include"
+		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++",
+		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32",
+		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward",
+		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include",
+		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed",
+		"C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include"
 	],
 	"MOC_MACRO_NAMES" : 
 	[
@@ -420,7 +420,7 @@
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"C:/Qt/Tools/llvm-mingw1706_64/bin/clang++.exe",
+		"C:/Qt/Tools/mingw1310_64/bin/g++.exe",
 		"-std=gnu++17",
 		"-dM",
 		"-E",

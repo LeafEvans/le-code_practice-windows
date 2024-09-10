@@ -1,0 +1,33 @@
+{
+	"BUILD_DIR" : "C:/Code/CodePractice/C++Project/FlightBookingSystem/build/FlightBookingSystem_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Code/CodePractice/C++Project/FlightBookingSystem/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Code/CodePractice/C++Project/FlightBookingSystem/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Code/CodePractice/C++Project/FlightBookingSystem",
+	"CMAKE_SOURCE_DIR" : "C:/Code/CodePractice/C++Project/FlightBookingSystem",
+	"GENERATOR" : "MinGW Makefiles",
+	"INCLUDE_DIR" : "C:/Code/CodePractice/C++Project/FlightBookingSystem/build/FlightBookingSystem_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Code/CodePractice/C++Project/FlightBookingSystem/image/airliner.svg",
+		"C:/Code/CodePractice/C++Project/FlightBookingSystem/image/admin_background.jpg",
+		"C:/Code/CodePractice/C++Project/FlightBookingSystem/image/info.svg",
+		"C:/Code/CodePractice/C++Project/FlightBookingSystem/image/login_background.jpeg",
+		"C:/Code/CodePractice/C++Project/FlightBookingSystem/image/critical.svg",
+		"C:/Code/CodePractice/C++Project/FlightBookingSystem/image/user.svg",
+		"C:/Code/CodePractice/C++Project/FlightBookingSystem/image/user_background.jpg",
+		"C:/Code/CodePractice/C++Project/FlightBookingSystem/image/admin.svg",
+		"C:/Code/CodePractice/C++Project/FlightBookingSystem/image/question.svg",
+		"C:/Code/CodePractice/C++Project/FlightBookingSystem/qss/MacOS.qss",
+		"C:/Code/CodePractice/C++Project/FlightBookingSystem/qss/Ubuntu.qss"
+	],
+	"LOCK_FILE" : "C:/Code/CodePractice/C++Project/FlightBookingSystem/build/CMakeFiles/FlightBookingSystem_autogen.dir/AutoRcc_res_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "res" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_res.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.7.2/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Code/CodePractice/C++Project/FlightBookingSystem/build/CMakeFiles/FlightBookingSystem_autogen.dir/AutoRcc_res_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Code/CodePractice/C++Project/FlightBookingSystem/res.qrc",
+	"VERBOSITY" : 0
+}

@@ -3918,5 +3918,2544 @@ void foo() {
   D d;
   d.template func<int>();
 }*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+  int arr[10] = {1, 2, 2, 3, 3, 3, 4, 4, 5, 5};
+  int x = 0;
+  cin >> x;
+
+  int left = 0, right = 9;
+
+  while (left < right) {
+    int mid = left + (right - left) / 2;
+
+    if (arr[mid] >= x) {
+      right = mid;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  cout << left << ' ';
+
+  left = 0, right = 9;
+
+  while (left < right) {
+    int mid = left + (right - left + 1) / 2;
+
+    if (arr[mid] <= x) {
+      left = mid;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  cout << left << endl;
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+  int arr[10] = {1, 1, 1, 2, 2, 3, 3, 3, 3, 4};
+  int x;
+  cin >> x;
+
+  int left = 0, right = 9;
+
+  while (left < right) {
+    int mid = left + (right - left) / 2;
+
+    if (arr[mid] >= x) {
+      right = mid;
+    } else {
+      left = mid + 1;
+    }
+  }
+  cout << left << ' ';
+
+  left = 0, right = 9;
+  while (left < right) {
+    int mid = left + (right - left + 1) / 2;
+
+    if (arr[mid] <= x) {
+      left = mid;
+    } else {
+      right = mid - 1;
+    }
+  }
+  cout << right << endl;
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+  double x;
+  cin >> x;
+
+  double l = 0, r = x;
+
+  while (r - l > 1e-8) {
+    double mid = (l + r) / 2;
+
+    if (mid * mid >= x) {
+      r = mid;
+    } else {
+      l = mid;
+    }
+  }
+
+  cout << l << endl;
+
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<int> add(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> sum;
+
+  int carry = 0;
+
+  int max_size = max(v1.size(), v2.size());
+
+  for (int i = 0; i < max_size; ++i) {
+    if (i < v1.size()) {
+      carry += v1[i];
+    }
+
+    if (i < v2.size()) {
+      carry += v2[i];
+    }
+
+    sum.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  if (carry) {
+    sum.push_back(1);
+  }
+
+  return sum;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> add(vector<int> &v1, vector<int> &v2) {
+  vector<int> sum;
+
+  int carry = 0;
+
+  int max_size = max(v1.size(), v2.size());
+
+  for (int i = 0; i < max_size; ++i) {
+    if (i < v1.size()) {
+      carry += v1[i];
+    }
+
+    if (i < v2.size()) {
+      carry += v2[i];
+    }
+
+    sum.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  if (carry) {
+    sum.push_back(1);
+  }
+
+  return sum;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> add(vector<int> &v1, vector<int> &v2) {
+  vector<int> sum;
+
+  int carry = 0;
+
+  int max_size = max(v1.size(), v2.size());
+
+  for (int i = 0; i < max_size; ++i) {
+    if (i < v1.size()) {
+      carry += v1[i];
+    }
+
+    if (i < v2.size()) {
+      carry += v2[i];
+    }
+
+    sum.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  if (carry) {
+    sum.push_back(1);
+  }
+
+  return sum;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> add(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> sum;
+
+  int carry = 0;
+
+  int max_size = max(v1.size(), v2.size());
+
+  for (int i = 0; i < max_size; ++i) {
+    if (i < v1.size()) {
+      carry += v1[i];
+    }
+
+    if (i < v2.size()) {
+      carry += v2[i];
+    }
+
+    sum.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  if (carry) {
+    sum.push_back(1);
+  }
+
+  return sum;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> add(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> sum;
+
+  int carry = 0;
+
+  int max_size = max(v1.size(), v2.size());
+
+  for (int i = 0; i < max_size; ++i) {
+    if (i < v1.size()) {
+      carry += v1[i];
+    }
+
+    if (i < v2.size()) {
+      carry += v2[i];
+    }
+
+    sum.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  if (carry) {
+    sum.push_back(1);
+  }
+
+  return sum;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> add(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> sum;
+
+  int max_size = max(v1.size(), v2.size());
+
+  int carry = 0;
+
+  for (int i = 0; i < max_size; ++i) {
+    if (i < v1.size()) {
+      carry += v1[i];
+    }
+
+    if (i < v2.size()) {
+      carry += v2[i];
+    }
+
+    sum.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  if (carry) {
+    sum.push_back(1);
+  }
+
+  return sum;
+}
+
+bool cmp(const vector<int> &v1, const vector<int> &v2) {
+  if (v1.size() != v2.size()) {
+    return v1.size() > v2.size();
+  }
+
+  for (int i = v1.size() - 1; i >= 0; --i) {
+    if (v1[i] != v2[i]) {
+      return v1[i] > v2[i];
+    }
+  }
+
+  return true;
+}
+
+vector<int> sub(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> res;
+  int carry = 0;
+
+  for (int i = 0; i < v1.size(); ++i) {
+    int diff = v1[i] - carry;
+
+    if (i < v2.size()) {
+      diff -= v2[i];
+    }
+
+    res.push_back((diff + 10) % 10);
+
+    carry = diff < 0 ? 1 : 0;
+  }
+
+  while (res.size() > 1 && res.back() == 0) {
+    res.pop_back();
+  }
+
+  return res;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+bool cmp(const vector<int> &v1, const vector<int> &v2) {
+  if (v1.size() != v2.size()) {
+    return v1.size() > v2.size();
+  }
+
+  for (int i = v1.size() - 1; i >= 0; --i) {
+    if (v1[i] != v2[i]) {
+      return v1[i] > v2[i];
+    }
+  }
+
+  return true;
+}
+
+vector<int> sub(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> res;
+
+  int carry = 0;
+
+  for (int i = 0; i < v1.size(); ++i) {
+    int diff = v1[i] - carry;
+
+    if (i < v2.size()) {
+      diff -= v2[i];
+    }
+
+    res.push_back((diff + 10) % 10);
+
+    carry = diff < 0 ? 1 : 0;
+  }
+
+  while (res.size() > 1 && res.back() == 0) {
+    res.pop_back();
+  }
+
+  return res;
+}
+
+vector<int> mul(const vector<int> &n, int m) {
+  vector<int> prod;
+
+  int carry = 0;
+
+  for (int i = 0; i < n.size() || carry; ++i) {
+    if (i < n.size()) {
+      carry += n[i] * m;
+    }
+
+    prod.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  return prod;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> mul(const vector<int> &n, int m) {
+  vector<int> prod;
+
+  int carry = 0;
+
+  for (int i = 0; i < n.size() || carry; ++i) {
+    if (i < n.size()) {
+      carry += n[i] * m;
+    }
+
+    prod.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  return prod;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> mul(const vector<int> &n, int m) {
+  vector<int> prod;
+
+  int carry = 0;
+
+  for (int i = 0; i < n.size() || carry; ++i) {
+    if (i < n.size()) {
+      carry += n[i] * m;
+    }
+
+    prod.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  return prod;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> mul(const vector<int> &n, int m) {
+  vector<int> prod;
+
+  int carry = 0;
+
+  for (int i = 0; i < n.size() || carry; ++i) {
+    if (i < n.size()) {
+      carry += n[i] * m;
+    }
+
+    prod.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  return prod;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> mul(const vector<int> &n, int m) {
+  vector<int> prod;
+
+  int carry = 0;
+
+  for (int i = 0; i < n.size() || carry; ++i) {
+    if (i < n.size()) {
+      carry += n[i] * m;
+    }
+
+    prod.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  return prod;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> mul(const vector<int> &n, int m) {
+  vector<int> prod;
+
+  int carry = 0;
+
+  for (int i = 0; i < n.size() || carry; ++i) {
+    if (i < n.size()) {
+      carry = n[i] * m;
+    }
+
+    prod.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  return prod;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> mul(const vector<int> &n, int m) {
+  vector<int> prod;
+
+  int carry = 0;
+
+  for (int i = 0; i < n.size() || carry; ++i) {
+    if (i < n.size()) {
+      carry += n[i] * m;
+    }
+
+    prod.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  return prod;
+}
+
+vector<int> add(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> sum;
+
+  int carry = 0;
+
+  int max_size = max(v1.size(), v2.size());
+
+  for (int i = 0; i < max_size || carry; ++i) {
+    if (i < v1.size()) {
+      carry += v1[i];
+    }
+
+    if (i < v2.size()) {
+      carry += v2[i];
+    }
+
+    sum.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  return sum;
+}
+
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+
+  int carry = 0;
+
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+
+  reverse(quot.begin(), quot.end());
+
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+
+  return quot;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+
+  int carry = 0;
+
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+
+  reverse(quot.begin(), quot.end());
+
+  while (quot.size() > 1 && quot.back()) {
+    quot.pop_back();
+  }
+
+  return quot;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+
+  int carry = 0;
+
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+
+  reverse(quot.begin(), quot.end());
+
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+
+  return quot;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+
+  int carry = 0;
+
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+
+  reverse(quot.begin(), quot.end());
+
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+
+  return quot;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+
+  int carry = 0;
+
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+
+  reverse(quot.begin(), quot.end());
+
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+
+  return quot;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+
+  int carry = 0;
+
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+
+  reverse(quot.begin(), quot.end());
+
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+
+  return quot;
+}*/
+/*
+#include <vector>
+
+using namespace std;
+
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+
+  int carry = 0;
+
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+
+  reverse(quot.begin(), quot.end());
+
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+
+  return quot;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+  int carry = 0;
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+
+  reverse(quot.begin(), quot.end());
+
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+
+  return quot;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> div(const vector<int> num, int d, int &rem) {
+  vector<int> quot;
+
+  int carry = 0;
+
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+
+  reverse(quot.begin(), quot.end());
+
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+
+  return quot;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+  int carry = 0;
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+  reverse(quot.begin(), quot.end());
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+  return quot;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+  int carry = 0;
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+  reverse(quot.begin(), quot.end());
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+  return quot;
+}*/
+/*#include <vector>
+using namespace std;
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+  reverse(quot.begin(), quot.end());
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+  return quot;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int LEN = 100010;
+
+int main() {
+  int n, m;
+  vector<int> arr(LEN), sum(LEN);
+  scanf("%d%d", &n, &m);
+  for (int i = 0; i <= n; ++i) {
+    scanf("%d", &arr[i]);
+  }
+  for (int i = 1; i <= n; ++i) {
+    sum[i] = sum[i - 1] + arr[i];
+  }
+  while (m--) {
+    int left, right;
+    scanf("%d%d", &left, &right);
+    printf("%d\n", sum[right] - sum[left - 1]);
+  }
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int LEN = 100010;
+
+int main() {
+  int n, m;
+  vector<int> arr(LEN), sum(LEN);
+  scanf("%d%d", &n, &m);
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    sum[i] = sum[i - 1] + arr[i];
+  }
+  while (m--) {
+    int left, right;
+    cin >> left >> right;
+    cout << sum[right] - sum[left - 1] << endl;
+  }
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int LEN = 100010;
+
+int main() {
+  int n, m;
+  vector<int> arr(LEN), sum(LEN);
+
+  scanf("%d%d", &n, &m);
+
+  for (int i = 1; i <= n; ++i) {
+    scanf("%d", &arr[i]);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    sum[i] = sum[i - 1] + arr[i];
+  }
+
+  while (m--) {
+    int left, right;
+    scanf("%d%d", &left, &right);
+    printf("%d\n", sum[right] - sum[left - 1]);
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int LEN = 100010;
+
+int main() {
+  int n, m;
+  vector<int> arr(LEN), sum(LEN);
+  cin >> n >> m;
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+  }
+  for (int i = 1; i <= n; ++i) {
+    sum[i] = sum[i - 1] + arr[i];
+  }
+  while (m--) {
+    int left, right;
+    cin >> left >> right;
+    cout << sum[right] - sum[left - 1] << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int LEN =100010;
+
+int main() {
+  int n, m;
+  vector<int> arr(LEN), sum(LEN);
+  cin >> n >> m;
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    sum[i] = sum[i - 1] + arr[i];
+  }
+  while (m--) {
+    int left, right;
+    cin >> left >> right;
+    cout << sum[right] - sum[left - 1] << endl;
+  }
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int LEN = 100010;
+
+int main() {
+  int n, m;
+  vector<int> arr(LEN), sum(LEN);
+  cin >> n >> m;
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    sum[i] = sum[i - 1] + arr[i];
+  }
+  while (m--) {
+    int left, right;
+    cin >> left >> right;
+    cout << sum[right] - sum[left - 1] << endl;
+  }
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int LEN = 100010;
+
+int main() {
+  int n, m;
+  vector<int> arr(LEN), sum(LEN);
+  cin >> n >> m;
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    sum[i] = sum[i - 1] + arr[i];
+  }
+  while (m--) {
+    int left, right;
+    cin >> left >> right;
+    cout << sum[right] - sum[left - 1] << endl;
+  }
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+using namespace std;
+const int SIZE = 10001;
+int main() {
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
+
+  int n, m, q;
+
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + sum[x1 - 1][y1 - 1];
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+using namespace std;
+const int SIZE = 10001;
+int main() {
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
+  int n, m, q;
+  cin >> n >> m >> q;
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= n; ++j) {
+      cin >> arr[i][j];
+      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+    }
+  }
+  while (q--) {
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + sum[x1 - 1][y1 - 1];
+  }
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+using namespace std;
+const int SIZE = 10001;
+int main() {
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
+  int n, m, q;
+  cin >> n >> m >> q;
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+    }
+  }
+  while (q--) {
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + sum[x1 - 1][y1 - 1] << endl;
+  }
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+using namespace std;
+const int SIZE = 10001;
+int main() {
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
+  int n, m, q;
+  cin >> n>> m>> q;
+  for (int i = 1;i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+    }
+  }
+  while (q--) {
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + arr[x1 - 1][y1 - 1] << endl;
+  }
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int SIZE = 10001;
+
+int main() {
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)),
+      sum(SIZE, vector<int>(SIZE));
+
+  int n, m, q;
+
+  scanf("%d%d%d", &n, &m, &q);
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      scanf("%d", &arr[i][j]);
+      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2;
+    scanf("%d%d%d%d", &x1, &y1, &x2, &y2);
+    printf("%d\n", sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] +
+        sum[x1 - 1][y1 - 1]);
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+using namespace std;
+const int SIZE = 10010;
+int main() {
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
+  int n, m, q;
+  cin >> n >> m >> q;
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+    }
+  }
+  while (q--) {
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    cout << sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] + sum[x1 - 1][y1 - 1] << endl;
+  }
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int LEN = 100010;
+
+int main() {
+  int n, m;
+  vector<int> arr(LEN), sum(LEN);
+
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    sum[i] = sum[i - 1] + arr[i];
+  }
+
+  while (m--) {
+    int left, right;
+    cin >> left >> right;
+    cout << sum[right] - sum[left - 1] << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int SIZE = 10001;
+
+int main() {
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
+
+  int n, m, q;
+
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + sum[x1 - 1][y1 - 1] << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int SIZE = 10001;
+
+int main() {
+  int n, m, q;
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
+
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+    }
+  }
+
+  while (q--) {
+    int x1, x2, y1, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    cout << sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] + sum[x1 - 1][y1 - 1] << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 100010;
+
+int n, m;
+int arr[SIZE], diff[SIZE];
+
+void insert(int left, int right, int value) {
+  diff[left] += value;
+  diff[right + 1] -= value;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    insert(i, i, arr[i]);
+  }
+
+  while (m--) {
+    int left, right, value;
+    cin >> left >> right >> value;
+    insert(left, right, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    diff[i] += diff[i - 1];
+    cout << diff[i] << ' ';
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 100010;
+
+int n, m;
+int arr[SIZE], diff[SIZE];
+
+void insert(int left, int right, int value) {
+  diff[left] += value;
+  diff[right + 1] -= value;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    insert(i, i, arr[i]);
+  }
+
+  while (m--) {
+    int left, right, value;
+    cin >> left >> right >> value;
+    insert(left, right, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    diff[i] += diff[i - 1];
+    cout << diff[i];
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 100010;
+
+int n, m;
+
+int arr[SIZE], diff[SIZE];
+
+void insert(int left, int right, int value) {
+  diff[left] += value;
+  diff[right + 1] -= value;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    insert(i, i, arr[i]);
+  }
+
+  while (m--) {
+    int left, right, value;
+    cin >> left >> right >> value;
+    insert(left, right, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    diff[i] += diff[i - 1];
+    cout << diff[i] << ' ';
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 100010;
+
+int n, m;
+int arr[SIZE], diff[SIZE];
+
+void insert(int left, int right, int value) {
+  diff[left] += value;
+  diff[right + 1] -= value;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1; i<= n; ++i) {
+    cin >> arr[i];
+    insert(i, i, arr[i]);
+  }
+
+  while (m--) {
+    int left, right, value;
+    cin >> left >> right >> value;
+    insert(left, right, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    diff[i] += diff[i - 1];
+    cout << diff[i] << ' ';
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 100010;
+
+int arr[SIZE], diff[SIZE];
+int n, m;
+
+void insert(int left, int right, int value) {
+  diff[left] += value;
+  diff[right + 1] -= value;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    insert(i, i, arr[i]);
+  }
+
+  while (m--) {
+    int left, right, value;
+    cin >> left >> right >> value;
+    insert(left, right, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    diff[i] += diff[i - 1];
+    cout << diff[i] << ' ';
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 100010;
+
+int arr[SIZE], diff[SIZE], n, m;
+
+void insert(int left, int right, int value) {
+  diff[left] += value;
+  diff[right + 1] -= value;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    insert(i, i, arr[i]);
+  }
+
+  while (m--) {
+    int left, right, value;
+    cin >> left >> right >> value;
+    insert(left, right, value);
+  }
+
+  for (int i = 1; i <= m; ++i) {
+    diff[i] += diff[i - 1];
+    cout << diff[i] << ' ';
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 1010;
+
+int n, m, q;
+int arr[SIZE][SIZE], diff[SIZE][SIZE];
+
+void insert(int x1, int y1, int x2, int y2, int value) {
+  diff[x1][y1] += value;
+  diff[x2 + 1][y1] -= value;
+  diff[x1][y2 + 1] -= value;
+  diff[x2 + 1][y2 + 1] += value;
+}
+
+int main() {
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      insert(i, j, i, j, arr[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, value;
+    cin >> x1 >> y1 >> x2 >> y2 >> value;
+    insert(x1, y1, x2, y2, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      diff[i][j] += diff[i - 1][j] + diff[i][j - 1] - diff[i - 1][j - 1];
+      cout << diff[i][j] << ' ';
+    }
+    cout << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 1010;
+
+int n, m, q;
+int arr[SIZE][SIZE], diff[SIZE][SIZE];
+
+void insert(int x1, int y1, int x2, int y2, int value) {
+  diff[x1][y1] += value;
+  diff[x2 + 1][y1] -= value;
+  diff[x1][y2 + 1] -= value;
+  diff[x2 + 1][y2 + 1] += value;
+}
+
+int main() {
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      insert(i, j, i, j, arr[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, value;
+    cin >> x1 >> y1 >> x2 >> y2 >> value;
+    insert(x1, y1, x2, y2, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      diff[i][j] += diff[i - 1][j] + diff[i][j - 1] - diff[i - 1][j - 1];
+      cout << diff[i][j] << ' ';
+    }
+    cout << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 1010;
+
+int n, m, q;
+int arr[SIZE][SIZE], diff[SIZE][SIZE];
+
+void insert(int x1, int y1, int x2, int y2, int value) {
+  diff[x1][y1] += value;
+  diff[x2 + 1][y1] -= value;
+  diff[x1][y2 + 1] -= value;
+  diff[x2 + 1][y2 + 1] += value;
+}
+
+int main() {
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      insert(i, j, i, j, arr[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, value;
+    cin >> x1 >> y1 >> x2 >> y2 >> value;
+    insert(x1, y1, x2, y2, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      diff[i][j] += diff[i - 1][j] + diff[i][j - 1] - diff[i - 1][j - 1];
+      cout << diff[i][j] << ' ';
+    }
+    cout << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 1010;
+
+int n, m, q;
+int arr[SIZE][SIZE], diff[SIZE][SIZE];
+
+void insert(int x1, int y1, int x2, int y2, int value) {
+  diff[x1][y1] += value;
+  diff[x2 + 1][y1] -= value;
+  diff[x1][y2 + 1] -= value;
+  diff[x2 + 1][y2 + 1] += value;
+}
+
+int main() {
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      insert(i, j, i, j, arr[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, value;
+    cin >> x1 >> y1 >> x2 >> y2 >> value;
+    insert(x1, y1, x2, y2, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      diff[i][j] += diff[i - 1][j] + diff[i][j - 1] - diff[i - 1][j - 1];
+      cout << diff[i][j] << ' ';
+    }
+    cout << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 1010;
+
+int n, m, q;
+int arr[SIZE][SIZE], diff[SIZE][SIZE];
+
+void insert(int x1, int y1, int x2, int y2, int value) {
+  diff[x1][y1] += value;
+  diff[x2 + 1][y1] -= value;
+  diff[x1][y2 + 1] -= value;
+  diff[x2 + 1][y2 + 1] += value;
+}
+
+int main() {
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      insert(i, j, i, j, arr[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, value;
+    cin >> x1 >> y1 >> x2 >> y2 >> value;
+    insert(x1, y1, x2, y2, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      diff[i][j] += diff[i - 1][j] + diff[i][j - 1] - diff[i - 1][j - 1];
+      cout << diff[i][j] << ' ';
+    }
+    cout << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 1010;
+
+int n, m, q;
+
+int arr[SIZE][SIZE], diff[SIZE][SIZE];
+
+void insert(int x1, int y1, int x2, int y2, int value) {
+  diff[x1][y1] += value;
+  diff[x2 + 1][y1] -= value;
+  diff[x1][y2 + 1] -= value;
+  diff[x2 + 1][y2 + 1] += value;
+}
 
 
+
+int main() {
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      insert(i, j, i, j, arr[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, value;
+    cin >> x1 >> y1 >> x2 >> y2 >> value;
+    insert(x1, y1, x2, y2, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      diff[i][j] += diff[i][j - 1] + diff[i - 1][j] - diff[i - 1][j - 1];
+      cout << diff[i][j] << ' ';
+    }
+    cout << endl;
+  }
+
+  return 0;
+}*/
+/*
+#include <iostream>
+
+using namespace std;
+
+const int SIZE = 1010;
+
+int n, m, q;
+int arr[SIZE][SIZE], diff[SIZE][SIZE];
+
+void insert(int x1, int y1, int x2, int y2, int value) {
+  diff[x1][y1] += value;
+  diff[x2 + 1][y1] -= value;
+  diff[x1][y2 + 1] -= value;
+  diff[x2 + 1][y2 + 1] += value;
+}
+
+template<class T>
+void quickSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  T x = arr[left];
+  int i = left - 1, j = right + 1;
+
+  while (i < j) {
+    do {
+      ++i;
+    } while (arr[i] < x);
+
+    do {
+      --j;
+    } while (arr[j] > x);
+
+    if (i < j) {
+      swap(arr[i], arr[j]);
+    }
+  }
+
+  quickSort(arr, left, j);
+  quickSort(arr, j + 1, right);
+}
+
+template <class T>
+void mergeSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+}
+
+int main() {
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      insert(i, j, i, j, arr[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, value;
+    cin >> x1 >> y1 >> x2 >> y2 >> value;
+    insert(x1, y1, x2, y2, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      diff[i][j] += diff[i - 1][j] + diff[i][j - 1] - diff[i - 1][j - 1];
+      cout << diff[i][j] << ' ';
+    }
+    cout << endl;
+  }
+
+  return 0;
+}*/
+/*
+template<class T>
+void mergeSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  int mid = left + (right - left) / 2;
+
+  mergeSort(arr, left, mid);
+  mergeSort(arr, mid + 1, right);
+
+  int i = left, j = mid + 1, k = 0;
+
+  T *temp = new T[right - left + 1];
+
+  while (i <= mid && j <= right) {
+    if (arr[i] <= arr[j]) {
+      temp[k++] = arr[i++];
+    } else {
+      temp[k++] = arr[j++];
+    }
+  }
+
+  while (i <= mid) {
+    temp[k++] = arr[i++];
+  }
+
+  while (j <= right) {
+    temp[k++] = arr[j++];
+  }
+
+  for (i = left, j = 0; i <= right; ++i, ++j) {
+    arr[i] = temp[j];
+  }
+
+  delete[]temp;
+}*/
+/*template<class T>
+void mergeSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  int mid = left + (right - left) / 2;
+
+  mergeSort(arr, left, mid);
+  mergeSort(arr, mid + 1, right);
+
+  T *temp = new T[right - left + 1];
+
+  int i = left, j = mid + 1, k = 0;
+
+  while (i <= mid && j <= right) {
+    if (arr[i] <= arr[j]) {
+      temp[k++] = arr[i++];
+    } else {
+      temp[k++] = arr[j++];
+    }
+  }
+
+  while (i <= mid) {
+    temp[k++] = arr[i++];
+  }
+
+  while (j <= right) {
+    temp[k++] = arr[j++];
+  }
+
+  for (i = left, j = 0; i <= right; ++i, ++j) {
+    arr[i] = temp[j];
+  }
+
+  delete[] temp;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+  int arr[10] = {1, 1, 2, 2, 2, 3, 3, 3, 3, 4};
+  int x;
+  cin >> x;
+
+  int left = 0, right = 10;
+
+  while (left < right) {
+    int mid = left + (right - left) / 2;
+    if (arr[mid] >= x) {
+      right = mid;
+    } else {
+      left = mid + 1;
+    }
+  }
+  cout << left << ' ';
+
+  left = 0, right = 10;
+  while (left < right) {
+    int mid = left + (right - left + 1) / 2;
+    if (arr[mid] <= x) {
+      left = mid;
+    } else {
+      right = mid - 1;
+    }
+  }
+  cout << left << endl;
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+  int arr[10] = {1, 1, 2, 2, 2, 3, 3, 3, 4, 4};
+  int x;
+  cin >> x;
+
+  int left = 0, right = 10;
+  while (left < right) {
+    int mid = left + (right - left) /2 ;
+    if (arr[mid] >= x) {
+      right = mid;
+    } else {
+      left = mid + 1;
+    }
+  }
+  cout << left << ' ';
+
+  left = 0, right = 10;
+  while (left < right) {
+    int mid = left + (right - left + 1) / 2;
+    if (arr[mid] <= x) {
+      left = mid;
+    } else {
+      right = mid - 1;
+    }
+  }
+  cout << left << endl;
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+  double x;
+  cin >> x;
+
+  double l = 0, r = x;
+
+  while (r - l > 1e-8) {
+    double mid = l + (r - l) / 2;
+
+    if (mid * mid >= x) {
+      r = mid;
+    } else {
+      l = mid;
+    }
+  }
+
+  cout << l << endl;
+
+  return 0;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> add(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> sum;
+
+  int carry = 0;
+
+  int max_size = max(v1.size(), v2.size());
+
+  for (int i = 0; i < max_size || carry; ++i) {
+    if (i < v1.size()) {
+      carry += v1[i];
+    }
+
+    if (i < v2.size()) {
+      carry += v2[i];
+    }
+
+    sum.push_back(carry % 10);
+    carry /= 10;
+  }
+
+  return sum;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> add(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> sum;
+
+  int carry = 0;
+  int max_size = max(v1.size(), v2.size());
+
+  for (int i = 0; i < max_size || carry; ++i) {
+    if (i < v1.size()) {
+      carry += v1[i];
+    }
+
+    if (i < v2.size()) {
+      carry += v2[i];
+    }
+
+    sum.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  return sum;
+}
+
+bool cmp(const vector<int> &v1, const vector<int> &v2) {
+  if (v1.size() != v2.size()) {
+    return v1.size() > v2.size();
+  }
+
+  for (int i = v1.size() - 1; i >= 0; --i) {
+    if (v1[i] != v2[i]) {
+      return v1[i] > v2[i];
+    }
+  }
+
+  return true;
+}
+
+vector<int> sub(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> res;
+
+  int carry = 0;
+
+  for (int i = 0; i < v1.size(); ++i) {
+    int diff = v1[i] - carry;
+    if (i < v2.size()) {
+      diff -= v2[i];
+    }
+    res.push_back((diff + 10) % 10);
+    carry = diff < 0 ? 1 : 0;
+  }
+
+  while (res.back() == 0 && res.size() > 1) {
+    res.pop_back();
+  }
+
+  return res;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+bool cmp(const vector<int> &v1, const vector<int> &v2) {
+  if (v1.size() != v2.size()) {
+    return v1.size() > v2.size();
+  }
+
+  for (int i = v1.size() - 1; i >= 0; --i) {
+    if (v1[i] != v2[i]) {
+      return v1[i] > v2[i];
+    }
+  }
+
+  return true;
+}
+
+vector<int> sub(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> res;
+  int carry = 0;
+
+  for (int i = 0; i < v1.size(); ++i) {
+    int diff = v1[i] - carry;
+    if (i < v2.size()) {
+      diff -= v2[i];
+    }
+    res.push_back((diff + 10) % 10);
+    carry = diff < 0 ? 1 : 0;
+  }
+
+  while (res.size() > 1 && res.back() == 0) {
+    res.pop_back();
+  }
+
+  return res;
+}
+
+vector<int> mul(const vector<int> &n, int m) {
+  vector<int> prod;
+
+  int carry = 0;
+
+  for (int i = 0; i < n.size() || carry; ++i) {
+    if (i < n.size()) {
+      carry += n[i] * m;
+    }
+
+    prod.push_back(carry % 10);
+
+    carry /= 10;
+  }
+
+  return prod;
+}
+
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+
+  int carry = 0;
+  for (int i = num.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+    rem %= 10;
+  }
+
+  reverse(quot.begin(), quot.end());
+
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+
+  return quot;
+}*/
+/*#include <vector>
+
+using namespace std;
+
+vector<int> div(const vector<int> &num, int d, int &rem) {
+  vector<int> quot;
+
+  int carry = 0;
+  for (int i = num.size() - 1; i >= 0; ++i) {
+    rem = rem * 10 + num[i];
+    quot.push_back(rem / d);
+  }
+
+  reverse(quot.begin(), quot.end());
+
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+
+  return quot;
+}*/
+/*#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int LEN = 1010;
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+
+  vector<int> arr(LEN), sum(LEN);
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    sum[i] = sum[i - 1] + arr[i];
+  }
+
+  while (m--) {
+    int left, right;
+    cin >> left >> right;
+    cout << sum[right] - sum[left - 1] << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int LEN = 1000010;
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+
+  int arr[LEN], sum[LEN];
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    sum[i] = sum[i - 1] + arr[i];
+  }
+
+  while (m--) {
+    int left, right;
+    cin >> left >> right;
+    cout << sum[right] - sum[left - 1] << endl;
+  }
+
+  return 0;
+}*/
+/*
+#include <iostream>
+
+using  namespace std;
+
+const int SIZE = 1010;
+
+int main() {
+  int n, m, q;
+
+  int arr[SIZE][SIZE], sum[SIZE][SIZE];
+
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+    }
+  }
+
+
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 1010;
+
+int main() {
+  int n, m;
+  cin >> n >> m;
+
+  int arr[SIZE] = {0}, sum[SIZE] = {0};
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    sum[i] = sum[i - 1] + arr[i];
+  }
+
+  while (m--) {
+    int left, right;
+    cin >> left >> right;
+    cout << sum[right] - sum[left - 1] << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 1010;
+
+int main() {
+  int n, m, q;
+  int arr[SIZE][SIZE], sum[SIZE][SIZE];
+
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 -1][y2] + sum[x1 - 1][y1 - 1] << endl;
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int LEN = 100010;
+
+int n, m;
+
+int arr[LEN], diff[LEN];
+
+void insert(int left, int right, int value) {
+  diff[left] += value;
+  diff[right] -= value;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    insert(i, i, arr[i]);
+  }
+
+  while (m--) {
+    int left, right, value;
+    cin >> left >> right >> value;
+    insert(left, right, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    diff[i] += diff[i - 1];
+    cout << diff[i] << ' ';
+  }
+  cout << endl;
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int SIZE = 1010;
+
+int n, m, q;
+int arr[SIZE][SIZE], diff[SIZE][SIZE];
+
+void insert(int x1, int y1, int x2, int y2, int value) {
+  diff[x1][y1] += value;
+  diff[x2 + 1][y1] -= value;
+  diff[x1][y2 + 1] -= value;
+  diff[x2 + 1][y2 + 1] += value;
+}
+
+int main() {
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> arr[i][j];
+      insert(i, j, i, j, arr[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, value;
+    cin >> x1 >> y1 >> x2 >> y2 >> value;
+    insert(x1, y1, x2, y2, value);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+       diff[i][j] += diff[i - 1][j] + diff[i][j - 1] - diff[i - 1][j - 1];
+       cout << diff[i][j];
+    }
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+  char str[1000];
+  gets(str);
+  int n = strlen(str);
+
+  int i = 0;
+
+  while (str[i]) {
+    if (str[i] != ' ') {
+      cout << str[i];
+    } else {
+      cout << endl;
+    }
+    ++i;
+  }
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int N = 100010;  // 固定大小
+
+// n 是整数，表示输入数组 a 的长度
+// a[N] 是输入数组的整数数组
+// s[N] 是辅助数组，记录 a 中每个元素在窗口中出现的次数
+int n, a[N], s[N] = {0};
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int res = 0;                  // 最长子数组的长度
+  for (int i = 0, j = 0; i < n; ++i) {
+    ++s[a[i]];                  // 增加 a[i] 在辅助数组 s 中的出现次数
+    while (s[a[i]] > 1) {       // 如果重复
+      --s[a[j]];                // 减少窗口左侧的元素的计数
+      ++j;                      // 移动左边界
+    }
+    res = max(res, i - j + 1);  // 比较这个大小
+  }
+
+  cout << res << endl;          // 输出答案
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, a[N], s[N];
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int res = 0;
+  for (int i = 0, j = 0; i < n; ++i) {
+    ++s[a[i]];
+    while (s[a[i]] > 1) {
+      --s[a[j]];
+      ++j;
+    }
+    res = max(res, i - j + 1);
+  }
+  cout << res << endl;
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, a[N], s[N] = {0};
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int res = 0;
+  for (int i = 0, j = 0; i < n; ++i) {
+    ++s[a[i]];
+    while (s[a[i]] > 1) {
+      --s[a[j]];
+      ++j;
+    }
+    res = max(res, i - j + 1);
+  }
+  cout << res << endl;
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, a[N], s[N];
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int res = 0;
+  for (int i = 0, j = 0; i < n; ++i) {
+    ++s[a[i]];
+    while (s[a[i]] > 1) {
+      --s[a[j]];
+      ++j;
+    }
+    res = max(res, i - j + 1);
+  }
+  cout << res << endl;
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int main() {
+  int x = 15;
+
+  for (int i = 3; i >= 0; --i) {
+    cout << (x >> i & 1);
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int lowbit(int x) {
+  return x & -x;  // 保留最低位的 1
+}
+
+int main() {
+  int n;  // 次数
+  cin >> n;
+
+  while (n--) {
+    int x;  // 对应的数字
+    cin >> x;
+
+    int res = 0;  // 答案
+    while (x) {   // 非 0 则循环继续
+      // 减去一个 lowbit()
+      // 就会更新一个新的 lowbit()
+      x -= lowbit(x);
+      // 数量增加
+      res++;
+    }
+
+    cout << res << ' ';
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int lowbit(int x) {
+  return x & -x;
+}
+
+int main() {
+  int n;
+  cin >> n;
+
+  while (n--) {
+    int x;
+    cin >> x;
+
+    int res = 0;
+    while (x) {
+      x -= lowbit(x);
+      ++res;
+    }
+
+    cout << res << ' ';
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int lowbit(int x) {
+  return x & -x;
+}
+
+int main() {
+  int n;
+  cin >> n;
+
+  while (n--) {
+    int x;
+    cin >> x;
+
+    int res = 0;
+    while (x) {
+      x -= lowbit(x);
+      ++res;
+    }
+    cout << res << ' ';
+  }
+
+  return 0;
+}*/
+/*#include <iostream>
+
+using namespace std;
+
+int lowbit(int x) {
+  return x & -x;
+}
+
+int main() {
+  int n;
+  cin >> n;
+
+  while (n--) {
+    int x;
+    cin >> x;
+
+    int res = 0;
+    while (x) {
+      x -= lowbit(x);
+      ++res;
+    }
+
+    cout << res << ' ';
+  }
+
+  return 0;
+}*/
+#include <iostream>
+
+using namespace std;
+
+template <class T>
+void quickSort(T *arr, int left, int right) {
+  
+}
+
+int main() {
+
+  return 0;
+}

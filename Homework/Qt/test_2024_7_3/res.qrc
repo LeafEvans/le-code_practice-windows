@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>image/保存.svg</file>
+        <file>image/查找.svg</file>
+        <file>image/撤销.svg</file>
+        <file>image/打开.svg</file>
+        <file>image/复制.svg</file>
+        <file>image/关闭.svg</file>
+        <file>image/剪切.svg</file>
+        <file>image/另存为.svg</file>
+        <file>image/退出.svg</file>
+        <file>image/新建.svg</file>
+        <file>image/粘贴.svg</file>
+        <file>image/版本说明.svg</file>
+    </qresource>
+</RCC>

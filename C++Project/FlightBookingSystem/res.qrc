@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/airliner.svg</file>
+        <file>qss/MacOS.qss</file>
+        <file>qss/Ubuntu.qss</file>
+        <file>image/critical.svg</file>
+        <file>image/login_background.jpeg</file>
+        <file>image/admin.svg</file>
+        <file>image/info.svg</file>
+        <file>image/user.svg</file>
+        <file>image/admin_background.jpg</file>
+        <file>image/user_background.jpg</file>
+        <file>image/question.svg</file>
+    </qresource>
+</RCC>

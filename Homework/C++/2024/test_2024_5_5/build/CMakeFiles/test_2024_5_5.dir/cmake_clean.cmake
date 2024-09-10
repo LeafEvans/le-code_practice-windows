@@ -3,9 +3,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/test_2024_5_5.dir/main.cpp.obj.d"
   "CMakeFiles/test_2024_5_5.dir/test.cpp.obj"
   "CMakeFiles/test_2024_5_5.dir/test.cpp.obj.d"
-  "libtest_2024_5_5.dll.a"
   "test_2024_5_5.exe"
   "test_2024_5_5.exe.manifest"
+  "test_2024_5_5.lib"
   "test_2024_5_5.pdb"
 )
 

@@ -1,0 +1,38 @@
+[
+{
+  "directory": "C:/Code/CodePractice/C++Project/FlightBookingSystem/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FlightBookingSystem.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FlightBookingSystem.dir\\FlightBookingSystem_autogen\\mocs_compilation.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\FlightBookingSystem\\build\\FlightBookingSystem_autogen\\mocs_compilation.cpp",
+  "file": "C:/Code/CodePractice/C++Project/FlightBookingSystem/build/FlightBookingSystem_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/FlightBookingSystem.dir/FlightBookingSystem_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Code/CodePractice/C++Project/FlightBookingSystem/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FlightBookingSystem.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FlightBookingSystem.dir\\main.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\FlightBookingSystem\\main.cpp",
+  "file": "C:/Code/CodePractice/C++Project/FlightBookingSystem/main.cpp",
+  "output": "CMakeFiles/FlightBookingSystem.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Code/CodePractice/C++Project/FlightBookingSystem/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FlightBookingSystem.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FlightBookingSystem.dir\\userwindow.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\FlightBookingSystem\\userwindow.cpp",
+  "file": "C:/Code/CodePractice/C++Project/FlightBookingSystem/userwindow.cpp",
+  "output": "CMakeFiles/FlightBookingSystem.dir/userwindow.cpp.obj"
+},
+{
+  "directory": "C:/Code/CodePractice/C++Project/FlightBookingSystem/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FlightBookingSystem.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FlightBookingSystem.dir\\logindialog.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\FlightBookingSystem\\logindialog.cpp",
+  "file": "C:/Code/CodePractice/C++Project/FlightBookingSystem/logindialog.cpp",
+  "output": "CMakeFiles/FlightBookingSystem.dir/logindialog.cpp.obj"
+},
+{
+  "directory": "C:/Code/CodePractice/C++Project/FlightBookingSystem/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FlightBookingSystem.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FlightBookingSystem.dir\\adminwindow.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\FlightBookingSystem\\adminwindow.cpp",
+  "file": "C:/Code/CodePractice/C++Project/FlightBookingSystem/adminwindow.cpp",
+  "output": "CMakeFiles/FlightBookingSystem.dir/adminwindow.cpp.obj"
+},
+{
+  "directory": "C:/Code/CodePractice/C++Project/FlightBookingSystem/build",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 @CMakeFiles/FlightBookingSystem.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\FlightBookingSystem.dir\\FlightBookingSystem_autogen\\EWIEGA46WW\\qrc_res.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\FlightBookingSystem\\build\\FlightBookingSystem_autogen\\EWIEGA46WW\\qrc_res.cpp",
+  "file": "C:/Code/CodePractice/C++Project/FlightBookingSystem/build/FlightBookingSystem_autogen/EWIEGA46WW/qrc_res.cpp",
+  "output": "CMakeFiles/FlightBookingSystem.dir/FlightBookingSystem_autogen/EWIEGA46WW/qrc_res.cpp.obj"
+}
+]

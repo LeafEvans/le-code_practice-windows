@@ -187,4 +187,402 @@ int main(void) {
 
   return 0;
 } */
+/* #ifndef _DYNAMIC_ARRAY_
+#define _DYNAMIC_ARRAY_
+#include <cstring>
+#include <vector>
 
+template <class T>
+class DynamicArray {
+ public:
+  DynamicArray();
+#if defined(_INITIALIZER_LIST_)
+  DynamicArray(std::initializer_list<T> ilist);
+#endif
+  DynamicArray(const DynamicArray& other);
+  ~DynamicArray();
+
+  int setCapacity(int newCapacity);
+  int getSize() const;
+  int append(const T& element);
+  int save(const T* data, int dataLength);
+  int insert(int index, const T& element);
+  bool remove(int index, T& removedElement);
+  const DynamicArray& operator=(const DynamicArray& other);
+  const DynamicArray& operator+=(const DynamicArray& other);
+  T& operator[](int index);
+
+ private:
+  T* data_;
+  int size_;
+  int capacity_;
+};
+
+template <class T>
+DynamicArray<T>::DynamicArray() : data_(new T[4]), size_(0), capacity_(4) {
+  std::memset(data_, 0, sizeof(T) * capacity_);
+}
+
+template <class T>
+DynamicArray<T>::DynamicArray(std::initializer_list<T> ilist)
+    : size_(ilist.size()), capacity_(ilist.size() + 4) {
+  data_ = new T[capacity_];
+  std::memcpy(data_, ilist.begin(), sizeof(T) * size_);
+  std::memset(data_ + size_, 0, sizeof(T) * (capacity_ - size_));
+}
+
+template <class T>
+DynamicArray<T>::~DynamicArray() {
+  delete[] data_;
+  data_ = nullptr;
+  size_ = 0;
+  capacity_ = 0;
+}
+
+template <class T>
+DynamicArray<T>::DynamicArray(const DynamicArray<T>& other)
+    : size_(0), capacity_(other.capacity_), data_(new T[other.capacity_]) {
+  if (other.size_ > 0) {
+    save(other.data_, other.size_);
+  }
+}
+
+template <class T>
+int DynamicArray<T>::setCapacity(int newCapacity) {
+  if (newCapacity <= size_) {
+    return capacity_;
+  }
+
+  T* newData = new T[newCapacity];
+
+  std::memcpy(newData, data_, sizeof(T) * size_);
+  std::memset(newData + size_, 0, sizeof(T) * (newCapacity - size_));
+
+  delete[] data_;
+  data_ = newData;
+  capacity_ = newCapacity;
+
+  return capacity_;
+}
+
+template <class T>
+int DynamicArray<T>::append(const T& element) {
+  if (size_ >= capacity_) {
+    int newCapacity =
+        (capacity_ < 64) ? capacity_ + 32 : capacity_ + (capacity_ >> 1);
+    if (!setCapacity(capacity_)) {
+      return -1;
+    }
+  }
+
+  data_[size_++] = element;
+  return size_ - 1;
+}
+
+template <class T>
+int DynamicArray<T>::save(const T* data, int dataLength) {
+  if (!data || dataLength <= 0) {
+    return -1;
+  }
+
+  if (size_ + dataLength >= capacity_) {
+    int newCapacity = size_ + dataLength;
+    newCapacity = (newCapacity < 64) ? newCapacity + 32
+                                     : newCapacity + (newCapacity >> 1);
+
+    if (!setCapacity(newCapacity)) {
+      return -1;
+    }
+  }
+
+  std::memcpy(data_ + size_, data, dataLength * sizeof(T));
+
+  size_ += dataLength;
+
+  return size_ - dataLength;
+}
+
+template <class T>
+int DynamicArray<T>::insert(int index, const T& element) {
+  if (index < 0 || index >= capacity_) {
+    return -1;
+  }
+
+  if (size_ >= capacity_) {
+    int newCapacity =
+        (capacity_ < 64) ? capacity_ + 32 : capacity_ + (capacity_ >> 1);
+
+    if (!setCapacity(newCapacity)) {
+      return -1;
+    }
+  }
+
+  if (index <= size_ - 1) {
+    std::memmove(data_ + index + 1, data_ + index, sizeof(T) * (size_ - index));
+  }
+
+  data[index] = element;
+  size_++;
+
+  return index;
+}
+
+template <class T>
+bool DynamicArray<T>::remove(int index, T& removedElement) {
+  if (index < 0 || index >= size_) {
+    return false;
+  }
+
+  removedElement = data_[index];
+
+  if (index < size_ - 1) {
+    std::memmove(data_ + index + 1, data_ + index,
+                 sizeof(T) * (size_ - index + 1));
+  }
+
+  --size_;
+  return true;
+}
+
+template <class T>
+const DynamicArray<T>& DynamicArray<T>::operator=(
+    const DynamicArray<T>& other) {
+  if (this != &other) {
+    delete[] data_;
+    size_ = 0;
+    capacity_ = other.capacity_;
+    data_ = new T[capacity_];
+
+    if (other.size_ > 0) {
+      save(other.data_, other.capacity_);
+    }
+  }
+
+  return *this;
+}
+
+template <class T>
+const DynamicArray<T>& DynamicArray<T>::operator+=(
+    const DynamicArray<T>& other) {
+  save(other.data_, other.size_);
+  return *this;
+}
+
+template <class T>
+T& DynamicArray<T>::operator[](int index) {
+  if (index < 0 || index >= capacity_) {
+    int newCapacity =
+        (index + 1 < 64) ? index + 33 : index + ((index + 1) >> 1);
+    setCapacity(newCapacity);
+  }
+
+  if (index >= size_) {
+    size_ = index + 1;
+  }
+
+  return data_[index];
+}
+#endif  // _DYNAMIC_ARRAY_ */
+#ifndef _DYNAMIC_ARRAY_
+#define _DYNAMIC_ARRAY_
+#include <cstring>
+#include <vector>
+
+template <class T>
+class DynamicArray {
+ public:
+  DynamicArray();
+
+#if defined(_INITIALIZER_LIST_)
+  DynamicArray(std::initializer_list<T> ilist);
+#endif
+  DynamicArray(const DynamicArray& other);
+  ~DynamicArray();
+
+  int setCapacity(int new_capacity);
+  int getSize() const;
+  int append(const T& element);
+  int save(const T* data, int len);
+  int insert(int index, const T& element);
+  bool remove(int index, T& removed_element);
+  const DynamicArray& operator=(const DynamicArray& other);
+  const DynamicArray& operator+=(const DynamicArray& other);
+  T& operator[](int index);
+
+ private:
+  T* data_;
+  int size_;
+  int capacity_;
+};
+
+template <class T>
+DynamicArray<T>::DynamicArray() : data_(new T[4]), size_(0), capacity_(4) {
+  std::memset(data_, 0, sizeof(T) * capacity_);
+}
+
+#if defined(_INITIALIZER_LIST_)
+template <class T>
+DynamicArray<T>::DynamicArray(std::initializer_list<T> ilist)
+    : size_(ilist.size()), capacity_(ilist.size() + 4) {
+  data_ = new T[capacity_];
+  std::memcpy(data_, ilist.begin(), sizeof(T) * capacity_);
+  std::memset(data_ + size_, 0, sizeof(T) * (capacity_ - size_));
+}
+#endif
+
+template <class T>
+DynamicArray<T>::~DynamicArray() {
+  delete[] data_;
+  data_ = nullptr;
+  size_ = 0;
+  capacity_ = 0;
+}
+
+template <class T>
+DynamicArray<T>::DynamicArray(const DynamicArray<T>& other)
+    : size_(0), capacity_(other.capacity_), data_(new T[other.capacity_]) {
+  if (other.size() > 0) {
+    save(other.data_, other.size_);
+  }
+}
+
+template <class T>
+int DynamicArray<T>::setCapacity(int new_capacity) {
+  if (new_capacity <= size_) {
+    return capacity_;
+  }
+
+  T* new_data = new T[new_capacity];
+  if (!new_data) {
+    return capacity_;
+  }
+
+  std::memcpy(new_data, data_, sizeof(T) * new_capacity);
+  std::memset(new_data + size_, 0, sizeof(T) * (new_capacity - size_));
+
+  delete[] data_;
+  data_ = new_data;
+  capacity_ = new_capacity;
+
+  return capacity_;
+}
+
+template <class T>
+int DynamicArray<T>::getSize() const {
+  return size_;
+}
+
+template <class T>
+int DynamicArray<T>::append(const T& element) {
+  if (size_ >= capacity_) {
+    int new_capacity =
+        (capacity_ < 64) ? capacity_ + 32 : capacity_ + (capacity_ + 1 >> 1);
+    if (!setCapacity(new_capacity)) {
+      return -1;
+    }
+  }
+
+  data_[size_++] = element;
+  return size_ - 1;
+}
+
+template <class T>
+int DynamicArray<T>::save(const T* data, int len) {
+  if (!data || len <= 0) {
+    return -1;
+  }
+
+  if (size_ + len >= capacity_) {
+    int new_capacity = size_ + len;
+    new_capacity = (new_capacity < 64) ? new_capacity + 32
+                                       : new_capacity + (new_capacity + 1 >> 1);
+    if (!setCapacity(new_capacity)) {
+      return -1;
+    }
+  }
+
+  std::memcpy(data_ + size_, data, sizeof(T) * len);
+
+  size_ += len;
+
+  return size_ - len;
+}
+
+template <class T>
+int DynamicArray<T>::insert(int index, const T& element) {
+  if (index < 0 || index >= capacity_) {
+    return -1;
+  }
+
+  if (size_ >= capacity_) {
+    int new_capacity =
+        capacity_ + 64 ? (capacity_ + 32) : capacity_ + (capacity_ + 1 >> 1);
+    if (!setCapacity(new_capacity)) {
+      return -1;
+    }
+  }
+  if (index <= size_ - 1) {
+    std::memmove(data_ + index + 1, data_ + index, sizeof(T) * (size_ - index));
+  }
+
+  data_[index] = element;
+
+  return index;
+}
+
+template <class T>
+bool DynamicArray<T>::remove(int index, T& removed_element) {
+  if (index < 0 || index >= size_) {
+    return false;
+  }
+
+  removed_element = data_[index];
+
+  if (index < size_ - 1) {
+    std::memmove(data_ + index, data_ + index + 1,
+                 sizeof(T) * (size_ - index - 1));
+  }
+
+  --size_;
+  return true;
+}
+
+template <class T>
+const DynamicArray<T>& DynamicArray<T>::operator=(
+    const DynamicArray<T>& other) {
+  if (this != &other) {
+    delete[] data_;
+    capcity_ = other.capacity_;
+    size_ = 0;
+    data_ = new T[capacity_];
+    if (other.size() > 0) {
+      save(other.data_, other.size());
+    }
+  }
+
+  return *this;
+}
+
+template <class T>
+const DynamicArray<T> &DynamicArray<T>::operator+=(
+  const DynamicArray<T>& other
+) {
+  save(other.data_, other.size_);
+  return *this;
+}
+
+template <class T>
+T &DynamicArray<T>::operator[](int index) {
+  if (index < 0 || index >= capacity_) {
+    int new_capacity = 
+    index + 1 < 64 ? index +33: index + ((index + 1) >> 1);
+    setCapacity(new_capacity);
+  }
+
+  if (index >= size_) {
+    size_ = index + 1;
+  }
+
+  return data_[index];
+}
+#endif  // _DYNAMIC_ARRAY_

@@ -1,0 +1,12 @@
+# ninja log v5
+5	645	7420440337164368	test_2024_7_3_autogen/timestamp	c0ec97e00c69efcb
+5	645	7420440337164368	test_2024_7_3_autogen/mocs_compilation.cpp	c0ec97e00c69efcb
+784	879	7420427171375348	C:/Code/CodePractice/Homework/Qt/test_2024_7_3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_7_3_autogen/EWIEGA46WW/qrc_res.cpp	f0d5e67c57c01801
+5	645	7420440337164368	C:/Code/CodePractice/Homework/Qt/test_2024_7_3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_7_3_autogen/timestamp	c0ec97e00c69efcb
+5	645	7420440337164368	C:/Code/CodePractice/Homework/Qt/test_2024_7_3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_7_3_autogen/mocs_compilation.cpp	c0ec97e00c69efcb
+784	879	7420427171375348	test_2024_7_3_autogen/EWIEGA46WW/qrc_res.cpp	f0d5e67c57c01801
+913	1031	7420427172929887	CMakeFiles/test_2024_7_3.dir/test_2024_7_3_autogen/EWIEGA46WW/qrc_res.cpp.obj	3abe8e3d28a69787
+645	2775	7420440359269787	CMakeFiles/test_2024_7_3.dir/test_2024_7_3_autogen/mocs_compilation.cpp.obj	67414d082d430942
+654	2779	7420440359298826	CMakeFiles/test_2024_7_3.dir/main.cpp.obj	884aaa4c63c728c4
+664	3075	7420440362129330	CMakeFiles/test_2024_7_3.dir/mainwindow.cpp.obj	bbe5f9a74e1b5319
+3075	3272	7420440364190596	test_2024_7_3.exe	cf21555e0fec14b0

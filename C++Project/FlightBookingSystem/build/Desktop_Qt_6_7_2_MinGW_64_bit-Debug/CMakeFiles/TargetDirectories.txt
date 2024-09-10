@@ -1,0 +1,9 @@
+C:/Code/CodePractice/C++Project/FlightBookingSystem/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/FlightBookingSystem.dir
+C:/Code/CodePractice/C++Project/FlightBookingSystem/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Code/CodePractice/C++Project/FlightBookingSystem/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Code/CodePractice/C++Project/FlightBookingSystem/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Code/CodePractice/C++Project/FlightBookingSystem/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Code/CodePractice/C++Project/FlightBookingSystem/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Code/CodePractice/C++Project/FlightBookingSystem/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Code/CodePractice/C++Project/FlightBookingSystem/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/FlightBookingSystem_autogen_timestamp_deps.dir
+C:/Code/CodePractice/C++Project/FlightBookingSystem/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/FlightBookingSystem_autogen.dir

@@ -1,0 +1,9 @@
+C:/Code/CodePractice/Homework/Qt/test_2024_5_29/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/test_2024_5_29.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_29/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_29/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_29/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_29/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_29/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_29/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_29/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/test_2024_5_29_autogen_timestamp_deps.dir
+C:/Code/CodePractice/Homework/Qt/test_2024_5_29/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/test_2024_5_29_autogen.dir

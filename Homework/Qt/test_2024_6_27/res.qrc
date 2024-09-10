@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>res/image_cancel.svg</file>
+        <file>res/image_close.svg</file>
+        <file>res/image_copy.svg</file>
+        <file>res/image_cut.svg</file>
+        <file>res/image_exit.svg</file>
+        <file>res/image_find.svg</file>
+        <file>res/image_new.svg</file>
+        <file>res/image_open.svg</file>
+        <file>res/image_paste.svg</file>
+        <file>res/image_save.svg</file>
+        <file>res/image_save_as.svg</file>
+        <file>res/image_version.svg</file>
+    </qresource>
+</RCC>

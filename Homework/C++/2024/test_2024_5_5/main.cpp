@@ -3911,4 +3911,4973 @@ class MyString {
   char* data_;
   std::size_t size_;
 }; */
+/* #include <iostream>
 
+using namespace std;
+
+int main() {
+  cout << "Hello World!" << endl;
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+template <class T>
+void quickSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  T x = arr[left];
+
+  int i = left - 1, j = right + 1;
+
+  while (i < j) {
+    do {
+      ++i;
+    } while (arr[i] < x);
+
+    do {
+      --j;
+    } while (arr[j] > x);
+
+    if (i < j) {
+      swap(arr[i], arr[j]);
+    }
+  }
+
+  quickSort(arr, left, j);
+
+  quickSort(arr, j + 1, right);
+} */
+/* #include <iostream>
+
+using namespace std;
+
+template <class T>
+void quickSort(T *arr, int left, int right) {
+  if (left > right) {
+    return;
+  }
+
+  T x = arr[left];
+  int i = left - 1, j = right + 1;
+  while (i < j) {
+    do {
+      ++i;
+    } while (arr[i] < x);
+
+    do {
+      --j;
+    } while (arr[j] > x);
+
+    if (i < j) {
+      swap(arr[i], arr[j]);
+    }
+  }
+
+  quickSort(arr, left, j);
+  quickSort(arr, j + 1, right);
+} */
+/* #include <cstdlib>
+#include <ctime>
+#include <iostream>
+
+using namespace std;
+
+template <class T>
+void quickSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  T x = arr[left];
+  int i = left - 1, j = right + 1;
+
+  while (i < j) {
+    do {
+      ++i;
+    } while (arr[i] < x);
+
+    do {
+      --j;
+    } while (arr[j] > x);
+
+    if (i < j) {
+      swap(arr[i], arr[j]);
+    }
+  }
+
+  quickSort(arr, left, j);
+  quickSort(arr, j + 1, right);
+}
+
+int main() {
+  srand((unsigned int)time(nullptr));
+  int arr[10];
+  for (int i = 0; i < 10; ++i) {
+    arr[i] = rand() % 100 + 1;
+    cout << arr[i] << ' ';
+  }
+  cout << endl;
+
+  quickSort(arr, 0, 10);
+
+  for (int i = 0; i < 10; ++i) {
+    cout << arr[i] << ' ';
+  }
+  cout << endl;
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+template <class T>
+void quickSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  T x = arr[right];
+  int i = left - 1, j = right + 1;
+
+  while (i < j) {
+    do {
+      ++i;
+    } while (arr[i] < x);
+
+    do {
+      --j;
+    } while (arr[j] > x);
+
+    if (i < j) {
+      swap(arr[i], arr[j]);
+    }
+  }
+
+  quickSort(arr, left, i - 1);
+  quickSort(arr, i, right);
+} */
+/* #include <iostream>
+
+using namespace std;
+
+template <class T>
+void quickSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  T x = arr[left];
+  int i = left - 1, j = right + 1;
+
+  while (i < j) {
+    do {
+      ++i;
+    } while (arr[i] < x);
+
+    do {
+      --j;
+    } while (arr[j] > x);
+
+    if (i < j) {
+      swap(arr[i], arr[j]);
+    }
+  }
+
+  quickSort(arr, left, j);
+  quickSort(arr, j + 1, right);
+}
+
+template <class T>
+void mergeSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  int mid = left + (right - left) / 2;
+
+  mergeSort(arr, left, mid);
+  mergeSort(arr, mid + 1, right);
+
+  int k = 0, i = left, j = mid + 1;
+
+  T *temp = new T[right - left + 1];
+
+  while (i <= mid && j <= right) {
+    if (arr[i] <= arr[j]) {
+      temp[k++] = arr[i++];
+    } else {
+      temp[k++] = arr[j++];
+    }
+  }
+
+  while (j <= right) {
+    temp[k++] = arr[j++];
+  }
+
+  for (int i = left, j = 0; i <= right; ++i, ++j) {
+    arr[i] = temp[j];
+  }
+
+  delete[] temp;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+template <class T>
+void mergeSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  int mid = left + (right - left) / 2;
+
+  mergeSort(arr, left, mid);
+  mergeSort(arr, mid + 1, right);
+
+  int k = 0, i = left, j = right;
+
+  T *temp = new T[right - left + 1];
+
+  while (i <= mid && j <= right) {
+    if (arr[i] <= arr[j]) {
+      temp[k++] = arr[i++];
+    } else {
+      temp[k++] = arr[j++];
+    }
+  }
+
+  while (i <= mid) {
+    temp[k++] = arr[i++];
+  }
+
+  while (j <= right) {
+    temp[k++] = arr[j++];
+  }
+
+  for (int i = left, j = 0; i <= right; ++i, ++j) {
+    arr[i] = temp[j];
+  }
+
+  delete[] temp;
+} */
+/* #include <cstdlib>
+#include <ctime>
+#include <iostream>
+
+using namespace std;
+
+template <class T>
+void mergeSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  int mid = left + (right - left) / 2;
+
+  mergeSort(arr, left, mid);
+  mergeSort(arr, mid + 1, right);
+
+  int k = 0, i = left, j = mid + 1;
+
+  T *temp = new T[right - left + 1];
+
+  while (i <= mid && j <= right) {
+    if (arr[i] <= arr[j]) {
+      temp[k++] = arr[i++];
+    } else {
+      temp[k++] = arr[j++];
+    }
+  }
+
+  while (i <= mid) {
+    temp[k++] = arr[i++];
+  }
+
+  while (j <= right) {
+    temp[k++] = arr[j++];
+  }
+
+  for (int i = left, j = 0; i <= right; ++i, ++j) {
+    arr[i] = temp[j];
+  }
+
+  delete[] temp;
+}
+
+int main() {
+  srand((unsigned int)time(nullptr));
+
+  int arr[10];
+
+  for (int i = 0; i < 10; ++i) {
+    arr[i] = rand() % 100 + 1;
+    cout << arr[i] << ' ';
+  }
+  cout << endl;
+
+  mergeSort(arr, 0, 10);
+
+  for (int i = 0; i < 10; ++i) {
+    cout << arr[i] << ' ';
+  }
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+template <class T>
+void quickSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  T x = arr[right];
+
+  int i = left - 1, j = right + 1;
+
+  while (i < j) {
+    do {
+      ++i;
+    } while (arr[i] < x);
+
+    do {
+      --j;
+    } while (arr[j] > x);
+
+    if (i < j) {
+      swap(arr[i], arr[j]);
+    }
+  }
+
+  quickSort(arr, left, i - 1);
+  quickSort(arr, i, right);
+}
+
+template <class T>
+void mergeSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  int mid = left + (right - left) / 2;
+
+  mergeSort(arr, left, mid);
+  mergeSort(arr, mid + 1, right);
+
+  int i = left, j = mid + 1, k = 0;
+  T *temp = new T[right - left + 1];
+
+  while (i <= mid && j <= right) {
+    if (arr[i] < arr[j]) {
+      temp[k++] = arr[i++];
+    } else {
+      temp[k++] = arr[j++];
+    }
+  }
+
+  while (i <= mid) {
+    temp[k++] = arr[i++];
+  }
+
+  while (j <= right) {
+    temp[k++] = arr[j++];
+  }
+
+  for (i = left, j = 0; i <= right; ++i) {
+    arr[i] = temp[j];
+  }
+
+  delete[] temp;
+} */
+/* template <class T>
+void quickSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  T x = arr[left];
+
+  int i = left - 1, j = right + 1;
+
+  while (i < j) {
+    do {
+      ++i;
+    } while (arr[i] < x);
+
+    do {
+      --j;
+    } while (arr[j] > x);
+
+    if (i < j) {
+      swap(arr[i], arr[j]);
+    }
+  }
+
+  quickSort(arr, left, j);
+  quickSort(arr, j + 1, right);
+} */
+/* template <class T>
+void quickSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  T x = arr[left];
+  int i = left - 1, j = right + 1;
+
+  while (i < j) {
+    do {
+      ++i;
+    } while (arr[i] < x);
+
+    do {
+      --j;
+    } while (arr[j] > x);
+
+    if (i < j) {
+      swap(arr[i], arr[j]);
+    }
+  }
+} */
+/* template <class T>
+void quickSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  T x = arr[left];
+  int i = left - 1, j = right + 1;
+
+  while (i < j) {
+    do {
+      ++i;
+    } while (arr[i] < x);
+
+    do {
+      --j;
+    } while (arr[j] > x);
+
+    if (i < j) {
+      swap(arr[i], arr[j]);
+    }
+  }
+
+  quickSort(arr, left, j);
+  quickSort(arr, j + 1, right);
+}
+
+template <class T>
+void mergeSort(T *arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  int mid = left + (right - left) / 2;
+
+  mergeSort(arr, left, mid);
+  mergeSort(arr, mid + 1, right);
+
+  T *temp = new T[right - left + 1];
+
+  while (i <= mid && j <= right) {
+    if (arr[i] <= arr[j]) {
+      temp[k++] = arr[i++];
+    } else {
+      temp[k++] = arr[j++];
+    }
+  }
+
+  while (i <= mid) {
+    temp[k++] = arr[i++];
+  }
+
+  while (j <= right) {
+    temp[k++] = arr[j++];
+  }
+
+  for (i = left, j = 0; i <= right; ++i, ++j) {
+    arr[i] = temp[j];
+  }
+
+  delete[] temp;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+int main() {
+  int arr[10] = {1, 2, 2, 2, 3, 3, 3, 3, 4, 4};
+
+  int l = 0, r = 9, x;
+
+  cin >> x;
+
+  while (l < r) {
+    int mid = l + (r - l) / 2;
+
+    if (arr[mid] >= x) {
+        r = mid;
+    } else {
+       l = mid + 1;
+    }
+  }
+  cout << l << ' ';
+
+  l = 0, r = 9;
+  while (l < r) {
+    int mid = l + (r - l + 1) / 2;
+
+    if (arr[mid] <= x) {
+      l = mid;
+    } else {
+      r = mid - 1;
+    }
+  }
+  cout << r << endl;
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;  // 表示整数对
+
+const int N = 300010;  // 常数 N, 用来定义数组的最大大小
+
+int n, m;
+int a[N], s[N];  // 数组 a 存储离散化后的位置的值, 数组 s 用于存储前缀和
+
+vector<int> alls;        // 用来存储所有需要离散化的值
+vector<PII> add, query;  // 存储需要加的数对和查询区间
+
+int find(int x) {  // 二分查找
+  int l = 0, r = alls.size() - 1;
+  while (l < r) {
+    int mid = l + r >> 1;
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+
+  return r + 1;  // 因为是前缀和数组, 所以要进行加一操作
+}
+
+int main() {
+  cin >> n >> m;  // 代表需要加的数对的个数和查询的区间的个数
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;  // 每个操作由一对数 (x, c) 构成, 表示在 x 处加上 c
+    cin >> x >> c;
+    add.push_back({x, c});
+
+    alls.push_back(x);  // 将 x 加入 alls 中
+  }
+
+  for (int i = 0; i < m; ++i) {  // m 个查询操作
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});  // 代表查询操作
+
+    alls.push_back(l);  // 将两个操作数存入 alls 中
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());  // 排序所有的数
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());  // 去重
+
+  for (auto item : add) {  // 遍历插入操作, 找到位置 x
+    int x = find(item.first);
+    a[x] += item.second;  // 在位置 x 处加上相应的数
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];  // 构建前缀和数组
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;  // 进行查询操作
+  }
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 300010;
+
+int n, m;
+int a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size() - 1;
+  while (l < r) {
+    int mid = l + (r - l) >> 1;
+
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+
+  return r + 1;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});
+
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] += item.second;
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 300010;
+
+int n, m;
+int a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size() - 1;
+  while (l < r) {
+    int mid = l + (r - l) / 2;
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+  return r + 1;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});
+
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] += item.second;
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r= find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 300010;
+
+int n, m;
+int a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size() - 1;
+  while (l < r) {
+    int mid = l + (r - l) / 2;
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+  return r + 1;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+
+    query.push_back({l, r});
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] += item.second;
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 300010;
+
+int n, m;
+int a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l, r;
+  cin >> l >> r;
+  while (l < r) {
+    int mid = l + (r - l) / 2;
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+  return r + 1;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] += item.second;
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int N = 300010;
+
+typedef pair<int, int> PII;
+
+int n, m;
+int a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size() - 1;
+
+  while (l < r) {
+    int mid = l + (r - l) >> 1;
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+
+  return r + 1;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] += item.second;
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 300010;
+
+int n, m;
+int a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size();
+  while (l < r) {
+    int mid = l + (r - l) >> 1;
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+  return r + 1;
+}
+
+vector<int>::iterator unique(vector<int> &a) {
+  int j = 0;
+  for (int i = 0; i < a.size(); ++i) {
+    if (!i || a[i] != a[i - 1]) {
+      a[j++] = a[i];
+    }
+  }
+  return a.begin() + j;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] += item.second;
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 100010;
+
+int n;
+vector<PII> segs;
+
+void merge(vector<PII> &segs) {
+  vector<PII> res;
+
+  sort(segs.begin(), segs.end());
+
+  int st = -2e9, ed = -2e9;
+
+  for (auto seg : segs) {
+    if (ed < seg.first) {
+      if (st != -2e9) {
+        res.push_back({st, ed});
+      }
+      st = seg.first, ed = seg.second;
+    } else {
+      ed = max(ed, seg.second);
+    }
+  }
+
+  if (st != -2e9) {
+    res.push_back({st, ed});
+  }
+
+  segs = res;
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int l, r;
+    cin >> l >> r;
+    segs.push_back({l, r});
+  }
+
+  merge(segs);
+
+  cout << segs.size() << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 100010;
+
+int n;
+vector<PII> segs;
+
+void merge(vector<PII> &segs) {
+  vector<PII> res;
+
+  sort(segs.begin(), segs.end());
+
+  int st = -2e9, ed = -2e9;
+
+  for (auto seg : segs) {
+    if (ed < seg.first) {
+      if (st != -2e9) {
+        res.push_back({st, ed});
+      }
+      st = seg.first, ed = seg.second;
+    } else {
+      ed = max(ed, seg.second);
+    }
+  }
+
+  if (st != -2e9) {
+    res.push_back({st, ed});
+  }
+
+  segs = res;
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int l, r;
+    cin >> l >> r;
+    segs.push_back({l, r});
+  }
+
+  merge(segs);
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 100010;
+
+int n;
+vector<PII> segs;
+
+void merge(vector<PII> &segs) {
+  vector<PII> res;
+
+  sort(segs.begin(), segs.end());
+
+  int st = -2e9, ed = -2e9;
+
+  for (auto seg : segs) {
+    if (ed < seg.first) {
+      if (st != -2e9) {
+        res.push_back({st, ed});
+      }
+      st = seg.first, ed = seg.second;
+    } else {
+      ed = max(ed, seg.second);
+    }
+  }
+
+  if (st != -2e9) {
+    res.push_back({st, ed});
+  }
+
+  segs = res;
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int l, r;
+    cin >> l >> r;
+    segs.push_back({l, r});
+  }
+
+  merge(segs);
+
+  cout << segs.size() << endl;
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 100010;
+
+int n;
+vector<PII> segs;
+
+void merge(vector<PII> &segs) {
+  vector<PII> res;
+
+  int st = -2e9, ed = -2e9;
+
+  for (auto seg : segs) {
+    if (ed < seg.first) {
+      if (st != -2e9) {
+        res.push_back({st, ed});
+      }
+      st = seg.first, ed = seg.second;
+    } else {
+      ed = max(seg.second, ed);
+    }
+  }
+
+  if (st != -2e9) {
+    res.push_back({st, ed});
+  }
+
+  segs = res;
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int l, r;
+    cin >> l >> r;
+    segs.push_back({l, r});
+  }
+
+  merge(segs);
+
+  cout << segs.size() << endl;
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+int n;
+vector<PII> segs;
+
+const int N = 100010;
+
+void merge(vector<PII> &segs) {
+  vector<PII> res;
+
+  sort(segs.begin(), segs.end());
+
+  int st = -2e9, ed = -2e9;
+
+  for (auto seg : segs) {
+    if (ed < seg.first) {
+      if (st != -2e9) {
+        res.push_back({st, ed});
+      }
+      st = seg.first, ed = seg.second;
+    } else {
+      ed = max(seg.second, ed);
+    }
+  }
+
+  if (st != -2e9) {
+    res.push_back({st, ed});
+  }
+
+  segs = res;
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int l, r;
+    cin >> l >> r;
+    segs.push_back({l, r});
+  }
+
+  merge(segs);
+
+  cout << segs.size() << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+template <class T>
+void quick_sort(T *arr, int left, int right) {
+  if (left > right) {
+    return;
+  }
+
+  T x = arr[left];
+  int i = left - 1, j = right + 1;
+
+  while (i < j) {
+    do {
+      ++i;
+    } while (arr[i] < x);
+
+    do {
+      --j;
+    } while (arr[j] > x);
+
+    if (i < j) {
+      swap(arr[i], arr[j]);
+    }
+  }
+
+  quick_sort(arr, left, j);
+  quick_sort(arr, j + 1, right);
+}
+
+template <class T>
+void merge_sort(T *arr, int left, int right) {
+  if (left > right) {
+    return;
+  }
+
+  int mid = left + (right - left) / 2;
+
+  merge_sort(arr, left, mid);
+  merge_sort(arr, mid + 1, right);
+
+  int i = 0, j = mid + 1, k = 0;
+
+  T *temp = new T[right - left + 1];
+
+  while (i <= mid && j <= right) {
+    if (arr[i] <= arr[j]) {
+      temp[k++] = arr[i++];
+    } else {
+      temp[k++] = arr[j++];
+    }
+  }
+
+  while (i <= mid) {
+    temp[k++] = arr[i++];
+  }
+
+  while (j <= right) {
+    temp[k++] = arr[j++];
+  }
+
+  for (i = left, j = 0; i <= right; ++i) {
+    arr[i] = temp[j];
+  }
+
+  delete[] temp;
+}
+
+int main() {
+  int arr[10] = {1, 1, 2, 2, 2, 2, 3, 3, 3, 4};
+  int x;
+
+  cin >> x;
+
+  int l = 0, r = 9;
+  while (l < r) {
+    int mid = l + (r - l) / 2;
+
+    if (arr[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+  cout << l << ' ';
+
+  l = 0, r = 9;
+  while (l < r) {
+    int mid = l + (r - l + 1) / 2;
+
+    if (arr[mid] <= x) {
+      l = mid;
+    } else {
+      r = mid - 1;
+    }
+  }
+  cout << r << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+int main() {
+  double x;
+  cin >> x;
+
+  double l = 0, r = x;
+
+  while (r - l > 1e-9) {
+    double mid = l + (r - l) / 2;
+    if (mid * mid >= x) {
+      r = mid;
+    } else {
+      l = mid;
+    }
+  }
+
+  cout << l << endl;
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <vector>
+
+using namespace std;
+
+vector<int> add(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> sum;
+
+  int max_size = max(v1.size(), v2.size());
+  int carry = 0;
+
+  for (int i = 0; i < max_size || carry; ++i) {
+    if (i < v1.size()) {
+      carry += v1[i];
+    }
+
+    if (i < v2.size()) {
+      carry += v2[i];
+    }
+
+    sum.push_back(carry % 10);
+    carry /= 10;
+  }
+
+  return sum;
+}
+
+bool cmp(const vector<int> &v1, const vector<int> &v2) {
+  if (v1.size() != v2.size()) {
+    return v1.size() > v2.size();
+  }
+
+  for (int i = 0; i < v1.size(); ++i) {
+    if (v1[i] != v2[i]) {
+      return v1[i] > v2[i];
+    }
+  }
+
+  return true;
+}
+
+vector<int> sub(const vector<int> &v1, const vector<int> &v2) {
+  vector<int> res;
+
+  int carry = 0;
+
+  for (int i = 0; i < v1.size(); ++i) {
+    int diff = v1[i] - carry;
+
+    if (i < v2.size()) {
+      diff -= v2[i];
+    }
+
+    res.push_back((diff + 10) % 10);
+
+    carry = diff < 0 ? 1 : 0;
+  }
+
+  while (res.size() > 1 && res.back() == 0) {
+    res.pop_back();
+  }
+
+  return res;
+}
+
+vector<int> mul(const vector<int> &n, int m) {
+  vector<int> prod;
+  int carry = 0;
+
+  for (int i = 0; i < n.size() || carry; ++i) {
+    if (i < n.size()) {
+      carry += n[i] * m;
+    }
+    prod.push_back(carry % 10);
+    carry /= 10;
+  }
+
+  return prod;
+}
+
+vector<int> div(const vector<int> &n, int m, int &rem) {
+  vector<int> quot;
+
+  for (int i = n.size() - 1; i >= 0; --i) {
+    rem = rem * 10 + n[i];
+    quot.push_back(rem / m);
+    rem %= 10;
+  }
+
+  reverse(quot.begin(), quot.end());
+
+  while (quot.size() > 1 && quot.back() == 0) {
+    quot.pop_back();
+  }
+
+  return quot;
+} */
+/* #include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int LEN = 100010;
+
+int main() {
+  int n, m;
+  int arr[LEN] = {0}, sum[LEN] = {0};
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    sum[i] = sum[i - 1] + arr[i];
+  }
+
+  while (m--) {
+    int l, r;
+    cin >> l >> r;
+    cout << sum[r] - sum[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int main() {
+  int n, m;
+  int a[N], s[N];
+
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> a[i];
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int main() {
+  int n, m;
+  int a[N], s[N];
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> a[i];
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    cout << s[r] - s[l - 1] << endl;
+  }
+} */
+/* #include <algorithm>
+#include <vector>
+
+using namespace std;
+
+vector<int> div(const vector<int> &n, int d, int &r) {
+  vector<int> q;
+
+  int c = 0;
+  for (int i = 0; i < n.size(); ++i) {
+    r = r * 10 + n[i];
+    q.push_back(r / d);
+    r %= 10;
+  }
+
+  reverse(q.begin(), q.end());
+
+  while (q.size() > 1 && q.back() == 0) {
+    q.pop_back();
+  }
+
+  return q;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int main() {
+  int n, m;
+  int arr[N] = {0}, sum[N] = {0};
+
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> arr[i];
+    sum[i] = sum[i - 1] + arr[i];
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    cout << sum[r] - sum[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int main() {
+  int n, m, q;
+  int a[N][N], s[N][N];
+
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> a[i][j];
+      s[i][j] = s[i - 1][j] + s[i][j - 1] - s[i - 1][j - 1] + a[i][j];
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    cout << s[x2][y2] - s[x2][y1 - 1] - s[x1 - 1][y2] + s[x1][y1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+const int N = 100010;
+
+using namespace std;
+
+int main() {
+  int n, m, q;
+  int a[N][N], s[N][N];
+
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> a[i][j];
+      s[i][j] = s[i - 1][j] + s[i][j - 1] - s[i - 1][j - 1] + a[i][j];
+    }
+  }
+
+  for (int i = 0; i < q; ++i) {
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+    cout << s[x2][y2] - s[x2][y1 - 1] - s[x1 - 1][y2] + s[x1 - 1][y1 - 1]
+         << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, m;
+int a[N], d[N];
+
+void insert(int l, int r, int x) {
+  d[l] += x;
+  d[r + 1] -= x;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1; i <=n; ++i) {
+    cin >> a[i];
+    insert(i, i, a[i]);
+  }
+
+  while (m--) {
+    int l, r, x;
+    cin >> l >> r >> x;
+    insert(l, r, x);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    d[i] += d[i - 1];
+    cout << d[i] << ' ';
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, m;
+int a[N], d[N];
+
+void insert(int l, int r, int x) {
+  d[l] += x;
+  d[r + 1] -= x;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> a[i];
+    insert(i, i, a[i]);
+  }
+
+  while (m--) {
+    int l, r, x;
+    cin >> l >> r >> x;
+    insert(l, r, x);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    d[i] += d[i - 1];
+    cout << d[i] << ' ';
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, m;
+
+int a[N], d[N];
+
+void insert(int l, int r, int x) {
+  d[l] += x;
+  d[r + 1] -= x;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 1; i <= n; ++i) {
+    cin >> a[i];
+    insert(i, i, a[i]);
+  }
+
+  while (m--) {
+    int l, r, x;
+    cin >> l >> r >> x;
+    insert(l, r, x);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    d[i] += d[i - 1];
+    cout << d[i] << ' ';
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int a[N][N], d[N][N];
+
+void insert(int x1, int y1, int x2, int y2, int v) {
+  d[x1][y1] += v;
+  d[x2 + 1][y1] -= v;
+  d[x1][y2 + 1] -= v;
+  d[x2 + 1][y2 + 1] += v;
+}
+
+int main() {
+  int n, m, q;
+  cin >> n >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> a[i][j];
+      insert(i, j, i, j, a[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, v;
+    cin >> x1 >> y1 >> x2 >> y2 >> v;
+    insert(x1, y1, x2, y2, v);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      d[i][j] += d[i - 1][j] + d[i][j - 1] - d[i - 1][j - 1];
+      cout << d[i][j] << ' ';
+    }
+    cout << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int a[N][N], d[N][N];
+
+void insert(int x1, int y1, int x2, int y2, int v) {
+  d[x1][y1] += v;
+  d[x2 + 1][y1] -= v;
+  d[x1][y2 + 1] -= v;
+  d[x2 + 1][y2 + 1] += v;
+}
+
+int main() {
+  int n, m, q;
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> a[i][j];
+      insert(i, j, i, j, a[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, v;
+    cin >> x1 >> y1 >> x2 >> y2 >> v;
+    insert(x1, y1, x2, y2, v);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      d[i][j] += d[i - 1][j] + d[i][j - 1] - d[i - 1][j - 1];
+      cout << d[i][j] << ' ';
+    }
+    cout << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+int a[N][N], d[N][N];
+
+void insert(int x1, int y1, int x2, int y2, int v) {
+  d[x1][y1] += v;
+  d[x2 + 1][y1] -= v;
+  d[x1][y2 + 1] -= v;
+  d[x2 + 1][y2 + 1] += v;
+}
+
+int main() {
+  int n, m, q;
+  cin >> n >> m >> q;
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      cin >> a[i][j];
+      insert(i, j, i, j, a[i][j]);
+    }
+  }
+
+  while (q--) {
+    int x1, y1, x2, y2, v;
+    cin >> x1 >> y1 >> x2 >> y2 >> v;
+    insert(x1, y1, x2, y2, v);
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      d[i][j] += d[i - 1][j] + d[i][j - 1] - d[i - 1][j - 1];
+      cout << d[i][j] << ' ';
+    }
+    cout << endl;
+  }
+
+  return 0;
+} */
+/* #include <cstring>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  char str[1000];
+  gets(str);
+  int n = strlen(str);
+
+  for (int i = 0; str[i]; ++i) {
+    int j = i;
+    while (j < n && str[j] != ' ') {
+      ++j;
+    }
+    for (int k = i; k < j; ++k) {
+      cout << str[k];
+    }
+    i = j;
+    cout << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, a[N], s[N] = {0};
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int res = 0;
+  for (int i = 0, j = 0; i < n; ++i) {
+    ++s[a[i]];
+
+    while (s[a[i]] > 1) {
+      --s[a[j]];
+      ++j;
+    }
+    res = max(res, i - j + 1);
+  }
+
+  cout << res << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, a[N], s[N] = {0};
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int res = 0;
+
+  for (int i = 0, j = 0; i < n; ++i) {
+    ++s[a[i]];
+
+    while (s[a[i]] > 1) {
+      --s[a[j]];
+      ++j;
+    }
+
+    res = max(res, i - j + 1);
+  }
+  cout << res << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, a[N], s[N];
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int res = 0;
+  for (int i = 0, j = 0; i < n; ++i) {
+   ++s[a[i]];
+   while (s[a[i]] > 1) {
+    --s[a[j]];
+    ++j;
+   }
+   res = max(res, i - j + 1);
+  }
+  cout << res << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, a[N], s[N] = {0};
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int res = 0;
+  for (int i = 0, j = 0; i < n; ++i) {
+    ++s[a[i]];
+    while (s[a[i]] > 1) {
+      --s[a[j]];
+      ++j;
+    }
+    res = max(res, i - j + 1);
+  }
+
+  cout << res << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+int main() {
+  int n = 10;
+
+  for (int k = 3; k >= 0; --k) {
+    cout << (n >> k & 1);
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+int main() {
+  int n = 10;
+
+  for (int k = 3; k >= 0; --k) {
+    cout << (n >> k & 1);
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+int lowbit(int x) { return x & -x; }
+
+int main() {
+  int n;
+  cin >> n;
+
+  while (n--) {
+    int x;
+    cin >> x;
+
+    int res = 0;
+    while (x) {
+      x -= lowbit(x);
+      ++res;
+    }
+    cout << res << ' ';
+  }
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+int lowbit(int x) {
+  return x & -x;
+}
+
+int main() {
+  int n;
+  cin >> n;
+
+  while (n--) {
+    int x;
+    cin >> x;
+
+    int res = 0;
+    while (x) {
+      x -= lowbit(x);
+      ++res;
+    }
+    cout << res << ' ';
+  }
+} */
+/* #include <iostream>
+
+using namespace std;
+
+int lowbit(int x) {
+  return x & -x;
+}
+
+int main() {
+  int n;
+  cin >> n;
+
+  while (n--) {
+    int x;
+    cin >> x;
+
+    int res = 0;
+    while (x) {
+      x -= lowbit(x);
+      ++res;
+    }
+
+    cout << res << endl;
+  }
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 300010;
+
+int n, m;
+int a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size() - 1;
+  while (l < r) {
+    int mid = l + r >> 1;
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+  return r + 1;
+}
+
+int main(){
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+    alls.push_back(x);
+  }
+
+  for (int i = 0;i < m; ++i) {
+    int l,r;
+    cin >> l >> r;
+    query.push_back({l, r});
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] += item.second;
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+
+
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 300010;
+
+int n, m;
+int a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size() - 1;
+  while (l < r) {
+    int mid = l + r >> 1;
+    if (alls[mid] >= mid) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+  return r + 1;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] += item.second;
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 300010;
+
+int n, m;
+int a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size() - 1;
+  while (l < r) {
+    int mid = l + r >> 1;
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+  return r + 1;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < n; ++i) {
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] += item.second;
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 300010;
+
+int n, m;
+int a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size();
+
+  while (l < r) {
+    int mid = l + r >> 1;
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+  return r + 1;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(alls.unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] += item.second;
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 300010;
+
+int n, m;
+int a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size();
+  while (l < r) {
+    int mid = l + r >> 1;
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+
+  return r + 1;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < n; ++i) {
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] += item.second;
+  }
+
+  for (int i = 1; i < alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 100010;
+
+int n;
+vector<PII> segs;
+
+void merge(vector<PII> &segs) {
+  vector<PII> res;
+
+  sort(segs.begin(), segs.end());
+
+
+  int st = -2e9, ed = -2e9;
+
+  for (auto seg : segs) {
+    if (ed < seg.first) {
+      if (st != -2e9) {
+        res.push_back({st, ed});
+      }
+      st = seg.first, ed = seg.second;
+    } else {
+      ed = max(ed, seg.second);
+    }
+  }
+
+  if (st != -2e9) {
+    res.push_back({st, ed});
+  }
+
+  segs = res;
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int l, r;
+    cin >> l >> r;
+    segs.push_back({l, r});
+  }
+
+  merge(segs);
+
+  cout << segs.size() << endl;
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 100010;
+
+int n;
+vector<PII> segs;
+
+void merge(vector<PII> &segs) {
+  vector<PII> res;
+
+  sort(segs.begin(), segs.end());
+
+  int st = -2e9, ed = -2e9;
+
+  for (auto seg : segs) {
+    if (ed < seg.first) {
+      if (st != -2e9) {
+        res.push_back({st, ed});
+      }
+    } else {
+      ed = max(ed, seg.second);
+    }
+  }
+  if (st != -2e9) {
+    res.push_back({st, ed});
+  }
+
+  segs = res;
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int l, r;
+    cin >> l >> r;
+    segs.push_back({l, r});
+  }
+  merge(segs);
+
+  cout << segs.size() << endl;
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const int N = 100010;
+
+typedef pair<int, int> PII;
+
+int n;
+vector<PII> segs;
+
+void merge(vector<PII> &segs) {
+  vector<PII> res;
+
+  int st = -2e9, ed = -2e9;
+
+  for (auto seg : segs) {
+    if (ed < seg.first) {
+      if (st != -2e9) {
+        res.push_back({st, ed});
+      }
+      st = seg.first, ed = seg.second;
+    } else {
+      ed = max(ed, seg.second);
+    }
+  }
+
+  segs = res;
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int l, r;
+    cin >> l >> r;
+    segs.push_back({l, r});
+  }
+
+  merge(segs);
+
+  cout << segs.size() << endl;
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 100010;
+
+int n, m;
+int a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size() - 1;
+
+  while (l < r) {
+    int mid = l + (r - l) / 2;
+
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+
+  return r + 1;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = item.first;
+    a[x] += item.second;
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+// head 表示头结点的下标
+// e[i] 表示节点 i 的值
+// ne[i] 表示节点 i 的 next 指针
+// idx 存储当前已经使用的点, 也表示已经使用的节点数量
+int head, e[N], ne[N], idx;
+
+// 初始化
+void init() {
+  head = -1;  // 表示链表为空
+  idx = 0;    // 表示还没有使用任何节点
+}
+
+// 将 x 插入到头结点
+void add_to_head(int x) {
+  e[idx] = x;
+  ne[idx] = head;
+  head = idx;
+  ++idx;
+}
+
+// 将 x 插入到下标是 k 的点后面
+void add(int k, int x) {
+  e[idx] = x;
+  ne[idx] = ne[k];
+  ne[k] = idx;
+  ++idx;
+}
+
+// 将下标是 k 的点后面的点删掉
+void remove(int k) { ne[k] = ne[ne[k]]; }
+
+int main() {
+  int m;
+  cin >> m;
+
+  init();
+
+  while (m--) {
+    int k, x;
+    char op;
+
+    cin >> op;
+
+    if (op == 'H') {
+      cin >> x;
+      add_to_head(x);
+    } else if (op == 'D') {
+      cin >> k;
+      if (!k) {
+        head = ne[head];
+      }
+      remove(k - 1);
+    } else {
+      cin >> k >> x;
+      add(k - 1, x);
+    }
+  }
+
+  for (int i = head; i != -1; i = ne[i]) {
+    cout << e[i] << ' ';
+  }
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int head, e[N], ne[N], idx;
+
+void init() {
+  head = -1;
+  idx = 0;
+}
+
+void add_to_head(int x) {
+  e[idx] = x;
+  ne[idx] = head;
+  head = idx;
+  ++idx;
+}
+
+void add(int k, int x) {
+  e[idx] = x;
+  ne[idx] = ne[k];
+  ne[k] = idx;
+  ++idx;
+}
+
+void remove(int k) { ne[k] = ne[ne[k]]; }
+
+int main() {
+  int m;
+  cin >> m;
+
+  init();
+
+  while (m--) {
+    int k, x;
+    char op;
+
+    cin >> op;
+
+    if (op == 'H') {
+      cin >> x;
+      add_to_head(x);
+    } else if (op == 'D') {
+      cin >> k;
+      if (!k) {
+        head = ne[head];
+      }
+      remove(k - 1);
+    } else {
+      cin >> k >> x;
+      add(k - 1, x);
+    }
+
+    for (int i = head; i != -1; i = ne[i]) {
+      cout << e[i] << ' ';
+    }
+    cout << endl;
+
+    return 0;
+  }
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int head, e[N], ne[N], idx;
+
+void init() {
+  head = -1;
+  idx = 0;
+}
+
+void add_to_head(int x) {
+  e[idx] = x;
+  ne[idx] = head;
+  head = idx;
+  ++idx;
+}
+
+void add(int k, int x) {
+  e[idx] = x;
+  ne[idx] = ne[k];
+  ne[k] = idx;
+  ++idx;
+}
+
+void remove(int k) {
+  ne[k] = ne[ne[k]];
+}
+
+int main() {
+  int m;
+  cin >> m;
+
+  init();
+
+  while (m--) {
+    int k, x;
+    char op;
+
+    cin >> op;
+
+    if (op == 'H') {
+      cin >> x;
+      add_to_head(x);
+    } else if (op == 'D') {
+      cin >> k;
+      if (!k) {
+        head = ne[head];
+      }
+      remove(k - 1);
+    } else {
+      cin >> k >> x;
+      add(k - 1, x);
+    }
+  }
+
+  for (int i = head; i != -1; i = ne[i]) {
+    cout << e[i] << ' ';
+  }
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int head, e[N], ne[N], idx;
+
+void init() {
+  head = -1;
+  idx = 0;
+}
+
+void add_to_head(int x) {
+  e[idx] = x;
+  ne[idx] = ne[head];
+  head = idx;
+  ++idx;
+}
+
+void add(int k, int x) {
+  e[idx] = x;
+  ne[idx] = ne[k];
+  ne[k] = idx;
+  ++idx;
+}
+
+int main() {
+  int m;
+  cin >> m;
+
+  init();
+
+  while (m--) {
+    int k, x;
+    char op;
+
+    cin >> op;
+
+    if (op = 'H') {
+      cin >> x;
+      add_to_head(x);
+    } else if (op == 'D') {
+      cin >> k;
+      if (!k) {
+        head = ne[head];
+      }
+      remove(k - 1);
+    } else {
+      cin >> k >> x;
+      add(k - 1, x);
+    }
+  }
+
+  for (int i = head; i != -1; i = ne[i]) {
+    cout << e[i] << ' ';
+  }
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int m;
+int e[N], l[N], r[N], idx;
+
+void init() {
+  r[0] = 1, l[1] = 0;
+  idx = 2;
+}
+
+void add(int k, int x) {
+  e[idx] = x;
+  r[idx] = r[k];
+  l[idx] = k;
+  l[r[k]] = idx;
+  r[k] = idx;
+}
+
+void remove(int k) {
+  r[l[k]] = r[k];
+  l[r[k]] = l[k];
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int m;
+int e[N], l[N], r[N], idx;
+
+void init() {
+  l[1] = 0;
+  r[0] = 1;
+  idx = 2;
+}
+
+void add(int k, int x) {
+  e[idx] = x;
+  r[idx] = r[k];
+  l[idx] = k;
+  l[r[k]] = idx;
+  r[k] = idx;
+  ++idx;
+}
+
+void remove(int k) {
+  r[l[k]] = r[k];
+  l[r[k]] = l[k];
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int e[N], l[N], r[N], idx;
+
+void init() {
+  l[1] = 0, r[0] = 1;
+  idx = 2;
+}
+
+void add(int k, int x) {
+  e[idx] = x;
+  r[idx] = r[k];
+  r[k] = idx;
+  l[r[k]] = idx;
+  r[k] = idx;
+  ++idx;
+}
+
+void remove(int k) {
+  r[l[k]] = r[k];
+  l[r[k]] = l[k];
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n;
+int stk[N], tt = 0;
+
+int main() {
+  cin >> n;
+
+  // 遍历序列中的元素
+  for (int i = 0; i < n; ++i) {
+    int x;
+    // 输入相应的元素
+    cin >> x;
+
+    // 如果栈非空并且栈顶元素大于等于 x
+    // 弹出栈顶
+    while (tt && stk[tt] >= x) {
+      --tt;
+    }
+
+    // 此时栈顶元素不存在或者更小
+    if (tt) { // 存在就输出
+      cout << stk[tt] << ' ';
+    } else { // 不存在就输出 -1
+      cout << -1 << ' ';
+    }
+    // 更新栈顶元素
+    stk[++tt] = x;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n;
+int stk[N], tt = 0;
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int x;
+    cin >> x;
+
+    while (tt && stk[tt] >= x) {
+      --tt;
+    }
+
+    if (tt) {
+      cout << stk[tt] << ' ';
+    } else {
+      cout << -1 << ' ';
+    }
+
+    stk[++tt] = x;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n;
+int stk[N], tt = 0;
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int x;
+    cin >> x;
+
+    while (tt && stk[tt] >= x) {
+      --tt;
+    }
+
+    if (tt) {
+      cout << stk[tt] << ' ';
+    } else {
+
+    }
+
+    stk[++tt] = x;
+  }
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n;
+int stk[N], tt;
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int x;
+    cin >> x;
+
+    while (tt && stk[tt] >= x) {
+      --tt;
+    }
+
+    if (tt) {
+      cout << stk[tt] << ' ';
+    } else {
+      cout << -1 << ' ';
+    }
+
+    stk[++tt] = x;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, stk[N], tt;
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int x;
+    cin >> x;
+
+    while (tt && stk[tt] >= x) {
+      --tt;
+    }
+
+    if (tt) {
+      cout << stk[tt] << ' ';
+    } else {
+      cout << -1 << ' ';
+    }
+
+    cout << endl;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 1000010;
+
+int n, k;        // 数组大小和滑动窗口大小
+int a[N], q[N];  // 一个存数组, 一个存队列下标
+
+int main() {
+  cin.tie(0);
+  cin >> n >> k;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int hh = 0, tt = -1;  // 定义头尾
+  for (int i = 0; i < n; ++i) {
+    // 如果头小于尾, 且判断头元素是否超出了范围
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    // 头小于尾, 且尾的值大于 a[i]
+    // 将尾部弹出
+    while (hh <= tt && a[q[tt]] >= a[i]) {
+      --tt;
+    }
+
+    // 将新的插入进尾部
+    q[++tt] = i;
+
+    // 必须等到滑动窗口形成后才可以进行输出
+    if (i >= k - 1) {
+      // 头部便是最小元素
+      cout << a[q[hh]] << ' ';
+    }
+  }
+
+  cout << endl;
+
+  hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[tt]] <= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 1000010;
+
+int n, k;
+int a[N], q[N];
+
+int main() {
+  cin >> n >> k;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[tt]] >= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+  cout << endl;
+
+  hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[tt]] <= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 1000010;
+
+int n, k;
+int a[N], q[N];
+
+int main() {
+  cin >> n >> k;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[tt]] >= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, k, a[N], q[N];
+
+int main() {
+  cin >> n >> k;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    if (hh <= tt && a[q[tt]] >= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i > k) {
+      cout << a[q[hh]] << ' ';
+    }
+    cout << endl;
+
+    return 0;
+  }
+
+  hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[tt]] >= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 1000010;
+
+int n, k, a[N], q[N];
+
+int main() {
+  cin >> n >> k;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[tt]] >= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+  cout << endl;
+
+  hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[tt]] <= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 1000010;
+
+int n, k, a[N], q[N];
+
+int main() {
+  cin >> n >> k;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+
+  int hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[hh]] >= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+
+  hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[hh]] <= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+  cout << endl;
+
+  return 0;
+} */
+/* template <class T>
+void bubbleSort(T *arr, int len) {
+  for (int i = 0; i < len; ++i) {
+    for (int j = 0; j < len - 1 - i; ++j) {
+      if (arr[i] > arr[j]) swap(arr[i], arr[j]);
+    }
+  }
+}
+
+template <class T>
+void insertSort(T *arr, int len) {
+  int i, j, key;
+
+  for (i = 1; i < len; ++i) {
+    key = arr[i];
+    for (j = i - 1; j >= 0 && arr[j] > key; --j) {
+      arr[j + 1] = arr[j];
+    }
+    arr[j + 1] = key;
+  }
+}
+
+template <class T>
+void selectionSort(T *arr, int len) {
+  int i, j, min_idx;
+
+  for (i = 0; i < len; ++i) {
+    min_idx = i;
+
+    for (j = i + 1; j < len; ++j) {
+      if (arr[i] < arr[j]) {
+        min_idx = j;
+      }
+    }
+    swap(arr[min_idx], arr[i]);
+  }
+} */
+/* #include <cstring>
+#include <iostream>
+
+using namespace std;
+
+
+// str: 主串
+// sub: 子串
+// 返回值: 返回子串在主串中的下标，不存在返回 -1
+
+int BF(const char *str, const char *sub) {
+  if (!str || !sub) {
+    return -1;
+  }
+
+  int len_str = strlen(str), len_sub = strlen(sub);
+
+  int i = 0, j = 0;
+
+  while (i < len_str && j < len_sub) {
+    if (str[i] == sub[j]) {
+      ++i, ++j;
+    } else {
+      i = i - j + 1;
+      j = 0;
+    }
+  }
+
+  if (j >= len_sub) {
+    return i - j;
+  } else {
+    return -1;
+  }
+}
+
+int main() {
+  cout << BF("ababcabcdabcde", "abcd") << endl;
+  return 0;
+} */
+/* #include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int BF(const char *str, const char *sub) {
+  if (!str || !sub) {
+    return -1;
+  }
+
+  int len_str = strlen(str), len_sub = strlen(sub), i = 0, j = 0;
+
+  while (i < len_str && j < len_sub) {
+    if (str[i] == str[j]) {
+      ++i, ++j;
+    } else {
+      i = i - j + 1;
+      j = 0;
+    }
+  }
+
+  if (j >= len_sub) {
+    return i - j;
+  } else {
+    return -1;
+  }
+} */
+/* #include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int BF(const char *str, const char *sub) {
+  if (!sub || !sub) {
+    return -1;
+  }
+
+  int len_str = strlen(str), len_sub = strlen(sub), i = 0, j = 0;
+
+  while (i < len_str && j < len_sub) {
+    if (str[i] == sub[j]) {
+      ++i, ++j;
+    } else {
+      i = i - j + 1;
+      j = 0;
+    }
+  }
+
+  if (j >= len_sub) {
+    return i - j;
+  } else {
+    return -1;
+  }
+} */
+/* #include <cstring>
+#include <iostream>
+
+using namespace std;
+
+void getNext(const char *sub, int *next) {
+  next[0] = -1, next[1] = 0;
+
+  int len_sub = strlen(sub);
+  int i = 2;  // 当前 i 下标
+  int k = 0;  // 前一项的 k
+
+  while (i < len_sub) {
+    if (k == -1 || sub[i - 1] == sub[k]) {
+      next[i] = k + 1;
+      ++i, ++k;
+    } else {
+      k = next[k];
+    }
+  }
+}
+
+// str: 代表主串
+// sub: 代表子串
+// pos: 代表从主串的 pos 位置开始找
+int KMP(const char *str, const char *sub, int pos) {
+  int len_str = strlen(str), len_sub = strlen(sub);
+
+  if (len_str == 0 || len_sub == 0) {
+    return -1;
+  }
+
+  if (pos < 0 || pos >= len_str) {
+    return -1;
+  }
+
+  int *next = new int[len_sub];
+
+  int i = pos;  // 遍历主串
+  int j = 0;    // 遍历子串
+
+  getNext(sub, next);
+
+  while (i < len_str && j < len_sub) {
+    if (j == -1 || str[i] == sub[j]) {
+      ++i, ++j;
+    } else {
+      j = next[j];
+    }
+  }
+
+  delete[] next;
+
+  if (j >= len_sub) {
+    return i - j;
+  }
+
+  return -1;
+}
+
+int main() {
+  cout << KMP("adadsaca", "sa", 0) << endl;
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+void getNext(const char *sub, int *next) {
+  next[0] = -1, next[1] = 0;
+
+  int len_sub = strlen(sub);
+  int i = 2, k = 0;
+
+  while (i < len_sub) {
+    if (k == -1 || sub[i - 1] == sub[k]) {
+      next[i++] = ++k;
+    } else {
+      k = next[k];
+    }
+  }
+}
+
+int KMP(const char *str, const char *sub) {
+  int len_str = strlen(str), len_sub = strlen(sub);
+
+  if (!len_str || !len_sub) {
+    return -1;
+  }
+
+  int *next = new int[len_sub];
+
+  int i = 0, j = 0;
+
+  getNext(sub, next);
+
+  while (i < len_str && j < len_sub) {
+    if (j == -1 || str[i] == sub[j]) {
+      ++i, ++j;
+    } else {
+      j = next[j];
+    }
+  }
+
+  delete[] next;
+
+  if (j >= len_sub) {
+    return i - j;
+  }
+
+  return -1;
+} */
+/* #include <cstring>
+#include <iostream>
+
+using namespace std;
+
+void getNext(const char *sub, int *next) {
+  int len_sub = strlen(sub), i = 2;
+  int k = 0;
+
+  next[0] = -1, next[1] = 0;
+
+  while (i < len_sub) {
+    if (k == -1 || sub[i - 1] == sub[k]) {
+      next[i++] = ++k;
+    } else {
+      k = next[k];
+    }
+  }
+}
+
+int KMP(const char *str, const char *sub) {
+  if (!str || !sub) {
+    return -1;
+  }
+
+  int len_str = strlen(str), len_sub = strlen(sub);
+
+  int *next = new int[len_sub];
+
+  int i = 0, j = 0;
+
+  getNext(sub, next);
+
+  while (i < len_str && j < len_sub) {
+    if (j == -1 || str[i] == sub[j]) {
+      ++i, ++j;
+    } else {
+      j = next[j];
+    }
+  }
+
+  if (j >= len_sub) {
+    return i - j;
+  }
+
+  return -1;
+} */
+/* #include <cstring>
+#include <iostream>
+
+using namespace std;
+
+void getNext(const char *sub, int *next) {
+  int len_sub = strlen(sub), i = 2, k = 0;
+
+  next[0] = -1, next[1] = 0;
+
+  while (i < len_sub) {
+    if (k == -1 || sub[i - 1] == sub[k]) {
+      next[i++] = ++k;
+    } else {
+      k = next[k];
+    }
+  }
+}
+
+int KMP(const char *str, const char *sub) {
+  if (!str || !sub) {
+    return -1;
+  }
+
+  int len_str = strlen(str), len_sub = strlen(sub), i = 0, j = 0;
+  int *next = new int[len_sub];
+
+  getNext(sub, next);
+
+  while (i < len_str && j < len_sub) {
+    if (j == -1 || str[i] == sub[j]) {
+      ++i, ++j;
+    } else {
+      j = next[j];
+    }
+  }
+
+  delete[] next;
+
+  if (j >= len_sub) {
+    return i - j;
+  }
+
+  return -1;
+} */
+/* #include <cstring>
+#include <iostream>
+
+using namespace std;
+
+void getNext(const char *sub, int *next) {
+  int len_sub = strlen(sub), i = 2, k = 0;
+
+  while (i < len_sub) {
+    if (k == -1 || sub[i - 1] == sub[k]) {
+      next[i++] = ++k;
+    } else {
+      k = next[k];
+    }
+  }
+}
+
+int KMP(const char *str, const char *sub) {
+  if (!(str || sub)) {
+    return -1;
+  }
+
+  int len_str = strlen(str), len_sub = strlen(sub);
+  int i = 0, j = 0;
+
+  int *next = new int[len_sub];
+
+  getNext(sub, next);
+
+  while (i < len_str && j < len_sub) {
+    if (j == -1 || str[i] == str[j]) {
+      ++i, ++j;
+    } else {
+      j = next[j];
+    }
+  }
+
+  if (j >= len_sub) {
+    return i - j;
+  }
+
+  return -1;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int head, e[N], ne[N], idx;
+
+void init() {
+  head = -1;
+  idx = 0;
+}
+
+void addToHead(int x) {
+  e[idx] = x;
+  ne[idx] = head;
+  head = idx;
+  ++idx;
+}
+
+void add(int k, int x) {
+  e[idx] = x;
+  ne[idx] = ne[k];
+  ne[k] = idx;
+  ++idx;
+}
+
+void remove(int k) {
+  ne[k] = ne[ne[k]];
+}
+
+int main() {
+  int m;
+  cin >> m;
+
+  init();
+
+  while (m--) {
+    int k, x;
+    char op;
+
+    cin >> op;
+
+    if (op == 'H') {
+      cin >> x;
+      addToHead(x);
+    } else if (op == 'D') {
+      cin >> k;
+      if (!k) {
+        head = ne[head];
+      }
+      remove(k - 1);
+    } else {
+      cin >> k >> x;
+      add(k - 1, x);
+    }
+  }
+
+  for (int i = head; i != -1; i = ne[i]) {
+    cout << e[i] << ' ';
+  }
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int m;
+int e[N], l[N], r[N], idx;
+
+void init() {
+  r[0] = 0, l[1] = -1;
+  idx = 2;
+}
+
+void add(int k, int x) {
+  e[idx] = x;
+  r[idx] = r[k];
+  l[idx] = k;
+  l[r[k]] = idx;
+  r[k] = idx;
+  ++idx;
+}
+
+void remove(int k) {
+  r[l[k]] = r[k];
+  l[r[k]] = l[k];
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int m, e[N], l[N], r[N], idx;
+
+void init() {
+  r[0] = 0, l[1] = -1;
+  idx = 2;
+}
+
+void add(int k, int x) {
+  e[idx] = x;
+  r[idx] = r[k];
+  l[idx] = k;
+  l[r[k]] = idx;
+  r[k] = idx;
+  ++idx;
+}
+
+void remove(int k) {
+  r[l[k]] = r[k];
+  l[r[k]] = l[k];
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int e[N], l[N], r[N], idx;
+
+void init() {
+  r[0] = 0, l[1] = -1;
+  idx = 2;
+}
+
+void add(int k, int x) {
+  e[idx] = x;
+  r[idx] = r[k];
+  l[r[k]] = idx;
+  l[idx] = k;
+  r[k] = idx;
+  ++idx;
+}
+
+void remove(int k) {
+  r[l[k]] = r[k];
+  l[r[k]] = l[k];
+} */
+/* #include <cstring>
+#include <iostream>
+
+using namespace std;
+
+void getNext(const char *sub, int *next) {
+  int len_sub = strlen(sub), i = 2, k = 0;
+
+  while (i < len_sub) {
+    if (k == -1 && sub[i - 1] == sub[k]) {
+      next[i++] = ++k;
+    } else {
+      k = next[k];
+    }
+  }
+}
+
+int KMP(const char *str, const char *sub) {
+  if (!str || !sub) {
+    return -1;
+  }
+
+  int len_str = strlen(str), len_sub = strlen(sub), i = 0, j = 0;
+  int *next = new int[len_sub];
+
+  getNext(sub, next);
+
+  while (i < len_str && j < len_sub) {
+    if (str[i] == sub[j] || j == -1) {
+      ++i, ++j;
+    } else {
+      j = next[j];
+    }
+  }
+
+  if (j >= len_sub) {
+    return i - j;
+  }
+
+  return -1;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int l[N], r[N], e[N], idx;
+
+void init() {
+  l[1] = -1, r[0] = 0;
+  idx = 2;
+}
+
+void add(int k, int x) {
+  e[idx] = x;
+  r[idx] = r[k];
+  l[idx] = k;
+  l[r[k]] = idx;
+  r[k] = idx;
+  ++idx;
+}
+
+void remove(int k) {
+  r[l[k]] = r[k];
+  l[r[k]] = l[k];
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+
+
+int main() {
+  int n, stk[N], tt = 0;
+
+  for (int i = 0; i < n; ++i) {
+    int x;
+    cin >> x;
+
+    while (tt && stk[tt] >= x) {
+      --tt;
+    }
+
+    if (tt) {
+      cout << stk[tt] << ' ';
+    } else {
+      cout << -1 << ' ';
+    }
+
+    stk[++tt] = x;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int main() {
+  int stk[N], tt = 0, n;
+  cin >> n;
+
+
+  for (int i = 0; i < n; ++i) {
+    int x;
+    cin >> x;
+
+    while (tt && stk[tt] >= x) {
+      --tt;
+    }
+
+    if (tt) {
+      cout << stk[tt] << ' ';
+    } else {
+      cout << -1 << ' ';
+    }
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int x;
+    cin >> x;
+
+    while (tt && stk[tt] >= x) {
+      --tt;
+    }
+
+    if (tt) {
+      cout << stk[tt] << ' ';
+    } else {
+      cout << -1 << ' ';
+    }
+
+    stk[++tt] = x;
+  }
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int main() {
+  int stk[N], n, tt = 0;
+
+  for (int i = 0; i < n; ++i) {
+    int x;
+    cin >> x;
+
+    while (tt && stk[tt] >= x) {
+      --tt;
+    }
+
+    if (tt) {
+      cout << stk[tt] << ' ';
+    } else {
+      cout << -1 << ' ';
+    }
+
+    stk[++tt] = x;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int stk[N], n, tt = 0;
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int x;
+    cin >> x;
+
+    while (tt && stk[tt] >= x) {
+      --tt;
+    }
+
+    if (tt) {
+      cout << stk[tt] << ' ';
+    } else {
+      cout << -1 << ' ';
+    }
+
+    stk[++tt] = x;
+  }
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int main() {
+  int n, stk[N], tt = 0;
+
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int x;
+    cin >> x;
+
+    while (tt && stk[tt] >= x)  {
+      --tt;
+    }
+
+    if (tt) {
+      cout << stk[tt] << ' ';
+    } else {
+      cout << -1 << ' ';
+    }
+  }
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, k;
+int a[N], q[N];
+
+int main() {
+  cin >> n >> k;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[tt]] >= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+
+  cout << endl;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, k, a[N], q[N];
+
+int main() {
+  cin >> n >> k;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k >= q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[tt]] >= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+  cout << endl;
+
+  hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k + 1 > q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[tt]] <= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+using namespace std;
+
+const int N = 100010;
+
+int n, k, a[N], q[N];
+
+int main() {
+  cin >> n >> k;
+
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+  }
+
+  int hh = 0, tt = -1;
+  for (int i = 0; i < n; ++i) {
+    if (hh <= tt && i - k >= q[hh]) {
+      ++hh;
+    }
+
+    while (hh <= tt && a[q[tt]] >= a[i]) {
+      --tt;
+    }
+
+    q[++tt] = i;
+
+    if (i >= k - 1) {
+      cout << a[q[hh]] << ' ';
+    }
+  }
+  cout << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+#include <cstring>
+
+using namespace std;
+
+void getNext(const char*sub, int *next) {
+  next[0] = -1, next[1] = 0;
+  int len_sub = strlen(sub), i = 2, k = 0;
+
+  while (i < len_sub) {
+    if (k == -1 || sub[i - 1] == sub[k]) {
+      next[i++] = ++k;
+    } else {
+      k = next[k];
+    }
+  }
+}
+
+int KMP(const char *str, const char *sub) {
+  if (!str || !sub) {
+    return -1;
+  }
+
+  int len_str = strlen(str), len_sub = strlen(sub), i = 0, j = 0;
+  int *next = new int[len_sub];
+
+  getNext(sub, next);
+
+  while (i < len_str && j < len_sub) {
+    if (j == -1 || str[i] == sub[j]) {
+      ++i, ++j;
+    } else {
+      j = next[j];
+    }
+  }
+
+  if (j >= len_sub) {
+    return i - j;
+  }
+
+  return -1;
+} */
+/* #include <iostream>
+#include <cstring>
+
+using namespace std;
+
+void getNext(const char *sub, int *next) {
+  next[0] = -1, next[1] = 0;
+
+  int len_sub = strlen(sub), i = 2, k = 0;
+
+  while (i < len_sub) {
+    if (i == -1 && sub[i - 1] == sub[k]) {
+      next[i++] = ++k;
+    } else {
+      k = next[k];
+    }
+  }
+}
+
+int KMP(const char *str, const char *sub) {
+  if (!str || !sub) {
+    return -1;
+  }
+
+  int len_str = strlen(str), len_sub = strlen(sub), i = 0, j = 0;
+  int *next = new int[len_sub];
+
+  while (i < len_str && j < len_sub) {
+    if (j == -1 || str[i] == sub[j]) {
+      ++i, ++j;
+    } else {
+      j = next[j];
+    }
+  }
+
+  if (j >= len_sub) {
+    return i - j;
+  }
+
+  return -1;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 100010;
+
+int n, m, a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size() - 1;
+
+  while (l < r) {
+    int mid = l + r >> 1;
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+
+    return r + 1;
+  }
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+
+    cin >> x >> c;
+
+    add.push_back({x, c});
+
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});
+
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] += item.second;
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 100010;
+
+int n, m, a[N], s[N];
+
+vector<int> alls;
+vector<PII> add, query;
+
+int find(int x) {
+  int l = 0, r = alls.size() - 1;
+  while (l < r) {
+    int mid = l + r >> 1;
+    if (alls[mid] >= x) {
+      r = mid;
+    } else {
+      l = mid + 1;
+    }
+  }
+  return r + 1;
+}
+
+int main() {
+  cin >> n >> m;
+
+  for (int i = 0; i < n; ++i) {
+    int x, c;
+    cin >> x >> c;
+    add.push_back({x, c});
+    alls.push_back(x);
+  }
+
+  for (int i = 0; i < m; ++i) {
+    int l, r;
+    cin >> l >> r;
+    query.push_back({l, r});
+
+    alls.push_back(l);
+    alls.push_back(r);
+  }
+
+  sort(alls.begin(), alls.end());
+  alls.erase(unique(alls.begin(), alls.end()), alls.end());
+
+  for (auto item : add) {
+    int x = find(item.first);
+    a[x] = item.second;
+  }
+
+  for (int i = 1; i <= alls.size(); ++i) {
+    s[i] = s[i - 1] + a[i];
+  }
+
+  for (auto item : query) {
+    int l = find(item.first), r = find(item.second);
+    cout << s[r] - s[l - 1] << endl;
+  }
+
+  return 0;
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+const int N = 100010;
+
+int n;
+vector<PII> segs;
+
+void merge(vector<PII> &segs) {
+  vector<PII> res;
+
+  sort(segs.begin(), segs.end());
+
+  int st = -2e9, ed = -2e9;
+
+  for (auto seg : segs) {
+    if (ed < seg.first) {
+      if (st != -2e9) {
+        res.push_back({st, ed});
+      }
+      st = seg.first, ed = seg.second;
+    } else {
+      ed = max(ed, seg.second);
+    }
+  }
+
+  if (st != -2e9) {
+    res.push_back({st, ed});
+  }
+
+  segs = res;
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+    int l, r;
+    cin >> l >> r;
+    segs.push_back({l, r});
+  }
+
+  merge(segs);
+
+  cout << segs.size() << endl;
+
+  return 0;
+} */
+/* #include <iostream>
+
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+typedef pair<int, int> PII;
+
+void merge(vector<PII> &segs) {
+  vector<PII> res;
+
+  sort(segs.begin(), segs.end());
+
+  int st = -2e9, ed = -2e9;
+
+  for (auto seg : segs) {
+    if (ed < seg.first) {
+      if (st != -2e9) {
+        res.push_back({st, ed});
+      }
+      st = seg.first, ed = seg.second;
+    } else {
+      ed = max(ed, seg.second);
+    }
+  }
+
+  if (st != -2e9) {
+    res.push_back({st, ed});
+  }
+
+  segs = res;
+}
+
+int main() {
+  cin >> n;
+
+  for (int i = 0; i < n; ++i) {
+
+  }
+} */
+/* #include <iostream>
+
+using namespace std;
+
+void getNext(const char* sub, int *next) {
+  int len_sub = strlen(sub);
+} */
+/* #define EPS 0.001f
+#include <cmath>
+
+float violentRecSqrt(float x) {
+  float y;
+
+  for (y = 0; fabs(x - y * y) > EPS; y += EPS);
+
+  return 1.0f / y;
+}
+
+float newtonRecSqrt(float a) {
+  float x = 0.5f;
+  float ax2 = a * x * x;
+
+  while (fabs(ax2 - 1.0f) > EPS) {
+    x = x * (1.5f - 0.5f * ax2);
+    ax2 = a * x * x;
+  }
+
+  return x;
+} */
+/* #ifndef _DYNAMIC_ARRAY_
+#define _DYNAMIC_ARRAY_
+#include <cstring>  // 用于memcpy和memmove
+#include <vector>
+
+template <class T>
+class DynamicArray {
+ public:
+  DynamicArray();  // 构造函数
+#if defined(_INITIALIZER_LIST_)
+  DynamicArray(
+      std::initializer_list<T> ilist);  // 支持C++11的初始化列表构造函数
+#endif
+  DynamicArray(const DynamicArray& other);  // 拷贝构造函数
+  ~DynamicArray();                          // 析构函数
+
+  int SetCapacity(int newCapacity);           // 设置内部缓冲区大小
+  int GetSize() const;                        // 获取当前有效数据数量
+  int Append(const T& element);               // 添加数据至末尾
+  int Save(const T* data, int dataLength);    // 存入一批数据
+  int Insert(int index, const T& element);    // 插入数据
+  bool Remove(int index, T& removedElement);  // 删除数据
+  const DynamicArray& operator=(const DynamicArray& other);  // 重载“=”运算符
+  const DynamicArray& operator+=(const DynamicArray& other);  // 重载“+=”运算符
+  T& operator[](int index);  // 重载“[]”运算符
+
+ private:
+  T* data_;       // 内部数据缓冲区
+  int size_;      // 当前有效数据数量
+  int capacity_;  // 缓冲区大小
+};
+
+// 动态数组类的实现
+template <class T>
+DynamicArray<T>::DynamicArray() : data_(new T[4]), size_(0), capacity_(4) {
+  // 初始化之后，将相应的数据设置成 0
+  std::memset(data_, 0, sizeof(T) * capacity_);
+}
+
+#if defined(_INITIALIZER_LIST_)
+template <class T>
+DynamicArray<T>::DynamicArray(std::initializer_list<T> ilist)
+    : size_(ilist.size()), capacity_(ilist.size() + 4) {
+  // 初始化现有的数据容量
+  data_ = new T[capacity_];  // new 一个对象
+  // 将 ilist 中的数据复制到 data_ 中
+  std::memcpy(data_, ilist.begin(), sizeof(T) * size_);
+  // 将后面那段多的数据设置为 0
+  std::memset(data_ + size_, 0, sizeof(T) * (capacity_ - size_));
+}
+#endif
+
+template <class T>
+DynamicArray<T>::~DynamicArray() {
+  // 删除数据
+  delete[] data_;   // 将堆上面的那块区域设置为 0
+  data_ = nullptr;  // 将指针设置为空指针
+  size_ = 0;        // 数量改为 0
+  capacity_ = 0;    // 容量改为 0
+}
+
+template <class T>
+DynamicArray<T>::DynamicArray(const DynamicArray<T>& other)
+    : size_(0), capacity_(other.capacity_), data_(new T[other.capacity_]) {
+  if (other.size_ > 0) {  // 如果数据数量不为 0
+    // 将 other 中的数据保存进去
+    Save(other.data_, other.size_);
+  }
+}
+
+template <class T>
+int DynamicArray<T>::SetCapacity(int newCapacity) {
+  // 设置容量
+  if (newCapacity <= size_) {  // 如果新的容量比数量小
+    return capacity_;          // 返回原有容量
+  }
+
+  T* newData = new T[newCapacity];  // new 一个新的区域
+  if (!newData) {                   // 异常判断
+    return capacity_;
+  }
+
+  std::memcpy(newData, data_, sizeof(T) * size_);  // 设置数据
+  // 将后面那段设置为 0
+  std::memset(newData + size_, 0, sizeof(T) * (newCapacity - size_));
+  // 删除数据
+  delete[] data_;
+  // 数据段变成新的数据
+  data_ = newData;
+  // 容量改变，数量不变
+  capacity_ = newCapacity;
+
+  return capacity_;
+}
+
+template <class T>
+int DynamicArray<T>::GetSize() const {
+  // 得到数量大小
+  return size_;
+}
+
+template <class T>
+int DynamicArray<T>::Append(const T& element) {
+  // 在尾部接上一个新元素
+  if (size_ >= capacity_) {  // 如果大小大于容量
+    // 小于 64 则加上 32；如果大于 64，则加上 原有容量的一半
+    int newCapacity =
+        (capacity_ < 64) ? capacity_ + 32 : capacity_ + (capacity_ >> 1);
+    if (!SetCapacity(newCapacity)) {
+      return -1;  // 设置失败，返回 -1
+    }
+  }
+
+  data_[size_++] = element;  // 将末尾更新为新的元素
+  return size_ - 1;          // 返回新元素索引位置
+}
+
+template <class T>
+int DynamicArray<T>::Save(const T* data, int dataLength) {
+  // 将一堆数据报存到后面
+  if (!data || dataLength <= 0) {
+    return -1;  // 排除异常数据
+  }
+
+  if (size_ + dataLength >= capacity_) {  // 如果新的数据长度超过了原有的
+    int newCapacity = size_ + dataLength;  // 更新长度
+    newCapacity = (newCapacity < 64) ? newCapacity + 32
+                                     : newCapacity + (newCapacity >> 1);
+
+    if (!SetCapacity(newCapacity)) {
+      return -1;
+    }
+  }
+
+  // 拷贝过去
+  std::memcpy(data_ + size_, data, dataLength * sizeof(T));
+  // 更新大小
+  size_ += dataLength;
+
+  // 返回新的数据的初始位置
+  return size_ - dataLength;
+}
+
+template <class T>
+int DynamicArray<T>::Insert(int index, const T& element) {
+  // 插入数据
+  if (index < 0 || index >= capacity_) {
+    return -1;  // 排除异常
+  }
+
+  if (size_ >= capacity_) {
+    // 设置新的容量
+    int newCapacity =
+        (capacity_ < 64) ? capacity_ + 32 : capacity_ + (capacity_ >> 1);
+    if (!SetCapacity(newCapacity)) {
+      return -1;
+    }
+  }
+
+  if (index <= size_ - 1) {
+    // 索引是之前的
+    // 将原本的数据往后拷贝一格
+    std::memmove(data_ + index + 1, data_ + index, sizeof(T) * (size_ - index));
+  }
+
+  // 将索引更新为当前元素
+  data_[index] = element;
+  // 进行索引的更新
+  size_++;
+
+  // 返回下标
+  return index;
+}
+
+// 去除元素
+template <class T>
+bool DynamicArray<T>::Remove(int index, T& removedElement) {
+  if (index < 0 || index >= size_) {
+    return false;  // 排除异常
+  }
+
+  removedElement = data_[index];  // 保存要去除的元素
+
+  if (index < size_ - 1) {  // 如果不是最后一个元素
+                            // 将元素往前移动一位
+    std::memmove(data_ + index, data_ + index + 1,
+                 (size_ - index - 1) * sizeof(T));
+  }
+
+  size_--;      // 改变数量
+  return true;  // 返回 true
+}
+
+// 重载等于号操作符
+template <class T>
+const DynamicArray<T>& DynamicArray<T>::operator=(
+    const DynamicArray<T>& other) {
+  // 如果两个地址不一致
+  if (this != &other) {
+    delete[] data_;               // 删除原有的数据
+    capacity_ = other.capacity_;  // 更新容量
+    size_ = 0;                    // 熟练设置为 0
+    data_ = new T[capacity_];     // new 一个新的
+    if (other.size_ > 0) {
+      // 保存数据
+      Save(other.data_, other.size_);
+    }
+  }
+  // 返回 this 指针
+  return *this;
+}
+
+// 重载 += 操作符
+template <class T>
+const DynamicArray<T>& DynamicArray<T>::operator+=(
+    const DynamicArray<T>& other) {
+  Save(other.data_, other.size_);
+  return *this;
+}
+
+// 重载 [] 操作符
+template <class T>
+T& DynamicArray<T>::operator[](int index) {
+  // 判断索引
+  if (index < 0 || index >= capacity_) {
+    int newCapacity =
+        (index + 1 < 64) ? index + 33 : index + ((index + 1) >> 1);
+    SetCapacity(newCapacity);
+  }
+
+  // 如果索引比数量要大
+  // 扩大 size_ ，返回
+  if (index >= size_) {
+    size_ = index + 1;
+  }
+
+  return data_[index];
+}
+
+#endif  // _DYNAMIC_ARRAY_ */

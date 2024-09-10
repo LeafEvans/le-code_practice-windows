@@ -1,0 +1,18 @@
+# ninja log v5
+3	1639	7418138944269454	test_2024_6_25_autogen/timestamp	ee8ea6a1b1ac2124
+3	1639	7418138944269454	test_2024_6_25_autogen/mocs_compilation.cpp	ee8ea6a1b1ac2124
+3	1639	7418138944269454	C:/Code/CodePractice/Homework/Qt/test_2024_6_25/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_6_25_autogen/timestamp	ee8ea6a1b1ac2124
+3	1639	7418138944269454	C:/Code/CodePractice/Homework/Qt/test_2024_6_25/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_6_25_autogen/mocs_compilation.cpp	ee8ea6a1b1ac2124
+1716	6285	7418138992926916	CMakeFiles/test_2024_6_25.dir/mainwindow.cpp.obj	fad7b4d029dab153
+1663	6297	7418138993040246	CMakeFiles/test_2024_6_25.dir/test_2024_6_25_autogen/mocs_compilation.cpp.obj	7935cec48daecc61
+1640	6519	7418138995261045	CMakeFiles/test_2024_6_25.dir/main.cpp.obj	4036c430052b4013
+1688	6713	7418138997185806	CMakeFiles/test_2024_6_25.dir/logindialog.cpp.obj	ff707d4ee81efb6a
+6714	7141	7418139001384239	test_2024_6_25.exe	d1c3dbf095d0a5e9
+12	2207	7418145674930720	test_2024_6_25_autogen/timestamp	ee8ea6a1b1ac2124
+12	2207	7418145674930720	test_2024_6_25_autogen/mocs_compilation.cpp	ee8ea6a1b1ac2124
+12	2207	7418145674930720	C:/Code/CodePractice/Homework/Qt/test_2024_6_25/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_6_25_autogen/timestamp	ee8ea6a1b1ac2124
+12	2207	7418145674930720	C:/Code/CodePractice/Homework/Qt/test_2024_6_25/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_6_25_autogen/mocs_compilation.cpp	ee8ea6a1b1ac2124
+2210	9142	7418145746268192	CMakeFiles/test_2024_6_25.dir/main.cpp.obj	4036c430052b4013
+2251	9152	7418145746370716	CMakeFiles/test_2024_6_25.dir/test_2024_6_25_autogen/mocs_compilation.cpp.obj	7935cec48daecc61
+2282	9165	7418145746485152	CMakeFiles/test_2024_6_25.dir/logindialog.cpp.obj	ff707d4ee81efb6a
+9166	12166	7418145776382106	test_2024_6_25.exe	d1c3dbf095d0a5e9

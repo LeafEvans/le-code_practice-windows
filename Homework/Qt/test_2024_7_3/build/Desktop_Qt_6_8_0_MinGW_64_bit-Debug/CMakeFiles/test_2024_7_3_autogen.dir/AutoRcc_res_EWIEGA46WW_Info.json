@@ -1,0 +1,33 @@
+{
+	"BUILD_DIR" : "C:/Code/CodePractice/Homework/Qt/test_2024_7_3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_7_3_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Code/CodePractice/Homework/Qt/test_2024_7_3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Code/CodePractice/Homework/Qt/test_2024_7_3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Code/CodePractice/Homework/Qt/test_2024_7_3",
+	"CMAKE_SOURCE_DIR" : "C:/Code/CodePractice/Homework/Qt/test_2024_7_3",
+	"INCLUDE_DIR" : "C:/Code/CodePractice/Homework/Qt/test_2024_7_3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_7_3_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Code/CodePractice/Homework/Qt/test_2024_7_3/image/\u9000\u51fa.svg",
+		"C:/Code/CodePractice/Homework/Qt/test_2024_7_3/image/\u4fdd\u5b58.svg",
+		"C:/Code/CodePractice/Homework/Qt/test_2024_7_3/image/\u67e5\u627e.svg",
+		"C:/Code/CodePractice/Homework/Qt/test_2024_7_3/image/\u53e6\u5b58\u4e3a.svg",
+		"C:/Code/CodePractice/Homework/Qt/test_2024_7_3/image/\u590d\u5236.svg",
+		"C:/Code/CodePractice/Homework/Qt/test_2024_7_3/image/\u65b0\u5efa.svg",
+		"C:/Code/CodePractice/Homework/Qt/test_2024_7_3/image/\u7c98\u8d34.svg",
+		"C:/Code/CodePractice/Homework/Qt/test_2024_7_3/image/\u526a\u5207.svg",
+		"C:/Code/CodePractice/Homework/Qt/test_2024_7_3/image/\u5173\u95ed.svg",
+		"C:/Code/CodePractice/Homework/Qt/test_2024_7_3/image/\u6253\u5f00.svg",
+		"C:/Code/CodePractice/Homework/Qt/test_2024_7_3/image/\u7248\u672c\u8bf4\u660e.svg",
+		"C:/Code/CodePractice/Homework/Qt/test_2024_7_3/image/\u64a4\u9500.svg"
+	],
+	"LOCK_FILE" : "C:/Code/CodePractice/Homework/Qt/test_2024_7_3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/CMakeFiles/test_2024_7_3_autogen.dir/AutoRcc_res_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "res" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_res.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.8.0/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Code/CodePractice/Homework/Qt/test_2024_7_3/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/CMakeFiles/test_2024_7_3_autogen.dir/AutoRcc_res_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Code/CodePractice/Homework/Qt/test_2024_7_3/res.qrc",
+	"VERBOSITY" : 0
+}

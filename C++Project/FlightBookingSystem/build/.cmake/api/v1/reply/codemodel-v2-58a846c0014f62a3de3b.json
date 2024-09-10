@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-426adacef7452a40645d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "FlightBookingSystem",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "FlightBookingSystem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FlightBookingSystem-Debug-d1a0ac59eed87c3b4d20.json",
+					"name" : "FlightBookingSystem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FlightBookingSystem_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FlightBookingSystem_autogen-Debug-33158c76cc0dd66d656b.json",
+					"name" : "FlightBookingSystem_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FlightBookingSystem_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FlightBookingSystem_autogen_timestamp_deps-Debug-47f16e0e1ead9ba3f413.json",
+					"name" : "FlightBookingSystem_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Code/CodePractice/C++Project/FlightBookingSystem/build",
+		"source" : "C:/Code/CodePractice/C++Project/FlightBookingSystem"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

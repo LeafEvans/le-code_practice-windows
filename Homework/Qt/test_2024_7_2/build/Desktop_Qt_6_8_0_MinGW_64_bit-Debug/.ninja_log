@@ -1,0 +1,24 @@
+# ninja log v5
+2	812	7415549020831983	test_2024_7_2_autogen/timestamp	27d3b788f548448e
+2	812	7415549020831983	test_2024_7_2_autogen/mocs_compilation.cpp	27d3b788f548448e
+2	812	7415549020831983	C:/Code/CodePractice/Homework/Qt/test_2024_7_2/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_7_2_autogen/timestamp	27d3b788f548448e
+2	812	7415549020831983	C:/Code/CodePractice/Homework/Qt/test_2024_7_2/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_7_2_autogen/mocs_compilation.cpp	27d3b788f548448e
+813	3094	7415549044469047	test_2024_7_2_autogen/EWIEGA46WW/qrc_res.cpp	548593454b22d188
+813	3094	7415549044469047	C:/Code/CodePractice/Homework/Qt/test_2024_7_2/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_7_2_autogen/EWIEGA46WW/qrc_res.cpp	548593454b22d188
+3114	5066	7415549064304439	CMakeFiles/test_2024_7_2.dir/main.cpp.obj	39ca8a9efdf6f4c3
+3094	5081	7415549064446237	CMakeFiles/test_2024_7_2.dir/test_2024_7_2_autogen/mocs_compilation.cpp.obj	d472b42079f98899
+3104	5091	7415549064550375	CMakeFiles/test_2024_7_2.dir/mainwindow.cpp.obj	a23dbc45fd41e7c2
+3124	83987	7415549853423954	CMakeFiles/test_2024_7_2.dir/test_2024_7_2_autogen/EWIEGA46WW/qrc_res.cpp.obj	96844e0bea31c369
+83987	84779	7415549861403997	test_2024_7_2.exe	52372bcbfce2d05
+5	205	7415550166298039	test_2024_7_2_autogen/timestamp	27d3b788f548448e
+5	205	7415550166298039	test_2024_7_2_autogen/mocs_compilation.cpp	27d3b788f548448e
+5	205	7415550166298039	C:/Code/CodePractice/Homework/Qt/test_2024_7_2/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_7_2_autogen/timestamp	27d3b788f548448e
+5	205	7415550166298039	C:/Code/CodePractice/Homework/Qt/test_2024_7_2/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_7_2_autogen/mocs_compilation.cpp	27d3b788f548448e
+214	1938	7415550183616155	CMakeFiles/test_2024_7_2.dir/mainwindow.cpp.obj	a23dbc45fd41e7c2
+1938	2724	7415550191433150	test_2024_7_2.exe	52372bcbfce2d05
+6	218	7415550414715591	test_2024_7_2_autogen/timestamp	27d3b788f548448e
+6	218	7415550414715591	test_2024_7_2_autogen/mocs_compilation.cpp	27d3b788f548448e
+6	218	7415550414715591	C:/Code/CodePractice/Homework/Qt/test_2024_7_2/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_7_2_autogen/timestamp	27d3b788f548448e
+6	218	7415550414715591	C:/Code/CodePractice/Homework/Qt/test_2024_7_2/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/test_2024_7_2_autogen/mocs_compilation.cpp	27d3b788f548448e
+227	2006	7415550432617412	CMakeFiles/test_2024_7_2.dir/mainwindow.cpp.obj	a23dbc45fd41e7c2
+2007	2796	7415550440461843	test_2024_7_2.exe	52372bcbfce2d05

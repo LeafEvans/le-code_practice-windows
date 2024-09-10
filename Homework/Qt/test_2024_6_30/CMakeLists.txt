@@ -17,12 +17,16 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        logindialog.cpp
+        logindialog.h
+        logindialog.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(test_2024_6_30
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        logindialog.h logindialog.cpp logindialog.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET test_2024_6_30 APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

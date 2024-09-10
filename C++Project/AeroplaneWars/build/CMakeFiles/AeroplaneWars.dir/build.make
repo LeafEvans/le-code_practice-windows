@@ -119,140 +119,140 @@ CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/mocs_compilation.cpp.obj: CMa
 CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/mocs_compilation.cpp.obj: AeroplaneWars_autogen/mocs_compilation.cpp
 CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/mocs_compilation.cpp.obj: CMakeFiles/AeroplaneWars.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Code\CodePractice\C++Project\AeroplaneWars\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/mocs_compilation.cpp.obj"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\mocs_compilation.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\build\AeroplaneWars_autogen\mocs_compilation.cpp
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\mocs_compilation.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\build\AeroplaneWars_autogen\mocs_compilation.cpp
 
 CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/mocs_compilation.cpp.i"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\build\AeroplaneWars_autogen\mocs_compilation.cpp > CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\mocs_compilation.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\build\AeroplaneWars_autogen\mocs_compilation.cpp > CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\mocs_compilation.cpp.i
 
 CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/mocs_compilation.cpp.s"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\build\AeroplaneWars_autogen\mocs_compilation.cpp -o CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\mocs_compilation.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\build\AeroplaneWars_autogen\mocs_compilation.cpp -o CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\mocs_compilation.cpp.s
 
 CMakeFiles/AeroplaneWars.dir/main.cpp.obj: CMakeFiles/AeroplaneWars.dir/flags.make
 CMakeFiles/AeroplaneWars.dir/main.cpp.obj: CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp
 CMakeFiles/AeroplaneWars.dir/main.cpp.obj: C:/Code/CodePractice/C++Project/AeroplaneWars/main.cpp
 CMakeFiles/AeroplaneWars.dir/main.cpp.obj: CMakeFiles/AeroplaneWars.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Code\CodePractice\C++Project\AeroplaneWars\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AeroplaneWars.dir/main.cpp.obj"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/main.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\main.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\main.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\main.cpp
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/main.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\main.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\main.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\main.cpp
 
 CMakeFiles/AeroplaneWars.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AeroplaneWars.dir/main.cpp.i"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\main.cpp > CMakeFiles\AeroplaneWars.dir\main.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\main.cpp > CMakeFiles\AeroplaneWars.dir\main.cpp.i
 
 CMakeFiles/AeroplaneWars.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AeroplaneWars.dir/main.cpp.s"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\main.cpp -o CMakeFiles\AeroplaneWars.dir\main.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\main.cpp -o CMakeFiles\AeroplaneWars.dir\main.cpp.s
 
 CMakeFiles/AeroplaneWars.dir/mainscene.cpp.obj: CMakeFiles/AeroplaneWars.dir/flags.make
 CMakeFiles/AeroplaneWars.dir/mainscene.cpp.obj: CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp
 CMakeFiles/AeroplaneWars.dir/mainscene.cpp.obj: C:/Code/CodePractice/C++Project/AeroplaneWars/mainscene.cpp
 CMakeFiles/AeroplaneWars.dir/mainscene.cpp.obj: CMakeFiles/AeroplaneWars.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Code\CodePractice\C++Project\AeroplaneWars\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AeroplaneWars.dir/mainscene.cpp.obj"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/mainscene.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\mainscene.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\mainscene.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\mainscene.cpp
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/mainscene.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\mainscene.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\mainscene.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\mainscene.cpp
 
 CMakeFiles/AeroplaneWars.dir/mainscene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AeroplaneWars.dir/mainscene.cpp.i"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\mainscene.cpp > CMakeFiles\AeroplaneWars.dir\mainscene.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\mainscene.cpp > CMakeFiles\AeroplaneWars.dir\mainscene.cpp.i
 
 CMakeFiles/AeroplaneWars.dir/mainscene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AeroplaneWars.dir/mainscene.cpp.s"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\mainscene.cpp -o CMakeFiles\AeroplaneWars.dir\mainscene.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\mainscene.cpp -o CMakeFiles\AeroplaneWars.dir\mainscene.cpp.s
 
 CMakeFiles/AeroplaneWars.dir/Map.cpp.obj: CMakeFiles/AeroplaneWars.dir/flags.make
 CMakeFiles/AeroplaneWars.dir/Map.cpp.obj: CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp
 CMakeFiles/AeroplaneWars.dir/Map.cpp.obj: C:/Code/CodePractice/C++Project/AeroplaneWars/Map.cpp
 CMakeFiles/AeroplaneWars.dir/Map.cpp.obj: CMakeFiles/AeroplaneWars.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Code\CodePractice\C++Project\AeroplaneWars\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AeroplaneWars.dir/Map.cpp.obj"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/Map.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\Map.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\Map.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\Map.cpp
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/Map.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\Map.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\Map.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\Map.cpp
 
 CMakeFiles/AeroplaneWars.dir/Map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AeroplaneWars.dir/Map.cpp.i"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\Map.cpp > CMakeFiles\AeroplaneWars.dir\Map.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\Map.cpp > CMakeFiles\AeroplaneWars.dir\Map.cpp.i
 
 CMakeFiles/AeroplaneWars.dir/Map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AeroplaneWars.dir/Map.cpp.s"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\Map.cpp -o CMakeFiles\AeroplaneWars.dir\Map.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\Map.cpp -o CMakeFiles\AeroplaneWars.dir\Map.cpp.s
 
 CMakeFiles/AeroplaneWars.dir/HeroPlane.cpp.obj: CMakeFiles/AeroplaneWars.dir/flags.make
 CMakeFiles/AeroplaneWars.dir/HeroPlane.cpp.obj: CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp
 CMakeFiles/AeroplaneWars.dir/HeroPlane.cpp.obj: C:/Code/CodePractice/C++Project/AeroplaneWars/HeroPlane.cpp
 CMakeFiles/AeroplaneWars.dir/HeroPlane.cpp.obj: CMakeFiles/AeroplaneWars.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Code\CodePractice\C++Project\AeroplaneWars\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AeroplaneWars.dir/HeroPlane.cpp.obj"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/HeroPlane.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\HeroPlane.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\HeroPlane.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\HeroPlane.cpp
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/HeroPlane.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\HeroPlane.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\HeroPlane.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\HeroPlane.cpp
 
 CMakeFiles/AeroplaneWars.dir/HeroPlane.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AeroplaneWars.dir/HeroPlane.cpp.i"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\HeroPlane.cpp > CMakeFiles\AeroplaneWars.dir\HeroPlane.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\HeroPlane.cpp > CMakeFiles\AeroplaneWars.dir\HeroPlane.cpp.i
 
 CMakeFiles/AeroplaneWars.dir/HeroPlane.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AeroplaneWars.dir/HeroPlane.cpp.s"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\HeroPlane.cpp -o CMakeFiles\AeroplaneWars.dir\HeroPlane.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\HeroPlane.cpp -o CMakeFiles\AeroplaneWars.dir\HeroPlane.cpp.s
 
 CMakeFiles/AeroplaneWars.dir/Bullet.cpp.obj: CMakeFiles/AeroplaneWars.dir/flags.make
 CMakeFiles/AeroplaneWars.dir/Bullet.cpp.obj: CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp
 CMakeFiles/AeroplaneWars.dir/Bullet.cpp.obj: C:/Code/CodePractice/C++Project/AeroplaneWars/Bullet.cpp
 CMakeFiles/AeroplaneWars.dir/Bullet.cpp.obj: CMakeFiles/AeroplaneWars.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Code\CodePractice\C++Project\AeroplaneWars\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AeroplaneWars.dir/Bullet.cpp.obj"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/Bullet.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\Bullet.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\Bullet.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\Bullet.cpp
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/Bullet.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\Bullet.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\Bullet.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\Bullet.cpp
 
 CMakeFiles/AeroplaneWars.dir/Bullet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AeroplaneWars.dir/Bullet.cpp.i"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\Bullet.cpp > CMakeFiles\AeroplaneWars.dir\Bullet.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\Bullet.cpp > CMakeFiles\AeroplaneWars.dir\Bullet.cpp.i
 
 CMakeFiles/AeroplaneWars.dir/Bullet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AeroplaneWars.dir/Bullet.cpp.s"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\Bullet.cpp -o CMakeFiles\AeroplaneWars.dir\Bullet.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\Bullet.cpp -o CMakeFiles\AeroplaneWars.dir\Bullet.cpp.s
 
 CMakeFiles/AeroplaneWars.dir/EnemyPlane.cpp.obj: CMakeFiles/AeroplaneWars.dir/flags.make
 CMakeFiles/AeroplaneWars.dir/EnemyPlane.cpp.obj: CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp
 CMakeFiles/AeroplaneWars.dir/EnemyPlane.cpp.obj: C:/Code/CodePractice/C++Project/AeroplaneWars/EnemyPlane.cpp
 CMakeFiles/AeroplaneWars.dir/EnemyPlane.cpp.obj: CMakeFiles/AeroplaneWars.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Code\CodePractice\C++Project\AeroplaneWars\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AeroplaneWars.dir/EnemyPlane.cpp.obj"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/EnemyPlane.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\EnemyPlane.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\EnemyPlane.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\EnemyPlane.cpp
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/EnemyPlane.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\EnemyPlane.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\EnemyPlane.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\EnemyPlane.cpp
 
 CMakeFiles/AeroplaneWars.dir/EnemyPlane.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AeroplaneWars.dir/EnemyPlane.cpp.i"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\EnemyPlane.cpp > CMakeFiles\AeroplaneWars.dir\EnemyPlane.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\EnemyPlane.cpp > CMakeFiles\AeroplaneWars.dir\EnemyPlane.cpp.i
 
 CMakeFiles/AeroplaneWars.dir/EnemyPlane.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AeroplaneWars.dir/EnemyPlane.cpp.s"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\EnemyPlane.cpp -o CMakeFiles\AeroplaneWars.dir\EnemyPlane.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\EnemyPlane.cpp -o CMakeFiles\AeroplaneWars.dir\EnemyPlane.cpp.s
 
 CMakeFiles/AeroplaneWars.dir/Bomb.cpp.obj: CMakeFiles/AeroplaneWars.dir/flags.make
 CMakeFiles/AeroplaneWars.dir/Bomb.cpp.obj: CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp
 CMakeFiles/AeroplaneWars.dir/Bomb.cpp.obj: C:/Code/CodePractice/C++Project/AeroplaneWars/Bomb.cpp
 CMakeFiles/AeroplaneWars.dir/Bomb.cpp.obj: CMakeFiles/AeroplaneWars.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Code\CodePractice\C++Project\AeroplaneWars\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/AeroplaneWars.dir/Bomb.cpp.obj"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/Bomb.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\Bomb.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\Bomb.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\Bomb.cpp
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/Bomb.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\Bomb.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\Bomb.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\Bomb.cpp
 
 CMakeFiles/AeroplaneWars.dir/Bomb.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AeroplaneWars.dir/Bomb.cpp.i"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\Bomb.cpp > CMakeFiles\AeroplaneWars.dir\Bomb.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\Bomb.cpp > CMakeFiles\AeroplaneWars.dir\Bomb.cpp.i
 
 CMakeFiles/AeroplaneWars.dir/Bomb.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AeroplaneWars.dir/Bomb.cpp.s"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\Bomb.cpp -o CMakeFiles\AeroplaneWars.dir\Bomb.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\Bomb.cpp -o CMakeFiles\AeroplaneWars.dir\Bomb.cpp.s
 
 CMakeFiles/AeroplaneWars.dir/logo.rc.obj: CMakeFiles/AeroplaneWars.dir/flags.make
 CMakeFiles/AeroplaneWars.dir/logo.rc.obj: C:/Code/CodePractice/C++Project/AeroplaneWars/logo.rc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Code\CodePractice\C++Project\AeroplaneWars\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building RC object CMakeFiles/AeroplaneWars.dir/logo.rc.obj"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\windres.exe -O coff $(RC_DEFINES) $(RC_INCLUDES) $(RC_FLAGS) C:\Code\CodePractice\C++Project\AeroplaneWars\logo.rc CMakeFiles\AeroplaneWars.dir\logo.rc.obj
+	C:\Qt\Tools\mingw1310_64\bin\windres.exe -O coff $(RC_DEFINES) $(RC_INCLUDES) $(RC_FLAGS) C:\Code\CodePractice\C++Project\AeroplaneWars\logo.rc CMakeFiles\AeroplaneWars.dir\logo.rc.obj
 
 CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp.obj: CMakeFiles/AeroplaneWars.dir/flags.make
 CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp.obj: CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp
 CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp.obj: AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp
 CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp.obj: CMakeFiles/AeroplaneWars.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Code\CodePractice\C++Project\AeroplaneWars\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp.obj"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\build\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp.obj -MF CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp.obj.d -o CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp.obj -c C:\Code\CodePractice\C++Project\AeroplaneWars\build\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp
 
 CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp.i"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\build\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp > CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Code\CodePractice\C++Project\AeroplaneWars\build\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp > CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp.i
 
 CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp.s"
-	C:\Qt\Tools\llvm-mingw1706_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\build\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp -o CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Code\CodePractice\C++Project\AeroplaneWars\build\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp -o CMakeFiles\AeroplaneWars.dir\AeroplaneWars_autogen\EWIEGA46WW\qrc_res.cpp.s
 
 # Object files for target AeroplaneWars
 AeroplaneWars_OBJECTS = \

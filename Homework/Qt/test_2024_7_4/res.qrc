@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>image/PStatus.png</file>
+        <file>image/setPoint.png</file>
+        <file>image/setting.png</file>
+        <file>image/task.png</file>
+    </qresource>
+</RCC>

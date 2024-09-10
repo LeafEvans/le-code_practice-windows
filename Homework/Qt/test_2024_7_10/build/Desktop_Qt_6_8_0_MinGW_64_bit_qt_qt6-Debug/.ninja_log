@@ -1,0 +1,8 @@
+# ninja log v5
+2	636	7423057620989418	test_2024_7_10_autogen/timestamp	48e0e8a2fd364712
+2	636	7423057620989418	test_2024_7_10_autogen/mocs_compilation.cpp	48e0e8a2fd364712
+2	636	7423057620989418	C:/Code/CodePractice/Homework/Qt/test_2024_7_10/build/Desktop_Qt_6_8_0_MinGW_64_bit_qt_qt6-Debug/test_2024_7_10_autogen/timestamp	48e0e8a2fd364712
+2	636	7423057620989418	C:/Code/CodePractice/Homework/Qt/test_2024_7_10/build/Desktop_Qt_6_8_0_MinGW_64_bit_qt_qt6-Debug/test_2024_7_10_autogen/mocs_compilation.cpp	48e0e8a2fd364712
+637	2981	7423057645296446	CMakeFiles/test_2024_7_10.dir/main.cpp.obj	58a902d9f70761dd
+645	3031	7423057645786603	CMakeFiles/test_2024_7_10.dir/test_2024_7_10_autogen/mocs_compilation.cpp.obj	8034d76226cdc668
+654	3096	7423057646433128	CMakeFiles/test_2024_7_10.dir/mainwindow.cpp.obj	9c46855207451b62

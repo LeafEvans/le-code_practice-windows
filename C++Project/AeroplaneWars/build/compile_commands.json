@@ -1,55 +1,55 @@
 [
 {
   "directory": "C:/Code/CodePractice/C++Project/AeroplaneWars/build",
-  "command": "C:\\Qt\\Tools\\llvm-mingw1706_64\\bin\\clang++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -pthread -o CMakeFiles\\AeroplaneWars.dir\\AeroplaneWars_autogen\\mocs_compilation.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\build\\AeroplaneWars_autogen\\mocs_compilation.cpp",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\AeroplaneWars.dir\\AeroplaneWars_autogen\\mocs_compilation.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\build\\AeroplaneWars_autogen\\mocs_compilation.cpp",
   "file": "C:/Code/CodePractice/C++Project/AeroplaneWars/build/AeroplaneWars_autogen/mocs_compilation.cpp",
   "output": "CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/mocs_compilation.cpp.obj"
 },
 {
   "directory": "C:/Code/CodePractice/C++Project/AeroplaneWars/build",
-  "command": "C:\\Qt\\Tools\\llvm-mingw1706_64\\bin\\clang++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -pthread -o CMakeFiles\\AeroplaneWars.dir\\main.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\main.cpp",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\AeroplaneWars.dir\\main.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\main.cpp",
   "file": "C:/Code/CodePractice/C++Project/AeroplaneWars/main.cpp",
   "output": "CMakeFiles/AeroplaneWars.dir/main.cpp.obj"
 },
 {
   "directory": "C:/Code/CodePractice/C++Project/AeroplaneWars/build",
-  "command": "C:\\Qt\\Tools\\llvm-mingw1706_64\\bin\\clang++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -pthread -o CMakeFiles\\AeroplaneWars.dir\\mainscene.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\mainscene.cpp",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\AeroplaneWars.dir\\mainscene.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\mainscene.cpp",
   "file": "C:/Code/CodePractice/C++Project/AeroplaneWars/mainscene.cpp",
   "output": "CMakeFiles/AeroplaneWars.dir/mainscene.cpp.obj"
 },
 {
   "directory": "C:/Code/CodePractice/C++Project/AeroplaneWars/build",
-  "command": "C:\\Qt\\Tools\\llvm-mingw1706_64\\bin\\clang++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -pthread -o CMakeFiles\\AeroplaneWars.dir\\Map.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\Map.cpp",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\AeroplaneWars.dir\\Map.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\Map.cpp",
   "file": "C:/Code/CodePractice/C++Project/AeroplaneWars/Map.cpp",
   "output": "CMakeFiles/AeroplaneWars.dir/Map.cpp.obj"
 },
 {
   "directory": "C:/Code/CodePractice/C++Project/AeroplaneWars/build",
-  "command": "C:\\Qt\\Tools\\llvm-mingw1706_64\\bin\\clang++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -pthread -o CMakeFiles\\AeroplaneWars.dir\\HeroPlane.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\HeroPlane.cpp",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\AeroplaneWars.dir\\HeroPlane.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\HeroPlane.cpp",
   "file": "C:/Code/CodePractice/C++Project/AeroplaneWars/HeroPlane.cpp",
   "output": "CMakeFiles/AeroplaneWars.dir/HeroPlane.cpp.obj"
 },
 {
   "directory": "C:/Code/CodePractice/C++Project/AeroplaneWars/build",
-  "command": "C:\\Qt\\Tools\\llvm-mingw1706_64\\bin\\clang++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -pthread -o CMakeFiles\\AeroplaneWars.dir\\Bullet.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\Bullet.cpp",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\AeroplaneWars.dir\\Bullet.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\Bullet.cpp",
   "file": "C:/Code/CodePractice/C++Project/AeroplaneWars/Bullet.cpp",
   "output": "CMakeFiles/AeroplaneWars.dir/Bullet.cpp.obj"
 },
 {
   "directory": "C:/Code/CodePractice/C++Project/AeroplaneWars/build",
-  "command": "C:\\Qt\\Tools\\llvm-mingw1706_64\\bin\\clang++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -pthread -o CMakeFiles\\AeroplaneWars.dir\\EnemyPlane.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\EnemyPlane.cpp",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\AeroplaneWars.dir\\EnemyPlane.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\EnemyPlane.cpp",
   "file": "C:/Code/CodePractice/C++Project/AeroplaneWars/EnemyPlane.cpp",
   "output": "CMakeFiles/AeroplaneWars.dir/EnemyPlane.cpp.obj"
 },
 {
   "directory": "C:/Code/CodePractice/C++Project/AeroplaneWars/build",
-  "command": "C:\\Qt\\Tools\\llvm-mingw1706_64\\bin\\clang++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -pthread -o CMakeFiles\\AeroplaneWars.dir\\Bomb.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\Bomb.cpp",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\AeroplaneWars.dir\\Bomb.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\Bomb.cpp",
   "file": "C:/Code/CodePractice/C++Project/AeroplaneWars/Bomb.cpp",
   "output": "CMakeFiles/AeroplaneWars.dir/Bomb.cpp.obj"
 },
 {
   "directory": "C:/Code/CodePractice/C++Project/AeroplaneWars/build",
-  "command": "C:\\Qt\\Tools\\llvm-mingw1706_64\\bin\\clang++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -pthread -o CMakeFiles\\AeroplaneWars.dir\\AeroplaneWars_autogen\\EWIEGA46WW\\qrc_res.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\build\\AeroplaneWars_autogen\\EWIEGA46WW\\qrc_res.cpp",
+  "command": "C:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_MULTIMEDIA_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/AeroplaneWars.dir/includes_CXX.rsp -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\AeroplaneWars.dir\\AeroplaneWars_autogen\\EWIEGA46WW\\qrc_res.cpp.obj -c C:\\Code\\CodePractice\\C++Project\\AeroplaneWars\\build\\AeroplaneWars_autogen\\EWIEGA46WW\\qrc_res.cpp",
   "file": "C:/Code/CodePractice/C++Project/AeroplaneWars/build/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp",
   "output": "CMakeFiles/AeroplaneWars.dir/AeroplaneWars_autogen/EWIEGA46WW/qrc_res.cpp.obj"
 }

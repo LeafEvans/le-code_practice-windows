@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d7783ef6a4dc9fd66f0a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "test_2024_7_9",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "test_2024_7_9::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_2024_7_9-Debug-64297f0c43e8ca23a3dc.json",
+					"name" : "test_2024_7_9",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_2024_7_9_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_2024_7_9_autogen-Debug-92b25789c0198ded2f85.json",
+					"name" : "test_2024_7_9_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_2024_7_9_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_2024_7_9_autogen_timestamp_deps-Debug-031e3e581a762100d274.json",
+					"name" : "test_2024_7_9_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Code/CodePractice/Homework/Qt/test_2024_7_9/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug",
+		"source" : "C:/Code/CodePractice/Homework/Qt/test_2024_7_9"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
