@@ -1,0 +1,4 @@
+C:\Users\31866\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/31866/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S C:\Code\CodePractice\Homework\C++\2024\test_2024_9_12 -B C:\Code\CodePractice\Homework\C++\2024\test_2024_9_12\cmake-build-debug-visual-studio
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Code/CodePractice/Homework/C++/2024/test_2024_9_12/cmake-build-debug-visual-studio

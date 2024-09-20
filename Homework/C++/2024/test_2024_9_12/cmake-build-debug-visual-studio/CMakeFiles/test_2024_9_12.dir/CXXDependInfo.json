@@ -1,0 +1,18 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "MSVC",
+	"compiler-id" : "MSVC",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "C:/Code/CodePractice/Homework/C++/2024/test_2024_9_12/cmake-build-debug-visual-studio",
+	"dir-cur-src" : "C:/Code/CodePractice/Homework/C++/2024/test_2024_9_12",
+	"dir-top-bld" : "C:/Code/CodePractice/Homework/C++/2024/test_2024_9_12/cmake-build-debug-visual-studio",
+	"dir-top-src" : "C:/Code/CodePractice/Homework/C++/2024/test_2024_9_12",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "C:/Code/CodePractice/Homework/C++/2024/test_2024_9_12/cmake-build-debug-visual-studio/CMakeFiles/test_2024_9_12.dir"
+}

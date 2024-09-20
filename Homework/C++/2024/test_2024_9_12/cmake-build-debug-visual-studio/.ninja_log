@@ -1,0 +1,7 @@
+# ninja log v6
+2	102	7479110190442575	CMakeFiles/test_2024_9_12.dir/main.cpp.obj.ddi	789de2b069dfb6c8
+103	161	7479110191453460	CMakeFiles/test_2024_9_12.dir/CXX.dd	e0499368688baefb
+103	161	7479110191453460	C:/Code/CodePractice/Homework/C++/2024/test_2024_9_12/cmake-build-debug-visual-studio/CMakeFiles/test_2024_9_12.dir/CXXModules.json	e0499368688baefb
+103	161	7479110191453460	CMakeFiles/test_2024_9_12.dir/main.cpp.obj.modmap	e0499368688baefb
+162	728	7479110192035810	CMakeFiles/test_2024_9_12.dir/main.cpp.obj	e5893e600dbaa899
+728	901	7479110197698846	test_2024_9_12.exe	6ae81d52eed19b21

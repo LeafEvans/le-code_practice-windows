@@ -6336,7 +6336,7 @@ int main() {
 
   return 0;
 }*/
-/*#include <iostream>
+=/*#include <iostream>
 
 using namespace std;
 
@@ -6446,16 +6446,4 @@ int main() {
 
   return 0;
 }*/
-#include <iostream>
 
-using namespace std;
-
-template <class T>
-void quickSort(T *arr, int left, int right) {
-  
-}
-
-int main() {
-
-  return 0;
-}
