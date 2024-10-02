@@ -1,8 +1,8 @@
 [
 {
-  "directory": "C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build",
-  "command": "C:\\msys64\\mingw64\\bin\\cc.exe   -g -o CMakeFiles\\test_2024_5_5.dir\\main.c.obj -c C:\\Code\\CodePractice\\Homework\\C\\2024\\test_2024_5_5\\main.c",
-  "file": "C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/main.c",
+  "directory": "C:/Code/Code Practice/Homework/C/2024/test_2024_5_5/build",
+  "command": "C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /Ob0 /Od /RTC1 -MDd -Zi /FoCMakeFiles\\test_2024_5_5.dir\\main.c.obj /FdCMakeFiles\\test_2024_5_5.dir/ /FS -c \"C:\\Code\\Code Practice\\Homework\\C\\2024\\test_2024_5_5\\main.c\"",
+  "file": "C:/Code/Code Practice/Homework/C/2024/test_2024_5_5/main.c",
   "output": "CMakeFiles/test_2024_5_5.dir/main.c.obj"
 }
 ]

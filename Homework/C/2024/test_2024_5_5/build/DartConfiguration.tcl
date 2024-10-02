@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: C:/Code/CodePractice/Homework/C/2024/test_2024_5_5
-BuildDirectory: C:/Code/CodePractice/Homework/C/2024/test_2024_5_5/build
+SourceDirectory: C:/Code/Code Practice/Homework/C/2024/test_2024_5_5
+BuildDirectory: C:/Code/Code Practice/Homework/C/2024/test_2024_5_5/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -27,7 +27,7 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Code/CodePractice/Homework/C/2024/test_2024_5_5"
+ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Code/Code Practice/Homework/C/2024/test_2024_5_5"
 MakeCommand: C:/Program\ Files/CMake/bin/cmake.exe --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 

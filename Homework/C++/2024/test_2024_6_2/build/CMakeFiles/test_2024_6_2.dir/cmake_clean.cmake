@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/test_2024_6_2.dir/main.cpp.obj"
   "CMakeFiles/test_2024_6_2.dir/main.cpp.obj.d"
+  "libtest_2024_6_2.dll.a"
   "test_2024_6_2.exe"
   "test_2024_6_2.exe.manifest"
-  "test_2024_6_2.lib"
   "test_2024_6_2.pdb"
 )
 

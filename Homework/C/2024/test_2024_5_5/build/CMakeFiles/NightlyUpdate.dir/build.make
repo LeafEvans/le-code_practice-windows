@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Code\CodePractice\Homework\C\2024\test_2024_5_5
+CMAKE_SOURCE_DIR = "C:\Code\Code Practice\Homework\C\2024\test_2024_5_5"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Code\CodePractice\Homework\C\2024\test_2024_5_5\build
+CMAKE_BINARY_DIR = "C:\Code\Code Practice\Homework\C\2024\test_2024_5_5\build"
 
 # Utility rule file for NightlyUpdate.
 
@@ -81,6 +81,6 @@ CMakeFiles/NightlyUpdate.dir/clean:
 .PHONY : CMakeFiles/NightlyUpdate.dir/clean
 
 CMakeFiles/NightlyUpdate.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Code\CodePractice\Homework\C\2024\test_2024_5_5 C:\Code\CodePractice\Homework\C\2024\test_2024_5_5 C:\Code\CodePractice\Homework\C\2024\test_2024_5_5\build C:\Code\CodePractice\Homework\C\2024\test_2024_5_5\build C:\Code\CodePractice\Homework\C\2024\test_2024_5_5\build\CMakeFiles\NightlyUpdate.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Code\Code Practice\Homework\C\2024\test_2024_5_5" "C:\Code\Code Practice\Homework\C\2024\test_2024_5_5" "C:\Code\Code Practice\Homework\C\2024\test_2024_5_5\build" "C:\Code\Code Practice\Homework\C\2024\test_2024_5_5\build" "C:\Code\Code Practice\Homework\C\2024\test_2024_5_5\build\CMakeFiles\NightlyUpdate.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/NightlyUpdate.dir/depend
 

@@ -383,7 +383,7 @@ T& DynamicArray<T>::operator[](int index) {
   return data_[index];
 }
 #endif  // _DYNAMIC_ARRAY_ */
-#ifndef _DYNAMIC_ARRAY_
+/* #ifndef _DYNAMIC_ARRAY_
 #define _DYNAMIC_ARRAY_
 #include <cstring>
 #include <vector>
@@ -574,7 +574,7 @@ const DynamicArray<T> &DynamicArray<T>::operator+=(
 template <class T>
 T &DynamicArray<T>::operator[](int index) {
   if (index < 0 || index >= capacity_) {
-    int new_capacity = 
+    int new_capacity =
     index + 1 < 64 ? index +33: index + ((index + 1) >> 1);
     setCapacity(new_capacity);
   }
@@ -585,4 +585,30 @@ T &DynamicArray<T>::operator[](int index) {
 
   return data_[index];
 }
-#endif  // _DYNAMIC_ARRAY_
+#endif  // _DYNAMIC_ARRAY_ */
+#include <algorithm>
+#include <cstring>
+#include <iostream>
+
+using namespace std;
+
+const int N = 1010;
+
+int main() {
+  int n, m;
+  int v[N], w[N];
+  int f[N] = {0};
+  cin >> n >> m;
+  
+  for (int i = 1; i <= n; ++i) {
+    cin >> v[i] >> w[i];
+  }
+
+  for (int i = 1; i <= n; ++i) {
+    for (int j = m; j >= v[i]; --j) {
+      f[j] = max(f[j], f[j - v[i]] + w[i]);
+    }
+  }
+  cout << f[m] << endl;
+  return 0;
+}
