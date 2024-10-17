@@ -1,4 +1,4 @@
-# Install script for directory: C:/Code/CodePractice/Homework/C++/2024/test_2024_4_27
+# Install script for directory: C:/Code/Code Practice/Homework/C++/2024/test_2024_4_27
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Code/CodePractice/Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Code/Code Practice/Homework/C++/2024/test_2024_4_27/cmake-build-debug-visual-studio/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

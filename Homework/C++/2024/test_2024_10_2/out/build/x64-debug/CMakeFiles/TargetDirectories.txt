@@ -1,0 +1,5 @@
+C:/Code/Code Practice/Homework/C++/2024/test_2024_10_2/out/build/x64-debug/CMakeFiles/edit_cache.dir
+C:/Code/Code Practice/Homework/C++/2024/test_2024_10_2/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
+C:/Code/Code Practice/Homework/C++/2024/test_2024_10_2/out/build/x64-debug/test_2024_10_2/CMakeFiles/test_2024_10_2.dir
+C:/Code/Code Practice/Homework/C++/2024/test_2024_10_2/out/build/x64-debug/test_2024_10_2/CMakeFiles/edit_cache.dir
+C:/Code/Code Practice/Homework/C++/2024/test_2024_10_2/out/build/x64-debug/test_2024_10_2/CMakeFiles/rebuild_cache.dir

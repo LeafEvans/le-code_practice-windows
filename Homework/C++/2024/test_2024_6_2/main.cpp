@@ -586,7 +586,7 @@ T &DynamicArray<T>::operator[](int index) {
   return data_[index];
 }
 #endif  // _DYNAMIC_ARRAY_ */
-#include <algorithm>
+/* #include <algorithm>
 #include <cstring>
 #include <iostream>
 
@@ -599,7 +599,7 @@ int main() {
   int v[N], w[N];
   int f[N] = {0};
   cin >> n >> m;
-  
+
   for (int i = 1; i <= n; ++i) {
     cin >> v[i] >> w[i];
   }
@@ -610,5 +610,29 @@ int main() {
     }
   }
   cout << f[m] << endl;
+  return 0;
+} */
+#include <math.h>
+#include <stdio.h>
+
+void hanoiTower(int n, char x, char y, char z) {
+  if (n > 1) {
+    hanoiTower(n - 1, x, z, y);
+    printf("%c -> %c\n", x, z);
+    hanoiTower(n - 1, y, x, z);
+  } else {
+    printf("%c -> %c\n", x, z);
+  }
+}
+
+int main(void) {
+  int n = 0;
+  char a = 'A', b = 'B', c = 'C';
+
+  scanf("%d", &n);
+
+  hanoiTower(n, a, b, c);
+  printf("%d\n", (int)(pow(2, n) - 1));
+
   return 0;
 }

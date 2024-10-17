@@ -1,0 +1,4 @@
+1
+0
+{"Hash":"","Name":"","Path":"C:\\Code\\Code Practice\\Homework\\C++\\2024\\test_2024_6_2\\main.cpp"}
+0
