@@ -7,16 +7,15 @@ namespace Ui {
 class FindDialog;
 }
 
-class FindDialog : public QDialog
-{
-    Q_OBJECT
+class FindDialog : public QDialog {
+  Q_OBJECT
 
-public:
-    explicit FindDialog(QWidget *parent = nullptr);
-    ~FindDialog();
+ public:
+  explicit FindDialog(QWidget *parent = nullptr);
+  ~FindDialog();
 
-private:
-    Ui::FindDialog *ui;
+ private:
+  Ui::FindDialog *ui;
 };
 
-#endif // FINDDIALOG_H
+#endif  // FINDDIALOG_H

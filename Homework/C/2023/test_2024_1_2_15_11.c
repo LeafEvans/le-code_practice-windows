@@ -10,9 +10,8 @@ void fillArray(int arr[ARRAY_SIZE][ARRAY_SIZE], int n) {
   int left_col = 0;        // 定义左侧坐标
   int right_col = n - 1;   // 定义右侧坐标
 
-  while (top_row <= bottom_row && left_col <= right_col)
   // 当满足顶部坐标小于底部坐标，左侧坐标小于右侧坐标，就进行循环
-  {
+  while (top_row <= bottom_row && left_col <= right_col) {
     // 在每次循环中，前两个循环是必定执行的
     for (int i = left_col; i <= right_col; ++i, ++num) {
       arr[top_row][i] = num;
@@ -24,7 +23,7 @@ void fillArray(int arr[ARRAY_SIZE][ARRAY_SIZE], int n) {
     }
     --right_col;
 
-    // 上面那个++后，这里就要进行判断
+    // 上面那个增加后，这里就要进行判断
     if (top_row <= bottom_row) {
       for (int i = right_col; i >= left_col; --i, ++num) {
         arr[bottom_row][i] = num;
@@ -32,7 +31,7 @@ void fillArray(int arr[ARRAY_SIZE][ARRAY_SIZE], int n) {
       --bottom_row;
     }
 
-    // 上面那个--后，这里就要进行判断
+    // 上面那个减少后，这里就要进行判断
     if (left_col <= right_col) {
       for (int j = bottom_row; j >= top_row; --j, ++num) {
         arr[j][left_col] = num;

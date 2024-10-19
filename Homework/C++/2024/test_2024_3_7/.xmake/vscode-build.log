@@ -1,5 +1,0 @@
-checking for platform ... windows
-checking for architecture ... x64
-checking for Microsoft Visual Studio (x64) version ... 2022
-checking for Qt SDK directory ... no
-error: Qt SDK not found!

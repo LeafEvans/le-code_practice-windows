@@ -19,7 +19,7 @@ void leftRotateA(char str[], int k) {
   k %= len;               // 减少不必要的循环次数
   for (int i = 0; i < k; i++) {
     char tmp = str[0];                   // 存储首字符
-    for (int j = 0; j < len - 1; j++) {  // 只需要循环len - 1次即可
+    for (int j = 0; j < len - 1; j++) {  // 只需要循环 len - 1 次即可
       str[j] = str[j + 1];  // 将后一个字符赋给前一个字符
     }
     str[len - 1] = tmp;  // 将末尾元素赋值为临时的那个变量

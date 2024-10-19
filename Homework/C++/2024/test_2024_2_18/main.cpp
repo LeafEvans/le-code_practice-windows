@@ -4,18 +4,16 @@ using namespace std;
 
 class CCar;
 class CDriver {
-  public:
-    void ModifyCar(CCar* pCar);
+ public:
+  void ModifyCar(CCar* pCar);
 };
 class CCar {
-  private:
-    int price;
-    friend int MostExpensiveCar(CCar cars[], int total);
-    friend void CDriver::ModifyCar(CCar* pCar);
+ private:
+  int price;
+  friend int MostExpensiveCar(CCar cars[], int total);
+  friend void CDriver::ModifyCar(CCar* pCar);
 };
-void CDriver::ModifyCar(CCar* pCar) {
-  pCar->price += 1000;
-}
+void CDriver::ModifyCar(CCar* pCar) { pCar->price += 1000; }
 int MostExpensiveCar(CCar cars[], int total) {
   int tmpMax = -1;
   for (int i = 0; i < total; ++i) {
@@ -29,4 +27,3 @@ int main() {
   cout << "Hello World!" << endl;
   return 0;
 }
-

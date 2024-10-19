@@ -7,25 +7,24 @@ class QLabel;
 class QLineEdit;
 class QPushButton;
 
-class LoginDialog : public QDialog
-{
-    Q_OBJECT
-public:
-    explicit LoginDialog(QWidget *parent = 0);
-    ~LoginDialog();
+class LoginDialog : public QDialog {
+  Q_OBJECT
+ public:
+  explicit LoginDialog(QWidget *parent = 0);
+  ~LoginDialog();
 
-private slots:
-    void login();
+ private slots:
+  void login();
 
-private:
-    QLabel *usrLabel;
-    QLabel *pwdLabel;
+ private:
+  QLabel *usrLabel;
+  QLabel *pwdLabel;
 
-    QLineEdit *usrEditLine;
-    QLineEdit *pwdEditLine;
+  QLineEdit *usrEditLine;
+  QLineEdit *pwdEditLine;
 
-    QPushButton *loginBtn;
-    QPushButton *exitBtn;
+  QPushButton *loginBtn;
+  QPushButton *exitBtn;
 };
 
-#endif // LOGINDIALOG_H
+#endif  // LOGINDIALOG_H

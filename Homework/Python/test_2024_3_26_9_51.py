@@ -14,10 +14,16 @@ growth_prob = 0.001  # 空地上长出树木的概率
 lightning_ignition_prob = 0.00006  # 闪电引燃绿树的概率
 
 # 创建森林地区的初始状态
-forest = (np.random.rand(ROWS, COLS) < initial_tree_coverage_prob).astype(np.int8)
+forest = (np.random.rand(ROWS, COLS)
+          < initial_tree_coverage_prob).astype(np.int8)
 
 # 初始化作图
-plt.title("Step = 1", fontdict={"family": "Inter", "weight": "bold", "fontsize": 20})
+plt.title("Step = 1",
+          fontdict={
+              "family": "Inter",
+              "weight": "bold",
+              "fontsize": 20
+          })
 colors = ["black", "lime", "red"]  # 黑色空地 绿色树 红色火
 bounds = [0, 1, 2, 3]  # 边界序列，用于指定颜色的分界点
 cmap = ListedColormap(colors)  # 创建颜色映射对象
@@ -31,9 +37,8 @@ for t in range(NUM_ITERATIONS):
     # 更新森林地区的状态
     temp_forest = np.where(forest == 2, 0, temp_forest)
     p0 = np.random.rand(ROWS, COLS)
-    temp_forest = np.where(
-        (forest == 0) & (p0 < growth_prob), 1, temp_forest
-    )  # 空地长出树木
+    temp_forest = np.where((forest == 0) & (p0 < growth_prob), 1,
+                           temp_forest)  # 空地长出树木
 
     fire = (forest == 2).astype(np.int8)
     firepad = np.pad(
@@ -51,10 +56,8 @@ for t in range(NUM_ITERATIONS):
     p22 = np.random.rand(ROWS, COLS)  # 绿树因为闪电而变成燃烧的树
     temp_forest = np.where(
         (forest == 1)
-        & (
-            ((numfire == 0) & (p21 < lightning_ignition_prob))
-            | ((numfire > 0) & (p22 < ignition_prob))
-        ),
+        & (((numfire == 0) & (p21 < lightning_ignition_prob))
+           | ((numfire > 0) & (p22 < ignition_prob))),
         2,
         temp_forest,
     )
@@ -64,7 +67,11 @@ for t in range(NUM_ITERATIONS):
     # 更新图像显示
     plt.title(
         "Step = " + str(t),
-        fontdict={"family": "Inter", "weight": "bold", "fontsize": 20},
+        fontdict={
+            "family": "Inter",
+            "weight": "bold",
+            "fontsize": 20
+        },
     )
     image.set_data(forest)
     plt.pause(0.1)

@@ -12,12 +12,15 @@ data = [np.random.normal(0, std, 100) for std in range(1, 4)]
 
 # 转换为pandas DataFrame
 import pandas as pd
+
 df = pd.DataFrame({
-    'Category': ['Category 1']*100 + ['Category 2']*100 + ['Category 3']*100,
-    'Value': np.concatenate(data)
+    'Category':
+    ['Category 1'] * 100 + ['Category 2'] * 100 + ['Category 3'] * 100,
+    'Value':
+    np.concatenate(data)
 })
 
-# 使用Seaborn绘制横向大提琴图
+# 使用 Seaborn 绘制横向大提琴图
 sns.violinplot(x='Value', y='Category', data=df)
 plt.title('横向大提琴图')
 plt.xlabel('值')

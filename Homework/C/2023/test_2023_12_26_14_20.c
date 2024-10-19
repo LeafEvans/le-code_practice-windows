@@ -7,7 +7,7 @@ typedef struct LinkNode {
   struct LinkNode *next;
 } LinkNode;
 
-// 在值为old_val的位置插入一个新的数据new_val，old_val在原位置的后面
+// 在值为 old_val 的位置插入一个新的数据 new_val，old_val 在原位置的后面
 void insertByValueLinkList(LinkNode *header, int old_val, int new_val) {
   if (NULL == header) return;
 
@@ -22,7 +22,7 @@ void insertByValueLinkList(LinkNode *header, int old_val, int new_val) {
   }
 
   if (p_cur == NULL)
-    return;  // p_cur为空指针，说明链表中不存在值为old_val的节点
+    return;  // p_cur 为空指针，说明链表中不存在值为 old_val 的节点
 
   // 先创建一个新结点
   LinkNode *new_node = (LinkNode *)malloc(sizeof(LinkNode));
@@ -126,7 +126,7 @@ void test(void) {
   insertByValueLinkList(header, 300, 666);
   printf("\n");
   clearLinkList(header);
-  1 foreachLinkList(header);
+  foreachLinkList(header);
 }
 
 int main(void) {

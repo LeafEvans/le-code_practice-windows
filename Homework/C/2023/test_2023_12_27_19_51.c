@@ -8,7 +8,7 @@ int main(void) {
   Sleep(10000);
   printf("刷新缓冲区\n");
   fflush(pf);  // 刷新缓冲区时，才将输入缓冲区的数据写到文件（磁盘）
-  fclose(pf);  // 注：fclose在关闭文件的时候，也会刷新缓冲区
+  fclose(pf);  // 注：fclose 在关闭文件的时候，也会刷新缓冲区
   pf = NULL;
   return 0;
 }

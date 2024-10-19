@@ -1,19 +1,18 @@
-#include "mainwindow.h"
-#include "logindialog.h"
-
 #include <QApplication>
 
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
-    MainWindow w;
+#include "logindialog.h"
+#include "mainwindow.h"
 
-    LoginDialog dlg;
+int main(int argc, char *argv[]) {
+  QApplication a(argc, argv);
+  MainWindow w;
 
-    if (dlg.exec() == QDialog::Accepted) {
-        w.show();
-        return a.exec();
-    } else {
-        return 0;
-    }
+  LoginDialog dlg;
+
+  if (dlg.exec() == QDialog::Accepted) {
+    w.show();
+    return a.exec();
+  } else {
+    return 0;
+  }
 }

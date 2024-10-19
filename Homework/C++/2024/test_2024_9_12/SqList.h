@@ -2,7 +2,7 @@
 #define _SQLIST_H_
 #include "ListBase.h"
 
-template<class T>
+template <class T>
 class SqList : public ListBase<T> {
  public:
   SqList(int buf_size = 16);
@@ -21,25 +21,25 @@ class SqList : public ListBase<T> {
   virtual SqList &operator=(const SqList<T> &src);  // 重载等于号运算符
  protected:
   int save(T *data, int data_len);  // 保存相应数据
-  int setBufSize(int buf_size);  // 设置缓存区大小
-  T *data_;  // 数据
-  int data_len_;  // 数据大小
-  int buf_size_;  // 缓存区大小
+  int setBufSize(int buf_size);     // 设置缓存区大小
+  T *data_;                         // 数据
+  int data_len_;                    // 数据大小
+  int buf_size_;                    // 缓存区大小
 };
 
 // 默认构造函数
-template<class T>
-SqList<T>::SqList(int buf_size) : data_len_(0), buf_size_(buf_size),
-                                  data_(new T[buf_size]) {
+template <class T>
+SqList<T>::SqList(int buf_size)
+    : data_len_(0), buf_size_(buf_size), data_(new T[buf_size]) {
   memset(data_, 0, sizeof(T) * buf_size_);  // 设置内容为 0
 }
 
 // 析构函数
-template<class T>
+template <class T>
 SqList<T>::~SqList() {
   // 指针不为空
   if (data_) {
-    delete[] data_;  // 释放相应区域
+    delete[] data_;   // 释放相应区域
     data_ = nullptr;  // 置为空指针
   }
   data_len_ = 0;  // 数据大小置为 0
@@ -47,7 +47,7 @@ SqList<T>::~SqList() {
 }
 
 // 重载等于号函数
-template<class T>
+template <class T>
 SqList<T> &SqList<T>::operator=(const SqList<T> &src) {
   clear();  // 设置数据大小为 0
   // 源数据数据大小大于 0
@@ -60,11 +60,9 @@ SqList<T> &SqList<T>::operator=(const SqList<T> &src) {
 }
 
 // 拷贝构造函数
-template<class T>
+template <class T>
 SqList<T>::SqList(const SqList<T> &other)
-    : data_len_(0),
-      buf_size_(other.buf_size_),
-      data_(new T[buf_size_]) {
+    : data_len_(0), buf_size_(other.buf_size_), data_(new T[buf_size_]) {
   // 源数据数据大小大于 0
   if (other.data_len_ > 0) {
     save(other.data_, data_len_);
@@ -72,7 +70,7 @@ SqList<T>::SqList(const SqList<T> &other)
 }
 
 // 设置缓存区大小的函数
-template<class T>
+template <class T>
 int SqList<T>::setBufSize(int buf_size) {
   // 新缓存区大小比原有缓存区大小小
   if (buf_size <= buf_size_) {
@@ -92,22 +90,22 @@ int SqList<T>::setBufSize(int buf_size) {
   return buf_size;
 }
 
-template<class T>
+template <class T>
 int SqList<T>::length() const {
   return data_len_;
 }
 
-template<class T>
+template <class T>
 void SqList<T>::clear() {
   data_len_ = 0;
 }
 
-template<class T>
+template <class T>
 bool SqList<T>::isEmpty() const {
   return data_len_ <= 0;
 }
 
-template<class T>
+template <class T>
 int SqList<T>::save(T *data, int data_len) {
   if (!data || data_len <= 0) {
     return -1;  // 判断数据是否异常
@@ -128,7 +126,7 @@ int SqList<T>::save(T *data, int data_len) {
   return data_len_ - data_len;  // 将数据的起始位置返回
 }
 
-template<class T>
+template <class T>
 bool SqList<T>::insert(int pos, const T &elem) {
   if (pos < 0) {  // 查看插入位置是否合理
     return false;
@@ -156,7 +154,7 @@ bool SqList<T>::insert(int pos, const T &elem) {
   return true;
 }
 
-template<class T>
+template <class T>
 int SqList<T>::append(const T &elem) {
   if (data_len_ >= buf_size_) {  // 数据大小大于等于缓存区大小
     if (!setBufSize(data_len_ * 2)) {
@@ -169,7 +167,7 @@ int SqList<T>::append(const T &elem) {
   return data_len_++;  // 返回新增数据位置的同时增加数据大小
 }
 
-template<class T>
+template <class T>
 bool SqList<T>::getElem(int pos, T &elem) const {
   if (pos < 0 || pos >= data_len_) {
     return false;  // 位置不合理
@@ -180,7 +178,7 @@ bool SqList<T>::getElem(int pos, T &elem) const {
   return true;
 }
 
-template<class T>
+template <class T>
 bool SqList<T>::delElem(int pos, T &elem) {
   // 位置不合理
   if (pos < 0 || pos >= data_len_) {
@@ -198,7 +196,7 @@ bool SqList<T>::delElem(int pos, T &elem) {
   return true;
 }
 
-template<class T>
+template <class T>
 bool SqList<T>::setElem(int pos, const T &elem) {
   if (pos < 0) {
     return false;
@@ -219,7 +217,7 @@ bool SqList<T>::setElem(int pos, const T &elem) {
 }
 
 // 遍历线性表
-template<class T>
+template <class T>
 void SqList<T>::traverse(bool (*visit)(const T &)) const {
   if (!visit) {
     return;
@@ -230,6 +228,5 @@ void SqList<T>::traverse(bool (*visit)(const T &)) const {
       break;
     }
   }
-
 }
-#endif // _SQLIST_H_
+#endif  // _SQLIST_H_

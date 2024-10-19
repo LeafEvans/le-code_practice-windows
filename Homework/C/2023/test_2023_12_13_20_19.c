@@ -29,7 +29,7 @@ void decrypt(char *str, const char *key) {
   while (i < str_len) {
     while (j < key_len && str[i] != '\0') {
       str[i] = (str[i] - key[j] + 26) % 26 + 'A';
-      // +26可以防止负数的产生，理论上可以+26的任意倍数，因为取模都会取掉
+      // +26 可以防止负数的产生，理论上可以 +26 的任意倍数，因为取模都会取掉
       ++i;
       ++j;
     }

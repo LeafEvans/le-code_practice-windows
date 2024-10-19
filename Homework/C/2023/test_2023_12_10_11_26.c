@@ -6,7 +6,7 @@ void *myMemmove(void *dest, void *src, size_t num) {
   assert(dest && src);
   void *ret = dest;
   if (dest < src) {
-    while (num--)  // 与memcpy一致
+    while (num--)  // 与 memcpy 一致
     {
       *(char *)dest = *(char *)src;
       dest = (char *)dest + 1;
@@ -14,12 +14,11 @@ void *myMemmove(void *dest, void *src, size_t num) {
     }
     return ret;
   } else {
-    while (num--)  // num判断后--，只剩num-1个字节
-    {
-      *((char *)dest + num) = *(
-          (char *)src +
-          num);  // 跳过num-1个字节后就时指向目标数据的最后一个字节，然后解引用赋值
-    }            // 之后num再--，就可以实现
+    while (num--) {
+      // num 判断后减 1，只剩 num - 1 个字节
+      // 跳过 num - 1 个字节后就时指向目标数据的最后一个字节，然后解引用赋值
+      *((char *)dest + num) = *((char *)src + num);
+    }  // 之后 num 再减一，就可以实现
     return ret;
   }
 }

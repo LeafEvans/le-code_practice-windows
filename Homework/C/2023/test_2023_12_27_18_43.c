@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main(void) {
-  int c = 0;  // 注意：int,非char，要求处理EOF
+  int c = 0;  // 注意：int，非 char，要求处理 EOF
   FILE *fp = fopen("test.txt", "r");
 
   if (!fp) {
@@ -10,8 +10,8 @@ int main(void) {
     return EXIT_FAILURE;
   }
 
-  // fgetc当读取失败或遇到文件结束的时候，都会返回EOF
-  while ((c = fgetc(fp)) != EOF) putchar(c);  // 标准C I/O读取文件循环
+  // fgetc 当读取失败或遇到文件结束的时候，都会返回 EOF
+  while ((c = fgetc(fp)) != EOF) putchar(c);  // 标准 C I/O 读取文件循环
 
   // 判断是什么原因结束的
   if (ferror(fp)) {

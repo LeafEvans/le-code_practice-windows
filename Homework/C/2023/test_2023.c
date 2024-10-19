@@ -221,8 +221,7 @@ size_t myStrlenC(const char *str) {
 char *myStrcpy(char *dest, const char *src) {
   char *temp = dest;
   assert(dest || src);
-  while (*dest++ = *src++)
-    ;
+  while (*dest++ = *src++);
   return temp;
 }
 
@@ -246,8 +245,7 @@ char *myStrcat(char *dest, const char *src) {
 
   while (*dest != '\0') ++dest;
 
-  while (*dest++ = *src++)
-    ;
+  while (*dest++ = *src++);
 
   return dest;
 }

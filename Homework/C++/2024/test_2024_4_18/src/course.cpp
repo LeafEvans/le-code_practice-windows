@@ -27,7 +27,7 @@ std::string Course::getCourseName() const { return _course_name; }
 void Course::addStudent(Student& student) {
   // 如果学生数量为零，就初始化一个新指针
   if (!_students) {
-    // 
+    //
     _students = new Student[1];
     _students[0] = student;
     // 数量增加

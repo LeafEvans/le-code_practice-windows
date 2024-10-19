@@ -12,15 +12,15 @@ cmap = ListedColormap(colors)
 
 # 定义滑翔机模式
 def add_glider(i, j, grid):
-    glider = np.array([[DEAD, DEAD, ALIVE], [ALIVE, DEAD, ALIVE], [DEAD, ALIVE, ALIVE]])
-    grid[i : i + 3, j : j + 3] = glider
+    glider = np.array([[DEAD, DEAD, ALIVE], [ALIVE, DEAD, ALIVE],
+                       [DEAD, ALIVE, ALIVE]])
+    grid[i:i + 3, j:j + 3] = glider
 
 
 # 随机生成初始细胞状态
 def random_grid(size):
-    return np.random.choice([DEAD, ALIVE], size * size, p=[0.8, 0.2]).reshape(
-        size, size
-    )
+    return np.random.choice([DEAD, ALIVE], size * size,
+                            p=[0.8, 0.2]).reshape(size, size)
 
 
 # 更新细胞状态
@@ -28,19 +28,14 @@ def update(frame_num, image, grid, size):
     new_grid = grid.copy()
     for i in range(size):
         for j in range(size):
-            total = int(
-                (
-                    grid[(i - 1) % size, (j - 1) % size]
-                    + grid[(i - 1) % size, j]
-                    + grid[(i - 1) % size, (j + 1) % size]
-                    + grid[i, (j - 1) % size]
-                    + grid[i, (j + 1) % size]
-                    + grid[(i + 1) % size, (j - 1) % size]
-                    + grid[(i + 1) % size, j]
-                    + grid[(i + 1) % size, (j + 1) % size]
-                )
-                / 255
-            )
+            total = int((grid[(i - 1) % size,
+                              (j - 1) % size] + grid[(i - 1) % size, j] +
+                         grid[(i - 1) % size,
+                              (j + 1) % size] + grid[i, (j - 1) % size] +
+                         grid[i, (j + 1) % size] + grid[(i + 1) % size,
+                                                        (j - 1) % size] +
+                         grid[(i + 1) % size, j] + grid[(i + 1) % size,
+                                                        (j + 1) % size]) / 255)
 
             if grid[i, j] == ALIVE:
                 if total < 2 or total > 3:

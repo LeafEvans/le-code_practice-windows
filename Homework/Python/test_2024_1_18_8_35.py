@@ -1,6 +1,4 @@
-# 斐波那契(fibonacci)数列模块
-
-
+# 斐波那契数列模块
 def fib(n):  # 定义到 n 的斐波那契数列
     a, b = 0, 1
     while b < n:

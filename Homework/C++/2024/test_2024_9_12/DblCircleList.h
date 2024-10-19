@@ -2,7 +2,7 @@
 #define _DBLCIRCLELIST_H_
 #include "CircleListBase.h"
 
-template<class T>
+template <class T>
 class DblCircleList : public CircleListBase<T, DblNode<T>> {
  public:
   DblCircleList();
@@ -16,27 +16,27 @@ class DblCircleList : public CircleListBase<T, DblNode<T>> {
   virtual bool link(DblNode<T> *prev_node, DblNode<T> *curr_node);
 };
 
-template<class T>
+template <class T>
 DblCircleList<T>::DblCircleList() {
   this->linkTailToHead();
 }
 
-template<class T>
+template <class T>
 DblCircleList<T>::~DblCircleList() {}
 
-template<class T>
+template <class T>
 DblCircleList<T>::DblCircleList(const DblCircleList<T> &src) {
   *this = src;
   this->linkTailToHead();
 }
 
-template<class T>
+template <class T>
 void DblCircleList<T>::toTail() {
   this->curr_ = this->tail_;
   this->linkTailToHead();
 }
 
-template<class T>
+template <class T>
 bool DblCircleList<T>::toPrev(T &elem) {
   if (!this->curr_) {
     return false;
@@ -53,7 +53,7 @@ bool DblCircleList<T>::toPrev(T &elem) {
   return true;
 }
 
-template<class T>
+template <class T>
 bool DblCircleList<T>::reverse() {
   if (this->isEmpty()) {
     return false;  // 指针指向同一个
@@ -64,7 +64,7 @@ bool DblCircleList<T>::reverse() {
 
   do {
     DblNode<T> *next = curr->next;  // 先保存下一个节点的数据
-    curr->prev = curr->next;  // 更换当前节点
+    curr->prev = curr->next;        // 更换当前节点
     curr->next = prev;
     prev = curr;
     curr = next;
@@ -76,4 +76,4 @@ bool DblCircleList<T>::reverse() {
   return true;
 }
 
-#endif // _DBLCIRCLELIST_H_
+#endif  // _DBLCIRCLELIST_H_

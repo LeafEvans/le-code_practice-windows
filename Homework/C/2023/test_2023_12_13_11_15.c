@@ -9,7 +9,7 @@ int main(void) {
   scanf("%d", &n);
 
   for (int i = 0; i < n; i++) {
-    for (int j = 0; j <= i; j++) {  // j <= i便于初始化
+    for (int j = 0; j <= i; j++) {  // j <= i 便于初始化
       if (j == 0 || j == i) {
         arr[i][j] = 1;
       } else {

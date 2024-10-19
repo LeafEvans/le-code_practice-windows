@@ -232,7 +232,7 @@ void replaceSpace(char *str, int length) {
       space_count++;
     }
     cur++;
-  }                                     // 计算数量用的循环
+  }  // 计算数量用的循环
   int end1 = length - 1;                // 原来字符串的结尾
   int end2 = length + space_count - 1;  // 新的字符串的结尾
 

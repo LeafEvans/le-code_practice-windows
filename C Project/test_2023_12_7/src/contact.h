@@ -1,5 +1,7 @@
-#pragma once
+#ifndef _CONTACT_H_
+#define _CONTACT_H_
 #define _CRT_SECURE_NO_WARNINGS
+
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,7 +17,6 @@
 
 enum Option { EXIT, ADD, DEL, SEARCH, MODIFY, SHOW, SORT };
 
-
 // 人的信息
 typedef struct PeoInfo {
   char name[MAX_NAME];
@@ -27,9 +28,9 @@ typedef struct PeoInfo {
 
 // 静态版本
 // typedef struct Contact {
-//  PeoInfo data[MAX];  // 存放人的信息
-//  int count;  // 记录当前通讯录中实际人的个数
-//} Contact;  // 通讯录
+//   PeoInfo data[MAX];  // 存放人的信息
+//   int count;          // 记录当前通讯录中实际人的个数
+// } Contact;            // 通讯录
 
 typedef struct Contact {
   PeoInfo *data;  // 存放人的信息
@@ -48,3 +49,4 @@ void checkCapacity(Contact *pc);
 void destroyContact(Contact *pc);
 void saveContact(const Contact *pc);
 void loadContact(Contact *pc);
+#endif  // _CONTACT_H_

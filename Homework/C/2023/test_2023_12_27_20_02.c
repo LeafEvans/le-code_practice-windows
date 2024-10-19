@@ -5,7 +5,7 @@ enum { SIZE = 5 };
 int main(void) {
   double a[SIZE] = {1.0, 2.0, 3.0, 4.0, 5.0};
   FILE *fp = fopen("test_12_27.bin", "wb");  // 必须用二进制模式
-  fwrite(a, sizeof *a, SIZE, FP);  // 写double的数组
+  fwrite(a, sizeof *a, SIZE, fp);  // 写double的数组
   fclose(fp);
 
   double b[SIZE] = {0.0};

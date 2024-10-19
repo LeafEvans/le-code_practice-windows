@@ -8899,4 +8899,3 @@ class ListBase {
   virtual int append(const T& elem) = 0;
 };
 #endif  // _LIST_BASH_H */
-

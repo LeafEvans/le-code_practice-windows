@@ -64,8 +64,8 @@ void insertionSortLinkList(Node *head) {
       ptr = &((*ptr)->next);  // 当该位置不为空指针就继续
     }
     Node *next = curr->next;  // 找到插入点
-    curr->next = *ptr;        // 将插入的元素的下一个元素改为*ptr
-    *ptr = curr;              // 将*ptr前一个节点的next改为NULL
+    curr->next = *ptr;        // 将插入的元素的下一个元素改为 *ptr
+    *ptr = curr;              // 将 *ptr 前一个节点的 next 改为 NULL
     curr = next;              // 继续遍历
   }
 }

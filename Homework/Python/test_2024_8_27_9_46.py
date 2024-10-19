@@ -6,7 +6,8 @@ from sklearn.datasets import make_blobs
 
 # 绘制数据点的函数
 def plot_data(X):
-    plt.scatter(X[:, 0], X[:, 1], color='k', s=2)  # 使用 plt.scatter 而不是 plt.plot
+    # 使用 plt.scatter 而不是 plt.plot
+    plt.scatter(X[:, 0], X[:, 1], color='k', s=2)
 
 
 # 绘制质心的函数
@@ -56,10 +57,13 @@ def plot_decision_boundaries(
     Z = clusterer.predict(np.c_[xx.ravel(), yy.ravel()])
     Z = Z.reshape(xx.shape)
 
-    plt.contourf(Z, extent=(mins[0], maxs[0], mins[1], maxs[1]), cmap='Pastel2')
-    plt.contour(
-        Z, extent=(mins[0], maxs[0], mins[1], maxs[1]), linewidths=1, colors='k'
-    )
+    plt.contourf(Z,
+                 extent=(mins[0], maxs[0], mins[1], maxs[1]),
+                 cmap='Pastel2')
+    plt.contour(Z,
+                extent=(mins[0], maxs[0], mins[1], maxs[1]),
+                linewidths=1,
+                colors='k')
 
     plot_data(X)
 
@@ -83,9 +87,11 @@ def plot_decision_boundaries(
 X, _ = make_blobs(n_samples=1000, centers=4, cluster_std=0.6, random_state=42)
 
 # 训练 KMeans 模型
-kmeans_iter1 = KMeans(
-    n_clusters=4, init='random', n_init=1, max_iter=1, random_state=42
-).fit(X)
+kmeans_iter1 = KMeans(n_clusters=4,
+                      init='random',
+                      n_init=1,
+                      max_iter=1,
+                      random_state=42).fit(X)
 kmeans_iter2 = KMeans(
     n_clusters=4,
     init=kmeans_iter1.cluster_centers_,
@@ -106,26 +112,43 @@ plt.figure(figsize=(10, 8))
 
 plt.subplot(3, 2, 1)
 plot_data(X)
-plot_centroids(kmeans_iter1.cluster_centers_, circle_color='r', cross_color='k')
+plot_centroids(kmeans_iter1.cluster_centers_,
+               circle_color='r',
+               cross_color='k')
 plt.title('Update Cluster Centers')
 
 plt.subplot(3, 2, 2)
-plot_decision_boundaries(kmeans_iter1, X, show_xlabels=False, show_ylabels=False)
+plot_decision_boundaries(kmeans_iter1,
+                         X,
+                         show_xlabels=False,
+                         show_ylabels=False)
 plt.title('Label')
 
 plt.subplot(3, 2, 3)
-plot_decision_boundaries(kmeans_iter1, X, show_xlabels=False, show_ylabels=False)
+plot_decision_boundaries(kmeans_iter1,
+                         X,
+                         show_xlabels=False,
+                         show_ylabels=False)
 plot_centroids(kmeans_iter2.cluster_centers_)
 
 plt.subplot(3, 2, 4)
-plot_decision_boundaries(kmeans_iter2, X, show_xlabels=False, show_ylabels=False)
+plot_decision_boundaries(kmeans_iter2,
+                         X,
+                         show_xlabels=False,
+                         show_ylabels=False)
 
 plt.subplot(3, 2, 5)
-plot_decision_boundaries(kmeans_iter2, X, show_xlabels=False, show_ylabels=False)
+plot_decision_boundaries(kmeans_iter2,
+                         X,
+                         show_xlabels=False,
+                         show_ylabels=False)
 plot_centroids(kmeans_iter3.cluster_centers_)
 
 plt.subplot(3, 2, 6)
-plot_decision_boundaries(kmeans_iter3, X, show_xlabels=False, show_ylabels=False)
+plot_decision_boundaries(kmeans_iter3,
+                         X,
+                         show_xlabels=False,
+                         show_ylabels=False)
 
 plt.tight_layout()
 plt.show()

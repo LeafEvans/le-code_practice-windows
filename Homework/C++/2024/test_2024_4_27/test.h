@@ -9,4 +9,4 @@ void test();
 };
 #endif
 
-#endif //TEST_2024_4_27__TEST_H_
+#endif  // TEST_2024_4_27__TEST_H_

@@ -1228,10 +1228,8 @@ class List {
   private:
     class Node {
       public:
-        Node(const Node *prev, const T &data, const Node *next): m_prev(prev), m_data(data), m_next(next) {}
-        Node *m_prev;
-        T m_data;
-        Node *m_next;
+        Node(const Node *prev, const T &data, const Node *next): m_prev(prev),
+m_data(data), m_next(next) {} Node *m_prev; T m_data; Node *m_next;
     };
     Node *m_head;
     Node *m_tail;
@@ -2279,16 +2277,16 @@ int main() {
   return 0;
 }*/
 /*
-#include <iostream>
 #include <cstdio>
+#include <iostream>
 
 using namespace std;
 
 class Matrix {
  public:
-  Matrix(size_t row, size_t col) : m_matrix(new double[row * col]), m_row(row), m_col(col) {
-    for (size_t i = 0; i < m_row; ++i) {
-      for (size_t j = 0; j < m_col; ++j) {
+  Matrix(size_t row, size_t col) : m_matrix(new double[row * col]), m_row(row),
+m_col(col) { for (size_t i = 0; i < m_row; ++i) { for (size_t j = 0; j < m_col;
+++j) {
         *(m_matrix + i * m_col + j) = 0;
       }
     }
@@ -2382,8 +2380,8 @@ int main() {
   return 0;
 }*/
 /*#include <iostream>
-#include <vector>
 #include <cstdio>
+#include <vector>
 
 using namespace std;
 
@@ -2415,8 +2413,8 @@ int main() {
   return 0;
 }*/
 /*#include <iostream>
-#include <vector>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -2504,8 +2502,8 @@ int main() {
   return 0;
 }*/
 /*#include <iostream>
-#include <vector>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -2534,8 +2532,8 @@ int main() {
   return 0;
 }*/
 /*#include <iostream>
-#include <vector>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -2571,8 +2569,8 @@ int main() {
   return 0;
 }*/
 /*#include <iostream>
-#include <deque>
 #include <algorithm>
+#include <deque>
 
 using namespace std;
 
@@ -2659,9 +2657,9 @@ int main() {
   return 0;
 }*/
 /*
-#include <iostream>
 #include <algorithm>
 #include <deque>
+#include <iostream>
 
 using namespace std;
 
@@ -2680,8 +2678,8 @@ int main() {
   return 0;
 }*/
 /*
-#include <list>
 #include <iostream>
+#include <list>
 
 using namespace std;
 
@@ -2736,11 +2734,11 @@ int main() {
   return 0;
 }*/
 /*
+#include <deque>
+#include <iostream>
+#include <list>
 #include <stack>
 #include <vector>
-#include <deque>
-#include <list>
-#include <iostream>
 
 using namespace std;
 
@@ -2759,9 +2757,9 @@ int main() {
   return 0;
 }*/
 /*
-#include <queue>
-#include <list>
 #include <iostream>
+#include <list>
+#include <queue>
 
 using namespace std;
 
@@ -2806,8 +2804,8 @@ int main() {
   map<char, Candidate> m;  // 键的类型为字符，值的类型是类型
   m.insert(pair<char, Candidate>('A', Candidate("张飞")));
   m.insert(make_pair('B', Candidate("关羽")));
-  m['C'] = Candidate("赵云");  // 因为 'C' 不存在，因此会新创建一个，使用这个方法创建最简单
-  m['D'] = Candidate("马超");
+  m['C'] = Candidate("赵云");  // 因为 'C'
+不存在，因此会新创建一个，使用这个方法创建最简单 m['D'] = Candidate("马超");
   m['E'] = Candidate("黄忠");
 
   print(m);
@@ -2856,10 +2854,10 @@ int main() {
   return 0;
 }*/
 /*#include <iostream>
-#include <ctime>
 #include <cstdlib>
-#include <set>
+#include <ctime>
 #include <queue>
+#include <set>
 
 using namespace std;
 
@@ -3659,8 +3657,8 @@ int main() {
   return 0;
 }*/
 /*
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 
 using namespace std;
 
@@ -4875,7 +4873,8 @@ int main() {
 using namespace std;
 const int SIZE = 10001;
 int main() {
-  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE,
+vector<int>(SIZE));
 
   int n, m, q;
 
@@ -4891,7 +4890,8 @@ int main() {
   while (q--) {
     int x1, y1, x2, y2;
     cin >> x1 >> y1 >> x2 >> y2;
-    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + sum[x1 - 1][y1 - 1];
+    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + sum[x1 - 1][y1 -
+1];
   }
 
   return 0;
@@ -4901,19 +4901,17 @@ int main() {
 using namespace std;
 const int SIZE = 10001;
 int main() {
-  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
-  int n, m, q;
-  cin >> n >> m >> q;
-  for (int i = 1; i <= n; ++i) {
-    for (int j = 1; j <= n; ++j) {
-      cin >> arr[i][j];
-      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE,
+vector<int>(SIZE)); int n, m, q; cin >> n >> m >> q; for (int i = 1; i <= n;
+++i) { for (int j = 1; j <= n; ++j) { cin >> arr[i][j]; sum[i][j] = sum[i -
+1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
     }
   }
   while (q--) {
     int x1, y1, x2, y2;
     cin >> x1 >> y1 >> x2 >> y2;
-    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + sum[x1 - 1][y1 - 1];
+    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + sum[x1 - 1][y1 -
+1];
   }
   return 0;
 }*/
@@ -4922,19 +4920,17 @@ int main() {
 using namespace std;
 const int SIZE = 10001;
 int main() {
-  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
-  int n, m, q;
-  cin >> n >> m >> q;
-  for (int i = 1; i <= n; ++i) {
-    for (int j = 1; j <= m; ++j) {
-      cin >> arr[i][j];
-      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE,
+vector<int>(SIZE)); int n, m, q; cin >> n >> m >> q; for (int i = 1; i <= n;
+++i) { for (int j = 1; j <= m; ++j) { cin >> arr[i][j]; sum[i][j] = sum[i -
+1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
     }
   }
   while (q--) {
     int x1, y1, x2, y2;
     cin >> x1 >> y1 >> x2 >> y2;
-    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + sum[x1 - 1][y1 - 1] << endl;
+    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + sum[x1 - 1][y1 -
+1] << endl;
   }
   return 0;
 }*/
@@ -4943,10 +4939,8 @@ int main() {
 using namespace std;
 const int SIZE = 10001;
 int main() {
-  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
-  int n, m, q;
-  cin >> n>> m>> q;
-  for (int i = 1;i <= n; ++i) {
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE,
+vector<int>(SIZE)); int n, m, q; cin >> n>> m>> q; for (int i = 1;i <= n; ++i) {
     for (int j = 1; j <= m; ++j) {
       cin >> arr[i][j];
       sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
@@ -4955,7 +4949,8 @@ int main() {
   while (q--) {
     int x1, y1, x2, y2;
     cin >> x1 >> y1 >> x2 >> y2;
-    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + arr[x1 - 1][y1 - 1] << endl;
+    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + arr[x1 - 1][y1 -
+1] << endl;
   }
   return 0;
 }*/
@@ -4995,19 +4990,17 @@ int main() {
 using namespace std;
 const int SIZE = 10010;
 int main() {
-  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
-  int n, m, q;
-  cin >> n >> m >> q;
-  for (int i = 1; i <= n; ++i) {
-    for (int j = 1; j <= m; ++j) {
-      cin >> arr[i][j];
-      sum[i][j] = sum[i - 1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE,
+vector<int>(SIZE)); int n, m, q; cin >> n >> m >> q; for (int i = 1; i <= n;
+++i) { for (int j = 1; j <= m; ++j) { cin >> arr[i][j]; sum[i][j] = sum[i -
+1][j] + sum[i][j - 1] - sum[i - 1][j - 1] + arr[i][j];
     }
   }
   while (q--) {
     int x1, y1, x2, y2;
     cin >> x1 >> y1 >> x2 >> y2;
-    cout << sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] + sum[x1 - 1][y1 - 1] << endl;
+    cout << sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] + sum[x1 - 1][y1 -
+1] << endl;
   }
   return 0;
 }*/
@@ -5045,7 +5038,8 @@ using namespace std;
 const int SIZE = 10001;
 
 int main() {
-  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE,
+vector<int>(SIZE));
 
   int n, m, q;
 
@@ -5061,7 +5055,8 @@ int main() {
   while (q--) {
     int x1, y1, x2, y2;
     cin >> x1 >> y1 >> x2 >> y2;
-    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + sum[x1 - 1][y1 - 1] << endl;
+    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 - 1][y2] + sum[x1 - 1][y1 -
+1] << endl;
   }
 
   return 0;
@@ -5075,7 +5070,8 @@ const int SIZE = 10001;
 
 int main() {
   int n, m, q;
-  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE, vector<int>(SIZE));
+  vector<vector<int>> arr(SIZE, vector<int>(SIZE)), sum(SIZE,
+vector<int>(SIZE));
 
   cin >> n >> m >> q;
 
@@ -5089,7 +5085,8 @@ int main() {
   while (q--) {
     int x1, x2, y1, y2;
     cin >> x1 >> y1 >> x2 >> y2;
-    cout << sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] + sum[x1 - 1][y1 - 1] << endl;
+    cout << sum[x2][y2] - sum[x1 - 1][y2] - sum[x2][y1 - 1] + sum[x1 - 1][y1 -
+1] << endl;
   }
 
   return 0;
@@ -6105,7 +6102,8 @@ int main() {
   while (q--) {
     int x1, y1, x2, y2;
     cin >> x1 >> y1 >> x2 >> y2;
-    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 -1][y2] + sum[x1 - 1][y1 - 1] << endl;
+    cout << sum[x2][y2] - sum[x2][y1 - 1] - sum[x1 -1][y2] + sum[x1 - 1][y1 - 1]
+<< endl;
   }
 
   return 0;

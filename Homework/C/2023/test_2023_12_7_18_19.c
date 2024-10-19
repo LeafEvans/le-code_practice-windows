@@ -12,7 +12,7 @@ int cmpStr(const void *e1, const void *e2) {
   return strcmp(*(char **)e1,
                 *(char **)e2);  // 这个比较函数传进去的是数组每个元素的地址
   // 而每个元素又是一个地址，所以这个指针要被强制类型转换为二级指针，然后解引用得到每个字符串的首元素地址
-  // 之后作为参数输入strcmp函数进行比较
+  // 之后作为参数输入 strcmp 函数进行比较
 }
 
 void insertionSort(int arr[], int len) {

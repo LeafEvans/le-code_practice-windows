@@ -4,14 +4,4 @@ project(Data_Structure_and_Algorithms VERSION 0.1.0 LANGUAGES C CXX)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Data_Structure_and_Algorithms main.cpp
-        DynamicArray.h
-        ListBase.h
-        Node.h
-        SqList.h
-        LinkListBase.h
-        CircleListBase.h
-        DbLinkList.h
-        DbLinkList.h 
-        SimpleLkList.h
-        SimpleCircleList.h)
+add_executable(Data_Structure_and_Algorithms main.cpp)

@@ -8,7 +8,7 @@ int main(void) {
     printf("%s\n", strerror(errno));
     return 1;
   }
-  fclose(pf);  // 类似free
+  fclose(pf);  // 类似 free
   pf = NULL;
   return 0;
 }

@@ -26,6 +26,7 @@ BLACK = (0, 0, 0)
 
 # 细胞类
 class Cell:
+
     def __init__(self, ix, iy, stage):
         self.ix = ix
         self.iy = iy
@@ -48,16 +49,12 @@ class Cell:
                     continue
                 if self.invalidate(i, j):
                     continue
-                if (
-                    CellGrid.cells[i][j].stage == INFECTED
-                    or CellGrid.cells[i][j] == EXPOSED
-                ):
-                    if (
-                        (i == self.ix and j == self.iy - 1)
-                        or (i == self.ix and j == self.iy + 1)
-                        or (i == self.ix - 1 and j == self.iy)
-                        or (i == self.ix + 1 and j == self.iy)
-                    ):
+                if (CellGrid.cells[i][j].stage == INFECTED
+                        or CellGrid.cells[i][j] == EXPOSED):
+                    if ((i == self.ix and j == self.iy - 1)
+                            or (i == self.ix and j == self.iy + 1)
+                            or (i == self.ix - 1 and j == self.iy)
+                            or (i == self.ix + 1 and j == self.iy)):
                         count_0 += 1
                     self.s1_0 = count_0
                     self.s1_1 = count_1
@@ -120,11 +117,9 @@ class CellGrid:
             cell_list = []
             for j in range(cy):
                 cell = Cell(i, j, SUSCEPTIBLE)
-                if (
-                    (i == cx / 2 and j == cy / 2)
-                    or (i == cx / 2 + 1 and j == cy / 2)
-                    or (i == cx / 2 + 1 and j == cy / 2 + 1)
-                ):
+                if ((i == cx / 2 and j == cy / 2)
+                        or (i == cx / 2 + 1 and j == cy / 2)
+                        or (i == cx / 2 + 1 and j == cy / 2 + 1)):
                     cell_list.append(Cell(i, j, INFECTED))
                 else:
                     cell_list.append(cell)

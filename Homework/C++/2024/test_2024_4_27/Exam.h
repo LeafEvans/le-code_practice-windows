@@ -5,8 +5,6 @@
 #ifndef TEST_2024_4_27__EXAM_H_
 #define TEST_2024_4_27__EXAM_H_
 
-class Exam {
+class Exam {};
 
-};
-
-#endif //TEST_2024_4_27__EXAM_H_
+#endif  // TEST_2024_4_27__EXAM_H_

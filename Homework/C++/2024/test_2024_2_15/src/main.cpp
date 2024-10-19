@@ -20,8 +20,6 @@ int a = 20;
 }  // namespace A */
 // 命名空间的嵌套定义
 
-
-
 /* void test(void) {
   cout << "A::a : " << A::a << endl;
   cout << "A::B::a :" << A::B::a << endl;

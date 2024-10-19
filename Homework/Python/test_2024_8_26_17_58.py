@@ -2,6 +2,7 @@ import numpy as np
 
 
 class KMeans:
+
     def __init__(self, data, num_clustres):
         self.data = data
         self.num_clustres = num_clustres
@@ -13,9 +14,9 @@ class KMeans:
 
         for _ in range(max_iterations):
             closest_centroids_ids = KMeans.centroids_compute(
-                self.data, closest_centroids_ids
-            )
-            centroids = KMeans.centroids_compute(self.data, closest_centroids_ids)
+                self.data, closest_centroids_ids)
+            centroids = KMeans.centroids_compute(self.data,
+                                                 closest_centroids_ids)
 
         return centroids, closest_centroids_ids
 
@@ -34,7 +35,8 @@ class KMeans:
         for example_index in range(num_examples):
             distance = np.zeros((num_centroids, 1))
             for centroid_index in range(num_centroids):
-                distance_diff = data[example_index, :] - centroids[centroid_index, :]
+                distance_diff = data[example_index, :] - centroids[
+                    centroid_index, :]
                 distance[centroid_index] = np.sum(distance_diff**2)
             closest_centroids_ids[example_index] = np.argmin(distance)
         return closest_centroids_ids

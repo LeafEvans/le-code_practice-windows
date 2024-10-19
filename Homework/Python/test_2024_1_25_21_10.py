@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 plt.rc("font", family="Inter")
 
 # 数据和对应的颜色
@@ -22,7 +21,10 @@ sizes = data.values()
 
 # 创建并配置图表
 fig, ax = plt.subplots(figsize=(8, 8), subplot_kw={"aspect": "equal"})
-wedges, texts = ax.pie(sizes, colors=colors, startangle=90, wedgeprops=dict(width=0.3))
+wedges, texts = ax.pie(sizes,
+                       colors=colors,
+                       startangle=90,
+                       wedgeprops=dict(width=0.3))
 
 # 隐藏饼图内部的百分比标签
 for text in texts:
@@ -30,7 +32,9 @@ for text in texts:
 
 # 计算每个部分的百分比，并创建图例标签
 percentages = [(size / sum(sizes)) * 100 for size in sizes]
-legend_labels = [f"{label}: {pct:.1f}%" for label, pct in zip(labels, percentages)]
+legend_labels = [
+    f"{label}: {pct:.1f}%" for label, pct in zip(labels, percentages)
+]
 
 # 添加中心圆圈
 centre_circle = plt.Circle((0, 0), 0.70, fc=(0.95, 0.95, 0.95), alpha=0.8)

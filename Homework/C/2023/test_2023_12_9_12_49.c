@@ -21,17 +21,16 @@ char *myStrncat(char *dest, char *src, size_t num) {
   size_t i = 0;
   size_t dest_len = 0;
 
-  while (dest[dest_len] != '\0')  // 找到目标字符串的末尾
-  {
+  while (dest[dest_len] != '\0') {
+    // 找到目标字符串的末尾
     ++dest_len;
   }
 
-  for (i = 0; i < num && src[i] != '\0';
-       i++)  // 当i小于目标长度，并且要追加的字符不为'\0'字符
-  {
+  for (i = 0; i < num && src[i] != '\0'; i++) {
+    // 当 i 小于目标长度，并且要追加的字符不为 '\0' 字符
     dest[dest_len + i] = src[i];  // 追加
   }
-  dest[dest_len + i] = '\0';  // 将字符串末尾赋值为'\0'
+  dest[dest_len + i] = '\0';  // 将字符串末尾赋值为 '\0'
 
   return dest;  // 返回首元素地址
 }

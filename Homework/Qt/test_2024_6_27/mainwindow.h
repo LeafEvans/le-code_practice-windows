@@ -1,15 +1,15 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QAbstractButton>
+#include <QBoxLayout>
+#include <QCloseEvent>
+#include <QDialog>
+#include <QFileDialog>
+#include <QLineEdit>
 #include <QMainWindow>
 #include <QMessageBox>
-#include <QAbstractButton>
-#include <QFileDialog>
-#include <QCloseEvent>
-#include <QLineEdit>
-#include <QDialog>
 #include <QPushButton>
-#include <QBoxLayout>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,71 +17,67 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
-{
-    Q_OBJECT
+class MainWindow : public QMainWindow {
+  Q_OBJECT
 
-public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+ public:
+  MainWindow(QWidget *parent = nullptr);
+  ~MainWindow();
 
-    // 新建文件
-    void newFile();
-    // 判断是否需要保存
-    bool maybeSave();
-    // 保存操作
-    bool save();
-    // 另存为操作
-    bool saveAs();
-    // 保存文件操作
-    bool saveFile(const QString &fileName);
-    // 加载文件操作
-    bool loadFile(const QString &fileName);
-    // 关闭事件操作
-    void closeEvent(QCloseEvent *event);
+  // 新建文件
+  void newFile();
+  // 判断是否需要保存
+  bool maybeSave();
+  // 保存操作
+  bool save();
+  // 另存为操作
+  bool saveAs();
+  // 保存文件操作
+  bool saveFile(const QString &fileName);
+  // 加载文件操作
+  bool loadFile(const QString &fileName);
+  // 关闭事件操作
+  void closeEvent(QCloseEvent *event);
 
+ private slots:
+  void on_actionNew_triggered();
 
+  void on_actionOpen_triggered();
 
-private slots:
-    void on_actionNew_triggered();
+  void on_actionClose_triggered();
 
-    void on_actionOpen_triggered();
+  void on_actionSave_triggered();
 
-    void on_actionClose_triggered();
+  void on_actionSaveAs_triggered();
 
-    void on_actionSave_triggered();
+  void on_actionExit_triggered();
 
-    void on_actionSaveAs_triggered();
+  void on_actionCancel_triggered();
 
-    void on_actionExit_triggered();
+  void on_actionCut_triggered();
 
-    void on_actionCancel_triggered();
+  void on_actionCopy_triggered();
 
-    void on_actionCut_triggered();
+  void on_actionPaste_triggered();
 
-    void on_actionCopy_triggered();
+  void showFindText();
 
-    void on_actionPaste_triggered();
+  void on_actionfind_triggered();
 
-    void showFindText();
+ private:
+  Ui::MainWindow *ui;
 
-    void on_actionfind_triggered();
+  // 真：文件未保存
+  // 假：文件已保存
+  bool isUnSaved;
 
-private:
-    Ui::MainWindow *ui;
+  // 保存当前文件路径
+  QString curFilePath;
 
-    // 真：文件未保存
-    // 假：文件已保存
-    bool isUnSaved;
+  // 可编辑行对象
+  QLineEdit *findLineEdit;
 
-    // 保存当前文件路径
-    QString curFilePath;
-
-    // 可编辑行对象
-    QLineEdit *findLineEdit;
-
-    // 对话框对象
-    QDialog *findDlg;
-
+  // 对话框对象
+  QDialog *findDlg;
 };
-#endif // MAINWINDOW_H
+#endif  // MAINWINDOW_H

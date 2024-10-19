@@ -12,7 +12,6 @@ market_shares = [37, 25, 12, 8, 18]  # 市场份额占比，这里只是示例�
 fig, ax = plt.subplots()
 ax.pie(market_shares, labels=companies, autopct='%1.1f%%', startangle=90)
 
-
 # 保证饼图是圆的
 ax.axis('equal')
 

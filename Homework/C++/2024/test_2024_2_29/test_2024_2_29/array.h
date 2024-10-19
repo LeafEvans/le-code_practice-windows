@@ -30,8 +30,8 @@ class Array {
   Array(const Array &other);
 
   /**
-  * @brief 自动析构函数
-  */
+   * @brief 自动析构函数
+   */
   ~Array();
 
   /**
@@ -71,15 +71,15 @@ class Array {
   uint item_num(void) const;
 
   /**
-  * @brief 去除指定下标的元素
-  * @param uint 代表下标
-  */
+   * @brief 去除指定下标的元素
+   * @param uint 代表下标
+   */
   void remove_index(uint pos);
 
   /**
-  * @brief 去除指定的数
-  * @param int 指定的数
-  */
+   * @brief 去除指定的数
+   * @param int 指定的数
+   */
   void remove_value(int value);
 
  private:

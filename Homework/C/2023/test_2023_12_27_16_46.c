@@ -6,7 +6,7 @@ typedef struct LinkNode {
   struct LinkNode *next;
 } LinkNode;
 
-LinkNode initLinkList(void) {
+LinkNode *initLinkList(void) {
   LinkNode *head = (LinkNode *)malloc(sizeof(LinkNode));
   LinkNode *tail = head;
   head->data = -1;
@@ -37,7 +37,7 @@ void insertLinkList(LinkNode *head, int old_val, int new_val) {
   LinkNode *p_cur = p_pre->next;
 
   while (p_cur != NULL) {
-    if (p_cur->old_val) break;
+    if (p_cur->data) break;
 
     p_pre = p_cur;
     p_cur = p_cur->next;
@@ -64,7 +64,7 @@ void removeLinkList(LinkNode *head, int del_val) {
     p_cur = p_cur->next;
   }
 
-  if (p_cur == NULL) break;
+  if (p_cur == NULL) return;
 
   p_pre->next = p_cur->next;
   free(p_cur);
@@ -107,6 +107,3 @@ void clearLinkList(LinkNode *head) {
 
   head->next = NULL;
 }
-
-
-

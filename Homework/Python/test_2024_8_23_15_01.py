@@ -3,7 +3,7 @@ import numpy as np
 
 def log_centered_ratio_transform(data):
     D = data.shape[0]
-    g = (np.prod(data)) ** (1 / (D - 1))
+    g = (np.prod(data))**(1 / (D - 1))
     transformed_data = np.zeros(D - 1)
     for i in range(1, D):
         y = data[i] / g

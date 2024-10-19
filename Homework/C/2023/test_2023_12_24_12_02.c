@@ -10,7 +10,7 @@ int main(void) {
 
   while (1) {
     fgets(str[i], sizeof(str[0]), stdin);
-    if (strcmp(str[i], "end of input\n") == 0) break;  // 有意思，\n不是终止符标志
+    if (strcmp(str[i], "end of input\n") == 0) break;  // 有意思，\n 不是终止符标志
     ++i;
     ++n;
   }

@@ -44,7 +44,7 @@ int isLeftRotateB(char str1[], char str2[]) {
   if (len1 != len2) {
     return 0;
   } else {
-    strncat(str1, str1, len1);  // 直接用strcat会导致\0被覆盖，从而陷入死循环
+    strncat(str1, str1, len1);  // 直接用 strcat 会导致 \0 被覆盖，从而陷入死循环
   }
 
   return strstr(str1, str2) == NULL ? 0 : 1;

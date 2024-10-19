@@ -6,7 +6,7 @@ int main(void) {
   scanf("%s", score);
 
   int len = strlen(score);
- 
+
   printf("%d\n", len);
   for (int i = 0; i < len; ++i) printf("%c ", score[i]);
   printf("\n");

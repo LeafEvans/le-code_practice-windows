@@ -12,7 +12,9 @@ fn hanoi_tower(n: usize, x: char, y: char, z: char) {
 
 fn main() {
     let mut input = String::new();
-    io::stdin().read_line(&mut input).expect("Failed to read line");
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read line");
     let n: usize = input.trim().parse().expect("Please enter a number");
 
     let a = 'A';

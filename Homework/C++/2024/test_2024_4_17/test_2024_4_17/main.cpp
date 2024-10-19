@@ -489,7 +489,7 @@ void bubble_sort(T *arr, const int len) {
 }
 
 template <class T>
-void print_arr(const T* arr, const int len) {
+void print_arr(const T *arr, const int len) {
   for (int i = 0; i < len; ++i) {
     cout << arr[i] << " ";
   }

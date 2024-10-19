@@ -7,7 +7,7 @@ int myStrcmp(const char *str1, const char *str2) {
   while (*str1 == *str2)  // 两个字符指针指向的字符相等再进入
   {
     if (*str1 == '\0') {
-      return 0;  // 如果其中一个解引用操作后等于'\0'，返回0
+      return 0;  // 如果其中一个解引用操作后等于 '\0'，返回 0
     }
 
     ++str1;

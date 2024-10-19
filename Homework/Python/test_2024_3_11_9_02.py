@@ -16,8 +16,8 @@ def func(point, t, args):
 
 
 t = np.arange(0, 30, 0.001)
-p1 = odeint(func, (0.0, 1.0, 0.0), t, args=([10.0, 28.0, 3.0],))
-p2 = odeint(func, (0.0, 1.01, 0.0), t, args=([10.0, 28.0, 3.0],))
+p1 = odeint(func, (0.0, 1.0, 0.0), t, args=([10.0, 28.0, 3.0], ))
+p2 = odeint(func, (0.0, 1.01, 0.0), t, args=([10.0, 28.0, 3.0], ))
 
 fig = plt.figure()
 ax = fig.add_subplot(projection="3d")

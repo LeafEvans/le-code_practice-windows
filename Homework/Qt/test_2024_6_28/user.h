@@ -3,19 +3,18 @@
 
 #include <QObject>
 
-class User : public QObject
-{
-    Q_OBJECT
-public:
-    explicit User(QObject *parent = nullptr);
-    User(QString userName, QString password);
+class User : public QObject {
+  Q_OBJECT
+ public:
+  explicit User(QObject *parent = nullptr);
+  User(QString userName, QString password);
 
-    QString userName;
-    QString password;
+  QString userName;
+  QString password;
 
-    ~User();
+  ~User();
 
-signals:
+ signals:
 };
 
-#endif // USER_H
+#endif  // USER_H

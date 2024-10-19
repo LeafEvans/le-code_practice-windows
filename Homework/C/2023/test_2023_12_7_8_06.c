@@ -5,5 +5,6 @@ int main(void) {
   int(*p)[4];
   p = (int(*)[4])a;
   printf("%p, %p\n", &p[4][2] - &a[4][2], &p[4][2] - &a[4][2]);
+
   return 0;
 }

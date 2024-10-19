@@ -9,7 +9,7 @@ int main(void) {
   char *ret = NULL;
   for (ret = strtok(cp, sep);  // 初始化
        ret != NULL;  // 如果返回值不为空指针，就继续循环
-       ret = strtok(NULL, sep))  // 将ret赋值为新的变量
+       ret = strtok(NULL, sep))  // 将 ret 赋值为新的变量
   {
     printf("%s\n", ret);
   }
