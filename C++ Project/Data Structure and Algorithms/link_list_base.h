@@ -32,20 +32,20 @@ class LinkListBase : public ListBase<ElemType> {
   virtual NodeType *GetFirstNode() const;          // 获取首元节点
   virtual bool IsEndWhile(NodeType *pNode) const;  // 是否结束循环语句
 
+  NodeType *m_pNodeCur;      // 当前节点指针
   NodeType *m_pNodeHead;     // 头节点指针
   NodeType *m_pNodeTail;     // 尾节点指针
-  NodeType *m_pNodeCur;      // 当前节点指针
   int m_nNodeCounts;         // 当前节点数量
   bool m_bSpecialDetection;  // 特殊析构方式，如广义表
 };
 
 template <class ElemType, class NodeType>
 LinkListBase<ElemType, NodeType>::LinkListBase()
-    : m_bSpecialDetection(false),
-      m_pNodeCur(new NodeType()),
-      m_pNodeTail(m_pNodeCur),  // 初始化时头节点为尾节点
-      m_pNodeHead(m_pNodeCur),  // 当前节点为头节点
-      m_nNodeCounts(0) {}
+    : m_pNodeCur(new NodeType()),
+      m_pNodeHead(m_pNodeCur),
+      m_pNodeTail(m_pNodeCur),
+      m_nNodeCounts(0),
+      m_bSpecialDetection(false) {}
 
 template <class ElemType, class NodeType>
 LinkListBase<ElemType, NodeType> &LinkListBase<ElemType, NodeType>::operator=(
@@ -152,7 +152,7 @@ bool LinkListBase<ElemType, NodeType>::DeleteCur(ElemType &tElem) {
     return false;
   }
 
-  Link(pPreNode, pNode->m_pNext);  // 链接前后节点
+  Link(pPreNode, pNextNode);  // 链接前后节点
   tElem = pNode->m_tElem;
 
   if (pNode == m_pNodeTail) {
@@ -309,7 +309,7 @@ void LinkListBase<ElemType, NodeType>::Traverse(
 
 template <class ElemType, class NodeType>
 int LinkListBase<ElemType, NodeType>::AddTail(const ElemType &tElem) {
-  NodeType *pNewNode = new NodeType(); 
+  NodeType *pNewNode = new NodeType();
   pNewNode->m_tElem = tElem;    // 为新节点赋值
   Link(m_pNodeTail, pNewNode);  // 链接尾节点和新节点
   m_pNodeTail = pNewNode;       // 尾节点变更为新节点

@@ -21,8 +21,9 @@ template <class ElemType>
 SimpleCircleList<ElemType>::~SimpleCircleList() {}
 
 template <class ElemType>
-SimpleCircleList<ElemType>::SimpleCircleList(const SimpleCircleList& sclSrc) {
-  *this = sclSrc;
+SimpleCircleList<ElemType>::SimpleCircleList(const SimpleCircleList& sclSrc)
+    : CircleListBase<ElemType, Node<ElemType>>::CircleListBase(sclSrc) {
+  // 调用父类构造函数后链接尾节点到头节点
   this->LinkTailToHead();
 }
 
@@ -33,7 +34,7 @@ bool SimpleCircleList<ElemType>::Link(Node<ElemType>* pPreNode,
     return false;
   }
 
-  pPreNode->m_pNext = pNextNode;
+  pPreNode->m_pNext = pNextNode;  // 更新前驱节点的后继
   return true;
 }
 

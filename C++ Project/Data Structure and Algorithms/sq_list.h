@@ -2,10 +2,12 @@
 #define _SQ_LIST_H_
 #include "list_base.h"
 
+const int cnDefaultSize = 32;
+
 template <class ElemType>
 class SqList : public ListBase<ElemType> {
  public:
-  SqList(int nBufferLen = 16);              // 构造函数
+  SqList(int nBufferLen = cnDefaultSize);   // 构造函数
   SqList(const SqList<ElemType>& slOther);  // 拷贝构造函数
   ~SqList();                                // 析构函数
   int Length() const;                       // 获取线性表中元素个数

@@ -3,52 +3,32 @@
   "WorkspaceRootPath": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\circle_list_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:circle_list_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\simple_circle_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:simple_circle_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\link_stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:link_stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\db_link_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:db_link_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\simple_lk_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:simple_lk_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\link_list_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:link_list_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\sq_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sq_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\dynamic_array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:dynamic_array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\list_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:list_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\CMakeSettings.json||{10608CD5-279C-4A28-BD5F-BA2CFCE06219}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeSettings.json||{10608CD5-279C-4A28-BD5F-BA2CFCE06219}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\sq_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sq_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\simple_lk_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:simple_lk_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMakeLists.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\simple_circle_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:simple_circle_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\memory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -61,36 +41,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "circle_list_base.h",
-              "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\circle_list_base.h",
-              "RelativeDocumentMoniker": "circle_list_base.h",
-              "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\circle_list_base.h",
-              "RelativeToolTip": "circle_list_base.h",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAkwCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-16T09:38:05.142Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dynamic_array.h",
-              "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\dynamic_array.h",
-              "RelativeDocumentMoniker": "dynamic_array.h",
-              "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\dynamic_array.h",
-              "RelativeToolTip": "dynamic_array.h",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAEwFUAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-16T09:38:08.547Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d84ee353-0bef-5a41-a649-8f89aca5d84d}"
@@ -101,136 +53,95 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "link_list_base.h",
-              "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\link_list_base.h",
-              "RelativeDocumentMoniker": "link_list_base.h",
-              "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\link_list_base.h",
-              "RelativeToolTip": "link_list_base.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "link_stack.h",
+              "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\link_stack.h",
+              "RelativeDocumentMoniker": "link_stack.h",
+              "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\link_stack.h",
+              "RelativeToolTip": "link_stack.h",
+              "ViewState": "AgIAACkAAAAAAAAAAAAswEkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T12:48:22.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "simple_lk_list.h",
-              "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\simple_lk_list.h",
-              "RelativeDocumentMoniker": "simple_lk_list.h",
-              "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\simple_lk_list.h",
-              "RelativeToolTip": "simple_lk_list.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-16T09:35:29.858Z",
+              "WhenOpened": "2024-10-19T14:39:43.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "simple_lk_list.h",
+              "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\simple_lk_list.h",
+              "RelativeDocumentMoniker": "simple_lk_list.h",
+              "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\simple_lk_list.h",
+              "RelativeToolTip": "simple_lk_list.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-16T09:35:29.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "sq_list.h",
               "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\sq_list.h",
               "RelativeDocumentMoniker": "sq_list.h",
               "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\sq_list.h",
               "RelativeToolTip": "sq_list.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-16T09:55:08.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T09:55:08.766Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "db_link_list.h",
               "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\db_link_list.h",
               "RelativeDocumentMoniker": "db_link_list.h",
               "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\db_link_list.h",
               "RelativeToolTip": "db_link_list.h",
-              "ViewState": "AgIAADMAAAAAAAAAAAAEwEEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAWwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-16T09:38:07.68Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "list_base.h",
               "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\list_base.h",
               "RelativeDocumentMoniker": "list_base.h",
               "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\list_base.h",
               "RelativeToolTip": "list_base.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-17T04:00:43.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "simple_circle_list.h",
               "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\simple_circle_list.h",
               "RelativeDocumentMoniker": "simple_circle_list.h",
               "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\simple_circle_list.h",
               "RelativeToolTip": "simple_circle_list.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-16T10:27:41.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T10:27:41.702Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "node.h",
-              "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\node.h",
-              "RelativeDocumentMoniker": "node.h",
-              "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\node.h",
-              "RelativeToolTip": "node.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T11:28:05.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAABAAAAAAAAAAAAAcwBYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-16T10:25:53.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CMakeSettings.json",
-              "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\CMakeSettings.json",
-              "RelativeDocumentMoniker": "CMakeSettings.json",
-              "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\CMakeSettings.json",
-              "RelativeToolTip": "CMakeSettings.json",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-17T11:33:10.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
               "Title": "CMakeLists.txt",
               "DocumentMoniker": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\CMakeLists.txt",
               "RelativeDocumentMoniker": "CMakeLists.txt",
               "ToolTip": "C:\\Code\\Code Practice\\C\u002B\u002B Project\\Data Structure and Algorithms\\CMakeLists.txt",
               "RelativeToolTip": "CMakeLists.txt",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAYAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2024-10-16T10:27:41.935Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 7,
               "Title": "memory.h",
               "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\memory.h",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\memory.h",
@@ -238,8 +149,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\memory.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-17T04:00:29.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T04:00:29.934Z"
             }
           ]
         }

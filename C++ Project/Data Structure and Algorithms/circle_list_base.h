@@ -67,7 +67,7 @@ bool CircleListBase<ElemType, NodeType>::Next(ElemType &tElem) {
 
   this->m_pNodeCur = this->m_pNodeCur->m_pNext;  // 更新到下一节点
 
-  if (this->m_pNodeCur == m_pNodeHead) {
+  if (this->m_pNodeCur == this->m_pNodeHead) {
     // 若为头节点，则再更新一次
     this->m_pNodeCur = this->m_pNodeCur->m_pNext;
   }
