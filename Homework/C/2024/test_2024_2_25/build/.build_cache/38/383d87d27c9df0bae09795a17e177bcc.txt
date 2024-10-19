@@ -1,7 +1,0 @@
-{
-    errdata = "src\\main.c:638:12: warning: expression result unused [-Wunused-value]\
-  638 |   x = 249, 500;\
-      |            ^~~\
-1 warning generated.\
-"
-}

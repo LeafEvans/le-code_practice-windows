@@ -1,7 +1,0 @@
-{
-    errdata = "src\\main.c:638:8: warning: left operand of comma operator has no effect [-Wunused-value]\
-  638 |   x = (249, 500);\
-      |        ^~~\
-1 warning generated.\
-"
-}

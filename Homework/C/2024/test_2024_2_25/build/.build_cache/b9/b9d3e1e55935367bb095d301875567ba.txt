@@ -1,7 +1,0 @@
-{
-    errdata = "src\\main.c:208:15: warning: more '%' conversions than data arguments [-Wformat-insufficient-args]\
-  208 |   printf(\"%\" \"d\" \"\\n\");\
-      |           ~~~~^\
-1 warning generated.\
-"
-}

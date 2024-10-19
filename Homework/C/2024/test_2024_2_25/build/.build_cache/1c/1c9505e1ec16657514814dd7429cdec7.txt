@@ -1,7 +1,0 @@
-{
-    errdata = "src\\main.c:1880:3: warning: call to 'gets' declared with 'warning' attribute: Using gets() is always unsafe - use fgets() instead [-Wattribute-warning]\
- 1880 |   gets(words);\
-      |   ^\
-1 warning generated.\
-"
-}

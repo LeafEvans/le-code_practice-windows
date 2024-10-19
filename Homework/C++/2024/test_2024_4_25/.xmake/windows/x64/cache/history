@@ -1,7 +1,0 @@
-{
-    cmdlines = {
-        "xmake project -k vsxmake -a x64",
-        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.3\assets\explorer.lua]],
-        [[xmake l c:\Users\31866\.vscode\extensions\tboox.xmake-vscode-2.3.3\assets\config.lua]]
-    }
-}

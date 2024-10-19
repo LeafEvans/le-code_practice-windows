@@ -1,7 +1,0 @@
-{
-    errdata = "src\\main.c:4:18: warning: magnitude of floating-point constant too small for type 'double'; minimum is 4.9406564584124654E-324 [-Wliteral-range]\
-    4 |   printf(\"%e\\n\", 0.0123e-10000\
-      |                  ^\
-1 warning generated.\
-"
-}

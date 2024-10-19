@@ -1,8 +1,0 @@
-{
-    errdata = "src\\main.c:17:18: warning: format specifies type 'int' but the argument has type 'unsigned long long' [-Wformat]\
-   17 |   printf(\"%d\\n\", __builtin_offsetof(struct S, c1));\
-      |           ~~     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
-      |           %llu\
-1 warning generated.\
-"
-}

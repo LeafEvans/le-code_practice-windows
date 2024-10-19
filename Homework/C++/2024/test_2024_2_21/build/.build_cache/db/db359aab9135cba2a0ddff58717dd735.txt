@@ -1,7 +1,0 @@
-{
-    errdata = "src\\main.cpp:920:10: warning: reference to stack memory associated with local variable 't' returned [-Wreturn-stack-address]\
-  920 |   return t;\
-      |          ^\
-1 warning generated.\
-"
-}

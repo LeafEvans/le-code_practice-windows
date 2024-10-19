@@ -1,7 +1,0 @@
-{
-    errdata = "src\\main.cpp:2124:15: warning: array comparison always evaluates to a constant [-Wtautological-compare]\
- 2124 |   cout << (cx > cy ? cx : cy) << endl;\
-      |               ^\
-1 warning generated.\
-"
-}
