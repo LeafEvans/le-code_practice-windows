@@ -33,3 +33,4 @@ The repository is organized into different folders based on the type of exercise
 ## Contribution
 
 This is a personal practice repository, but feel free to submit issues or suggestions if you notice improvements that can be made.
+

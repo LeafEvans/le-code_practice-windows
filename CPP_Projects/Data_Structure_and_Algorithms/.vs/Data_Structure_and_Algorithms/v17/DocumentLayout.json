@@ -1,0 +1,334 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\char_string.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\char_string.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\calculator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\calculator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\sq_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\sq_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\dynamic_array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\dynamic_array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\sq_stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\sq_stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\link_stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\link_stack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\link_queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\link_queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\list_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\list_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\node.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\simple_circle_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\simple_circle_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\circle_queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\circle_queue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\link_list_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\link_list_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\db_link_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\db_link_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\db_circle_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\db_circle_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\circle_list_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\circle_list_base.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\simple_link_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC7A8907-5F60-47F7-99E9-1ACA29FF1CEC}|Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms.vcxproj|solutionrelative:Data_Structure_and_Algorithms\\simple_link_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "char_string.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\char_string.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\char_string.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\char_string.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\char_string.h",
+              "ViewState": "AgIAACIBAAAAAAAAAAAcwDwBAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-28T06:11:29.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "sq_list.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\sq_list.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\sq_list.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\sq_list.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\sq_list.h",
+              "ViewState": "AgIAACAAAAAAAAAAAAAkwCAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-28T06:05:26.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "link_stack.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\link_stack.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\link_stack.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\link_stack.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\link_stack.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-28T06:01:37.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "calculator.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\calculator.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\calculator.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\calculator.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\calculator.h",
+              "ViewState": "AgIAACIBAAAAAAAAAAAowDgBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-28T06:01:35.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "simple_link_list.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\simple_link_list.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\simple_link_list.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\simple_link_list.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\simple_link_list.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-28T06:00:37.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "sq_stack.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\sq_stack.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\sq_stack.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\sq_stack.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\sq_stack.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-28T06:00:28.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "queue.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\queue.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\queue.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\queue.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\queue.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-28T05:59:42.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "stack.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\stack.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\stack.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\stack.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\stack.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-28T05:19:24.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d84ee353-0bef-5a41-a649-8f89aca5d84d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "simple_circle_list.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\simple_circle_list.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\simple_circle_list.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\simple_circle_list.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\simple_circle_list.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-22T11:59:48.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "node.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\node.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\node.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\node.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\node.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-22T11:59:44.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "link_queue.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\link_queue.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\link_queue.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\link_queue.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\link_queue.h",
+              "ViewState": "AgIAADMAAAAAAAAAAAAwwFgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-22T11:59:29.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "link_list_base.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\link_list_base.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\link_list_base.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\link_list_base.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\link_list_base.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-22T11:59:22.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "db_link_list.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\db_link_list.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\db_link_list.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\db_link_list.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\db_link_list.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-22T11:42:28.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "db_circle_list.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\db_circle_list.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\db_circle_list.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\db_circle_list.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\db_circle_list.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-22T11:42:20.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dynamic_array.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\dynamic_array.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\dynamic_array.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\dynamic_array.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\dynamic_array.h",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAswPYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-22T11:16:47.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "circle_queue.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\circle_queue.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\circle_queue.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\circle_queue.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\circle_queue.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIBAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-22T11:16:41.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "circle_list_base.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\circle_list_base.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\circle_list_base.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\circle_list_base.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\circle_list_base.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-22T08:06:59.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "list_base.h",
+              "DocumentMoniker": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\list_base.h",
+              "RelativeDocumentMoniker": "Data_Structure_and_Algorithms\\list_base.h",
+              "ToolTip": "C:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms\\Data_Structure_and_Algorithms\\list_base.h",
+              "RelativeToolTip": "Data_Structure_and_Algorithms\\list_base.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-21T16:32:20.846Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
