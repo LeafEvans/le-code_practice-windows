@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5
-BuildDirectory: C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build
+SourceDirectory: C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_5_5
+BuildDirectory: C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_5_5/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -27,7 +27,7 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5"
+ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_5_5"
 MakeCommand: C:/Program\ Files/CMake/bin/cmake.exe --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
@@ -63,8 +63,8 @@ UpdateOptions:
 UpdateType: 
 
 # Compiler info
-Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.39.33519/bin/Hostx86/x86/cl.exe
-CompilerVersion: 19.39.33523.0
+Compiler: C:/mingw-w64/x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/g++.exe
+CompilerVersion: 14.2.0
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
@@ -81,7 +81,7 @@ MemoryCheckCommandOptions:
 MemoryCheckSuppressionFile: 
 
 # Coverage
-CoverageCommand: C:/msys64/mingw64/bin/gcov.exe
+CoverageCommand: C:/mingw-w64/x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/gcov.exe
 CoverageExtraFlags: -l
 
 # Testing options

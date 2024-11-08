@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5
+CMAKE_SOURCE_DIR = C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_5_5
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\build
+CMAKE_BINARY_DIR = C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_5_5\build
 
 # Utility rule file for ContinuousSubmit.
 
@@ -81,6 +81,6 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 .PHONY : CMakeFiles/ContinuousSubmit.dir/clean
 
 CMakeFiles/ContinuousSubmit.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5 C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5 C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\build C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\build C:\Code\CodePractice\Homework\C++\2024\test_2024_5_5\build\CMakeFiles\ContinuousSubmit.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_5_5 C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_5_5 C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_5_5\build C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_5_5\build C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_5_5\build\CMakeFiles\ContinuousSubmit.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ContinuousSubmit.dir/depend
 

@@ -60,5 +60,28 @@
         "xmemory": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp"
-    }
+    },
+
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "--query-driver=C:/mingw-w64/x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/g++.exe",
+        "--all-scopes-completion",
+        "--background-index",
+        "--clang-tidy",
+        "--clang-tidy-checks=performance-*, bugprone-*, misc-*, google-*, modernize-*, readability-*, portability-*",
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "--completion-parse=auto",
+        "--completion-style=detailed",
+        "--enable-config",
+        "--fallback-style=Google",
+        "--function-arg-placeholders=true",
+        "--header-insertion-decorators",
+        "--header-insertion=iwyu",
+        "--include-cleaner-stdlib",
+        "--log=verbose",
+        "--pch-storage=memory",
+        "--pretty",
+        "--ranking-model=decision_forest",
+        "-j=12"
+    ]
 }

@@ -1,14 +1,8 @@
 [
 {
-  "directory": "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build",
-  "command": "C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi /FoCMakeFiles\\test_2024_5_5.dir\\main.cpp.obj /FdCMakeFiles\\test_2024_5_5.dir/ /FS -c C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\main.cpp",
-  "file": "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/main.cpp",
+  "directory": "C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_5_5/build",
+  "command": "C:\\mingw-w64\\x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev0\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\test_2024_5_5.dir\\main.cpp.obj -c C:\\Code\\Code_Practice\\Assignments\\CPP\\2024\\test_2024_5_5\\main.cpp",
+  "file": "C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_5_5/main.cpp",
   "output": "CMakeFiles/test_2024_5_5.dir/main.cpp.obj"
-},
-{
-  "directory": "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build",
-  "command": "C:\\PROGRA~2\\MICROS~3\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi /FoCMakeFiles\\test_2024_5_5.dir\\test.cpp.obj /FdCMakeFiles\\test_2024_5_5.dir/ /FS -c C:\\Code\\CodePractice\\Homework\\C++\\2024\\test_2024_5_5\\test.cpp",
-  "file": "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/test.cpp",
-  "output": "CMakeFiles/test_2024_5_5.dir/test.cpp.obj"
 }
 ]

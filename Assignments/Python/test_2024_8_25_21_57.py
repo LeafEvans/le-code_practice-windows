@@ -2,7 +2,6 @@ import numpy as np
 
 
 class KMeans:
-
     def __init__(self, data, num_clustres):
         self.data = data
         self.num_clustres = num_clustres

@@ -8899,3 +8899,491 @@ class ListBase {
   virtual int append(const T& elem) = 0;
 };
 #endif  // _LIST_BASH_H */
+/* #include <iostream>
+
+using namespace std;
+
+template <class T>
+void merge_sort(T* arr, int left, int right) {
+  if (left >= right) {
+    return;
+  }
+
+  int mid = (left + right) >> 1;
+
+  merge_sort(arr, left, mid);
+  merge_sort(arr, mid + 1, right);
+
+  int i = left, j = mid + 1, k = 0;
+
+  T* temp = new T[right - left + 1];
+
+  while (i <= mid && j <= right) {
+    if (arr[i] <= arr[j]) {
+      temp[k++] = arr[i++];
+    } else {
+      temp[k++] = arr[j++];
+    }
+  }
+
+  delete[] temp;
+
+  return;
+}
+
+
+
+int main() {
+  int arr[] = {1, 3, 2, 4, 5};
+  merge_sort(arr, 0, 4);
+  for (int i = 0; i < 5; ++i) {
+    cout << arr[i] << endl;
+  }
+  return 0;
+} */
+/* #include <cstring>
+#include <iostream>
+
+using namespace std;
+
+int BF(const char* str, const char* sub) {
+  if (str == NULL || sub == NULL) {
+    return -1;
+  }
+
+  int len_str = strlen(str);
+  int len_sub = strlen(sub);
+  int i = 0, j = 0;
+
+  while (i < len_str && j < len_sub) {
+    if (str[i] == sub[j]) {
+      ++i;
+      ++j;
+    } else {
+      i = i - j + 1;
+      j = 0;
+    }
+  }
+
+  return j >= len_sub ? -1 : i - j;
+} */
+/* #include <cstring>
+#include <iostream>
+
+using namespace std;
+
+void getNext(const char* sub, int* next) {
+  int len_sub = strlen(sub);
+  next[0] = -1;
+  int k = -1;
+
+  for (int i = 1; i < len_sub; ++i) {
+    while (k >= 0 && sub[i] != sub[k + 1]) {
+      k = next[k];
+    }
+    if (sub[i] == sub[k + 1]) {
+      ++k;
+    }
+    next[i] = k;
+  }
+} */
+/* #include <iostream>
+#include <string>
+
+using namespace std;
+
+template <class T> T Max(T x, T y) { return x > y ? x : y; }
+
+int main() {
+  int nX = 10, nY = 20;
+  cout << Max<int>(nX, nY) << endl;
+  double dblX = 12.3, dblY = 45.6;
+  cout << Max<double>(dblX, dblY) << endl;
+  string strX = "world", strY = "Hello";
+  cout << Max<string>(strX, strY) << endl;
+  return 0;
+}
+ */
+/* #include <iostream>
+
+using namespace std;
+
+template <class T, size_t S = 15>
+class Array {
+ public:
+  T &operator[](size_t i) { return m_arr[i]; }
+
+ private:
+  T m_arr[S];
+};
+
+template <class T, template <class, size_t S = 15> class D, size_t S = 15>
+class Sum {
+ public:
+  Sum(D<T, S> d) : m_s(d) {}
+
+  T add() {
+    T u = 0;
+    for (size_t i = 0; i < S; ++i) {
+      u += m_s[i];
+    }
+    return u;
+  }
+
+ private:
+  D<T> m_s;
+};
+
+int main() {} */
+/* template <class T>
+void Func() {
+  typename T::B b;
+  b.foo();
+} */
+/* #include <algorithm>
+#include <iostream>
+#include <ostream>
+#include <vector>
+
+using namespace std;
+
+class Student {
+ public:
+  Student(const string &name = "", int age = 0) : m_name(name), m_age(age) {}
+
+  bool operator==(const Student &other) const {
+    return m_name == other.m_name && m_age == other.m_age;
+  }
+
+  bool operator<(const Student &other) const { return m_age < other.m_age; }
+
+  bool operator>(const Student &other) const { return m_age > other.m_age; }
+
+  friend ostream &operator<<(ostream &os, const Student &other) {
+    return os << other.m_name << ": " << other.m_age;
+  }
+
+ private:
+  string m_name;
+  int m_age;
+};
+
+void print(const string &str, vector<Student> &v) {
+  cout << str << endl;
+  for (auto it = v.begin(); it != v.end(); ++it) {
+    cout << *it << ' ';
+  }
+}
+
+class CMP {
+ public:
+  bool operator()(const Student &a, const Student &b) { return a > b; }
+};
+
+int main() {
+  vector<Student> vs;
+  vs.reserve(10);
+
+  vs.push_back(Student("曹操", 22));
+  vs.push_back(Student("刘备", 20));
+  vs.push_back(Student("孙权", 18));
+  vs.push_back(Student("马超", 10));
+  vs.push_back(Student("司马懿", 20));
+  print("添加节点后: ", vs);
+
+  vs.insert(vs.begin(), Student("关羽", 21));
+  print("在迭代器指向的位置，添加节点后: ", vs);
+
+  vs.erase(vs.begin());
+  print("删除迭代器指向的节点后: ", vs);
+  auto it = vs.begin();
+  *it = Student("诸葛亮", 11);
+  print("更改迭代器指向的节点后: ", vs);
+
+  auto fit = find(vs.begin(), vs.end(), Student("刘备", 20));
+  if (fit != vs.end()) {
+    vs.erase(fit);
+  }
+  print("找到刘备并删除后: ", vs);
+
+  sort(vs.begin(), vs.end());
+  print("升序排序后: ", vs);
+
+  sort(vs.begin(), vs.end(), CMP());
+  print("降序排序后: ", vs);
+
+  return 0;
+} */
+/* #include <cstdlib>
+#include <ctime>
+#include <iostream>
+#include <queue>
+#include <vector>
+
+template <class T>
+class CMP {
+ public:
+  bool operator()(const T& a, const T& b) { return a > b; }
+};
+
+int main() {
+  srand(time(nullptr));
+
+  std::priority_queue<int, std::vector<int>, CMP<int>> pd;
+
+  for (int i = 0; i < 10; ++i) {
+    pd.push(rand());
+  }
+
+  while (!pd.empty()) {
+    std::cout << pd.top() << ' ';
+    pd.pop();
+  }
+  std::cout << std::endl;
+
+  return 0;
+} */
+/* #include <iostream>
+#include <set>
+
+using namespace std;
+
+int main() {
+  set<int> s1;
+  s1.insert(3);
+  s1.insert(1);
+  s1.insert(7);
+  s1.insert(5);
+
+  for (auto it = s1.begin(); it != s1.end(); ++it) {
+    cout << *it << ' ';
+  }
+  cout << '\n';
+
+  for (auto rit = s1.rbegin(); rit != s1.rend(); ++rit) {
+    cout << *rit << ' ';
+  }
+  cout << '\n';
+
+  return 0;
+} */
+/* #include <iostream>
+#include <map>
+
+using namespace std;
+
+class Student {
+ public:
+  int id;
+  string name;
+
+  Student() {}
+
+  Student(int id, string name) : id(id), name(name) {}
+};
+
+int main() {
+  map<int, Student> stus;
+
+} */
+/* #include <cstring>
+#include <iostream>
+
+void GetNext(const char* cszPat, int* arrNext) {
+  int nLen = strlen(cszPat);
+  arrNext[0] = -1;
+  int k = -1;
+
+  for (int i = 1; i < nLen; ++i) {
+    while (k != -1 || cszPat[i] != cszPat[k + 1]) {
+      k = arrNext[k];
+    }
+
+    if (cszPat[i] == cszPat[k + 1]) {
+      ++k;
+    }
+    arrNext[i] = k;
+  }
+}
+
+int KMP(const char* cszStr, const char* cszPat) {
+  int nStrLen = strlen(cszStr);
+  int nPatLen = strlen(cszPat);
+
+  if (nPatLen == 0) {
+    return 0;
+  }
+
+  int* arrNext = new int[nPatLen];
+  GetNext(cszPat, arrNext);
+
+  int i = 0, j = 0;
+
+  while (i < nStrLen) {
+    if (j == -1 || cszStr[i] == cszPat[j]) {
+      ++i;
+      ++j;
+    } else {
+      j = arrNext[j];
+    }
+
+    if (j == nPatLen) {
+      delete[] arrNext;
+      return i - j;
+    }
+  }
+
+  delete[] arrNext;
+  return -1;
+} */
+/* int KMP(const char* cszStr, const char* cszPat) {
+  int nStrLen = strlen(cszStr);
+  int nPatLen = strlen(cszPat);
+  if (nPatLen == 0) {
+    return 0;
+  }
+
+  int* arrNext = new int[nPatLen];
+  GetNext(cszPat, arrNext);
+
+  int i = 0, j = 0;
+  while (i < nStrLen) {
+    if (j == -1 || cszStr[i] == cszPat[j]) {
+      ++i;
+      ++j;
+    } else {
+      j = arrNext[j];
+    }
+
+    if (j == nPatLen) {
+      delete[] arrNext;
+      return i - j;
+    }
+  }
+
+  delete[] arrNext;
+  return -1;
+} */
+/* #include <cstring>
+
+void GetNext(const char *cszPat, int *arrNext) {
+  int nPatLen = strlen(cszPat);
+  arrNext[0] = -1;
+  int k = -1;
+
+  for (int i = 1; i < nPatLen; ++i) {
+    while (k >= 0 && arrNext[i] != arrNext[k + 1]) {
+      k = arrNext[k];
+    }
+
+    if (arrNext[i] == arrNext[k + 1]) {
+      arrNext[i] = k;
+    }
+  }
+}
+
+int KMP(const char *cszPat, const char *cszStr) {
+  int nPatLen = strlen(cszPat);
+  int nStrLen = strlen(cszStr);
+
+  if (nPatLen == 0) return 0;
+
+  int *arrNext = new int[nPatLen];
+
+  int i = 0, j = 0;
+  while (i < nStrLen) {
+    if(j == -1 || cszStr[i] == cszPat[j]) {
+      ++i;
+      ++j;
+    } else {
+      j = arrNext[j];
+    }
+
+    if (j == nPatLen) {
+      delete []  arrNext;
+      return i - j;
+    }
+  }
+
+  delete [] arrNext;
+  return -1;
+} */
+/* #include <cstring>
+
+using namespace std;
+
+void GetNext(const char *cszPat, int *arrNext) {
+  int nPatLen = strlen(cszPat);
+  int k = -1;
+  arrNext[0] = -1;
+
+  for (int i = 1; i < nPatLen; ++i) {
+    while (k == -1 || cszPat[i] != cszPat[k + 1]) {
+      k = arrNext[k];
+    }
+
+    if (cszPat[i] == cszPat[k + 1]) {
+      ++k;
+    }
+
+    arrNext[i] = k;
+  }
+}
+
+int KMP(const char *cszPat, const char *cszStr) {
+  int nPatLen = strlen(cszPat);
+  int nStrLen = strlen(cszStr);
+  if (nPatLen == 0) {
+    return 0;
+  }
+
+  int *arrNext = new int[nPatLen];
+  GetNext(cszPat, arrNext);
+
+  int i = 0, j = 0;
+  while (i < nStrLen) {
+    if (j == -1 || cszStr[i] == cszPat[j]) {
+      ++i;
+      ++j;
+    } else {
+      j = arrNext[j];
+    }
+
+    if (j == nPatLen) {
+      delete[] arrNext;
+      return i - j;
+    }
+  }
+
+  delete[] arrNext;
+  return 0;
+} */
+#include <cstring>
+
+void GetNext(const char* cszPat, int* arrNext) {
+  int nPatLen = strlen(cszPat);
+  int k = -1;
+  arrNext[0] = -1;
+
+  for (int i = 1; i < nPatLen; ++i) {
+    while (k != -1 && cszPat[i] != cszPat[k + 1]) {
+      k = arrNext[k];
+    }
+
+    if (cszPat[i] == cszPat[k + 1]) {
+      ++k;
+    }
+
+    arrNext[i] = k;
+  }
+}
+
+int KMP(const char* cszPat, const char* cszStr) {
+  int nPatLen = strlen(cszPat);
+  int nStrLen = strlen(cszStr);
+  if (nPatLen == 0) return 0;
+
+  int *arrNext = new int[nPatLen];
+
+  GetNext(cszPat, arrNext);
+}

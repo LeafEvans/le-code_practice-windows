@@ -1,4 +1,4 @@
-# Install script for directory: C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5
+# Install script for directory: C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_5_5
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,6 +32,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "C:/mingw-w64/x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/objdump.exe")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
@@ -40,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Code/CodePractice/Homework/C++/2024/test_2024_5_5/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_5_5/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
