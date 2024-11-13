@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_11_8\build\CMakeFiles\6bca88707f05da43e84beb6625bfa3c7\Nightly.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_11_8\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_11_8\build\CMakeFiles\Nightly" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{6A7AE92A-1EAE-318D-B84C-7CE490596C70}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

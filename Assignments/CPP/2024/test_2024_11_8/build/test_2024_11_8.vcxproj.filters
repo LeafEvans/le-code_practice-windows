@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_11_8\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_11_8\test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Code\Code_Practice\Assignments\CPP\2024\test_2024_11_8\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9AA3D858-ADE3-3513-BD17-39E2BF9F5991}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

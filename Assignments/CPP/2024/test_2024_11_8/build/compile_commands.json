@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_8/build",
+  "command": "C:\\mingw-w64\\x86_64-14.2.0-release-win32-seh-ucrt-rt_v12-rev0\\mingw64\\bin\\g++.exe -DFMT_SHARED @CMakeFiles/test_2024_11_8.dir/includes_CXX.rsp  -o CMakeFiles\\test_2024_11_8.dir\\main.cpp.obj -c C:\\Code\\Code_Practice\\Assignments\\CPP\\2024\\test_2024_11_8\\main.cpp",
+  "file": "C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_8/main.cpp",
+  "output": "CMakeFiles/test_2024_11_8.dir/main.cpp.obj"
+}
+]

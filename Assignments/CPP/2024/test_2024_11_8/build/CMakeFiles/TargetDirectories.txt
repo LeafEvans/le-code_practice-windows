@@ -1,0 +1,9 @@
+C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_8/build/CMakeFiles/test_2024_11_8.dir
+C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_8/build/CMakeFiles/Experimental.dir
+C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_8/build/CMakeFiles/Nightly.dir
+C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_8/build/CMakeFiles/Continuous.dir
+C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_8/build/CMakeFiles/NightlyMemoryCheck.dir
+C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_8/build/CMakeFiles/PACKAGE.dir
+C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_8/build/CMakeFiles/RUN_TESTS.dir
+C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_8/build/CMakeFiles/ALL_BUILD.dir
+C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_8/build/CMakeFiles/ZERO_CHECK.dir

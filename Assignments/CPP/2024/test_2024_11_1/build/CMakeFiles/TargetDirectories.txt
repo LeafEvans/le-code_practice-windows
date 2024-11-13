@@ -1,0 +1,3 @@
+C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_1/build/CMakeFiles/test_2024_11_1.dir
+C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_1/build/CMakeFiles/ALL_BUILD.dir
+C:/Code/Code_Practice/Assignments/CPP/2024/test_2024_11_1/build/CMakeFiles/ZERO_CHECK.dir

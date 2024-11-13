@@ -1,0 +1,11 @@
+path: C:/Code/Code_Practice/YOLO_Projects/ultralytics-main_1/datasets/Fog
+train: images/train
+val: images/val
+
+names:
+  0: Guy
+  1: Kakashi
+  2: Naruto
+  3: Sakura
+  4: Hinata
+  5: Sasuke
