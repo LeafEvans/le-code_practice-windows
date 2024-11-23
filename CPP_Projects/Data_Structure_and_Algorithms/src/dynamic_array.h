@@ -10,10 +10,10 @@ class DynamicArray {
  public:
   DynamicArray();  // 默认构造函数
 
-#ifdef _INITIALIZER_LIST_
+#ifdef _INITIALIZER_LIST
   // 使用初始化列表构造，需要 C++11 支持
   DynamicArray(std::initializer_list<ElemType> iList);
-#endif  // _INITIALIZER_LIST_
+#endif  // _INITIALIZER_LIST
 
   DynamicArray(const DynamicArray& tOther);  // 拷贝构造函数
   ~DynamicArray();                           // 析构函数

@@ -104,7 +104,22 @@ inline TextEditor::TextEditor() {
   m_bEditMode = false;
 }
 
-inline void TextEditor::Run(const CharString& csFileName) {}
+inline void TextEditor::Run(const CharString& csFileName) {
+  Help("");
+  if (!csFileName.IsEmpty() && !Load(csFileName)) {
+    return;
+  }
+
+  WinSize stWinSize = GetWinSize();
+  MoveCur(stWinSize.nRows - 1, 0);
+  printf("\033[K--Command mode, please enter your command--");
+
+  while (GetCmd()) {
+    if (m_bEditMode) {
+      Edit();
+    }
+  }
+}
 
 inline bool TextEditor::Load(const CharString& csFileName) {
   if (csFileName.IsEmpty()) {
@@ -115,7 +130,7 @@ inline bool TextEditor::Load(const CharString& csFileName) {
 
   FILE* pFile = fopen(csFileName.ToCStr(), "rb");
 
-  if (pFile == NULL) {
+  if (!pFile) {
     CharString csMsg;
     csMsg.Format("File \"%s\" not found.", csFileName.ToCStr());
     ShowMsg(csMsg);
@@ -197,8 +212,8 @@ inline void TextEditor::Edit() {
 
   if (nTotalLns == 0) {
     Insert(0, new CharString());
-    m_nYCurPos = 0;
     m_nXCurPos = 0;
+    m_nYCurPos = 0;
   }
 
   char chCtrl;
@@ -206,7 +221,7 @@ inline void TextEditor::Edit() {
 
   do {
     CharString* pcsCurLn = NULL;
-    if (!GetElem(m_nYCurPos, pcsCurLn) || pcsCurLn == NULL) {
+    if (!GetElem(m_nYCurPos, pcsCurLn) || !pcsCurLn) {
       break;
     }
 
@@ -217,82 +232,48 @@ inline void TextEditor::Edit() {
       if (!OnEditCmd(chCtrl, pcsCurLn)) {
         break;
       }
-    } else if ()
-  } while (chInput != 27);
-}
-
-/* inline void TextEditor::Edit() {
-  int nTotalLns = Length();  // 获取当前文本的总行数
-  printf("\033[2J");         // 清屏
-  PrintStrs();               // 打印当前文本内容
-
-  if (nTotalLns == 0) {           // 如果文本为空
-    Insert(0, new CharString());  // 插入一个新的空行
-    m_nXCurPos = 0;               // 重置光标的X坐标
-    m_nYCurPos = 0;               // 重置光标的Y坐标
-  }
-
-  char chCtrl;             // 用于存储控制字符
-  unsigned short chInput;  // 用于存储输入的字符
-
-  do {
-    CharString* pcsCurLn = NULL;  // 当前行的指针初始化为空
-    if (!GetElem(m_nYCurPos, pcsCurLn) ||
-        !pcsCurLn)  // 获取当前行失败或当前行为空
-      break;        // 退出编辑循环
-
-    chInput = GetStdCh(chCtrl);  // 获取用户输入的字符和控制字符
-    const char* pszCurLn = pcsCurLn->ToCStr();  // 获取当前行的字符串指针
-
-    if (chCtrl > 0) {                    // 如果有控制字符输入
-      if (!OnEditCmd(chCtrl, pcsCurLn))  // 执行控制命令
-        break;  // 如果命令执行失败，退出编辑循环
-                // 如果输入的是可打印字符或制表符
     } else if (chInput >= ' ' || chInput == '\t') {
-      if (chInput & 0xff00) {        // 如果输入的是多字节字符
-        char chHi = chInput >> 8;    // 高字节
-        char chLo = chInput & 0xff;  // 低字节
-        if (m_bReplaceMode) {        // 如果是替换模式
-          unsigned char chCur = static_cast<unsigned char>(
-              pszCurLn[m_nXCurPos]);  // 获取当前光标位置的字符
-          if (chCur >= 0xa0) {        // 如果是多字节字符
-            pcsCurLn->SetElem(m_nXCurPos++, chHi);  // 替换高字节
-            pcsCurLn->SetElem(m_nXCurPos++, chLo);  // 替换低字节
-          } else {
-            pcsCurLn->SetElem(m_nXCurPos++, chHi);  // 替换高字节
-            pcsCurLn->Insert(m_nXCurPos++, chLo);   // 插入低字节
-          }
-        } else {                                 // 如果是插入模式
-          pcsCurLn->Insert(m_nXCurPos++, chHi);  // 插入高字节
-          pcsCurLn->Insert(m_nXCurPos++, chLo);  // 插入低字节
-        }
-      } else {                 // 如果输入的是单字节字符
-        if (m_bReplaceMode) {  // 如果是替换模式
-                               // 获取当前光标位置的字符
+      if (chInput & 0xff00) {
+        char chHi = chInput >> 8;
+        char chLo = chInput & 0xff;
+        if (m_bReplaceMode) {
           unsigned char chCur =
               static_cast<unsigned char>(pszCurLn[m_nXCurPos]);
-          if (chCur >= 0xa0) {                       // 如果是多字节字符
-            pcsCurLn->SetElem(m_nXCurPos, chInput);  // 替换字符
-            char chNext;
-            pcsCurLn->Delete(m_nXCurPos + 1, chNext);  // 删除多余的字节
+          if (chCur >= 0xa0) {
+            pcsCurLn->SetElem(m_nXCurPos++, chHi);
+            pcsCurLn->SetElem(m_nXCurPos++, chLo);
           } else {
-            pcsCurLn->SetElem(m_nXCurPos, chInput);  // 替换字符
+            pcsCurLn->SetElem(m_nXCurPos++, chHi);
+            pcsCurLn->Insert(m_nXCurPos++, chLo);
           }
-        } else {                                  // 如果是插入模式
-          pcsCurLn->Insert(m_nXCurPos, chInput);  // 插入字符
+        } else {
+          pcsCurLn->Insert(m_nXCurPos++, chHi);
+          pcsCurLn->Insert(m_nXCurPos++, chLo);
         }
-        m_nXCurPos++;  // 移动光标到下一个位置
+      } else {
+        if (m_bReplaceMode) {
+          unsigned char chCur =
+              static_cast<unsigned char>(pszCurLn[m_nXCurPos]);
+          if (chCur >= 0xa0) {
+            pcsCurLn->SetElem(m_nXCurPos, chInput);
+            char chNext;
+            pcsCurLn->Delete(m_nXCurPos + 1, chNext);
+          } else {
+            pcsCurLn->SetElem(m_nXCurPos, chInput);
+          }
+        } else {
+          pcsCurLn->Insert(m_nXCurPos, chInput);
+        }
+        ++m_nXCurPos;
       }
-      PrintLn(pcsCurLn, m_nYCurPos);  // 打印当前行
+      PrintLn(pcsCurLn, m_nYCurPos);
     }
-  } while (chInput != 27);  // 循环直到用户按下ESC键
+  } while (chInput != 27);
 
-  WinSize stWinSize = GetWinSize();  // 获取窗口大小
-  MoveCur(stWinSize.nRows - 1, 0);   // 将光标移动到最后一行
-  printf(
-      "\033[K--Command mode, please enter your command--");  //
-提示用户进入命令模式
-} */
+  WinSize stWinSize = GetWinSize();
+  MoveCur(stWinSize.nRows - 1, 0);
+  printf("\033[K--Command mode, please enter your command--");
+}
 
 inline bool TextEditor::GetCmd() {
   printf("\033[?25l");
@@ -303,8 +284,14 @@ inline bool TextEditor::GetCmd() {
   printf("\033[32m%s\033[37m>>\033[?25h\033[K", m_csFileName.ToCStr());
 
   char szBuffer[256] = {'\0'};
-  scanf("%255[^\n]", szBuffer);
-  getchar();
+  if (!fgets(szBuffer, sizeof(szBuffer), stdin)) {
+    return false; 
+  }
+
+  char* pNewline = strchr(szBuffer, '\n');
+  if (pNewline) {
+    *pNewline = '\0';
+  }
 
   char* pCmd = szBuffer;
   while (*pCmd <= ' ' && *pCmd != '\0') ++pCmd;
@@ -390,7 +377,7 @@ inline bool TextEditor::OnEditCmd(char chCtrl, CharString* pcsCurLn) {
       }
       break;
     case 'K':
-      if (pcsCurLn != NULL && m_nXCurPos > 0) {
+      if (pcsCurLn  && m_nXCurPos > 0) {
         const unsigned char* pszCurLn =
             reinterpret_cast<const unsigned char*>(pcsCurLn->ToCStr());
         m_nXCurPos -= (pszCurLn[m_nXCurPos - 1] >= 0xa0) ? 2 : 1;
@@ -398,7 +385,7 @@ inline bool TextEditor::OnEditCmd(char chCtrl, CharString* pcsCurLn) {
       }
       break;
     case 'M':
-      if (pcsCurLn != NULL) {
+      if (pcsCurLn) {
         int nCurMaxLen =
             pcsCurLn->Length() + (m_bReplaceMode && m_nXCurPos > 0 ? 0 : 1);
         if (m_nXCurPos + 1 < nCurMaxLen) {
@@ -496,7 +483,7 @@ inline bool TextEditor::Save(const CharString& csFileName) {
 
   FILE* pFile = fopen(csFinalFileName.ToCStr(), "wb");
 
-  if (pFile == NULL) {
+  if (!pFile) {
     CharString csMsg;
     csMsg.Format("Failed to open file \"%s\".", csFinalFileName.ToCStr());
     ShowMsg(csMsg);
@@ -545,7 +532,75 @@ inline unsigned short TextEditor::GetStdCh(char& chCtrl) {
   return usCh;  // 返回完整字符或控制字符
 }
 
-inline void TextEditor::Help(const CharString& csCmd) {}
+inline void TextEditor::Help(const CharString& csCmd) {
+  printf("\033[2J");
+  WinSize stWinSize = GetWinSize();
+  MoveCur(0, 0);
+
+  struct CmdHelp {
+    const char* pszCmd;
+    const char* pszAlt;
+    const char* pszHelp;
+  };
+
+  const CmdHelp stCmdHelps[] = {
+      {"edit", "e",
+       "Command:\tedit\nDescription:\tSwitch to edit mode\n"
+       "Parameter:\tNone\nAlias:\te"},
+
+      {"help", "h",
+       "Command:\thelp\nDescription:\tDisplay help information\n"
+       "Parameter:\tCommand name\nAlias:\t? or h\n"
+       "Usage:\t\thelp [command]\nExample:\thelp load"},
+
+      {"load", "l",
+       "Command:\tload\nDescription:\tLoad a text file into memory\n"
+       "Parameter:\tFilename\nAlias:\tl\n"
+       "Usage:\t\tload <filename>\nExample:\tload test.txt"},
+
+      {"quit", "q",
+       "Command:\tquit\nDescription:\tExit the program\n"
+       "Parameter:\tNone\nAlias:\tq"},
+
+      {"save", "s",
+       "Command:\tsave\nDescription:\tSave memory content to a text file\n"
+       "Parameter:\tFilename or none\nAlias:\ts\n"
+       "Note:\t\tIf no parameter, save to the loaded filename\n"
+       "Usage:\t\tsave [filename]\nExample:\tsave test.txt"},
+
+      {"find", "f",
+       "Command:\tfind\nDescription:\tSearch for a pattern string\n"
+       "Parameter:\tPattern string\nAlias:\tf\n"
+       "Usage:\t\tfind <pattern string>\nExample:\tfind abc"},
+
+      {"go", "g",
+       "Command:\tgo\nDescription:\tMove to a specific line number\n"
+       "Parameter:\tLine number\nAlias:\tg\n"
+       "Usage:\t\tgo <line number>\nExample:\tgo 2"}};
+
+  bool bFound = false;
+  for (int i = 0; i < sizeof(stCmdHelps) / sizeof(CmdHelp); ++i) {
+    if (csCmd == stCmdHelps[i].pszCmd || csCmd == stCmdHelps[i].pszCmd) {
+      bFound = true;
+    }
+  }
+
+  if (!bFound) {
+    printf(
+        "**********************************************\n"
+        "Welcome to the text editor. Available commands:\n"
+        "e: Switch to edit mode\n"
+        "l <filename>: Load a file\n"
+        "g <line-number>: Move cursor to line number\n"
+        "d <line-number>: Delete a line\n"
+        "f <pattern string>: Search for a string\n"
+        "s [filename]: Save to file\n"
+        "q: Quit\n"
+        "(Press ESC to switch from edit mode to command mode)\n"
+        "Copyright: Sichuan University\n"
+        "**********************************************\n");
+  }
+}
 
 inline void TextEditor::ShowMsg(const CharString& csMsg, int nBgColor) {
   if (m_bEditMode) {
@@ -571,46 +626,13 @@ inline void TextEditor::PrintStrs(bool bClearAll) {
   int nTopLn = GetTopLn(stWinSize.nRows, bRedraw);
   Head();
 
-  while (Next(pcsCurLn) && pcsCurLn != NULL) {
+  while (Next(pcsCurLn) && pcsCurLn) {
     if (nCurLn < nTopLn) {
       ++nCurLn;
       continue;
     }
 
     if (nCurLn - nTopLn >= stWinSize.nRows - 2) {
-      break;
-    }
-
-    MoveCur(nCurLn, 0);
-    printf("\033[K%s\n", pcsCurLn->ToCStr());
-    ++nCurLn;
-  }
-
-  if (bClearAll) {
-    while (nCurLn - nTopLn <= stWinSize.nRows - 3) {
-      MoveCur(nCurLn, 0, false);
-      printf("\033[K");
-    }
-  }
-}
-
-/* inline void TextEditor::PrintStrs(bool bClearAll) {
-  printf("\033[?25l\033[0;0H");
-  CharString* pcsCurLn;
-  int nCurLn = 0;
-  WinSize stWinSize = GetWinSize();
-
-  bool bRedraw;
-  int nTopLn = GetTopLn(stWinSize.nRows, bRedraw);
-  Head();
-
-  while (Next(pcsCurLn) && pcsCurLn != NULL) {
-    if (nCurLn < nTopLn) {
-      ++nCurLn;
-      continue;
-    }
-
-    if (nCurLn - nTopLn > stWinSize.nRows - 3) {
       break;
     }
 
@@ -636,10 +658,10 @@ inline void TextEditor::PrintStrs(bool bClearAll) {
   printf("\033[%d;%dH\033[K%s", stWinSize.nRows, 0, pszModeMsg);
   MoveCur(m_nYCurPos, m_nXCurPos);
   printf("\033[?25h");
-} */
+}
 
 inline void TextEditor::PrintLn(CharString* pcsCurLn, int nYCurPos) {
-  if (pcsCurLn == NULL) {
+  if (!pcsCurLn) {
     return;  // 如果目标行指针为空，则返回
   }
 

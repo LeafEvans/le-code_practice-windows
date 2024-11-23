@@ -1,22 +1,16 @@
 package scu.test_2024_11_6.package_9_13;
 
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
 public class Solution {
 
     private static class Account {
-        private int id;
         private double balance;
         private double annualInterestRate;
-        private LocalDateTime createDate;
 
         public Account(int id, double annualInterestRate) {
-            this.id = id;
             this.annualInterestRate = annualInterestRate;
             this.balance = 0.0;
-            this.createDate = LocalDateTime.now();
         }
 
         public void withdraw(double amount) {

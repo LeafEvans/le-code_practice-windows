@@ -56,7 +56,7 @@ inline CircleQueue<ElemType>::CircleQueue(const CircleQueue<ElemType>& cqSrc) {
 template <class ElemType>
 inline CircleQueue<ElemType>::~CircleQueue() {
   delete[] m_pData;  // 释放动态分配的内存
-  m_pData = nullptr;
+  m_pData = NULL;
   m_nFront = m_nRear = m_nDataLen = 0;
 }
 

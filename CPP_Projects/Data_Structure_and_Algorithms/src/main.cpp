@@ -1,13 +1,14 @@
-#include <iostream>
-#include <algorithm>
+#include "text_editor.h"
 
-#include "char_string.h"
+int main(int argc, char **argv) {
+  CharString csFileName;
 
-using namespace std;
+  if (argc > 1) {
+    csFileName = argv[1];
+  }
 
-int main() {
-  CharString a = "ABACD";
-  CharString b = "ABA";
-  cout << a.Index(b, 0) << endl;
+  TextEditor teEditor;
+  teEditor.Run(csFileName);
+
   return 0;
 }

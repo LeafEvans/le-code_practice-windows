@@ -1,6 +1,17 @@
 [
-{
-  "directory": "c:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms",
-  "arguments": ["C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe", "-c", "-g", "-O0", "-std=c++20", "-fexceptions", "-o", "build\\.objs\\Data_Structure_and_Algorithms\\windows\\x64\\debug\\src\\main.cpp.obj", "src\\main.cpp"],
-  "file": "src\\main.cpp"
-}]
+  {
+    "directory": "c:\\Code\\Code_Practice\\CPP_Projects\\Data_Structure_and_Algorithms",
+    "arguments": [
+      "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe",
+      "-c",
+      "-g",
+      "-O0",
+      "-std=c++20",
+      "-fexceptions",
+      "-o",
+      "build\\.objs\\Data_Structure_and_Algorithms\\windows\\x64\\debug\\src\\main.cpp.obj",
+      "src\\main.cpp"
+    ],
+    "file": "src\\main.cpp"
+  }
+]

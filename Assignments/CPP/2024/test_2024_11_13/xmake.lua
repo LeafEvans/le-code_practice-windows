@@ -1,5 +1,7 @@
 add_rules("mode.debug", "mode.release")
 
+set_languages("c++20")
+
 target("test_2024_11_13")
     set_kind("binary")
     add_files("src/*.cpp")

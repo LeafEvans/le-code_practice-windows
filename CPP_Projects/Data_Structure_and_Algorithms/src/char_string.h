@@ -157,12 +157,44 @@ inline int CharString::Index(const CharString& csPat, int nIdx) const {
   return -1;
 }
 
+inline int CharString::KMPIndex(const CharString& csPat, int nIdx) const {
+  int nPatLen = csPat.Length();
+
+  if (m_nDataLen - nIdx < nPatLen) {
+    return -1;
+  } else if (nPatLen == 0) {
+    return nIdx;
+  }
+
+  const char* pszPat = csPat.ToCStr();
+  int* arrNextVal = new int[nPatLen];
+  GetNextVal(csPat, arrNextVal);
+
+  int i = nIdx, j = 0;
+  while (i < m_nDataLen) {
+    if (j == -1 || m_pData[i] == pszPat[j]) {
+      ++i;
+      ++j;
+    } else {
+      j = arrNextVal[j];
+    }
+
+    if (j == nPatLen) {
+      delete[] arrNextVal;
+      return i - j;
+    }
+  }
+
+  delete[] arrNextVal;
+  return -1;
+}
+
 inline const char* CharString::ToCStr() const { return m_pData; }
 
 inline void CharString::Format(const char* pszFormat, ...) {
-  va_list argList, argListSave;
-  va_start(argList, pszFormat);
-  va_copy(argListSave, argList);
+  va_list pvaList, pvaListSave;
+  va_start(pvaList, pszFormat);
+  va_copy(pvaListSave, pvaList);
 
   // 计算格式化的最大长度
   int nMaxLen = 0;
@@ -184,7 +216,7 @@ inline void CharString::Format(const char* pszFormat, ...) {
       if (*pszCurr == '#') {
         nMaxLen += 2;
       } else if (*pszCurr == '*') {
-        nWidth = va_arg(argList, int);
+        nWidth = va_arg(pvaList, int);
       } else if (*pszCurr == '-' || *pszCurr == '+' || *pszCurr == '0') {
         // 忽略标志字符
       } else {
@@ -207,7 +239,7 @@ inline void CharString::Format(const char* pszFormat, ...) {
       pszCurr = NextChar(pszCurr);
 
       if (*pszCurr == '*') {
-        nPrecision = va_arg(argList, int);
+        nPrecision = va_arg(pvaList, int);
         pszCurr = NextChar(pszCurr);
       } else {
         nPrecision = atoi(pszCurr);
@@ -252,7 +284,7 @@ inline void CharString::Format(const char* pszFormat, ...) {
       case 'c' | kForceUnicode:
       case 'C' | kForceUnicode: {
         nItemLen = 2;
-        va_arg(argList, int);
+        va_arg(pvaList, int);
       } break;
 
       // 字符串类型
@@ -262,8 +294,8 @@ inline void CharString::Format(const char* pszFormat, ...) {
       case 'S' | kForceANSI:
       case 's' | kForceUnicode:
       case 'S' | kForceUnicode: {
-        const char* pszNextArg = va_arg(argList, const char*);
-        if (pszNextArg == NULL) {
+        const char* pszNextArg = va_arg(pvaList, const char*);
+        if (!pszNextArg) {
           nItemLen = 6;  // "(null)"
         } else {
           nItemLen = static_cast<int>(strlen(pszNextArg));
@@ -289,9 +321,9 @@ inline void CharString::Format(const char* pszFormat, ...) {
         case 'x':
         case 'o': {
           if (nModifier & kForceInt64) {
-            va_arg(argList, long long);
+            va_arg(pvaList, long long);
           } else {
-            va_arg(argList, int);
+            va_arg(pvaList, int);
           }
           nItemLen = std::max(32, nWidth + nPrecision);
         } break;
@@ -300,13 +332,13 @@ inline void CharString::Format(const char* pszFormat, ...) {
         case 'e':
         case 'g':
         case 'G': {
-          va_arg(argList, double);
+          va_arg(pvaList, double);
           nItemLen = std::max(128, nWidth + nPrecision);
         } break;
 
         // 浮点数（固定精度）
         case 'f': {
-          double fNum = va_arg(argList, double);
+          double fNum = va_arg(pvaList, double);
           int nBufferLen = std::max(nWidth, 312 + nPrecision + 6);
           char* pszTemp = new char[nBufferLen];
           std::snprintf(pszTemp, nBufferLen, "%*.*f", nWidth, nPrecision + 6,
@@ -317,13 +349,13 @@ inline void CharString::Format(const char* pszFormat, ...) {
 
         // 指针类型
         case 'p': {
-          va_arg(argList, void*);
+          va_arg(pvaList, void*);
           nItemLen = std::max(32, nWidth + nPrecision);
         } break;
 
         // 特殊情况：写入字符数
         case 'n':
-          va_arg(argList, int*);
+          va_arg(pvaList, int*);
           break;
 
         default:
@@ -336,11 +368,11 @@ inline void CharString::Format(const char* pszFormat, ...) {
   // 调整字符串大小并格式化
   Reserve(nMaxLen + 1);
 
-  m_nDataLen = vsnprintf(m_pData, nMaxLen + 1, pszFormat, argListSave);
+  m_nDataLen = vsnprintf(m_pData, nMaxLen + 1, pszFormat, pvaListSave);
 
   // 确保字符串以空字符结尾
   m_pData[m_nDataLen] = 0;
-  va_end(argListSave);
+  va_end(pvaListSave);
 }
 
 inline int CharString::Compare(const CharString& csSrc) const {
@@ -373,7 +405,25 @@ inline int CharString::SaveData(const char* pData, int nDataLen) {
   return nIdx;
 }
 
+inline void CharString::GetNextVal(const CharString& csPat,
+                                   int* arrNextVal) const {
+  int nPatLen = csPat.Length();
+  const char* pszPat = csPat.ToCStr();
+  arrNextVal[0] = -1;
+  arrNextVal[1] = 0;
+  int i = 2;
+  int k = 0;
 
+  while (i < nPatLen) {
+    if (k == -1 || pszPat[i - 1] == pszPat[k]) {
+      arrNextVal[i] = k + 1;
+      ++i;
+      ++k;
+    } else {
+      k = arrNextVal[k];
+    }
+  }
+}
 
 inline void CharString::AppendZero() {
   if (m_nDataLen >= m_nBufferLen) {

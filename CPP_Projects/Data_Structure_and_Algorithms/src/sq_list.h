@@ -118,7 +118,7 @@ bool SqList<ElemType>::Reserve(int nSize) {
 
   ElemType* pData = new ElemType[nSize];
 
-  if (pData == NULL) {
+  if (!pData) {
     return false;
   }
 
