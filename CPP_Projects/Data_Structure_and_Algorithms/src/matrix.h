@@ -223,14 +223,14 @@ template <class ElemType>
 Matrix<ElemType> Matrix<ElemType>::Inverse() const {
   if (GetCols() != GetRows()) return Matrix<ElemType>(0, 0);
 
-  int nSize = GetCols();
+  int nSize = GetRows();
 
   ElemType fEpsilon = 1e-7;
 
   Matrix<ElemType> mtxAug(nSize, 2 * nSize);
 
   for (int i = 0; i < nSize; ++i) {
-    for (int j = 0; j < 2 * nSize; ++j) {
+    for (int j = 0; j < nSize; ++j) {
       mtxAug(i, j) = (*this)(i, j);
       mtxAug(i, j + nSize) = (i == j) ? 1 : 0;
     }
@@ -255,8 +255,9 @@ Matrix<ElemType> Matrix<ElemType>::Inverse() const {
     }
 
     ElemType fPivot = mtxAug(i, i);
+
     for (int j = i; j < 2 * nSize; ++j) {
-      mtxAug(i, j) /= 1.0 * fPivot;
+      mtxAug(i, j) /= fPivot;
     }
 
     for (int k = 0; k < nSize; ++k) {

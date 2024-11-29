@@ -1,6 +1,6 @@
 add_rules("mode.debug", "mode.release")
 
-set_languages("c99", "cxx20")
+set_languages("c99", "cxx11")
 
 
 target("Data_Structure_and_Algorithms")

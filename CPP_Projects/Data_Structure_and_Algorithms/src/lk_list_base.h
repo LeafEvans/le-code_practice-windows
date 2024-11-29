@@ -35,18 +35,18 @@ class LkListBase : public ListBase<ElemType> {
   virtual NodeType *GetFirstNode() const;          // 获取首元节点
   virtual bool IsEndWhile(NodeType *pNode) const;  // 是否结束循环语句
 
-  NodeType *m_pNodeCurr;     // 当前节点指针
-  NodeType *m_pNodeHead;     // 头节点指针
-  NodeType *m_pNodeTail;     // 尾节点指针
+  NodeType *m_pCurrNode;     // 当前节点指针
+  NodeType *m_pHeadNode;     // 头节点指针
+  NodeType *m_pTailNode;     // 尾节点指针
   int m_nNodeCounts;         // 当前节点数量
   bool m_bSpecialDetection;  // 特殊析构方式，如广义表
 };
 
 template <class ElemType, class NodeType>
 LkListBase<ElemType, NodeType>::LkListBase()
-    : m_pNodeCurr(new NodeType()),
-      m_pNodeHead(m_pNodeCurr),
-      m_pNodeTail(m_pNodeCurr),
+    : m_pCurrNode(new NodeType()),
+      m_pHeadNode(m_pCurrNode),
+      m_pTailNode(m_pCurrNode),
       m_nNodeCounts(0),
       m_bSpecialDetection(false) {}
 
@@ -61,7 +61,7 @@ LkListBase<ElemType, NodeType> &LkListBase<ElemType, NodeType>::operator=(
   m_bSpecialDetection = false;  // 默认非广义表
 
   NodeType *pSrcNode = llbSrc.GetFirstNode();  // 获取首元节点
-  NodeType *pPreNode = m_pNodeHead;  // 前驱节点初始化为头节点
+  NodeType *pPreNode = m_pHeadNode;  // 前驱节点初始化为头节点
 
   while (!llbSrc.IsEndWhile(pSrcNode)) {
     NodeType *pNewNode = new NodeType();    // 构造一个新节点
@@ -72,24 +72,24 @@ LkListBase<ElemType, NodeType> &LkListBase<ElemType, NodeType>::operator=(
     ++m_nNodeCounts;                        // 节点数量增加
   }
 
-  m_pNodeTail = pPreNode;     // 设置尾节点
-  m_pNodeCurr = m_pNodeHead;  // 设置当前节点
+  m_pTailNode = pPreNode;     // 设置尾节点
+  m_pCurrNode = m_pHeadNode;  // 设置当前节点
   return *this;               // 返回本身
 }
 
 template <class ElemType, class NodeType>
 LkListBase<ElemType, NodeType>::~LkListBase() {
   if (!m_bSpecialDetection) {
-    NodeType *pCurr = m_pNodeHead->m_pNext;
-    while (pCurr && pCurr != m_pNodeHead) {
+    NodeType *pCurr = m_pHeadNode->m_pNext;
+    while (pCurr && pCurr != m_pHeadNode) {
       NodeType *pNext = pCurr->m_pNext;
       delete pCurr;
       pCurr = pNext;
     }
 
-    if (m_pNodeHead) {     // 若头节点不为空
-      delete m_pNodeHead;  // 释放头节点空间
-      m_pNodeHead = NULL;  // 将头节点置为空
+    if (m_pHeadNode) {     // 若头节点不为空
+      delete m_pHeadNode;  // 释放头节点空间
+      m_pHeadNode = NULL;  // 将头节点置为空
     }
   }
 }
@@ -101,56 +101,56 @@ int LkListBase<ElemType, NodeType>::Length() const {
 
 template <class ElemType, class NodeType>
 NodeType *LkListBase<ElemType, NodeType>::GetFirstNode() const {
-  return m_pNodeHead->m_pNext;  // 返回头节点的后继节点
+  return m_pHeadNode->m_pNext;  // 返回头节点的后继节点
 }
 
 template <class ElemType, class NodeType>
 bool LkListBase<ElemType, NodeType>::IsEndWhile(NodeType *pNode) const {
-  return !pNode || pNode == m_pNodeHead;  // 判断此时是否为空或为头节点
+  return !pNode || pNode == m_pHeadNode;  // 判断此时是否为空或为头节点
 }
 
 template <class ElemType, class NodeType>
 void LkListBase<ElemType, NodeType>::Head() {
-  m_pNodeCurr = m_pNodeHead;  // 更新当前指针为头节点
+  m_pCurrNode = m_pHeadNode;  // 更新当前指针为头节点
 }
 
 template <class ElemType, class NodeType>
 bool LkListBase<ElemType, NodeType>::Next(ElemType &tElem) {
-  if (!m_pNodeCurr || !(m_pNodeCurr->m_pNext)) {
+  if (!m_pCurrNode || !(m_pCurrNode->m_pNext)) {
     return false;
   }
 
-  m_pNodeCurr = m_pNodeCurr->m_pNext;
-  tElem = m_pNodeCurr->m_tElem;
+  m_pCurrNode = m_pCurrNode->m_pNext;
+  tElem = m_pCurrNode->m_tElem;
 
   return true;
 }
 
 template <class ElemType, class NodeType>
 bool LkListBase<ElemType, NodeType>::SetCurrElem(const ElemType &tElem) {
-  if (m_pNodeCurr == m_pNodeHead || !m_pNodeCurr) {
+  if (m_pCurrNode == m_pHeadNode || !m_pCurrNode) {
     // 若��空或为头节点
     return false;
   }
-  m_pNodeCurr->m_tElem = tElem;  // 设置指定位置元素
+  m_pCurrNode->m_tElem = tElem;  // 设置指定位置元素
   return true;
 }
 
 template <class ElemType, class NodeType>
 bool LkListBase<ElemType, NodeType>::DeleteCurr(ElemType &tElem) {
-  if (!m_pNodeCurr || !(m_pNodeCurr->m_pNext)) {
+  if (!m_pCurrNode || !(m_pCurrNode->m_pNext)) {
     // 当前节点或其后继为空，则不能删除
     return false;
   }
 
-  NodeType *pNextNode = m_pNodeCurr->m_pNext;  // 获取当前节点的后继
-  NodeType *pPreNode = m_pNodeHead;  // 前驱节点初始化为头节点
+  NodeType *pNextNode = m_pCurrNode->m_pNext;  // 获取当前节点的后继
+  NodeType *pPreNode = m_pHeadNode;  // 前驱节点初始化为头节点
   NodeType *pNode = GetFirstNode();  // 获取首元节点
 
   bool bFindPre = false;  // 默认初始化为 False
 
   while (!IsEndWhile(pNode)) {
-    if (pNode == m_pNodeCurr) {
+    if (pNode == m_pCurrNode) {
       // 当遍历节点与当前节点相同
       bFindPre = true;
       break;  // 找到前驱终止循环
@@ -166,13 +166,13 @@ bool LkListBase<ElemType, NodeType>::DeleteCurr(ElemType &tElem) {
   Link(pPreNode, pNextNode);  // 链接前后节点
   tElem = pNode->m_tElem;
 
-  if (pNode == m_pNodeTail) {
+  if (pNode == m_pTailNode) {
     // 若为尾节点，设置前驱节点为新尾节点
-    m_pNodeTail = pPreNode;
+    m_pTailNode = pPreNode;
   }
 
   // 设置当前节点为前驱节点
-  m_pNodeCurr = pPreNode;
+  m_pCurrNode = pPreNode;
   delete pNode;     // 删除当前节点
   --m_nNodeCounts;  // 节点数量减少
   return true;
@@ -180,22 +180,22 @@ bool LkListBase<ElemType, NodeType>::DeleteCurr(ElemType &tElem) {
 
 template <class ElemType, class NodeType>
 void LkListBase<ElemType, NodeType>::Clear() {
-  if (!m_pNodeHead) {
+  if (!m_pHeadNode) {
     return;
   }
 
-  NodeType *pNode = m_pNodeHead->m_pNext;  // 直接使用头节点的后继
+  NodeType *pNode = m_pHeadNode->m_pNext;  // 直接使用头节点的后继
 
-  while (pNode && pNode != m_pNodeHead) {
+  while (pNode && pNode != m_pHeadNode) {
     NodeType *pNodeNext = pNode->m_pNext;  // 存储后继节点
     delete pNode;                          // 删除当前节点
     pNode = pNodeNext;                     // 更新当前节点
   }
 
-  m_pNodeHead->ClearLink();   // 清空头节点链接状态
+  m_pHeadNode->ClearLink();   // 清空头节点链接状态
   m_nNodeCounts = 0;          // 节点数目为 0
-  m_pNodeTail = m_pNodeHead;  // 尾节点为头节点
-  m_pNodeCurr = m_pNodeHead;  // 当前节点为头节点
+  m_pTailNode = m_pHeadNode;  // 尾节点为头节点
+  m_pCurrNode = m_pHeadNode;  // 当前节点为头节点
 }
 
 template <class ElemType, class NodeType>
@@ -210,7 +210,7 @@ NodeType *LkListBase<ElemType, NodeType>::FindNode(int nIdx,
     return NULL;
   }
 
-  pPreNode = m_pNodeHead;  // 初始化前驱节点为头节点
+  pPreNode = m_pHeadNode;  // 初始化前驱节点为头节点
 
   NodeType *pFindNode = NULL;        // 初始化找到的节点为NULL
   NodeType *pNode = GetFirstNode();  // 获取首元节点
@@ -268,11 +268,11 @@ bool LkListBase<ElemType, NodeType>::Delete(int nIdx, ElemType &tElem) {
 
   tElem = pNode->m_tElem;
 
-  if (pNode == m_pNodeTail) {  // 若当前节点为尾节点
-    m_pNodeTail = pPreNode;    // 置其前驱节点为尾节点
+  if (pNode == m_pTailNode) {  // 若当前节点为尾节点
+    m_pTailNode = pPreNode;    // 置其前驱节点为尾节点
   }
 
-  m_pNodeCurr = pPreNode;  // 当前节点为前驱节点
+  m_pCurrNode = pPreNode;  // 当前节点为前驱节点
   delete pNode;            // 删除目标节点
   --m_nNodeCounts;         // 节点数量减少
 
@@ -299,7 +299,7 @@ bool LkListBase<ElemType, NodeType>::Insert(int nIdx, const ElemType &tElem) {
   Link(pNewNode, pNode);
 
   ++m_nNodeCounts;         // 节点数量增加
-  m_pNodeCurr = pNewNode;  // 设置当前节点为新节点
+  m_pCurrNode = pNewNode;  // 设置当前节点为新节点
 
   return true;
 }
@@ -323,18 +323,18 @@ template <class ElemType, class NodeType>
 int LkListBase<ElemType, NodeType>::AddTail(const ElemType &tElem) {
   NodeType *pNewNode = new NodeType();
   pNewNode->m_tElem = tElem;    // 为新节点赋值
-  Link(m_pNodeTail, pNewNode);  // 链接尾节点和新节点
-  m_pNodeTail = pNewNode;       // 尾节点变更为新节点
-  m_pNodeCurr = pNewNode;       // 变更当前节点为新节点
+  Link(m_pTailNode, pNewNode);  // 链接尾节点和新节点
+  m_pTailNode = pNewNode;       // 尾节点变更为新节点
+  m_pCurrNode = pNewNode;       // 变更当前节点为新节点
   return m_nNodeCounts++;       // 返回新节点索引，节点数目加 1
 }
 
 template <typename ElemType, typename NodeType>
 bool LkListBase<ElemType, NodeType>::GetCurrElem(ElemType &tElem) const {
-  if (!m_pNodeCurr || m_pNodeCurr == m_pNodeHead) {
+  if (!m_pCurrNode || m_pCurrNode == m_pHeadNode) {
     return false;
   }
-  tElem = m_pNodeCurr->m_tElem;
+  tElem = m_pCurrNode->m_tElem;
   return false;
 }
 

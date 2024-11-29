@@ -38,8 +38,8 @@ Array<ElemType>::Array(int nDim, ...) {
 
   int nTotalElemNum = 1;
   va_list pvaList;
-  va_start(pvaList, nDim);
 
+  va_start(pvaList, nDim);
   for (int i = 0; i < nDim; ++i) {
     m_pBounds[i] = va_arg(pvaList, int);
     nTotalElemNum *= m_pBounds[i];
@@ -138,7 +138,7 @@ Array<ElemType>& Array<ElemType>::operator=(const Array<ElemType>& arrSrc) {
 template <typename ElemType>
 int Array<ElemType>::Locate(int nSub0, va_list& pvaList) const {
   if (nSub0 < 0 || nSub0 >= m_pBounds[0]) {
-     throw std::runtime_error("Out of bound in dimension 0: " +
+    throw std::runtime_error("Out of bound in dimension 0: " +
                              std::to_string(nSub0));
   }
 
@@ -147,7 +147,7 @@ int Array<ElemType>::Locate(int nSub0, va_list& pvaList) const {
   for (int i = 1; i < m_nDim; ++i) {
     int nSub = va_arg(pvaList, int);
 
-     if (nSub < 0 || nSub > m_pBounds[i]) {
+    if (nSub < 0 || nSub > m_pBounds[i]) {
       throw std::runtime_error("Out of bound in dimension " +
                                std::to_string(i) + ": " + std::to_string(nSub));
     }

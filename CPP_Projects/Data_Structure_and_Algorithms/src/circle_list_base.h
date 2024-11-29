@@ -47,7 +47,7 @@ CircleListBase<ElemType, NodeType>::operator=(
 template <class ElemType, class NodeType>
 void CircleListBase<ElemType, NodeType>::LinkTailToHead() {
   // 链接尾节点和头节点
-  this->Link(this->m_pNodeTail, this->m_pNodeHead);
+  this->Link(this->m_pTailNode, this->m_pHeadNode);
 }
 
 template <class ElemType, class NodeType>
@@ -62,16 +62,16 @@ bool CircleListBase<ElemType, NodeType>::Next(ElemType &tElem) {
     return false;
   }
 
-  if (!this->m_pNodeCurr || !this->m_pNodeCurr->m_pNext) {
+  if (!this->m_pCurrNode || !this->m_pCurrNode->m_pNext) {
     return false;  // 若当前节点或其后继为空
   }
 
-  this->m_pNodeCurr = this->m_pNodeCurr->m_pNext;  // 更新到下一节点
-  tElem = this->m_pNodeCurr->m_tData;              // 获取当前节点数据
+  this->m_pCurrNode = this->m_pCurrNode->m_pNext;  // 更新到下一节点
+  tElem = this->m_pCurrNode->m_tData;              // 获取当前节点数据
 
-  if (this->m_pNodeCurr == this->m_pNodeHead) {
+  if (this->m_pCurrNode == this->m_pHeadNode) {
     // 若为头节点，则再更新一次
-    this->m_pNodeCurr = this->m_pNodeCurr->m_pNext;
+    this->m_pCurrNode = this->m_pCurrNode->m_pNext;
   }
 
   return true;
@@ -104,7 +104,7 @@ int CircleListBase<ElemType, NodeType>::AddTail(const ElemType &tElem) {
 template <class ElemType, class NodeType>
 bool CircleListBase<ElemType, NodeType>::IsEmpty() const {
   // 头节点指针指向头节点自身
-  return this->m_pNodeHead->m_pNext == this->m_pNodeHead;
+  return this->m_pHeadNode->m_pNext == this->m_pHeadNode;
 }
 
 template <class ElemType, class NodeType>
@@ -113,7 +113,7 @@ NodeType *CircleListBase<ElemType, NodeType>::GetFirstNode() const {
     return NULL;  // 空表时返回空指针
   }
 
-  return this->m_pNodeHead->m_pNext;  // 非空时返回首元节点
+  return this->m_pHeadNode->m_pNext;  // 非空时返回首元节点
 }
 
 #endif  // _CIRCLE_LIST_BASE_H_

@@ -47,21 +47,21 @@ bool DbLkList<ElemType>::Link(DbNode<ElemType> *pPreNode,
 
 template <class ElemType>
 void DbLkList<ElemType>::Tail() {
-  this->m_pNodeCurr = this->m_pNodeTail;  // 将当前节点设置为尾节点
+  this->m_pCurrNode = this->m_pTailNode;  // 将当前节点设置为尾节点
 }
 
 template <class ElemType>
 bool DbLkList<ElemType>::Prev(ElemType &tElem) {
-  if (!this->m_pNodeCurr) {  // 当前节点不存在
+  if (!this->m_pCurrNode) {  // 当前节点不存在
     return false;
   }
 
-  if (this->m_pNodeCurr->m_pPre == this->m_pNodeHead) {
+  if (this->m_pCurrNode->m_pPre == this->m_pHeadNode) {
     return false;  // 当前节点已是首元节点，无法继续向前
   }
 
-  this->m_pNodeCurr = this->m_pNodeCurr->m_pPre;  // 移动到前驱节点
-  tElem = this->m_pNodeCurr->m_tElem;  // 获取当前节点的元素值
+  this->m_pCurrNode = this->m_pCurrNode->m_pPre;  // 移动到前驱节点
+  tElem = this->m_pCurrNode->m_tElem;  // 获取当前节点的元素值
 
   return true;
 }

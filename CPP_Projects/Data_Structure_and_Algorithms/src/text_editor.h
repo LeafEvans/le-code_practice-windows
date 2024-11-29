@@ -285,7 +285,7 @@ inline bool TextEditor::GetCmd() {
 
   char szBuffer[256] = {'\0'};
   if (!fgets(szBuffer, sizeof(szBuffer), stdin)) {
-    return false; 
+    return false;
   }
 
   char* pNewline = strchr(szBuffer, '\n');
@@ -377,7 +377,7 @@ inline bool TextEditor::OnEditCmd(char chCtrl, CharString* pcsCurLn) {
       }
       break;
     case 'K':
-      if (pcsCurLn  && m_nXCurPos > 0) {
+      if (pcsCurLn && m_nXCurPos > 0) {
         const unsigned char* pszCurLn =
             reinterpret_cast<const unsigned char*>(pcsCurLn->ToCStr());
         m_nXCurPos -= (pszCurLn[m_nXCurPos - 1] >= 0xa0) ? 2 : 1;

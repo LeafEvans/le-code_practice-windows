@@ -18,15 +18,16 @@ class DynamicArray {
   DynamicArray(const DynamicArray& tOther);  // 拷贝构造函数
   ~DynamicArray();                           // 析构函数
 
-  bool Reserve(int nSize);       // 调整内部缓冲区大小
+  bool Reserve(int nSize);      // 调整内部缓冲区大小
   int Length() const;           // 获取当前有效数据数量
   int AddTail(ElemType tElem);  // 在末尾添加元素
-  int SaveData(ElemType* pData, int nDataLen);              // 批量保存数据
-  int Insert(int nIdx, ElemType tElem);                     // 在指定位置插入元素
-  bool Delete(int nIdx, ElemType& tElem);                   // 删除指定位置的元素
+  int SaveData(ElemType* pData, int nDataLen);  // 批量保存数据
+  int Insert(int nIdx, ElemType tElem);         // 在指定位置插入元素
+  bool Delete(int nIdx, ElemType& tElem);       // 删除指定位置的元素
   const DynamicArray& operator=(const DynamicArray& tSrc);  // 赋值运算符重载
-  const DynamicArray& operator+=(const DynamicArray& tOther);  // 加法赋值运算符重载
-  ElemType& operator[](int nIdx);  // 下标运算符重载
+  const DynamicArray& operator+=(
+      const DynamicArray& tOther);  // 加法赋值运算符重载
+  ElemType& operator[](int nIdx);   // 下标运算符重载
 
  private:
   ElemType* m_pData;  // 数据存储区指针
@@ -43,18 +44,18 @@ DynamicArray<ElemType>::DynamicArray()
   std::fill_n(m_pData, m_nBufferLen, ElemType());
 }
 
-#ifdef _INITIALIZER_LIST_
+#ifdef _INITIALIZER_LIST
 // 仅在支持 C++11 标准时编译此构造函数
 template <class ElemType>
 DynamicArray<ElemType>::DynamicArray(std::initializer_list<ElemType> iList)
-    : m_nDataLen(iList.size()),
-      m_nBufferLen(m_nDataLen + kDefaultSize),
-      m_pData(new ElemType[m_nBufferLen]) {
+    : m_pData(new ElemType[iList.size() + kDefaultSize]),
+      m_nDataLen(iList.size()),
+      m_nBufferLen(m_nDataLen + kDefaultSize) {
   ElemType* pData = static_cast<ElemType*>(iList.begin());
   std::copy(pData, pData + iList.size(), m_pData);
   std::fill_n(m_pData + m_nDataLen, m_nBufferLen - m_nDataLen, ElemType());
 }
-#endif  // _INITIALIZER_LIST_
+#endif  // _INITIALIZER_LIST
 
 template <class ElemType>
 DynamicArray<ElemType>::DynamicArray(const DynamicArray<ElemType>& tOther)

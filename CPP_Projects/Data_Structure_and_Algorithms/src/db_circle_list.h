@@ -51,24 +51,24 @@ bool DbCircleList<ElemType>::Link(DbNode<ElemType>* pPreNode,
 
 template <class ElemType>
 void DbCircleList<ElemType>::Tail() {
-  this->m_pNodeCurr = this->m_pNodeTail;  // 将当前节点设置为尾节点
+  this->m_pCurrNode = this->m_pTailNode;  // 将当前节点设置为尾节点
 }
 
 template <class ElemType>
 bool DbCircleList<ElemType>::Prev(ElemType& tElem) {
-  if (this->IsEmpty() || !this->m_pNodeCurr || !this->m_pNodeCurr->m_pPre) {
+  if (this->IsEmpty() || !this->m_pCurrNode || !this->m_pCurrNode->m_pPre) {
     // 链表为空、当前节点不存在或其前驱不存在时返回失败
     return false;
   }
 
-  this->m_pNodeCurr = this->m_pNodeCurr->m_pPre;  // 移动到前驱节点
+  this->m_pCurrNode = this->m_pCurrNode->m_pPre;  // 移动到前驱节点
 
-  if (this->m_pNodeCurr == this->m_pNodeHead) {
+  if (this->m_pCurrNode == this->m_pHeadNode) {
     // 如果到达头节点，再往前移动一次
-    this->m_pNodeCurr = this->m_pNodeCurr->m_pPre;
+    this->m_pCurrNode = this->m_pCurrNode->m_pPre;
   }
 
-  tElem = this->m_pNodeCurr->m_tElem;  // 获取当前节点的值
+  tElem = this->m_pCurrNode->m_tElem;  // 获取当前节点的值
 
   return true;
 }
@@ -80,16 +80,16 @@ bool DbCircleList<ElemType>::Reverse() {
   }
 
   DbNode<ElemType> pFirstNode = this->GetFirstNode();
-  DbNode<ElemType> pNode = this->m_pNodeHead;
+  DbNode<ElemType> pNode = this->m_pHeadNode;
 
   do {
     DbNode<ElemType> pNext = pNode->m_pNext;
     pNode->m_pNext = pNode->m_pPre;
     pNode->m_pPre = pNext;
     pNode = pNext;
-  } while (pNode != this->m_pNodeHead);
+  } while (pNode != this->m_pHeadNode);
 
-  this->m_pNodeTail = pFirstNode;
+  this->m_pTailNode = pFirstNode;
 
   return true;
 }

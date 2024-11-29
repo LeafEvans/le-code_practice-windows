@@ -1,17 +1,6 @@
 [
-  {
-    "directory": "c:\\Code\\Code_Practice\\Assignments\\CPP\\2024\\test_2024_11_13",
-    "arguments": [
-      "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe",
-      "-c",
-      "-g",
-      "-O0",
-      "-std=c++20",
-      "-fexceptions",
-      "-o",
-      "build\\.objs\\test_2024_11_13\\windows\\x64\\debug\\src\\main.cpp.obj",
-      "src\\main.cpp"
-    ],
-    "file": "src\\main.cpp"
-  }
-]
+{
+  "directory": "c:\\Code\\Code_Practice\\Assignments\\CPP\\2024\\test_2024_11_13",
+  "arguments": ["C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe", "-c", "-g", "-O0", "-std=c++20", "-fexceptions", "-o", "build\\.objs\\test_2024_11_13\\windows\\x64\\debug\\src\\main.cpp.obj", "src\\main.cpp"],
+  "file": "src\\main.cpp"
+}]
