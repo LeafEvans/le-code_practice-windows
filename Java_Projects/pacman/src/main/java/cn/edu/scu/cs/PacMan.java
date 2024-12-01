@@ -44,7 +44,7 @@ public class PacMan {
     private static int totalGhostCount = 0;
     private static boolean isSecondLevel = false;
     private static boolean isThirdLevel = false;
-    private static boolean isFourthLevel = false; // Add fourth level flag
+    private static boolean isFourthLevel = false;
     private static final ArrayList<Ghost> ghostList = new ArrayList<>();
     private static boolean isVictory = false;
     private static final int MOVE_STEP = 22; // Step size for each move
@@ -63,9 +63,9 @@ public class PacMan {
     private static Direction playerDirection = Direction.UP; // Define playerDirection
 
     // Initialize the matrix by copying the given pattern into it
-    private static void initializeMatrix(int[][] matrix, int[][] pattern) {
-        for (int i = 0; i < pattern.length; i++) {
-            System.arraycopy(pattern[i], 0, matrix[i], 0, pattern[i].length);
+    private static void initializeMatrix(int[][] targetMatrix, int[][] sourcePattern) {
+        for (int i = 0; i < sourcePattern.length; i++) {
+            System.arraycopy(sourcePattern[i], 0, targetMatrix[i], 0, sourcePattern[i].length);
         }
     }
 
@@ -148,8 +148,7 @@ public class PacMan {
         }
     }
 
-    // Check if the move is valid: the new position is within the matrix and not a
-    // wall
+    // Check if the move is valid: the new position is within the matrix and not a wall
     private static boolean isValidMove(int newRow, int newCol) {
         return newRow >= 0 && newRow < gameMatrix.length
                 && newCol >= 0 && newCol < gameMatrix[0].length
@@ -184,6 +183,7 @@ public class PacMan {
         }
     }
 
+    // Use A* algorithm to find the path to the player
     private static Point findPathToPlayer(int ghostRow, int ghostCol) {
         PriorityQueue<Node> openSet = new PriorityQueue<>(Comparator.comparingInt(n -> n.fCost));
         HashSet<Point> closedSet = new HashSet<>();
@@ -312,7 +312,6 @@ public class PacMan {
         images.put("Life", new String[] {
                 "/images/PacMan1.gif"
         });
-  
 
         // Create JFrame
         JFrame frame = new JFrame("PacMan Game");
@@ -326,20 +325,20 @@ public class PacMan {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
 
-                // 首先绘制所有的基础方块和图片
+                // First draw all the basic blocks and images
                 for (int row = 0; row < gameMatrix.length; row++) {
                     for (int col = 0; col < gameMatrix[row].length; col++) {
                         int x = col * MOVE_STEP;
                         int y = row * MOVE_STEP + PANEL_OFFSET;
 
-                        // 先填充黑色背景
+                        // First fill the black background
                         g.setColor(Color.BLACK);
                         g.fillRect(x, y, MOVE_STEP, MOVE_STEP);
 
-                        // 绘制其他元素
-                        if (gameMatrix[row][col] == 5) {  // 传送门
-                            g.drawImage(loadImageIcon(images.get("Portal")[0]).getImage(), 
-                                x, y, MOVE_STEP, MOVE_STEP, this);
+                        // Draw other elements
+                        if (gameMatrix[row][col] == 5) { // Portal
+                            g.drawImage(loadImageIcon(images.get("Portal")[0]).getImage(),
+                                    x, y, MOVE_STEP, MOVE_STEP, this);
                         } else if (gameMatrix[row][col] == 0) {
                             g.setColor(Color.YELLOW);
                             g.fillOval(x + MOVE_STEP * 7 / 16, y + MOVE_STEP * 7 / 16, MOVE_STEP / 8, MOVE_STEP / 8);
@@ -359,30 +358,30 @@ public class PacMan {
                     }
                 }
 
-                // 单独绘制所有的蓝色边界线
+                // Draw all the blue boundary lines separately
                 g.setColor(Color.BLUE);
                 for (int row = 0; row < gameMatrix.length; row++) {
                     for (int col = 0; col < gameMatrix[row].length; col++) {
                         int x = col * MOVE_STEP;
                         int y = row * MOVE_STEP + PANEL_OFFSET;
 
-                        // 检查当前格子是否是墙壁
+                        // Check if the current cell is a wall
                         boolean isWall = gameMatrix[row][col] == 1;
-                        
-                        // 检查上边界
-                        if (row > 0 && (isWall != (gameMatrix[row-1][col] == 1))) {
+
+                        // Check the upper boundary
+                        if (row > 0 && (isWall != (gameMatrix[row - 1][col] == 1))) {
                             g.drawLine(x, y, x + MOVE_STEP, y);
                         }
-                        // 检查下边界
-                        if (row < gameMatrix.length-1 && (isWall != (gameMatrix[row+1][col] == 1))) {
+                        // Check the lower boundary
+                        if (row < gameMatrix.length - 1 && (isWall != (gameMatrix[row + 1][col] == 1))) {
                             g.drawLine(x, y + MOVE_STEP, x + MOVE_STEP, y + MOVE_STEP);
                         }
-                        // 检查左边界
-                        if (col > 0 && (isWall != (gameMatrix[row][col-1] == 1))) {
+                        // Check the left boundary
+                        if (col > 0 && (isWall != (gameMatrix[row][col - 1] == 1))) {
                             g.drawLine(x, y, x, y + MOVE_STEP);
                         }
-                        // 检查右边界
-                        if (col < gameMatrix[row].length-1 && (isWall != (gameMatrix[row][col+1] == 1))) {
+                        // Check the right boundary
+                        if (col < gameMatrix[row].length - 1 && (isWall != (gameMatrix[row][col + 1] == 1))) {
                             g.drawLine(x + MOVE_STEP, y, x + MOVE_STEP, y + MOVE_STEP);
                         }
                     }
@@ -393,40 +392,40 @@ public class PacMan {
         String hintText = "What rewards do you get from sneaking a bite?";
         String scaredText = "Did the ghost just get scared?";
 
-        // 创建顶栏面板，使用绝对布局
-        JPanel topPanel = new JPanel(null); // 使用绝对布局
+        // Create top panel with absolute layout
+        JPanel topPanel = new JPanel(null); // Use absolute layout
         topPanel.setBackground(Color.BLACK);
         topPanel.setBounds(0, 0, 660, PANEL_OFFSET);
 
-        // 水果计数标签 - 左侧
+        // Fruit counter label - left side
         fruitCounterLabel = new JLabel("Fruits: " + collectedFruits);
         fruitCounterLabel.setFont(new Font("Arial", Font.BOLD, 16));
         fruitCounterLabel.setForeground(Color.YELLOW);
         fruitCounterLabel.setBounds(20, 10, 150, 20);
 
-        // 提示标签 - 中间
+        // Hint label - center
         hintLabel = new JLabel(hintText, SwingConstants.CENTER);
         hintLabel.setFont(new Font("Arial", Font.BOLD, 16));
         hintLabel.setForeground(Color.WHITE);
         hintLabel.setBounds(180, 10, 300, 20);
 
-        // 生命值标签 - 右侧
+        // Lives label - right side
         livesLabel = new JLabel("Lives: " + playerLives);
         livesLabel.setFont(new Font("Arial", Font.BOLD, 16));
         livesLabel.setForeground(Color.YELLOW);
         livesLabel.setBounds(500, 10, 80, 20);
 
-        // 生命值图标 - 最右侧
+        // Lives icon - far right
         JLabel livesIcon = new JLabel(loadImageIcon(images.get("Life")[0]));
         livesIcon.setBounds(580, 8, 24, 24);
 
-        // 添加所有组件到顶栏面板
+        // Add all components to the top panel
         topPanel.add(fruitCounterLabel);
         topPanel.add(hintLabel);
         topPanel.add(livesLabel);
         topPanel.add(livesIcon);
 
-        // 将顶栏面板添加到游戏面板
+        // Add the top panel to the game panel
         gamePanel.add(topPanel);
 
         // Add panel to the window
@@ -502,13 +501,13 @@ public class PacMan {
                 }
 
                 if (gameMatrix[newRow][newCol] == 5) {
-                    // 如果是左边的传送门
+                    // If it's the left portal
                     if (newCol == 0) {
-                        newCol = gameMatrix[0].length - 1;  // 传送到右边
-                    } 
-                    // 如果是右边的传送门
+                        newCol = gameMatrix[0].length - 1; // Teleport to the right
+                    }
+                    // If it's the right portal
                     else if (newCol == gameMatrix[0].length - 1) {
-                        newCol = 0;  // 传送到左边
+                        newCol = 0; // Teleport to the left
                     }
                 }
 
@@ -530,13 +529,12 @@ public class PacMan {
                             totalGhostCount--; // Decrease the ghost count
                             System.out.println(totalGhostCount);
                             if (totalGhostCount == 0) {
-                                if (isThirdLevel) {
-                                    if (isFourthLevel) {
-                                        isVictory = true;
-                                        gameOver();
-                                    }
+                                if (isFourthLevel) {
+                                    isVictory = true;
+                                    gameOver();
+                                } else if (isThirdLevel) {
                                     isFourthLevel = true;
-                                    reinitializeGameFourthLevel();
+                                    reinitializeGameThirdLevel();
                                 } else if (isSecondLevel) {
                                     isThirdLevel = true;
                                     reinitializeGameThirdLevel();
@@ -623,8 +621,7 @@ public class PacMan {
                 { 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0 },
                 { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 },
                 { 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-                { 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0 },
+                { 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0 },
                 { 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0 },
                 { 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1 },
                 { 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0 }
@@ -645,72 +642,72 @@ public class PacMan {
         final int INITIAL_PLAYER_COL = 14;
         final int GHOST_COUNT = 8;
         final int FRUIT_COUNT = 25;
-        
-        // 重要：设置总幽灵数
+
+        // Important: set the total number of ghosts
         totalGhostCount = GHOST_COUNT;
-        
+
         hintLabel.setText("Third level: Battle Royale! Survive if you can!");
 
-        // 清空地图，创建开放场地
+        // Clear the map and create an open field
         for (int i = 0; i < MATRIX_ROWS; i++) {
             for (int j = 0; j < MATRIX_COLS; j++) {
                 gameMatrix[i][j] = 0;
             }
         }
 
-        // 只在边缘设置墙壁
+        // Set walls only at the edges
         for (int i = 0; i < MATRIX_ROWS; i++) {
             gameMatrix[i][0] = 1;
-            gameMatrix[i][MATRIX_COLS-1] = 1;
+            gameMatrix[i][MATRIX_COLS - 1] = 1;
         }
         for (int j = 0; j < MATRIX_COLS; j++) {
             gameMatrix[0][j] = 1;
-            gameMatrix[MATRIX_ROWS-1][j] = 1;
+            gameMatrix[MATRIX_ROWS - 1][j] = 1;
         }
 
-        // 随机添加一些散布的墙壁作为掩体
+        // Randomly add some scattered walls as cover
         Random random = new Random();
-        int obstacleCount = 20;  // 障碍物数量
+        int obstacleCount = 20; // Number of obstacles
         for (int i = 0; i < obstacleCount; i++) {
             int row = random.nextInt(MATRIX_ROWS - 2) + 1;
             int col = random.nextInt(MATRIX_COLS - 2) + 1;
-            // 确保不会堵住玩家初始位置
+            // Ensure it doesn't block the player's initial position
             if (Math.abs(row - INITIAL_PLAYER_ROW) > 2 || Math.abs(col - INITIAL_PLAYER_COL) > 2) {
                 gameMatrix[row][col] = 1;
             }
         }
 
-        // 重置玩家位置
+        // Reset player position
         resetPlayerPosition(INITIAL_PLAYER_ROW, INITIAL_PLAYER_COL);
 
-        // 清空并重新生成幽灵，所有幽灵使用相同外观
+        // Clear and regenerate ghosts, all ghosts use the same appearance
         ghostList.clear();
         for (int i = 0; i < GHOST_COUNT; i++) {
             int ghostRow, ghostCol;
             do {
                 ghostRow = random.nextInt(MATRIX_ROWS - 2) + 1;
                 ghostCol = random.nextInt(MATRIX_COLS - 2) + 1;
-            } while (gameMatrix[ghostRow][ghostCol] != 0 || 
-                    (Math.abs(ghostRow - INITIAL_PLAYER_ROW) < 3 && 
-                     Math.abs(ghostCol - INITIAL_PLAYER_COL) < 3));
+            } while (gameMatrix[ghostRow][ghostCol] != 0 ||
+                    (Math.abs(ghostRow - INITIAL_PLAYER_ROW) < 3 &&
+                            Math.abs(ghostCol - INITIAL_PLAYER_COL) < 3));
 
             Ghost ghost = new Ghost(ghostRow, ghostCol);
-            ghost.setStatus("Ghost1");  // 所有幽灵使用相同外观
+            ghost.setStatus("Ghost1"); // All ghosts use the same appearance
             ghostList.add(ghost);
             gameMatrix[ghostRow][ghostCol] = 4;
         }
 
-        // 随机分布水果
+        // Randomly distribute fruits
         totalFruitCount = 0;
         for (int i = 0; i < FRUIT_COUNT; i++) {
             randomlyChangeZeroToTwo();
             totalFruitCount++;
         }
 
-        // 增加游戏难度
-        MOVE_DELAY = 100;  // 加快移动速度
+        // Increase game difficulty
+        MOVE_DELAY = 100; // Speed up movement
 
-        // 更新UI
+        // Update UI
         updateUI();
         resetPlayerImage();
         gamePanel.repaint();
@@ -777,68 +774,5 @@ public class PacMan {
 
     private static ImageIcon loadImageIcon(String resourcePath) {
         return new ImageIcon(PacMan.class.getResource(resourcePath));
-    }
-
-    public static void reinitializeGameFourthLevel() {
-        final int INITIAL_PLAYER_ROW = 1;
-        final int INITIAL_PLAYER_COL = 1;
-        final int INITIAL_GHOST_ROW = 13;
-        final int INITIAL_GHOST_COL = 14;
-        final int GHOST_OFFSET = 3;
-        final int FRUIT_COUNT = 20;
-
-        hintLabel.setText("Final Level: The Ultimate Challenge!");
-
-        // Advanced maze pattern with teleport tunnels and special zones
-        int[][] newPattern = {
-                { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-                { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-                { 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1 },
-                { 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1 },
-                { 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1 },
-                { 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1 },
-                { 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1 },
-                { 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1 },
-                { 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0 },
-                { 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1 },
-                { 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1 },
-                { 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1 },
-                { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-                { 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1 },
-                { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-                { 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1 },
-                { 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1 },
-                { 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1 },
-                { 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1 },
-                { 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-                { 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1 },
-                { 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-                { 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1 },
-                { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-                { 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1 },
-                { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-                { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
-        };
-
-        initializeMatrix(gameMatrix, newPattern);
-
-        // Add teleport tunnels on row 9 and 19
-        gameMatrix[9][0] = 5;    // 左侧传送门
-        gameMatrix[9][28] = 5;   // 右侧传送门
-        gameMatrix[19][0] = 5;   // 左侧传送门
-        gameMatrix[19][28] = 5;  // 右侧传送门
-
-        resetPlayerPosition(INITIAL_PLAYER_ROW, INITIAL_PLAYER_COL);
-        resetGhostPositions(INITIAL_GHOST_ROW, INITIAL_GHOST_COL, GHOST_OFFSET);
-        generateFruits(FRUIT_COUNT);
-
-        // Increase game difficulty
-        MOVE_DELAY = 80; // Faster movement speed
-
-        updateUI();
-        resetPlayerImage();
-        gamePanel.repaint();
     }
 }

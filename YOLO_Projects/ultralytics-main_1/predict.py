@@ -4,4 +4,4 @@ from ultralytics import YOLO
 yolo = YOLO("./yolov8n.pt", task='detect')
 
 # 执行预测
-result = yolo(source='./ultralytics/assets/group.jpg', save=True, conf=0.05)
+result = yolo(source='./ultralytics/assets/tunnel.jpg', save=True, conf=0.05)
