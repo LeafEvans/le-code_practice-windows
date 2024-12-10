@@ -4,13 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.PriorityQueue;
-import java.util.HashSet;
-import java.util.Comparator;
-import java.util.Random;
+import javax.swing.Timer;
+import java.util.*;
 
 public class PacMan {
     // Game configuration constants
@@ -44,14 +39,29 @@ public class PacMan {
     private static int totalGhostCount = 0;
     private static boolean isSecondLevel = false;
     private static boolean isThirdLevel = false;
-    private static boolean isFourthLevel = false;
     private static final ArrayList<Ghost> ghostList = new ArrayList<>();
     private static boolean isVictory = false;
     private static final int MOVE_STEP = 22; // Step size for each move
 
     // Define direction enum
     public enum Direction {
-        UP, DOWN, LEFT, RIGHT
+        UP(-1, 0), DOWN(1, 0), LEFT(0, -1), RIGHT(0, 1);
+
+        private final int rowOffset;
+        private final int colOffset;
+
+        Direction(int rowOffset, int colOffset) {
+            this.rowOffset = rowOffset;
+            this.colOffset = colOffset;
+        }
+
+        public int getRowOffset() {
+            return rowOffset;
+        }
+
+        public int getColOffset() {
+            return colOffset;
+        }
     }
 
     private static int collectedFruits = 0; // Track the number of fruits eaten
@@ -148,7 +158,8 @@ public class PacMan {
         }
     }
 
-    // Check if the move is valid: the new position is within the matrix and not a wall
+    // Check if the move is valid: the new position is within the matrix and not a
+    // wall
     private static boolean isValidMove(int newRow, int newCol) {
         return newRow >= 0 && newRow < gameMatrix.length
                 && newCol >= 0 && newCol < gameMatrix[0].length
@@ -197,9 +208,9 @@ public class PacMan {
 
             closedSet.add(new Point(current.row, current.col));
 
-            for (int[] direction : new int[][] { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } }) {
-                int newRow = current.row + direction[0];
-                int newCol = current.col + direction[1];
+            for (Direction direction : Direction.values()) {
+                int newRow = current.row + direction.getRowOffset();
+                int newCol = current.col + direction.getColOffset();
 
                 if (!isValidMove(newRow, newCol) || closedSet.contains(new Point(newRow, newCol))) {
                     continue;
@@ -241,26 +252,41 @@ public class PacMan {
         }
     }
 
+    private static boolean victoryWindowShown = false;
+
     public static void gameOver() {
         if (!isVictory) {
             JOptionPane.showMessageDialog(null, "Game Over!", "Game Over", JOptionPane.INFORMATION_MESSAGE);
-            System.exit(0); // Exit the program
+            System.exit(0);
         } else {
-            // Create a custom victory screen
-            JLabel victoryLabel = new JLabel("Victory! Fruits eaten: " + collectedFruits, SwingConstants.CENTER);
-            victoryLabel.setFont(new Font("Arial", Font.PLAIN, 20)); // Use common font Arial
-
-            // Create a JFrame to display the message
+            // 确保胜利窗口只显示一次
+            if (victoryWindowShown) {
+                return;
+            }
+            victoryWindowShown = true;
+            
+            // 停止所有游戏活动
+            for (Ghost ghost : ghostList) {
+                ghost.setKilled(true);
+            }
+            totalGhostCount = 0;
+            
+            // 创建并显示胜利窗口
             JFrame victoryFrame = new JFrame("Victory!");
             victoryFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-            // Set layout and add JLabel
+            JLabel victoryLabel = new JLabel("Victory! Fruits eaten: " + collectedFruits, SwingConstants.CENTER);
+            victoryLabel.setFont(new Font("Arial", Font.PLAIN, 20));
+
             victoryFrame.setLayout(new BorderLayout());
             victoryFrame.add(victoryLabel, BorderLayout.CENTER);
 
-            // Set window size and center it
+            JButton closeButton = new JButton("Close Game");
+            closeButton.addActionListener(e -> System.exit(0));
+            victoryFrame.add(closeButton, BorderLayout.SOUTH);
+
             victoryFrame.setSize(400, 200);
-            victoryFrame.setLocationRelativeTo(null); // Center the window
+            victoryFrame.setLocationRelativeTo(null);
             victoryFrame.setVisible(true);
         }
     }
@@ -529,12 +555,9 @@ public class PacMan {
                             totalGhostCount--; // Decrease the ghost count
                             System.out.println(totalGhostCount);
                             if (totalGhostCount == 0) {
-                                if (isFourthLevel) {
+                                if (isThirdLevel) {
                                     isVictory = true;
                                     gameOver();
-                                } else if (isThirdLevel) {
-                                    isFourthLevel = true;
-                                    reinitializeGameThirdLevel();
                                 } else if (isSecondLevel) {
                                     isThirdLevel = true;
                                     reinitializeGameThirdLevel();

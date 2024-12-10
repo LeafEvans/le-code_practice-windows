@@ -1,14 +1,24 @@
 package cn.edu.scu.cs;
 
+/**
+ * Represents a ghost character in the game with position, status, and animation
+ * properties.
+ */
 public class Ghost {
-    private int rowPosition; // Row position of the ghost
-    private int columnPosition; // Column position of the ghost
-    private String currentStatus; // Status of the ghost ("Ghost1" or "Scared")
-    private int animationFrame; // Animation frame of the ghost
-    private boolean paused; // Whether the ghost is paused
-    private long pauseStartTimestamp; // Pause start time
-    private boolean killed = false; // Whether the ghost is killed
+    private int rowPosition; // The row position of the ghost on the grid
+    private int columnPosition; // The column position of the ghost on the grid
+    private String currentStatus; // The current status of the ghost, e.g., "Ghost1" or "Scared"
+    private int animationFrame; // The current animation frame of the ghost
+    private boolean paused; // Indicates if the ghost is currently paused
+    private long pauseStartTimestamp; // The timestamp when the ghost was paused
+    private boolean killed = false; // Indicates if the ghost has been killed
 
+    /**
+     * Constructs a new Ghost with specified row and column positions.
+     *
+     * @param rowPosition    the initial row position of the ghost
+     * @param columnPosition the initial column position of the ghost
+     */
     public Ghost(int rowPosition, int columnPosition) {
         this.rowPosition = rowPosition;
         this.columnPosition = columnPosition;
@@ -18,6 +28,7 @@ public class Ghost {
     }
 
     // Getter and Setter methods
+
     public int getRowPosition() {
         return rowPosition;
     }
@@ -73,6 +84,8 @@ public class Ghost {
     public void setPauseStartTimestamp(long pauseStartTimestamp) {
         this.pauseStartTimestamp = pauseStartTimestamp;
     }
+
+    // Additional methods for setting and getting properties
 
     public void setStatus(String status) {
         this.currentStatus = status;

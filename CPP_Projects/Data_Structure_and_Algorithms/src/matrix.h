@@ -1,7 +1,6 @@
 #ifndef _MATRIX_H_
 #define _MATRIX_H_
 #include <cmath>
-#include <initializer_list>
 #include <iostream>
 
 #include "array.h"

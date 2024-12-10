@@ -40,9 +40,9 @@ class CharString : public SqList<char> {
 
  private:
   int SaveData(const char* pData, int nDataLen);  // 保存数据
-  void GetNextVal(const CharString& csPat,
-                  int* arrNextVal) const;  // KMP算法辅助函数
-  void AppendZero();                       // 在字符串末尾添加'\0'
+  void GetNext(const CharString& csPat,
+               int* arrNext) const;  // KMP算法辅助函数
+  void AppendZero();                 // 在字符串末尾添加'\0'
 };
 
 // 辅助函数声明
@@ -166,26 +166,25 @@ inline int CharString::KMPIndex(const CharString& csPat, int nIdx) const {
     return nIdx;
   }
 
-  const char* pszPat = csPat.ToCStr();
-  int* arrNextVal = new int[nPatLen];
-  GetNextVal(csPat, arrNextVal);
+  const char* cszPat = csPat.ToCStr();
+  int* arrNext = new int[nPatLen];
+  GetNext(csPat, arrNext);
 
   int i = nIdx, j = 0;
   while (i < m_nDataLen) {
-    if (j == -1 || m_pData[i] == pszPat[j]) {
+    if (j == -1 || m_pData[i] == cszPat[j]) {
       ++i;
       ++j;
     } else {
-      j = arrNextVal[j];
+      j = arrNext[j];
     }
 
     if (j == nPatLen) {
-      delete[] arrNextVal;
       return i - j;
     }
   }
 
-  delete[] arrNextVal;
+  delete[] arrNext;
   return -1;
 }
 
@@ -405,30 +404,27 @@ inline int CharString::SaveData(const char* pData, int nDataLen) {
   return nIdx;
 }
 
-inline void CharString::GetNextVal(const CharString& csPat,
-                                   int* arrNextVal) const {
+inline void CharString::GetNext(const CharString& csPat, int* arrNext) const {
   int nPatLen = csPat.Length();
-  const char* pszPat = csPat.ToCStr();
-  arrNextVal[0] = -1;
-  arrNextVal[1] = 0;
+  const char* cszPat = csPat.ToCStr();
+  arrNext[0] = -1;
+  arrNext[1] = 0;
   int i = 2;
   int k = 0;
 
   while (i < nPatLen) {
-    if (k == -1 || pszPat[i - 1] == pszPat[k]) {
-      arrNextVal[i] = k + 1;
+    if (k == -1 || cszPat[i - 1] == cszPat[k]) {
+      arrNext[i] = k + 1;
       ++i;
       ++k;
     } else {
-      k = arrNextVal[k];
+      k = arrNext[k];
     }
   }
 }
 
 inline void CharString::AppendZero() {
-  if (m_nDataLen >= m_nBufferLen) {
-    Reserve(m_nDataLen * 2 + 8);
-  }
+  if (m_nDataLen >= m_nBufferLen) Reserve(m_nDataLen * 2 + 8);
   m_pData[m_nDataLen] = '\0';
 }
 

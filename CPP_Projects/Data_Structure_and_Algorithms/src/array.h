@@ -5,6 +5,7 @@
 #include <cstdarg>
 #include <stdexcept>
 
+
 template <class ElemType>
 class Array {
  public:
@@ -30,7 +31,7 @@ Array<ElemType>::Array(int nDim, ...) {
   if (nDim < 0) {
     throw std::runtime_error(
         "Invalid array dimension: Expected a positive dimension, but got " +
-        std::to_string(nDim) + ".");
+        to_string(nDim) + ".");
   }
 
   m_nDim = nDim;
@@ -139,7 +140,7 @@ template <typename ElemType>
 int Array<ElemType>::Locate(int nSub0, va_list& pvaList) const {
   if (nSub0 < 0 || nSub0 >= m_pBounds[0]) {
     throw std::runtime_error("Out of bound in dimension 0: " +
-                             std::to_string(nSub0));
+                             to_string(nSub0));
   }
 
   int nIdx = m_pConstants[0] * nSub0;
@@ -148,8 +149,8 @@ int Array<ElemType>::Locate(int nSub0, va_list& pvaList) const {
     int nSub = va_arg(pvaList, int);
 
     if (nSub < 0 || nSub > m_pBounds[i]) {
-      throw std::runtime_error("Out of bound in dimension " +
-                               std::to_string(i) + ": " + std::to_string(nSub));
+      throw std::runtime_error("Out of bound in dimension " + to_string(i) +
+                               ": " + to_string(nSub));
     }
 
     nIdx += m_pConstants[i] * nSub;

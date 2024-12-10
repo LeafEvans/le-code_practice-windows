@@ -6,18 +6,19 @@
 #include <stdexcept>
 
 #include "list_base.h"
-
+namespace naSqList {
 const int kDefaultSize = 32;
+};  // namespace naSqList
 
 template <class ElemType>
 class SqList : public ListBase<ElemType> {
  public:
-  SqList(int nBufferLen = kDefaultSize);  // 构造函数
-  SqList(const SqList<ElemType>& slSrc);  // 拷贝构造函数
-  ~SqList();                              // 析构函数
-  int Length() const;                     // 获取线性表中元素个数
-  bool IsEmpty() const;                   // 判断线性表是否为空
-  void Clear();                           // 清空线性表
+  SqList(int nBufferLen = naSqList::kDefaultSize);  // 构造函数
+  SqList(const SqList<ElemType>& slSrc);            // 拷贝构造函数
+  ~SqList();                                        // 析构函数
+  int Length() const;    // 获取线性表中元素个数
+  bool IsEmpty() const;  // 判断线性表是否为空
+  void Clear();          // 清空线性表
   bool GetElem(int nIdx, ElemType& tElem) const;  // 获取指定位置元素
   bool SetElem(int nIdx, const ElemType& tElem);  // 设置指定元素元素
   bool Delete(int nIdx, ElemType& tElem);         // 删除指定位置元素
@@ -187,7 +188,14 @@ bool SqList<ElemType>::Insert(int nIdx, const ElemType& tElem) {
   if (nIdx <= m_nDataLen - 1) {
     std::copy_backward(m_pData + nIdx, m_pData + m_nDataLen,
                        m_pData + m_nDataLen + 1);
+    m_pData[nIdx] = tElem;
+    ++m_nDataLen;
+  } else {
+    nIdx = m_nDataLen;
+    m_pData[nIdx] = tElem;
+    ++m_nDataLen;
   }
+  return true;
 }
 
 template <class ElemType>

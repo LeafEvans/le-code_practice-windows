@@ -3,7 +3,9 @@
 #include <algorithm>
 #include <stdexcept>
 
+namespace naDynamicArray {
 const int kDefaultSize = 4;
+}  // namespace naDynamicArray
 
 template <class ElemType>
 class DynamicArray {
@@ -38,8 +40,8 @@ class DynamicArray {
 // 动态数组实现代码
 template <class ElemType>
 DynamicArray<ElemType>::DynamicArray()
-    : m_pData(new ElemType[kDefaultSize]),
-      m_nBufferLen(kDefaultSize),
+    : m_pData(new ElemType[naDynamicArray::kDefaultSize]),
+      m_nBufferLen(naDynamicArray::kDefaultSize),
       m_nDataLen(0) {
   std::fill_n(m_pData, m_nBufferLen, ElemType());
 }

@@ -2,12 +2,16 @@
 #define _SQ_STACK_H_
 #include "sq_list.h"
 
+namespace naSqStack {
+const int kDefaultSize = 32;
+};  // namespace naSqStack
+
 template <class ElemType>
 class SqStack : private SqList<ElemType> {
  public:
-  SqStack(int nBufferLen = kDefaultSize);   // 默认构造函数
-  SqStack(const SqStack<ElemType>& ssSrc);  // 拷贝构造函数
-  ~SqStack();                               // 析构函数
+  SqStack(int nBufferLen = naSqStack::kDefaultSize);  // 默认构造函数
+  SqStack(const SqStack<ElemType>& ssSrc);            // 拷贝构造函数
+  ~SqStack();                                         // 析构函数
 
   // 重载接口
   int Length() const;    // 获取顺序栈中元素个数

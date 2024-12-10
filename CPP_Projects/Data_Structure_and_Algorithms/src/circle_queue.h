@@ -3,13 +3,15 @@
 
 #include <algorithm>
 
+namespace naCircleQueue {
 const int kDefaultSize = 32;
+}  // namespace naCircleQueue
 
 template <typename ElemType>
 class CircleQueue {
  public:
   // 构造函数，指定初始缓冲区大小，默认为kDefaultSize
-  CircleQueue(int nBufferLen = kDefaultSize);
+  CircleQueue(int nBufferLen = naCircleQueue::kDefaultSize);
   CircleQueue(const CircleQueue<ElemType>& cqSrc);  // 拷贝构造函数
   ~CircleQueue();  // 析构函数，释放动态分配的内存
 

@@ -3,7 +3,7 @@
 #include <iostream>
 
 #include "lk_list_base.h"
-#include "ref_gen_node.h"
+#include "node.h"
 
 template <typename ElemType>
 class RefGenList : private LkListBase<ElemType, RefGenNode<ElemType>> {
@@ -157,7 +157,7 @@ void RefGenList<ElemType>::CopyAux(const RefGenNode<ElemType>* pSrcHead,
     if (pSrcCurr->m_eTag == _LIST) {
       CopyAux(pSrcCurr->m_pSub, pDesCurr->m_pSub);
     } else {
-      pDesCurr->m_tData = pSrcCurr->m_tData;
+      pDesCurr->m_tElem = pSrcCurr->m_tElem;
     }
   }
 }
@@ -175,7 +175,7 @@ void RefGenList<ElemType>::ShowAux(RefGenNode<ElemType>* pHeadNode) const {
     }
 
     if (pNode->m_eTag == _ATOM) {
-      std::cout << pNode->m_tData;
+      std::cout << pNode->m_tElem;
     } else {
       ShowAux(pNode->m_pSub);
     }
@@ -226,7 +226,7 @@ void RefGenList<ElemType>::CreateAux(RefGenNode<ElemType>*& pFirstNode) {
       ElemType tData;
       std::cin >> tData;
       pFirstNode = new RefGenNode<ElemType>(_ATOM);
-      pFirstNode->m_tData = tData;
+      pFirstNode->m_tElem = tData;
 
       std::cin >> chElem;
       // 处理原子元素后是否有','分隔符

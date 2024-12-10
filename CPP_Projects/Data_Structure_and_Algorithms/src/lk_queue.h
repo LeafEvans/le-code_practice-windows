@@ -5,9 +5,9 @@
 template <class ElemType>
 class LkQueue : private SimpleLkList<ElemType> {
  public:
-  LkQueue();                                  // 构造函数
+  LkQueue();                                // 构造函数
   LkQueue(const LkQueue<ElemType>& lqSrc);  // 默认构造函数
-  ~LkQueue();                                 // 析构函数
+  ~LkQueue();                               // 析构函数
 
   // 重载接口
   int Length() const;    // 获取链式队列中元素个数
@@ -67,8 +67,7 @@ inline bool LkQueue<ElemType>::OutQueue() {
   if (IsEmpty()) {
     return false;  // 安全性检测
   }
-  ElemType tElem = ElemType();
-  return this->Delete(0, tElem);
+  return this->Delete(0, ElemType());
 }
 
 template <class ElemType>
