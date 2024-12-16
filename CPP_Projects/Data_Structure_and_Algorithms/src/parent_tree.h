@@ -25,11 +25,11 @@ class ParentTree : public TreeBase<ElemType, int>,
   virtual int GetRoot() const;
   virtual bool IsEmpty() const;
   virtual bool NodeIsEmpty(int nNode) const;
-  virtual bool GetElem(const int nNode, ElemType& tElem) const;
+  virtual bool GetElem(int nNode, ElemType& tElem) const;
   virtual bool SetElem(int nNode, const ElemType& tElem);
-  virtual int GetFirstChild(const int nNode) const;
-  virtual int GetRightSibling(const int nNode) const;
-  virtual int GetParent(const int nNode) const;
+  virtual int GetFirstChild(int nNode) const;
+  virtual int GetRightSibling(int nNode) const;
+  virtual int GetParent(int nNode) const;
 
  private:
   virtual ElemType GetNode(int nNode) const;
@@ -61,7 +61,6 @@ bool ParentTree<ElemType>::IsEmpty() const {
 template <class ElemType>
 bool ParentTree<ElemType>::GetElem(int nNode, ElemType& tElem) const {
   if (nNode < 0 || nNode >= this->m_nDataLen) return false;
-
   tElem = this->m_pData[nNode].m_tElem;
   return true;
 }
@@ -97,7 +96,7 @@ int ParentTree<ElemType>::GetRightSibling(int nNode) const {
 }
 
 template <class ElemType>
-int ParentTree<ElemType>::GetParent(const int nNode) const {
+int ParentTree<ElemType>::GetParent(int nNode) const {
   return (nNode < 0 || nNode >= this->m_nDataLen)
              ? -1
              : this->m_pData[nNode].m_nParent;
@@ -134,8 +133,7 @@ int ParentTree<ElemType>::CreateChildNode(int nNode, int nIdx,
 
   if (nChild != -1) {  // 在中间位置插入新节点
     // 将nChild及其后的节点向后移动一个位置
-    std::copy(this->m_pData + nChild,
-              this->m_pData + nChild + this->m_nDataLen - nChild,
+    std::copy(this->m_pData + nChild, this->m_pData + this->m_nDataLen,
               this->m_pData + nChild + 1);
 
     // 更新受影响节点的父节点索引
@@ -180,30 +178,32 @@ ParentTree<ElemType>::ParentTree(const ElemType& tElem, int nBufferLen)
 
 template <class ElemType>
 void ParentTree<ElemType>::ClearRemovedNode() {
-  int* pData = new int[this->m_nDataLen];
+  int* arrPostions = new int[this->m_nDataLen];
   int j = 0;
 
-  for (int i = 0; i < this->m_nDataLen; ++i) {
-    if (this->m_pData[i].m_nParent != -2) {
-      pData[i] = j++;
-    } else {
-      pData[i] = -2;
+  for (int i = 0, j = 0; i < this->m_nDataLen; ++i) {
+    if (this->m_pData[i].m_nParent == -2) {
+      arrPostions[i] = -2;
+      continue;
     }
+    arrPostions[i] = j++;
   }
 
-  for (int i = 0; i < this->m_nDataLen; ++i) {
-    if (this->m_pData[i].m_nParent != -2) {
-      if (j != i) this->m_pData[j] = this->m_pData[i];
+  for (int i = 0, j = 0; i < this->m_nDataLen; ++i) {
+    if (this->m_pData[i].m_nParent == -2) continue;
 
-      if (this->m_pData[j].m_nParent >= 0) {
-        this->m_pData[j].m_nParent = pData[this->m_pData[j].m_nParent];
-      }
-
-      ++j;
+    if (j != i) {
+      this->m_pData[j] = this->m_pData[i];
     }
+
+    if (this->m_pData[j].m_nParent >= 0) {
+      this->m_pData[j].m_nParent = arrPostions[this->m_pData[j].m_nParent];
+    }
+
+    ++j;
   }
 
-  delete[] pData;
+  delete[] arrPostions;
   this->m_nDataLen = j;
 }
 
