@@ -1,5 +1,5 @@
-#ifndef _THREAD_BIN_TREE_H_
-#define _THREAD_BIN_TREE_H_
+#ifndef THREAD_BIN_TREE_H_
+#define THREAD_BIN_TREE_H_
 #include "lk_bin_tree_base.h"
 #include "node.h"
 
@@ -64,7 +64,8 @@ template <class ElemType>
 void ThreadBinTree<ElemType>::LinkParentChild(
     ThreadBinTreeNode<ElemType>* pParent, ThreadBinTreeNode<ElemType>* pChild,
     bool bLeft) {
-  if (!pParent) return;  // 如果父节点为空，直接返回
+  if (!pParent)
+    return;  // 如果父节点为空，直接返回
 
   if (bLeft) {
     pParent->m_pLeft = pChild;  // 设置左子节点
@@ -139,7 +140,8 @@ void ThreadBinTree<ElemType>::PostOrder(void (*pVisit)(const ElemType&)) const {
     return;
   }
 
-  if (!this->GetRoot()) return;  // 如果根节点为空，直接返回
+  if (!this->GetRoot())
+    return;  // 如果根节点为空，直接返回
 
   ThreadBinTreeNode<ElemType>* pNode = this->GetRoot();  // 获取根节点
 
@@ -206,7 +208,8 @@ template <class ElemType>
 void ThreadBinTree<ElemType>::PreThreadAux(
     ThreadBinTreeNode<ElemType>* pNode,
     ThreadBinTreeNode<ElemType>*& pPreNode) {
-  if (!pNode) return;  // 空节点直接返回
+  if (!pNode)
+    return;  // 空节点直接返回
 
   if (!GetLeftChild(pNode)) {        // 左孩子为空
     pNode->m_pLeft = pPreNode;       // 设置左孩子为前驱节点
@@ -234,10 +237,12 @@ template <class ElemType>
 void ThreadBinTree<ElemType>::InThreadAux(
     ThreadBinTreeNode<ElemType>* pNode,
     ThreadBinTreeNode<ElemType>*& pPreNode) {
-  if (!pNode) return;  // 如果节点为空，直接返回
+  if (!pNode)
+    return;  // 如果节点为空，直接返回
 
   // 线索化左子树
-  if (pNode->m_eLeftTag == CHILD_PTR) InThreadAux(pNode->m_pLeft, pPreNode);
+  if (pNode->m_eLeftTag == CHILD_PTR)
+    InThreadAux(pNode->m_pLeft, pPreNode);
 
   // 如果左孩子为空，设置前驱节点
   if (!GetLeftChild(pNode)) {
@@ -254,14 +259,16 @@ void ThreadBinTree<ElemType>::InThreadAux(
   pPreNode = pNode;  // 更新前驱节点
 
   // 线索化右子树
-  if (pNode->m_eRightTag == CHILD_PTR) InThreadAux(pNode->m_pRight, pPreNode);
+  if (pNode->m_eRightTag == CHILD_PTR)
+    InThreadAux(pNode->m_pRight, pPreNode);
 }
 
 template <class ElemType>
 void ThreadBinTree<ElemType>::PostThreadAux(
     ThreadBinTreeNode<ElemType>* pNode,
     ThreadBinTreeNode<ElemType>*& pPreNode) {
-  if (pNode) return;  // 如果节点不为空，则直接返回
+  if (pNode)
+    return;  // 如果节点不为空，则直接返回
 
   if (pNode->m_eLeftTag == CHILD_PTR) {
     PostThreadAux(pNode->m_pLeft, pPreNode);  // 线索化左子树
@@ -283,4 +290,4 @@ void ThreadBinTree<ElemType>::PostThreadAux(
 
   pPreNode = pNode;  // 更新前驱节点
 }
-#endif  // _THREAD_BIN_TREE_H_
+#endif  // THREAD_BIN_TREE_H_

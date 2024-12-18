@@ -1,5 +1,5 @@
-#ifndef __TRIPLE_H__
-#define __TRIPLE_H__
+#ifndef TRIPLE_H_
+#define TRIPLE_H_
 
 typedef union {
   unsigned int u32Key;
@@ -36,4 +36,4 @@ Triple<ElemType>::Triple(int nRow, int nCol, const ElemType& tValue) {
   ePos.stPos.u16Col = nCol;
   this->tValue = tValue;
 }
-#endif  // __TRIPLE_H__
+#endif  // TRIPLE_H_

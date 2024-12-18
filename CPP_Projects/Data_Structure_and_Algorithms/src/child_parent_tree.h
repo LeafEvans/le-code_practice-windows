@@ -1,7 +1,6 @@
-#ifndef _CHILD_PARENT_TREE_H_
-#define _CHILD_PARENT_TREE_H_
+#ifndef CHILD_PARENT_TREE_H_
+#define CHILD_PARENT_TREE_H_
 #include <float.h>
-
 #include "child_parent_tree_node.h"
 #include "simple_lk_list.h"
 #include "sq_list.h"
@@ -114,7 +113,8 @@ int ChildParentTree<ElemType>::GetFirstChild(int nNode) const {
     return -1;
   }
 
-  if (this->m_pData[nNode].m_sllSub.IsEmpty()) return -1;
+  if (this->m_pData[nNode].m_sllSub.IsEmpty())
+    return -1;
 
   int nChild;
   this->m_pData[nNode].m_sllSub.GetElem(0, nChild);
@@ -131,13 +131,15 @@ bool ChildParentTree<ElemType>::NodeIsEmpty(int nNode) const {
 template <class ElemType>
 int ChildParentTree<ElemType>::GetRightSibling(int nNode) const {
   // 检查当前节点是否有效
-  if (NodeIsEmpty(nNode)) return -1;
+  if (NodeIsEmpty(nNode))
+    return -1;
 
   // 获取父节点
   int nParent = this->m_pData[nNode].nParent;
 
   // 检查父节点是否有效
-  if (NodeIsEmpty(nParent)) return -1;
+  if (NodeIsEmpty(nParent))
+    return -1;
 
   // 获取父节点的子节点链表
   SimpleLkList<int>* psllSub = &(this->m_pData[nParent].m_sllSub);
@@ -177,7 +179,8 @@ ElemType ChildParentTree<ElemType>::GetNode(int nNode) const {
 // 释放节点实现
 template <class ElemType>
 void ChildParentTree<ElemType>::ReleaseNode(int& nNode) {
-  if (NodeIsEmpty(nNode)) return;
+  if (NodeIsEmpty(nNode))
+    return;
   this->m_pElemData[nNode].parent = -2;  // 标记为已删除
 }
 
@@ -213,7 +216,8 @@ int ChildParentTree<ElemType>::CreateChildNode(int nNode, int nIdx,
 
     // 更新子节点链表
     for (int i = 0; i <= this->m_nDataLen; ++i) {
-      if (i == nChild) continue;
+      if (i == nChild)
+        continue;
 
       SimpleLkList<ElemType>* psllSub = *(this->m_pData[i].m_sllSub);
       psllSub->Head();
@@ -248,7 +252,8 @@ int ChildParentTree<ElemType>::RemoveChild(int nParent, int nIdx) {
   int nChild = -1;
   // 获取父节点的子节点链表
   SimpleLkList<int>* psllSub = &(this->m_pData[nParent].m_sllSub);
-  if (!psllSub->Delete(nIdx, nChild)) nChild = -1;
+  if (!psllSub->Delete(nIdx, nChild))
+    nChild = -1;
 
   return nChild;
 }
@@ -271,10 +276,12 @@ void ChildParentTree<ElemType>::ClearRemovedNode() {
 
   // 第二遍扫描:整理节点并更新关系
   for (int i = 0, j = 0; i < this->m_nDataLen; ++i) {
-    if (this->m_pData[i].m_nParent == -2) continue;
+    if (this->m_pData[i].m_nParent == -2)
+      continue;
 
     // 移动节点
-    if (j != i) this->m_pData[j] = this->m_pData[i];
+    if (j != i)
+      this->m_pData[j] = this->m_pData[i];
 
     // 更新父节点索引
     if (this->m_pData[j].m_nParent >= 0) {
@@ -367,4 +374,4 @@ ChildParentTree<ElemType>& ChildParentTree<ElemType>::operator=(
   }
   return *this;
 }
-#endif  // _CHILD_PARENT_TREE_H_
+#endif  // CHILD_PARENT_TREE_H_

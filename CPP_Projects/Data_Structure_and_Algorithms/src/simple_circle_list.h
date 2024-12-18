@@ -1,5 +1,5 @@
-#ifndef _SIMPLE_CIRCLE_LIST_H_
-#define _SIMPLE_CIRCLE_LIST_H_
+#ifndef SIMPLE_CIRCLE_LIST_H_
+#define SIMPLE_CIRCLE_LIST_H_
 
 #include "circle_list_base.h"
 #include "node.h"
@@ -13,7 +13,8 @@ class SimpleCircleList : public CircleListBase<ElemType, Node<ElemType>> {
 
  protected:
   // 链接两个节点
-  virtual bool Link(Node<ElemType>* pPreNode, Node<ElemType>* pNextNode) override;
+  virtual bool Link(Node<ElemType>* pPreNode,
+                    Node<ElemType>* pNextNode) override;
 };
 
 template <class ElemType>
@@ -40,4 +41,4 @@ bool SimpleCircleList<ElemType>::Link(Node<ElemType>* pPreNode,
   return true;
 }
 
-#endif  // _SIMPLE_CIRCLE_LIST_H_
+#endif  // SIMPLE_CIRCLE_LIST_H_

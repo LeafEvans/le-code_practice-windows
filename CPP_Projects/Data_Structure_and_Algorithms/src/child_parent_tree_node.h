@@ -1,5 +1,5 @@
-#ifndef __CHILD_PARENT_TREE_NODE_H__
-#define __CHILD_PARENT_TREE_NODE_H__
+#ifndef CHILD_PARENT_TREE_NODE_H_
+#define CHILD_PARENT_TREE_NODE_H_
 #include "simple_lk_list.h"
 
 template <class ElemType>
@@ -13,4 +13,4 @@ struct ChildParentTreeNode {
       : m_tElem(tElem), m_nParent(nParent) {}
 };
 
-#endif  // __CHILD_PARENT_TREE_NODE_H__
+#endif  // CHILD_PARENT_TREE_NODE_H_

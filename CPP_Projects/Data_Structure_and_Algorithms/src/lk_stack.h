@@ -1,5 +1,5 @@
-#ifndef _LK_STACK_H_
-#define _LK_STACK_H_
+#ifndef LK_STACK_H_
+#define LK_STACK_H_
 
 #include "simple_lk_list.h"
 
@@ -88,4 +88,4 @@ bool LkStack<ElemType>::Pop() {
   return this->Delete(0, tElem);  // 删除栈顶元素
 }
 
-#endif  // _LK_STACK_H_
+#endif  // LK_STACK_H_

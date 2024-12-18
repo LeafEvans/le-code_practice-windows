@@ -1,10 +1,9 @@
-#ifndef _ARRAY_H_
-#define _ARRAY_H_
+#ifndef ARRAY_H_
+#define ARRAY_H_
 #include <memory.h>
 
 #include <cstdarg>
 #include <stdexcept>
-
 
 template <class ElemType>
 class Array {
@@ -31,7 +30,7 @@ Array<ElemType>::Array(int nDim, ...) {
   if (nDim < 0) {
     throw std::runtime_error(
         "Invalid array dimension: Expected a positive dimension, but got " +
-        to_string(nDim) + ".");
+        std::to_string(nDim) + ".");
   }
 
   m_nDim = nDim;
@@ -60,17 +59,23 @@ Array<ElemType>::Array(int nDim, ...) {
 
 template <class ElemType>
 Array<ElemType>::~Array() {
-  if (m_pData) delete[] m_pData;
-  if (m_pBounds) delete[] m_pBounds;
-  if (m_pConstants) delete[] m_pConstants;
+  if (m_pData)
+    delete[] m_pData;
+  if (m_pBounds)
+    delete[] m_pBounds;
+  if (m_pConstants)
+    delete[] m_pConstants;
 }
 
 template <class ElemType>
 Array<ElemType>::Array(const Array<ElemType>& arrSrc) {
   if (&arrSrc != this) {
-    if (m_pData) delete[] m_pData;
-    if (m_pBounds) delete[] m_pBounds;
-    if (m_pConstants) delete[] m_pConstants;
+    if (m_pData)
+      delete[] m_pData;
+    if (m_pBounds)
+      delete[] m_pBounds;
+    if (m_pConstants)
+      delete[] m_pConstants;
 
     m_nDim = arrSrc.m_nDim;
 
@@ -112,9 +117,12 @@ ElemType* Array<ElemType>::ElemAddress(int nSub0, ...) const {
 template <class ElemType>
 Array<ElemType>& Array<ElemType>::operator=(const Array<ElemType>& arrSrc) {
   if (&arrSrc != this) {
-    if (m_pData) delete[] m_pData;
-    if (m_pBounds) delete[] m_pBounds;
-    if (m_pConstants) delete[] m_pConstants;
+    if (m_pData)
+      delete[] m_pData;
+    if (m_pBounds)
+      delete[] m_pBounds;
+    if (m_pConstants)
+      delete[] m_pConstants;
 
     m_nDim = arrSrc.m_nDim;
 
@@ -140,7 +148,7 @@ template <typename ElemType>
 int Array<ElemType>::Locate(int nSub0, va_list& pvaList) const {
   if (nSub0 < 0 || nSub0 >= m_pBounds[0]) {
     throw std::runtime_error("Out of bound in dimension 0: " +
-                             to_string(nSub0));
+                             std::to_string(nSub0));
   }
 
   int nIdx = m_pConstants[0] * nSub0;
@@ -149,8 +157,8 @@ int Array<ElemType>::Locate(int nSub0, va_list& pvaList) const {
     int nSub = va_arg(pvaList, int);
 
     if (nSub < 0 || nSub > m_pBounds[i]) {
-      throw std::runtime_error("Out of bound in dimension " + to_string(i) +
-                               ": " + to_string(nSub));
+      throw std::runtime_error("Out of bound in dimension " +
+                               std::to_string(i) + ": " + std::to_string(nSub));
     }
 
     nIdx += m_pConstants[i] * nSub;
@@ -158,4 +166,4 @@ int Array<ElemType>::Locate(int nSub0, va_list& pvaList) const {
 
   return nIdx;
 }
-#endif  // _ARRAY_H_
+#endif  // ARRAY_H_

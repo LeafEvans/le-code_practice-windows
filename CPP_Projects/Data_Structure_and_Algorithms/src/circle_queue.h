@@ -1,5 +1,5 @@
-#ifndef _CIRCLE_QUEUE_H_
-#define _CIRCLE_QUEUE_H_
+#ifndef CIRCLE_QUEUE_H_
+#define CIRCLE_QUEUE_H_
 
 #include <algorithm>
 
@@ -52,7 +52,19 @@ inline CircleQueue<ElemType>::CircleQueue(int nBufferLen)
 
 template <typename ElemType>
 inline CircleQueue<ElemType>::CircleQueue(const CircleQueue<ElemType>& cqSrc) {
-  *this = cqSrc;  // 利用赋值运算符实现拷贝构造
+  if (this != &cqSrc) {
+
+    Clear();
+    if (m_nBufferLen != cqSrc.m_nBufferLen) {
+      delete[] m_pData;
+      m_pData = new ElemType[cqSrc.m_nBufferLen];
+      m_nBufferLen = cqSrc.m_nBufferLen;
+    }
+    m_nDataLen = cqSrc.m_nDataLen;
+    m_nFront = cqSrc.m_nFront;
+    m_nRear = cqSrc.m_nRear;
+    std::copy(cqSrc.m_pData, cqSrc.m_pData + m_nBufferLen, m_pData);
+  }
 }
 
 template <class ElemType>
@@ -144,21 +156,19 @@ inline bool CircleQueue<ElemType>::InQueue(const ElemType& tElem) {
 template <typename ElemType>
 inline CircleQueue<ElemType>& CircleQueue<ElemType>::operator=(
     const CircleQueue<ElemType>& cqSrc) {
-  if (this == &cqSrc) {
-    return *this;
-  }
+  if (this != &cqSrc) {
 
-  Clear();
-  if (m_nBufferLen != cqSrc.m_nBufferLen) {
-    delete[] m_pData;
-    m_pData = new ElemType[cqSrc.m_nBufferLen];
-    m_nBufferLen = cqSrc.m_nBufferLen;
+    Clear();
+    if (m_nBufferLen != cqSrc.m_nBufferLen) {
+      delete[] m_pData;
+      m_pData = new ElemType[cqSrc.m_nBufferLen];
+      m_nBufferLen = cqSrc.m_nBufferLen;
+    }
+    m_nDataLen = cqSrc.m_nDataLen;
+    m_nFront = cqSrc.m_nFront;
+    m_nRear = cqSrc.m_nRear;
+    std::copy(cqSrc.m_pData, cqSrc.m_pData + m_nBufferLen, m_pData);
   }
-  m_nDataLen = cqSrc.m_nDataLen;
-  m_nFront = cqSrc.m_nFront;
-  m_nRear = cqSrc.m_nRear;
-  std::copy(cqSrc.m_pData, cqSrc.m_pData + m_nBufferLen, m_pData);
-
   return *this;
 }
 
@@ -248,4 +258,4 @@ inline bool CircleQueue<ElemType>::Resize(int nSize) {
   return true;
 }
 
-#endif  // _CIRCLE_QUEUE_H_
+#endif  // CIRCLE_QUEUE_H_

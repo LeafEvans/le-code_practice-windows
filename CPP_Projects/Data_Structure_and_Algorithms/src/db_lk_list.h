@@ -1,22 +1,21 @@
-#ifndef _DB_LK_LIST_H_
-#define _DB_LK_LIST_H_
+#ifndef DB_LK_LIST_H_
+#define DB_LK_LIST_H_
 #include "lk_list_base.h"
 #include "node.h"
 
 template <class ElemType>
-
 class DbLkList : public LkListBase<ElemType, DbNode<ElemType>> {
  public:
-  DbLkList();                          // 默认构造函数
-  DbLkList(const DbLkList &dllSrc);  // 拷贝构造函数
-  ~DbLkList();                         // 析构函数
+  DbLkList();                        // 默认构造函数
+  DbLkList(const DbLkList& dllSrc);  // 拷贝构造函数
+  ~DbLkList();                       // 析构函数
 
   void Tail();                 // 将当前节点移动到尾节点
-  bool Prev(ElemType &tElem);  // 将当前节点移动到前驱节点并获取其元素值
+  bool Prev(ElemType& tElem);  // 将当前节点移动到前驱节点并获取其元素值
 
  protected:
   // 链接两个节点，实现双向链表的特性
-  virtual bool Link(DbNode<ElemType> *pPreNode, DbNode<ElemType> *pNextNode);
+  virtual bool Link(DbNode<ElemType>* pPreNode, DbNode<ElemType>* pNextNode);
 };
 
 template <class ElemType>
@@ -26,12 +25,12 @@ template <class ElemType>
 DbLkList<ElemType>::~DbLkList() {}
 
 template <class ElemType>
-DbLkList<ElemType>::DbLkList(const DbLkList &dllSrc)
+DbLkList<ElemType>::DbLkList(const DbLkList& dllSrc)
     : LkListBase<ElemType, DbNode<ElemType>>(dllSrc) {}
 
 template <class ElemType>
-bool DbLkList<ElemType>::Link(DbNode<ElemType> *pPreNode,
-                                DbNode<ElemType> *pNextNode) {
+bool DbLkList<ElemType>::Link(DbNode<ElemType>* pPreNode,
+                              DbNode<ElemType>* pNextNode) {
   if (!pPreNode) {
     return false;  // 前驱节点不能为空
   }
@@ -51,7 +50,7 @@ void DbLkList<ElemType>::Tail() {
 }
 
 template <class ElemType>
-bool DbLkList<ElemType>::Prev(ElemType &tElem) {
+bool DbLkList<ElemType>::Prev(ElemType& tElem) {
   if (!this->m_pCurrNode) {  // 当前节点不存在
     return false;
   }
@@ -65,4 +64,4 @@ bool DbLkList<ElemType>::Prev(ElemType &tElem) {
 
   return true;
 }
-#endif  // _DB_LK_LIST_H_
+#endif  // DB_LK_LIST_H_

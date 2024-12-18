@@ -1,74 +1,92 @@
-#ifndef _CHAR_STRING_H_
-#define _CHAR_STRING_H_
+#ifndef CHAR_STRING_H_
+#define CHAR_STRING_H_
 
-#include <cctype>   // 字符处理函数
-#include <cstdarg>  // 可变参数支持
-#include <cstdio>   // 标准输入输出
-#include <cstring>
-#include <iostream>  // 输入输出流
+#include <cctype>    // 字符处理函数库
+#include <cstdarg>   // 可变参数处理库
+#include <cstdio>    // 标准输入输出库
+#include <cstring>   // 字符串处理库
+#include <iostream>  // 输入输出流库
 
 #include "sq_list.h"  // 顺序表基类
 
-// 字符编码相关常量
-const int kForceANSI = 0x10000;     // 强制使用ANSI编码
-const int kForceUnicode = 0x20000;  // 强制使用Unicode编码
-const int kForceInt64 = 0x40000;    // 强制使用64位整数
+// 字符编码相关常量定义
+const int kForceANSI = 0x10000;     // 强制使用ANSI编码格式
+const int kForceUnicode = 0x20000;  // 强制使用Unicode编码格式
+const int kForceInt64 = 0x40000;    // 强制使用64位整数类型
 
-// 返回下一个字符的指针
-inline const char* NextChar(const char* pszInput) { return pszInput + 1; }
+// 返回指向下一个字符的指针
+inline const char* NextChar(const char* pszInput) {
+  return pszInput + 1;
+}
 
-// CharString类：实现字符串操作，继承自SqList<char>
+/**
+ * @brief CharString类 - 实现字符串的基本操作
+ * 继承自SqList<char>顺序表类,提供字符串的各种操作功能
+ */
 class CharString : public SqList<char> {
  public:
-  CharString();                         // 默认构造函数
-  CharString(const char* pszSrc);       // C风格字符串构造函数
+  // 构造与析构函数
+  CharString();                         // 默认构造函数,创建空字符串
+  CharString(const char* pszSrc);       // 使用C风格字符串构造
   CharString(const CharString& csSrc);  // 拷贝构造函数
   ~CharString();                        // 析构函数
+
+  // 运算符重载
   CharString& operator=(const CharString& csSrc);  // 赋值运算符
-  CharString& operator+=(const CharString& csSrc);  // 字符串拼接（CharString）
-  CharString& operator+=(const char* pszSrc);  // 字符串拼接（C风格字符串）
-  const char& operator[](int nIdx) const;        // 下标访问运算符
-  CharString& CopyN(const char* pszSrc, int n);  // 复制前n个字符
-  int Index(const CharString& csPat, int nIdx = 0) const;  // 子串查找
-  int KMPIndex(const CharString& csPat, int nIdx = 0) const;  // KMP算法子串查找
+  CharString& operator+=(const CharString& csSrc);  // 字符串拼接(CharString)
+  CharString& operator+=(const char* pszSrc);  // 字符串拼接(C风格字符串)
+  const char& operator[](int nIdx) const;      // 下标访问运算符
+
+  // 字符串操作方法
+  CharString& CopyN(const char* pszSrc, int n);  // 复制指定长度的字符串
+  int Index(const CharString& csPat,
+            int nIdx = 0) const;  // 朴素模式匹配查找子串
+  int KMPIndex(const CharString& csPat, int nIdx = 0) const;  // KMP算法查找子串
   const char* ToCStr() const;                  // 转换为C风格字符串
   void Format(const char* pszFormat, ...);     // 格式化字符串
   int Compare(const CharString& csSrc) const;  // 字符串比较
-  int AddTail(const char& chElem);             // 在尾部添加字符
-  bool Delete(int nIdx, char& chElem);         // 删除指定位置的字符
-  bool Insert(int nIdx, const char& chElem);   // 在指定位置插入字符
+
+  // 顺序表基本操作的重写
+  int AddTail(const char& chElem);            // 在尾部添加字符
+  bool Delete(int nIdx, char& chElem);        // 删除指定位置的字符
+  bool Insert(int nIdx, const char& chElem);  // 在指定位置插入字符
 
  private:
-  int SaveData(const char* pData, int nDataLen);  // 保存数据
+  int SaveData(const char* pData, int nDataLen);  // 保存字符串数据
   void GetNext(const CharString& csPat,
-               int* arrNext) const;  // KMP算法辅助函数
+               int* arrNext) const;  // KMP算法的Next数组计算
   void AppendZero();                 // 在字符串末尾添加'\0'
 };
 
 // 辅助函数声明
 CharString Read(std::istream& istrInput);  // 从输入流读取字符串
 CharString Read(std::istream& istrInput,
-                char& chTerminal);  // 从输入流读取字符串，直到遇到终止字符
-void Write(const CharString& csOutput);  // 将字符串写入输出流
-void Concat(CharString& csDes, const CharString& csSrc);  // 连接两个字符串
-void Copy(CharString& csDes, const CharString& csSrc);    // 复制字符串
+                char& chTerminal);       // 从输入流读取直到终止字符
+void Write(const CharString& csOutput);  // 输出字符串到标准输出
+void Concat(CharString& csDes, const CharString& csSrc);  // 字符串连接
+void Copy(CharString& csDes, const CharString& csSrc);    // 字符串复制
 void Copy(CharString& csDes, const CharString& csSrc,
-          int n);  // 复制指定长度的字符串
+          int n);  // 复制指定长度字符串
 int Index(const CharString& csDes, const CharString& csPat,
-          int nIdx = 0);  // 在字符串中查找子串
-CharString SubString(const CharString& csStr, int nIdx, int nLen);  // 提取子串
+          int nIdx = 0);  // 子串查找
+CharString SubString(const CharString& csStr, int nIdx, int nLen);  // 子串提取
 
-// 比较运算符重载
-bool operator==(const CharString& csFirst, const CharString& csSecond);
-bool operator<(const CharString& csFirst, const CharString& csSecond);
-bool operator>(const CharString& csFirst, const CharString& csSecond);
-bool operator<=(const CharString& csFirst, const CharString& csSecond);
-bool operator>=(const CharString& csFirst, const CharString& csSecond);
-bool operator!=(const CharString& csFirst, const CharString& csSecond);
+// 比较运算符重载声明
+bool operator==(const CharString& csFirst, const CharString& csSecond);  // 相等
+bool operator<(const CharString& csFirst, const CharString& csSecond);  // 小于
+bool operator>(const CharString& csFirst, const CharString& csSecond);  // 大于
+bool operator<=(const CharString& csFirst,
+                const CharString& csSecond);  // 小于等于
+bool operator>=(const CharString& csFirst,
+                const CharString& csSecond);  // 大于等于
+bool operator!=(const CharString& csFirst,
+                const CharString& csSecond);  // 不等于
 
 // 内联函数实现
 
-inline CharString::CharString() : SqList() { AppendZero(); }
+inline CharString::CharString() : SqList() {
+  AppendZero();
+}
 
 inline CharString::CharString(const char* pszSrc) {
   int nSrcLen = static_cast<int>(strlen(pszSrc));
@@ -161,45 +179,47 @@ inline int CharString::KMPIndex(const CharString& csPat, int nIdx) const {
   int nPatLen = csPat.Length();
 
   if (m_nDataLen - nIdx < nPatLen) {
-    return -1;
+    return -1;  // 模式串长度超出主串剩余长度
   } else if (nPatLen == 0) {
-    return nIdx;
+    return nIdx;  // 空模式串匹配任意位置
   }
 
   const char* cszPat = csPat.ToCStr();
-  int* arrNext = new int[nPatLen];
-  GetNext(csPat, arrNext);
+  int* arrNext = new int[nPatLen];  // 分配next数组空间
+  GetNext(csPat, arrNext);          // 计算next数组
 
-  int i = nIdx, j = 0;
+  int i = nIdx, j = 0;  // i为主串指针,j为模式串指针
   while (i < m_nDataLen) {
     if (j == -1 || m_pData[i] == cszPat[j]) {
-      ++i;
+      ++i;  // 字符匹配,两个指针都前进
       ++j;
     } else {
-      j = arrNext[j];
+      j = arrNext[j];  // 字符不匹配,模式串指针回退
     }
 
-    if (j == nPatLen) {
+    if (j == nPatLen) {  // 完全匹配
+      delete[] arrNext;
       return i - j;
     }
   }
 
   delete[] arrNext;
-  return -1;
+  return -1;  // 未找到匹配
 }
 
-inline const char* CharString::ToCStr() const { return m_pData; }
+inline const char* CharString::ToCStr() const {
+  return m_pData;
+}
 
 inline void CharString::Format(const char* pszFormat, ...) {
   va_list pvaList, pvaListSave;
   va_start(pvaList, pszFormat);
   va_copy(pvaListSave, pvaList);
 
-  // 计算格式化的最大长度
+  // 计算格式化后的字符串长度
   int nMaxLen = 0;
   for (const char* pszCurr = pszFormat; *pszCurr != '\0';
        pszCurr = NextChar(pszCurr)) {
-    // 获取下一个字符
     const char* pszNext = NextChar(pszCurr);
 
     if (*pszCurr != '%' || *pszNext == '%') {
@@ -209,7 +229,7 @@ inline void CharString::Format(const char* pszFormat, ...) {
 
     int nItemLen = 0;
 
-    // 解析宽度
+    // 解析格式说明符的各个组成部分
     int nWidth = 0;
     while (*pszCurr != '\0') {
       if (*pszCurr == '#') {
@@ -217,7 +237,7 @@ inline void CharString::Format(const char* pszFormat, ...) {
       } else if (*pszCurr == '*') {
         nWidth = va_arg(pvaList, int);
       } else if (*pszCurr == '-' || *pszCurr == '+' || *pszCurr == '0') {
-        // 忽略标志字符
+        // 跳过标志字符
       } else {
         break;
       }
@@ -273,9 +293,8 @@ inline void CharString::Format(const char* pszFormat, ...) {
       }
     }
 
-    // 根据格式说明符计算项目长度
+    // 根据格式说明符类型计算所需空间
     switch (*pszCurr | nModifier) {
-      // 字符类型
       case 'c':
       case 'C':
       case 'c' | kForceANSI:
@@ -286,7 +305,6 @@ inline void CharString::Format(const char* pszFormat, ...) {
         va_arg(pvaList, int);
       } break;
 
-      // 字符串类型
       case 's':
       case 'S':
       case 's' | kForceANSI:
@@ -295,12 +313,13 @@ inline void CharString::Format(const char* pszFormat, ...) {
       case 'S' | kForceUnicode: {
         const char* pszNextArg = va_arg(pvaList, const char*);
         if (!pszNextArg) {
-          nItemLen = 6;  // "(null)"
+          nItemLen = 6;  // "(null)"的长度
         } else {
           nItemLen = static_cast<int>(strlen(pszNextArg));
           nItemLen = std::max(1, nItemLen);
         }
-      } break;
+        break;
+      }
 
       default:
         break;
@@ -325,17 +344,17 @@ inline void CharString::Format(const char* pszFormat, ...) {
             va_arg(pvaList, int);
           }
           nItemLen = std::max(32, nWidth + nPrecision);
-        } break;
+          break;
+        }
 
-        // 浮点数
         case 'e':
         case 'g':
         case 'G': {
           va_arg(pvaList, double);
           nItemLen = std::max(128, nWidth + nPrecision);
-        } break;
+          break;
+        }
 
-        // 浮点数（固定精度）
         case 'f': {
           double fNum = va_arg(pvaList, double);
           int nBufferLen = std::max(nWidth, 312 + nPrecision + 6);
@@ -344,18 +363,19 @@ inline void CharString::Format(const char* pszFormat, ...) {
                         fNum);
           nItemLen = static_cast<int>(strlen(pszTemp));
           delete[] pszTemp;
-        } break;
+          break;
+        }
 
-        // 指针类型
         case 'p': {
           va_arg(pvaList, void*);
           nItemLen = std::max(32, nWidth + nPrecision);
-        } break;
+          break;
+        }
 
-        // 特殊情况：写入字符数
-        case 'n':
+        case 'n': {
           va_arg(pvaList, int*);
           break;
+        }
 
         default:
           break;
@@ -364,18 +384,16 @@ inline void CharString::Format(const char* pszFormat, ...) {
     nMaxLen += nItemLen;
   }
 
-  // 调整字符串大小并格式化
+  // 格式化字符串
   Reserve(nMaxLen + 1);
-
   m_nDataLen = vsnprintf(m_pData, nMaxLen + 1, pszFormat, pvaListSave);
+  m_pData[m_nDataLen] = 0;  // 确保字符串以空字符结尾
 
-  // 确保字符串以空字符结尾
-  m_pData[m_nDataLen] = 0;
   va_end(pvaListSave);
 }
 
 inline int CharString::Compare(const CharString& csSrc) const {
-  const char* pDes = ToCStr();
+  const char* pDes = this->ToCStr();
   const char* pSrc = csSrc.ToCStr();
   return strcmp(pDes, pSrc);
 }
@@ -407,31 +425,35 @@ inline int CharString::SaveData(const char* pData, int nDataLen) {
 inline void CharString::GetNext(const CharString& csPat, int* arrNext) const {
   int nPatLen = csPat.Length();
   const char* cszPat = csPat.ToCStr();
-  arrNext[0] = -1;
-  arrNext[1] = 0;
-  int i = 2;
-  int k = 0;
+
+  // KMP算法的Next数组计算
+  arrNext[0] = -1;  // 首字符的Next值为-1
+  arrNext[1] = 0;   // 第二个字符的Next值为0
+  int i = 2;        // 当前计算位置
+  int k = 0;        // 前缀位置
 
   while (i < nPatLen) {
     if (k == -1 || cszPat[i - 1] == cszPat[k]) {
-      arrNext[i] = k + 1;
+      arrNext[i] = k + 1;  // 找到匹配,更新Next值
       ++i;
       ++k;
     } else {
-      k = arrNext[k];
+      k = arrNext[k];  // 失配时回退
     }
   }
 }
 
 inline void CharString::AppendZero() {
-  if (m_nDataLen >= m_nBufferLen) Reserve(m_nDataLen * 2 + 8);
-  m_pData[m_nDataLen] = '\0';
+  if (m_nDataLen >= m_nBufferLen)
+    Reserve(m_nDataLen * 2 + 8);
+  m_pData[m_nDataLen] = '\0';  // 添加字符串结束符
 }
 
 inline CharString Read(std::istream& istrInput) {
   CharString csResult;
   char chCurrent;
 
+  // 读取直到遇到换行或文件结束
   while (istrInput.peek() != EOF &&
          (chCurrent = static_cast<char>(istrInput.get())) != '\n') {
     csResult.AddTail(chCurrent);
@@ -443,6 +465,7 @@ inline CharString Read(std::istream& istrInput, char& chTerminal) {
   CharString csResult;
   char chCurrent;
 
+  // 读取直到遇到终止字符
   while (istrInput.peek() != EOF &&
          (chCurrent = static_cast<char>(istrInput.get())) != '\n') {
     csResult.AddTail(chCurrent);
@@ -459,7 +482,9 @@ inline void Concat(CharString& csDes, const CharString& csSrc) {
   csDes += csSrc;
 }
 
-inline void Copy(CharString& csDes, const CharString& csSrc) { csDes = csSrc; }
+inline void Copy(CharString& csDes, const CharString& csSrc) {
+  csDes = csSrc;
+}
 
 inline void Copy(CharString& csDes, const CharString& csSrc, int n) {
   csDes.CopyN(csSrc.ToCStr(), n);
@@ -472,14 +497,16 @@ inline int Index(const CharString& csDes, const CharString& csPat, int nIdx) {
 inline CharString SubString(const CharString& csStr, int nIdx, int nLen) {
   CharString csSub;
 
+  // 参数合法性检查
   if (nIdx >= 0 && nIdx < csStr.Length() && nLen >= 0) {
-    nLen = std::min(nLen, csStr.Length() - nIdx);
+    nLen = std::min(nLen, csStr.Length() - nIdx);  // 确保不越界
     csSub.CopyN(csStr.ToCStr() + nIdx, nLen);
   }
 
   return csSub;
 }
 
+// 比较运算符实现
 inline bool operator==(const CharString& csFirst, const CharString& csSecond) {
   return csFirst.Compare(csSecond) == 0;
 }
@@ -504,4 +531,4 @@ inline bool operator!=(const CharString& csFirst, const CharString& csSecond) {
   return csFirst.Compare(csSecond) != 0;
 }
 
-#endif  // _CHAR_STRING_H_
+#endif  // CHAR_STRING_H_

@@ -1,5 +1,5 @@
-#ifndef _TRI_SPARSE_MATRIX_H_
-#define _TRI_SPARSE_MATRIX_H_
+#ifndef TRI_SPARSE_MATRIX_H_
+#define TRI_SPARSE_MATRIX_H_
 #include <memory.h>
 
 #include "matrix.h"
@@ -81,13 +81,15 @@ int TriSparseMatrix<ElemType>::GetNonZero() const {
 template <class ElemType>
 bool TriSparseMatrix<ElemType>::SetElem(int nRow, int nCol,
                                         const ElemType& tValue) {
-  if (nRow < 0 || nCol < 0 || nRow >= m_nRows || nCol >= m_nCols) return false;
+  if (nRow < 0 || nCol < 0 || nRow >= m_nRows || nCol >= m_nCols)
+    return false;
 
   bool bFound = false;
 
   int nIdx = Locate(nRow, nCol, bFound);
 
-  if (nIdx < 0) return false;
+  if (nIdx < 0)
+    return false;
 
   if (!bFound && tValue != 0) {
     this->Insert(nIdx, Triple<ElemType>(nRow, nCol, tValue));
@@ -102,13 +104,15 @@ bool TriSparseMatrix<ElemType>::SetElem(int nRow, int nCol,
 
 template <class ElemType>
 bool TriSparseMatrix<ElemType>::GetElem(int nRow, int nCol, ElemType& tValue) {
-  if (nRow < 0 || nCol < 0 || nRow >= m_nRows || nCol >= m_nCols) return false;
+  if (nRow < 0 || nCol < 0 || nRow >= m_nRows || nCol >= m_nCols)
+    return false;
 
   bool bFound = false;
 
   int nIdx = Locate(nRow, nCol, bFound);
 
-  if (nIdx < 0) return false;
+  if (nIdx < 0)
+    return false;
 
   if (!bFound) {
     tValue = 0;
@@ -235,7 +239,8 @@ template <class ElemType>
 int TriSparseMatrix<ElemType>::Locate(int nRow, int nCol, bool& bFound) {
   bFound = false;
 
-  if (nRow < 0 || nCol < 0 || nRow >= m_nRows || nCol >= m_nCols) return -1;
+  if (nRow < 0 || nCol < 0 || nRow >= m_nRows || nCol >= m_nCols)
+    return -1;
 
   int nSearchStart = 0;
   int nSearchEnd = GetNonZero() - 1;
@@ -244,7 +249,8 @@ int TriSparseMatrix<ElemType>::Locate(int nRow, int nCol, bool& bFound) {
   ePos.stPos.u16Row = nRow;
   ePos.stPos.u16Col = nCol;
 
-  if (ePos.u32Key < this->m_pData[nSearchStart].ePos.u32Key) return 0;
+  if (ePos.u32Key < this->m_pData[nSearchStart].ePos.u32Key)
+    return 0;
   if (ePos.u32Key > this->m_pData[nSearchEnd].ePos.u32Key) {
     return nSearchEnd + 1;
   }
@@ -280,5 +286,4 @@ int TriSparseMatrix<ElemType>::Locate(int nRow, int nCol, bool& bFound) {
   return nIdx;
 }
 
-
-#endif  // _TRI_SPARSE_MATRIX_H_
+#endif  // TRI_SPARSE_MATRIX_H_

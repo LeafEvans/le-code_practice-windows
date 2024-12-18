@@ -1,5 +1,5 @@
-#ifndef _SQ_BIN_TREE_H_
-#define _SQ_BIN_TREE_H_
+#ifndef SQ_BIN_TREE_H_
+#define SQ_BIN_TREE_H_
 #include "bin_tree_base.h"
 #include "node.h"
 #include "sq_list.h"
@@ -13,9 +13,10 @@ class SqBinTree : public BinTreeBase<ElemType, int>,
                   private SqList<SqBinTreeNode<ElemType>> {
  public:
   SqBinTree();  // 默认构造函数
-  SqBinTree(const ElemType& tElem, int nSize = naSqBinTree::kDefaultSize);  // 带参数的构造函数
-  ~SqBinTree();  // 析构函数
-  SqBinTree(const SqBinTree<ElemType>& sbtSrc);  // 拷贝构造函数
+  SqBinTree(const ElemType& tElem,
+            int nSize = naSqBinTree::kDefaultSize);  // 带参数的构造函数
+  ~SqBinTree();                                      // 析构函数
+  SqBinTree(const SqBinTree<ElemType>& sbtSrc);      // 拷贝构造函数
   SqBinTree(SqBinTreeNode<ElemType>* arrNodes, int nRoot,
             int nSize = naSqBinTree::kDefaultSize);  // 带节点数组的构造函数
   SqBinTree<ElemType>& operator=(
@@ -36,13 +37,14 @@ class SqBinTree : public BinTreeBase<ElemType, int>,
   virtual void ReleaseNode(int& nNode);                // 释放节点
   virtual int CreateChildNode(int nNode, bool bLeft);  // 创建子节点
   int m_nRoot;                                         // 根节点索引
-  mutable int m_nLeftChild;   // 左孩子索引
-  mutable int m_nRightChild;  // 右孩子索引
+  mutable int m_nLeftChild;                            // 左孩子索引
+  mutable int m_nRightChild;                           // 右孩子索引
 };
 
 template <class ElemType>
 SqBinTree<ElemType>::SqBinTree()
-    : SqList<SqBinTreeNode<ElemType>>(naSqBinTree::kDefaultSize) {
+    : BinTreeBase<ElemType, int>(),
+      SqList<SqBinTreeNode<ElemType>>(naSqBinTree::kDefaultSize) {
   this->m_nDataLen = naSqBinTree::kDefaultSize;  // 设置数据长度为默认大小
   std::fill(this->m_pData, this->m_pData + naSqBinTree::kDefaultSize,
             0);  // 初始化数据
@@ -51,7 +53,7 @@ SqBinTree<ElemType>::SqBinTree()
 
 template <class ElemType>
 SqBinTree<ElemType>::SqBinTree(const ElemType& tElem, int nSize)
-    : SqList<SqBinTreeNode<ElemType>>(nSize) {
+    : BinTreeBase<ElemType, int>(), SqList<SqBinTreeNode<ElemType>>(nSize) {
   this->m_nDataLen = nSize;                            // 设置数据长度
   std::fill(this->m_pData, this->m_pData + nSize, 0);  // 初始化数据
   m_nRoot = 1;                                         // 设置根节点索引
@@ -127,14 +129,16 @@ int SqBinTree<ElemType>::GetParent(int nNode) const {
 
 template <class ElemType>
 bool SqBinTree<ElemType>::GetElem(int nNode, ElemType& tElem) const {
-  if (NodeIsEmpty(nNode)) return false;  // 如果节点为空，返回 false
+  if (NodeIsEmpty(nNode))
+    return false;                        // 如果节点为空，返回 false
   tElem = this->m_pData[nNode].m_tElem;  // 获取节点元素
   return true;                           // 返回 true
 }
 
 template <class ElemType>
 bool SqBinTree<ElemType>::SetElem(int nNode, const ElemType& tElem) {
-  if (NodeIsEmpty(nNode)) return false;  // 如果节点为空，返回 false
+  if (NodeIsEmpty(nNode))
+    return false;                        // 如果节点为空，返回 false
   this->m_pData[nNode].m_tElem = tElem;  // 设置节点元素
   return true;                           // 返回 true
 }
@@ -177,10 +181,11 @@ template <class ElemType>
 bool SqBinTree<ElemType>::CreateBinTree(ElemType* arrPre, ElemType* arrIn,
                                         int nSize) {
   // 检查异常情况
-  if (!arrPre || !arrIn || nSize < 1 || !this->Reserve(nSize + 1)) return false;
+  if (!arrPre || !arrIn || nSize < 1 || !this->Reserve(nSize + 1))
+    return false;
   std::fill(this->m_pData, this->m_pData + nSize + 1, 0);  // 初始化数据
   // 创建二叉树
   m_nRoot = this->CreateBinTreeAux(-1, arrPre, arrIn, 0, nSize - 1, 0,
                                    nSize - 1, false);
 }
-#endif  // _SQ_BIN_TREE_H_
+#endif  // SQ_BIN_TREE_H_

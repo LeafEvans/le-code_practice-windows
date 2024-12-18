@@ -1,5 +1,5 @@
-#ifndef _SQ_LIST_H_
-#define _SQ_LIST_H_
+#ifndef SQ_LIST_H_
+#define SQ_LIST_H_
 
 #include <algorithm>
 #include <cstddef>
@@ -151,7 +151,8 @@ bool SqList<ElemType>::IsEmpty() const {
 
 template <class ElemType>
 int SqList<ElemType>::SaveData(const ElemType* pData, int nDataLen) {
-  if (!pData || nDataLen <= 0) return -1;
+  if (!pData || nDataLen <= 0)
+    return -1;
 
   if (m_nDataLen + nDataLen >= m_nBufferLen) {
     int nNewBufLen = m_nDataLen + nDataLen;
@@ -161,7 +162,8 @@ int SqList<ElemType>::SaveData(const ElemType* pData, int nDataLen) {
       nNewBufLen += nNewBufLen >> 1;
     }
 
-    if (!Reserve(nNewBufLen)) return -1;
+    if (!Reserve(nNewBufLen))
+      return -1;
   }
 
   int nIdx = m_nDataLen;
@@ -172,7 +174,8 @@ int SqList<ElemType>::SaveData(const ElemType* pData, int nDataLen) {
 
 template <class ElemType>
 bool SqList<ElemType>::Insert(int nIdx, const ElemType& tElem) {
-  if (nIdx < 0) return false;
+  if (nIdx < 0)
+    return false;
 
   if (m_nDataLen >= m_nBufferLen) {
     int nNewBufLen = m_nDataLen;
@@ -182,7 +185,8 @@ bool SqList<ElemType>::Insert(int nIdx, const ElemType& tElem) {
     } else {
       nNewBufLen += nNewBufLen >> 1;
     }
-    if (!Reserve(nNewBufLen)) return false;
+    if (!Reserve(nNewBufLen))
+      return false;
   }
 
   if (nIdx <= m_nDataLen - 1) {
@@ -209,7 +213,8 @@ int SqList<ElemType>::AddTail(const ElemType& tElem) {
       nNewBufLen += nNewBufLen >> 1;
     }
 
-    if (!Reserve(nNewBufLen)) return -1;
+    if (!Reserve(nNewBufLen))
+      return -1;
   }
 
   int nIdx = m_nDataLen;
@@ -220,7 +225,8 @@ int SqList<ElemType>::AddTail(const ElemType& tElem) {
 
 template <class ElemType>
 bool SqList<ElemType>::Delete(int nIdx, ElemType& tElem) {
-  if (nIdx < 0 || nIdx >= m_nDataLen) return false;
+  if (nIdx < 0 || nIdx >= m_nDataLen)
+    return false;
 
   tElem = m_pData[nIdx];
 
@@ -233,7 +239,8 @@ bool SqList<ElemType>::Delete(int nIdx, ElemType& tElem) {
 
 template <class ElemType>
 bool SqList<ElemType>::GetElem(int nIdx, ElemType& tElem) const {
-  if (nIdx < 0 || nIdx >= m_nDataLen) return false;
+  if (nIdx < 0 || nIdx >= m_nDataLen)
+    return false;
 
   tElem = m_pData[nIdx];
 
@@ -283,4 +290,4 @@ void SqList<ElemType>::Traverse(bool (*pVisit)(const ElemType&)) const {
   }
 }
 
-#endif  // _SQ_LIST_H_
+#endif  // SQ_LIST_H_

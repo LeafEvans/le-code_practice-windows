@@ -1,5 +1,5 @@
-#ifndef _QUEUE_H_
-#define _QUEUE_H_
+#ifndef QUEUE_H_
+#define QUEUE_H_
 #include "simple_lk_list.h"
 
 template <class ElemType, template <class> class Base = SimpleLkList>
@@ -84,4 +84,4 @@ bool Queue<ElemType, Base>::InQueue(const ElemType& tElem) {
   return true;
 }
 
-#endif  // _QUEUE_H_
+#endif  // QUEUE_H_

@@ -1,5 +1,5 @@
-#ifndef _BIN_TREE_H_
-#define _BIN_TREE_H_
+#ifndef BIN_TREE_H_
+#define BIN_TREE_H_
 #include "lk_bin_tree_base.h"
 #include "node.h"
 
@@ -36,9 +36,10 @@ template <class ElemType>
 void BinTree<ElemType>::LinkParentChild(BinTreeNode<ElemType>* pParent,
                                         BinTreeNode<ElemType>* pChild,
                                         bool bLeft) {
-  if (!pParent) return;  // 父节点为空时直接返回
+  if (!pParent)
+    return;  // 父节点为空时直接返回
   // 根据 bLeft 标志建立父子节点的连接关系
-  bLeft ? pParent->m_pLeftChild = pChild : pParent->m_pRightChild;
+  bLeft ? pParent->m_pLeftChild = pChild : pParent->m_pRightChild = pChild;
 }
 
 template <class ElemType>
@@ -54,11 +55,13 @@ BinTreeNode<ElemType>* BinTree<ElemType>::GetParentAux(
 
   // 递归在左子树中查找
   pParent = GetParentAux(pRoot->m_pLeftChild, pNode);
-  if (pParent != NULL) return pParent;
+  if (pParent != NULL)
+    return pParent;
 
   // 递归在右子树中查找
   pParent = GetParentAux(pRoot->m_pRightChild, pNode);
-  if (pParent != NULL) return pParent;
+  if (pParent != NULL)
+    return pParent;
 }
 
-#endif  // _BIN_TREE_H_
+#endif  // BIN_TREE_H_

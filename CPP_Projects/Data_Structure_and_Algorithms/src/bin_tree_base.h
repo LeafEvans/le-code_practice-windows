@@ -1,5 +1,5 @@
-#ifndef _BIN_TREE_BASE_H_
-#define _BIN_TREE_BASE_H_
+#ifndef BIN_TREE_BASE_H_
+#define BIN_TREE_BASE_H_
 #include <algorithm>
 #include <cstddef>
 #include <iostream>
@@ -42,15 +42,18 @@ class BinTreeBase {
   virtual void DeleteRightChild(NodeHandle hNode);  // 删除右子树
   virtual int Height() const;                       // 获取树的高度
   void DisplayTreeStructure();  // 以树形结构显示二叉树
+
  protected:
   int NodeCountsAux(NodeHandle hRoot) const;  // 辅助函数：获取节点总数
   virtual void DestroyAux(NodeHandle& hRoot);  // 辅助函数：销毁节点
-  void PreOrderAux(NodeHandle hRoot, void (*pVisit)(const ElemType&))
-      const;  // 辅助函数：前序遍历
+  void PreOrderAux(
+      NodeHandle hRoot,
+      void (*pVisit)(const ElemType&)) const;  // 辅助函数：前序遍历
   void InOrderAux(NodeHandle hRoot,
                   void (*pVisit)(const ElemType&)) const;  // 辅助函数：中序遍历
-  void PostOrderAux(NodeHandle hRoot, void (*pVisit)(const ElemType&))
-      const;                              // 辅助函数：后序遍历
+  void PostOrderAux(
+      NodeHandle hRoot,
+      void (*pVisit)(const ElemType&)) const;  // 辅助函数：后序遍历
   int HeightAux(NodeHandle hRoot) const;  // 辅助函数：获取树的高度
   // 辅助函数：创建二叉树
   NodeHandle CreateBinTreeAux(NodeHandle hParent, ElemType* arrPre,
@@ -85,7 +88,8 @@ void BinTreeBase<ElemType, NodeHandle>::InsertLeftChild(NodeHandle hNode,
 
   NodeHandle pLeftChild = CreateChildNode(hNode, true);  // 新建左节点
   // 创建新节点成功，设置其值
-  if (!NodeIsEmpty(pLeftChild)) SetElem(pLeftChild, tElem);
+  if (!NodeIsEmpty(pLeftChild))
+    SetElem(pLeftChild, tElem);
 }
 
 template <class ElemType, class NodeHandle>
@@ -97,7 +101,8 @@ void BinTreeBase<ElemType, NodeHandle>::InsertRightChild(
 
   NodeHandle pRightChild = CreateChildNode(hNode, false);  // 新建右节点
   // 创建新节点成功，设置其值
-  if (!NodeIsEmpty(pRightChild)) SetElem(pRightChild, tElem);
+  if (!NodeIsEmpty(pRightChild))
+    SetElem(pRightChild, tElem);
 }
 
 template <class ElemType, class NodeHandle>
@@ -112,18 +117,22 @@ void BinTreeBase<ElemType, NodeHandle>::PostOrder(  // 后序遍历
   PostOrderAux(GetRoot(), pVisit);  // 从根节点开始遍历
 }
 
-template <class ElemType, class NodeHandle>
+template <typename ElemType, class NodeHandle>
 void BinTreeBase<ElemType, NodeHandle>::LevelOrder(
     void (*pVisit)(const ElemType&)) const {
-  LkQueue<ElemType> lqNodes;
-  NodeHandle hNode = GetRoot();
-  if (!NodeIsEmpty(hNode)) lqNodes.InQueue(hNode);
-  while (!lqNodes.IsEmpty()) {
-    lqNodes.OutQueue(hNode);
+  LkQueue<ElemType> lqNodes;     // 存放节点的队列
+  NodeHandle hNode = GetRoot();  // 获取根节点
+  // 判断根节点是否为空，不为空则入队
+  if (!NodeIsEmpty(hNode))
+    lqNodes.InQueue(hNode);
+  while (!lqNodes.IsEmpty()) {  // 队列不空则循环
+    lqNodes.OutQueue(hNode);    // 先出队访问元素
     (*pVisit)(GetNode(hNode));
+    // 入队该节点的左孩子
     if (!NodeIsEmpty(GetLeftChild(hNode))) {
       lqNodes.InQueue(GetLeftChild(hNode));
     }
+    // 入队该节点的右孩子
     if (!NodeIsEmpty(GetRightChild(hNode))) {
       lqNodes.InQueue(GetRightChild(hNode));
     }
@@ -137,13 +146,15 @@ int BinTreeBase<ElemType, NodeHandle>::NodeCount() const {
 
 template <class ElemType, class NodeHandle>
 void BinTreeBase<ElemType, NodeHandle>::DeleteLeftChild(NodeHandle hNode) {
-  if (NodeIsEmpty(hNode)) return;  // 节点为空
+  if (NodeIsEmpty(hNode))
+    return;  // 节点为空
   DestroyAux(GetLeftChild(hNode));
 }
 
 template <class ElemType, class NodeHandle>
 void BinTreeBase<ElemType, NodeHandle>::DeleteRightChild(NodeHandle hNode) {
-  if (NodeIsEmpty(hNode)) return;  // 节点为空
+  if (NodeIsEmpty(hNode))
+    return;  // 节点为空
   DestroyAux(GetRightChild(hNode));
 }
 
@@ -160,23 +171,26 @@ void BinTreeBase<ElemType, NodeHandle>::DisplayTreeStructure() {
 
 template <class ElemType, class NodeHandle>
 int BinTreeBase<ElemType, NodeHandle>::NodeCountsAux(NodeHandle hRoot) const {
-  if (NodeIsEmpty(hRoot)) return 0;  // 空节点个数为 0
+  if (NodeIsEmpty(hRoot))
+    return 0;  // 空节点个数为 0
   return 1 + NodeCountsAux(GetLeftChild(hRoot)) +
          NodeCountsAux(GetRightChild(hRoot));
 }
 
 template <class ElemType, class NodeHandle>
 void BinTreeBase<ElemType, NodeHandle>::DestroyAux(NodeHandle& hRoot) {
-  if (NodeIsEmpty(hRoot)) return;
-  DestroyAux(GetLeftChild(hRoot));
-  DestroyAux(GetRightChild(hRoot));
-  ReleaseNode(hRoot);
+  if (NodeIsEmpty(hRoot))
+    return;                          // 节点为空
+  DestroyAux(GetLeftChild(hRoot));   // 销毁左子树
+  DestroyAux(GetRightChild(hRoot));  // 销毁右子树
+  ReleaseNode(hRoot);                // 释放节点
 }
 
 template <class ElemType, class NodeHandle>
 void BinTreeBase<ElemType, NodeHandle>::PreOrderAux(  // 前序遍历辅助函数
     NodeHandle hRoot, void (*pVisit)(const ElemType&)) const {
-  if (NodeIsEmpty(hRoot)) return;             // 节点为空
+  if (NodeIsEmpty(hRoot))
+    return;                                   // 节点为空
   (*pVisit(GetNode(hRoot)));                  // 访问根节点
   PreOrderAux(GetLeftChild(hRoot), pVisit);   // 访问左子树
   PreOrderAux(GetRightChild(hRoot), pVisit);  // 访问右子树
@@ -185,7 +199,8 @@ void BinTreeBase<ElemType, NodeHandle>::PreOrderAux(  // 前序遍历辅助函�
 template <class ElemType, class NodeHandle>
 void BinTreeBase<ElemType, NodeHandle>::InOrderAux(  // 中序遍历辅助函数
     NodeHandle hRoot, void (*pVisit)(const ElemType&)) const {
-  if (NodeIsEmpty(hRoot)) return;            // 节点为空
+  if (NodeIsEmpty(hRoot))
+    return;                                  // 节点为空
   InOrderAux(GetLeftChild(hRoot), pVisit);   // 访问左子树
   (*pVisit(GetNode(hRoot)));                 // 访问根节点
   InOrderAux(GetRightChild(hRoot), pVisit);  // 访问右子树
@@ -194,7 +209,8 @@ void BinTreeBase<ElemType, NodeHandle>::InOrderAux(  // 中序遍历辅助函数
 template <class ElemType, class NodeHandle>
 void BinTreeBase<ElemType, NodeHandle>::PostOrderAux(  // 后序遍历辅助函数
     NodeHandle hRoot, void (*pVisit)(const ElemType&)) const {
-  if (NodeIsEmpty(hRoot)) return;              // 节点为空
+  if (NodeIsEmpty(hRoot))
+    return;                                    // 节点为空
   PostOrderAux(GetLeftChild(hRoot), pVisit);   // 访问左子树
   PostOrderAux(GetRightChild(hRoot), pVisit);  // 访问右子树
   (*pVisit(PostElem(hRoot)));                  // 访问根节点
@@ -202,7 +218,8 @@ void BinTreeBase<ElemType, NodeHandle>::PostOrderAux(  // 后序遍历辅助函�
 
 template <class ElemType, class NodeHandle>
 int BinTreeBase<ElemType, NodeHandle>::HeightAux(NodeHandle hRoot) const {
-  if (NodeIsEmpty(hRoot)) return 0;  // 空二叉树高度为 0
+  if (NodeIsEmpty(hRoot))
+    return 0;  // 空二叉树高度为 0
 
   int nLeftHeight = HeightAux(GetLeftChild(hRoot));    // 左子树的高度
   int nRightHeight = HeightAux(GetRightChild(hRoot));  // 右子树的高度
@@ -214,32 +231,39 @@ template <class ElemType, class NodeHandle>
 NodeHandle BinTreeBase<ElemType, NodeHandle>::CreateBinTreeAux(
     NodeHandle hParent, ElemType* arrPre, ElemType* arrIn, int nPreLeft,
     int nPreRight, int nInLeft, int nInRight, bool bLeaf) {
-  if (nInLeft > nInRight || nPreLeft > nPreRight) return NULL;
+  // 非法数据范围
+  if (nInLeft > nInRight || nPreLeft > nPreRight)
+    return NULL;
 
+  // 创建根节点
   NodeHandle hRoot = CreateChildNode(hParent, bLeaf);
+  SetElem(hRoot, arrPre[nPreLeft]);  // 设置根节点的元素
 
-  SetElem(hRoot, arrPre[nPreLeft]);
-
+  // 寻找中序序列根节点的索引
   int nInRoot =
       std::find(arrIn + nInLeft, arrIn + nInRight + 1, arrPre[nPreLeft]);
 
-  int nLeftSize = nInRoot - nInLeft;
+  int nLeftSize = nInRoot - nInLeft;  // 左子树的大小
 
-  CreateBinTreeAux(hParent, arrPre, arrIn, nPreLeft + 1, nPreLeft + nLeftSize,
+  CreateBinTreeAux(hRoot, arrPre, arrIn, nPreLeft + 1, nPreRight + nLeftSize,
                    nInLeft, nInRoot - 1, true);
-  CreateBinTreeAux(hParent, arrPre, arrIn, nPreLeft + nLeftSize + 1, nPreRight,
+  CreateBinTreeAux(hRoot, arrPre, arrIn, nPreLeft + nLeftSize + 1, nPreRight,
                    nInRoot + 1, nInRight, false);
+
+  return hRoot;
 }
 
 template <class ElemType, class NodeHandle>
 void BinTreeBase<ElemType, NodeHandle>::DisplayTreeStructureAux(
     NodeHandle hRoot, int nLevel) {
-  if (NodeIsEmpty(hRoot)) return;
+  if (NodeIsEmpty(hRoot))
+    return;
 
-  DisplayTreeStructureAux(GetRightChild(hRoot), nLevel + 1);
+  DisplayTreeStructureAux(GetRightChild(hRoot), nLevel + 1);  // 显示右子树
 
   std::cout << std::endl;
-  for (int i = 0; i < nLevel * 2; ++i) std::cout << ' ';
+  for (int i = 0; i < nLevel * 2; ++i)
+    std::cout << ' ';  // 打印缩进
 
   if (nLevel > 1) {
     std::cout << "    |";
@@ -247,8 +271,8 @@ void BinTreeBase<ElemType, NodeHandle>::DisplayTreeStructureAux(
     std::cout << "----";
   }
 
-  std::cout << " " << hRoot->m_tElem;
+  std::cout << " " << hRoot->m_tElem;  // 打印节点元素
 
-  DisplayTreeStructureAux(GetLeftChild(hRoot), nLevel + 1);
+  DisplayTreeStructureAux(GetLeftChild(hRoot), nLevel + 1);  // 显示左子树
 }
-#endif  // _BIN_TREE_BASE_H_
+#endif  // BIN_TREE_BASE_H_

@@ -1,5 +1,5 @@
-#ifndef _DYNAMIC_ARRAY_H_
-#define _DYNAMIC_ARRAY_H_
+#ifndef DYNAMIC_ARRAY_H_
+#define DYNAMIC_ARRAY_H_
 #include <algorithm>
 #include <stdexcept>
 
@@ -50,9 +50,9 @@ DynamicArray<ElemType>::DynamicArray()
 // 仅在支持 C++11 标准时编译此构造函数
 template <class ElemType>
 DynamicArray<ElemType>::DynamicArray(std::initializer_list<ElemType> iList)
-    : m_pData(new ElemType[iList.size() + kDefaultSize]),
+    : m_pData(new ElemType[iList.size() + naDynamicArray::kDefaultSize]),
       m_nDataLen(iList.size()),
-      m_nBufferLen(m_nDataLen + kDefaultSize) {
+      m_nBufferLen(m_nDataLen + naDynamicArray::kDefaultSize) {
   ElemType* pData = static_cast<ElemType*>(iList.begin());
   std::copy(pData, pData + iList.size(), m_pData);
   std::fill_n(m_pData + m_nDataLen, m_nBufferLen - m_nDataLen, ElemType());
@@ -268,4 +268,4 @@ ElemType& DynamicArray<ElemType>::operator[](int nIdx) {
   return m_pData[nIdx];
 }
 
-#endif  // _DYNAMIC_ARRAY_H_
+#endif  // DYNAMIC_ARRAY_H_

@@ -1,5 +1,5 @@
-#ifndef _REF_GEN_LIST_H_
-#define _REF_GEN_LIST_H_
+#ifndef REF_GEN_LIST_H_
+#define REF_GEN_LIST_H_
 #include <iostream>
 
 #include "lk_list_base.h"
@@ -63,13 +63,15 @@ bool RefGenList<ElemType>::IsEmpty() const {
 
 template <class ElemType>
 void RefGenList<ElemType>::Push(const ElemType& tElem) {
-  if (!this->Insert(0, tElem)) return;
+  if (!this->Insert(0, tElem))
+    return;
   this->m_pCurrNode->m_eTag = _ATOM;
 }
 
 template <class ElemType>
 void RefGenList<ElemType>::Push(RefGenList<ElemType>& rglSub) {
-  if (!this->Insert(0, 0)) return;
+  if (!this->Insert(0, 0))
+    return;
   RefGenNode<ElemType>* pCurrNode = this->m_pCurrNode;
   pCurrNode->m_pSub = rglSub.m_pHeadNode;
   ++(rglSub.m_pHeadNode->m_nRef);
@@ -88,7 +90,8 @@ int RefGenList<ElemType>::Depth() const {
 
 template <class ElemType>
 void RefGenList<ElemType>::Input() {
-  if (this->m_pHeadNode) ClearAux(this->m_pHeadNode);
+  if (this->m_pHeadNode)
+    ClearAux(this->m_pHeadNode);
 
   char chElem;
   this->m_pHeadNode = new RefGenNode<ElemType>(_HEAD);
@@ -117,14 +120,16 @@ RefGenList<ElemType>& RefGenList<ElemType>::operator=(
 template <class ElemType>
 bool RefGenList<ElemType>::Link(RefGenNode<ElemType>* pPreNode,
                                 RefGenNode<ElemType>* pNextNode) {
-  if (!pPreNode) return false;
+  if (!pPreNode)
+    return false;
   pPreNode->m_pNext = pNextNode;
   return true;
 }
 
 template <class ElemType>
 void RefGenList<ElemType>::ClearAux(RefGenNode<ElemType>*& pHeadNode) {
-  if (!pHeadNode || pHeadNode->m_eTag != _HEAD) return;
+  if (!pHeadNode || pHeadNode->m_eTag != _HEAD)
+    return;
 
   --(pHeadNode->m_nRef);
 
@@ -134,7 +139,8 @@ void RefGenList<ElemType>::ClearAux(RefGenNode<ElemType>*& pHeadNode) {
     while (pNode) {
       RefGenNode<ElemType>* pNextNode = pNode->m_pNext;
 
-      if (pNode->m_eTag == _LIST) ClearAux(pNode->m_pSub);
+      if (pNode->m_eTag == _LIST)
+        ClearAux(pNode->m_pSub);
 
       delete pNode;
       pNode = pNextNode;
@@ -186,13 +192,15 @@ void RefGenList<ElemType>::ShowAux(RefGenNode<ElemType>* pHeadNode) const {
 template <class ElemType>
 int RefGenList<ElemType>::DepthAux(
     const RefGenNode<ElemType>* pHeadNode) const {
-  if (!pHeadNode->m_pNext) return 1;
+  if (!pHeadNode->m_pNext)
+    return 1;
   int nSubMaxDepth = 0;
   for (RefGenNode<ElemType>* pNode = pHeadNode->m_pNext; pNode != NULL;
        pNode = pNode->m_pNext) {
     if (pNode->m_eTag == _LIST) {
       int nSubDepth = DepthAux(pNode->m_pSub);
-      if (nSubDepth > nSubMaxDepth) nSubMaxDepth = nSubDepth;
+      if (nSubDepth > nSubMaxDepth)
+        nSubMaxDepth = nSubDepth;
     }
   }
   return nSubMaxDepth + 1;
@@ -216,12 +224,13 @@ void RefGenList<ElemType>::CreateAux(RefGenNode<ElemType>*& pFirstNode) {
       std::cin >> chElem;
 
       // 处理子表后是否有','分隔符
-      if (chElem != ',') std::cin.putback(chElem);
+      if (chElem != ',')
+        std::cin.putback(chElem);
       CreateAux(pFirstNode->m_pNext);  // 递归创建当前表的下一个节点
       break;
     }
 
-    default:                     // 处理原子元素
+    default: {                   // 处理原子元素
       std::cin.putback(chElem);  // 将字符放回流中
       ElemType tData;
       std::cin >> tData;
@@ -230,10 +239,12 @@ void RefGenList<ElemType>::CreateAux(RefGenNode<ElemType>*& pFirstNode) {
 
       std::cin >> chElem;
       // 处理原子元素后是否有','分隔符
-      if (chElem != ',') std::cin.putback(chElem);
+      if (chElem != ',')
+        std::cin.putback(chElem);
       CreateAux(pFirstNode->m_pNext);  // 递归创建下一个节点
       break;
+    }
   }
 }
 
-#endif  // _REF_GEN_LIST_H_
+#endif  // REF_GEN_LIST_H_

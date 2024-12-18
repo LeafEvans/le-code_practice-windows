@@ -1,5 +1,5 @@
-#ifndef _MATRIX_H_
-#define _MATRIX_H_
+#ifndef MATRIX_H_
+#define MATRIX_H_
 #include <cmath>
 #include <iostream>
 
@@ -10,7 +10,7 @@ class Matrix : public Array<ElemType> {
  public:
   Matrix(int nRows, int nCols);
   ~Matrix();
-  Matrix(const Matrix<ElemType> &mtxSrc);
+  Matrix(const Matrix<ElemType>& mtxSrc);
 
 #ifdef _INITIALIZER_LIST
   bool Init(std::initializer_list<ElemType> iList);
@@ -20,17 +20,17 @@ class Matrix : public Array<ElemType> {
   int GetCols() const;
   bool Resize(int nRows, int nCols);
   bool IsEmpty() const;
-  void PrintMtx(const char *pszMtxName) const;
-  ElemType &operator()(int nRow, int nCol);
-  Matrix<ElemType> CrossProduct(const Matrix<ElemType> &mtxSrc) const;
-  Matrix<ElemType> DotProduct(const Matrix<ElemType> &mtxSrc) const;
+  void PrintMtx(const char* pszMtxName) const;
+  ElemType& operator()(int nRow, int nCol);
+  Matrix<ElemType> CrossProduct(const Matrix<ElemType>& mtxSrc) const;
+  Matrix<ElemType> DotProduct(const Matrix<ElemType>& mtxSrc) const;
   Matrix<ElemType> MultScaler(const ElemType tLambda) const;
-  Matrix<ElemType> Sub(const Matrix<ElemType> &mtxSrc) const;
-  Matrix<ElemType> Add(const Matrix<ElemType> &mtxSrc) const;
+  Matrix<ElemType> Sub(const Matrix<ElemType>& mtxSrc) const;
+  Matrix<ElemType> Add(const Matrix<ElemType>& mtxSrc) const;
   Matrix<ElemType> Transpose() const;
   Matrix<ElemType> Inverse() const;
-  ElemType *operator[](int nRow);
-  Matrix<ElemType> &operator=(const Matrix<ElemType> &mtxSrc);
+  ElemType* operator[](int nRow);
+  Matrix<ElemType>& operator=(const Matrix<ElemType>& mtxSrc);
 };
 
 template <class ElemType>
@@ -41,7 +41,7 @@ template <class ElemType>
 Matrix<ElemType>::~Matrix() {}
 
 template <class ElemType>
-Matrix<ElemType>::Matrix(const Matrix<ElemType> &mtxSrc)
+Matrix<ElemType>::Matrix(const Matrix<ElemType>& mtxSrc)
     : Array<ElemType>(2, mtxSrc.GetRows(), mtxSrc.GetCols()) {
   if (this != &mtxSrc) {
     int nSrcRows = mtxSrc.GetRows();
@@ -57,9 +57,10 @@ bool Matrix<ElemType>::Init(std::initializer_list<ElemType> iList) {
   int nSize = iList.size();
   int nTotalElemNum = GetRows() * GetCols();
 
-  if (nSize > nTotalElemNum) return false;
+  if (nSize > nTotalElemNum)
+    return false;
 
-  ElemType *pData = static_cast<ElemType *>(iList.begin());
+  ElemType* pData = static_cast<ElemType*>(iList.begin());
   std::copy(pData, pData + nSize, this->m_pData);
   std::fill(this->m_pData + nSize, this->m_pData + nTotalElemNum, 0);
 
@@ -73,7 +74,7 @@ bool Matrix<ElemType>::IsEmpty() const {
 }
 
 template <class ElemType>
-void Matrix<ElemType>::PrintMtx(const char *pszMtxName) const {
+void Matrix<ElemType>::PrintMtx(const char* pszMtxName) const {
   if (IsEmpty()) {
     std::cout << "Empty mtxrix!" << std::endl;
     return;
@@ -91,21 +92,23 @@ void Matrix<ElemType>::PrintMtx(const char *pszMtxName) const {
   for (int i = 0; i < nRows; ++i) {
     for (int j = 0; j < nCols; ++j) {
       std::cout << (*this)(i, j);
-      if (j < nCols - 1) std::cout << ",\t";
+      if (j < nCols - 1)
+        std::cout << ",\t";
     }
     std::cout << std::endl;
   }
 }
 
 template <class ElemType>
-ElemType &Matrix<ElemType>::operator()(int nRow, int nCol) {
+ElemType& Matrix<ElemType>::operator()(int nRow, int nCol) {
   return *this->ElemAddress(nRow, nCol);
 }
 
 template <class ElemType>
 Matrix<ElemType> Matrix<ElemType>::CrossProduct(
-    const Matrix<ElemType> &mtxSrc) const {
-  if (GetCols() != mtxSrc.GetRows()) return Matrix<ElemType>(0, 0);
+    const Matrix<ElemType>& mtxSrc) const {
+  if (GetCols() != mtxSrc.GetRows())
+    return Matrix<ElemType>(0, 0);
 
   Matrix<ElemType> mtxRes(GetRows(), mtxSrc.GetCols());
 
@@ -131,7 +134,7 @@ Matrix<ElemType> Matrix<ElemType>::CrossProduct(
 
 template <class ElemType>
 Matrix<ElemType> Matrix<ElemType>::DotProduct(
-    const Matrix<ElemType> &mtxSrc) const {
+    const Matrix<ElemType>& mtxSrc) const {
   if (GetCols() != mtxSrc.GetCols() || GetRows() != mtxSrc.GetRows()) {
     return Matrix<ElemType>(0, 0);
   }
@@ -163,7 +166,7 @@ Matrix<ElemType> Matrix<ElemType>::MultScaler(const ElemType tLambda) const {
 }
 
 template <class ElemType>
-Matrix<ElemType> Matrix<ElemType>::Sub(const Matrix<ElemType> &mtxSrc) const {
+Matrix<ElemType> Matrix<ElemType>::Sub(const Matrix<ElemType>& mtxSrc) const {
   if (GetCols() != mtxSrc.GetCols() || GetRows() != mtxSrc.GetRows()) {
     return Matrix<ElemType>(0, 0);
   }
@@ -183,7 +186,7 @@ Matrix<ElemType> Matrix<ElemType>::Sub(const Matrix<ElemType> &mtxSrc) const {
 }
 
 template <class ElemType>
-Matrix<ElemType> Matrix<ElemType>::Add(const Matrix<ElemType> &mtxSrc) const {
+Matrix<ElemType> Matrix<ElemType>::Add(const Matrix<ElemType>& mtxSrc) const {
   if (GetCols() != mtxSrc.GetCols() || GetRows() != mtxSrc.GetRows()) {
     return Matrix<ElemType>(0, 0);
   }
@@ -220,7 +223,8 @@ Matrix<ElemType> Matrix<ElemType>::Transpose() const {
 
 template <class ElemType>
 Matrix<ElemType> Matrix<ElemType>::Inverse() const {
-  if (GetCols() != GetRows()) return Matrix<ElemType>(0, 0);
+  if (GetCols() != GetRows())
+    return Matrix<ElemType>(0, 0);
 
   int nSize = GetRows();
 
@@ -245,7 +249,8 @@ Matrix<ElemType> Matrix<ElemType>::Inverse() const {
       }
     }
 
-    if (fMax < fEpsilon) return Matrix<ElemType>(0, 0);
+    if (fMax < fEpsilon)
+      return Matrix<ElemType>(0, 0);
 
     if (nMaxRow != i) {
       for (int j = 0; j < 2 * nSize; ++j) {
@@ -291,9 +296,11 @@ int Matrix<ElemType>::GetCols() const {
 
 template <class ElemType>
 bool Matrix<ElemType>::Resize(int nRows, int nCols) {
-  if (nRows < 1 || nCols < 1) return false;
+  if (nRows < 1 || nCols < 1)
+    return false;
 
-  if (this->m_pData) delete[] this->m_pData;
+  if (this->m_pData)
+    delete[] this->m_pData;
 
   this->m_pData = new ElemType[nRows * nCols];
   this->m_pBounds[0] = nRows;
@@ -304,7 +311,7 @@ bool Matrix<ElemType>::Resize(int nRows, int nCols) {
 }
 
 template <class ElemType>
-Matrix<ElemType> &Matrix<ElemType>::operator=(const Matrix<ElemType> &mtxSrc) {
+Matrix<ElemType>& Matrix<ElemType>::operator=(const Matrix<ElemType>& mtxSrc) {
   if (this != &mtxSrc) {
     int nSrcRows = mtxSrc.GetRows();
     int nSrcCols = mtxSrc.GetCols();
@@ -317,4 +324,4 @@ Matrix<ElemType> &Matrix<ElemType>::operator=(const Matrix<ElemType> &mtxSrc) {
   return *this;
 }
 
-#endif  // _MATRIX_H_
+#endif  // MATRIX_H_

@@ -1,5 +1,5 @@
-#ifndef _LK_QUEUE_H_
-#define _LK_QUEUE_H_
+#ifndef LK_QUEUE_H_
+#define LK_QUEUE_H_
 #include "simple_lk_list.h"
 
 template <class ElemType>
@@ -85,4 +85,4 @@ bool LkQueue<ElemType>::InQueue(const ElemType& tElem) {
   return true;
 }
 
-#endif  // _LK_QUEUE_H_
+#endif  // LK_QUEUE_H_

@@ -1,5 +1,5 @@
-#ifndef _SQ_STACK_H_
-#define _SQ_STACK_H_
+#ifndef SQ_STACK_H_
+#define SQ_STACK_H_
 #include "sq_list.h"
 
 namespace naSqStack {
@@ -96,4 +96,4 @@ bool SqStack<ElemType>::Pop() {
 
   return this->Delete(nCounts - 1, tElem);
 }
-#endif  // _SQ_STACK_H_
+#endif  // SQ_STACK_H_

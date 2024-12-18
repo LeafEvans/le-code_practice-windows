@@ -1,5 +1,5 @@
-#ifndef _LK_BINARY_TREE_BASE_H_
-#define _LK_BINARY_TREE_BASE_H_
+#ifndef LK_BINARY_TREE_BASE_H_
+#define LK_BINARY_TREE_BASE_H_
 #include <cstddef>
 
 #include "bin_tree_base.h"
@@ -56,7 +56,7 @@ template <class ElemType, class NodeType>
 LkBinTreeBase<ElemType, NodeType>::LkBinTreeBase(
     LkBinTreeBase<ElemType, NodeType>& lbtbSrc) {
   if (&lbtbSrc != this) {
-    this->DestroyAux(m_pRoot);  // 销毁当前树
+    this->DestroyAux(m_pRoot);                 // 销毁当前树
     m_pRoot = CopyTreeAux(lbtbSrc.GetRoot());  // 复制源树
   }
 }
@@ -84,7 +84,8 @@ bool LkBinTreeBase<ElemType, NodeType>::NodeIsEmpty(NodeType* pNode) const {
 template <class ElemType, class NodeType>
 bool LkBinTreeBase<ElemType, NodeType>::GetElem(NodeType* pNode,
                                                 ElemType& tElem) const {
-  if (!pNode) return false;  // 空节点返回 false
+  if (!pNode)
+    return false;  // 空节点返回 false
   tElem = LkBinTreeBase<ElemType, NodeType>::GetNode(pNode);  // 获取节点元素值
   return true;  // 获取成功返回 true
 }
@@ -111,8 +112,9 @@ template <class ElemType, class NodeType>
 bool LkBinTreeBase<ElemType, NodeType>::CreateBinTree(ElemType* arrPre,
                                                       ElemType* arrIn,
                                                       int nSize) {
-  if (!arrPre || !arrIn || nSize < 1) return false;  // 参数检查
-  this->DestroyAux(m_pRoot);                         // 销毁原有树
+  if (!arrPre || !arrIn || nSize < 1)
+    return false;             // 参数检查
+  this->DestroyAux(m_pRoot);  // 销毁原有树
   // 根据前序和中序遍历序列重建二叉树
   m_pRoot = this->CreateBinTreeAux(NULL, arrPre, arrIn, 0, nSize - 1, 0,
                                    nSize - 1, false);
@@ -123,7 +125,7 @@ template <class ElemType, class NodeType>
 LkBinTreeBase<ElemType, NodeType>& LkBinTreeBase<ElemType, NodeType>::operator=(
     const LkBinTreeBase<ElemType, NodeType>& lbtbSrc) {
   if (&lbtbSrc != this) {
-    this->DestroyAux(m_pRoot);  // 销毁当前树
+    this->DestroyAux(m_pRoot);                 // 销毁当前树
     m_pRoot = CopyTreeAux(lbtbSrc.GetRoot());  // 复制源树
   }
   return *this;
@@ -132,16 +134,18 @@ LkBinTreeBase<ElemType, NodeType>& LkBinTreeBase<ElemType, NodeType>::operator=(
 template <class ElemType, class NodeType>
 bool LkBinTreeBase<ElemType, NodeType>::SetElem(NodeType* pNode,
                                                 const ElemType& tElem) {
-  if (!pNode) return false;  // 空节点返回 false
-  pNode->m_tElem = tElem;    // 设置节点元素值
-  return true;               // 设置成功返回 true
+  if (!pNode)
+    return false;          // 空节点返回 false
+  pNode->m_tElem = tElem;  // 设置节点元素值
+  return true;             // 设置成功返回 true
 }
 
 template <class ElemType, class NodeType>
 void LkBinTreeBase<ElemType, NodeType>::ReleaseNode(NodeType*& pNode) {
-  if (!pNode) return;  // 空节点直接返回
-  delete pNode;        // 释放节点内存
-  pNode = NULL;        // 指针置空
+  if (!pNode)
+    return;      // 空节点直接返回
+  delete pNode;  // 释放节点内存
+  pNode = NULL;  // 指针置空
 }
 
 template <class ElemType, class NodeType>
@@ -157,7 +161,7 @@ NodeType* LkBinTreeBase<ElemType, NodeType>::CreateChildNode(NodeType* pNode,
     return NULL;
   }
 
-  NodeType* pChild = new NodeType;        // 创建新子节点
+  NodeType* pChild = new NodeType();        // 创建新子节点
   LinkParentChild(pNode, pChild, bLeft);  // 建立父子关系
   return pChild;                          // 返回新节点指针
 }
@@ -165,7 +169,8 @@ NodeType* LkBinTreeBase<ElemType, NodeType>::CreateChildNode(NodeType* pNode,
 template <class ElemType, class NodeType>
 NodeType* LkBinTreeBase<ElemType, NodeType>::CopyTreeAux(
     const NodeType* pRoot) {
-  if (pRoot == NULL) return NULL;  // 空树返回 NULL
+  if (pRoot == NULL)
+    return NULL;  // 空树返回 NULL
 
   // 递归复制左右子树
   NodeType* pLeftChild = CopyTreeAux(GetLeftChild(pRoot));
@@ -177,4 +182,4 @@ NodeType* LkBinTreeBase<ElemType, NodeType>::CopyTreeAux(
   return pParent;                                // 返回子树根节点
 }
 
-#endif  //_LK_BINARY_TREE_BASE_H_
+#endif  // LK_BINARY_TREE_BASE_H_

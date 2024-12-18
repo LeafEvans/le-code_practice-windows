@@ -1,5 +1,5 @@
-#ifndef _DB_CIRCLE_LIST_H_
-#define _DB_CIRCLE_LIST_H_
+#ifndef DB_CIRCLE_LIST_H_
+#define DB_CIRCLE_LIST_H_
 
 #include "circle_list_base.h"
 #include "node.h"
@@ -16,8 +16,7 @@ class DbCircleList : public CircleListBase<ElemType, DbNode<ElemType>> {
 
  protected:
   // 链接两个节点
-  virtual bool Link(DbNode<ElemType>* pPreNode,
-                    DbNode<ElemType>* pNextNode);
+  virtual bool Link(DbNode<ElemType>* pPreNode, DbNode<ElemType>* pNextNode);
 };
 
 template <class ElemType>
@@ -94,4 +93,4 @@ bool DbCircleList<ElemType>::Reverse() {
   return true;
 }
 
-#endif  // _DB_CIRCLE_LIST_H_
+#endif  // DB_CIRCLE_LIST_H_
