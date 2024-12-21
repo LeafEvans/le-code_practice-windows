@@ -1,37 +1,39 @@
-# 💻 Code Practice Repository
+# 💻 代码练习仓库
 
-Welcome to the **Code Practice** repository! This repository contains various coding exercises, assignments, and practice projects that I have worked on. It serves as a collection of my progress and exploration in different programming languages and concepts.
+欢迎来到**代码练习**仓库！这个仓库包含了我在学习过程中完成的各种编程练习、作业和实践项目。它记录了我在不同编程语言和概念上的学习进展。
 
-## 📁 Repository Structure
+## 📁 仓库结构
 
-The repository is organized into different folders based on the type of exercise or project. Here is a brief overview of the structure:
+该仓库按照练习或项目类型分类整理。以下是结构概览：
 
-- 📝 **Assignments**: Contains coursework or homework assignments from various classes.
-- 🔍 **Practice**: Includes practice code and algorithms used to sharpen coding skills.
-- 🚀 **Projects**: Larger, more comprehensive projects or exercises that span multiple files or modules.
+- 📝 **作业（Assignments）**：包含各门课程的作业内容
+- 🔍 **练习（Practice）**：包含用于提升编程技能的练习代码和算法
+- 🚀 **项目（Projects）**：较大型、更全面的项目或跨多个文件模块的练习
 
-## 🛠️ How to Use
+## 🛠️ 使用方法
 
-1. 📥 Clone the repository:
+1. 📥 克隆仓库：
 
    ```bash
    git clone https://github.com/LeafEvans/LE-Code_Practice.git
    ```
 
-2. 📂 Navigate to the specific directory of interest:
+2. 📂 进入指定目录：
 
    ```bash
-   cd <folder_name>
+   cd <文件夹名称>
    ```
 
-3. ▶️ Run or execute the code as per the instructions provided in each folder or file.
+3. ▶️ 按照每个文件夹或文件中提供的说明运行或执行代码。
 
-## 🧰 Languages and Tools
+## 🧰 使用的语言和工具
 
-- 🐍 **Python**: Majority of the practice codes are in Python.
-- ☕ **Java**: Some assignments are done in Java.
-- 🌐 **Other Tools**: Additional programming languages and tools may be introduced based on the specific assignment or project.
+- 🐍 **Python**：大部分练习代码使用 Python
+- ☕ **Java**：部分作业使用 Java
+- 🔧 **C++**：包含 C++ 练习和项目代码
+- 🦀 **Rust**：包含 Rust 语言学习和练习代码
+- 🌐 **其他工具**：根据具体作业或项目需求可能会使用其他编程语言和工具
 
-## 🤝 Contribution
+## 🤝 贡献
 
-This is a personal practice repository, but feel free to submit issues or suggestions if you notice improvements that can be made.
+这是一个个人练习仓库，但如果您发现有可以改进的地方，欢迎提交问题或建议。
