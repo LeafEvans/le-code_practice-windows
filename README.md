@@ -2,6 +2,9 @@
 
 欢迎来到**代码练习**仓库！这个仓库包含了我在学习过程中完成的各种编程练习、作业和实践项目。它记录了我在不同编程语言和概念上的学习进展。
 
+> [!NOTE]
+> 本仓库主要在 Windows 环境下开发和测试。
+
 ## 📁 仓库结构
 
 该仓库按照练习或项目类型分类整理。以下是结构概览：
@@ -15,18 +18,21 @@
 1. 📥 克隆仓库：
 
    ```bash
-   git clone https://github.com/LeafEvans/LE-Code_Practice.git
+   git clone https://github.com/LeafEvans/LE-Code_Practice-Windows.git
    ```
 
 2. 📂 进入指定目录：
 
    ```bash
-   cd <文件夹名称>
+   cd LE-Code_Practice
    ```
 
 3. ▶️ 按照每个文件夹或文件中提供的说明运行或执行代码。
 
 ## 🧰 使用的语言和工具
+
+> [!IMPORTANT]
+> 请确保已安装相应的开发环境和编译器
 
 - 🐍 **Python**：大部分练习代码使用 Python
 - ☕ **Java**：部分作业使用 Java

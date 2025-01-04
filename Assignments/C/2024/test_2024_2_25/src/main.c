@@ -3057,7 +3057,7 @@ int main() {
   }
   return 0;
 } */
-#include <stdio.h>
+/* #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <windows.h>
@@ -3071,5 +3071,21 @@ int main() {
     printf("\n");
     system("pause");
   }
+  return 0;
+} */
+#define _CRT_SECURE_NO_WARNINGS
+#include <stddef.h>
+#include <stdio.h>
+
+int main() {
+  printf("Hello World!");
+  int arr[10] = {1, 2, 3, 4, 5};
+  for (int i = 0; i < 10; ++i) {
+    scanf("%d", &arr[i]);
+  }
+  for (int i = 0; i < 10; ++i) {
+    printf("%d ", arr[i]);
+  }
+  printf("\n");
   return 0;
 }
