@@ -88,20 +88,20 @@ template <class ElemType, class WeightType>
 void AdjMatrixGraph<ElemType, WeightType>::InsertEdge(int nNode1, int nNode2,
                                                       WeightType tWeight) {
   if (nNode1 < 0 || nNode1 >= this->m_nNodeCount || nNode2 < 0 ||
-      nNode2 >= this->m_nNodeCount)
+      nNode2 >= this->m_nNodeCount) {
     return;
+  }
 
-  // 如果是无向图或有向图，权重设为1
-  if (this->m_eType == UNDIR_GRAPH || this->m_eType == DIR_GRAPH)
+  if (this->m_eType == UNDIR_GRAPH || this->m_eType == DIR_GRAPH) {
     tWeight = 1;
+  }
 
   if (m_mtxEdge(nNode1, nNode2) == m_tNoEdgeWeight) {
     m_mtxEdge(nNode1, nNode2) = tWeight;
     if (this->m_eType == UNDIR_NETWORK || this->m_eType == UNDIR_GRAPH) {
-      // 无向图或有向图，需要对称
-      m_mtxEdge(nNode2, nNode1) = tWeight;
+      m_mtxEdge(nNode2, nNode1);
     }
-    ++(this->m_nEdgeCount);  // 边数加1
+    ++(this->m_nEdgeCount);
   }
 }
 
@@ -124,19 +124,17 @@ void AdjMatrixGraph<ElemType, WeightType>::DeleteEdge(int nNode1, int nNode2) {
 template <class ElemType, class WeightType>
 int AdjMatrixGraph<ElemType, WeightType>::FirstAdjNode(
     int nNode, WeightType& tWeight) const {
-  // 检查节点索引是否在合法范围内
   if (nNode < 0 || nNode >= this->m_nNodeCount)
-    return -1;  // 如果不合法，返回-1
+    return -1;
 
-  // 遍历节点的邻接节点
   for (int nAdjNode = 0; nAdjNode < this->m_nNodeCount; ++nAdjNode) {
     if (m_mtxEdge(nNode, nAdjNode) != m_tNoEdgeWeight) {
-      tWeight = m_mtxEdge(nNode, nAdjNode);  // 获取边的权重
-      return nAdjNode;  // 返回第一个邻接节点的索引
+      tWeight = m_mtxEdge(nNode, nAdjNode);
+      return nAdjNode;
     }
   }
 
-  return -1;  // 如果没有邻接节点，返回-1
+  return -1;
 }
 
 template <class ElemType, class WeightType>

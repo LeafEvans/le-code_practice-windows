@@ -19,7 +19,7 @@ class ParentTree : public TreeBase<ElemType, int>,
   ParentTree(const ElemType& tElem,
              int nBufferLen = naParentTree::kDefaultSize);
   ParentTree(const ParentTree<ElemType>& ptSrc);
-  ParentTree(ElemType* arrElem, int* arrParents, int nRoot, int nDataLen,
+  ParentTree(ElemType* arrElem, int* arrParent, int nRoot, int nDataLen,
              int nBufferLen);
   ParentTree<ElemType>& operator=(const ParentTree<ElemType>& ptSrc);
   virtual int GetRoot() const;
@@ -77,11 +77,10 @@ bool ParentTree<ElemType>::SetElem(int nNode, const ElemType& tElem) {
 template <class ElemType>
 int ParentTree<ElemType>::GetFirstChild(int nNode) const {
   for (int i = 0; i < this->m_nDataLen; ++i) {
-    if (this->m_pData[i].m_nParent == nNode) {
-      return i;  // 返回第一个子节点的索引
-    }
+    if (this->m_pData[i].m_nParent == nNode)
+      return i;
   }
-  return -1;  // 没有子节点
+  return -1;
 }
 
 template <class ElemType>
@@ -92,18 +91,17 @@ bool ParentTree<ElemType>::NodeIsEmpty(int nNode) const {
 template <class ElemType>
 int ParentTree<ElemType>::GetRightSibling(int nNode) const {
   for (int i = nNode + 1; i < this->m_nDataLen; ++i) {
-    if (this->m_pData[nNode].m_nParent == this->m_pData[i].m_nParent) {
-      return i;  // 返回右兄弟节点的索引
-    }
+    if (this->m_pData[nNode].m_nParent == this->m_pData[i].m_nParent)
+      return i;
   }
-  return -1;  // 没有右兄弟节点
+  return -1;
 }
 
 template <class ElemType>
 int ParentTree<ElemType>::GetParent(int nNode) const {
   return (nNode < 0 || nNode >= this->m_nDataLen)
              ? -1
-             : this->m_pData[nNode].m_nParent;  // 获取父节点索引
+             : this->m_pData[nNode].m_nParent;
 }
 
 template <class ElemType>
@@ -226,7 +224,7 @@ ParentTree<ElemType>::ParentTree(const ParentTree<ElemType>& ptSrc) {
 }
 
 template <class ElemType>
-ParentTree<ElemType>::ParentTree(ElemType* arrElem, int* arrParents, int nRoot,
+ParentTree<ElemType>::ParentTree(ElemType* arrElem, int* arrParent, int nRoot,
                                  int nDataLen, int nBufferLen) {
   if (nDataLen > nBufferLen)
     nDataLen = nBufferLen;  // 数据长度不能超过缓冲区长度
@@ -234,8 +232,8 @@ ParentTree<ElemType>::ParentTree(ElemType* arrElem, int* arrParents, int nRoot,
   this->Reserve(nBufferLen);  // 预留空间
 
   for (int i = 0; i < nDataLen; ++i) {
-    this->m_pData[i].m_tElem = arrElem[i];       // 复制元素
-    this->m_pData[i].m_nParent = arrParents[i];  // 复制父节点索引
+    this->m_pData[i].m_tElem = arrElem[i];      // 复制元素
+    this->m_pData[i].m_nParent = arrParent[i];  // 复制父节点索引
   }
   m_nRoot = nRoot;              // 设置根节点
   this->m_nDataLen = nDataLen;  // 设置数据长度

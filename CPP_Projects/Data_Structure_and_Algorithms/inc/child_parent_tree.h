@@ -110,11 +110,8 @@ bool ChildParentTree<ElemType>::SetElem(int nNode, const ElemType& tElem) {
 // 获取第一个子节点实现
 template <class ElemType>
 int ChildParentTree<ElemType>::GetFirstChild(int nNode) const {
-  if (nNode < 0 || nNode >= this->m_nDataLen) {
-    return -1;
-  }
-
-  if (this->m_pData[nNode].m_sllSub.IsEmpty())
+  if (nNode < 0 || nNode >= this->m_nDataLen ||
+      this->m_pData[nNode].m_sllSub.IsEmpty())
     return -1;
 
   int nChild;
@@ -131,30 +128,23 @@ bool ChildParentTree<ElemType>::NodeIsEmpty(int nNode) const {
 // 获取右兄弟节点实现
 template <class ElemType>
 int ChildParentTree<ElemType>::GetRightSibling(int nNode) const {
-  // 检查当前节点是否有效
   if (NodeIsEmpty(nNode))
     return -1;
 
-  // 获取父节点
   int nParent = this->m_pData[nNode].nParent;
 
-  // 检查父节点是否有效
   if (NodeIsEmpty(nParent))
     return -1;
 
-  // 获取父节点的子节点链表
   SimpleLkList<int>* psllSub = &(this->m_pData[nParent].m_sllSub);
 
-  // 将链表指针移到头部
   psllSub->Head();
 
-  int nChild;              // 当前遍历的子节点
-  int nRightSibling = -1;  // 右兄弟节点
+  int nChild;
+  int nRightSibling = -1;
 
-  // 遍历子节点链表
   while (psllSub->Next(nChild)) {
     if (nChild == nNode) {
-      // 找到当前节点后, 获取下一个节点即为右兄弟
       psllSub->Next(nRightSibling);
       break;
     }

@@ -21,7 +21,7 @@ class ThreadBinTree
   virtual ThreadBinTreeNode<ElemType>* GetLeftChild(
       ThreadBinTreeNode<ElemType>* pNode) const;  // 获取左子节点
   virtual ThreadBinTreeNode<ElemType>* GetRightChild(
-      ThreadBinTreeNode<ElemType>* pNode) const;  // 获取右子节点
+      ThreadBinTreeNode<ElemType>* pNode) const;                 // 获取右子节点
   virtual void PreOrder(void (*pVisit)(const ElemType&)) const;  // 先序遍历
   virtual void InOrder(void (*pVisit)(const ElemType&)) const;   // 中序遍历
   virtual void PostOrder(void (*pVisit)(const ElemType&)) const;  // 后序遍历
@@ -91,15 +91,17 @@ ThreadBinTreeNode<ElemType>* ThreadBinTree<ElemType>::GetRightChild(
 
 template <class ElemType>
 void ThreadBinTree<ElemType>::PreOrder(void (*pVisit)(const ElemType&)) const {
-  if (m_eOrder != PRE_THREAD_ORDER) {  // 如果不是先序线索化
+
+  if (m_eOrder != PRE_THREAD_ORDER) {
     LkBinTreeBase<ElemType, ThreadBinTreeNode<ElemType>>::PreOrder(
         pVisit);  // 调用基类的先序遍历
     return;
   }
 
-  ThreadBinTreeNode<ElemType>* pNode = this->GetRoot();  // 获取根节点
+  ThreadBinTreeNode<ElemType>* pNode = this->GetRoot();
+
   while (pNode) {
-    (*pVisit)(pNode->m_tElem);  // 访问节点
+    (*pVisit)(pNode->m_tElem);
     pNode = (pNode->m_eLeftTag == CHILD_PTR) ? pNode->m_pLeft : pNode->m_pRight;
   }
 }
@@ -115,18 +117,18 @@ void ThreadBinTree<ElemType>::InOrder(void (*pVisit)(const ElemType&)) const {
   ThreadBinTreeNode<ElemType>* pNode = this->GetRoot();  // 获取根节点
 
   while (pNode->m_eLeftTag == CHILD_PTR) {
-    pNode = pNode->m_pLeft;  // 找到最左边的节点
+    pNode = pNode->m_pLeft;
   }
 
   while (pNode) {
-    (*pVisit)(pNode->m_tElem);  // 访问节点
+    (*pVisit)(pNode->m_tElem);
 
-    if (pNode->m_eRightTag == THREAD_PTR) {
-      pNode = pNode->m_pRight;  // 移动到右线索节点
+    if (pNode->m_eRight == THREAD_PTR) {
+      pNode = pNode->m_pRight;
     } else {
-      pNode = pNode->m_pRight;  // 移动到右子节点
+      pNode = pNode->m_pRight;
       while (pNode->m_pLeft == CHILD_PTR) {
-        pNode = pNode->m_pLeft;  // 找到最左边的节点
+        pNode = pNode->m_pLeft;
       }
     }
   }
@@ -145,29 +147,27 @@ void ThreadBinTree<ElemType>::PostOrder(void (*pVisit)(const ElemType&)) const {
 
   ThreadBinTreeNode<ElemType>* pNode = this->GetRoot();  // 获取根节点
 
-  // 找到第一个后序遍历的节点
-  while (pNode->m_eLeftTag == CHILD_PTR || pNode->m_eRightTag == CHILD_PTR) {
+  while (pNode->m_eLeftTag == CHILD_PTR || pNode->m_eLeftTag == CHILD_PTR) {
     pNode = (pNode->m_eLeftTag == CHILD_PTR) ? pNode->m_pLeft : pNode->m_pRight;
   }
 
   while (pNode) {
-    (*pVisit)(pNode->m_tElem);  // 访问节点
+    (*pVisit)(pNode->m_tElem);
 
-    ThreadBinTreeNode<ElemType>* pParent = pNode->m_pParent;  // 获取父节点
+    ThreadBinTreeNode<ElemType>* pParent = pNode->m_pParent;
 
     if (pNode->m_eRightTag == THREAD_PTR) {
-      pNode = pNode->m_pRight;  // 移动到右线索节点
+      pNode = pNode->m_pRight;
     } else if (pNode == this->GetRoot()) {
-      pNode = NULL;  // 根节点说明是最后一个节点
-    } else if (pParent->m_pRight == pNode ||  // 指定节点为其父节点的右孩子
-               (pParent->m_pLeft == pNode &&  // 或为左孩子，且其右孩子为线索
+      pNode = NULL;
+    } else if (pParent->m_pRight == pNode ||
+               (pParent->m_pLeft == pNode &&
                 pParent->m_eRightTag == THREAD_PTR)) {
-      pNode = pParent;  // 移动到父节点
+      pNode = pParent;
     } else {
-      pNode = pParent->m_pRight;  // 否则去右子树
-      while (pNode->m_eLeftTag == CHILD_PTR ||
-             pNode->m_eRightTag == CHILD_PTR) {
-        pNode =  // 查看左孩子是否为
+      pNode = pNode->m_pRight;
+      while (pNode->m_eLeftTag == CHILD_PTR || pNode->m_eLeftTag == CHILD_PTR) {
+        pNode =
             (pNode->m_eLeftTag == CHILD_PTR) ? pNode->m_pLeft : pNode->m_pRight;
       }
     }
@@ -178,9 +178,9 @@ template <class ElemType>
 void ThreadBinTree<ElemType>::PreThread() {
   ThreadBinTreeNode<ElemType>* pPreNode = NULL;  // 设置最初的前驱为空
   PreThreadAux(this->GetRoot(), pPreNode);       // 先序线索化
-  if (!GetRightChild(pPreNode)) {                // 如果获取不到右子树
+  if (!GetRightChild(pPreNode))                  // 如果获取不到右子树
     pPreNode->m_eRightTag = THREAD_PTR;          // 设置右子树为线索
-  }
+
   m_eOrder = PRE_THREAD_ORDER;  // 设置为先序线索化
 }
 
@@ -209,27 +209,26 @@ void ThreadBinTree<ElemType>::PreThreadAux(
     ThreadBinTreeNode<ElemType>* pNode,
     ThreadBinTreeNode<ElemType>*& pPreNode) {
   if (!pNode)
-    return;  // 空节点直接返回
+    return;
 
-  if (!GetLeftChild(pNode)) {        // 左孩子为空
-    pNode->m_pLeft = pPreNode;       // 设置左孩子为前驱节点
-    pNode->m_eLeftTag = THREAD_PTR;  // 设置左孩子线索
+  if (!GetLeftChild(pNode)) {
+    pNode->m_pLeft = pPreNode;
+    pNode->m_eLeftTag = THREAD_PTR;
   }
 
-  // 前驱结点存在且其右孩子不存在
   if (pPreNode && !GetRightChild(pPreNode)) {
-    pPreNode->m_pRight = pNode;  // 前驱节点的后继设为当前节点
-    pPreNode->m_eRightTag = THREAD_PTR;  // 设置右孩子线索
+    pPreNode->m_pRight = pNode;
+    pPreNode->m_eRightTag = THREAD_PTR;
   }
 
-  pPreNode = pNode;  // 更新前驱节点
+  pPreNode = pNode;
 
-  if (pNode->m_eLeftTag == CHILD_PTR) {  // 左孩子节点存在
-    PreThreadAux(pNode, pPreNode);       // 遍历左子树
+  if (pNode->m_eLeftTag == CHILD_PTR) {
+    PreThreadAux(pNode, pPreNode);
   }
 
-  if (pNode->m_eRightTag == CHILD_PTR) {      // 右孩子节点存在
-    PreThreadAux(pNode->m_pRight, pPreNode);  // 遍历右子树
+  if (pNode->m_eRightTag == CHILD_PTR) {
+    PreThreadAux(pNode, pPreNode);
   }
 }
 
@@ -237,7 +236,7 @@ template <class ElemType>
 void ThreadBinTree<ElemType>::InThreadAux(
     ThreadBinTreeNode<ElemType>* pNode,
     ThreadBinTreeNode<ElemType>*& pPreNode) {
-  if (!pNode)
+  /* if (!pNode)
     return;  // 如果节点为空，直接返回
 
   // 线索化左子树
@@ -259,6 +258,26 @@ void ThreadBinTree<ElemType>::InThreadAux(
   pPreNode = pNode;  // 更新前驱节点
 
   // 线索化右子树
+  if (pNode->m_eRightTag == CHILD_PTR)
+    InThreadAux(pNode->m_pRight, pPreNode); */
+  if (!pNode)
+    return;
+
+  if (pNode->m_pLeftTag == CHILD_PTR)
+    InThreadAux(pNode->m_pLeft);
+
+  if (!GetLeftChild(pNode)) {
+    pNode->m_eLeftTag = pPreNode;
+    pNode->m_eLeftTag = THREAD_PTR;
+  }
+
+  if (!pPreNode && !GetRightChild(pPreNode)) {
+    pPreNode->m_eRightTag = THREAD_PTR;
+    pPreNode->m_pRight = pNode;
+  }
+
+  pPreNode = pNode;
+
   if (pNode->m_eRightTag == CHILD_PTR)
     InThreadAux(pNode->m_pRight, pPreNode);
 }

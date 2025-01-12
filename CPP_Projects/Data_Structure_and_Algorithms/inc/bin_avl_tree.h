@@ -186,16 +186,9 @@ BinAvlTreeNode<ElemType>* BinAvlTree<ElemType, KeyType>::Search(
 template <class ElemType, class KeyType>
 void BinAvlTree<ElemType, KeyType>::LeftRotate(
     BinAvlTreeNode<ElemType>*& pSubRoot) {
-  // 保存当前子树根节点的右子节点作为新的子树根
   BinAvlTreeNode<ElemType>* pRightChild = pSubRoot->m_pRightChild;
-
-  // 将新根节点的左子树挂接为原根节点的右子树
   pSubRoot->m_pRightChild = pRightChild->m_pLeftChild;
-
-  // 将原根节点作为新根节点的左子节点
   pRightChild->m_pLeftChild = pSubRoot;
-
-  // 更新子树的根节点
   pSubRoot = pRightChild;
 }
 
@@ -203,16 +196,9 @@ void BinAvlTree<ElemType, KeyType>::LeftRotate(
 template <class ElemType, class KeyType>
 void BinAvlTree<ElemType, KeyType>::RightRotate(
     BinAvlTreeNode<ElemType>*& pSubRoot) {
-  // 保存当前子树根节点的左子节点作为新的子树根
   BinAvlTreeNode<ElemType>* pLeftChild = pSubRoot->m_pLeftChild;
-
-  // 将新根节点的右子树挂接为原根节点的左子树
   pSubRoot->m_pLeftChild = pLeftChild->m_pRightChild;
-
-  // 将原根节点作为新根节点的右子节点
   pLeftChild->m_pRightChild = pSubRoot;
-
-  // 更新子树的根节点
   pSubRoot = pLeftChild;
 }
 

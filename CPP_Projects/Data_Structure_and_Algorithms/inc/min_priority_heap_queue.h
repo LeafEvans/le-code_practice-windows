@@ -33,19 +33,18 @@ template <class ElemType>
 void MinPriorityHeapQueue<ElemType>::SiftAdjust(int nLow, int nHigh) {
   for (int i = nLow, j = 2 * nLow + 1; i <= nHigh; i = j, j = 2 * j + 1) {
     if (j < nHigh && (this->m_pData[i] > this->m_pData[i + 1])) {
-      ++i;  // j 指向两个孩子中较小的
+      ++i;
     }
-
     if (this->m_pData[i] <= this->m_pData[j]) {
-      break;  // 已经是小根堆
+      break;
     }
-    std::swap(this->m_pData[i], this->m_pData[j]);  // 交换
+    std::swap(this->m_pData[i], this->m_pData[j]);
   }
 }
 
 template <class ElemType>
 void MinPriorityHeapQueue<ElemType>::BuildHeap() {
-  for (int i = this->m_nDataLen / 2 - 1; i >= 0; --i) {
+  for (int i = (this->m_nDataLen + 1) / 2; i >= 0; --i) {
     SiftAdjust(i, this->m_nDataLen - 1);
   }
 }
@@ -96,12 +95,11 @@ void MinPriorityHeapQueue<ElemType>::Traverse(
 
 template <class ElemType>
 bool MinPriorityHeapQueue<ElemType>::OutQueue(ElemType& tElem) {
-  if (IsEmpty())
-    return false;
+  if (IsEmpty()) return false;
   tElem = this->m_pData[0];
   std::swap(this->m_pData[0], this->m_pData[this->m_nDataLen - 1]);
-  SiftAdjust(0, this->m_nDataLen - 2);
-  --(this->m_nDataLen);
+  --(this->m_nDataLen)  ;
+  SiftAdjust(0, this->m_nDataLen - 1);
   return true;
 }
 

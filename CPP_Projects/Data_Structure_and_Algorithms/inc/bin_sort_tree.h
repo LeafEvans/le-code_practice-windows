@@ -32,20 +32,19 @@ BinSortTree<ElemType, KeyType>::~BinSortTree() {}
 template <class ElemType, class KeyType>
 BinTreeNode<ElemType>* BinSortTree<ElemType, KeyType>::SearchAux(
     const KeyType& tKey, BinTreeNode<ElemType>*& pParent) const {
-  BinTreeNode<ElemType>* pNode = this->GetRoot();  // 从根节点开始
-  pParent = NULL;                                  // 初始化父节点为空
+  BinTreeNode<ElemType>* pNode = this->GetRoot();
+  pParent = NULL;
 
-  // 遍历树寻找目标节点
   while (pNode != NULL && pNode->m_tElem != tKey) {
-    pParent = pNode;  // 更新父节点
+    pParent = pNode;
     if (tKey < pNode->m_tElem) {
-      pNode = pNode->m_pLeftChild;  // 向左子树移动
+      pNode = pNode->m_pLeftChild;
     } else {
-      pNode = pNode->m_pRightChild;  // 向右子树移动
+      pNode = pNode->m_pRightChild;
     }
   }
 
-  return pNode;  // 返回找到的节点或NULL
+  return pNode;
 }
 
 template <class ElemType, class KeyType>
@@ -59,20 +58,19 @@ template <class ElemType, class KeyType>
 bool BinSortTree<ElemType, KeyType>::Insert(const ElemType& tElem) {
   BinTreeNode<ElemType>* pParent;
 
-  // 如果元素不存在，则插入
   if (SearchAux(tElem, pParent) == NULL) {
     BinTreeNode<ElemType>* pNewNode = new BinTreeNode<ElemType>(tElem);
 
     if (this->IsEmpty()) {
-      this->m_pRoot = pNewNode;  // 如果数为空，设置新节点为根
+      this->m_pRoot = pNewNode;
     } else if (tElem < pParent->m_tElem) {
-      pParent->m_pLeftChild = pNewNode;  // 插入到左子树
+      pParent->m_pLeftChild = pNewNode;
     } else {
-      pParent->m_pRightChild = pNewNode;  // 插入到右子树
+      pParent->m_pRightChild = pNewNode;
     }
   }
 
-  return true;  // 插入成功
+  return true;
 }
 
 template <class ElemType, class KeyType>
@@ -83,11 +81,11 @@ bool BinSortTree<ElemType, KeyType>::Delete(const KeyType& tKey) {
   if (!pDelNode)
     return false;
 
-  if (pDelNode->m_pLeftChild != NULL && pDelNode->m_pRightChild != NULL) {
+  if (pDelNode->m_pLeftChild && pDelNode->m_pRightChild) {
     BinTreeNode<ElemType>* pParent = pDelNode;
     BinTreeNode<ElemType>* pNode = pDelNode->m_pRightChild;
 
-    while (pNode->m_pLeftChild != NULL) {
+    while (pNode->m_pLeftChild) {
       pParent = pNode;
       pNode = pNode->m_pLeftChild;
     }
@@ -104,19 +102,16 @@ bool BinSortTree<ElemType, KeyType>::Delete(const KeyType& tKey) {
     return true;
   }
 
-  BinTreeNode<ElemType>* pChild = (pDelNode->m_pLeftChild != NULL)
+  BinTreeNode<ElemType>* pChild = (pDelNode->m_pLeftChild)
                                       ? pDelNode->m_pLeftChild
                                       : pDelNode->m_pRightChild;
 
   if (pDelParent == NULL) {
     this->m_pRoot = pChild;
-  } else if (pDelParent->m_pLeftChild == pDelParent) {
+  } else if (pDelParent->m_pLeftChild == pDelNode) {
     pDelParent->m_pLeftChild = pChild;
   } else {
     pDelParent->m_pRightChild = pChild;
   }
-
-  delete pDelNode;
-  return true;
 }
 #endif  // INC_BIN_SORT_TREE_H_

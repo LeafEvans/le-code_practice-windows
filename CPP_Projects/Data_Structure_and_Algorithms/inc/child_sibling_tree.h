@@ -21,7 +21,7 @@ class ChildSiblingTree
 
   // 构造函数,根据数组表示的树建立孩子兄弟树
   // arrElem: 结点数组
-  // arrParents: 双亲数组,arrParents[i]表示 arrElem[i] 的双亲下标
+  // arrParents: 双亲数组,arrParents[i] 表示 arrElem[i] 的双亲下标
   // nRoot: 根结点在数组中的下标
   // nDataLen: 数组长度
   ChildSiblingTree(ElemType* arrElem, int* arrParents, int nRoot, int nDataLen);

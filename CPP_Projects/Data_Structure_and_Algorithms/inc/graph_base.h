@@ -63,14 +63,14 @@ class GraphBase {
   int NodeCount() const;                                // 获取顶点个数
   int EdgeCount() const;                                // 获取边数
   void DfsTraverse(
-      void (*pVisit)(const ElemType& tElem)) const;  // 深度优先遍历
+      void (*pVisit)(const ElemType& tElem)) const;         // 深度优先遍历
   void BfsTraverse(void (*pVisit)(const ElemType&)) const;  // 广度优先遍历
-  bool GetElem(int nNode, ElemType& tElem) const;  // 获取节点元素
-  bool SetElem(int nNode, const ElemType& tElem);  // 设置节点元素
+  bool GetElem(int nNode, ElemType& tElem) const;           // 获取节点元素
+  bool SetElem(int nNode, const ElemType& tElem);           // 设置节点元素
   bool Prim();     // 普里姆算法求最小生成树
   bool Kruskal();  // 克鲁斯卡尔算法求最小生成树
   GraphEdge<WeightType>* GetMstEdge(
-      int& nMstEdgeCount) const;  // 获取最小生成树的边集
+      int& nMstEdgeCount) const;                   // 获取最小生成树的边集
   bool TopoSort(SqList<int>& slSortedNode) const;  // 拓扑排序
   // 求网的关键路径
   bool CriticalPath(SqList<GraphEdge<WeightType>>& slCriticalPathEdge) const;
@@ -208,17 +208,16 @@ void GraphBase<ElemType, NodeType, WeightType>::ClearTag() {
 template <class ElemType, class NodeType, class WeightType>
 void GraphBase<ElemType, NodeType, WeightType>::DfsAux(
     int nNode, void (*pVisit)(const ElemType&)) const {
-  SetTag(nNode, true);  // 标记当前节点为已访问
+  SetTag(nNode, true);
   ElemType tElem;
-  GetElem(nNode, tElem);  // 获取当前节点的元素
-  (*pVisit)(tElem);       // 访问当前节点
+  GetElem(nNode, tElem);
+  (*pVisit)(tElem);
 
   WeightType tWeight;
-  // 遍历所有邻接点：先获取第一个邻接点，然后通过NextAdjNode获取下一个邻接点
   for (int nAdjNode = FirstAdjNode(nNode, tWeight); nAdjNode >= 0;
        nAdjNode = NextAdjNode(nNode, nAdjNode, tWeight)) {
-    if (!GetTag(nAdjNode)) {     // 如果邻接点未被访问
-      DfsAux(nAdjNode, pVisit);  // 递归访问邻接点
+    if (!GetTag(nAdjNode)) {
+      DfsAux(nAdjNode, pVisit);
     }
   }
 }
@@ -226,34 +225,34 @@ void GraphBase<ElemType, NodeType, WeightType>::DfsAux(
 template <class ElemType, class NodeType, class WeightType>
 void GraphBase<ElemType, NodeType, WeightType>::DfsTraverse(
     void (*pVisit)(const ElemType& tElem)) const {
-  ClearTag();  // 清空访问标志
-
+  ClearTag();
   for (int nNode = 0; nNode < m_nNodeCount; ++nNode) {
-    if (!GetTag(nNode))  // 对未访问的顶点进行深度优先搜索
+    if (!GetTag(nNode)) {
       DfsAux(nNode, pVisit);
+    }
   }
 }
 
 template <class ElemType, class NodeType, class WeightType>
 void GraphBase<ElemType, NodeType, WeightType>::BfsAux(
     int nNode, void (*pVisit)(const ElemType&)) const {
-  SetTag(nNode, true);  // 标记起始节点为已访问
+  SetTag(nNode, true);
   ElemType tElem;
-  GetElem(nNode, tElem);  // 获取起始节点的元素
-  (*pVisit)(tElem);       // 访问起始节点
-  LkQueue<int> lqNode;    // 创建一个队列用于存储待访问节点
-  lqNode.InQueue(nNode);  // 将起始节点入队
+  GetElem(nNode, tElem);
+  (*pVisit)(tElem);
+  LkQueue<int> lqNode;
+  lqNode.InQueue(nNode);
   WeightType tWeight;
-  while (!lqNode.IsEmpty()) {  // 当队列不为空时，继续遍历
-    lqNode.OutQueue(nNode);    // 出队一个节点
+  while (!lqNode.IsEmpty()) {
+    lqNode.OutQueue(nNode);
     for (int nAdjNode = FirstAdjNode(nNode, tWeight); nAdjNode >= 0;
-         nAdjNode =
-             NextAdjNode(nNode, nAdjNode, tWeight)) {  // 遍历所有邻接节点
-      if (!GetTag(nAdjNode)) {     // 如果邻接节点未被访问
-        SetTag(nAdjNode, true);    // 标记邻接节点为已访问
-        GetElem(nAdjNode, tElem);  // 获取邻接节点的元素
-        (*pVisit)(tElem);          // 访问邻接节点
-        lqNode.InQueue(nAdjNode);  // 将邻接节点入队
+         nAdjNode = NextAdjNode(nNode, nAdjNode, tWeight)) {
+      nAdjNode = NextAdjNode(nNode, nAdjNode, tWeight);
+      if (!GetTag(nAdjNode)) {
+        SetTag(nAdjNode, true);
+        GetElem(nAdjNode, tElem);
+        (*pVisit)(tElem);
+        lqNode.InQueue(nAdjNode);
       }
     }
   }
@@ -299,81 +298,61 @@ void GraphBase<ElemType, NodeType, WeightType>::SetTag(int nNode, bool bTag) {
   m_arrVistedTag[nNode] = bTag;
 }
 
-// 使用Prim算法计算最小生成树
-// 从任意顶点开始，每次选择距离当前生成树最近的顶点加入，直到所有顶点都加入
 template <class ElemType, class NodeType, class WeightType>
 bool GraphBase<ElemType, NodeType, WeightType>::Prim() {
-  // 检查图是否为无向图且数据合法
   if (m_nNodeCount <= 0 || m_nEdgeCount <= 0 || !m_arrNode ||
-      m_eType != UNDIR_NETWORK)
+      m_eType != UNDIR_NETWORK) {
     return false;
+  }
 
-  // 清理旧的最小生成树边集
   if (m_arrMstEdge) {
     delete[] m_arrMstEdge;
     m_arrMstEdge = NULL;
   }
 
-  // 为最小生成树边集分配内存，最多需要 n - 1 条边
   m_arrMstEdge = new GraphEdge<WeightType>[m_nNodeCount - 1];
   m_nMstEdgeCount = 0;
 
-  // 初始化辅助数组：
-  // arrMinWeight[i] 表示顶点 i 到当前生成树的最小权值
-  // arrPreNode[i] 记录顶点 i 在生成树中的前驱顶点
-  WeightType* arrMinWeight = new WeightType[m_nNodeCount];
+  WeightType* arrMinWeight = new WeightType[m_nNodeCount - 1];
   int* arrPreNode = new int[m_nNodeCount];
 
-  // 初始化所有顶点到生成树的距离为无穷大，前驱顶点为 -1
   std::fill_n(arrMinWeight, m_nNodeCount, InfniteWeight());
   std::fill_n(arrPreNode, m_nNodeCount, -1);
 
-  // 从顶点 0 开始构建最小生成树，初始距离为 0
   arrMinWeight[0] = 0;
 
-  // 循环 n 次，每次选择一个顶点加入生成树
   for (int i = 0; i < m_nNodeCount; ++i) {
-    // 从未访问顶点中寻找距离最小的顶点
     WeightType tMinWeight = InfniteWeight();
     int nMinNode = -1;
-    for (int j = 0; j > m_nNodeCount; ++j) {
+    for (int j = 0; j < m_nNodeCount; ++j) {
       if (!GetTag(j) && arrMinWeight[j] < tMinWeight) {
         tMinWeight = arrMinWeight[j];
         nMinNode = j;
       }
     }
 
-    // 如果找不到最小权值顶点，说明图不连通
     if (nMinNode == -1) {
       delete[] arrMinWeight;
       delete[] arrPreNode;
       return false;
     }
 
-    // 标记该顶点已加入生成树
-    SetTag(nMinNode, true);
-
-    // 将对应的边加入最小生成树边集（第一个顶点除外）
     if (i > 0) {
-      m_arrMstEdge[m_nMstEdgeCount].m_nNode1 = arrPreNode[nMinNode];
+      m_arrMstEdge[m_nMstEdgeCount].m_nNode1 = arrPreNode;
       m_arrMstEdge[m_nMstEdgeCount].m_nNode2 = nMinNode;
       m_arrMstEdge[m_nMstEdgeCount].m_tWeight = tMinWeight;
       ++m_nMstEdgeCount;
     }
 
-    // 以新加入的顶点为中介，更新其他顶点到生成树的距离
     WeightType tWeight;
     for (int nAdjNode = FirstAdjNode(nMinNode, tWeight); nAdjNode >= 0;
          nAdjNode = NextAdjNode(nMinNode, nAdjNode, tWeight)) {
-      // 如果邻接顶点未访问且权重更小，则更新最小权重和前驱顶点
       if (!GetTag(nAdjNode) && tWeight < arrMinWeight[nAdjNode]) {
         arrMinWeight[nAdjNode] = tWeight;
         arrPreNode[nAdjNode] = nMinNode;
       }
     }
   }
-
-  // 释放辅助数组并清除访问标记
   delete[] arrMinWeight;
   delete[] arrPreNode;
   ClearTag();
@@ -471,10 +450,10 @@ bool GraphBase<ElemType, NodeType, WeightType>::TopoSort(
 
   slSortedNode.Clear();  // 清空排序结果列表
 
-  int nNode = -1;            // 当前处理的节点
-  int nNodeCount = 0;        // 已排序的节点计数
-  LkStack<int> lsTopoStack;  // 用于存储入度为 0 的节点的栈
-  WeightType tWeight;        // 辅助变量
+  int nNode = -1;                            // 当前处理的节点
+  int nNodeCount = 0;                        // 已排序的节点计数
+  LkStack<int> lsTopoStack;                  // 用于存储入度为 0 的节点的栈
+  WeightType tWeight;                        // 辅助变量
   int* arrInDegree = new int[m_nNodeCount];  // 入度数组
   StatInDegree(arrInDegree);                 // 计算每个节点的入度
 

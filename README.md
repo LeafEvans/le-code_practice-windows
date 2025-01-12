@@ -24,7 +24,7 @@
 2. 📂 进入指定目录：
 
    ```bash
-   cd LE-Code_Practice
+   cd LE-Code_Practice-Windows
    ```
 
 3. ▶️ 按照每个文件夹或文件中提供的说明运行或执行代码。

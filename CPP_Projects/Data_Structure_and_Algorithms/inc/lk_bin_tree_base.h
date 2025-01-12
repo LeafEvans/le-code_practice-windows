@@ -12,18 +12,18 @@ class LkBinTreeBase : public BinTreeBase<ElemType, NodeType*> {
   ~LkBinTreeBase();  // 析构并释放所有节点
   // 拷贝构造函数，深拷贝源二叉树
   LkBinTreeBase(LkBinTreeBase<ElemType, NodeType>& lbtbSrc);
-  LkBinTreeBase(NodeType* pRoot);        // 以指定节点为根构造二叉树
-  LkBinTreeBase(const ElemType& tElem);  // 构造只有根节点的二叉树
-  virtual NodeType* GetRoot() const;     // 获取根节点指针
+  LkBinTreeBase(NodeType* pRoot);                   // 以指定节点为根构造二叉树
+  LkBinTreeBase(const ElemType& tElem);             // 构造只有根节点的二叉树
+  virtual NodeType* GetRoot() const;                // 获取根节点指针
   virtual bool NodeIsEmpty(NodeType* pNode) const;  // 判断节点是否为空
   // 获取节点的元素值，成功返回 true
   virtual bool GetElem(NodeType* pNode, ElemType& tElem) const;
   // 设置节点的元素值，成功返回 true
   virtual bool SetElem(NodeType* pNode, const ElemType& tElem);
-  virtual bool IsEmpty() const;  // 判断是否为空树
-  virtual NodeType*& GetLeftChild(NodeType* pNode) const;  // 获取左子节点指针
+  virtual bool IsEmpty() const;                             // 判断是否为空树
+  virtual NodeType*& GetLeftChild(NodeType* pNode) const;   // 获取左子节点指针
   virtual NodeType*& GetRightChild(NodeType* pNode) const;  // 获取右子节点指针
-  virtual NodeType* GetParent(NodeType* pNode) const = 0;  // 获取父节点指针
+  virtual NodeType* GetParent(NodeType* pNode) const = 0;   // 获取父节点指针
   // 根据前序遍历序列和中序遍历序列构造二叉树
   virtual bool CreateBinTree(ElemType* arrPre, ElemType* arrIn, int nSize);
   // 赋值运算符重载，深拷贝源二叉树
@@ -113,12 +113,10 @@ bool LkBinTreeBase<ElemType, NodeType>::CreateBinTree(ElemType* arrPre,
                                                       ElemType* arrIn,
                                                       int nSize) {
   if (!arrPre || !arrIn || nSize < 1)
-    return false;             // 参数检查
-  this->DestroyAux(m_pRoot);  // 销毁原有树
-  // 根据前序和中序遍历序列重建二叉树
+    return false;
+  this->DestroyAux(m_pRoot);
   m_pRoot = this->CreateBinTreeAux(NULL, arrPre, arrIn, 0, nSize - 1, 0,
                                    nSize - 1, false);
-  return true;  // 创建成功
 }
 
 template <class ElemType, class NodeType>
@@ -161,7 +159,7 @@ NodeType* LkBinTreeBase<ElemType, NodeType>::CreateChildNode(NodeType* pNode,
     return NULL;
   }
 
-  NodeType* pChild = new NodeType();        // 创建新子节点
+  NodeType* pChild = new NodeType();      // 创建新子节点
   LinkParentChild(pNode, pChild, bLeft);  // 建立父子关系
   return pChild;                          // 返回新节点指针
 }
@@ -169,17 +167,15 @@ NodeType* LkBinTreeBase<ElemType, NodeType>::CreateChildNode(NodeType* pNode,
 template <class ElemType, class NodeType>
 NodeType* LkBinTreeBase<ElemType, NodeType>::CopyTreeAux(
     const NodeType* pRoot) {
-  if (pRoot == NULL)
-    return NULL;  // 空树返回 NULL
+  if (!pRoot)
+    return NULL;
 
-  // 递归复制左右子树
   NodeType* pLeftChild = CopyTreeAux(GetLeftChild(pRoot));
   NodeType* pRightChild = CopyTreeAux(GetRightChild(pRoot));
-  NodeType* pParent = new NodeType;
-  SetElem(pParent, pRoot->m_tElem);              // 复制节点元素值
-  LinkParentChild(pParent, pLeftChild, true);    // 连接左子树
-  LinkParentChild(pParent, pRightChild, false);  // 连接右子树
-  return pParent;                                // 返回子树根节点
+  NodeType* pParent = new NodeType();
+  SetElem(pParent, pRoot->m_tElem);
+  LinkParentChild(pParent, pLeftChild, true);
+  LinkParentChild(pParent, pRightChild, false);
 }
 
 #endif  // INC_LK_BINARY_TREE_BASE_H_

@@ -1,5 +1,6 @@
 #ifndef INC_SQ_BIN_TREE_H_
 #define INC_SQ_BIN_TREE_H_
+#include <algorithm>
 #include "bin_tree_base.h"
 #include "sq_bin_tree_node.h"
 #include "sq_list.h"
@@ -17,18 +18,18 @@ class SqBinTree : public BinTreeBase<ElemType, int>,
             int nSize = naSqBinTree::kDefaultSize);  // 带参数的构造函数
   ~SqBinTree();                                      // 析构函数
   SqBinTree(const SqBinTree<ElemType>& sbtSrc);      // 拷贝构造函数
-  SqBinTree(SqBinTreeNode<ElemType>* arrNodes, int nRoot,
+  SqBinTree(SqBinTreeNode<ElemType>* arrNode, int nRoot,
             int nSize = naSqBinTree::kDefaultSize);  // 带节点数组的构造函数
   SqBinTree<ElemType>& operator=(
-      const SqBinTree<ElemType>& sbtSrc);     // 赋值运算符重载
-  virtual int GetRoot() const;                // 获取根节点
-  virtual bool NodeIsEmpty(int nNode) const;  // 判断节点是否为空
+      const SqBinTree<ElemType>& sbtSrc);                  // 赋值运算符重载
+  virtual int GetRoot() const;                             // 获取根节点
+  virtual bool NodeIsEmpty(int nNode) const;               // 判断节点是否为空
   virtual bool GetElem(int nNode, ElemType& tElem) const;  // 获取节点元素
   virtual bool SetElem(int nNode, const ElemType& tElem);  // 设置节点元素
-  virtual bool IsEmpty() const;                 // 判断树是否为空
-  virtual int& GetLeftChild(int nNode) const;   // 获取左孩子节点
-  virtual int& GetRightChild(int nNode) const;  // 获取右孩子节点
-  virtual int GetParent(int nNode) const;       // 获取父节点
+  virtual bool IsEmpty() const;                            // 判断树是否为空
+  virtual int& GetLeftChild(int nNode) const;              // 获取左孩子节点
+  virtual int& GetRightChild(int nNode) const;             // 获取右孩子节点
+  virtual int GetParent(int nNode) const;                  // 获取父节点
   virtual bool CreateBinTree(ElemType* arrPre, ElemType* arrIn,
                              int nSize);  // 创建二叉树
 
@@ -47,7 +48,7 @@ SqBinTree<ElemType>::SqBinTree()
       SqList<SqBinTreeNode<ElemType>>(naSqBinTree::kDefaultSize) {
   this->m_nDataLen = naSqBinTree::kDefaultSize;  // 设置数据长度为默认大小
   std::fill_n(this->m_pData, naSqBinTree::kDefaultSize, 0);  // 初始化数据
-  m_nRoot = 1;  // 设置根节点索引
+  m_nRoot = 1;                                               // 设置根节点索引
 }
 
 template <class ElemType>
@@ -76,26 +77,27 @@ SqBinTree<ElemType>::SqBinTree(const SqBinTree<ElemType>& sbtSrc) {
 }
 
 template <class ElemType>
-SqBinTree<ElemType>::SqBinTree(SqBinTreeNode<ElemType>* arrNodes, int nRoot,
+SqBinTree<ElemType>::SqBinTree(SqBinTreeNode<ElemType>* arrNode, int nRoot,
                                int nSize)
     : SqList<SqBinTreeNode<ElemType>>(nSize) {
   this->m_nDataLen = nSize;  // 设置数据长度
   // 拷贝节点数组
-  std::copy(arrNodes, arrNodes + nSize, this->m_pData);
+  std::copy(arrNode, arrNode + nSize, this->m_pData);
   m_nRoot = nRoot;  // 设置根节点索引
 }
 
 template <class ElemType>
 SqBinTree<ElemType>& SqBinTree<ElemType>::operator=(
     const SqBinTree<ElemType>& sbtSrc) {
-  if (&sbtSrc != this) {  // 如果不是同一个对象
-    this->Clear();        // 清空数据
-    // 拷贝数据
-    std::copy(sbtSrc.m_pData, sbtSrc.m_pData + sbtSrc.m_nDataLen,
-              this->m_pData);    // 拷贝数据
-    m_nRoot = sbtSrc.GetRoot();  // 拷贝根节点索引
+  if (&sbtSrc != this) {
+    this->Clear();
+    int nBufferLen = sbtSrc.m_nBufferLen;
+    this->Reserve(nBufferLen + 1);
+    std::copy_n(sbtSrc.m_pData, sbtSrc.m_nDataLen, this->m_pData);
+    this->m_nRoot = sbtSrc.GetRoot();
+    this->m_nDataLen = sbtSrc.m_nDataLen;
   }
-  return *this;  // 返回当前对象
+  return *this;
 }
 
 template <class ElemType>
@@ -170,7 +172,7 @@ int SqBinTree<ElemType>::CreateChildNode(int nNode, bool bLeft) {
 
   if (nChildNode >= this->m_nDataLen) {  // 如果子节点索引超出数据长度
     this->Reserve(nChildNode * 2);       // 扩展数据长度
-    this->m_nDataLen = nChildNode + 1;  // 更新数据长度
+    this->m_nDataLen = nChildNode + 1;   // 更新数据长度
   }
   this->m_pData[nChildNode].m_eTag = USED_NODE;  // 标记子节点为已使用
   return nChildNode;                             // 返回子节点索引

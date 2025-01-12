@@ -1,7 +1,7 @@
 #ifndef INC_BIN_TREE_H_
 #define INC_BIN_TREE_H_
-#include "lk_bin_tree_base.h"
 #include "bin_tree_node.h"
+#include "lk_bin_tree_base.h"
 
 template <class ElemType>
 class BinTree : public LkBinTreeBase<ElemType, BinTreeNode<ElemType>> {
@@ -37,28 +37,30 @@ void BinTree<ElemType>::LinkParentChild(BinTreeNode<ElemType>* pParent,
                                         BinTreeNode<ElemType>* pChild,
                                         bool bLeft) {
   if (!pParent)
-    return;  // 父节点为空时直接返回
-  // 根据 bLeft 标志建立父子节点的连接关系
-  bLeft ? pParent->m_pLeftChild = pChild : pParent->m_pRightChild = pChild;
+    return;
+
+  if (bLeft) {
+    pParent->m_pLeftChild = pChild;
+  } else {
+    pParent->m_pRightChild = pChild;
+  }
 }
 
 template <class ElemType>
 BinTreeNode<ElemType>* BinTree<ElemType>::GetParentAux(
     BinTreeNode<ElemType>* pRoot, BinTreeNode<ElemType>* pNode) const {
   if (pRoot == NULL) {
-    return NULL;  // 空树返回 NULL
+    return NULL;
   } else if (pRoot->m_pLeftChild == pNode || pRoot->m_pRightChild == pNode) {
-    return pRoot;  // 找到目标节点的父节点
+    return pRoot;
   }
 
   BinTreeNode<ElemType>* pParent;
 
-  // 递归在左子树中查找
   pParent = GetParentAux(pRoot->m_pLeftChild, pNode);
   if (pParent != NULL)
     return pParent;
 
-  // 递归在右子树中查找
   pParent = GetParentAux(pRoot->m_pRightChild, pNode);
   if (pParent != NULL)
     return pParent;

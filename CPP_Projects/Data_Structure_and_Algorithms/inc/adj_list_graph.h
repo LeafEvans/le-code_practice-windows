@@ -79,26 +79,19 @@ void AdjListGraph<ElemType, WeightType>::SetNodeElem(
 template <class ElemType, class WeightType>
 void AdjListGraph<ElemType, WeightType>::InsertEdge(int nNode1, int nNode2,
                                                     WeightType tWeight) {
-  // 检查节点索引是否合法
   if (nNode1 < 0 || nNode1 >= this->m_nNodeCount || nNode2 < 0 ||
       nNode2 >= this->m_nNodeCount) {
     return;
   }
-
-  // 如果是无权图，边的权重设为 1
   if (this->m_eType == UNDIR_GRAPH || this->m_eType == DIR_GRAPH) {
     tWeight = 1;
   }
-
-  // 根据图的类型（有向/无向）插入边
   if (this->m_eType == UNDIR_GRAPH || this->m_eType == UNDIR_NETWORK) {
-    // 无向图需要在两个方向都插入边
     if (this->m_arrNode[nNode1].InsertEdge(nNode2, tWeight) &&
         this->m_arrNode[nNode2].InsertEdge(nNode1, tWeight)) {
       ++(this->m_nEdgeCount);
     }
   } else {
-    // 有向图只需要插入一条边
     if (this->m_arrNode[nNode1].InsertEdge(nNode2, tWeight)) {
       ++(this->m_nEdgeCount);
     }

@@ -27,10 +27,10 @@ class CharString : public SqList<char> {
   ~CharString();                        // 析构函数
 
   // 运算符重载
-  CharString& operator=(const CharString& csSrc);  // 赋值运算符
+  CharString& operator=(const CharString& csSrc);   // 赋值运算符
   CharString& operator+=(const CharString& csSrc);  // 字符串拼接(CharString)
-  CharString& operator+=(const char* pszSrc);  // 字符串拼接(C风格字符串)
-  const char& operator[](int nIdx) const;      // 下标访问运算符
+  CharString& operator+=(const char* pszSrc);       // 字符串拼接(C风格字符串)
+  const char& operator[](int nIdx) const;           // 下标访问运算符
 
   // 字符串操作方法
   CharString& CopyN(const char* pszSrc, int n);  // 复制指定长度的字符串
@@ -63,13 +63,13 @@ void Copy(CharString& csDes, const CharString& csSrc);    // 字符串复制
 void Copy(CharString& csDes, const CharString& csSrc,
           int n);  // 复制指定长度字符串
 int Index(const CharString& csDes, const CharString& csPat,
-          int nIdx = 0);  // 子串查找
+          int nIdx = 0);                                            // 子串查找
 CharString SubString(const CharString& csStr, int nIdx, int nLen);  // 子串提取
 
 // 比较运算符重载声明
 bool operator==(const CharString& csFirst, const CharString& csSecond);  // 相等
-bool operator<(const CharString& csFirst, const CharString& csSecond);  // 小于
-bool operator>(const CharString& csFirst, const CharString& csSecond);  // 大于
+bool operator<(const CharString& csFirst, const CharString& csSecond);   // 小于
+bool operator>(const CharString& csFirst, const CharString& csSecond);   // 大于
 bool operator<=(const CharString& csFirst,
                 const CharString& csSecond);  // 小于等于
 bool operator>=(const CharString& csFirst,
@@ -174,32 +174,33 @@ inline int CharString::KmpIndex(const CharString& csPat, int nIdx) const {
   int nPatLen = csPat.Length();
 
   if (m_nDataLen - nIdx < nPatLen) {
-    return -1;  // 模式串长度超出主串剩余长度
+    return -1;
   } else if (nPatLen == 0) {
-    return nIdx;  // 空模式串匹配任意位置
+    return nIdx;
   }
 
   const char* cszPat = csPat.ToCStr();
-  int* arrNext = new int[nPatLen];  // 分配next数组空间
-  GetNext(csPat, arrNext);          // 计算next数组
+  int* arrNext = new int[nPatLen];
+  GetNext(csPat, arrNext);
 
-  int i = nIdx, j = 0;  // i为主串指针,j为模式串指针
+  int i = nIdx, j = 0;
+
   while (i < m_nDataLen) {
     if (j == -1 || m_pData[i] == cszPat[j]) {
-      ++i;  // 字符匹配,两个指针都前进
+      ++i;
       ++j;
     } else {
-      j = arrNext[j];  // 字符不匹配,模式串指针回退
+      j = arrNext[j];
     }
 
-    if (j == nPatLen) {  // 完全匹配
+    if (j == nPatLen) {
       delete[] arrNext;
       return i - j;
     }
   }
 
-  delete[] arrNext;
-  return -1;  // 未找到匹配
+  delete [] arrNext;
+  return -1;
 }
 
 inline const char* CharString::ToCStr() const {
@@ -429,7 +430,7 @@ inline void CharString::GetNext(const CharString& csPat, int* arrNext) const {
 
   while (i < nPatLen) {
     if (k == -1 || cszPat[i - 1] == cszPat[k]) {
-      arrNext[i] = k + 1;  // 找到匹配,更新Next值
+      arrNext[i] = k + 1;  // 找到匹配，更新Next值
       ++i;
       ++k;
     } else {

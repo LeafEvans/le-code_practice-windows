@@ -18,23 +18,16 @@ struct ThreadBinTreeNode {
   PtrTagType m_eLeftTag;                   // 左指针标志
   PtrTagType m_eRightTag;                  // 右指针标志
 
-  ThreadBinTreeNode()
-      : m_tElem(ElemType()),
-        m_pLeft(NULL),
-        m_pRight(NULL),
-        m_pParent(NULL),
-        m_eLeftTag(CHILD_PTR),
-        m_eRightTag(CHILD_PTR) {}  // 默认构造函数，初始化为叶子节点
-
-  ThreadBinTreeNode(const ElemType& tElem,
+  ThreadBinTreeNode(const ElemType& tElem = ElemType(),
                     ThreadBinTreeNode<ElemType>* pLeft = NULL,
                     ThreadBinTreeNode<ElemType>* pRight = NULL,
+                    ThreadBinTreeNode<ElemType>* pParent = NULL,
                     PtrTagType eLeftTag = CHILD_PTR,
                     PtrTagType eRightTag = CHILD_PTR)
       : m_tElem(tElem),
         m_pLeft(pLeft),
         m_pRight(pRight),
-        m_pParent(NULL),
+        m_pParent(pParent),
         m_eLeftTag(eLeftTag),
         m_eRightTag(eRightTag) {}  // 带参数构造函数，初始化节点
 };

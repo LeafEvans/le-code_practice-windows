@@ -19,7 +19,7 @@ class AdjListGraphNode {
   // 边操作相关方法
   bool InsertEdge(int nNode, WeightType tWeight);  // 插入一条边
   bool DeleteEdge(int nNode);                      // 删除一条边
-  int FirstEdge(WeightType& tWeight) const;  // 获取第一条边的目标节点
+  int FirstEdge(WeightType& tWeight) const;        // 获取第一条边的目标节点
   int NextEdge(int nPreNode,
                WeightType& tWeight) const;  // 获取指定节点的下一条边的目标节点
 
@@ -51,38 +51,36 @@ template <class ElemType, class WeightType>
 bool AdjListGraphNode<ElemType, WeightType>::InsertEdge(int nNode,
                                                         WeightType tWeight) {
   SimpleLkList<AdjListGraphEdge<WeightType>>* psllAdj = &m_sllAdj;
-  psllAdj->Head();  // 定位到链表头部
+  psllAdj->Head();
   AdjListGraphEdge<WeightType> algeElem;
 
   while (psllAdj->Next(algeElem)) {
     if (algeElem.m_nNode == nNode) {
-      return false;  // 边已存在，插入失败
+      return false;
     }
   }
 
-  // 创建新边并插入到链表尾部
   algeElem.m_nNode = nNode;
   algeElem.m_tWeight = tWeight;
   psllAdj->AddTail(algeElem);
-  return true;  // 插入成功
+  return true;
 }
 
 // 删除一条边
 template <class ElemType, class WeightType>
 bool AdjListGraphNode<ElemType, WeightType>::DeleteEdge(int nNode) {
-  SimpleLkList<AdjListGraphEdge<WeightType>>* psllAdj = &m_sllAdj;
+  SimpleLkList<AdjListGraphEdge<WeightType>>*psllAdj = &m_sllAdj;
   psllAdj->Head();
   AdjListGraphEdge<WeightType> algeElem;
 
-  // 查找并删除目标边
   while (psllAdj->Next(algeElem)) {
     if (algeElem.m_nNode == nNode) {
       psllAdj->DeleteCurr(algeElem);
-      return true;  // 删除成功
+      return true;
     }
   }
 
-  return false;  // 边不存在，删除失败
+  return false;
 }
 
 // 获取第一条边的目标节点
