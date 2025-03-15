@@ -1,0 +1,10 @@
+^C:\CODE\CODE_PRACTICE-WINDOWS\ASSIGNMENTS\CPP\2024\TEST_2025_3_16\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Code/Code_Practice-Windows/Assignments/CPP/2024/test_2025_3_16 -BC:/Code/Code_Practice-Windows/Assignments/CPP/2024/test_2025_3_16/build --check-stamp-file C:/Code/Code_Practice-Windows/Assignments/CPP/2024/test_2025_3_16/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
