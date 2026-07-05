@@ -12,24 +12,126 @@ export struct TasksPage {
   }
 
   build() {
-    Column() {
-      // 标题
-      Text('我的任务')
-        .fontSize(28)
-        .fontWeight(FontWeight.Bold)
-        .margin({ top: 20, bottom: 20 })
+    Scroll() {
+      Column() {
+        // 标题区
+        Row() {
+          Column() {
+            Text('我的任务')
+              .fontSize(28)
+              .fontWeight(FontWeight.Bold)
+              .fontColor('#1A1A1A')
 
-      // 任务列表组件
-      TaskListComponent({
-        tasks: this.tasks,
-        onAddTask: (name: string): void => this.addTask(name),
-        onToggleTask: (id: string): void => this.toggleTask(id),
-        onDeleteTask: (id: string): void => this.deleteTask(id)
-      })
+            Text(`${this.tasks.filter((t: Task) => !t.completed).length}项未完成`)
+              .fontSize(14)
+              .fontColor('#999999')
+              .margin({ top: 4 })
+          }
+          .alignItems(HorizontalAlign.Start)
+        }
+        .width('100%')
+        .padding({ top: 20 })
+
+        // 任务数量统计
+        Row() {
+          // 全部
+          Column() {
+            Text(this.tasks.length.toString())
+              .fontSize(24)
+              .fontWeight(FontWeight.Bold)
+              .fontColor('#FF6B6B')
+            Text('全部')
+              .fontSize(12)
+              .fontColor('#999999')
+              .margin({ top: 2 })
+          }
+          .layoutWeight(1)
+          .alignItems(HorizontalAlign.Center)
+
+          // 已完成
+          Column() {
+            Text(this.tasks.filter((t: Task) => t.completed).length.toString())
+              .fontSize(24)
+              .fontWeight(FontWeight.Bold)
+              .fontColor('#4ECDC4')
+            Text('已完成')
+              .fontSize(12)
+              .fontColor('#999999')
+              .margin({ top: 2 })
+          }
+          .layoutWeight(1)
+          .alignItems(HorizontalAlign.Center)
+
+          // 未完成
+          Column() {
+            Text(this.tasks.filter((t: Task) => !t.completed).length.toString())
+              .fontSize(24)
+              .fontWeight(FontWeight.Bold)
+              .fontColor('#FFA726')
+            Text('未完成')
+              .fontSize(12)
+              .fontColor('#999999')
+              .margin({ top: 2 })
+          }
+          .layoutWeight(1)
+          .alignItems(HorizontalAlign.Center)
+        }
+        .width('100%')
+        .padding(20)
+        .backgroundColor('#FFFFFF')
+        .borderRadius(20)
+        .shadow({
+          radius: 20,
+          color: 'rgba(0, 0, 0, 0.06)',
+          offsetX: 0,
+          offsetY: 4
+        })
+        .margin({ top: 16 })
+
+        // 任务列表卡片
+        Column() {
+          TaskListComponent({
+            tasks: this.tasks,
+            onAddTask: (name: string): void => this.addTask(name),
+            onToggleTask: (id: string): void => this.toggleTask(id),
+            onDeleteTask: (id: string): void => this.deleteTask(id)
+          })
+        }
+        .width('100%')
+        .backgroundColor('#FFFFFF')
+        .borderRadius(20)
+        .shadow({
+          radius: 20,
+          color: 'rgba(0, 0, 0, 0.06)',
+          offsetX: 0,
+          offsetY: 4
+        })
+        .margin({ top: 16 })
+
+        if (this.tasks.length === 0) {
+          // 空态占位
+          Column() {
+            Text('还没有任务')
+              .fontSize(16)
+              .fontColor('#CCCCCC')
+            Text('在上方输入框中添加你的第一个番茄任务')
+              .fontSize(14)
+              .fontColor('#DDDDDD')
+              .margin({ top: 8 })
+          }
+          .width('100%')
+          .height(120)
+          .justifyContent(FlexAlign.Center)
+          .alignItems(HorizontalAlign.Center)
+          .margin({ top: 40 })
+        }
+      }
+      .width('100%')
+      .padding({ left: 16, right: 16, bottom: 96 })
     }
     .width('100%')
     .height('100%')
-    .padding(16)
+    .backgroundColor('#F5F5F5')
   }
 
   private addTask(name: string): void {

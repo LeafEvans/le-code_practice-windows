@@ -42,41 +42,103 @@ export struct TimerPage {
   }
 
   build() {
-    Column() {
-      // 标题
-      Text('番茄钟')
-        .fontSize(28)
-        .fontWeight(FontWeight.Bold)
-        .margin({ top: 20, bottom: 20 })
+    Scroll() {
+      Column() {
+        // 顶部标题区
+        Row() {
+          Column() {
+            Text('番茄钟')
+              .fontSize(28)
+              .fontWeight(FontWeight.Bold)
+              .fontColor('#1A1A1A')
 
-      // 计时器组件
-      TimerComponent({
-        timeRemaining: this.timerState.timeRemaining,
-        totalTime: this.getCurrentPhaseTotalTime(),
-        currentPhase: this.timerState.currentPhase
-      })
+            Text(this.timerState.currentPhase === 'work' ? '专注工作，保持高效' :
+                 this.timerState.currentPhase === 'break' ? '休息一会，放松身心' : '长休息，充充电')
+              .fontSize(14)
+              .fontColor('#999999')
+              .margin({ top: 4 })
+          }
+          .alignItems(HorizontalAlign.Start)
 
-      // 控制按钮
-      ControlButtonsComponent({
-        isRunning: this.timerState.isRunning,
-        isPaused: this.timerState.isPaused,
-        onStart: (): void => this.startTimer(),
-        onPause: (): void => this.pauseTimer(),
-        onResume: (): void => this.resumeTimer(),
-        onReset: (): void => this.resetTimer()
-      })
-        .margin({ top: 20 })
+          // 番茄计数徽章
+          Row() {
+            SymbolGlyph($r('sys.symbol.checkmark'))
+              .fontSize(14)
+              .fontColor(['#FFFFFF'])
+            Text(`${this.stats.completedPomodoros}`)
+              .fontSize(14)
+              .fontColor('#FFFFFF')
+              .fontWeight(FontWeight.Bold)
+              .margin({ left: 4 })
+          }
+          .padding({ left: 12, right: 12, top: 6, bottom: 6 })
+          .backgroundColor('#FF6B6B')
+          .borderRadius(16)
+          .margin({ left: 'auto' })
+        }
+        .width('100%')
+        .padding({ top: 20 })
 
-      // 统计组件
-      StatsComponent({ stats: this.stats })
-        .margin({ top: 20 })
+        // 计时器卡片
+        Column() {
+          TimerComponent({
+            timeRemaining: this.timerState.timeRemaining,
+            totalTime: this.getCurrentPhaseTotalTime(),
+            currentPhase: this.timerState.currentPhase
+          })
+
+          ControlButtonsComponent({
+            isRunning: this.timerState.isRunning,
+            isPaused: this.timerState.isPaused,
+            onStart: (): void => this.startTimer(),
+            onPause: (): void => this.pauseTimer(),
+            onResume: (): void => this.resumeTimer(),
+            onReset: (): void => this.resetTimer()
+          })
+            .margin({ top: 24 })
+        }
+        .width('100%')
+        .padding({ top: 32, bottom: 32 })
+        .backgroundColor('#FFFFFF')
+        .borderRadius(20)
+        .shadow({
+          radius: 20,
+          color: 'rgba(0, 0, 0, 0.06)',
+          offsetX: 0,
+          offsetY: 4
+        })
+        .margin({ top: 16 })
+
+        // 状态提示文本
+        if (this.timerState.isRunning) {
+          Text(this.timerState.currentPhase === 'work' ? '🔔 保持专注，继续工作！' :
+               this.timerState.currentPhase === 'break' ? '☕ 休息时间，放松一下' : '🌿 长休息时间到了')
+            .fontSize(15)
+            .fontColor('#666666')
+            .margin({ top: 16, bottom: 8 })
+        }
+
+        // 统计卡片
+        StatsComponent({ stats: this.stats })
+          .margin({ top: 16 })
+          .padding(16)
+          .backgroundColor('#FFFFFF')
+          .borderRadius(20)
+          .shadow({
+            radius: 20,
+            color: 'rgba(0, 0, 0, 0.06)',
+            offsetX: 0,
+            offsetY: 4
+          })
+      }
+      .width('100%')
+      .padding({ left: 16, right: 16, bottom: 96 })
     }
     .width('100%')
     .height('100%')
-    .padding(16)
+    .backgroundColor('#F5F5F5')
   }
 
-  // 开始计时
   private startTimer(): void {
     if (this.timerState.isRunning && !this.timerState.isPaused) return
     this.stopTimer()
@@ -92,20 +154,17 @@ export struct TimerPage {
     }, 1000)
   }
 
-  // 暂停计时
   private pauseTimer(): void {
     this.timerState.isRunning = false
     this.timerState.isPaused = true
     clearInterval(this.timerId)
   }
 
-  // 继续计时
   private resumeTimer(): void {
     this.timerState.isPaused = false
     this.startTimer()
   }
 
-  // 重置计时
   private resetTimer(): void {
     this.stopTimer()
     this.timerState = {
@@ -117,7 +176,6 @@ export struct TimerPage {
     }
   }
 
-  // 停止定时器
   private stopTimer(): void {
     if (this.timerId !== -1) {
       clearInterval(this.timerId)
@@ -125,7 +183,6 @@ export struct TimerPage {
     }
   }
 
-  // 计时完成处理
   private async onTimerComplete(): Promise<void> {
     this.stopTimer()
     await SoundUtils.playNotificationSound()
@@ -153,14 +210,10 @@ export struct TimerPage {
 
   private getCurrentPhaseTotalTime(): number {
     switch (this.timerState.currentPhase) {
-      case 'work':
-        return this.settings.workDuration * 60
-      case 'break':
-        return this.settings.breakDuration * 60
-      case 'longBreak':
-        return this.settings.longBreakDuration * 60
-      default:
-        return this.settings.workDuration * 60
+      case 'work': return this.settings.workDuration * 60
+      case 'break': return this.settings.breakDuration * 60
+      case 'longBreak': return this.settings.longBreakDuration * 60
+      default: return this.settings.workDuration * 60
     }
   }
 

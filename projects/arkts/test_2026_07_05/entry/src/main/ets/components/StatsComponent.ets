@@ -10,9 +10,8 @@ export struct StatsComponent {
       Text('今日统计')
         .fontSize(20)
         .fontWeight(FontWeight.Bold)
-        .margin({ bottom: 16 })
 
-      // 统计卡片
+      // 统计内容
       Row() {
         // 完成番茄数
         Column() {
@@ -23,6 +22,7 @@ export struct StatsComponent {
           Text('完成番茄')
             .fontSize(14)
             .fontColor('#666666')
+            .margin({ top: 4 })
         }
         .layoutWeight(1)
         .alignItems(HorizontalAlign.Center)
@@ -31,7 +31,7 @@ export struct StatsComponent {
         Divider()
           .width(1)
           .height(40)
-          .color('#E0E0E0')
+          .color('#E8E8E8')
 
         // 总工作时间
         Column() {
@@ -42,17 +42,15 @@ export struct StatsComponent {
           Text('工作时间')
             .fontSize(14)
             .fontColor('#666666')
+            .margin({ top: 4 })
         }
         .layoutWeight(1)
         .alignItems(HorizontalAlign.Center)
       }
       .width('100%')
-      .height(100)
-      .backgroundColor('#F5F5F5')
-      .borderRadius(12)
-      .padding(16)
+      .height(80)
+      .margin({ top: 16 })
     }
     .width('100%')
-    .padding(16)
   }
 }
