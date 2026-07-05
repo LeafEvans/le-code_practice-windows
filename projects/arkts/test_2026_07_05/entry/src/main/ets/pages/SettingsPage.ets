@@ -1,10 +1,8 @@
 import { PomodoroSettings } from '../models/PomodoroData'
 import { preferences } from '@kit.ArkData'
-import { router } from '@kit.ArkUI'
 
-@Entry
 @Component
-struct Settings {
+export struct SettingsPage {
   @State settings: PomodoroSettings = {
     workDuration: 25,
     breakDuration: 5,
@@ -81,26 +79,12 @@ struct Settings {
           this.saveSettings()
         }
       )
-
-      // 返回按钮
-      Button('返回')
-        .type(ButtonType.Normal)
-        .borderRadius(8)
-        .backgroundColor('#FF6B6B')
-        .fontColor('#FFFFFF')
-        .width(120)
-        .height(40)
-        .margin({ top: 40 })
-        .onClick((): void => {
-          router.back()
-        })
     }
     .width('100%')
     .height('100%')
     .padding(16)
   }
 
-  // 构建设置项
   @Builder
   buildSettingItem(title: string, value: string, onDecrease: () => void, onIncrease: () => void) {
     Column() {
@@ -144,19 +128,21 @@ struct Settings {
     .margin({ bottom: 16 })
   }
 
-  // 加载设置
   private async loadSettings(): Promise<void> {
     try {
       const context = getContext(this)
       this.preferences = await preferences.getPreferences(context, 'pomodoro_data')
-      const settingsStr = await this.preferences.get('settings', JSON.stringify(this.settings))
-      this.settings = JSON.parse(settingsStr as string)
+      try {
+        const settingsStr = await this.preferences.get('settings', JSON.stringify(this.settings))
+        this.settings = JSON.parse(settingsStr as string)
+      } catch (e) {
+        console.error('解析设置失败:', e)
+      }
     } catch (error) {
       console.error('加载设置失败:', error)
     }
   }
 
-  // 保存设置
   private async saveSettings(): Promise<void> {
     try {
       if (!this.preferences) {
