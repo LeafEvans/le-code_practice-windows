@@ -6,6 +6,7 @@ import { Task, PomodoroSettings, PomodoroStats, TimerState } from '../models/Pom
 import { TimerUtils } from '../utils/TimerUtils'
 import { SoundUtils } from '../utils/SoundUtils'
 import { preferences } from '@kit.ArkData'
+import { router } from '@kit.ArkUI'
 
 @Entry
 @Component
@@ -55,11 +56,23 @@ struct Index {
 
   build() {
     Column() {
-      // 标题
-      Text('番茄钟')
-        .fontSize(28)
-        .fontWeight(FontWeight.Bold)
-        .margin({ top: 20, bottom: 20 })
+      // 标题栏
+      Row() {
+        Text('番茄钟')
+          .fontSize(28)
+          .fontWeight(FontWeight.Bold)
+
+        Button('设置')
+          .fontSize(14)
+          .height(32)
+          .margin({ left: 'auto' })
+          .onClick(() => {
+            router.pushUrl({ url: 'pages/Settings' })
+          })
+      }
+      .width('100%')
+      .padding({ left: 16, right: 16 })
+      .margin({ top: 20, bottom: 20 })
 
       // 计时器组件
       TimerComponent({
@@ -100,7 +113,11 @@ struct Index {
 
   // 开始计时
   private startTimer() {
-    if (this.timerState.isRunning) return
+    // 防止重复启动：如果正在运行且未暂停，直接返回
+    if (this.timerState.isRunning && !this.timerState.isPaused) return
+
+    // 确保清除已有的定时器，防止重复间隔
+    this.stopTimer()
 
     this.timerState.isRunning = true
     this.timerState.isPaused = false
@@ -196,7 +213,7 @@ struct Index {
   // 添加任务
   private addTask(name: string) {
     const newTask: Task = {
-      id: Date.now().toString(),
+      id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       name: name,
       completed: false,
       createdAt: Date.now()
