@@ -4,8 +4,7 @@ import { TimerUtils } from '../utils/TimerUtils'
 export struct TimerComponent {
   @Prop timeRemaining: number = 0
   @Prop totalTime: number = 0
-  @Prop currentPhase: string = 'work'
-  @Prop isRunning: boolean = false
+  @Prop currentPhase: 'work' | 'break' | 'longBreak' = 'work'
 
   build() {
     Column() {
@@ -18,7 +17,9 @@ export struct TimerComponent {
       // 圆形进度条
       Stack() {
         Progress({
-          value: TimerUtils.getProgressPercentage(this.totalTime, this.timeRemaining),
+          value: this.totalTime > 0
+            ? TimerUtils.getProgressPercentage(this.totalTime, this.timeRemaining)
+            : 0,
           total: 100,
           type: ProgressType.Ring
         })
