@@ -43,8 +43,8 @@ struct Index {
   // 首选项实例
   private preferences: preferences.Preferences | null = null
 
-  aboutToAppear() {
-    this.loadData()
+  async aboutToAppear() {
+    await this.loadData()
     this.startTimer()
   }
 
@@ -108,11 +108,6 @@ struct Index {
     this.timerId = setInterval(() => {
       if (this.timerState.timeRemaining > 0) {
         this.timerState.timeRemaining--
-
-        // 更新工作时间统计
-        if (this.timerState.currentPhase === 'work') {
-          this.stats.totalWorkTime = Math.floor((this.settings.workDuration * 60 - this.timerState.timeRemaining) / 60)
-        }
       } else {
         // 时间到
         this.onTimerComplete()
@@ -122,6 +117,7 @@ struct Index {
 
   // 暂停计时
   private pauseTimer() {
+    this.timerState.isRunning = false
     this.timerState.isPaused = true
     clearInterval(this.timerId)
   }
@@ -163,6 +159,7 @@ struct Index {
       // 工作阶段完成
       this.timerState.completedPomodoros++
       this.stats.completedPomodoros++
+      this.stats.totalWorkTime += this.settings.workDuration
 
       // 判断是否需要长休息
       if (this.timerState.completedPomodoros % this.settings.longBreakInterval === 0) {
@@ -229,20 +226,32 @@ struct Index {
       this.preferences = await preferences.getPreferences(context, 'pomodoro_data')
       
       // 加载设置
-      const settingsStr = await this.preferences.get('settings', JSON.stringify(this.settings))
-      this.settings = JSON.parse(settingsStr as string)
+      try {
+        const settingsStr = await this.preferences.get('settings', JSON.stringify(this.settings))
+        this.settings = JSON.parse(settingsStr as string)
+      } catch (e) {
+        console.error('解析设置数据失败，使用默认值:', e)
+      }
 
       // 加载任务
-      const tasksStr = await this.preferences.get('tasks', JSON.stringify(this.tasks))
-      this.tasks = JSON.parse(tasksStr as string)
+      try {
+        const tasksStr = await this.preferences.get('tasks', JSON.stringify(this.tasks))
+        this.tasks = JSON.parse(tasksStr as string)
+      } catch (e) {
+        console.error('解析任务数据失败，使用空列表:', e)
+      }
 
       // 加载统计
-      const statsStr = await this.preferences.get('stats', JSON.stringify(this.stats))
-      const savedStats = JSON.parse(statsStr as string)
-      
-      // 检查是否是今天的数据
-      if (savedStats.date === TimerUtils.getTodayDate()) {
-        this.stats = savedStats
+      try {
+        const statsStr = await this.preferences.get('stats', JSON.stringify(this.stats))
+        const savedStats = JSON.parse(statsStr as string)
+        
+        // 检查是否是今天的数据
+        if (savedStats.date === TimerUtils.getTodayDate()) {
+          this.stats = savedStats
+        }
+      } catch (e) {
+        console.error('解析统计数据失败，使用默认值:', e)
       }
 
       // 重置计时器状态
