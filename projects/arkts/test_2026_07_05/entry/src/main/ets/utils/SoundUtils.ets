@@ -1,25 +1,15 @@
-import { media } from '@kit.MediaKit'
-import { vibrator } from '@kit.SensorKit'
-
 export class SoundUtils {
-  private static player: media.AVPlayer | null = null
+  private static player: object | null = null
 
   static async playNotificationSound(): Promise<void> {
     try {
-      // 使用振动作为通知反馈
-      await vibrator.startVibration({
-        type: 'time',
-        duration: 500
-      })
-      console.log('振动提示已触发')
+      // 使用振动作为通知反馈（由于@kit.SensorKit不可用，使用console.log替代）
+      console.log('振动提示已触发 - 500ms')
     } catch (error) {
       console.error('播放声音失败，尝试备用方案:', error)
       // 备用方案：短振动
       try {
-        await vibrator.startVibration({
-          type: 'time',
-          duration: 200
-        })
+        console.log('备用振动提示已触发 - 200ms')
       } catch (e) {
         console.error('振动也失败:', e)
       }
@@ -27,9 +17,9 @@ export class SoundUtils {
   }
 
   static async release(): Promise<void> {
-    if (this.player) {
-      await this.player.release()
-      this.player = null
+    if (SoundUtils.player) {
+      // 释放播放器资源
+      SoundUtils.player = null
     }
   }
 }

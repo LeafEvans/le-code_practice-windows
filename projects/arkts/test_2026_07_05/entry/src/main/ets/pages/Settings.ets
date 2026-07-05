@@ -14,7 +14,7 @@ struct Settings {
 
   private preferences: preferences.Preferences | null = null
 
-  aboutToAppear() {
+  aboutToAppear(): void {
     this.loadSettings()
   }
 
@@ -30,11 +30,11 @@ struct Settings {
       this.buildSettingItem(
         '工作时长',
         `${this.settings.workDuration}分钟`,
-        () => {
+        (): void => {
           this.settings.workDuration = Math.max(1, Math.min(60, this.settings.workDuration - 5))
           this.saveSettings()
         },
-        () => {
+        (): void => {
           this.settings.workDuration = Math.max(1, Math.min(60, this.settings.workDuration + 5))
           this.saveSettings()
         }
@@ -44,11 +44,11 @@ struct Settings {
       this.buildSettingItem(
         '短休息时长',
         `${this.settings.breakDuration}分钟`,
-        () => {
+        (): void => {
           this.settings.breakDuration = Math.max(1, Math.min(30, this.settings.breakDuration - 1))
           this.saveSettings()
         },
-        () => {
+        (): void => {
           this.settings.breakDuration = Math.max(1, Math.min(30, this.settings.breakDuration + 1))
           this.saveSettings()
         }
@@ -58,11 +58,11 @@ struct Settings {
       this.buildSettingItem(
         '长休息时长',
         `${this.settings.longBreakDuration}分钟`,
-        () => {
+        (): void => {
           this.settings.longBreakDuration = Math.max(1, Math.min(60, this.settings.longBreakDuration - 5))
           this.saveSettings()
         },
-        () => {
+        (): void => {
           this.settings.longBreakDuration = Math.max(1, Math.min(60, this.settings.longBreakDuration + 5))
           this.saveSettings()
         }
@@ -72,11 +72,11 @@ struct Settings {
       this.buildSettingItem(
         '长休息间隔',
         `每${this.settings.longBreakInterval}个番茄`,
-        () => {
+        (): void => {
           this.settings.longBreakInterval = Math.max(1, Math.min(10, this.settings.longBreakInterval - 1))
           this.saveSettings()
         },
-        () => {
+        (): void => {
           this.settings.longBreakInterval = Math.max(1, Math.min(10, this.settings.longBreakInterval + 1))
           this.saveSettings()
         }
@@ -91,7 +91,7 @@ struct Settings {
         .width(120)
         .height(40)
         .margin({ top: 40 })
-        .onClick(() => {
+        .onClick((): void => {
           router.back()
         })
     }
@@ -145,8 +145,9 @@ struct Settings {
   }
 
   // 加载设置
-  private async loadSettings() {
+  private async loadSettings(): Promise<void> {
     try {
+      const context = getContext(this)
       this.preferences = await preferences.getPreferences(context, 'pomodoro_data')
       const settingsStr = await this.preferences.get('settings', JSON.stringify(this.settings))
       this.settings = JSON.parse(settingsStr as string)
@@ -156,9 +157,10 @@ struct Settings {
   }
 
   // 保存设置
-  private async saveSettings() {
+  private async saveSettings(): Promise<void> {
     try {
       if (!this.preferences) {
+        const context = getContext(this)
         this.preferences = await preferences.getPreferences(context, 'pomodoro_data')
       }
       await this.preferences.put('settings', JSON.stringify(this.settings))

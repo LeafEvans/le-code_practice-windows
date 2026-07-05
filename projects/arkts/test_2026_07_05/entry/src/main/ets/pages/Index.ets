@@ -44,12 +44,12 @@ struct Index {
   // 首选项实例
   private preferences: preferences.Preferences | null = null
 
-  async aboutToAppear() {
+  async aboutToAppear(): Promise<void> {
     await this.loadData()
     this.startTimer()
   }
 
-  aboutToDisappear() {
+  aboutToDisappear(): void {
     this.stopTimer()
     this.saveData()
   }
@@ -66,7 +66,7 @@ struct Index {
           .fontSize(14)
           .height(32)
           .margin({ left: 'auto' })
-          .onClick(() => {
+          .onClick((): void => {
             router.pushUrl({ url: 'pages/Settings' })
           })
       }
@@ -78,18 +78,17 @@ struct Index {
       TimerComponent({
         timeRemaining: this.timerState.timeRemaining,
         totalTime: this.getCurrentPhaseTotalTime(),
-        currentPhase: this.timerState.currentPhase,
-        isRunning: this.timerState.isRunning
+        currentPhase: this.timerState.currentPhase
       })
 
       // 控制按钮
       ControlButtonsComponent({
         isRunning: this.timerState.isRunning,
         isPaused: this.timerState.isPaused,
-        onStart: () => this.startTimer(),
-        onPause: () => this.pauseTimer(),
-        onResume: () => this.resumeTimer(),
-        onReset: () => this.resetTimer()
+        onStart: (): void => this.startTimer(),
+        onPause: (): void => this.pauseTimer(),
+        onResume: (): void => this.resumeTimer(),
+        onReset: (): void => this.resetTimer()
       })
         .margin({ top: 20 })
 
@@ -100,9 +99,9 @@ struct Index {
       // 任务列表
       TaskListComponent({
         tasks: this.tasks,
-        onAddTask: (name: string) => this.addTask(name),
-        onToggleTask: (id: string) => this.toggleTask(id),
-        onDeleteTask: (id: string) => this.deleteTask(id)
+        onAddTask: (name: string): void => this.addTask(name),
+        onToggleTask: (id: string): void => this.toggleTask(id),
+        onDeleteTask: (id: string): void => this.deleteTask(id)
       })
         .margin({ top: 20 })
     }
@@ -122,7 +121,7 @@ struct Index {
     this.timerState.isRunning = true
     this.timerState.isPaused = false
 
-    this.timerId = setInterval(() => {
+    this.timerId = setInterval((): void => {
       if (this.timerState.timeRemaining > 0) {
         this.timerState.timeRemaining--
       } else {
@@ -166,7 +165,7 @@ struct Index {
   }
 
   // 计时完成处理
-  private async onTimerComplete() {
+  private async onTimerComplete(): Promise<void> {
     this.stopTimer()
 
     // 播放提示音
@@ -238,8 +237,9 @@ struct Index {
   }
 
   // 加载数据
-  private async loadData() {
+  private async loadData(): Promise<void> {
     try {
+      const context = getContext(this)
       this.preferences = await preferences.getPreferences(context, 'pomodoro_data')
       
       // 加载设置
@@ -279,9 +279,10 @@ struct Index {
   }
 
   // 保存数据
-  private async saveData() {
+  private async saveData(): Promise<void> {
     try {
       if (!this.preferences) {
+        const context = getContext(this)
         this.preferences = await preferences.getPreferences(context, 'pomodoro_data')
       }
 
