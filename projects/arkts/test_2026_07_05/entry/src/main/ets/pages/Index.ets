@@ -13,13 +13,13 @@ struct Index {
       TabContent() {
         TimerPage()
       }
-      .tabBar(this.buildTabBar('计时器', $r('sys.symbol.timer'), 0))
+      .tabBar(this.buildTabBar('计时器', $r('sys.symbol.clock'), 0))
 
       // 任务列表页面
       TabContent() {
         TasksPage()
       }
-      .tabBar(this.buildTabBar('任务', $r('sys.symbol.checklist'), 1))
+      .tabBar(this.buildTabBar('任务', $r('sys.symbol.checkmark'), 1))
 
       // 设置页面
       TabContent() {
