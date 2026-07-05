@@ -261,7 +261,7 @@ struct Index {
       // 加载统计
       try {
         const statsStr = await this.preferences.get('stats', JSON.stringify(this.stats))
-        const savedStats = JSON.parse(statsStr as string)
+        const savedStats: PomodoroStats = JSON.parse(statsStr as string) as PomodoroStats
         
         // 检查是否是今天的数据
         if (savedStats.date === TimerUtils.getTodayDate()) {
