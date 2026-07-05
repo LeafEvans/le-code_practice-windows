@@ -1,5 +1,6 @@
 import { PomodoroSettings } from '../models/PomodoroData'
 import { preferences } from '@kit.ArkData'
+import { router } from '@kit.ArkUI'
 
 @Entry
 @Component
