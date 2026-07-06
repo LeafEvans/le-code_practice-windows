@@ -1,58 +1,53 @@
-import { useCallback, useEffect, useState } from '@lynx-js/react'
-
-import './App.css'
-import arrow from './assets/arrow.png'
-import lynxLogo from './assets/lynx-logo.png'
-import reactLynxLogo from './assets/react-logo.png'
-import { useFlappy } from './useFlappy.js'
+import { useCallback, useEffect } from '@lynx-js/react';
+import './App.css';
+import { CitySearch } from './components/CitySearch';
+import { CurrentWeather } from './components/CurrentWeather';
+import { ForecastList } from './components/ForecastList';
+import { useWeather } from './hooks/useWeather';
 
 export function App() {
-  const [alterLogo, setAlterLogo] = useState(false)
-  const [logoY, jump] = useFlappy()
+  const { weatherData, loading, error, searchCity, loadDefaultCity } = useWeather();
 
   useEffect(() => {
-    console.info('Hello, ReactLynx')
-  }, [])
+    loadDefaultCity();
+  }, []);
 
-  const onTap = useCallback(() => {
-    'background only'
-    setAlterLogo(prevAlterLogo => !prevAlterLogo)
-  }, [])
+  const handleSearch = useCallback((cityName: string) => {
+    searchCity(cityName);
+  }, [searchCity]);
 
   return (
-    <view bindtap={jump}>
-      <view className='Background' />
-      <view className='App'>
-        <view className='Banner'>
-          <view
-            className='Logo'
-            style={{ transform: `translateY(${logoY}px)` }}
-            bindtap={onTap}
-          >
-            {alterLogo
-              ? <image src={reactLynxLogo} className='Logo--react' />
-              : <image src={lynxLogo} className='Logo--lynx' />}
+    <view className="app">
+      <CitySearch onSearch={handleSearch} />
+      <view className="content">
+        {loading && (
+          <view className="status-message">
+            <text className="status-text">加载中...</text>
           </view>
-          <text className='Title'>React</text>
-          <text className='Subtitle'>on Lynx</text>
-        </view>
-        <view className='Content'>
-          <image src={arrow} className='Arrow' />
-          <text className='Description'>Tap the logo and have fun!</text>
-          <text className='Hint'>
-            Edit<text
-              style={{
-                fontStyle: 'italic',
-                color: 'rgba(255, 255, 255, 0.85)',
-              }}
-            >
-              {' src/App.tsx '}
-            </text>
-            to see updates!
-          </text>
-        </view>
-        <view style={{ flex: 1 }} />
+        )}
+
+        {error && !loading && (
+          <view className="status-message status-error">
+            <text className="status-text">{error}</text>
+            <view className="retry-btn" bindtap={loadDefaultCity}>
+              <text className="retry-btn-text">重试</text>
+            </view>
+          </view>
+        )}
+
+        {!loading && !error && !weatherData && (
+          <view className="status-message">
+            <text className="status-text">正在获取默认城市天气...</text>
+          </view>
+        )}
+
+        {weatherData && !loading && (
+          <>
+            <CurrentWeather data={weatherData.current} cityName={weatherData.cityName} />
+            <ForecastList daily={weatherData.daily} />
+          </>
+        )}
       </view>
     </view>
-  )
+  );
 }

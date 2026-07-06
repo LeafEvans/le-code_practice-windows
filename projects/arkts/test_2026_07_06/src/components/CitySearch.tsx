@@ -37,7 +37,6 @@ export function CitySearch({ onSearch }: CitySearchProps) {
         <input
           className="search-input"
           placeholder="搜索城市..."
-          value={inputValue}
           bindinput={handleInput}
         />
         <view className="search-btn" bindtap={handleSearch}>
