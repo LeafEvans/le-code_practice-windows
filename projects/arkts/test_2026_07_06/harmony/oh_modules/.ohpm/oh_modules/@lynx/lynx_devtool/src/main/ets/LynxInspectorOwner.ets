@@ -2,25 +2,30 @@
 // Licensed under the Apache License Version 2.0 that can be found in the
 // LICENSE file in the root directory of this source tree.
 
-import { LynxBaseInspectorOwner, LynxView } from '@lynx/lynx';
+import { LynxBaseInspectorOwner, LynxView, LynxInspectorConsoleDelegate, MessageHandler } from '@lynx/lynx';
 import { DebugRouter } from './DebugRouter';
 import { ConsoleDelegateManager } from './ConsoleDelegateManager';
-import { LynxInspectorConsoleDelegate } from '@lynx/lynx/src/main/ets/devtool_wrapper/LynxInspectorConsoleDelegate';
+import { LynxBaseInspectorController } from '@lynx/lynx/src/main/ets/devtool_wrapper/LynxBaseInspectorController';
 
 import lynxdevtool from 'liblynxdevtool.so';
 
-export class LynxInspectorOwner implements LynxBaseInspectorOwner {
+export class LynxInspectorOwner implements LynxBaseInspectorOwner, LynxBaseInspectorController {
   private nativeOwner: lynxdevtool.InspectorOwnerHarmony;
   private consoleDelegateManager: ConsoleDelegateManager;
+  private sessionId: number = -1;
 
   constructor(embedderProxy: number[]) {
     this.nativeOwner = new lynxdevtool.InspectorOwnerHarmony(this, embedderProxy);
     this.consoleDelegateManager = new ConsoleDelegateManager();
   }
 
+  public attachProxy(embedderProxy: number[]): void {
+    this.nativeOwner.attachProxy(embedderProxy);
+  }
+
   public onLoaded(lynxView: LynxView) {
-    let sessionId: number = this.nativeOwner.getSessionId();
-    DebugRouter.setSessionIdOfView(lynxView, sessionId);
+    this.sessionId = this.nativeOwner.getSessionId();
+    DebugRouter.setSessionIdOfView(lynxView, this.sessionId);
   }
 
   public destroy(lynxView: LynxView): void {
@@ -42,5 +47,17 @@ export class LynxInspectorOwner implements LynxBaseInspectorOwner {
 
   public onConsoleObject(detail: string, callbackId: number): void {
     this.consoleDelegateManager.onConsoleObject(detail, callbackId);
+  }
+
+  public subscribeMessage(type: string, handler: MessageHandler): void {
+    this.nativeOwner.subscribeMessage(type, handler);
+  }
+
+  public unsubscribeMessage(type: string): void {
+    this.nativeOwner.unsubscribeMessage(type);
+  }
+
+  public sendMessage(type: string, message: string): void {
+    DebugRouter.sendDataAsync(type, this.sessionId, message);
   }
 }

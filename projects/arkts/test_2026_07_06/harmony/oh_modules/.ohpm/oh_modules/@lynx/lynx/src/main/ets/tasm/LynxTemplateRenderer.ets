@@ -12,10 +12,13 @@ import { LynxView, ThreadStrategyForRendering } from './LynxView';
 import { LynxBackgroundRuntimeOptions } from '../jsbridge/LynxBackgroundRuntimeOptions';
 import { LynxEnv } from './LynxEnv';
 import { TemplateBundle } from './TemplateBundle';
+import { TemplateData } from './MetaData';
+import { SessionStorageCallback } from './SessionStorage';
 import { LynxDevTool } from '../devtool_wrapper/LynxDevTool';
 import { PerformanceController } from './performance/PerformanceController';
 import { convertModuleArgs, LynxModuleManager, SendableLynxModuleManager } from '../jsbridge/LynxModuleManager';
 import { LynxLepusModule } from '../lepus/LynxLepusModule';
+import { LLog } from '../base/LLog';
 
 const TAG = 'LynxTemplateRenderer';
 
@@ -43,7 +46,8 @@ export class LynxTemplateRenderer extends lynx.LynxTemplateRenderer {
     lynxView: LynxView,
     enableJSRuntime: boolean,
     moduleManager: LynxModuleManager,
-    sendableModuleManager: SendableLynxModuleManager) {
+    sendableModuleManager: SendableLynxModuleManager,
+    screenSize?: Size) {
     super();
     this.clients = clients;
     this.providers = providers;
@@ -55,10 +59,20 @@ export class LynxTemplateRenderer extends lynx.LynxTemplateRenderer {
     this.lynxView = lynxView;
     this.moduleManager = moduleManager;
     this.sendableModuleManager = sendableModuleManager;
+    if (screenSize) {
+      LLog.i(TAG, `screen size, w: ${screenSize.width}, h: ${screenSize.height}`);
+      this.displayInfo.updateDisplayInfo(screenSize.width, screenSize.height);
+    } else {
+      LLog.i(TAG, `display info, w: ${this.displayInfo.screenWidth}, h: ${this.displayInfo.screenHeight}`);
+    }
   }
 
   reset(uiDelegate: number[], perfController: PerformanceController) {
     this.perfController = perfController;
+    let whiteBoard: lynx.LynxWhiteBoard | undefined = undefined;
+    if (this.backgroundRuntimeOptions.lynxGroup) {
+      whiteBoard = this.backgroundRuntimeOptions.lynxGroup.getWhiteBoard();
+    }
     this.nativeReset(uiDelegate, this.providers, this.displayInfo.screenWidth, this.displayInfo.screenHeight,
       this.isHostRenderer, this.perfController.native, this.threadMode,
       this.backgroundRuntimeOptions.getGroupID(),
@@ -68,7 +82,7 @@ export class LynxTemplateRenderer extends lynx.LynxTemplateRenderer {
       this.backgroundRuntimeOptions.enableBytecode, this.backgroundRuntimeOptions.bytecodeSourceUrl,
       this.enableJSRuntime,
       convertModuleArgs(this.moduleManager),
-      convertModuleArgs(this.sendableModuleManager), this.lynxView?.backgroundRuntime);
+      convertModuleArgs(this.sendableModuleManager), this.lynxView?.backgroundRuntime, whiteBoard);
   }
 
   aboutToDisappear() {
@@ -131,12 +145,20 @@ export class LynxTemplateRenderer extends lynx.LynxTemplateRenderer {
     });
   }
 
-  createDevTool(embedderProxy: number[]) {
-    this.lynxDevTool = new LynxDevTool(embedderProxy);
-  }
-
   getDevTool() {
     return this.lynxDevTool;
+  }
+
+  prepareDevTool(embedderProxy: number[]) {
+    const runtimeDevTool = this.lynxView?.backgroundRuntime?.getDevTool?.();
+    if (runtimeDevTool) {
+      this.lynxDevTool = runtimeDevTool;
+      this.lynxDevTool.attachProxy(embedderProxy);
+      return;
+    }
+    if (!this.lynxDevTool) {
+      this.lynxDevTool = new LynxDevTool(embedderProxy);
+    }
   }
 
   //TODO(zhengyuwei.123): Optimize this implementation to use ModuleFactory instead of moduleManager.
@@ -174,6 +196,7 @@ export class LynxTemplateRenderer extends lynx.LynxTemplateRenderer {
   }
 
   override updateScreenMetrics(width: number, height: number) {
+    LLog.i(TAG, `updateScreenMetrics, w: ${width}, h: ${height}`);
     if (width != this.displayInfo.screenWidth || height != this.displayInfo.screenHeight) {
       this.displayInfo.updateDisplayInfo(width, height);
       super.updateScreenMetrics(width, height, LynxEnv.getDensity());
@@ -196,6 +219,34 @@ export class LynxTemplateRenderer extends lynx.LynxTemplateRenderer {
 
   setPlatformConfig(config: string) {
     this.nativeSetPlatformConfig(config);
+  }
+
+  setSessionStorageItem(key: string, value: TemplateData): void {
+    if (!key || !value) {
+      return;
+    }
+    this.nativeSetSessionStorageItem(key, value.data);
+  }
+
+  getSessionStorageItem(key: string, callback: SessionStorageCallback) {
+    if (!key || !callback) {
+      return;
+    }
+    this.nativeGetSessionStorageItem(key, callback);
+  }
+
+  subscribeSessionStorage(key: string, callback: SessionStorageCallback): number {
+    if (!key || !callback) {
+      return -1;
+    }
+    return this.nativeSubscribeSessionStorage(key, callback);
+  }
+
+  unsubscribeSessionStorage(key: string, listenerId: number) {
+    if (!key || listenerId < 0) {
+      return;
+    }
+    this.nativeUnsubscribeSessionStorage(key, listenerId);
   }
 
   triggerLepusMethod(name: string, args: Record<string, Object>): Object | undefined {

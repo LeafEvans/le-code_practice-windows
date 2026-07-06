@@ -4,8 +4,8 @@
     "arkOptions": {
       "byteCodeHar": false,
       "buildProfileFields": {
-        "COMMIT_HASH": "f210b95bcb720c63148de6329f31732ffab11f43",
-        "VERSION": "3.6.0",
+        "COMMIT_HASH": "bd80d7adbe313d489f742d4503f39bb5460cc413",
+        "VERSION": "3.8.0",
       },
       "runtimeOnly": {
         "sources": [

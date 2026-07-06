@@ -57,6 +57,11 @@ export class LynxErrorBehavior {
 	public static readonly EB_BTS_LIFECYCLE_LISTENER_ERROR: number = 203;
 
 
+	// Behavior: JsCallNativeFunction
+	// Description: Error occurred while calling native C++ method from JS.
+	public static readonly EB_BTS_JS_CALL_NATIVE_FUNCTION: number = 204;
+
+
 	/**
 	 * Section: Resource
 	 * CodePrefix: 3

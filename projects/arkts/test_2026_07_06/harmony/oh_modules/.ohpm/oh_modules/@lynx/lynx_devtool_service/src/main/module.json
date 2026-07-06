@@ -4,7 +4,7 @@
 		"debug": true,
 		"versionCode": 1000000,
 		"versionName": "1.0.0",
-		"minAPIVersion": 50000012,
+		"minAPIVersion": 50001013,
 		"targetAPIVersion": 60000020,
 		"apiReleaseType": "Release",
 		"targetMinorAPIVersion": 0,
@@ -25,7 +25,7 @@
 		],
 		"packageName": "@lynx/lynx_devtool_service",
 		"installationFree": false,
-		"virtualMachine": "ark12.0.2.0",
+		"virtualMachine": "ark12.0.6.0",
 		"compileMode": "esmodule",
 		"dependencies": []
 	}

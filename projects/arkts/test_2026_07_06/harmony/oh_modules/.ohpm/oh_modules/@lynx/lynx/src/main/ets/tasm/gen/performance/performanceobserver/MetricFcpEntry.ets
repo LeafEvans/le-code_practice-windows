@@ -4,6 +4,9 @@
 import { PerformanceEntry } from './PerformanceEntry';
 import { PerformanceMetric } from './PerformanceMetric';
 
+/**
+ * @deprecated LoadBundleEntry and ReloadBundleEntry contain all properties of MetricFcpEntry
+ */
 export class MetricFcpEntry extends PerformanceEntry {
     public fcp: PerformanceMetric;
     public lynxFcp: PerformanceMetric;

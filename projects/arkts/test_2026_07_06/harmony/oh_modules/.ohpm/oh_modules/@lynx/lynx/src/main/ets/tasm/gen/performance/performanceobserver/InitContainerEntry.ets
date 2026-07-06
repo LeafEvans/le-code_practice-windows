@@ -3,6 +3,9 @@
 // LICENSE file in the root directory of this source tree.
 import { PerformanceEntry } from './PerformanceEntry';
 
+/**
+ * @deprecated LoadBundleEntry and ReloadBundleEntry contain all properties of InitContainerEntry
+ */
 export class InitContainerEntry extends PerformanceEntry {
     public openTime: number;
     public containerInitStart: number;

@@ -41,10 +41,11 @@ import { LynxSetModule } from '../jsbridge/LynxSetModule';
 import { ILynxExtensionService } from './service/ILynxExtensionService';
 import { LynxUIRendererCreator } from './LynxUIRendererCreator';
 import { url } from '@kit.ArkTS';
-import { ILynxTrailService, LynxBackgroundRuntime } from '../Index';
+import { ILynxTrailService, LynxBackgroundRuntime, LynxResourceLoadInfo } from '../Index';
 import { ILogBox } from '../devtool_wrapper/ILogBox';
 import { LynxDevTool } from '../devtool_wrapper/LynxDevTool';
 import { ILynxDevToolService } from './service/ILynxDevToolService';
+import { LynxImageConfig } from './image/LynxImageConfig';
 
 export enum MeasureMode {
   INDEFINITE = 0,
@@ -58,6 +59,29 @@ export enum ThreadStrategyForRendering {
 }
 
 const TAG = 'LynxView';
+
+export interface LynxViewBuilder {
+  genericResourceFetcher?: LynxGenericResourceFetcher;
+  mediaResourceFetcher?: LynxMediaResourceFetcher;
+  templateResourceFetcher?: LynxTemplateResourceFetcher;
+  modules?: Map<string, ModuleClassWrapper>;
+  sendableModules?: Map<string, SendableModuleClassWrapper>;
+  behaviors?: BehaviorRegistryMap;
+  screenSize?: Size;
+  uiRendererCreator?: LynxUIRendererCreator;
+  backgroundRuntime?: LynxBackgroundRuntime;
+  platformConfig?: string;
+  clients?: LynxViewClient[];
+  fitContentWidth?: boolean;
+  fitContentHeight?: boolean;
+  experimentalFixFitContent?: boolean;
+  beforeLoadTemplate?: (context: LynxContext) => void;
+  threadMode?: ThreadStrategyForRendering;
+  backgroundRuntimeOptions?: LynxBackgroundRuntimeOptions;
+  enableAirStrictMode?: boolean;
+  lynxImageConfig?: LynxImageConfig;
+  fontScale?: number;
+}
 
 @Builder
 function buildLynxView(params: ESObject) {
@@ -118,6 +142,7 @@ export struct LynxView {
   metaData: MetaData = new MetaData();
   behaviors: BehaviorRegistryMap = new Map();
   url: string = '';
+  screenSize?: Size;
   buffer?: ArrayBuffer;
   templateBundle?: TemplateBundle;
   loadOption?: LynxLoadOption;
@@ -142,8 +167,8 @@ export struct LynxView {
   // This switch will be removed once OpenHarmony is fixed. Please avoid using it unnecessarily.
   experimentalFixFitContent?: boolean = false;
   private perfController?: PerformanceController;
-  private uiRenderer!: LynxUIRenderer;
-  private templateRenderer!: LynxTemplateRenderer;
+  private uiRenderer?: LynxUIRenderer;
+  private templateRenderer?: LynxTemplateRenderer;
   private context: LynxContext = new LynxContext();
   private moduleManager: LynxModuleManager = new LynxModuleManager(this.context);
   private sendableModuleManager: SendableLynxModuleManager = new SendableLynxModuleManager();
@@ -164,12 +189,70 @@ export struct LynxView {
   @State translateY: number = 0;
   templateLoaded: boolean = false;
   private measuredSize: Size = { width: 0, height: 0 };
+  private hasAppeared: boolean = false;
   threadMode: ThreadStrategyForRendering = ThreadStrategyForRendering.ALL_ON_UI;
   backgroundRuntimeOptions: LynxBackgroundRuntimeOptions = new LynxBackgroundRuntimeOptions();
   enableAirStrictMode? = false;
+  lynxImageConfig?: LynxImageConfig;
 
-  reInitTemplateRenderer() {
+  initWithBuilder(builder: LynxViewBuilder) {
+    this.genericResourceFetcher = builder.genericResourceFetcher;
+    this.mediaResourceFetcher = builder.mediaResourceFetcher;
+    this.templateResourceFetcher = builder.templateResourceFetcher;
+    this.modules = builder.modules ?? new Map();
+    this.sendableModules = builder.sendableModules ?? new Map();
+    this.behaviors = builder.behaviors ?? new Map();
+    this.screenSize = builder.screenSize;
+    this.uiRendererCreator = builder.uiRendererCreator;
+    this.backgroundRuntime = builder.backgroundRuntime;
+    this.platformConfig = builder.platformConfig;
+    this.clients = builder.clients ?? [];
+    this.fitContentWidth = builder.fitContentWidth ?? false;
+    this.fitContentHeight = builder.fitContentHeight ?? false;
+    this.experimentalFixFitContent = builder.experimentalFixFitContent ?? false;
+    this.beforeLoadTemplate = builder.beforeLoadTemplate ?? ((context: LynxContext) => {
+    });
+    this.threadMode = builder.threadMode ?? ThreadStrategyForRendering.ALL_ON_UI;
+    this.backgroundRuntimeOptions = new LynxBackgroundRuntimeOptions(builder.backgroundRuntimeOptions);
+    this.enableAirStrictMode = builder.enableAirStrictMode ?? false;
+    this.lynxImageConfig = builder.lynxImageConfig;
+    this.fontScale = builder.fontScale ?? 1.0;
+    if (this.hasAppeared) {
+      LynxServiceCenter.getService<ILynxTrailService>(LynxServiceType.Trail)?.parseLynxView(this);
+      this.reInitTemplateRenderer(this.hasLoadSource());
+    }
+  }
+
+  private hasLoadSource(): boolean {
+    return !!this.url || !!this.buffer || !!this.templateBundle;
+  }
+
+  ensureTemplateRendererAndLoadTemplate() {
+    if (!!this.templateRenderer && !this.templateLoaded) {
+      this.loadPreparedTemplate();
+    } else {
+      this.reInitTemplateRenderer();
+    }
+  }
+
+  private loadPreparedTemplate() {
+    this.loadingID++;
+    this.beforeLoadTemplate(this.context);
+    this.loadTemplate();
+  }
+
+  reInitTemplateRenderer(shouldLoadTemplate: boolean = true) {
     LynxInfoReporterHelper.reportLynxTemplateEvent(LynxTemplateType.PAGE, this.url);
+    if (this.perfController) {
+      LLog.d(TAG, 'Destroy perfController before re-init template renderer');
+      this.perfController.destroy()
+      this.perfController = undefined;
+    }
+    if (this.uiRenderer) {
+      LLog.d(TAG, 'Destroy uiRenderer before re-init template renderer');
+      this.uiRenderer.aboutToDisappear();
+      this.uiRenderer = undefined;
+    }
     if (this.templateRenderer) {
       LLog.d(TAG, 'Destroy templateRender before re-init template renderer, url: ' + this.url);
       this.templateRenderer.aboutToDisappear();
@@ -206,29 +289,41 @@ export struct LynxView {
       new LynxTemplateRenderer(this.clients, providers, !this.uiRendererCreator,
         this.uiRendererCreator ? ThreadStrategyForRendering.ALL_ON_UI : this.threadMode,
         this.backgroundRuntimeOptions, this, !this.enableAirStrictMode,
-        this.moduleManager, this.sendableModuleManager);
+        this.moduleManager, this.sendableModuleManager, this.screenSize);
     if (this.platformConfig) {
       this.templateRenderer.setPlatformConfig(this.platformConfig);
     }
 
     this.templateLoaded = false;
-    this.beforeLoadTemplate(this.context);
+    if (shouldLoadTemplate) {
+      this.beforeLoadTemplate(this.context);
+    }
     this.loadingID++;
 
     this.prepareForLoadTemplate();
     const initEndTiming = new Date().getTime();
     this.templateRenderer.setTiming(initStartTiming * 1000, TimingConstants.CREATE_LYNX_START);
     this.templateRenderer.setTiming(initEndTiming * 1000, TimingConstants.CREATE_LYNX_END);
-    this.loadTemplate();
+    if (shouldLoadTemplate) {
+      this.loadTemplate();
+    }
+  }
+
+  onEnterForeground() {
+    this.uiRenderer?.onEnterForeground();
+    this.templateRenderer?.onEnterForeground();
+  }
+
+  onEnterBackground() {
+    this.uiRenderer?.onEnterBackground();
+    this.templateRenderer?.onEnterBackground();
   }
 
   prepareForLoadTemplate() {
     if (this.perfController) {
-      LLog.d(TAG, 'Destroy perfController before re-init template renderer');
       this.perfController.destroy()
     }
     if (this.uiRenderer) {
-      LLog.d(TAG, 'Destroy uiRenderer before re-init template renderer');
       this.uiRenderer.aboutToDisappear();
     }
 
@@ -251,6 +346,9 @@ export struct LynxView {
     }
     this.perfController.setPerformanceObserver(this.clients);
 
+    if (!this.templateRenderer) {
+      return;
+    }
     this.templateRenderer.reset(uiDelegate, this.perfController);
 
     this.uiRenderer.updateRefreshRate(LynxEnv.getDisplayInfo().refreshRate);
@@ -260,7 +358,6 @@ export struct LynxView {
     }
 
     this.nodeController?.updateNode(this.uiRenderer, this.fitContentHeight && !!this.experimentalFixFitContent);
-
     if (!this.enableAirStrictMode) {
       this.setupExtensionModules();
     }
@@ -269,6 +366,7 @@ export struct LynxView {
 
   aboutToAppear() {
     TraceEvent.beginSection(TraceCategory.Lynx, TraceEventDef.LYNX_VIEW_CREATE);
+    this.hasAppeared = true;
     LynxServiceCenter.getService<ILynxTrailService>(LynxServiceType.Trail)?.parseLynxView(this);
     this.nodeController =
       this.uiRendererCreator ? this.uiRendererCreator.createNodeController() : new CAPINodeController()
@@ -277,11 +375,13 @@ export struct LynxView {
       this.logBox = LynxDevTool.createLogBox((msg: string) => {
         this.logBoxTitle = msg;
       }, (): Record<string, string> => {
-        return this.templateRenderer.getAllJsSource();
+        return this.templateRenderer?.getAllJsSource() ?? {};
       });
     }
     this.context.setLynxView(this);
-    this.reInitTemplateRenderer();
+    if (this.hasLoadSource()) {
+      this.reInitTemplateRenderer(true);
+    }
     if (this.onCreate) {
       this.onCreate(this.context)
     }
@@ -290,10 +390,10 @@ export struct LynxView {
       this.keyboardHeightChangeCallback = (height: number) => {
         const keyBoardHeight = Math.floor(px2vp(height));
         this.sendGlobalEvent('keyboardstatuschanged', [height !== 0 ? 'on' : 'off', keyBoardHeight, keyBoardHeight]);
-        this.uiRenderer.keyboardStatusChanged(height !== 0 ? keyBoardHeight + 1 : 0)
+        this.uiRenderer?.keyboardStatusChanged(height !== 0 ? keyBoardHeight + 1 : 0)
       };
       this.currentWindow.on('keyboardHeightChange', this.keyboardHeightChangeCallback);
-      this.uiRenderer.setAvoidKeyboardListener((translateY: number) => {
+      this.uiRenderer?.setAvoidKeyboardListener((translateY: number) => {
         this.getUIContext()?.animateTo({
           duration: 300,
           curve: Curve.EaseOut,
@@ -310,10 +410,13 @@ export struct LynxView {
 
   aboutToDisappear() {
     LLog.d(TAG, 'aboutToDisappear.')
+    this.hasAppeared = false;
     this.perfController?.destroy();
     this.perfController = undefined;
-    this.uiRenderer.aboutToDisappear();
-    this.templateRenderer.aboutToDisappear();
+    this.uiRenderer?.aboutToDisappear();
+    this.uiRenderer = undefined;
+    this.templateRenderer?.aboutToDisappear();
+    this.templateRenderer = undefined;
     this.nodeController?.dispose();
     this.nodeController = undefined;
     try {
@@ -417,7 +520,7 @@ export struct LynxView {
     }
     if (!couldReuse) {
       LLog.d(TAG, 'can not reuse, so we recreate LynxTemplateRenderer');
-      this.reInitTemplateRenderer();
+      this.reInitTemplateRenderer(this.hasLoadSource());
     }
     TraceEvent.endSection(TraceCategory.Lynx, TraceEventDef.LYNX_VIEW_REUSE);
   }
@@ -427,6 +530,9 @@ export struct LynxView {
   }
 
   sendGlobalEvent(name: string, params: Object[]) {
+    if (!this.templateRenderer) {
+      return;
+    }
     if (this.enableAirStrictMode) {
       this.templateRenderer.triggerEventBus(name, params);
     } else {
@@ -498,6 +604,9 @@ export struct LynxView {
   }
 
   private onPageStarted(pipelineOrigin: LynxPipelineOrigin) {
+    if (!this.templateRenderer) {
+      return;
+    }
     const instanceId = this.templateRenderer.getInstanceId();
     LynxEventReporter.updateGenericInfo(LynxEventReporter.PROP_NAME_URL, this.url, instanceId);
     LynxEventReporter.updateGenericInfo(LynxEventReporter.PROP_NAME_RELATIVE_PATH, this.url, instanceId);
@@ -508,6 +617,10 @@ export struct LynxView {
   }
 
   loadTemplate() {
+    if (!this.templateRenderer) {
+      LLog.e(TAG, 'loadTemplate skipped, templateRenderer does not exist.');
+      return;
+    }
     let timingOption: TimingOption = new TimingOption(TimingConstants.LOAD_BUNDLE);
     let loadBundleStartTimestamp = Date.now();
     timingOption.setTiming(TimingConstants.PIPELINE_START, loadBundleStartTimestamp);
@@ -597,6 +710,9 @@ export struct LynxView {
   }
 
   private loadTemplateInternal(timingOption: TimingOption, bundle?: TemplateBundle, buffer?: ArrayBuffer) {
+    if (!this.templateRenderer) {
+      return;
+    }
     TraceEvent.beginSection(TraceCategory.Lynx, TraceEventDef.LYNX_VIEW_LOAD);
     this.onPageStarted(LynxPipelineOrigin.LynxFirstScreen);
     if (this.metaData.globalProps !== undefined) {
@@ -648,7 +764,7 @@ export struct LynxView {
     .onAreaChange((oldValue: Area, newValue: Area) => {
       this.measuredSize.width = newValue.width as number;
       this.measuredSize.height = newValue.height as number;
-      this.uiRenderer.requestLayout();
+      this.uiRenderer?.requestLayout();
     })
   }
 
@@ -661,7 +777,7 @@ export struct LynxView {
 
   setupExtensionModules() {
     let module = this.context.getExtensionModule();
-    if (module == undefined) {
+    if (module == undefined || !this.templateRenderer) {
       return;
     }
     this.templateRenderer.setupExtensionDelegate(module.getExtensionDelegatePtr());

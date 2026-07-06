@@ -1,12 +1,12 @@
 /**
  * Use these variables when you tailor your ArkTS code. They must be of the const type.
  */
-export const HAR_VERSION = '3.6.0';
+export const HAR_VERSION = '3.8.0';
 export const BUILD_MODE_NAME = 'debug';
 export const DEBUG = true;
 export const TARGET_NAME = 'default';
-export const COMMIT_HASH = 'f210b95bcb720c63148de6329f31732ffab11f43';
-export const VERSION = '3.6.0';
+export const COMMIT_HASH = 'bd80d7adbe313d489f742d4503f39bb5460cc413';
+export const VERSION = '3.8.0';
 
 /**
  * BuildProfile Class is used only for compatibility purposes.

@@ -4,6 +4,9 @@
 import { PerformanceEntry } from './PerformanceEntry';
 import { PerformanceMetric } from './PerformanceMetric';
 
+/**
+ * @deprecated PipelineEntry contain all properties of MetricActualFmpEntry
+ */
 export class MetricActualFmpEntry extends PerformanceEntry {
     public actualFmp: PerformanceMetric;
     public lynxActualFmp: PerformanceMetric;

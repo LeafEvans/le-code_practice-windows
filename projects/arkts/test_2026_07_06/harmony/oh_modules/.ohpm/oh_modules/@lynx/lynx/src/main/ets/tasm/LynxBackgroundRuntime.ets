@@ -13,10 +13,13 @@ import { LynxGenericResourceFetcher } from '../provider/LynxGenericResourceFetch
 import { LynxMediaResourceFetcher } from '../provider/LynxMediaResourceFetcher';
 import { LynxTemplateResourceFetcher } from '../provider/LynxTemplateResourceFetcher';
 import { ModuleClassWrapper, SendableModuleClassWrapper } from '../jsbridge/LynxModule';
-import { ILogBox, LLog, LynxEnv, MetaData, TemplateBundle } from '../Index';
+import { LLog, LynxEnv, MetaData, TemplateBundle } from '../Index';
 import { RuntimeLifecycleListener } from '../jsbridge/RuntimeLifecycleListener';
+import { TemplateData } from './MetaData';
+import { SessionStorageCallback } from './SessionStorage';
 
 const TAG = 'LynxBackgroundRuntime';
+const INVALID_SESSION_STORAGE_LISTENER_ID = -1;
 
 export abstract class LynxBackgroundRuntimeClient {
   public onReceivedError(error: LynxError) : void {}
@@ -64,6 +67,7 @@ export class LynxBackgroundRuntime extends lynx.LynxRuntimeWrapper {
   }
 
   // client callback
+  // Invoked on the UI thread.
   onErrorOccurred(level: string, errorCode: number, message: string, suggestion: string,
     customInfo: Record<string, string>, logboxOnly: boolean) {
     let err = new LynxError(LynxErrorLevel[level], errorCode, message, suggestion, LynxError.NATIVE_ERROR, customInfo);
@@ -78,12 +82,14 @@ export class LynxBackgroundRuntime extends lynx.LynxRuntimeWrapper {
     });
   }
 
+  // Invoked on the UI thread.
   onModuleMethodInvoked(module: string, method: string, error_code: number) {
     this.clients.forEach(client => {
       client.onModuleMethodInvoked(module, method, error_code);
     });
   }
 
+  // Invoked on the UI thread.
   onEvaluateJavaScriptEnd(url: string) {
     this.clients.forEach(client => {
       client.onEvaluateJavaScriptEnd(url);
@@ -120,6 +126,34 @@ export class LynxBackgroundRuntime extends lynx.LynxRuntimeWrapper {
   
   transitionToFullRuntime(): void {
     this.nativeTransitionToFullRuntime();
+  }
+
+  setSessionStorageItem(key: string, value: TemplateData): void {
+    if (!key || !value) {
+      return;
+    }
+    this.nativeSetSessionStorageItem(key, value.data);
+  }
+
+  getSessionStorageItem(key: string, callback: SessionStorageCallback): void {
+    if (!key || !callback) {
+      return;
+    }
+    this.nativeGetSessionStorageItem(key, callback);
+  }
+
+  subscribeSessionStorage(key: string, callback: SessionStorageCallback): number {
+    if (!key || !callback) {
+      return INVALID_SESSION_STORAGE_LISTENER_ID;
+    }
+    return this.nativeSubscribeSessionStorage(key, callback);
+  }
+
+  unsubscribeSessionStorage(key: string, listenerId: number): void {
+    if (!key || listenerId < 0) {
+      return;
+    }
+    this.nativeUnsubscribeSessionStorage(key, listenerId);
   }
 
   addRuntimeLifecycleListener(listener: RuntimeLifecycleListener) {

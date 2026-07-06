@@ -2,11 +2,12 @@
 // Licensed under the Apache License Version 2.0 that can be found in the
 // LICENSE file in the root directory of this source tree.
 
-export { TemplateData, MetaData } from './tasm/MetaData';
+export { TemplateData, MetaData, LynxUpdateMeta, LynxUpdateMode } from './tasm/MetaData';
 
-export { LynxNodeController, LynxView, ThreadStrategyForRendering, MeasureMode } from './tasm/LynxView'
+export { LynxNodeController, LynxView, LynxViewBuilder, ThreadStrategyForRendering, MeasureMode } from './tasm/LynxView'
 
 export { LynxContext } from './tasm/LynxContext'
+export { SessionStorageCallback } from './tasm/SessionStorage'
 
 export { LynxModule, ModuleClassWrapper, SendableLynxModule, SendableModuleClassWrapper } from './jsbridge/LynxModule'
 
@@ -54,12 +55,17 @@ export { NativeContent,
   UIOwner as NativeUIOwner,
   ShadowNodeOwner as NativeShadowNodeOwner,
   UIBase as NativeUIBase,
-  ShadowNode as NativeShadowNode } from 'liblynx.so'
+  ShadowNode as NativeShadowNode,
+  RendererFunctionNG,
+  FiberEventListenerOption,
+  CommonCallbackNG,
+  registerStaticTask,
+  unregisterStaticTask } from 'liblynx.so'
 
 export {
   EventHandler, EventHandlerArray } from './tasm/behavior/ui/EventHandler'
 
-export { LynxViewClient, LynxPipelineInfo } from './tasm/LynxViewClient'
+export { LynxViewClient, LynxPipelineInfo, LynxResourceLoadInfo } from './tasm/LynxViewClient'
 
 export { LynxError } from './tasm/LynxError'
 
@@ -72,6 +78,8 @@ export { TraceCategory, TraceEvent } from './base/TraceEvent'
 export { LLog, LogLevel } from './base/LLog'
 
 export { TraceController, TraceConfig } from './base/TraceController'
+
+export { MemoryPressureLevel } from './base/memory/MemoryPressureLevel'
 
 export * from './tasm/service/Index'
 
@@ -127,10 +135,14 @@ export { LynxDebugger } from './devtool_wrapper/LynxDebugger'
 
 export { LynxBaseInspectorOwner } from './devtool_wrapper/LynxBaseInspectorOwner'
 
-export { ILogBox, OnErrorCallback, GetJSSourceCallback } from './devtool_wrapper/ILogBox'
-
 export { LynxInspectorConsoleDelegate } from './devtool_wrapper/LynxInspectorConsoleDelegate'
+
+export { MessageHandler } from './devtool_wrapper/MessageHandler'
 
 export {LynxBackgroundRuntime, LynxBackgroundRuntimeClient} from './tasm/LynxBackgroundRuntime'
 
 export { RuntimeLifecycleListener } from './jsbridge/RuntimeLifecycleListener'
+
+export { LynxImageConfig } from './tasm/image/LynxImageConfig'
+
+export { LynxImageLoadInfo } from './tasm/image/LynxImageLoadInfo'

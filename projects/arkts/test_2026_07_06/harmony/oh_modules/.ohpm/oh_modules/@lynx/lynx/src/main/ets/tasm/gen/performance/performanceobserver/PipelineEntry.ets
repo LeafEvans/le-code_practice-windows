@@ -3,6 +3,7 @@
 // LICENSE file in the root directory of this source tree.
 import { PerformanceEntry } from './PerformanceEntry';
 import { HostPlatformTiming } from './HostPlatformTiming';
+import { PerformanceMetric } from './PerformanceMetric';
 
 export class PipelineEntry extends PerformanceEntry {
     public identifier: string;
@@ -21,6 +22,9 @@ export class PipelineEntry extends PerformanceEntry {
     public paintEnd: number;
     public frameworkRenderingTiming: Record<string, Object>;
     public hostPlatformTiming: HostPlatformTiming;
+    public actualFmp?: PerformanceMetric;
+    public lynxActualFmp?: PerformanceMetric;
+    public totalActualFmp?: PerformanceMetric;
     constructor(props: Record<string, Object>) {
         super(props);
         this.identifier = (props['identifier'] !== undefined && typeof props['identifier'] === 'string') ? props['identifier'] : '';
@@ -39,5 +43,8 @@ export class PipelineEntry extends PerformanceEntry {
         this.paintEnd = (props['paintEnd'] !== undefined && typeof props['paintEnd'] === 'number') ? props['paintEnd'] : -1.0;
         this.frameworkRenderingTiming = (props['frameworkRenderingTiming']!== undefined)? props['frameworkRenderingTiming'] as Record<string, Object> : {};
         this.hostPlatformTiming = (props['hostPlatformTiming'] !== undefined) ? new HostPlatformTiming(props['hostPlatformTiming'] as Record<string, Object>) : new HostPlatformTiming({});
+        this.actualFmp = (props['actualFmp'] !== undefined) ? new PerformanceMetric(props['actualFmp'] as Record<string, Object>) : undefined;
+        this.lynxActualFmp = (props['lynxActualFmp'] !== undefined) ? new PerformanceMetric(props['lynxActualFmp'] as Record<string, Object>) : undefined;
+        this.totalActualFmp = (props['totalActualFmp'] !== undefined) ? new PerformanceMetric(props['totalActualFmp'] as Record<string, Object>) : undefined;
     }
 }

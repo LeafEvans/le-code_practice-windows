@@ -7,12 +7,12 @@
   "main": "",
   "version": "1.0.0",
   "dependencies": {
-    "@lynx/lynx": "3.6.0",
-    "@lynx/lynx_base": "3.6.0",
-    "@lynx/lynx_devtool": "3.6.0",
-    "@lynx/lynx_devtool_service": "3.6.0",
-    "@lynx/lynx_log_service": "3.6.0",
-    "@lynx/lynx_http_service": "3.6.0",
+    "@lynx/lynx": "3.8.0",
+    "@lynx/lynx_base": "3.8.0",
+    "@lynx/lynx_devtool": "3.8.0",
+    "@lynx/lynx_devtool_service": "3.8.0",
+    "@lynx/lynx_log_service": "3.8.0",
+    "@lynx/lynx_http_service": "3.8.0",
     "@ohos/imageknife": "3.2.6"
   },
   "scripts": {}

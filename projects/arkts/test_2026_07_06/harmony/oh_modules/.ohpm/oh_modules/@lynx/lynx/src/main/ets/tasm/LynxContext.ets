@@ -3,7 +3,7 @@
 // LICENSE file in the root directory of this source tree.
 
 import { LynxTemplateRenderer } from './LynxTemplateRenderer';
-import { MetaData } from './MetaData';
+import { LynxUpdateMeta, LynxUpdateMode, MetaData, TemplateData } from './MetaData';
 import { LynxScreenMetrics } from './behavior/LynxScreenMetrics';
 import { ShadowNodeOwner } from './behavior/ShadowNodeOwner';
 import { UIOwner } from './behavior/UIOwner';
@@ -13,7 +13,15 @@ import { LynxExtraTiming } from './performance/timing/LynxExtraTiming';
 import { LynxView } from './LynxView';
 import { LynxReportEventPropValue } from './eventreport/ILynxEventReportObserver';
 import { LynxEventReporter } from './eventreport/LynxEventReporter';
-import { LLog, LynxEnv, LynxGenericResourceFetcher, LynxMediaResourceFetcher, TemplateBundle } from '../Index';
+import {
+  LLog,
+  LynxEnv,
+  LynxGenericResourceFetcher,
+  LynxMediaResourceFetcher,
+  LynxViewBuilder,
+  LynxViewClient,
+  TemplateBundle
+} from '../Index';
 import { componentUtils } from '@kit.ArkUI';
 import { IContext } from './IContext';
 import { LynxExtensionModule } from '../extension/LynxExtensionModule';
@@ -21,8 +29,11 @@ import { TimingOption } from './performance/timing/TimingOption';
 import { TimingConstants } from './performance/timing/TimingConstants';
 import { LynxBaseInspectorOwner } from '../devtool_wrapper/LynxBaseInspectorOwner'
 import { NativeContent } from '../Index';
+import { LynxImageConfig } from './image/LynxImageConfig';
+import { SessionStorageCallback } from './SessionStorage';
 
 const TAG = 'LynxContext'
+const INVALID_SESSION_STORAGE_LISTENER_ID = -1;
 
 /**
  * LynxContext is a LynxView's core context, managing templates, data, and events. It connects the
@@ -46,6 +57,10 @@ export class LynxContext implements IContext {
 
   findJSShadowNodeBySign(sign: number): Object | undefined {
     return this.shadowNodeOwner?.findJSShadowNodeBySign(sign);
+  }
+
+  public prefetchFont(uri: string) {
+    this.shadowNodeOwner?.prefetchFont(uri);
   }
 
   public setShadowNodeOwner(nodeOwner?: ShadowNodeOwner) {
@@ -93,7 +108,63 @@ export class LynxContext implements IContext {
   public callJSFunction(moduleName: string, method: string, params: Object[]) {
     this.renderer?.callJSFunction(moduleName, method, params);
   }
+  
+  public initWithBuilder(builder: LynxViewBuilder){
+    this.lynxView?.initWithBuilder(builder);
+  }
 
+  /**
+   * Set a value to session storage.
+   * @apidoc
+   * @param key Session storage key.
+   * @param value Session storage value wrapped by TemplateData.
+   */
+  public setSessionStorageItem(key: string, value: TemplateData): void {
+    if (!key || !value) {
+      return;
+    }
+    this.renderer?.setSessionStorageItem(key, value);
+  }
+
+  /**
+   * Get a value from session storage asynchronously.
+   * @apidoc
+   * @param key Session storage key.
+   * @param callback Callback invoked with the current value.
+   */
+  public getSessionStorageItem(key: string, callback: SessionStorageCallback): void {
+    if (!key || !callback) {
+      return;
+    }
+    this.renderer?.getSessionStorageItem(key, callback);
+  }
+
+  /**
+   * Subscribe to session storage updates for the specified key.
+   * @apidoc
+   * @param key Session storage key.
+   * @param callback Callback invoked when the key value changes.
+   * @returns Listener id for unsubscribe, returns -1 if subscribe fails.
+   */
+  public subscribeSessionStorage(key: string, callback: SessionStorageCallback): number {
+    if (!key || !callback || !this.renderer) {
+      return INVALID_SESSION_STORAGE_LISTENER_ID;
+    }
+    return this.renderer.subscribeSessionStorage(key, callback);
+  }
+
+  /**
+   * Unsubscribe a session storage listener by key and listener id.
+   * @apidoc
+   * @param key Session storage key.
+   * @param listenerId Listener id returned by subscribeSessionStorage.
+   */
+  public unsubscribeSessionStorage(key: string, listenerId: number): void {
+    if (!key || listenerId < 0) {
+      return;
+    }
+    this.renderer?.unsubscribeSessionStorage(key, listenerId);
+  }
 
   sendCustomEvent(name: string, id: number, params: Object, paramName?: string) {
     this.renderer?.sendCustomEvent(name, id, params, paramName ? paramName : 'params');
@@ -105,10 +176,18 @@ export class LynxContext implements IContext {
    * @apidoc
    * @param data Lynx template update metadata, developers use this data structure to specify the optional data content of the update template.
    */
-  updateMetaData(data: MetaData) {
+  updateMetaData(data: LynxUpdateMeta): void;
+  updateMetaData(data: MetaData): void;
+  updateMetaData(data: LynxUpdateMeta | MetaData): void {
+    const updateMode = (data as LynxUpdateMeta).updateMode ?? LynxUpdateMode.UPDATE;
     if (this.lynxView?.templateLoaded) {
+      if (updateMode === LynxUpdateMode.RELOAD) {
+        this.reload(data);
+        return;
+      }
+
       this.renderer?.updateMetaData(data.templateData?.processor, data.templateData?.data, data.templateData?.readOnly,
-        data.globalProps?.data);
+        data.globalProps?.data, updateMode);
     } else {
       this.lynxView?.metaData.merge(data);
     }
@@ -143,11 +222,13 @@ export class LynxContext implements IContext {
   }
 
   public onEnterForeground() {
-    this.renderer?.onEnterForeground();
+    LLog.i(TAG, 'onEnterForeground, url: ' + this.lynxView?.url);
+    this.lynxView?.onEnterForeground();
   }
 
   public onEnterBackground() {
-    this.renderer?.onEnterBackground();
+    LLog.i(TAG, 'onEnterBackground, url: ' + this.lynxView?.url);
+    this.lynxView?.onEnterBackground();
   }
 
   public updateScreenMetrics(width: number, height: number) {
@@ -182,7 +263,7 @@ export class LynxContext implements IContext {
       this.lynxView.metaData = metaData;
     }
     LLog.i(TAG, 'loadTemplate width url: ' + this.lynxView.url);
-    this.lynxView.reInitTemplateRenderer();
+    this.lynxView.ensureTemplateRendererAndLoadTemplate();
     TraceEvent.endSection(TraceCategory.Lynx, TraceEventDef.CONTEXT_RE_INIT_TEMPLATE);
   }
 
@@ -316,6 +397,14 @@ export class LynxContext implements IContext {
       }
     }
     return null;
+  }
+
+  public getLynxImageConfig(): LynxImageConfig | undefined {
+    return this.lynxView?.lynxImageConfig;
+  }
+
+  public getLynxViewClient(): LynxViewClient[] | undefined {
+    return this.lynxView?.clients;
   }
 
   aboutToDisappear() {

@@ -22,57 +22,75 @@ export class PerformanceEntryConverter {
     let entry: PerformanceEntry;
     if (type === 'pipeline' && name === 'updateTriggeredByBts') {
       entry = new PipelineEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'pipeline' && name === 'updateTriggeredByNative') {
       entry = new PipelineEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'pipeline' && name === 'reactLynxHydrate') {
       entry = new PipelineEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'pipeline' && name === 'setNativeProps') {
       entry = new PipelineEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'pipeline' && name === 'updateGlobalProps') {
       entry = new PipelineEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'pipeline' && name === 'loadBundle') {
       entry = new LoadBundleEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'init' && name === 'container') {
       entry = new InitContainerEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'init' && name === 'lynxview') {
       entry = new InitLynxviewEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'init' && name === 'backgroundRuntime') {
       entry = new InitBackgroundRuntimeEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'metric' && name === 'fcp') {
       entry = new MetricFcpEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'metric' && name === 'fsp') {
       entry = new MetricFspEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'metric' && name === 'actualFmp') {
       entry = new MetricActualFmpEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'pipeline' && name === 'reloadBundleFromNative') {
       entry = new ReloadBundleEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'pipeline' && name === 'reloadBundleFromBts') {
       entry = new ReloadBundleEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'memory' && name === 'memory') {
       entry = new MemoryUsageEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'resource' && name === 'lazyBundle') {
       entry = new LazyBundleEntry(record);
+      entry.typeResolved = true;
     }
     else if (type === 'jsBlocking' && name === 'jsBlocking') {
       entry = new JSBlockingEntry(record);
+      entry.typeResolved = true;
     }
     else {
       entry = new PerformanceEntry(record);
+      entry.typeResolved = false;
     }
     return entry;
   }

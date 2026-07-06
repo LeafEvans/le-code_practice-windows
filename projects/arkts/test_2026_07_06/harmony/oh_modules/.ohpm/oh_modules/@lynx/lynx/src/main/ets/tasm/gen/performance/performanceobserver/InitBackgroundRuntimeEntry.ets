@@ -3,6 +3,9 @@
 // LICENSE file in the root directory of this source tree.
 import { PerformanceEntry } from './PerformanceEntry';
 
+/**
+ * @deprecated LoadBundleEntry and ReloadBundleEntry contain all properties of InitBackgroundRuntimeEntry
+ */
 export class InitBackgroundRuntimeEntry extends PerformanceEntry {
     public loadCoreStart: number;
     public loadCoreEnd: number;

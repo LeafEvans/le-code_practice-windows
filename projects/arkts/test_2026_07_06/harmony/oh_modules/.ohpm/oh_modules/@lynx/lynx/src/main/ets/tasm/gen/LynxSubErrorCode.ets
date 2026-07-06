@@ -76,6 +76,8 @@ export class LynxSubErrorCode {
 	public static readonly E_BTS_RUNTIME_ERROR_BYTECODE_SCRIPT_ERROR: number = 20102;
 	// JavaScript binding API call errors.
 	public static readonly E_BTS_RUNTIME_ERROR_BINDINGS_ERROR: number = 20103;
+	// The script may execute timeout.
+	public static readonly E_BTS_RUNTIME_ERROR_EXECUTE_TIMEOUT_ERROR: number = 20104;
 
 
 	// Behavior: PlatformCallJSFunction
@@ -92,6 +94,14 @@ export class LynxSubErrorCode {
 
 	// Calling RuntimeLifecycleListener has error.
 	public static readonly E_BTS_LIFECYCLE_LISTENER_ERROR_EXCEPTION: number = 20301;
+
+
+	// Behavior: JsCallNativeFunction
+	// Description: Error occurred while calling native C++ method from JS.
+	// BehaviorCode: 204
+
+	// Calling native C++ method too frequently. This may cause OOM issues.
+	public static readonly E_BTS_JS_CALL_NATIVE_FUNCTION_TOO_FREQUENCY: number = 20401;
 
 
 	/**
@@ -632,10 +642,14 @@ export class LynxErrorMetaData {
 				return new LynxErrorMetaData(LynxErrorLevel.Fatal, "Please check the error message and fix the script.", []);
 			case LynxSubErrorCode.E_BTS_RUNTIME_ERROR_BINDINGS_ERROR:
 				return new LynxErrorMetaData(LynxErrorLevel.Error, "Please check the error message and fix binding API call.", []);
+			case LynxSubErrorCode.E_BTS_RUNTIME_ERROR_EXECUTE_TIMEOUT_ERROR:
+				return new LynxErrorMetaData(LynxErrorLevel.Warn, "Please check the error message and fix the script.", []);
 			case LynxSubErrorCode.E_BTS_PLATFORM_CALL_JS_FUNCTION_TOO_FREQUENCY:
 				return new LynxErrorMetaData(LynxErrorLevel.Warn, "Please throttle related calls.", []);
 			case LynxSubErrorCode.E_BTS_LIFECYCLE_LISTENER_ERROR_EXCEPTION:
 				return new LynxErrorMetaData(LynxErrorLevel.Error, "Please see error info.", []);
+			case LynxSubErrorCode.E_BTS_JS_CALL_NATIVE_FUNCTION_TOO_FREQUENCY:
+				return new LynxErrorMetaData(LynxErrorLevel.Warn, "Please throttle related calls.", []);
 			case LynxSubErrorCode.E_RESOURCE_IMAGE_BIG_IMAGE:
 				return new LynxErrorMetaData(LynxErrorLevel.Error, "Please resize the image to appropriate dimensions or enable downsampling.", []);
 			case LynxSubErrorCode.E_RESOURCE_IMAGE_PIC_SOURCE:

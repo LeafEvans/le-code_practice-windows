@@ -45,4 +45,13 @@ export class LynxDebugger {
       LLog.e(LynxDebugger.TAG, 'fail to get DevTool module');
     }
   }
+
+  public static addOpenCardCallback(callback: (url: string) => void): void {
+    const devToolService = LynxServiceCenter.getService<ILynxDevToolService>(LynxServiceType.DevTool);
+    if (devToolService?.isDevToolModuleLoaded()) {
+      devToolService.addOpenCardCallback(callback);
+    } else {
+      LLog.e(LynxDebugger.TAG, 'fail to get DevTool module');
+    }
+  }
 }

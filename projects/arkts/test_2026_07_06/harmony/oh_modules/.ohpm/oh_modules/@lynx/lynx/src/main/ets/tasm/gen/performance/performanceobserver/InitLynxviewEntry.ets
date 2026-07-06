@@ -3,6 +3,9 @@
 // LICENSE file in the root directory of this source tree.
 import { PerformanceEntry } from './PerformanceEntry';
 
+/**
+ * @deprecated LoadBundleEntry and ReloadBundleEntry contain all properties of InitLynxviewEntry
+ */
 export class InitLynxviewEntry extends PerformanceEntry {
     public createLynxStart: number;
     public createLynxEnd: number;

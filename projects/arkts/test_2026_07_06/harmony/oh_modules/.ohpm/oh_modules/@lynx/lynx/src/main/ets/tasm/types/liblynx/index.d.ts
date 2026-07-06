@@ -8,6 +8,8 @@ import type { NodeContent } from '@ohos.arkui.node';
 
 export const initGlobalEnv: (resourceManager: Object) => void;
 
+export const registerImageService: (instance: number[]) => void;
+
 export const getBaseTraceBackend: () => number;
 
 export const setTracingDirPath: (tracingDirPath: string) => void;
@@ -21,6 +23,8 @@ export const traceEventEnd: (traceCategory: string, name: string) => void;
 export const traceInstant: (traceCategory: string, name: string, args?: Record<string, string>) => void;
 
 export const parserTestBenchRecordData: (source: string) => string;
+
+export const notifyMemoryPressure: (pressure: number) => void;
 
 export class PaintingContext {
   static create(ref: Object, create: Function, update: Function, insert: Function, remove: Function, destroy: Function,
@@ -57,6 +61,12 @@ export class ShadowNodeOwner {
   alignNativeNode(sign: number, top: number, left: number): void;
 
   /**
+   * Prefetch font resource.
+   * @param {string} uri - The uri of the font resource.
+   */
+  prefetchFont(uri: string): void;
+
+  /**
    * Destroy the native instance immediately.
    */
   destroy(): void;
@@ -80,6 +90,11 @@ export interface DevtoolResult {
 }
 
 
+
+export class LynxWhiteBoard {
+  constructor();
+}
+
 export class LynxTemplateRenderer {
   constructor();
 
@@ -89,7 +104,8 @@ export class LynxTemplateRenderer {
     isHostRenderer: boolean, perfController: PerformanceCollector, threadMode: number, groupId: string,
     useQuickjs: boolean, enableJSGroupThread: boolean, preloadJSPaths: string[], enableBytecode: boolean,
     bytecodeSourceUrl: string, enableJSRuntime: boolean, moduleManagerArgs: Object[],
-    sendableModuleManagerArgs: Object[], backgroundRuntime: NativeLynxBackgroundRuntime): void;
+    sendableModuleManagerArgs: Object[], backgroundRuntime: NativeLynxBackgroundRuntime,
+    whiteBoard?: LynxWhiteBoard): void;
 
   nativeDetach(): void;
 
@@ -108,7 +124,8 @@ export class LynxTemplateRenderer {
 
   updateGlobalProps(props?: Object | string): void;
 
-  updateMetaData(processor?: string, data?: Object | string, readonly?: boolean, props?: Object | string): void;
+  updateMetaData(processor?: string, data?: Object | string, readonly?: boolean, props?: Object | string,
+    updateMode?: number): void;
 
   callJSFunction(module: string, method: string, params: Array<Object>): void;
 
@@ -159,12 +176,20 @@ export class LynxTemplateRenderer {
 
   nativeGetAllJsSource(): Record<string, string>;
 
+  nativeSetSessionStorageItem(key: string, data?: Object | string): void;
+
+  nativeGetSessionStorageItem(key: string, callback: Function): void;
+
+  nativeSubscribeSessionStorage(key: string, callback: Function): number;
+
+  nativeUnsubscribeSessionStorage(key: string, listenerId: number): void;
+
   invokeLepusCallback(id: number, entryName: string, args: Object): void;
 }
 
-type JSMeasureFunc = (width: number, widthMode: number, height: number, heightMode: number) => [number, number, number];
+export type JSMeasureFunc = (width: number, widthMode: number, height: number, heightMode: number) => [number, number, number];
 
-type JSAlignLayoutFunc = () => void;
+export type JSAlignLayoutFunc = () => void;
 
 export class ShadowNode {
   constructor(ref: Object, sign: number, tag: string);
@@ -188,7 +213,7 @@ export class ShadowNode {
 export class UIOwner {
   constructor(ref: Object, create: Function, uiContext: UIContext, createNodeContent: Function,
     startFluencyTrace: Function, stopFluencyTrace: Function, getNodeType: (string) => number,
-    postDrawEndTimingFrameCallback: Function, onAvoidKeyboardCallback: Function);
+    postDrawEndTimingFrameCallback: Function, onAvoidKeyboardCallback: Function, onResourceLoaded: Function);
 
   attachPageRoot(content: NativeContent): void;
 
@@ -203,13 +228,20 @@ export class UIOwner {
   canConsumeTouchEvent(x: number, y: number): boolean;
 
   updateRootTarget(node: NativeContent): void;
+  
+  setLynxImageConfig(config?: Object): void;
+
+  onEnterForeground() : void;
+
+  onEnterBackground() : void;
 }
 
 export class UIBase {
   constructor(ref: Object, context: number[], node: FrameNode | null, sign: number, tag: string, update: Function,
     layout: Function, invokeUIMethod: Function, dispose: Function, focusChange: Function, focusable: Function,
     onNodeReady: Function,
-    customLayout: boolean, updateExtraData: Function);
+    customLayout: boolean, updateExtraData: Function,
+    needWindowStateChangeEvent: boolean, onEnterForeground: Function, onEnterBackground: Function);
 
   static getUIFromNativeContent(nativeContent: NativeContent): Object | undefined;
 
@@ -288,6 +320,7 @@ export class TemplateBundle {
   nativePostJsCacheGenerationTask(bytecodeSourceUrl: string, useV8: boolean): void;
 }
 
+
 export class LynxInfoReporterHelper {
   static nativeRegister(infoReporter: Object): void;
 }
@@ -317,5 +350,18 @@ export class LynxRuntimeWrapper {
   protected nativeTransitionToFullRuntime(): void;
   protected nativeCallJSFunction(module: string, method: string, params: Object[]): void;
   protected nativeAddRuntimeLifecycleListener(listener: Object);
+  protected nativeSetSessionStorageItem(key: string, data?: Object | string): void;
+  protected nativeGetSessionStorageItem(key: string, callback: Function): void;
+  protected nativeSubscribeSessionStorage(key: string, callback: Function): number;
+  protected nativeUnsubscribeSessionStorage(key: string, listenerId: number): void;
   
 }
+
+export const registerStaticTask: (
+  taskId: string,
+  callback: (nativeContextPtr: bigint) => void,
+) => boolean;
+
+export const unregisterStaticTask: (taskId: string) => boolean;
+
+export { RendererFunctionNG, FiberEventListenerOption, CommonCallbackNG } from './HarmonyRendererFunctionNG';

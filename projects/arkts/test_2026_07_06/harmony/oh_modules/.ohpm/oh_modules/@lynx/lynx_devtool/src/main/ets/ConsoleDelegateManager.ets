@@ -2,7 +2,7 @@
 // Licensed under the Apache License Version 2.0 that can be found in the
 // LICENSE file in the root directory of this source tree.
 
-import { LynxInspectorConsoleDelegate } from '@lynx/lynx/src/main/ets/devtool_wrapper/LynxInspectorConsoleDelegate';
+import { LynxInspectorConsoleDelegate } from '@lynx/lynx';
 import { InspectorOwnerHarmony } from 'liblynxdevtool.so';
 
 export class ConsoleDelegateManager {
@@ -24,7 +24,9 @@ export class ConsoleDelegateManager {
     if (!this.consoleObjectCallback) {
       this.consoleObjectCallback = new Map();
     }
-    let callbackId = ConsoleDelegateManager.nextCallbackId--;
+    // The `callbackId` will be passed to the C++ implementation (see `inspector_client_delegate_impl.cc`), 
+    // and `OnConsoleObject` is only invoked when this `callbackId` is a negative value.
+    let callbackId = --ConsoleDelegateManager.nextCallbackId;
     this.consoleObjectCallback.set(callbackId, callback);
     nativeOwner.getConsoleObject(objectId, needStringify, callbackId);
   }
