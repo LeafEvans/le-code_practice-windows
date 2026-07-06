@@ -2,17 +2,11 @@
   "apiType": "stageMode",
   "buildOption": {
     "arkOptions": {
-      // "apPath": "./modules.ap"  /* Profile used for profile-guided optimization (PGO), a compiler optimization technique to improve app runtime performance. */
       "runtimeOnly": {
         "packages": [
           "@lynx/lynx_devtool"
         ]
       }
-    },
-    "externalNativeOptions": {
-      "path": "./src/main/cpp/CMakeLists.txt",
-      "arguments": "",
-      "cppFlags": "",
     }
   },
   "buildOptionSet": [
@@ -28,14 +22,14 @@
           }
         }
       }
-    },
+    }
   ],
   "targets": [
     {
       "name": "default"
     },
     {
-      "name": "ohosTest",
+      "name": "ohosTest"
     }
   ]
 }

@@ -1,21 +1,19 @@
 {
   "license": "Apache-2.0",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "author": "lynx",
   "name": "entry",
-  "description": "Please describe the basic information.",
+  "description": "Weather App - Lynx Explorer Host",
   "main": "",
   "version": "1.0.0",
   "dependencies": {
-    "@lynx/lynx": "@param:dependencies.lynx_version",
-    "@lynx/lynx_base": "@param:dependencies.lynx_version",
-    "@lynx/lynx_devtool": "@param:dependencies.lynx_version",
-    "@lynx/lynx_devtool_service": "@param:dependencies.lynx_version",
-    "@lynx/lynx_log_service": "@param:dependencies.lynx_version",
-    "@lynx/lynx_http_service": "@param:dependencies.lynx_version",
-    "@ohos/imageknife": "3.2.6",
+    "@lynx/lynx": "3.6.0",
+    "@lynx/lynx_base": "3.6.0",
+    "@lynx/lynx_devtool": "3.6.0",
+    "@lynx/lynx_devtool_service": "3.6.0",
+    "@lynx/lynx_log_service": "3.6.0",
+    "@lynx/lynx_http_service": "3.6.0",
+    "@ohos/imageknife": "3.2.6"
   },
-  "scripts": {
-  }
+  "scripts": {}
 }
