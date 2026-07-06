@@ -18,5 +18,5 @@
     "@lynx/lynx_log_service": "3.8.0",
     "@lynx/lynx_http_service": "3.8.0"
   },
-  "modelVersion": "6.1.1"
+  "modelVersion": "5.0.0"
 }
