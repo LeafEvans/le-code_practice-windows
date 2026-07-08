@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-07-08T08:19:22.831Z",
+  "projectRoot": "C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08",
+  "toolkitVersion": "1.11.3",
+  "command": "bundle",
+  "mode": null,
+  "status": "succeeded",
+  "harmonyProjectRoot": "C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08\\harmony",
+  "entryFile": "C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08\\index.harmony.js",
+  "bundleOutputPath": "C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08\\harmony\\entry\\src\\main\\resources\\rawfile\\bundle.harmony.js",
+  "assetsDestPath": "C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08\\harmony\\entry\\src\\main\\resources\\rawfile\\assets",
+  "artifactPaths": [
+    "C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08\\harmony\\entry\\src\\main\\resources\\rawfile\\bundle.harmony.js"
+  ],
+  "blockingIssues": [],
+  "warnings": [
+    "[sidecar.drift.requires-force] Skipped managed sidecar file metro.harmony.config.js because it drifted from the last generated version. Re-run expo-harmony sync-template --force or expo-harmony init --force to overwrite it."
+  ],
+  "steps": [
+    {
+      "label": "bundle-harmony",
+      "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08\\node_modules\\react-native\\cli.js bundle-harmony --reset-cache --dev false --entry-file C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08\\index.harmony.js --bundle-output C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08\\harmony\\entry\\src\\main\\resources\\rawfile\\bundle.harmony.js --assets-dest C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08\\harmony\\entry\\src\\main\\resources\\rawfile\\assets --config C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08\\metro.harmony.config.js",
+      "cwd": "C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08",
+      "exitCode": 0
+    }
+  ]
+}

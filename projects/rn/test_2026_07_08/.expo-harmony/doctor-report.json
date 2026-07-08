@@ -1,0 +1,504 @@
+{
+  "generatedAt": "2026-07-08T08:16:47.374Z",
+  "projectRoot": "C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08",
+  "appConfigPath": "C:\\Users\\31866\\Code\\le-code_practice-windows\\projects\\rn\\test_2026_07_08\\app.json",
+  "toolkitVersion": "1.11.3",
+  "templateVersion": "rnoh-0.82.29",
+  "matrixId": "expo55-rnoh082-ui-stack",
+  "eligibility": "ineligible",
+  "rnohVersion": "0.82.29",
+  "rnohCliVersion": "0.82.29",
+  "expoSdkVersion": 55,
+  "targetTier": "verified",
+  "coverageProfile": "third-party-native-heavy",
+  "expoConfig": {
+    "name": "记账 · Expense Tracker",
+    "slug": "expense-tracker",
+    "version": "1.0.0",
+    "androidPackage": "com.example.expensetracker",
+    "iosBundleIdentifier": null,
+    "schemes": [
+      "expense-tracker"
+    ],
+    "plugins": [
+      "expo-router"
+    ]
+  },
+  "dependencies": [
+    {
+      "name": "@react-native-async-storage/async-storage",
+      "version": "^2.2.0",
+      "source": "dependency",
+      "status": "manual",
+      "supportTier": "experimental",
+      "buildabilityRisk": "known",
+      "gapCategory": "official-module-gap",
+      "blocking": true,
+      "note": "v1.9.2 Wave A tracks Async Storage through its Harmony adapter, but persistence behavior remains experimental until device and release evidence are closed.",
+      "docsUrl": "https://github.com/react-native-oh-library/usage-docs"
+    },
+    {
+      "name": "@react-native-community/cli",
+      "version": "^20.2.0",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "The React Native CLI exposes the bundle-harmony command used by the official sample."
+    },
+    {
+      "name": "@react-native-oh-tpl/async-storage",
+      "version": "1.21.0-0.2.2",
+      "source": "dependency",
+      "status": "manual",
+      "supportTier": "experimental",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": true,
+      "note": "Harmony adapter package pinned by the ccnubox intake catalog. The toolkit can link its HAR when async_storage.har is installed, but runtime behavior still needs app-level evidence.",
+      "replacement": "@react-native-async-storage/async-storage",
+      "docsUrl": "https://github.com/react-native-oh-library/usage-docs"
+    },
+    {
+      "name": "@react-native-oh-tpl/react-native-gesture-handler",
+      "version": "2.14.17-rc.0",
+      "source": "dependency",
+      "status": "manual",
+      "supportTier": "experimental",
+      "buildabilityRisk": "known",
+      "gapCategory": "third-party-native-gap",
+      "blocking": true,
+      "note": "The current Gesture Handler adapter remains experimental and is outside the validated matrix until its ArkTS turbo module path runs cleanly on device.",
+      "replacement": "react-native-gesture-handler",
+      "docsUrl": "https://github.com/react-native-oh-library/react-native-harmony-gesture-handler"
+    },
+    {
+      "name": "@react-native-oh-tpl/react-native-reanimated",
+      "version": "3.6.4-rc.1",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": true,
+      "note": "Harmony adapter pinned to 3.6.4-rc.5. The validated matrix requires the exact Git spec github:react-native-oh-library/react-native-harmony-reanimated#9fdbe676209937383907be0592291223c6ca7ad7&path:react-native-harmony-reanimated.",
+      "replacement": "react-native-reanimated",
+      "docsUrl": "https://github.com/react-native-oh-library/react-native-harmony-reanimated"
+    },
+    {
+      "name": "@react-native-oh-tpl/react-native-svg",
+      "version": "15.0.1-8",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": true,
+      "note": "Harmony adapter pinned to 15.0.1-rc.12. The validated matrix requires the exact Git spec github:react-native-oh-library/react-native-harmony-svg#97c31d2f72559931d62fa84a9c86e86d343753d3&path:react-native-harmony-svg.",
+      "replacement": "react-native-svg",
+      "docsUrl": "https://github.com/react-native-oh-library/react-native-harmony-svg"
+    },
+    {
+      "name": "@react-native-oh/react-native-harmony",
+      "version": "^0.82.30",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": true,
+      "note": "This is the RNOH runtime package used by the vendored Harmony sidecar template."
+    },
+    {
+      "name": "@react-native-oh/react-native-harmony-cli",
+      "version": "^0.82.29",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "This package provides the bundle-harmony command used by the official minimal sample."
+    },
+    {
+      "name": "@types/react",
+      "version": "~19.2.17",
+      "source": "devDependency",
+      "status": "unknown",
+      "supportTier": "unsupported",
+      "buildabilityRisk": "js-only-unknown",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "This dependency is not in the current compatibility catalog yet."
+    },
+    {
+      "name": "expo",
+      "version": "~55.0.0",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "Toolkit can parse Expo config and scaffold Harmony sidecar files for managed/CNG projects."
+    },
+    {
+      "name": "expo-constants",
+      "version": "~55.0.0",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "Constants reads are treated as part of the validated App Shell matrix when they stay in the JavaScript layer."
+    },
+    {
+      "name": "expo-harmony-toolkit",
+      "version": "^1.11.3",
+      "source": "devDependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "The published toolkit package may be installed locally to provide the CLI and config plugin inside a validated project."
+    },
+    {
+      "name": "expo-linking",
+      "version": "~55.0.0",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "URL generation and JS-layer linking are treated as part of the validated App Shell matrix."
+    },
+    {
+      "name": "expo-router",
+      "version": "~55.0.16",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "File-based routing is treated as part of the validated App Shell matrix when router peers, scheme, and plugin config are present."
+    },
+    {
+      "name": "expo-status-bar",
+      "version": "~55.0.6",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": true,
+      "note": "Status bar rendering stays in the JavaScript/UI layer for the official minimal sample."
+    },
+    {
+      "name": "expo-system-ui",
+      "version": "~55.0.0",
+      "source": "dependency",
+      "status": "manual",
+      "supportTier": "experimental",
+      "buildabilityRisk": "known",
+      "gapCategory": "official-module-gap",
+      "blocking": true,
+      "note": "System UI updates touch native chrome and need Harmony runtime validation."
+    },
+    {
+      "name": "metro",
+      "version": "^0.86.0",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": true,
+      "note": "Metro is part of the official sample bundling chain."
+    },
+    {
+      "name": "react",
+      "version": "19.1.1",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "React is treated as a baseline JavaScript dependency."
+    },
+    {
+      "name": "react-dom",
+      "version": "19.1.1",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "React DOM is treated as a workspace peer for Expo Router and web-capable managed Expo projects inside the validated matrix."
+    },
+    {
+      "name": "react-native",
+      "version": "0.82.1",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "React Native is supported as managed Expo input, but runtime portability is only promised inside the validated matrix."
+    },
+    {
+      "name": "react-native-gesture-handler",
+      "version": "~2.20.2",
+      "source": "dependency",
+      "status": "manual",
+      "supportTier": "experimental",
+      "buildabilityRisk": "known",
+      "gapCategory": "third-party-native-gap",
+      "blocking": true,
+      "note": "v1.9.0 formal acceptance slice tracks Gesture Handler through its Harmony adapter, but it remains experimental until device and release runtime evidence are closed.",
+      "docsUrl": "https://github.com/react-native-oh-library/react-native-harmony-gesture-handler"
+    },
+    {
+      "name": "react-native-reanimated",
+      "version": "3.6.0",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "Supported in the validated UI-stack matrix when paired with @react-native-oh-tpl/react-native-reanimated and the managed Harmony autolinking output.",
+      "replacement": "@react-native-oh-tpl/react-native-reanimated",
+      "docsUrl": "https://github.com/react-native-oh-library/react-native-harmony-reanimated"
+    },
+    {
+      "name": "react-native-safe-area-context",
+      "version": "~5.0.0",
+      "source": "dependency",
+      "status": "manual",
+      "supportTier": "experimental",
+      "buildabilityRisk": "known",
+      "gapCategory": "third-party-native-gap",
+      "blocking": true,
+      "note": "v1.9.2 Wave A formalizes the existing toolkit safe-area shim so app-shell layouts keep bundling while native safe-area measurements stay outside verified.",
+      "docsUrl": "https://github.com/react-native-oh-library"
+    },
+    {
+      "name": "react-native-svg",
+      "version": "15.0.0",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "Supported in the validated UI-stack matrix when paired with @react-native-oh-tpl/react-native-svg and the managed Harmony autolinking output.",
+      "replacement": "@react-native-oh-tpl/react-native-svg",
+      "docsUrl": "https://github.com/react-native-oh-library/react-native-harmony-svg"
+    },
+    {
+      "name": "react-native-web",
+      "version": "~0.21.2",
+      "source": "dependency",
+      "status": "supported",
+      "supportTier": "verified",
+      "buildabilityRisk": "known",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "Web support dependency has no Harmony native runtime surface."
+    },
+    {
+      "name": "typescript",
+      "version": "~5.9.3",
+      "source": "devDependency",
+      "status": "unknown",
+      "supportTier": "unsupported",
+      "buildabilityRisk": "js-only-unknown",
+      "gapCategory": "matrix-drift",
+      "blocking": false,
+      "note": "This dependency is not in the current compatibility catalog yet."
+    }
+  ],
+  "summary": {
+    "total": 26,
+    "supported": 18,
+    "manual": 6,
+    "unknown": 2
+  },
+  "supportSummary": {
+    "verified": 18,
+    "preview": 0,
+    "experimental": 6,
+    "unsupported": 2
+  },
+  "capabilities": [
+    {
+      "id": "async-storage",
+      "packageName": "@react-native-async-storage/async-storage",
+      "status": "manual",
+      "supportTier": "experimental",
+      "runtimeMode": "adapter",
+      "evidence": {
+        "bundle": true,
+        "debugBuild": true,
+        "device": false,
+        "release": false
+      },
+      "evidenceSource": {
+        "bundle": "automated",
+        "debugBuild": "automated",
+        "device": "none",
+        "release": "none"
+      },
+      "note": "v1.9.2 Wave A tracks Async Storage through its Harmony adapter, but persistence behavior remains experimental until device and release evidence are closed.",
+      "docsUrl": "https://github.com/react-native-oh-library/usage-docs",
+      "nativePackageNames": [
+        "@react-native-oh-tpl/async-storage"
+      ],
+      "harmonyPermissions": [],
+      "sampleRoute": "/third-party-wave-a/async-storage",
+      "acceptanceChecklist": [
+        "Install the canonical package with the matching Harmony adapter.",
+        "Bundle a minimal Async Storage read/write/remove surface.",
+        "Keep real persistence, migration, and release HAP runtime behavior pending device evidence."
+      ]
+    },
+    {
+      "id": "react-native-gesture-handler",
+      "packageName": "react-native-gesture-handler",
+      "status": "manual",
+      "supportTier": "experimental",
+      "runtimeMode": "adapter",
+      "evidence": {
+        "bundle": true,
+        "debugBuild": true,
+        "device": false,
+        "release": false
+      },
+      "evidenceSource": {
+        "bundle": "automated",
+        "debugBuild": "automated",
+        "device": "none",
+        "release": "none"
+      },
+      "note": "v1.9.0 formal acceptance slice tracks Gesture Handler through its Harmony adapter, but it remains experimental until device and release runtime evidence are closed.",
+      "docsUrl": "https://github.com/react-native-oh-library/react-native-harmony-gesture-handler",
+      "nativePackageNames": [
+        "@react-native-oh-tpl/react-native-gesture-handler"
+      ],
+      "harmonyPermissions": [],
+      "sampleRoute": "/gesture-handler",
+      "acceptanceChecklist": [
+        "Install the canonical package with the matching Harmony adapter.",
+        "Bundle a minimal GestureHandlerRootView and tap handler surface.",
+        "Record debug HAP evidence before any promotion decision; device and release remain separate gates."
+      ]
+    },
+    {
+      "id": "react-native-safe-area-context",
+      "packageName": "react-native-safe-area-context",
+      "status": "manual",
+      "supportTier": "experimental",
+      "runtimeMode": "shim",
+      "evidence": {
+        "bundle": true,
+        "debugBuild": true,
+        "device": false,
+        "release": false
+      },
+      "evidenceSource": {
+        "bundle": "automated",
+        "debugBuild": "automated",
+        "device": "none",
+        "release": "none"
+      },
+      "note": "v1.9.2 Wave A formalizes the existing toolkit safe-area shim so app-shell layouts keep bundling while native safe-area measurements stay outside verified.",
+      "docsUrl": "https://github.com/react-native-oh-library",
+      "nativePackageNames": [],
+      "harmonyPermissions": [],
+      "sampleRoute": "/third-party-wave-a/safe-area",
+      "acceptanceChecklist": [
+        "Render SafeAreaProvider, SafeAreaView, and safe-area hooks through the toolkit shim.",
+        "Keep the Metro alias on .expo-harmony/shims/react-native-safe-area-context.",
+        "Validate real native inset measurement separately before any adapter promotion."
+      ]
+    }
+  ],
+  "blockingIssues": [
+    {
+      "code": "dependency.version_mismatch",
+      "message": "Dependency @react-native-oh/react-native-harmony does not satisfy the validated range 0.82.29.",
+      "subject": "@react-native-oh/react-native-harmony"
+    },
+    {
+      "code": "dependency.version_mismatch",
+      "message": "Dependency metro does not satisfy the validated range >=0.83.0 <0.84.0.",
+      "subject": "metro"
+    },
+    {
+      "code": "dependency.version_mismatch",
+      "message": "Dependency expo-status-bar does not satisfy the validated range >=3.0.0 <4.0.0.",
+      "subject": "expo-status-bar"
+    },
+    {
+      "code": "dependency.specifier_mismatch",
+      "message": "Dependency @react-native-oh-tpl/react-native-reanimated does not match any validated dependency spec: github:react-native-oh-library/react-native-harmony-reanimated#9fdbe676209937383907be0592291223c6ca7ad7&path:react-native-harmony-reanimated, 3.6.4-rc.5.",
+      "subject": "@react-native-oh-tpl/react-native-reanimated"
+    },
+    {
+      "code": "dependency.specifier_mismatch",
+      "message": "Dependency @react-native-oh-tpl/react-native-svg does not match any validated dependency spec: github:react-native-oh-library/react-native-harmony-svg#97c31d2f72559931d62fa84a9c86e86d343753d3&path:react-native-harmony-svg, 15.0.1-rc.11.",
+      "subject": "@react-native-oh-tpl/react-native-svg"
+    },
+    {
+      "code": "dependency.not_allowed",
+      "message": "@react-native-async-storage/async-storage is outside the verified support tier for expo55-rnoh082-ui-stack.",
+      "subject": "@react-native-async-storage/async-storage"
+    },
+    {
+      "code": "dependency.not_allowed",
+      "message": "@react-native-oh-tpl/async-storage is outside the verified support tier for expo55-rnoh082-ui-stack.",
+      "subject": "@react-native-oh-tpl/async-storage"
+    },
+    {
+      "code": "dependency.not_allowed",
+      "message": "@react-native-oh-tpl/react-native-gesture-handler is outside the verified support tier for expo55-rnoh082-ui-stack.",
+      "subject": "@react-native-oh-tpl/react-native-gesture-handler"
+    },
+    {
+      "code": "dependency.not_allowed",
+      "message": "expo-system-ui is outside the verified support tier for expo55-rnoh082-ui-stack.",
+      "subject": "expo-system-ui"
+    },
+    {
+      "code": "dependency.not_allowed",
+      "message": "react-native-gesture-handler is outside the verified support tier for expo55-rnoh082-ui-stack.",
+      "subject": "react-native-gesture-handler"
+    },
+    {
+      "code": "dependency.not_allowed",
+      "message": "react-native-safe-area-context is outside the verified support tier for expo55-rnoh082-ui-stack.",
+      "subject": "react-native-safe-area-context"
+    }
+  ],
+  "nextActions": [
+    "Align Expo SDK, React Native, RNOH, and validated adapter versions to expo55-rnoh082-ui-stack, then rerun `expo-harmony doctor --project-root . --strict`.",
+    "Keep `react-native-gesture-handler` on the formal experimental slice until its Harmony adapter path closes device and release evidence.",
+    "Keep Third-party Native Wave A on `doctor --target-tier experimental`: pair async-storage and screens with their Harmony adapters, keep safe-area on the toolkit shim, and record fallback paths before any promotion when device/release evidence cannot close in v1.11.x.",
+    "Unknown JavaScript-only packages still sit outside the public matrix; verify bundling manually, but prioritize native gaps first."
+  ],
+  "advisories": [],
+  "warnings": [
+    "Manual-review dependencies were detected. They remain outside the current validated matrix even though the toolkit can still scaffold exploratory files.",
+    "Experimental-tier dependencies were detected. Expect bridge drift, runtime gaps, or additional manual validation before claiming release readiness.",
+    "Some unknown dependencies look JavaScript-only. They remain outside the public matrix, but they are less likely to block bundling or a debug HAP build outright."
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "generatedAt": "2026-07-08T08:18:06.033Z",
+  "toolkitVersion": "1.11.3",
+  "templateVersion": "rnoh-0.82.29",
+  "matrixId": "expo55-rnoh082-ui-stack",
+  "rnohVersion": "0.82.29",
+  "rnohCliVersion": "0.82.29",
+  "bundleName": "com.example.expensetracker",
+  "entryModuleName": "entry",
+  "coverageProfile": "third-party-native-heavy",
+  "doctorConfig": {
+    "excludeDependencies": [],
+    "excludePlugins": [],
+    "coverageProfile": null
+  },
+  "capabilities": [
+    {
+      "id": "async-storage",
+      "packageName": "@react-native-async-storage/async-storage",
+      "supportTier": "experimental",
+      "runtimeMode": "adapter",
+      "evidence": {
+        "bundle": true,
+        "debugBuild": true,
+        "device": false,
+        "release": false
+      },
+      "evidenceSource": {
+        "bundle": "automated",
+        "debugBuild": "automated",
+        "device": "none",
+        "release": "none"
+      }
+    },
+    {
+      "id": "react-native-gesture-handler",
+      "packageName": "react-native-gesture-handler",
+      "supportTier": "experimental",
+      "runtimeMode": "adapter",
+      "evidence": {
+        "bundle": true,
+        "debugBuild": true,
+        "device": false,
+        "release": false
+      },
+      "evidenceSource": {
+        "bundle": "automated",
+        "debugBuild": "automated",
+        "device": "none",
+        "release": "none"
+      }
+    },
+    {
+      "id": "react-native-safe-area-context",
+      "packageName": "react-native-safe-area-context",
+      "supportTier": "experimental",
+      "runtimeMode": "shim",
+      "evidence": {
+        "bundle": true,
+        "debugBuild": true,
+        "device": false,
+        "release": false
+      },
+      "evidenceSource": {
+        "bundle": "automated",
+        "debugBuild": "automated",
+        "device": "none",
+        "release": "none"
+      }
+    },
+    {
+      "id": "react-native-screens",
+      "packageName": "react-native-screens",
+      "supportTier": "experimental",
+      "runtimeMode": "adapter",
+      "evidence": {
+        "bundle": true,
+        "debugBuild": true,
+        "device": false,
+        "release": false
+      },
+      "evidenceSource": {
+        "bundle": "automated",
+        "debugBuild": "automated",
+        "device": "none",
+        "release": "none"
+      }
+    }
+  ],
+  "requestedHarmonyPermissions": [],
+  "nextActions": [
+    "Align Expo SDK, React Native, RNOH, and validated adapter versions to expo55-rnoh082-ui-stack, then rerun `expo-harmony doctor --project-root . --strict`.",
+    "Keep `react-native-gesture-handler` on the formal experimental slice until its Harmony adapter path closes device and release evidence.",
+    "Keep Third-party Native Wave A on `doctor --target-tier experimental`: pair async-storage and screens with their Harmony adapters, keep safe-area on the toolkit shim, and record fallback paths before any promotion when device/release evidence cannot close in v1.11.x.",
+    "Unknown JavaScript-only packages still sit outside the public matrix; verify bundling manually, but prioritize native gaps first."
+  ],
+  "project": {
+    "name": "记账 · Expense Tracker",
+    "slug": "expense-tracker",
+    "version": "1.0.0",
+    "hvigorPluginFilename": "rnoh-hvigor-plugin-0.82.29.tgz"
+  }
+}
