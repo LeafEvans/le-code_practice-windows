@@ -1,0 +1,8 @@
+string ReanimatedAbility_desc 0x04000000
+string ReanimatedAbility_label 0x04000001
+string module_desc 0x04000002
+string page_show 0x04000007
+color start_window_background 0x04000003
+media icon 0x04000004
+media startIcon 0x04000005
+profile main_pages 0x04000006

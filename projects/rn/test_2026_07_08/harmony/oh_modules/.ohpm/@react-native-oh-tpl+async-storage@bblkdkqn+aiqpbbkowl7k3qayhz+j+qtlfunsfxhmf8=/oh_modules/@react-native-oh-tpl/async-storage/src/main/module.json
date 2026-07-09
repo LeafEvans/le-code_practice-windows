@@ -1,0 +1,27 @@
+{
+	"app": {
+		"bundleName": "com.example.sampleApp",
+		"debug": true,
+		"versionCode": 1000000,
+		"versionName": "1.0.0",
+		"minAPIVersion": 50000012,
+		"targetAPIVersion": 50000012,
+		"apiReleaseType": "Beta6",
+		"compileSdkVersion": "5.0.0.61",
+		"compileSdkType": "HarmonyOS",
+		"appEnvironments": [],
+		"bundleType": "app"
+	},
+	"module": {
+		"name": "async_storage",
+		"type": "har",
+		"deviceTypes": [
+			"default"
+		],
+		"packageName": "@react-native-oh-tpl/async-storage",
+		"installationFree": false,
+		"virtualMachine": "ark12.0.2.0",
+		"compileMode": "esmodule",
+		"dependencies": []
+	}
+}

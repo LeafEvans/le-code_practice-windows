@@ -1,0 +1,1 @@
+{"license":"MIT","devDependencies":{},"author":"","description":"","name":"@react-native-oh-tpl/react-native-svg","type":"module","main":"index.ets","version":"15.0.1-8","dependencies":{"@rnoh/react-native-openharmony":"^0.72.32"},"metadata":{"sourceRoots":["./src/main"],"debug":true},"compatibleSdkVersion":12,"compatibleSdkType":"HarmonyOS","obfuscated":false}

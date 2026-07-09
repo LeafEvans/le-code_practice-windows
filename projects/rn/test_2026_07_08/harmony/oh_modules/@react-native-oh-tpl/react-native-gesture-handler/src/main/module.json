@@ -1,0 +1,28 @@
+{
+	"app": {
+		"bundleName": "com.rnoh.gesture_handler",
+		"debug": true,
+		"versionCode": 1000000,
+		"versionName": "1.0.0",
+		"minAPIVersion": 50000012,
+		"targetAPIVersion": 50003015,
+		"apiReleaseType": "Beta2",
+		"compileSdkVersion": "5.0.3.131",
+		"compileSdkType": "HarmonyOS",
+		"appEnvironments": [],
+		"bundleType": "app",
+		"buildMode": "debug"
+	},
+	"module": {
+		"name": "gesture_handler",
+		"type": "har",
+		"deviceTypes": [
+			"default"
+		],
+		"packageName": "@react-native-oh-tpl/react-native-gesture-handler",
+		"installationFree": false,
+		"virtualMachine": "ark12.0.2.0",
+		"compileMode": "esmodule",
+		"dependencies": []
+	}
+}

@@ -1,0 +1,190 @@
+/**
+ * Copyright (c) 2024 Huawei Technologies Co., Ltd.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+#pragma once
+#include <arkui/native_type.h>
+#include <arkui/styled_string.h>
+#include <native_drawing/drawing_brush.h>
+#include <native_drawing/drawing_font_collection.h>
+#include <native_drawing/drawing_text_typography.h>
+#include <react/renderer/graphics/Size.h>
+#include <react/renderer/textlayoutmanager/TextLayoutManager.h>
+#include <memory>
+#include "RNOH/StyledStringWrapper.h"
+
+namespace rnoh {
+
+/**
+ * @internal
+ */
+using UniqueTypographyStyle = std::unique_ptr<
+    OH_Drawing_TypographyStyle,
+    decltype(&OH_Drawing_DestroyTypographyStyle)>;
+
+/**
+ * @internal
+ */
+class ArkUITypography final {
+ public:
+  facebook::react::TextMeasurement::Attachments getAttachments() const {
+    facebook::react::TextMeasurement::Attachments result;
+    result.reserve(m_attachmentCount);
+    std::shared_ptr<OH_Drawing_TextBox> placeholderRects(
+        OH_Drawing_TypographyGetRectsForPlaceholders(m_typography.get()),
+        OH_Drawing_TypographyDestroyTextBox);
+    // calculate attachment sizes and positions
+    for (auto i = 0; i < m_attachmentCount; i++) {
+      float left = OH_Drawing_GetLeftFromTextBox(placeholderRects.get(), i);
+      float top = OH_Drawing_GetTopFromTextBox(placeholderRects.get(), i);
+      float right = OH_Drawing_GetRightFromTextBox(placeholderRects.get(), i);
+      float bottom = OH_Drawing_GetBottomFromTextBox(placeholderRects.get(), i);
+
+      facebook::react::TextMeasurement::Attachment attachment;
+      bool isClipped = right - left == 0 && bottom - top == 0;
+      attachment.isClipped = isClipped;
+      attachment.frame.origin.x = left / m_scale;
+      attachment.frame.origin.y = top / m_scale;
+      attachment.frame.size.width = (right - left) / m_scale;
+      attachment.frame.size.height = (bottom - top) / m_scale;
+      result.push_back(std::move(attachment));
+    }
+    return result;
+  }
+
+  facebook::react::Float getHeight() const {
+    return OH_Drawing_TypographyGetHeight(m_typography.get()) / m_scale;
+  }
+
+  facebook::react::Float getLongestLineWidth() const {
+    return OH_Drawing_TypographyGetLongestLine(m_typography.get()) / m_scale;
+  }
+
+  bool didExceedMaxLines() const {
+    return OH_Drawing_TypographyDidExceedMaxLines(m_typography.get());
+  }
+
+  using Rects = std::vector<facebook::react::Rect>;
+
+  std::vector<Rects> getRectsForFragments(facebook::react::Point origin) const {
+    std::vector<Rects> result;
+    result.reserve(m_fragmentLengths.size());
+    size_t fragmentBegin = 0;
+    for (size_t i = 0; i < m_fragmentLengths.size(); i++) {
+      auto fragmentEnd = fragmentBegin + m_fragmentLengths[i];
+      auto textBoxes = OH_Drawing_TypographyGetRectsForRange(
+          m_typography.get(),
+          fragmentBegin,
+          fragmentEnd,
+          RECT_HEIGHT_STYLE_MAX,
+          RECT_WIDTH_STYLE_MAX);
+      auto textBoxCount = OH_Drawing_GetSizeOfTextBox(textBoxes);
+      Rects rects;
+      rects.reserve(textBoxCount);
+      for (size_t j = 0; j < textBoxCount; j++) {
+        facebook::react::Rect rect;
+        rect.origin.x = OH_Drawing_GetLeftFromTextBox(textBoxes, j) / m_scale +
+            m_offset.x / m_scale + origin.x;
+        rect.origin.y = OH_Drawing_GetTopFromTextBox(textBoxes, j) / m_scale +
+            m_offset.y / m_scale + origin.y;
+        rect.size.width = (OH_Drawing_GetRightFromTextBox(textBoxes, j) -
+                           OH_Drawing_GetLeftFromTextBox(textBoxes, j)) /
+            m_scale;
+        rect.size.height = (OH_Drawing_GetBottomFromTextBox(textBoxes, j) -
+                            OH_Drawing_GetTopFromTextBox(textBoxes, j)) /
+            m_scale;
+        rects.emplace_back(std::move(rect));
+      }
+      result.emplace_back(std::move(rects));
+      fragmentBegin = fragmentEnd;
+    }
+    return result;
+  }
+
+  facebook::react::TextMeasurement getMeasurement() const {
+    facebook::react::Size clampedSize = m_layoutConstraints.clamp({
+        .width = getLongestLineWidth(),
+        .height = getHeight(),
+    });
+    return {clampedSize, getAttachments()};
+  }
+
+ private:
+  ArkUITypography(
+      ArkUI_StyledString* styledString,
+      size_t attachmentCount,
+      std::vector<size_t> fragmentLengths,
+      facebook::react::LayoutConstraints layoutConstraints,
+      float scale,
+      std::optional<facebook::react::TextAlignment> textAlign)
+      : m_typography(
+            OH_ArkUI_StyledString_CreateTypography(styledString),
+            OH_Drawing_DestroyTypography),
+        m_attachmentCount(attachmentCount),
+        m_fragmentLengths(std::move(fragmentLengths)),
+        m_layoutConstraints(
+            {layoutConstraints.minimumSize,
+             {layoutConstraints.maximumSize.width,
+              std::numeric_limits<facebook::react::Float>::infinity()},
+             layoutConstraints.layoutDirection}),
+        m_scale(scale) {
+    facebook::react::Float scaledWidth =
+        m_layoutConstraints.maximumSize.width * m_scale;
+    if (isnan(scaledWidth) || scaledWidth <= 0) {
+      scaledWidth = std::numeric_limits<decltype(scaledWidth)>::max();
+    }
+    OH_Drawing_TypographyLayout(m_typography.get(), scaledWidth);
+    std::shared_ptr<OH_Drawing_LineMetrics> lineMetrics(
+        OH_Drawing_TypographyGetLineMetrics(m_typography.get()),
+        OH_Drawing_DestroyLineMetrics);
+    if (lineMetrics) {
+      m_offset.x = lineMetrics->x;
+      m_offset.y = lineMetrics->y;
+    }
+    if (textAlign.has_value()) {
+      auto longestWidth =
+          OH_Drawing_TypographyGetLongestLine(m_typography.get());
+      switch (textAlign.value()) {
+        case facebook::react::TextAlignment::Right:
+          m_offset.x = scaledWidth - longestWidth;
+          break;
+        case facebook::react::TextAlignment::Center:
+          m_offset.x = (scaledWidth - longestWidth) / 2;
+          break;
+        default:
+          break;
+      }
+    }
+    // When TextComponentInstance reuses TextStorage from TextMeasurer, the text
+    // has incorrect position (platform bug?) if text alignement is different
+    // from 'left'.
+    //
+    // The return value of the OH_Drawing_TypographyGetLongestLine () interface
+    // needs to be rounded up; otherwise, abnormal text line breaks may occur on
+    // some devices, such as mate 70 pro.
+    if (!textAlign.has_value() ||
+        textAlign.value() != facebook::react::TextAlignment::Justified) {
+      auto longestWidth =
+          std::ceil(OH_Drawing_TypographyGetLongestLine(m_typography.get()));
+      if (std::isfinite(scaledWidth) && scaledWidth > 0) {
+        longestWidth = std::min(longestWidth, scaledWidth);
+      }
+      OH_Drawing_TypographyLayout(m_typography.get(), longestWidth);
+    }
+  }
+
+  std::shared_ptr<OH_Drawing_Typography> m_typography;
+  size_t m_attachmentCount;
+  std::vector<size_t> m_fragmentLengths;
+  facebook::react::LayoutConstraints m_layoutConstraints;
+  facebook::react::Point m_offset;
+
+  float m_scale = 1.0;
+
+  friend class TextMeasurer;
+};
+
+} // namespace rnoh

@@ -1,0 +1,7 @@
+string WebviewAbility_desc 0x02000000
+string WebviewAbility_label 0x02000001
+string module_desc 0x02000002
+string page_show 0x02000006
+color start_window_background 0x02000003
+media icon 0x02000004
+profile main_pages 0x02000005

@@ -1,0 +1,7 @@
+string FsAbility_desc 0x04000001
+string FsAbility_label 0x04000002
+string module_desc 0x04000003
+string page_show 0x04000000
+color start_window_background 0x04000004
+media icon 0x04000005
+media startIcon 0x04000006

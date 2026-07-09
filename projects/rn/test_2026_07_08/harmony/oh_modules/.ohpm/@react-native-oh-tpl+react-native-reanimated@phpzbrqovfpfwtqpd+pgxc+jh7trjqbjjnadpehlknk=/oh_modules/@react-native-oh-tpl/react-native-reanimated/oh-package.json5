@@ -1,0 +1,1 @@
+{"name":"@react-native-oh-tpl/react-native-reanimated","version":"3.6.4-rc.1","description":"","type":"module","main":"index.ets","author":"","license":"","dependencies":{"@rnoh/react-native-openharmony":"file:../react_native_openharmony"},"metadata":{"sourceRoots":["./src/main"],"debug":true},"compatibleSdkVersion":12,"compatibleSdkType":"HarmonyOS","obfuscated":false}

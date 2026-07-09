@@ -1,0 +1,32 @@
+{
+	"app": {
+		"bundleName": "com.rnoh.tester",
+		"debug": true,
+		"versionCode": 1000000,
+		"versionName": "1.0.0",
+		"minAPIVersion": 50000012,
+		"targetAPIVersion": 50004016,
+		"apiReleaseType": "Release",
+		"compileSdkVersion": "5.0.4.150",
+		"compileSdkType": "HarmonyOS",
+		"appEnvironments": [],
+		"bundleType": "app",
+		"buildMode": "debug"
+	},
+	"module": {
+		"name": "reanimated",
+		"type": "har",
+		"description": "$string:module_desc",
+		"mainElement": "ReanimatedAbility",
+		"deviceTypes": [
+			"phone",
+			"tablet",
+			"2in1"
+		],
+		"packageName": "@react-native-oh-tpl/react-native-reanimated",
+		"installationFree": false,
+		"virtualMachine": "ark12.0.2.0",
+		"compileMode": "esmodule",
+		"dependencies": []
+	}
+}
