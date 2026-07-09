@@ -1,0 +1,19 @@
+// src/data/categories.ts
+import type { Category } from '../store/types.js'
+
+export const defaultCategories: Category[] = [
+  // Expense
+  { id: 'cat-food', name: '餐饮', type: 'expense', icon: 'utensils', color: '#FF6B6B', isDefault: true },
+  { id: 'cat-transport', name: '交通', type: 'expense', icon: 'bus', color: '#4ECDC4', isDefault: true },
+  { id: 'cat-shopping', name: '购物', type: 'expense', icon: 'shopping-bag', color: '#FFD93D', isDefault: true },
+  { id: 'cat-entertainment', name: '娱乐', type: 'expense', icon: 'gamepad-2', color: '#6C5CE7', isDefault: true },
+  { id: 'cat-housing', name: '居住', type: 'expense', icon: 'home', color: '#A29BFE', isDefault: true },
+  { id: 'cat-communication', name: '通讯', type: 'expense', icon: 'smartphone', color: '#FD79A8', isDefault: true },
+  { id: 'cat-medical', name: '医疗', type: 'expense', icon: 'pill', color: '#00B894', isDefault: true },
+  { id: 'cat-daily', name: '日用', type: 'expense', icon: 'spray-can', color: '#E17055', isDefault: true },
+  // Income
+  { id: 'cat-salary', name: '工资', type: 'income', icon: 'banknote', color: '#00B894', isDefault: true },
+  { id: 'cat-parttime', name: '兼职', type: 'income', icon: 'briefcase', color: '#0984E3', isDefault: true },
+  { id: 'cat-redpacket', name: '红包', type: 'income', icon: 'gift', color: '#E84393', isDefault: true },
+  { id: 'cat-investment', name: '理财', type: 'income', icon: 'trending-up', color: '#FDCB6E', isDefault: true },
+]
