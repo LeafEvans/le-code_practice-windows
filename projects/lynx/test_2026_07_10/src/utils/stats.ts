@@ -1,5 +1,5 @@
 // src/utils/stats.ts
-import type { Category, Record } from '../store/types.js';
+import type { Category, Record } from "../store/types.js";
 
 export interface MonthlyStats {
   totalIncome: number; // in cents
@@ -15,7 +15,7 @@ export function computeMonthlyStats(records: Record[]): MonthlyStats {
   const expenseByCategory = new Map<string, number>();
 
   for (const record of records) {
-    if (record.type === 'income') {
+    if (record.type === "income") {
       totalIncome += record.amount;
     } else {
       totalExpense += record.amount;
@@ -38,7 +38,7 @@ export function filterRecordsByMonth(
   year: number,
   month: number,
 ): Record[] {
-  const prefix = `${year}-${String(month).padStart(2, '0')}-`;
+  const prefix = `${year}-${String(month).padStart(2, "0")}-`;
   return records.filter((r) => r.date.startsWith(prefix));
 }
 

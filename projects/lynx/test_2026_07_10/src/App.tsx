@@ -1,30 +1,30 @@
 // src/App.tsx
-import { useState } from '@lynx-js/react';
-import './App.css';
-import { RecordsPage } from './pages/RecordsPage.js';
-import { SettingsPage } from './pages/SettingsPage.js';
-import { StatsPage } from './pages/StatsPage.js';
-import { AppProvider } from './store/AppContext.js';
+import { useState } from "@lynx-js/react";
+import "./App.css";
+import { RecordsPage } from "./pages/RecordsPage.js";
+import { SettingsPage } from "./pages/SettingsPage.js";
+import { StatsPage } from "./pages/StatsPage.js";
+import { AppProvider } from "./store/AppContext.js";
 
-type Tab = 'records' | 'stats' | 'settings';
+type Tab = "records" | "stats" | "settings";
 
 const TABS: { key: Tab; label: string }[] = [
-  { key: 'records', label: '流水' },
-  { key: 'stats', label: '统计' },
-  { key: 'settings', label: '设置' },
+  { key: "records", label: "流水" },
+  { key: "stats", label: "统计" },
+  { key: "settings", label: "设置" },
 ];
 
 export function App() {
-  const [activeTab, setActiveTab] = useState<Tab>('records');
+  const [activeTab, setActiveTab] = useState<Tab>("records");
 
   return (
     <AppProvider>
       <view className="AppContainer">
         {/* Page content */}
         <view style={{ flex: 1 }}>
-          {activeTab === 'records' && <RecordsPage />}
-          {activeTab === 'stats' && <StatsPage />}
-          {activeTab === 'settings' && <SettingsPage />}
+          {activeTab === "records" && <RecordsPage />}
+          {activeTab === "stats" && <StatsPage />}
+          {activeTab === "settings" && <SettingsPage />}
         </view>
 
         {/* Bottom tab bar */}
@@ -32,16 +32,16 @@ export function App() {
           {TABS.map((tab) => (
             <view
               key={tab.key}
-              className={`TabItem ${activeTab === tab.key ? 'TabItem--active' : ''}`}
+              className={`TabItem ${activeTab === tab.key ? "TabItem--active" : ""}`}
               bindtap={() => {
                 setActiveTab(tab.key);
               }}
             >
               <text
                 style={{
-                  fontSize: '14px',
-                  fontWeight: activeTab === tab.key ? '600' : '400',
-                  color: activeTab === tab.key ? '#FF6B6B' : '#999',
+                  fontSize: "14px",
+                  fontWeight: activeTab === tab.key ? "600" : "400",
+                  color: activeTab === tab.key ? "#FF6B6B" : "#999",
                 }}
               >
                 {tab.label}
