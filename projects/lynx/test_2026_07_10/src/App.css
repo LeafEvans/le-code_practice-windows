@@ -1,0 +1,28 @@
+/* src/App.css */
+
+:root {
+  background-color: #fafafa;
+  --color-text: #1a1a1a;
+}
+
+.AppContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.TabBar {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-top: 1px solid #f0f0f0;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.TabItem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 0;
+}
