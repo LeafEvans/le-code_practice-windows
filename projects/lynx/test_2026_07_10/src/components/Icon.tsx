@@ -1,5 +1,6 @@
 // src/components/Icon.tsx
-import { ICONS, type IconName } from '../data/icons.js'
+import { ICONS } from '../data/icons.js'
+import type { IconName } from '../data/icons.js'
 
 export type { IconName }
 
