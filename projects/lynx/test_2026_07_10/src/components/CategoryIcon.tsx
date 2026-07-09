@@ -1,10 +1,11 @@
 // src/components/CategoryIcon.tsx
-import { Icon, type IconName } from './Icon.js'
-import type { Category } from '../store/types.js'
+
+import type { Category } from '../store/types.js';
+import { Icon, type IconName } from './Icon.js';
 
 interface CategoryIconProps {
-  category: Category
-  size?: number
+  category: Category;
+  size?: number;
 }
 
 const BG_COLORS: Record<string, string> = {
@@ -19,10 +20,10 @@ const BG_COLORS: Record<string, string> = {
   '#0984E3': '#0984E320',
   '#E84393': '#E8439320',
   '#FDCB6E': '#FDCB6E20',
-}
+};
 
 export function CategoryIcon({ category, size = 20 }: CategoryIconProps) {
-  const bgColor = BG_COLORS[category.color] ?? `${category.color}20`
+  const bgColor = BG_COLORS[category.color] ?? `${category.color}20`;
 
   return (
     <view
@@ -36,7 +37,11 @@ export function CategoryIcon({ category, size = 20 }: CategoryIconProps) {
         alignItems: 'center',
       }}
     >
-      <Icon name={category.icon as IconName} size={size} color={category.color} />
+      <Icon
+        name={category.icon as IconName}
+        size={size}
+        color={category.color}
+      />
     </view>
-  )
+  );
 }

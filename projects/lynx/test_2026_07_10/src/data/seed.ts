@@ -1,6 +1,6 @@
 // src/data/seed.ts
-import type { Record } from '../store/types.js'
-import { generateId } from '../utils/format.js'
+import type { Record } from '../store/types.js';
+import { generateId } from '../utils/format.js';
 
 export const seedRecords: Record[] = [
   {
@@ -39,4 +39,4 @@ export const seedRecords: Record[] = [
     note: '超市采购',
     createdAt: Date.now() - 4000,
   },
-]
+];

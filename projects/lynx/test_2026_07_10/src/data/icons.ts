@@ -1,18 +1,15 @@
 // src/data/icons.ts
 
 export interface IconDef {
-  viewBox: string
-  paths: string[]
+  viewBox: string;
+  paths: string[];
 }
 
 export const ICONS: Record<string, IconDef> = {
   // --- Category: Expense ---
   utensils: {
     viewBox: '0 0 24 24',
-    paths: [
-      'M7 2v20',
-      'M17 2v11a4 4 0 0 1-4 4h0a4 4 0 0 1-4-4V2',
-    ],
+    paths: ['M7 2v20', 'M17 2v11a4 4 0 0 1-4 4h0a4 4 0 0 1-4-4V2'],
   },
   bus: {
     viewBox: '0 0 24 24',
@@ -41,10 +38,7 @@ export const ICONS: Record<string, IconDef> = {
   },
   home: {
     viewBox: '0 0 24 24',
-    paths: [
-      'M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z',
-      'M9 22V12h6v10',
-    ],
+    paths: ['M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z', 'M9 22V12h6v10'],
   },
   smartphone: {
     viewBox: '0 0 24 24',
@@ -98,10 +92,7 @@ export const ICONS: Record<string, IconDef> = {
   },
   'trending-up': {
     viewBox: '0 0 24 24',
-    paths: [
-      'M22 7l-8.5 8.5-5-5L2 17',
-      'M16 7h6v6',
-    ],
+    paths: ['M22 7l-8.5 8.5-5-5L2 17', 'M16 7h6v6'],
   },
 
   // --- UI Chrome ---
@@ -137,6 +128,6 @@ export const ICONS: Record<string, IconDef> = {
     viewBox: '0 0 24 24',
     paths: ['M20 6L9 17l-5-5'],
   },
-}
+};
 
-export type IconName = keyof typeof ICONS
+export type IconName = keyof typeof ICONS;

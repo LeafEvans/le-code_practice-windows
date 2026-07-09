@@ -1,22 +1,22 @@
 // src/components/MonthBar.tsx
-import type { Category } from '../store/types.js'
-import { CategoryIcon } from './CategoryIcon.js'
-import { formatAmount } from '../utils/format.js'
-import { findCategory } from '../utils/stats.js'
+import type { Category } from '../store/types.js';
+import { formatAmount } from '../utils/format.js';
+import { findCategory } from '../utils/stats.js';
+import { CategoryIcon } from './CategoryIcon.js';
 
 interface BarItem {
-  categoryId: string
-  amount: number // cents
-  percentage: number // 0-100
+  categoryId: string;
+  amount: number; // cents
+  percentage: number; // 0-100
 }
 
 interface MonthBarProps {
-  items: BarItem[]
-  total: number // cents
-  categories: Category[]
+  items: BarItem[];
+  total: number; // cents
+  categories: Category[];
 }
 
-export function MonthBar({ items, total, categories }: MonthBarProps) {
+export function MonthBar({ items, total: _total, categories }: MonthBarProps) {
   if (items.length === 0) {
     return (
       <view
@@ -29,17 +29,17 @@ export function MonthBar({ items, total, categories }: MonthBarProps) {
       >
         <text style={{ fontSize: '14px', color: '#999' }}>暂无支出数据</text>
       </view>
-    )
+    );
   }
 
   // Sort by amount descending
-  const sorted = [...items].sort((a, b) => b.amount - a.amount)
+  const sorted = [...items].sort((a, b) => b.amount - a.amount);
 
   return (
     <view style={{ padding: '0 16px' }}>
       {sorted.slice(0, 8).map((item) => {
-        const category = findCategory(categories, item.categoryId)
-        if (!category) return null
+        const category = findCategory(categories, item.categoryId);
+        if (!category) return null;
 
         return (
           <view
@@ -53,7 +53,14 @@ export function MonthBar({ items, total, categories }: MonthBarProps) {
           >
             <CategoryIcon category={category} size={14} />
 
-            <text style={{ fontSize: '14px', color: '#666', marginLeft: '8px', width: '40px' }}>
+            <text
+              style={{
+                fontSize: '14px',
+                color: '#666',
+                marginLeft: '8px',
+                width: '40px',
+              }}
+            >
               {category.name}
             </text>
 
@@ -78,15 +85,22 @@ export function MonthBar({ items, total, categories }: MonthBarProps) {
               </view>
             </view>
 
-            <text style={{ fontSize: '12px', color: '#999', width: '50px', textAlign: 'right' }}>
+            <text
+              style={{
+                fontSize: '12px',
+                color: '#999',
+                width: '50px',
+                textAlign: 'right',
+              }}
+            >
               {item.percentage.toFixed(0)}%
             </text>
             <text style={{ fontSize: '12px', color: '#999', width: '60px' }}>
               ¥{formatAmount(item.amount)}
             </text>
           </view>
-        )
+        );
       })}
     </view>
-  )
+  );
 }

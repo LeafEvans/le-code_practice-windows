@@ -1,27 +1,27 @@
 // src/store/types.ts
 
 export interface Record {
-  id: string
-  type: 'income' | 'expense'
-  amount: number // in cents
-  categoryId: string
-  date: string // 'YYYY-MM-DD'
-  note?: string
-  createdAt: number // timestamp
+  id: string;
+  type: 'income' | 'expense';
+  amount: number; // in cents
+  categoryId: string;
+  date: string; // 'YYYY-MM-DD'
+  note?: string;
+  createdAt: number; // timestamp
 }
 
 export interface Category {
-  id: string
-  name: string
-  type: 'income' | 'expense'
-  icon: string // key into ICONS map
-  color: string
-  isDefault: boolean
+  id: string;
+  name: string;
+  type: 'income' | 'expense';
+  icon: string; // key into ICONS map
+  color: string;
+  isDefault: boolean;
 }
 
 export interface AppState {
-  records: Record[]
-  categories: Category[]
+  records: Record[];
+  categories: Category[];
 }
 
 export type Action =
@@ -30,4 +30,4 @@ export type Action =
   | { type: 'UPDATE_RECORD'; payload: Record }
   | { type: 'ADD_CATEGORY'; payload: Category }
   | { type: 'DELETE_CATEGORY'; payload: string }
-  | { type: 'LOAD_DATA'; payload: AppState }
+  | { type: 'LOAD_DATA'; payload: AppState };

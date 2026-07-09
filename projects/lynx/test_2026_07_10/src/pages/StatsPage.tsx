@@ -1,46 +1,56 @@
 // src/pages/StatsPage.tsx
-import { useCallback, useMemo, useState } from '@lynx-js/react'
-import { useAppContext } from '../store/AppContext.js'
-import { MonthBar } from '../components/MonthBar.js'
-import { Icon } from '../components/Icon.js'
-import { computeMonthlyStats, filterRecordsByMonth, getYearMonth, shiftMonth } from '../utils/stats.js'
-import { formatAmount } from '../utils/format.js'
+import { useCallback, useMemo, useState } from '@lynx-js/react';
+import { Icon } from '../components/Icon.js';
+import { MonthBar } from '../components/MonthBar.js';
+import { useAppContext } from '../store/AppContext.js';
+import { formatAmount } from '../utils/format.js';
+import {
+  computeMonthlyStats,
+  filterRecordsByMonth,
+  getYearMonth,
+  shiftMonth,
+} from '../utils/stats.js';
 
 export function StatsPage() {
-  const { state } = useAppContext()
-  const [date, setDate] = useState(() => new Date())
+  const { state } = useAppContext();
+  const [date, setDate] = useState(() => new Date());
 
-  const { year, month } = getYearMonth(date)
+  const { year, month } = getYearMonth(date);
 
   const onPrevMonth = useCallback(() => {
-    'background only'
-    const shifted = shiftMonth(year, month, -1)
-    setDate(new Date(shifted.year, shifted.month - 1))
-  }, [year, month])
+    'background only';
+    const shifted = shiftMonth(year, month, -1);
+    setDate(new Date(shifted.year, shifted.month - 1));
+  }, [year, month]);
 
   const onNextMonth = useCallback(() => {
-    'background only'
-    const shifted = shiftMonth(year, month, 1)
-    setDate(new Date(shifted.year, shifted.month - 1))
-  }, [year, month])
+    'background only';
+    const shifted = shiftMonth(year, month, 1);
+    setDate(new Date(shifted.year, shifted.month - 1));
+  }, [year, month]);
 
   const monthlyRecords = useMemo(
     () => filterRecordsByMonth(state.records, year, month),
     [state.records, year, month],
-  )
+  );
 
-  const stats = useMemo(() => computeMonthlyStats(monthlyRecords), [monthlyRecords])
+  const stats = useMemo(
+    () => computeMonthlyStats(monthlyRecords),
+    [monthlyRecords],
+  );
 
   const barItems = useMemo(() => {
-    const total = stats.totalExpense
-    if (total === 0) return []
+    const total = stats.totalExpense;
+    if (total === 0) return [];
 
-    return Array.from(stats.expenseByCategory.entries()).map(([categoryId, amount]) => ({
-      categoryId,
-      amount,
-      percentage: (amount / total) * 100,
-    }))
-  }, [stats])
+    return Array.from(stats.expenseByCategory.entries()).map(
+      ([categoryId, amount]) => ({
+        categoryId,
+        amount,
+        percentage: (amount / total) * 100,
+      }),
+    );
+  }, [stats]);
 
   return (
     <view style={{ flex: 1, backgroundColor: '#fafafa' }}>
@@ -85,7 +95,9 @@ export function StatsPage() {
           }}
         >
           <text style={{ fontSize: '12px', color: '#00B894' }}>总收入</text>
-          <text style={{ fontSize: '20px', fontWeight: '700', color: '#00B894' }}>
+          <text
+            style={{ fontSize: '20px', fontWeight: '700', color: '#00B894' }}
+          >
             ¥{formatAmount(stats.totalIncome)}
           </text>
         </view>
@@ -100,7 +112,9 @@ export function StatsPage() {
           }}
         >
           <text style={{ fontSize: '12px', color: '#FF6B6B' }}>总支出</text>
-          <text style={{ fontSize: '20px', fontWeight: '700', color: '#FF6B6B' }}>
+          <text
+            style={{ fontSize: '20px', fontWeight: '700', color: '#FF6B6B' }}
+          >
             ¥{formatAmount(stats.totalExpense)}
           </text>
         </view>
@@ -127,12 +141,25 @@ export function StatsPage() {
       </view>
 
       {/* Expense breakdown */}
-      <view style={{ padding: '16px', backgroundColor: '#fff', marginTop: '8px' }}>
-        <text style={{ fontSize: '16px', fontWeight: '600', color: '#1a1a1a', marginBottom: '16px' }}>
+      <view
+        style={{ padding: '16px', backgroundColor: '#fff', marginTop: '8px' }}
+      >
+        <text
+          style={{
+            fontSize: '16px',
+            fontWeight: '600',
+            color: '#1a1a1a',
+            marginBottom: '16px',
+          }}
+        >
           支出分类
         </text>
-        <MonthBar items={barItems} total={stats.totalExpense} categories={state.categories} />
+        <MonthBar
+          items={barItems}
+          total={stats.totalExpense}
+          categories={state.categories}
+        />
       </view>
     </view>
-  )
+  );
 }

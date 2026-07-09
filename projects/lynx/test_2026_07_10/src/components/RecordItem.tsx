@@ -1,24 +1,24 @@
 // src/components/RecordItem.tsx
-import { useCallback } from '@lynx-js/react'
-import type { Record, Category } from '../store/types.js'
-import { CategoryIcon } from './CategoryIcon.js'
-import { formatSignedAmount } from '../utils/format.js'
-import { useAppContext } from '../store/AppContext.js'
+import { useCallback } from '@lynx-js/react';
+import { useAppContext } from '../store/AppContext.js';
+import type { Category, Record } from '../store/types.js';
+import { formatSignedAmount } from '../utils/format.js';
+import { CategoryIcon } from './CategoryIcon.js';
 
 interface RecordItemProps {
-  record: Record
-  category: Category | undefined
+  record: Record;
+  category: Category | undefined;
 }
 
 export function RecordItem({ record, category }: RecordItemProps) {
-  const { dispatch } = useAppContext()
+  const { dispatch } = useAppContext();
 
   const onDelete = useCallback(() => {
-    'background only'
-    dispatch({ type: 'DELETE_RECORD', payload: record.id })
-  }, [dispatch, record.id])
+    'background only';
+    dispatch({ type: 'DELETE_RECORD', payload: record.id });
+  }, [dispatch, record.id]);
 
-  const isExpense = record.type === 'expense'
+  const isExpense = record.type === 'expense';
 
   return (
     <view
@@ -68,5 +68,5 @@ export function RecordItem({ record, category }: RecordItemProps) {
         <text style={{ fontSize: '16px', color: '#ccc' }}>✕</text>
       </view>
     </view>
-  )
+  );
 }

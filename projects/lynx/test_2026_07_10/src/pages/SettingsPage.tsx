@@ -1,25 +1,30 @@
 // src/pages/SettingsPage.tsx
-import { useCallback } from '@lynx-js/react'
-import { useAppContext } from '../store/AppContext.js'
-import { CategoryIcon } from '../components/CategoryIcon.js'
-import type { Category } from '../store/types.js'
+import { useCallback } from '@lynx-js/react';
+import { CategoryIcon } from '../components/CategoryIcon.js';
+import { useAppContext } from '../store/AppContext.js';
+import type { Category } from '../store/types.js';
 
 export function SettingsPage() {
-  const { state, dispatch } = useAppContext()
+  const { state, dispatch } = useAppContext();
 
-  const expenseCategories = state.categories.filter((c) => c.type === 'expense')
-  const incomeCategories = state.categories.filter((c) => c.type === 'income')
+  const expenseCategories = state.categories.filter(
+    (c) => c.type === 'expense',
+  );
+  const incomeCategories = state.categories.filter((c) => c.type === 'income');
 
   const onDeleteCategory = useCallback(
     (id: string) => {
-      'background only'
-      dispatch({ type: 'DELETE_CATEGORY', payload: id })
+      'background only';
+      dispatch({ type: 'DELETE_CATEGORY', payload: id });
     },
     [dispatch],
-  )
+  );
 
   return (
-    <scroll-view scroll-y={true} style={{ flex: 1, backgroundColor: '#fafafa' }}>
+    <scroll-view
+      scroll-y={true}
+      style={{ flex: 1, backgroundColor: '#fafafa' }}
+    >
       {/* Expense categories */}
       <view style={{ backgroundColor: '#fff', marginTop: '8px' }}>
         <text
@@ -36,7 +41,9 @@ export function SettingsPage() {
           <CategoryRow
             key={cat.id}
             category={cat}
-            onDelete={cat.isDefault ? undefined : () => onDeleteCategory(cat.id)}
+            onDelete={
+              cat.isDefault ? undefined : () => onDeleteCategory(cat.id)
+            }
           />
         ))}
       </view>
@@ -57,7 +64,9 @@ export function SettingsPage() {
           <CategoryRow
             key={cat.id}
             category={cat}
-            onDelete={cat.isDefault ? undefined : () => onDeleteCategory(cat.id)}
+            onDelete={
+              cat.isDefault ? undefined : () => onDeleteCategory(cat.id)
+            }
           />
         ))}
       </view>
@@ -70,18 +79,20 @@ export function SettingsPage() {
           justifyContent: 'center',
         }}
       >
-        <text style={{ fontSize: '12px', color: '#ccc' }}>Bookkeeping v1.0</text>
+        <text style={{ fontSize: '12px', color: '#ccc' }}>
+          Bookkeeping v1.0
+        </text>
       </view>
     </scroll-view>
-  )
+  );
 }
 
 function CategoryRow({
   category,
   onDelete,
 }: {
-  category: Category
-  onDelete?: () => void
+  category: Category;
+  onDelete?: () => void;
 }) {
   return (
     <view
@@ -94,7 +105,14 @@ function CategoryRow({
       }}
     >
       <CategoryIcon category={category} size={18} />
-      <text style={{ fontSize: '16px', color: '#1a1a1a', marginLeft: '12px', flex: 1 }}>
+      <text
+        style={{
+          fontSize: '16px',
+          color: '#1a1a1a',
+          marginLeft: '12px',
+          flex: 1,
+        }}
+      >
         {category.name}
       </text>
       {onDelete ? (
@@ -112,5 +130,5 @@ function CategoryRow({
         <text style={{ fontSize: '12px', color: '#ccc' }}>默认</text>
       )}
     </view>
-  )
+  );
 }

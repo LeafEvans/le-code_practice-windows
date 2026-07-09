@@ -1,21 +1,21 @@
 // src/App.tsx
-import { useState } from '@lynx-js/react'
-import './App.css'
-import { AppProvider } from './store/AppContext.js'
-import { RecordsPage } from './pages/RecordsPage.js'
-import { StatsPage } from './pages/StatsPage.js'
-import { SettingsPage } from './pages/SettingsPage.js'
+import { useState } from '@lynx-js/react';
+import './App.css';
+import { RecordsPage } from './pages/RecordsPage.js';
+import { SettingsPage } from './pages/SettingsPage.js';
+import { StatsPage } from './pages/StatsPage.js';
+import { AppProvider } from './store/AppContext.js';
 
-type Tab = 'records' | 'stats' | 'settings'
+type Tab = 'records' | 'stats' | 'settings';
 
 const TABS: { key: Tab; label: string }[] = [
   { key: 'records', label: '流水' },
   { key: 'stats', label: '统计' },
   { key: 'settings', label: '设置' },
-]
+];
 
 export function App() {
-  const [activeTab, setActiveTab] = useState<Tab>('records')
+  const [activeTab, setActiveTab] = useState<Tab>('records');
 
   return (
     <AppProvider>
@@ -33,7 +33,9 @@ export function App() {
             <view
               key={tab.key}
               className={`TabItem ${activeTab === tab.key ? 'TabItem--active' : ''}`}
-              bindtap={() => { setActiveTab(tab.key) }}
+              bindtap={() => {
+                setActiveTab(tab.key);
+              }}
             >
               <text
                 style={{
@@ -49,5 +51,5 @@ export function App() {
         </view>
       </view>
     </AppProvider>
-  )
+  );
 }
