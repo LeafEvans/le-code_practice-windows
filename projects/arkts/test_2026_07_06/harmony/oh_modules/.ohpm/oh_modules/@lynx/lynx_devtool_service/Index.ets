@@ -1,1 +1,0 @@
-export { LynxDevToolService } from './src/main/ets/LynxDevToolService'

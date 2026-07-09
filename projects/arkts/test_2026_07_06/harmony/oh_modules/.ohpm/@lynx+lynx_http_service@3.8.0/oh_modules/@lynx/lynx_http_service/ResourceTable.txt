@@ -1,3 +1,0 @@
-string shared_desc 0x06000000
-color white 0x06000001
-profile main_pages 0x06000002

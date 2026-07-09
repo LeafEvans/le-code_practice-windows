@@ -1,4 +1,0 @@
-string shared_desc 0x03000001
-color white 0x03000002
-media notification_cancel 0x03000000
-profile main_pages 0x03000003

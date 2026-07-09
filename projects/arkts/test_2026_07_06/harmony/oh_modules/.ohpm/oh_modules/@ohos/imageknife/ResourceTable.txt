@@ -1,2 +1,0 @@
-string page_show 0x03000000
-media startIcon 0x03000001
